@@ -1,1 +1,31 @@
 ejemplos/PLADESE 0,1,2,3,4.pdf
+
+# Imagenes
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.svg
+*.tiff
+*.ico
+*.webp
+
+# LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.xdv
+*.run.xml
+*.bcf
+*.synctex.gz
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
