@@ -1,0 +1,691 @@
+%!TEX TS-program = xelatex
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesClass{sener2025}[2025/11/21 Plantilla institucional SENER - Versión completa]
+
+% Basado en article tamaño carta, 12pt
+\LoadClass[12pt,letterpaper]{article}
+
+% ============================================================================
+% PAQUETES BÁSICOS
+% ============================================================================
+\RequirePackage[spanish,es-tabla]{babel}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
+\RequirePackage{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{xcolor}
+\RequirePackage{titlesec}
+\RequirePackage{fancyhdr}
+\setlength{\headheight}{14pt}
+
+% ============================================================================
+% COLORES INSTITUCIONALES
+% ============================================================================
+\definecolor{gobmxGuinda}{HTML}{691B32}
+\definecolor{gobmxVerde}{HTML}{006B5C}
+\definecolor{gobmxDorado}{HTML}{C99700}
+\definecolor{gobmxGris}{HTML}{6C6C6C}
+\definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
+\definecolor{gobmxAmbarClaro}{HTML}{E3B130}
+
+% ============================================================================
+% TIPOGRAFÍAS INSTITUCIONALES
+% ============================================================================
+% Nota: Para usar las tipografías personalizadas, compila con XeLaTeX o LuaLaTeX
+% Si usas pdfLaTeX, estas líneas se ignorarán y usará las fuentes por defecto
+
+\IfFileExists{fontspec.sty}{
+  \RequirePackage{fontspec}
+  
+  % Tipografía principal: Patria (para títulos y encabezados)
+  \IfFileExists{tipografias/Patria_Regular.otf}{
+    \newfontfamily\patriafont[
+      Path = tipografias/,
+      Extension = .otf,
+      UprightFont = *_Regular,
+      BoldFont = *_Bold,
+      ItalicFont = *_Light
+    ]{Patria}
+  }{}
+  
+  % Tipografía secundaria: Noto Sans (para cuerpo de texto)
+  \IfFileExists{tipografias/NotoSans-Regular.ttf}{
+    \setmainfont{NotoSans}[
+      Path = tipografias/,
+      Extension = .ttf,
+      UprightFont = *-Regular,
+      BoldFont = *-Bold,
+      ItalicFont = *-Italic,
+      BoldItalicFont = *-BoldItalic
+    ]
+    
+    \setsansfont{NotoSans}[
+      Path = tipografias/,
+      Extension = .ttf,
+      UprightFont = *-Regular,
+      BoldFont = *-Bold,
+      ItalicFont = *-Italic,
+      BoldItalicFont = *-BoldItalic
+    ]
+  }{}
+}{}
+
+% ============================================================================
+% Packages for functionality and bibliography
+% ============================================================================
+\RequirePackage{enumitem}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\RequirePackage{caption}
+\RequirePackage{subcaption}
+\RequirePackage{csquotes}
+\RequirePackage{booktabs}
+\RequirePackage{array}
+\RequirePackage{longtable}
+\RequirePackage{multirow}
+\RequirePackage{tocloft}
+\RequirePackage{colortbl}
+\RequirePackage{tabularx}
+\RequirePackage{pdfpages}
+\RequirePackage{eso-pic}
+
+% ============================================================================
+% CONFIGURACIÓN DE CAPTIONS
+% ============================================================================
+\captionsetup{
+  font=small,
+  labelfont={bf,color=gobmxGuinda},
+  labelsep=period
+}
+
+\captionsetup[table]{
+  position=top,
+  skip=8pt
+}
+
+\captionsetup[figure]{
+  position=bottom,
+  skip=8pt
+}
+% Bibliography (APA style)
+\RequirePackage[
+  backend=biber,
+  style=apa,
+  sorting=nyt,
+  citestyle=authoryear
+]{biblatex}
+\addbibresource{referencias.bib}
+% Hyperref (load after biblatex)
+\RequirePackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=gobmxGris,
+  filecolor=gobmxDorado,
+  urlcolor=gobmxGuinda,
+  citecolor=gobmxVerde,
+  bookmarksnumbered=true,
+  pdfborder={0 0 0}
+}
+% ============================================================================
+% DATOS DEL DOCUMENTO
+% ============================================================================
+\newcommand{\@subtitle}{}
+\newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
+
+\newcommand{\@institucion}{Secretaría de Energía}
+\newcommand{\institucion}[1]{\gdef\@institucion{#1}}
+
+\newcommand{\@unidad}{Unidad de Planeación Energética}
+\newcommand{\unidad}[1]{\gdef\@unidad{#1}}
+
+\newcommand{\DocumentoCorto}{}
+\newcommand{\setDocumentoCorto}[1]{\renewcommand{\DocumentoCorto}{#1}}
+
+% Metadatos PDF para publicación oficial
+\newcommand{\@palabrasclave}{}
+\newcommand{\palabrasclave}[1]{\gdef\@palabrasclave{#1}}
+
+\newcommand{\@version}{1.0}
+\newcommand{\version}[1]{\gdef\@version{#1}}
+
+\AtBeginDocument{
+  \hypersetup{
+    pdftitle={\@title},
+    pdfauthor={\@institucion},
+    pdfsubject={\@subtitle},
+    pdfkeywords={\@palabrasclave},
+    pdfproducer={Secretaría de Energía - Gobierno de México},
+    pdfcreator={LaTeX con clase sener2025}
+  }
+}
+
+% ============================================================================
+% COMANDO PARA VALORES DESTACADOS (Recuadros naranjas)
+% ============================================================================
+\definecolor{highlightOrange}{HTML}{F5A623}
+\newcommand{\highlight}[1]{%
+  \colorbox{highlightOrange}{%
+    \strut\textbf{\textcolor{white}{#1}}%
+  }%
+}
+
+% ============================================================================
+% ENCABEZADOS Y PIES DE PÁGINA
+% ============================================================================
+\fancypagestyle{plain}{
+  \fancyhf{}
+  \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
+  \fancyhead[R]{\small\thepage}
+  
+  % Pie de página mejorado con logo centrado y líneas decorativas
+  \fancyfoot[L]{\tiny\textcolor{gobmxGris}{\leftmark}}
+  \fancyfoot[C]{%
+    \raisebox{-0.5\height}{%
+      \IfFileExists{img/logo_sener.png}{%
+        \includegraphics[height=0.5cm]{img/logo_sener.png}%
+      }{}%
+    }%
+  }
+  \fancyfoot[R]{\tiny Gobierno de México}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.8pt}
+  \renewcommand{\footrule}{{\color{gobmxDorado}\hrule width\headwidth height\footrulewidth \vskip 1mm}}
+}
+
+\fancypagestyle{portada}{
+  \fancyhf{}
+  \renewcommand{\headrulewidth}{0pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\pagestyle{plain}
+
+% ============================================================================
+% ESTILOS DE TÍTULOS Y SECCIONES
+% ============================================================================
+\titleformat{\section}
+  {\Large\bfseries\color{gobmxGuinda}}
+  {\thesection.}{0.5em}{}
+  [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
+
+\titleformat{\subsection}
+  {\large\bfseries\color{gobmxVerde}}
+  {\thesubsection}{0.5em}{}
+
+\titleformat{\subsubsection}
+  {\normalsize\bfseries\color{gobmxDorado}}
+  {\thesubsubsection}{0.5em}{}
+
+\titlespacing*{\section}{0pt}{2em}{1em}
+\titlespacing*{\subsection}{0pt}{1.5em}{0.8em}
+\titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
+
+% ============================================================================
+% LISTAS PERSONALIZADAS
+% ============================================================================
+\setlist[itemize,1]{
+  label=\textcolor{gobmxGuinda}{$\bullet$},
+  leftmargin=*,
+  itemsep=0.3em
+}
+
+\setlist[itemize,2]{
+  label=\textcolor{gobmxVerde}{$\circ$},
+  leftmargin=*,
+  itemsep=0.2em
+}
+
+\setlist[enumerate,1]{
+  label=\textcolor{gobmxGuinda}{\arabic*.},
+  leftmargin=*,
+  itemsep=0.3em
+}
+
+\setlist[enumerate,2]{
+  label=\textcolor{gobmxVerde}{\alph*)},
+  leftmargin=*,
+  itemsep=0.2em
+}
+
+% ============================================================================
+% ESTILOS DE TABLAS PROFESIONALES
+% ============================================================================
+
+% Tipos de columnas personalizadas
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+% ============================================================================
+% ESTILOS DE ENCABEZADOS DE TABLA
+% ============================================================================
+% NOTA: Los comandos de encabezado ahora solo dan formato al texto.
+% Para colorear la fila, use \rowcolor{<color>} al inicio de la fila.
+% Ejemplo: \rowcolor{gobmxGuinda} \encabezadoguinda{Celda 1} & ...
+
+% Encabezado guinda (predeterminado)
+\newcommand{\encabezadoguinda}[1]{%
+  \textcolor{white}{\textbf{#1}}%
+}
+
+% Encabezado verde
+\newcommand{\encabezadoverde}[1]{%
+  \textcolor{white}{\textbf{#1}}%
+}
+
+% Encabezado dorado
+\newcommand{\encabezadodorado}[1]{%
+  \textcolor{white}{\textbf{#1}}%
+}
+
+% Encabezado gris
+\newcommand{\encabezadogris}[1]{%
+  \textcolor{white}{\textbf{#1}}%
+}
+
+% Alias para compatibilidad
+\newcommand{\encabezadotabla}[1]{\encabezadoguinda{#1}}
+
+% ============================================================================
+% TABLAS CON ESTILOS PREDEFINIDOS
+% ============================================================================
+
+% Tabla estilo guinda (predeterminada)
+\newenvironment{tablaguinda}[1][]{
+  \rowcolors{2}{gobmxGuinda!10}{white}
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% Tabla estilo verde
+\newenvironment{tablaverde}[1][]{
+  \rowcolors{2}{gobmxVerde!15}{white}
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% Tabla estilo dorado
+\newenvironment{tabladorado}[1][]{
+  \rowcolors{2}{gobmxDorado!12}{white}
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% Tabla estilo gris (neutral)
+\newenvironment{tablagris}[1][]{
+  \rowcolors{2}{gobmxGrisClaro}{white}
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% Tabla sin stripes (solo encabezado con color)
+\newenvironment{tablalimpia}[1][]{
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% Alias para compatibilidad con código existente
+\newenvironment{tablainstitucional}[1][]{
+  \rowcolors{2}{gobmxGrisClaro}{white}
+  \begin{table}[H]
+  \centering
+  #1
+}{
+  \end{table}
+}
+
+% ============================================================================
+% RECUADROS Y CAJAS DESTACADAS
+% ============================================================================
+
+% Recuadro informativo general
+\newtcolorbox{recuadro}[1][]{
+  colback=gobmxGrisClaro,
+  colframe=gobmxGuinda,
+  boxrule=1.5pt,
+  arc=3mm,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  breakable,
+  #1
+}
+
+% Recuadro de nota importante
+\newtcolorbox{notaimportante}[1][]{
+  colback=gobmxGuinda!5,
+  colframe=gobmxGuinda,
+  boxrule=2pt,
+  arc=2mm,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  title={\textbf{Nota importante}},
+  fonttitle=\bfseries\color{white},
+  coltitle=white,
+  colbacktitle=gobmxGuinda,
+  breakable,
+  #1
+}
+
+% Recuadro de definición
+\newtcolorbox{definicion}[1][]{
+  colback=gobmxVerde!5,
+  colframe=gobmxVerde,
+  boxrule=1.5pt,
+  arc=2mm,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  title={\textbf{Definición}},
+  fonttitle=\bfseries\color{white},
+  coltitle=white,
+  colbacktitle=gobmxVerde,
+  breakable,
+  #1
+}
+
+% Recuadro de ejemplo
+\newtcolorbox{ejemplo}[1][]{
+  colback=gobmxDorado!5,
+  colframe=gobmxDorado,
+  boxrule=1.5pt,
+  arc=2mm,
+  left=10pt,
+  right=10pt,
+  top=10pt,
+  bottom=10pt,
+  title={\textbf{Ejemplo}},
+  fonttitle=\bfseries\color{white},
+  coltitle=white,
+  colbacktitle=gobmxDorado,
+  breakable,
+  #1
+}
+
+% Recuadro de resumen ejecutivo
+\newtcolorbox{resumenejecutivo}[1][]{
+  enhanced,
+  colback=gobmxGuinda!3,
+  colframe=gobmxGuinda,
+  boxrule=2pt,
+  arc=0mm,
+  left=15pt,
+  right=15pt,
+  top=15pt,
+  bottom=15pt,
+  title={\Large\textbf{Resumen Ejecutivo}},
+  fonttitle=\bfseries\color{white},
+  coltitle=white,
+  colbacktitle=gobmxGuinda,
+  attach boxed title to top left={yshift=-3mm,xshift=5mm},
+  boxed title style={sharp corners},
+  breakable,
+  #1
+}
+
+% Recuadro de datos clave
+\newtcolorbox{datosclave}[1][]{
+  enhanced,
+  colback=gobmxDorado!8,
+  colframe=gobmxDorado,
+  boxrule=2pt,
+  arc=1mm,
+  left=12pt,
+  right=12pt,
+  top=12pt,
+  bottom=12pt,
+  title={\textbf{Datos Clave}},
+  fonttitle=\bfseries\color{white},
+  coltitle=white,
+  colbacktitle=gobmxDorado,
+  breakable,
+  #1
+}
+
+% ============================================================================
+% AMBIENTE PARA ANEXOS
+% ============================================================================
+\newcommand{\anexos}{
+  \clearpage
+  \appendix
+  \renewcommand{\thesection}{Anexo \Alph{section}}
+  
+  % Ajuste dinámico de anchos en ToC para Anexos (evita empalmes)
+  \addtocontents{toc}{\protect\setlength{\cftsecnumwidth}{5.5em}}
+  \addtocontents{toc}{\protect\setlength{\cftsubsecnumwidth}{6.5em}}
+  \addtocontents{toc}{\protect\setlength{\cftsubsubsecnumwidth}{7.5em}}
+  
+  \titleformat{\section}
+    {\Large\bfseries\color{gobmxGuinda}}
+    {\thesection:}{0.5em}{}
+    [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
+}
+
+% ============================================================================
+% PORTADA INSTITUCIONAL
+% ============================================================================
+
+% Portada estándar (sin fondo)
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+    \thispagestyle{portada}
+    \begin{center}
+      \vspace*{1.5cm}
+
+      % Logo SENER
+      \includegraphics[height=2.5cm]{img/logo_sener.png}\\[3cm]
+
+      % "PLAN DE" o texto superior
+      {\Large\bfseries\color{gobmxGris} PLAN DE}\\[1cm]
+
+      % Título principal
+      {\Huge\bfseries\color{gobmxDorado}\@title}\\[0.8cm]
+
+      % Subtítulo (si existe)
+      \ifx\@subtitle\empty
+      \else
+        {\LARGE\color{gobmxGuinda}\@subtitle}\\[3cm]
+      \fi
+
+      \vfill
+
+      % Unidad responsable
+      {\large\textbf{\@unidad}}\\[0.5cm]
+      
+      % Institución
+      {\large\@institucion}\\[1cm]
+
+      % Fecha
+      {\large\@date}\\[1cm]
+
+      % Logo Gobierno de México
+      \includegraphics[height=1.5cm]{img/logo_gob.png}
+
+    \end{center}
+  \end{titlepage}
+  \clearpage
+}
+
+% Portada con fondo guinda
+\newcommand{\portadafondo}{%
+  \begin{titlepage}
+    \thispagestyle{portada}
+    
+    % Imagen de fondo
+    \AddToShipoutPictureBG*{%
+      \AtPageLowerLeft{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/mujer.png}%
+      }%
+    }
+    
+    \begin{center}
+      \vspace*{2cm}
+
+      % Logo SENER transparente
+      \includegraphics[height=2.5cm]{img/logo_sener_transparente.png}\\[2.5cm]
+
+      % Título principal en Ambar Claro y fuente Patria
+      {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
+
+      % Subtítulo en blanco o dorado
+      \ifx\@subtitle\empty
+      \else
+        {\LARGE\color{white}\@subtitle}\\[2cm]
+      \fi
+
+      \vfill
+
+      % Unidad responsable en blanco
+      {\large\color{white}\textbf{\@unidad}}\\[0.5cm]
+      
+      % Institución en blanco
+      {\large\color{white}\@institucion}\\[1cm]
+
+      % Fecha en blanco
+      {\large\color{white}\@date}\\[1.5cm]
+
+      % Logo Gobierno transparente
+      \includegraphics[height=1.5cm]{img/logo_gob_trasnparente.png}\\[1cm]
+
+    \end{center}
+  \end{titlepage}
+  \clearpage
+}
+
+% ============================================================================
+% ÍNDICES PERSONALIZADOS (Tablas y Figuras)
+% ============================================================================
+\newcommand{\listatablas}{
+  \clearpage
+  \begin{center}
+    % Logo en la parte superior
+    \IfFileExists{img/logo_sener.png}{%
+      \includegraphics[height=1.5cm]{img/logo_sener.png}\\[0.5cm]
+    }{}
+    
+    % Línea decorativa
+    {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
+    
+    % Título del índice
+    {\Large\bfseries\color{gobmxGuinda}índice de tablas}\\[1cm]
+  \end{center}
+  
+  % Contenido del índice (generado automáticamente)
+  \listoftables
+}
+
+\newcommand{\listafiguras}{
+  \clearpage
+  \begin{center}
+    % Logo en la parte superior
+    \IfFileExists{img/logo_sener.png}{%
+      \includegraphics[height=1.5cm]{img/logo_sener.png}\\[0.5cm]
+    }{}
+    
+    % Línea decorativa
+    {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
+    
+    % Título del índice
+    {\Large\bfseries\color{gobmxGuinda}índice de figuras}\\[1cm]
+  \end{center}
+  
+  % Contenido del índice (generado automáticamente)
+  \listoffigures
+}
+
+% ============================================================================
+% CONTRAPORTADA INSTITUCIONAL
+% ============================================================================
+\newcommand{\contraportada}[1]{
+  \clearpage
+  \thispagestyle{empty}
+  \vspace*{\fill}
+  
+  \begin{center}
+    \includegraphics[height=2cm]{img/logo_sener.png}\\[1cm]
+    
+    {\large\textbf{\@title}}\\[0.3cm]
+    \ifx\@subtitle\empty
+    \else
+      {\@subtitle}\\[1cm]
+    \fi
+    
+    \vspace{1cm}
+    
+    {\small
+    \textbf{\@institucion}\\
+    \@unidad\\[0.5cm]
+    
+    #1
+    
+    \vspace{1cm}
+    
+    \@date\\[1cm]
+    }
+    
+    \includegraphics[height=1.2cm]{img/logo_gob.png}
+  \end{center}
+  
+  \vspace*{\fill}
+  \vspace*{\fill}
+  \clearpage
+}
+
+% ============================================================================
+% PORTADA DE SECCIÓN
+% ============================================================================
+\newcommand{\portadaseccion}[2]{
+  \clearpage
+  \thispagestyle{empty}
+  \begingroup
+    \color{white}
+    % Fondo guinda para la página
+    \AddToShipoutPictureBG*{%
+      \AtPageLowerLeft{%
+        \color{gobmxGuinda}\rule{\paperwidth}{\paperheight}%
+      }%
+    }
+    \vspace*{\fill}
+    \begin{center}
+      {\Huge\bfseries\color{gobmxDorado} #1}\\[1cm]
+      {\Large #2}
+    \end{center}
+    \vspace*{\fill}
+  \endgroup
+  \clearpage
+}
+
+% ============================================================================
+% PÁGINA DE CRÉDITOS/DIRECTORIO
+% ============================================================================
+\newcommand{\paginacreditos}[1]{
+  \clearpage
+  \thispagestyle{empty}
+  
+  \begin{center}
+    {\Large\bfseries\color{gobmxGuinda} Directorio}\\[1cm]
+  \end{center}
+  
+  #1
+  
+  \clearpage
+}

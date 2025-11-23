@@ -1,0 +1,22 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Presentación}{5}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Características de la plantilla}{5}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Tipografía y Texto}{7}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Recuadros y Cajas Destacadas}{7}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Recuadro informativo general}{7}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}Nota importante}{7}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}Definiciones}{7}{subsubsection.2.1.3}%
+\contentsline {subsubsection}{\numberline {2.1.4}Datos clave}{8}{subsubsection.2.1.4}%
+\contentsline {section}{\numberline {3}Tablas Profesionales}{10}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Tabla estilo guinda (Datos Generales)}{10}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Tabla estilo verde (Sustentabilidad)}{10}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Tabla estilo dorado (Finanzas)}{11}{subsection.3.3}%
+\contentsline {section}{\numberline {4}Figuras y Gráficos}{11}{section.4}%
+\contentsline {section}{\numberline {5}Sistema de Citas y Referencias}{13}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Ejemplos de citas}{13}{subsection.5.1}%
+\contentsline {section}{\numberline {6}Glosario de Términos}{13}{section.6}%
+\setlength {\cftsecnumwidth }{5.5em}
+\setlength {\cftsubsecnumwidth }{6.5em}
+\setlength {\cftsubsubsecnumwidth }{7.5em}
+\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{15}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {Anexo A.1}Modelo econométrico}{15}{subsection.Alph1.1}%

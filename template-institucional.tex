@@ -1,0 +1,296 @@
+%!TEX TS-program = xelatex
+\documentclass{sener2025}
+
+% Utilidades
+\usepackage{lipsum}
+\usepackage{float}
+
+% ============================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ============================================================================
+\title{Programa de Desarrollo del Sistema Eléctrico Nacional}
+\subtitle{Plantilla institucional completa con todas las funcionalidades}
+\author{Unidad de Planeación Energética}
+\date{Noviembre 2025}
+\institucion{Secretaría de Energía}
+\unidad{Unidad de Planeación Energética}
+\setDocumentoCorto{PRODESEN 2025–2039}
+\palabrasclave{energía, planeación, sistema eléctrico, renovables}
+\version{2.0}
+
+\begin{document}
+
+% ============================================================================
+% PORTADA CON FONDO GUINDA
+% ============================================================================
+\portadafondo
+
+% ============================================================================
+% PÁGINA DE CRÉDITOS/DIRECTORIO
+% ============================================================================
+\paginacreditos{
+  \vspace{1cm}
+  
+  \textbf{Secretaria de Energía}\\
+  Lic. Luz Elena González Escobar\\[0.5cm]
+  
+  \textbf{Subsecretario de Planeación y Transición Energética}\\
+  Ing. Leonardo Beltrán Rodríguez\\[0.5cm]
+  
+  \textbf{Director General de Planeación e Información Energéticas}\\
+  Dr. Edmundo Gil Borja\\[0.5cm]
+  
+  \textbf{Unidad de Planeación Energética}\\
+  Equipo técnico de elaboración\\[1cm]
+  
+  \hrule
+  \vspace{0.5cm}
+  
+  \textit{Primera edición: Noviembre 2025}\\
+  \textit{Distribución gratuita. Prohibida su venta.}
+}
+
+% ============================================================================
+% TABLA DE CONTENIDOS E ÍNDICES
+% ============================================================================
+\tableofcontents
+\clearpage
+
+\listatablas
+\listafiguras
+
+% ============================================================================
+% RESUMEN EJECUTIVO
+% ============================================================================
+
+\begin{resumenejecutivo}
+Este documento presenta la \textbf{plantilla institucional completa} de la Secretaría de Energía, diseñada para la elaboración de documentos oficiales con identidad gráfica institucional.
+
+\textbf{Funcionalidades incluidas:}
+\begin{itemize}
+  \item Portada con fondo institucional o estándar
+  \item \textbf{NUEVO:} Portadas de sección para dividir capítulos
+  \item 5 estilos de tablas profesionales con colores institucionales
+  \item Recuadros especializados (resumen ejecutivo, datos clave, notas, definiciones)
+  \item Sistema de citas y referencias en formato APA
+  \item Tipografías institucionales (Patria y Noto Sans)
+  \item Metadatos PDF para publicación web
+\end{itemize}
+\end{resumenejecutivo}
+
+% ============================================================================
+% CONTENIDO PRINCIPAL
+% ============================================================================
+
+\section{Presentación}
+
+Este documento muestra todas las funcionalidades de la plantilla institucional SENER 2025. La plantilla ha sido actualizada para ofrecer una imagen más formal y estructurada, ideal para reportes oficiales y programas sectoriales.
+
+\subsection{Características de la plantilla}
+
+La plantilla incluye los siguientes elementos institucionales:
+
+\begin{enumerate}
+  \item Dos tipos de portada (estándar y con fondo guinda)
+  \item Portadas de sección para organizar el contenido
+  \item Página de créditos/directorio
+  \item Estilos de títulos con colores institucionales
+  \item Encabezados y pies de página personalizados
+  \item Contraportada institucional
+  \item Metadatos PDF embebidos
+\end{enumerate}
+
+% ============================================================================
+% SECCIÓN 1: ELEMENTOS DE LA PLANTILLA
+% ============================================================================
+
+\portadaseccion{Elementos de la Plantilla}{Tipografía, Estilos y Recuadros}
+
+\section{Tipografía y Texto}
+
+La plantilla utiliza las tipografías institucionales \textbf{Patria} para títulos y \textbf{Noto Sans} para el cuerpo del texto, asegurando legibilidad y consistencia con la identidad gráfica del Gobierno de México.
+
+\subsection{Recuadros y Cajas Destacadas}
+
+Se han diseñado recuadros específicos para resaltar información clave:
+
+\subsubsection{Recuadro informativo general}
+
+\begin{recuadro}
+Este es un recuadro informativo general. Úselo para destacar información relevante que complementa el texto principal sin interrumpir la lectura.
+\end{recuadro}
+
+\subsubsection{Nota importante}
+
+\begin{notaimportante}
+Las notas importantes utilizan el color guinda institucional. Son ideales para advertencias, requisitos legales o información crítica.
+\end{notaimportante}
+
+\subsubsection{Definiciones}
+
+\begin{definicion}
+\textbf{Sistema Eléctrico Nacional (SEN):} Conjunto de instalaciones destinadas a la generación, transmisión y distribución de energía eléctrica en todo el territorio nacional.
+\end{definicion}
+
+\subsubsection{Datos clave}
+
+\begin{datosclave}
+\textbf{Indicadores del sector eléctrico 2024:}
+\begin{itemize}
+  \item \textbf{Capacidad instalada:} \highlight{91,800 MW}
+  \item \textbf{Demanda máxima:} \highlight{52,302 MW}
+  \item \textbf{Energías limpias:} \highlight{31.2\%}
+\end{itemize}
+\end{datosclave}
+
+% ============================================================================
+% SECCIÓN 2: TABLAS Y GRÁFICOS
+% ============================================================================
+
+\portadaseccion{Tablas y Gráficos}{Visualización de Datos Institucionales}
+
+\section{Tablas Profesionales}
+
+Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de presentación de datos.
+
+\subsection{Tabla estilo guinda (Datos Generales)}
+
+\begin{tablaguinda}
+  \caption{Capacidad instalada por región al cierre de 2024}
+  \label{tab:capacidad-region}
+  \begin{tabular}{lrrr}
+    \toprule
+    \rowcolor{gobmxGuinda}\encabezadoguinda{Región} & \encabezadoguinda{Capacidad (MW)} & \encabezadoguinda{Demanda (MW)} & \encabezadoguinda{Factor (\%)} \\
+    \midrule
+    Baja California & 3\,500 & 2\,300 & 68 \\
+    Noroeste        & 5\,100 & 3\,900 & 73 \\
+    Norte           & 6\,800 & 4\,500 & 71 \\
+    Occidental      & 7\,200 & 5\,100 & 75 \\
+    Central         & 12\,400 & 9\,800 & 79 \\
+    \midrule
+    \textbf{Total}  & \textbf{35\,000} & \textbf{25\,600} & \textbf{73} \\
+    \bottomrule
+  \end{tabular}
+\end{tablaguinda}
+
+\subsection{Tabla estilo verde (Sustentabilidad)}
+
+\begin{tablaverde}
+  \caption{Proyectos de energías renovables 2025-2030}
+  \label{tab:renovables}
+  \begin{tabular}{lrrr}
+    \toprule
+    \rowcolor{gobmxVerde}\encabezadoverde{Tecnología} & \encabezadoverde{Proyectos} & \encabezadoverde{Capacidad (MW)} & \encabezadoverde{Inversión (MDP)} \\
+    \midrule
+    Solar fotovoltaica & 45 & 5\,200 & 98\,000 \\
+    Eólica & 28 & 3\,800 & 95\,000 \\
+    Hidroeléctrica & 12 & 1\,200 & 48\,000 \\
+    \midrule
+    \textbf{Total} & \textbf{85} & \textbf{10\,200} & \textbf{241\,000} \\
+    \bottomrule
+  \end{tabular}
+\end{tablaverde}
+
+\subsection{Tabla estilo dorado (Finanzas)}
+
+\begin{tabladorado}
+  \caption{Inversión programada por sector 2025-2030 (MDP)}
+  \label{tab:inversion}
+  \begin{tabular}{lrr}
+    \toprule
+    \rowcolor{gobmxDorado}\encabezadodorado{Sector} & \encabezadodorado{Inversión} & \encabezadodorado{Participación (\%)} \\
+    \midrule
+    Generación & 850\,000 & 63.0 \\
+    Transmisión & 320\,000 & 23.7 \\
+    Distribución & 180\,000 & 13.3 \\
+    \midrule
+    \textbf{Total} & \textbf{1\,350\,000} & \textbf{100.0} \\
+    \bottomrule
+  \end{tabular}
+\end{tabladorado}
+
+\section{Figuras y Gráficos}
+
+Las figuras deben incluir un pie de foto (caption) descriptivo. El estilo institucional coloca el caption debajo de la figura.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.85\textwidth]{img/figura-.ejemplo.png}
+  \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025. El mapa muestra las nueve regiones de control y los principales enlaces de transmisión entre ellas.}
+  \label{fig:sen2025}
+\end{figure}
+
+Como se observa en la Figura~\ref{fig:sen2025}, el Sistema Eléctrico Nacional está dividido en regiones interconectadas.
+
+% ============================================================================
+% SECCIÓN 3: REFERENCIAS Y ANEXOS
+% ============================================================================
+
+\portadaseccion{Referencias y Anexos}{Información Complementaria}
+
+\section{Sistema de Citas y Referencias}
+
+La plantilla utiliza el formato \textbf{APA} para citas y referencias, gestionado por \texttt{biblatex}.
+
+\subsection{Ejemplos de citas}
+
+\begin{itemize}
+    \item \textbf{Libros:} \textcite{rodriguez2023planeacion} analizan la planeación energética.
+    \item \textbf{Artículos:} El crecimiento de renovables es notable \autocite{gomez2023renovables}.
+    \item \textbf{Reportes:} El \textcite{sener2024pladese} define la política sectorial.
+    \item \textbf{Sitios Web:} Consulte el portal oficial \autocite{sener2024portal}.
+\end{itemize}
+
+\section{Glosario de Términos}
+
+\begin{description}
+  \item[Capacidad instalada:] Potencia nominal de las centrales eléctricas disponibles para generar energía.
+  \item[Factor de planta:] Relación entre la energía generada y la energía que se generaría operando a capacidad nominal.
+  \item[Energías limpias:] Fuentes de energía que no emiten gases de efecto invernadero durante su operación.
+  \item[Sistema Eléctrico Nacional (SEN):] Conjunto de instalaciones destinadas a la generación, transmisión y distribución de energía eléctrica.
+\end{description}
+
+% ============================================================================
+% BIBLIOGRAFÍA
+% ============================================================================
+
+\clearpage
+\printbibliography[title={Referencias Bibliográficas}]
+
+% ============================================================================
+% ANEXOS
+% ============================================================================
+
+\anexos
+
+\section{Metodología de Cálculo}
+
+Este anexo presenta la metodología utilizada para calcular las proyecciones de demanda energética.
+
+\subsection{Modelo econométrico}
+
+La ecuación general del modelo es:
+\[
+D_t = \beta_0 + \beta_1 PIB_t + \beta_2 POB_t + \beta_3 T_t + \varepsilon_t
+\]
+donde $D_t$ es la demanda de energía en el año $t$.
+
+% ============================================================================
+% CONTRAPORTADA
+% ============================================================================
+
+\contraportada{
+  \textbf{Elaboración:}\\
+  Dirección de Prospectiva del Sector Eléctrico\\
+  Dirección de Análisis de Redes y Mercados Eléctricos\\
+  Dirección de Planeación Energética\\[0.5cm]
+  
+  \textbf{Contacto:}\\
+  Secretaría de Energía\\
+  Insurgentes Sur 890, Col. Del Valle\\
+  Ciudad de México, C.P. 03100\\
+  Tel: (55) 5000-6000\\
+  \url{www.gob.mx/sener}
+}
+
+\end{document}
