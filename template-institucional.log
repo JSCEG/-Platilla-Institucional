@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 12:41
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -922,6 +922,90 @@ File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.sty
+File: lettrine.sty 2025-01-30 v2.80 (Daniel Flipo)
+
+(C:\Program Files\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
+Package: xfp 2025-10-09 L3 Floating point unit
+)
+\c@DefaultLines=\count370
+\c@DefaultDepth=\count371
+\DefaultFindent=\dimen323
+\DefaultNindent=\dimen324
+\DefaultSlope=\dimen325
+\DiscardVskip=\dimen326
+\L@lettrine=\box135
+\L@lbox=\box136
+\L@tbox=\box137
+\c@L@lines=\count372
+\c@L@depth=\count373
+\L@Pindent=\dimen327
+\L@Findent=\dimen328
+\L@Nindent=\dimen329
+\L@lraise=\dimen330
+\L@first=\dimen331
+\L@next=\dimen332
+\L@slope=\dimen333
+\L@height=\dimen334
+\L@novskip=\dimen335
+\L@target@ht=\dimen336
+\L@target@dp=\dimen337
+\L@target@tht=\dimen338
+\LettrineWidth=\dimen339
+\LettrineHeight=\dimen340
+\LettrineDepth=\dimen341
+\L@finalht=\dimen342
+\L@finaldp=\dimen343
+
+Loading lettrine.cfg
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
+\Lettrine@tweaks=\toks50
+\Llist@everypar=\toks51
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/qrcode\qrcode.sty
+Package: qrcode 2015/01/08 v1.51 QR code generation
+
+(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks52
+\XKV@tempa@toks=\toks53
+)
+\XKV@depth=\count374
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@qr@i=\count375
+\c@qr@j=\count376
+\qr@a=\count377
+\qr@b=\count378
+\qr@c=\count379
+\qr@for@depth=\count380
+\qr@for@maxdepth=\count381
+\qr@for@start=\count382
+\qr@for@end=\count383
+\qr@for@step=\count384
+\qr@newforcount=\count385
+\qr@newforcount=\count386
+\qr@desiredheight=\skip114
+\qr@modulesize=\skip115
+\qr@minipagewidth=\skip116
+\c@maski=\count387
+\c@maskj=\count388
+\c@totalones=\count389
+\c@penaltyi=\count390
+\c@penaltyii=\count391
+\c@penaltyiii=\count392
+\c@penaltyiv=\count393
+\c@qr@hexchars=\count394
+\qr@newforcount=\count395
+\c@qr@divisionsremaining=\count396
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/marginnote\marginnote.sty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count397
+)
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
@@ -940,7 +1024,7 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count370
+\lrq@indent=\count398
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -949,63 +1033,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count371
-\c@listtotal=\count372
-\c@listcount=\count373
-\c@liststart=\count374
-\c@liststop=\count375
-\c@citecount=\count376
-\c@citetotal=\count377
-\c@multicitecount=\count378
-\c@multicitetotal=\count379
-\c@instcount=\count380
-\c@maxnames=\count381
-\c@minnames=\count382
-\c@maxitems=\count383
-\c@minitems=\count384
-\c@citecounter=\count385
-\c@maxcitecounter=\count386
-\c@savedcitecounter=\count387
-\c@uniquelist=\count388
-\c@uniquename=\count389
-\c@refsection=\count390
-\c@refsegment=\count391
-\c@maxextratitle=\count392
-\c@maxextratitleyear=\count393
-\c@maxextraname=\count394
-\c@maxextradate=\count395
-\c@maxextraalpha=\count396
-\c@abbrvpenalty=\count397
-\c@highnamepenalty=\count398
-\c@lownamepenalty=\count399
-\c@maxparens=\count400
-\c@parenlevel=\count401
-\blx@tempcnta=\count402
-\blx@tempcntb=\count403
-\blx@tempcntc=\count404
-\c@blx@maxsection=\count405
-\blx@maxsegment@0=\count406
-\blx@notetype=\count407
-\blx@parenlevel@text=\count408
-\blx@parenlevel@foot=\count409
-\blx@sectionciteorder@0=\count410
-\blx@sectionciteorderinternal@0=\count411
-\blx@entrysetcounter=\count412
-\blx@biblioinstance=\count413
-\labelnumberwidth=\skip114
-\labelalphawidth=\skip115
-\biblabelsep=\skip116
-\bibitemsep=\skip117
-\bibnamesep=\skip118
-\bibinitsep=\skip119
-\bibparsep=\skip120
-\bibhang=\skip121
+\c@tabx@nest=\count399
+\c@listtotal=\count400
+\c@listcount=\count401
+\c@liststart=\count402
+\c@liststop=\count403
+\c@citecount=\count404
+\c@citetotal=\count405
+\c@multicitecount=\count406
+\c@multicitetotal=\count407
+\c@instcount=\count408
+\c@maxnames=\count409
+\c@minnames=\count410
+\c@maxitems=\count411
+\c@minitems=\count412
+\c@citecounter=\count413
+\c@maxcitecounter=\count414
+\c@savedcitecounter=\count415
+\c@uniquelist=\count416
+\c@uniquename=\count417
+\c@refsection=\count418
+\c@refsegment=\count419
+\c@maxextratitle=\count420
+\c@maxextratitleyear=\count421
+\c@maxextraname=\count422
+\c@maxextradate=\count423
+\c@maxextraalpha=\count424
+\c@abbrvpenalty=\count425
+\c@highnamepenalty=\count426
+\c@lownamepenalty=\count427
+\c@maxparens=\count428
+\c@parenlevel=\count429
+\blx@tempcnta=\count430
+\blx@tempcntb=\count431
+\blx@tempcntc=\count432
+\c@blx@maxsection=\count433
+\blx@maxsegment@0=\count434
+\blx@notetype=\count435
+\blx@parenlevel@text=\count436
+\blx@parenlevel@foot=\count437
+\blx@sectionciteorder@0=\count438
+\blx@sectionciteorderinternal@0=\count439
+\blx@entrysetcounter=\count440
+\blx@biblioinstance=\count441
+\labelnumberwidth=\skip117
+\labelalphawidth=\skip118
+\biblabelsep=\skip119
+\bibitemsep=\skip120
+\bibnamesep=\skip121
+\bibinitsep=\skip122
+\bibparsep=\skip123
+\bibhang=\skip124
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count414
-\c@maxcomprange=\count415
-\c@mincompwidth=\count416
+\c@mincomprange=\count442
+\c@maxcomprange=\count443
+\c@mincompwidth=\count444
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1016,88 +1100,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'verbose-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count417
-\c@savedafterword=\count418
-\c@annotator=\count419
-\c@savedannotator=\count420
-\c@author=\count421
-\c@savedauthor=\count422
-\c@bookauthor=\count423
-\c@savedbookauthor=\count424
-\c@commentator=\count425
-\c@savedcommentator=\count426
-\c@editor=\count427
-\c@savededitor=\count428
-\c@editora=\count429
-\c@savededitora=\count430
-\c@editorb=\count431
-\c@savededitorb=\count432
-\c@editorc=\count433
-\c@savededitorc=\count434
-\c@foreword=\count435
-\c@savedforeword=\count436
-\c@holder=\count437
-\c@savedholder=\count438
-\c@introduction=\count439
-\c@savedintroduction=\count440
-\c@namea=\count441
-\c@savednamea=\count442
-\c@nameb=\count443
-\c@savednameb=\count444
-\c@namec=\count445
-\c@savednamec=\count446
-\c@translator=\count447
-\c@savedtranslator=\count448
-\c@shortauthor=\count449
-\c@savedshortauthor=\count450
-\c@shorteditor=\count451
-\c@savedshorteditor=\count452
-\c@labelname=\count453
-\c@savedlabelname=\count454
-\c@institution=\count455
-\c@savedinstitution=\count456
-\c@lista=\count457
-\c@savedlista=\count458
-\c@listb=\count459
-\c@savedlistb=\count460
-\c@listc=\count461
-\c@savedlistc=\count462
-\c@listd=\count463
-\c@savedlistd=\count464
-\c@liste=\count465
-\c@savedliste=\count466
-\c@listf=\count467
-\c@savedlistf=\count468
-\c@location=\count469
-\c@savedlocation=\count470
-\c@organization=\count471
-\c@savedorganization=\count472
-\c@origlocation=\count473
-\c@savedoriglocation=\count474
-\c@origpublisher=\count475
-\c@savedorigpublisher=\count476
-\c@publisher=\count477
-\c@savedpublisher=\count478
-\c@language=\count479
-\c@savedlanguage=\count480
-\c@origlanguage=\count481
-\c@savedoriglanguage=\count482
-\c@pageref=\count483
-\c@savedpageref=\count484
-\shorthandwidth=\skip122
-\shortjournalwidth=\skip123
-\shortserieswidth=\skip124
-\shorttitlewidth=\skip125
-\shortauthorwidth=\skip126
-\shorteditorwidth=\skip127
-\locallabelnumberwidth=\skip128
-\locallabelalphawidth=\skip129
-\localshorthandwidth=\skip130
-\localshortjournalwidth=\skip131
-\localshortserieswidth=\skip132
-\localshorttitlewidth=\skip133
-\localshortauthorwidth=\skip134
-\localshorteditorwidth=\skip135
+\c@afterword=\count445
+\c@savedafterword=\count446
+\c@annotator=\count447
+\c@savedannotator=\count448
+\c@author=\count449
+\c@savedauthor=\count450
+\c@bookauthor=\count451
+\c@savedbookauthor=\count452
+\c@commentator=\count453
+\c@savedcommentator=\count454
+\c@editor=\count455
+\c@savededitor=\count456
+\c@editora=\count457
+\c@savededitora=\count458
+\c@editorb=\count459
+\c@savededitorb=\count460
+\c@editorc=\count461
+\c@savededitorc=\count462
+\c@foreword=\count463
+\c@savedforeword=\count464
+\c@holder=\count465
+\c@savedholder=\count466
+\c@introduction=\count467
+\c@savedintroduction=\count468
+\c@namea=\count469
+\c@savednamea=\count470
+\c@nameb=\count471
+\c@savednameb=\count472
+\c@namec=\count473
+\c@savednamec=\count474
+\c@translator=\count475
+\c@savedtranslator=\count476
+\c@shortauthor=\count477
+\c@savedshortauthor=\count478
+\c@shorteditor=\count479
+\c@savedshorteditor=\count480
+\c@labelname=\count481
+\c@savedlabelname=\count482
+\c@institution=\count483
+\c@savedinstitution=\count484
+\c@lista=\count485
+\c@savedlista=\count486
+\c@listb=\count487
+\c@savedlistb=\count488
+\c@listc=\count489
+\c@savedlistc=\count490
+\c@listd=\count491
+\c@savedlistd=\count492
+\c@liste=\count493
+\c@savedliste=\count494
+\c@listf=\count495
+\c@savedlistf=\count496
+\c@location=\count497
+\c@savedlocation=\count498
+\c@organization=\count499
+\c@savedorganization=\count500
+\c@origlocation=\count501
+\c@savedoriglocation=\count502
+\c@origpublisher=\count503
+\c@savedorigpublisher=\count504
+\c@publisher=\count505
+\c@savedpublisher=\count506
+\c@language=\count507
+\c@savedlanguage=\count508
+\c@origlanguage=\count509
+\c@savedoriglanguage=\count510
+\c@pageref=\count511
+\c@savedpageref=\count512
+\shorthandwidth=\skip125
+\shortjournalwidth=\skip126
+\shortserieswidth=\skip127
+\shorttitlewidth=\skip128
+\shortauthorwidth=\skip129
+\shorteditorwidth=\skip130
+\locallabelnumberwidth=\skip131
+\locallabelalphawidth=\skip132
+\localshorthandwidth=\skip133
+\localshortjournalwidth=\skip134
+\localshortserieswidth=\skip135
+\localshorttitlewidth=\skip136
+\localshortauthorwidth=\skip137
+\localshorteditorwidth=\skip138
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1113,19 +1197,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count485
-\c@textcitetotal=\count486
-\c@textcitemaxnames=\count487
-\c@biburlbigbreakpenalty=\count488
-\c@biburlbreakpenalty=\count489
-\c@biburlnumpenalty=\count490
-\c@biburlucpenalty=\count491
-\c@biburllcpenalty=\count492
+\c@textcitecount=\count513
+\c@textcitetotal=\count514
+\c@textcitemaxnames=\count515
+\c@biburlbigbreakpenalty=\count516
+\c@biburlbreakpenalty=\count517
+\c@biburlnumpenalty=\count518
+\c@biburlucpenalty=\count519
+\c@biburllcpenalty=\count520
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count493
+\c@smartand=\count521
 )
 Package biblatex Info: Trying to load bibliography style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.bbx' found.
@@ -1142,8 +1226,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count494
-\c@bbx:relatedtotal=\count495
+\c@bbx:relatedcount=\count522
+\c@bbx:relatedtotal=\count523
 )))
 Package biblatex Info: Trying to load citation style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.cbx' found.
@@ -1196,15 +1280,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count496
+\c@section@level=\count524
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen323
-\Hy@linkcounter=\count497
-\Hy@pagecounter=\count498
+\@linkdim=\dimen344
+\Hy@linkcounter=\count525
+\Hy@pagecounter=\count526
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -1212,7 +1296,7 @@ File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count499
+\Hy@SavedSpaceFactor=\count527
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -1224,9 +1308,9 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count500
+\c@Hy@tempcnt=\count528
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen324
+\XeTeXLinkMargin=\dimen345
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1235,9 +1319,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count501
-\Field@Width=\dimen325
-\Fld@charsize=\dimen326
+\Fld@menulength=\count529
+\Field@Width=\dimen346
+\Fld@charsize=\dimen347
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1245,19 +1329,19 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count502
-\c@Item=\count503
-\c@Hfootnote=\count504
+\Hy@abspage=\count530
+\c@Item=\count531
+\c@Hfootnote=\count532
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
-\pdfm@box=\box135
-\c@Hy@AnnotLevel=\count505
-\HyField@AnnotCount=\count506
-\Fld@listcount=\count507
-\c@bookmark@seq@number=\count508
+\pdfm@box=\box138
+\c@Hy@AnnotLevel=\count533
+\HyField@AnnotCount=\count534
+\Fld@listcount=\count535
+\c@bookmark@seq@number=\count536
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.s
 ty
@@ -1270,25 +1354,25 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip136
+\Hy@SectionHShift=\skip139
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 140.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 140.
+Package hyperref Info: Option `colorlinks' set `true' on input line 143.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 143.
 
 ) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count509
-\l__lipsum_a_int=\count510
-\l__lipsum_b_int=\count511
+\g__lipsum_par_int=\count537
+\l__lipsum_a_int=\count538
+\l__lipsum_b_int=\count539
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count512
-\float@exts=\toks50
-\float@box=\box136
-\@float@everytoks=\toks51
-\@floatcapt=\box137
+\c@float@type=\count540
+\float@exts=\toks54
+\float@box=\box139
+\@float@everytoks=\toks55
+\@floatcapt=\box140
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1296,10 +1380,12 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
 (template-institucional.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 12.
+(babel)             Reported on input line 13.
+
+<Reading QR code for "https://www.gob.mx/sener" at level 2-M from aux file.>
 )
 \openout1 = `template-institucional.aux'.
 
@@ -1528,22 +1614,22 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 51--51
+Underfull \hbox (badness 10000) in paragraph at lines 54--54
 
  []
 
@@ -1564,14 +1650,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-))
-\tf@toc=\write6
-\openout6 = `template-institucional.toc'.
-
-LaTeX Info: Redefining \. on input line 61.
-LaTeX Info: Redefining \% on input line 61.
+)
+LaTeX Info: Redefining \sptext on input line 32.
+LaTeX Info: Redefining \. on input line 32.
+LaTeX Info: Redefining \% on input line 32.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 61.
+(babel)             Reported on input line 32.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1585,15 +1669,11 @@ File: img/logo_sener.png Graphic file (type bmp)
 [1
 
 ]
-File: img/logo_sener.png Graphic file (type bmp)
-<img/logo_sener.png>
- (template-institucional.lot
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 32.
 )
-\tf@lot=\write7
-\openout7 = `template-institucional.lot'.
+\tf@toc=\write6
+\openout6 = `template-institucional.toc'.
 
 LaTeX Info: Redefining \. on input line 64.
 LaTeX Info: Redefining \% on input line 64.
@@ -1607,18 +1687,19 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-[2
-
-
-]
+[2]
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- (template-institucional.lot)
-\tf@lot=\write8
-\openout8 = `template-institucional.lot'.
+ (template-institucional.lot
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lot=\write7
+\openout7 = `template-institucional.lot'.
 
-LaTeX Info: Redefining \. on input line 65.
-LaTeX Info: Redefining \% on input line 65.
+LaTeX Info: Redefining \. on input line 67.
+LaTeX Info: Redefining \% on input line 67.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1631,19 +1712,16 @@ File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 [3
 
+
 ]
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- (template-institucional.lof
-LaTeX Info: Redefining \sptext on input line 1.
-LaTeX Info: Redefining \. on input line 1.
-LaTeX Info: Redefining \% on input line 1.
-)
-\tf@lof=\write9
-\openout9 = `template-institucional.lof'.
+ (template-institucional.lot)
+\tf@lot=\write8
+\openout8 = `template-institucional.lot'.
 
-LaTeX Info: Redefining \. on input line 66.
-LaTeX Info: Redefining \% on input line 66.
+LaTeX Info: Redefining \. on input line 68.
+LaTeX Info: Redefining \% on input line 68.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1655,6 +1733,31 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 [4
+
+]
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+ (template-institucional.lof
+LaTeX Info: Redefining \sptext on input line 1.
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+)
+\tf@lof=\write9
+\openout9 = `template-institucional.lof'.
+
+LaTeX Info: Redefining \. on input line 69.
+LaTeX Info: Redefining \% on input line 69.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[5
 
 ]
 Package microtype Info: Character `~ (= ~)' is missing
@@ -1684,8 +1787,8 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Info: Redefining \. on input line 103.
-LaTeX Info: Redefining \% on input line 103.
+LaTeX Info: Redefining \. on input line 106.
+LaTeX Info: Redefining \% on input line 106.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1699,8 +1802,10 @@ File: img/logo_sener.png Graphic file (type bmp)
 [1
 
 ]
-LaTeX Info: Redefining \. on input line 116.
-LaTeX Info: Redefining \% on input line 116.
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 106.
+LaTeX Info: Redefining \. on input line 119.
+LaTeX Info: Redefining \% on input line 119.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1717,8 +1822,8 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 132.
-LaTeX Info: Redefining \% on input line 132.
+LaTeX Info: Redefining \. on input line 135.
+LaTeX Info: Redefining \% on input line 135.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1732,8 +1837,8 @@ File: img/logo_sener.png Graphic file (type bmp)
 [4
 
 ]
-LaTeX Info: Redefining \. on input line 142.
-LaTeX Info: Redefining \% on input line 142.
+LaTeX Info: Redefining \. on input line 145.
+LaTeX Info: Redefining \% on input line 145.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1754,8 +1859,8 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
-LaTeX Info: Redefining \. on input line 168.
-LaTeX Info: Redefining \% on input line 168.
+LaTeX Info: Redefining \. on input line 171.
+LaTeX Info: Redefining \% on input line 171.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1774,12 +1879,12 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (25.13042pt too wide) in paragraph at lines 185--185
+Overfull \hbox (25.13042pt too wide) in paragraph at lines 188--188
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 185.
-LaTeX Info: Redefining \% on input line 185.
+LaTeX Info: Redefining \. on input line 188.
+LaTeX Info: Redefining \% on input line 188.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.41682pt, for example:
@@ -1790,8 +1895,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 [8]
-LaTeX Info: Redefining \. on input line 205.
-LaTeX Info: Redefining \% on input line 205.
+LaTeX Info: Redefining \. on input line 208.
+LaTeX Info: Redefining \% on input line 208.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1808,8 +1913,10 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [10
 
 ]
-LaTeX Info: Redefining \. on input line 266.
-LaTeX Info: Redefining \% on input line 266.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 219.
+LaTeX Info: Redefining \. on input line 252.
+LaTeX Info: Redefining \% on input line 252.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [11
@@ -1817,8 +1924,8 @@ File: img/logo_sener.png Graphic file (type bmp)
 ]
 File: img/graficos/mapa_sen_2025.png Graphic file (type bmp)
 <img/graficos/mapa_sen_2025.png>
-LaTeX Info: Redefining \. on input line 289.
-LaTeX Info: Redefining \% on input line 289.
+LaTeX Info: Redefining \. on input line 292.
+LaTeX Info: Redefining \% on input line 292.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1832,8 +1939,8 @@ File: img/logo_sener.png Graphic file (type bmp)
 [12]
 File: img/graficos/adicion_capacidad.png Graphic file (type bmp)
 <img/graficos/adicion_capacidad.png>
-LaTeX Info: Redefining \. on input line 298.
-LaTeX Info: Redefining \% on input line 298.
+LaTeX Info: Redefining \. on input line 301.
+LaTeX Info: Redefining \% on input line 301.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1847,8 +1954,8 @@ File: img/logo_sener.png Graphic file (type bmp)
 [13]
 File: img/graficos/mapa_gasoductos_2024.png Graphic file (type bmp)
 <img/graficos/mapa_gasoductos_2024.png>
-LaTeX Info: Redefining \. on input line 307.
-LaTeX Info: Redefining \% on input line 307.
+LaTeX Info: Redefining \. on input line 310.
+LaTeX Info: Redefining \% on input line 310.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1862,8 +1969,8 @@ File: img/logo_sener.png Graphic file (type bmp)
 [14]
 File: img/figura-.ejemplo.png Graphic file (type bmp)
 <img/figura-.ejemplo.png>
-LaTeX Info: Redefining \. on input line 318.
-LaTeX Info: Redefining \% on input line 318.
+LaTeX Info: Redefining \. on input line 321.
+LaTeX Info: Redefining \% on input line 321.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1875,8 +1982,8 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 [15]
-LaTeX Info: Redefining \. on input line 325.
-LaTeX Info: Redefining \% on input line 325.
+LaTeX Info: Redefining \. on input line 328.
+LaTeX Info: Redefining \% on input line 328.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1893,13 +2000,25 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [17
 
 ]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 336.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 336.
-LaTeX Info: Redefining \. on input line 347.
-LaTeX Info: Redefining \% on input line 347.
+Package lettrine.sty Info: Targeted height = 42.78183pt
+(lettrine.sty)             (for loversize=0, accent excluded),
+(lettrine.sty)             Lettrine height = 42.78177pt (\color {gobmxGuinda}E)
+;
+(lettrine.sty)             reported on input line 334.
+Package marginnote Info: Margin note 28.1 is on absolute page 28 on input line 
+335.
+Package marginnote Info: right page because not two side mode on input line 335
+.
+Package marginnote Info: xpos seems to be 514.12515pt on input line 335.
 
+
+
+<QR code requested for "https://www.gob.mx/sener" in version 0-M.>
+
+<Copying the QR code for "https://www.gob.mx/sener" in version 2-M as previousl
+y calculated.>
+LaTeX Info: Redefining \. on input line 360.
+LaTeX Info: Redefining \% on input line 360.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.41682pt, for example:
@@ -1912,8 +2031,10 @@ File: img/logo_sener.png Graphic file (type bmp)
 [18
 
 ]
-LaTeX Info: Redefining \. on input line 355.
-LaTeX Info: Redefining \% on input line 355.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 362.
+LaTeX Info: Redefining \. on input line 388.
+LaTeX Info: Redefining \% on input line 388.
 
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
@@ -1925,24 +2046,12 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 [19]
-LaTeX Info: Redefining \. on input line 362.
-LaTeX Info: Redefining \% on input line 362.
+Overfull \hbox (4.78569pt too wide) in paragraph at lines 406--406
+ [] 
+ []
 
-
-Package fancyhdr Warning: \headheight is too small (14.0pt): 
-(fancyhdr)                Make it at least 14.41682pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.41682pt}.
-(fancyhdr)                You might also make \topmargin smaller:
-(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
-
-File: img/logo_sener.png Graphic file (type bmp)
-<img/logo_sener.png>
-[20
-
-]
-LaTeX Info: Redefining \. on input line 392.
-LaTeX Info: Redefining \% on input line 392.
-
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
 
 Package fancyhdr Warning: \headheight is too small (14.0pt): 
 (fancyhdr)                Make it at least 14.41682pt, for example:
@@ -1952,21 +2061,84 @@ Package fancyhdr Warning: \headheight is too small (14.0pt):
 
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-[21
+[20]
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
+ [21
 
 ]
-File: img/logo_sener.png Graphic file (type bmp)
-<img/logo_sener.png>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 392.
+(Font)              <7> on input line 423.
+LaTeX Info: Redefining \. on input line 434.
+LaTeX Info: Redefining \% on input line 434.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[22
+
+]
+LaTeX Info: Redefining \. on input line 442.
+LaTeX Info: Redefining \% on input line 442.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[23]
+LaTeX Info: Redefining \. on input line 449.
+LaTeX Info: Redefining \% on input line 449.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[24
+
+]
+LaTeX Info: Redefining \. on input line 479.
+LaTeX Info: Redefining \% on input line 479.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[25
+
+]
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
 File: img/logo_gob.png Graphic file (type bmp)
 <img/logo_gob.png>
- [22
+ [26
 
 ] (template-institucional.aux
-LaTeX Info: Redefining \sptext on input line 12.
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \sptext on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+
+<Reading QR code for "https://www.gob.mx/sener" at level 2-M from aux file.>
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -1974,18 +2146,18 @@ L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
-(rerunfilecheck)             Checksum: 2A0651B883A12BB88D9B7F5D6881EE42;5642.
+(rerunfilecheck)             Checksum: BEF5A4DDDBF93F61BE534ABACC6E45DF;7210.
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42668 strings out of 402987
- 863245 string characters out of 5452870
- 1910777 words of memory out of 5000000
- 70818 multiletter control sequences out of 15000+600000
- 635076 words of font info for 97 fonts, out of 8000000 for 9000
+ 44751 strings out of 402987
+ 895371 string characters out of 5452870
+ 1956578 words of memory out of 5000000
+ 72872 multiletter control sequences out of 15000+600000
+ 635108 words of font info for 101 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,12n,122p,1217b,5859s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,13n,122p,1217b,6131s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (29 pages).
+Output written on template-institucional.pdf (34 pages).

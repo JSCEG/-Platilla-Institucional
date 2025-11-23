@@ -32,13 +32,16 @@
   \vspace{1cm}
   
   \textbf{Secretaria de Energía}\\
-  Lic. Luz Elena González Escobar\\[0.5cm]
+  Lic. Luz Elena González Escobar\\
+  \textit{Economista por la Universidad Nacional Autónoma de México (UNAM)}\\[0.5cm]
   
   \textbf{Subsecretario de Planeación y Transición Energética}\\
-  Ing. Leonardo Beltrán Rodríguez\\[0.5cm]
+  Dr. Jorge Marcial Islas Samperio\\
+  \textit{Físico por la UNAM; Maestro en Ingeniería Energética por la UNAM;}\\
+  \textit{Doctor en Economía por la Université Grenoble Alpes}\\[0.5cm]
   
   \textbf{Director General de Planeación e Información Energéticas}\\
-  Dr. Edmundo Gil Borja\\[0.5cm]
+  Dr. Rodrigo Palacios Saldaña\\[0.5cm]
   
   \textbf{Unidad de Planeación Energética}\\
   Equipo técnico de elaboración\\[1cm]
@@ -199,7 +202,7 @@ Puede ilustrar procesos simples paso a paso utilizando el entorno \texttt{pasos}
 \end{pasos}
 
 % ============================================================================
-% SECCIÓN 2: TABLAS Y GRÁFICOS
+% SECCIÓN 3: TABLAS Y GRÁFICOS
 % ============================================================================
 
 \portadaseccion{3}{Tablas y Gráficos}{Visualización de Datos Institucionales}
@@ -319,10 +322,94 @@ Las figuras deben incluir un pie de foto (caption) descriptivo. El estilo instit
 Como se observa en la Figura~\ref{fig:sen2025}, el Sistema Eléctrico Nacional está dividido en regiones interconectadas.
 
 % ============================================================================
-% SECCIÓN 3: REFERENCIAS Y ANEXOS
+% SECCIÓN 4: ELEMENTOS AVANZADOS (PRO)
 % ============================================================================
 
-\portadaseccion{4}{Referencias y Anexos}{Información Complementaria}
+\portadaseccion{4}{Elementos Avanzados}{Funcionalidades de Alto Nivel}
+
+\section{Tipografía Editorial y Herramientas Digitales}
+
+\subsection{Letra Capital (Drop Caps)}
+
+\letraCapital{E}{sta es una demostración} de la funcionalidad de \textbf{Letra Capital} (Drop Cap). Este estilo es común en publicaciones editoriales de alta calidad y ayuda a guiar la vista del lector al inicio de una sección importante. La letra capital utiliza el color institucional guinda y se integra perfectamente con el texto. \notaMargen{Esta es una nota al margen. Úsala para comentarios o glosas sin interrumpir el flujo del texto.}
+
+\subsection{Códigos QR Generados}
+
+Para documentos impresos que requieren enlazar a recursos digitales, la plantilla puede generar códigos QR automáticamente. Esto es ideal para ligas a sitios web, descargas de datos o reportes completos.
+
+\begin{center}
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \qrlink{https://www.gob.mx/sener} \\
+    \vspace{0.5em}
+    \small\textbf{Sitio Oficial SENER}
+  \end{minipage}
+  \begin{minipage}{0.6\textwidth}
+    El código QR de la izquierda se genera automáticamente con el comando \texttt{\textbackslash qrlink}. Al escanearlo, dirigirá al usuario al sitio oficial de la Secretaría de Energía.
+  \end{minipage}
+\end{center}
+
+\subsection{Notas al Margen}
+
+Las notas al margen (como la que aparece arriba) son excelentes para añadir contexto, definiciones rápidas o referencias sin romper el ritmo de lectura del párrafo principal. Se activan con el comando \texttt{\textbackslash notaMargen}.
+
+\subsection{Badges y Etiquetas}
+
+Los badges son perfectos para categorizar o destacar información clave de forma visual:
+
+\badge{NUEVO} \badge[gobmxVerde]{APROBADO} \badge[gobmxDorado]{2025} \badge[gobmxGris]{PRIORITARIO}
+
+Ejemplo en contexto: El proyecto \badge[gobmxVerde]{ACTIVO} de energía solar alcanzó \badge[gobmxDorado]{95\%} de avance.
+
+\subsection{Callouts Mejorados}
+
+Los callouts estilo GitHub permiten resaltar información importante con diferentes niveles de énfasis:
+
+\begin{calloutTip}
+Para maximizar la eficiencia energética, se recomienda implementar sistemas de monitoreo en tiempo real.
+\end{calloutTip}
+
+\begin{calloutWarning}[Atención]
+Los plazos de entrega para proyectos de infraestructura crítica deben cumplirse estrictamente para evitar sanciones.
+\end{calloutWarning}
+
+\begin{calloutImportant}[Crítico]
+La meta de 35\% de energías limpias para 2024 requiere acción inmediata en todos los sectores.
+\end{calloutImportant}
+
+\subsection{Barras de Progreso}
+
+Las barras de progreso son ideales para visualizar avances hacia metas:
+
+\textbf{Metas Energéticas 2024:}
+
+\progressbar{31.2}{Energías Limpias: 31.2\% de 35\%}
+
+\progressbar[gobmxDorado]{68}{Cobertura Eléctrica: 68\%}
+
+\progressbar[gobmxGuinda]{85}{Modernización de Red: 85\%}
+
+\subsection{Líneas de Tiempo}
+
+Las timelines permiten visualizar cronologías de proyectos o hitos históricos:
+
+\begin{timeline}
+  % Línea principal
+  \draw[timeline] (0,0) -- (12,0);
+  
+  % Eventos
+  \evento{0}{2020}{Inicio del PRODESEN}
+  \evento{3}{2022}{Primera Revisión}
+  \evento{6}{2024}{Evaluación Intermedia}
+  \evento{9}{2027}{Segunda Revisión}
+  \evento{12}{2030}{Meta Final}
+\end{timeline}
+
+% ============================================================================
+% SECCIÓN 5: REFERENCIAS Y ANEXOS
+% ============================================================================
+
+\portadaseccion{5}{Referencias y Anexos}{Información Complementaria}
 
 \section{Sistema de Citas y Referencias}
 

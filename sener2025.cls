@@ -100,6 +100,9 @@
 \RequirePackage{tikz}
 \RequirePackage{multicol}
 \RequirePackage{microtype}
+\RequirePackage{lettrine}
+\RequirePackage{qrcode}
+\RequirePackage{marginnote}
 
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
@@ -320,6 +323,8 @@
   \rowcolors{2}{gobmxGuinda!10}{white}
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2} % Más aire
+  \sffamily\small % Fuente sans-serif y un poco más pequeña
   #1
 }{
   \end{table}
@@ -330,6 +335,8 @@
   \rowcolors{2}{gobmxVerde!15}{white}
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\small
   #1
 }{
   \end{table}
@@ -340,6 +347,8 @@
   \rowcolors{2}{gobmxDorado!12}{white}
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\small
   #1
 }{
   \end{table}
@@ -350,6 +359,8 @@
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\small
   #1
 }{
   \end{table}
@@ -359,6 +370,8 @@
 \newenvironment{tablalimpia}[1][]{
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\small
   #1
 }{
   \end{table}
@@ -369,6 +382,8 @@
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
   \centering
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\small
   #1
 }{
   \end{table}
@@ -542,6 +557,152 @@
 }
 \newcommand{\conectar}[2]{
   \draw[arrow] (#1) -- (#2);
+}
+
+% ============================================================================
+% COMANDOS AVANZADOS (PRO)
+% ============================================================================
+
+% Letra Capital (Drop Cap)
+\newcommand{\letraCapital}[2]{%
+  \lettrine[lines=3, lhang=0.33, nindent=0em, findent=3pt, realheight=true]{\color{gobmxGuinda}#1}{#2}%
+}
+
+% Código QR
+\newcommand{\qrlink}[1]{%
+  \qrcode[height=2.5cm]{#1}%
+}
+
+% Nota al Margen
+\newcommand{\notaMargen}[1]{%
+  \marginnote{%
+    \footnotesize\color{gobmxGuinda}\sffamily%
+    \raggedright%
+    \faInfoCircle\ #1%
+  }%
+}
+
+% ============================================================================
+% ELEMENTOS VISUALES MODERNOS
+% ============================================================================
+
+% Badges/Etiquetas (Pills)
+\newcommand{\badge}[2][gobmxGuinda]{%
+  \tikz[baseline=(badge.base)]{%
+    \node[%
+      inner sep=3pt,%
+      outer sep=0pt,%
+      rounded corners=3pt,%
+      fill=#1,%
+      text=white,%
+      font=\tiny\sffamily\bfseries,%
+      minimum height=1.2em%
+    ] (badge) {#2};%
+  }%
+}
+
+% Callouts Mejorados (GitHub-style)
+\newtcolorbox{calloutTip}[1][Consejo]{%
+  colback=gobmxVerde!5,%
+  colframe=gobmxVerde,%
+  boxrule=0pt,%
+  leftrule=4pt,%
+  arc=0mm,%
+  left=8pt,%
+  right=8pt,%
+  top=8pt,%
+  bottom=8pt,%
+  title={\faLightbulb\ \ \textbf{#1}},%
+  fonttitle=\bfseries\color{gobmxVerde},%
+  coltitle=gobmxVerde,%
+  colbacktitle=gobmxVerde!5,%
+  breakable%
+}
+
+\newtcolorbox{calloutWarning}[1][Advertencia]{%
+  colback=gobmxDorado!5,%
+  colframe=gobmxDorado,%
+  boxrule=0pt,%
+  leftrule=4pt,%
+  arc=0mm,%
+  left=8pt,%
+  right=8pt,%
+  top=8pt,%
+  bottom=8pt,%
+  title={\faExclamationTriangle\ \ \textbf{#1}},%
+  fonttitle=\bfseries\color{gobmxDorado},%
+  coltitle=gobmxDorado,%
+  colbacktitle=gobmxDorado!5,%
+  breakable%
+}
+
+\newtcolorbox{calloutImportant}[1][Importante]{%
+  colback=gobmxGuinda!5,%
+  colframe=gobmxGuinda,%
+  boxrule=0pt,%
+  leftrule=4pt,%
+  arc=0mm,%
+  left=8pt,%
+  right=8pt,%
+  top=8pt,%
+  bottom=8pt,%
+  title={\faExclamationCircle\ \ \textbf{#1}},%
+  fonttitle=\bfseries\color{gobmxGuinda},%
+  coltitle=gobmxGuinda,%
+  colbacktitle=gobmxGuinda!5,%
+  breakable%
+}
+
+% Barra de Progreso
+\newcommand{\progressbar}[3][gobmxVerde]{%
+  % #1 = color (opcional, default verde)
+  % #2 = porcentaje (0-100)
+  % #3 = etiqueta
+  \begin{tikzpicture}[baseline=-0.5ex]
+    % Fondo
+    \fill[gobmxGrisClaro] (0,0) rectangle (4,0.3);
+    % Barra de progreso
+    \fill[#1] (0,0) rectangle ({4*#2/100},0.3);
+    % Borde
+    \draw[gobmxGris,line width=0.5pt] (0,0) rectangle (4,0.3);
+    % Texto
+    \node[right,font=\small\sffamily] at (4.1,0.15) {#3};
+  \end{tikzpicture}%
+}
+
+% Timeline (Línea de Tiempo)
+\newenvironment{timeline}{%
+  \begin{center}
+  \begin{tikzpicture}[
+    timeline/.style={%
+      draw=gobmxGuinda,%
+      line width=2pt%
+    },%
+    event/.style={%
+      circle,%
+      fill=gobmxDorado,%
+      inner sep=3pt,%
+      minimum size=8pt%
+    },%
+    eventlabel/.style={%
+      font=\small\sffamily,%
+      text width=3cm,%
+      align=center%
+    }
+  ]
+}{%
+  \end{tikzpicture}
+  \end{center}
+}
+
+% Comando auxiliar para eventos en timeline
+\newcommand{\evento}[3]{%
+  % #1 = posición x
+  % #2 = año/fecha
+  % #3 = descripción
+  \node[event] at (#1,0) {};
+  \node[eventlabel,above] at (#1,0.3) {\textbf{#2}};
+  \node[eventlabel,below] at (#1,-0.3) {#3};
 }
 
 % ============================================================================
