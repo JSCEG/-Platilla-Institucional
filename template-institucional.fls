@@ -63,17 +63,29 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-utex-helper.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-utex-helper.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomefree.fd
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomefree.fd
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomefree.fd
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomebrands.fd
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomebrands.fd
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\tufontawesomebrands.fd
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
-INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-xetex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
@@ -248,6 +260,16 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\eso-pic\eso-pic.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\ppxetex.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\ppxetex.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\ppxetex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\multicol.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype-xetex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\microtype.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\pdftexcmds\pdftexcmds.sty
@@ -266,9 +288,6 @@ INPUT C:\Program Files\MiKTeX\tex\latex\url\url.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-dm.def
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.dbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.dbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.dbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-unicode.def
@@ -279,15 +298,18 @@ INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\blx-compat.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.def
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.bbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.bbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\apa.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\verbose-ibid.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\verbose-ibid.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\verbose-ibid.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\authortitle.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\authortitle.bbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\authortitle.bbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\bbx\standard.bbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\authoryear.cbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\authoryear.cbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\authoryear.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\verbose-ibid.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\verbose-ibid.cbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\cbx\verbose-ibid.cbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\biblatex.cfg
@@ -331,8 +353,6 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecount
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\generic\uniquecounter\uniquecounter.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\lipsum\lipsum.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\lipsum\lipsum.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\lipsum\lipsum.ltd.tex
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\lipsum\lipsum.ltd.tex
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
@@ -349,12 +369,6 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape-nometad
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape-nometadata.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\spanish-apa.lbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\spanish-apa.lbx
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\biblatex-apa\spanish-apa.lbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
-INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
@@ -393,6 +407,9 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 OUTPUT template-institucional.toc
@@ -420,11 +437,37 @@ INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\graficos\mapa_sen_2025.png
+INPUT .\img\graficos\mapa_sen_2025.png
+INPUT .\img\graficos\mapa_sen_2025.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\graficos\adicion_capacidad.png
+INPUT .\img\graficos\adicion_capacidad.png
+INPUT .\img\graficos\adicion_capacidad.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\graficos\mapa_gasoductos_2024.png
+INPUT .\img\graficos\mapa_gasoductos_2024.png
+INPUT .\img\graficos\mapa_gasoductos_2024.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\figura-.ejemplo.png
 INPUT .\img\figura-.ejemplo.png
 INPUT .\img\figura-.ejemplo.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png

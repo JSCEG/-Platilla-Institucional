@@ -170,6 +170,26 @@ Las notas importantes utilizan el color guinda institucional. Son ideales para a
 \end{itemize}
 \end{datosclave}
 
+\subsection{Citas Destacadas (Pull Quotes)}
+
+Para resaltar frases impactantes o citas textuales importantes, utilice el entorno \texttt{destacado}:
+
+\begin{destacado}[La planeación energética es fundamental para la soberanía nacional y el desarrollo sustentable de México.]
+\end{destacado}
+
+\subsection{Diagramas de Proceso}
+
+Puede ilustrar procesos simples paso a paso utilizando el entorno \texttt{pasos}:
+
+\begin{pasos}
+  \paso{p1}{}{Diagnóstico}
+  \paso{p2}{right of=p1}{Planeación}
+  \paso{p3}{right of=p2}{Ejecución}
+  
+  \conectar{p1}{p2}
+  \conectar{p2}{p3}
+\end{pasos}
+
 % ============================================================================
 % SECCIÓN 2: TABLAS Y GRÁFICOS
 % ============================================================================

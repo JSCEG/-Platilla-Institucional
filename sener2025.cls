@@ -15,6 +15,7 @@
 \RequirePackage{graphicx}
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
+\RequirePackage{fontawesome5}
 \RequirePackage{fancyhdr}
 \setlength{\headheight}{14pt}
 
@@ -213,6 +214,14 @@
   {\thesection.}{0.5em}{}
   [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
 
+% Estilo alternativo de sección con barra vertical (más moderno)
+% Descomentar para usar este estilo por defecto
+% \titleformat{\section}
+%   {\Large\bfseries\color{gobmxGuinda}}
+%   {\makebox[0pt][r]{\color{gobmxDorado}\rule[-6pt]{3pt}{20pt}\hspace{10pt}}\thesection.}
+%   {0.5em}
+%   {}
+
 \titleformat{\subsection}
   {\large\bfseries\color{gobmxVerde}}
   {\thesubsection}{0.5em}{}
@@ -382,7 +391,8 @@
   right=10pt,
   top=10pt,
   bottom=10pt,
-  title={\textbf{Nota importante}},
+  bottom=10pt,
+  title={\faExclamationTriangle\ \ \textbf{Nota importante}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxGuinda,
@@ -400,7 +410,8 @@
   right=10pt,
   top=10pt,
   bottom=10pt,
-  title={\textbf{Definición}},
+  bottom=10pt,
+  title={\faBook\ \ \textbf{Definición}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxVerde,
@@ -418,7 +429,8 @@
   right=10pt,
   top=10pt,
   bottom=10pt,
-  title={\textbf{Ejemplo}},
+  bottom=10pt,
+  title={\faLightbulb\ \ \textbf{Ejemplo}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
@@ -458,12 +470,67 @@
   right=12pt,
   top=12pt,
   bottom=12pt,
-  title={\textbf{Datos Clave}},
+  title={\faKey\ \ \textbf{Datos Clave}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
   breakable,
   #1
+}
+
+% ============================================================================
+% NUEVOS ENTORNOS PREMIUM
+% ============================================================================
+
+% Cita destacada (Pull Quote)
+\newenvironment{destacado}[1][]{
+  \begin{center}
+  \begin{tikzpicture}
+    \node[
+      text width=0.85\textwidth,
+      align=center,
+      font=\Large\itshape\color{gobmxGuinda},
+      inner sep=20pt
+    ] (quote) {``#1''};
+    \node[opacity=0.2, scale=4, color=gobmxDorado] at (quote.north west) {``};
+    \node[opacity=0.2, scale=4, color=gobmxDorado] at (quote.south east) {''};
+  \end{tikzpicture}
+  \end{center}
+}{}
+
+% Línea de tiempo / Pasos
+\newenvironment{pasos}{
+  \begin{center}
+  \begin{tikzpicture}[
+    node distance=3cm,
+    every node/.style={
+      rectangle,
+      rounded corners,
+      draw=gobmxGuinda,
+      very thick,
+      fill=gobmxGrisClaro,
+      text width=2.5cm,
+      align=center,
+      minimum height=1.5cm
+    },
+    arrow/.style={
+      ->,
+      >=stealth,
+      very thick,
+      color=gobmxDorado
+    }
+  ]
+}{
+  \end{tikzpicture}
+  \end{center}
+}
+
+% Comando auxiliar para pasos
+\newcommand{\paso}[3]{
+  \node (#1) [#2] {#3};
+}
+\newcommand{\conectar}[2]{
+  \draw[arrow] (#1) -- (#2);
 }
 
 % ============================================================================
