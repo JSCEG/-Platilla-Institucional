@@ -199,7 +199,28 @@ Ejemplo práctico con ecuaciones o casos de uso
 \highlight{92,000 MW}
 ```
 
+\highlight{92,000 MW}
+```
+
 Crea un recuadro naranja con texto blanco para destacar cifras importantes.
+
+### 8. Inserción de Gráficos (PNG/JPG)
+
+Para incluir gráficos generados en Excel, Python o D3.js, se recomienda exportarlos como imagen (PNG de alta resolución) e insertarlos así:
+
+```latex
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\textwidth]{img/mi_grafico.png}
+  \caption{Título del gráfico}
+  \label{fig:mi-grafico}
+\end{figure}
+```
+
+**Recomendaciones:**
+- Usar PNG para gráficos con texto y líneas (mejor nitidez).
+- Usar JPG solo para fotografías.
+- Ancho recomendado: `0.8\textwidth` o `1.0\textwidth`.
 
 ## Tipos de Portada
 

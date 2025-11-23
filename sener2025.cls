@@ -84,12 +84,15 @@
 \RequirePackage{longtable}
 \RequirePackage{multirow}
 \RequirePackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.5em}
 \RequirePackage{colortbl}
 \RequirePackage{tabularx}
 \RequirePackage{pdfpages}
 \RequirePackage{eso-pic}
 \RequirePackage{tikz}
 \RequirePackage{multicol}
+\RequirePackage{microtype}
 
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
