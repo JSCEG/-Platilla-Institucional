@@ -88,6 +88,8 @@
 \RequirePackage{tabularx}
 \RequirePackage{pdfpages}
 \RequirePackage{eso-pic}
+\RequirePackage{tikz}
+\RequirePackage{multicol}
 
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
@@ -110,9 +112,9 @@
 % Bibliography (APA style)
 \RequirePackage[
   backend=biber,
-  style=apa,
+  style=verbose-ibid,
   sorting=nyt,
-  citestyle=authoryear
+  citestyle=verbose-ibid
 ]{biblatex}
 \addbibresource{referencias.bib}
 % Hyperref (load after biblatex)
@@ -537,6 +539,15 @@
       }%
     }
     
+    % Capa oscura semitransparente para legibilidad
+    \AddToShipoutPictureBG*{%
+      \AtPageLowerLeft{%
+        \begin{tikzpicture}[remember picture,overlay]
+          \fill[black,opacity=0.4] (current page.south west) rectangle (current page.north east);
+        \end{tikzpicture}%
+      }%
+    }
+    
     \begin{center}
       \vspace*{2cm}
 
@@ -546,7 +557,7 @@
       % Título principal en Ambar Claro y fuente Patria
       {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
 
-      % Subtítulo en blanco o dorado
+      % Subtítulo en blanco
       \ifx\@subtitle\empty
       \else
         {\LARGE\color{white}\@subtitle}\\[2cm]

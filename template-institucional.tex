@@ -98,7 +98,34 @@ La plantilla incluye los siguientes elementos institucionales:
   \item Encabezados y pies de página personalizados
   \item Contraportada institucional
   \item Metadatos PDF embebidos
+  \item Metadatos PDF embebidos
 \end{enumerate}
+
+% ============================================================================
+% SECCIÓN 1: DISPOSICIONES DE TEXTO
+% ============================================================================
+
+\portadaseccion{Disposiciones de Texto}{Ortotipografía y Columnas}
+
+\section{Disposiciones de Texto y Ortotipografía}
+
+Esta sección demuestra las capacidades de la plantilla para manejar diferentes disposiciones de texto.
+
+\subsection{Texto a una columna}
+
+El texto estándar se presenta a una columna, ideal para la lectura continua y documentos oficiales que requieren claridad y formalidad. \lipsum[1]
+
+\subsection{Texto a dos columnas}
+
+Para secciones que requieren mayor densidad de información o un estilo más periodístico, se puede utilizar el entorno de dos columnas:
+
+\begin{multicols}{2}
+\textbf{Columna 1:} \lipsum[2]
+
+\columnbreak
+
+\textbf{Columna 2:} \lipsum[3]
+\end{multicols}
 
 % ============================================================================
 % SECCIÓN 1: ELEMENTOS DE LA PLANTILLA
@@ -232,13 +259,15 @@ Como se observa en la Figura~\ref{fig:sen2025}, el Sistema Eléctrico Nacional e
 
 La plantilla utiliza el formato \textbf{APA} para citas y referencias, gestionado por \texttt{biblatex}.
 
-\subsection{Ejemplos de citas}
+\subsection{Ejemplos de citas al pie}
+
+La plantilla ahora soporta citas al pie de página para una lectura más fluida.
 
 \begin{itemize}
-    \item \textbf{Libros:} \textcite{rodriguez2023planeacion} analizan la planeación energética.
-    \item \textbf{Artículos:} El crecimiento de renovables es notable \autocite{gomez2023renovables}.
-    \item \textbf{Reportes:} El \textcite{sener2024pladese} define la política sectorial.
-    \item \textbf{Sitios Web:} Consulte el portal oficial \autocite{sener2024portal}.
+    \item \textbf{Libros:} \textcite{rodriguez2023planeacion} analizan la planeación energética\footcite{rodriguez2023planeacion}.
+    \item \textbf{Artículos:} El crecimiento de renovables es notable\footcite{gomez2023renovables}.
+    \item \textbf{Reportes:} El \textcite{sener2024pladese} define la política sectorial\footcite{sener2024pladese}.
+    \item \textbf{Sitios Web:} Consulte el portal oficial\footcite{sener2024portal}.
 \end{itemize}
 
 \section{Glosario de Términos}

@@ -1,19 +1,16 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'template-institucional.blg'
 [118] biber-MSWIN64:342> INFO - === 
-[166] Biber.pm:421> INFO - Reading 'template-institucional.bcf'
-[318] Biber.pm:1002> INFO - Found 4 citekeys in bib section 0
-[343] Biber.pm:4487> INFO - Processing section 0
-[358] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[425] bibtex.pm:1713> INFO - LaTeX decoding ...
-[454] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[545] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[546] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[546] Biber.pm:4307> INFO - Sorting list 'nyt/apasortcite//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
-[562] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[563] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[563] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
-[574] bbl.pm:676> INFO - Writing 'template-institucional.bbl' with encoding 'UTF-8'
-[580] bbl.pm:779> INFO - Output to template-institucional.bbl
-[580] Biber.pm:132> WARN - ISBN '978-607-123-456-7' in entry 'rodriguez2023planeacion' is invalid - run biber with '--validate_datamodel' for details.
-[580] Biber.pm:134> INFO - WARNINGS: 1
+[159] Biber.pm:421> INFO - Reading 'template-institucional.bcf'
+[278] Biber.pm:1002> INFO - Found 4 citekeys in bib section 0
+[296] Biber.pm:4487> INFO - Processing section 0
+[309] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[364] bibtex.pm:1713> INFO - LaTeX decoding ...
+[388] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[472] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[472] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[472] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'es-ES'
+[483] bbl.pm:676> INFO - Writing 'template-institucional.bbl' with encoding 'UTF-8'
+[486] bbl.pm:779> INFO - Output to template-institucional.bbl
+[486] Biber.pm:132> WARN - ISBN '978-607-123-456-7' in entry 'rodriguez2023planeacion' is invalid - run biber with '--validate_datamodel' for details.
+[486] Biber.pm:134> INFO - WARNINGS: 1

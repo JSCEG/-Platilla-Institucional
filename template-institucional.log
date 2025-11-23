@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 00:45
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 01:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -803,6 +803,77 @@ File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 \c@AM@survey=\count356
 \AM@templatesizebox=\box87
 )
+(C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count357
+\mult@box=\box88
+\multicol@leftmargin=\dimen313
+\c@unbalance=\count358
+\c@collectmore=\count359
+\doublecol@number=\count360
+\multicoltolerance=\count361
+\multicolpretolerance=\count362
+\full@width=\dimen314
+\page@free=\dimen315
+\premulticols=\dimen316
+\postmulticols=\dimen317
+\multicolsep=\skip111
+\multicolbaselineskip=\skip112
+\partial@page=\box89
+\last@line=\box90
+\mc@boxedresult=\box91
+\maxbalancingoverflow=\dimen318
+\mult@rightbox=\box92
+\mult@grightbox=\box93
+\mult@firstbox=\box94
+\mult@gfirstbox=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\@tempa=\box124
+\@tempa=\box125
+\@tempa=\box126
+\@tempa=\box127
+\@tempa=\box128
+\@tempa=\box129
+\@tempa=\box130
+\@tempa=\box131
+\c@minrows=\count363
+\c@columnbadness=\count364
+\c@finalcolumnbadness=\count365
+\last@try=\dimen319
+\multicolovershoot=\dimen320
+\multicolundershoot=\dimen321
+\mult@nat@firstbox=\box132
+\colbreak@box=\box133
+\mc@col@check@num=\count366
+\g__mc_curr_col_int=\count367
+)
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
@@ -821,7 +892,7 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count357
+\lrq@indent=\count368
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -830,63 +901,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count358
-\c@listtotal=\count359
-\c@listcount=\count360
-\c@liststart=\count361
-\c@liststop=\count362
-\c@citecount=\count363
-\c@citetotal=\count364
-\c@multicitecount=\count365
-\c@multicitetotal=\count366
-\c@instcount=\count367
-\c@maxnames=\count368
-\c@minnames=\count369
-\c@maxitems=\count370
-\c@minitems=\count371
-\c@citecounter=\count372
-\c@maxcitecounter=\count373
-\c@savedcitecounter=\count374
-\c@uniquelist=\count375
-\c@uniquename=\count376
-\c@refsection=\count377
-\c@refsegment=\count378
-\c@maxextratitle=\count379
-\c@maxextratitleyear=\count380
-\c@maxextraname=\count381
-\c@maxextradate=\count382
-\c@maxextraalpha=\count383
-\c@abbrvpenalty=\count384
-\c@highnamepenalty=\count385
-\c@lownamepenalty=\count386
-\c@maxparens=\count387
-\c@parenlevel=\count388
-\blx@tempcnta=\count389
-\blx@tempcntb=\count390
-\blx@tempcntc=\count391
-\c@blx@maxsection=\count392
-\blx@maxsegment@0=\count393
-\blx@notetype=\count394
-\blx@parenlevel@text=\count395
-\blx@parenlevel@foot=\count396
-\blx@sectionciteorder@0=\count397
-\blx@sectionciteorderinternal@0=\count398
-\blx@entrysetcounter=\count399
-\blx@biblioinstance=\count400
-\labelnumberwidth=\skip111
-\labelalphawidth=\skip112
-\biblabelsep=\skip113
-\bibitemsep=\skip114
-\bibnamesep=\skip115
-\bibinitsep=\skip116
-\bibparsep=\skip117
-\bibhang=\skip118
+\c@tabx@nest=\count369
+\c@listtotal=\count370
+\c@listcount=\count371
+\c@liststart=\count372
+\c@liststop=\count373
+\c@citecount=\count374
+\c@citetotal=\count375
+\c@multicitecount=\count376
+\c@multicitetotal=\count377
+\c@instcount=\count378
+\c@maxnames=\count379
+\c@minnames=\count380
+\c@maxitems=\count381
+\c@minitems=\count382
+\c@citecounter=\count383
+\c@maxcitecounter=\count384
+\c@savedcitecounter=\count385
+\c@uniquelist=\count386
+\c@uniquename=\count387
+\c@refsection=\count388
+\c@refsegment=\count389
+\c@maxextratitle=\count390
+\c@maxextratitleyear=\count391
+\c@maxextraname=\count392
+\c@maxextradate=\count393
+\c@maxextraalpha=\count394
+\c@abbrvpenalty=\count395
+\c@highnamepenalty=\count396
+\c@lownamepenalty=\count397
+\c@maxparens=\count398
+\c@parenlevel=\count399
+\blx@tempcnta=\count400
+\blx@tempcntb=\count401
+\blx@tempcntc=\count402
+\c@blx@maxsection=\count403
+\blx@maxsegment@0=\count404
+\blx@notetype=\count405
+\blx@parenlevel@text=\count406
+\blx@parenlevel@foot=\count407
+\blx@sectionciteorder@0=\count408
+\blx@sectionciteorderinternal@0=\count409
+\blx@entrysetcounter=\count410
+\blx@biblioinstance=\count411
+\labelnumberwidth=\skip113
+\labelalphawidth=\skip114
+\biblabelsep=\skip115
+\bibitemsep=\skip116
+\bibnamesep=\skip117
+\bibinitsep=\skip118
+\bibparsep=\skip119
+\bibhang=\skip120
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count401
-\c@maxcomprange=\count402
-\c@mincompwidth=\count403
+\c@mincomprange=\count412
+\c@maxcomprange=\count413
+\c@mincompwidth=\count414
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -894,105 +965,91 @@ Package biblatex Info: ... file 'blx-dm.def' found.
 File: blx-dm.def 2025/07/10 v3.21 biblatex datamodel (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'apa.dbx' found.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/biblatex-apa\apa.dbx
-File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
-)
+Package biblatex Info: ... file 'verbose-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count404
-\c@savedafterword=\count405
-\c@annotator=\count406
-\c@savedannotator=\count407
-\c@author=\count408
-\c@savedauthor=\count409
-\c@bookauthor=\count410
-\c@savedbookauthor=\count411
-\c@commentator=\count412
-\c@savedcommentator=\count413
-\c@editor=\count414
-\c@savededitor=\count415
-\c@editora=\count416
-\c@savededitora=\count417
-\c@editorb=\count418
-\c@savededitorb=\count419
-\c@editorc=\count420
-\c@savededitorc=\count421
-\c@foreword=\count422
-\c@savedforeword=\count423
-\c@holder=\count424
-\c@savedholder=\count425
-\c@introduction=\count426
-\c@savedintroduction=\count427
-\c@namea=\count428
-\c@savednamea=\count429
-\c@nameb=\count430
-\c@savednameb=\count431
-\c@namec=\count432
-\c@savednamec=\count433
-\c@translator=\count434
-\c@savedtranslator=\count435
-\c@shortauthor=\count436
-\c@savedshortauthor=\count437
-\c@shorteditor=\count438
-\c@savedshorteditor=\count439
-\c@narrator=\count440
-\c@savednarrator=\count441
-\c@execproducer=\count442
-\c@savedexecproducer=\count443
-\c@execdirector=\count444
-\c@savedexecdirector=\count445
-\c@with=\count446
-\c@savedwith=\count447
-\c@labelname=\count448
-\c@savedlabelname=\count449
-\c@institution=\count450
-\c@savedinstitution=\count451
-\c@lista=\count452
-\c@savedlista=\count453
-\c@listb=\count454
-\c@savedlistb=\count455
-\c@listc=\count456
-\c@savedlistc=\count457
-\c@listd=\count458
-\c@savedlistd=\count459
-\c@liste=\count460
-\c@savedliste=\count461
-\c@listf=\count462
-\c@savedlistf=\count463
-\c@location=\count464
-\c@savedlocation=\count465
-\c@organization=\count466
-\c@savedorganization=\count467
-\c@origlocation=\count468
-\c@savedoriglocation=\count469
-\c@origpublisher=\count470
-\c@savedorigpublisher=\count471
-\c@publisher=\count472
-\c@savedpublisher=\count473
-\c@language=\count474
-\c@savedlanguage=\count475
-\c@origlanguage=\count476
-\c@savedoriglanguage=\count477
-\c@citation=\count478
-\c@savedcitation=\count479
-\c@pageref=\count480
-\c@savedpageref=\count481
-\shorthandwidth=\skip119
-\shortjournalwidth=\skip120
-\shortserieswidth=\skip121
-\shorttitlewidth=\skip122
-\shortauthorwidth=\skip123
-\shorteditorwidth=\skip124
-\locallabelnumberwidth=\skip125
-\locallabelalphawidth=\skip126
-\localshorthandwidth=\skip127
-\localshortjournalwidth=\skip128
-\localshortserieswidth=\skip129
-\localshorttitlewidth=\skip130
-\localshortauthorwidth=\skip131
-\localshorteditorwidth=\skip132
+\c@afterword=\count415
+\c@savedafterword=\count416
+\c@annotator=\count417
+\c@savedannotator=\count418
+\c@author=\count419
+\c@savedauthor=\count420
+\c@bookauthor=\count421
+\c@savedbookauthor=\count422
+\c@commentator=\count423
+\c@savedcommentator=\count424
+\c@editor=\count425
+\c@savededitor=\count426
+\c@editora=\count427
+\c@savededitora=\count428
+\c@editorb=\count429
+\c@savededitorb=\count430
+\c@editorc=\count431
+\c@savededitorc=\count432
+\c@foreword=\count433
+\c@savedforeword=\count434
+\c@holder=\count435
+\c@savedholder=\count436
+\c@introduction=\count437
+\c@savedintroduction=\count438
+\c@namea=\count439
+\c@savednamea=\count440
+\c@nameb=\count441
+\c@savednameb=\count442
+\c@namec=\count443
+\c@savednamec=\count444
+\c@translator=\count445
+\c@savedtranslator=\count446
+\c@shortauthor=\count447
+\c@savedshortauthor=\count448
+\c@shorteditor=\count449
+\c@savedshorteditor=\count450
+\c@labelname=\count451
+\c@savedlabelname=\count452
+\c@institution=\count453
+\c@savedinstitution=\count454
+\c@lista=\count455
+\c@savedlista=\count456
+\c@listb=\count457
+\c@savedlistb=\count458
+\c@listc=\count459
+\c@savedlistc=\count460
+\c@listd=\count461
+\c@savedlistd=\count462
+\c@liste=\count463
+\c@savedliste=\count464
+\c@listf=\count465
+\c@savedlistf=\count466
+\c@location=\count467
+\c@savedlocation=\count468
+\c@organization=\count469
+\c@savedorganization=\count470
+\c@origlocation=\count471
+\c@savedoriglocation=\count472
+\c@origpublisher=\count473
+\c@savedorigpublisher=\count474
+\c@publisher=\count475
+\c@savedpublisher=\count476
+\c@language=\count477
+\c@savedlanguage=\count478
+\c@origlanguage=\count479
+\c@savedoriglanguage=\count480
+\c@pageref=\count481
+\c@savedpageref=\count482
+\shorthandwidth=\skip121
+\shortjournalwidth=\skip122
+\shortserieswidth=\skip123
+\shorttitlewidth=\skip124
+\shortauthorwidth=\skip125
+\shorteditorwidth=\skip126
+\locallabelnumberwidth=\skip127
+\locallabelalphawidth=\skip128
+\localshorthandwidth=\skip129
+\localshortjournalwidth=\skip130
+\localshortserieswidth=\skip131
+\localshorttitlewidth=\skip132
+\localshortauthorwidth=\skip133
+\localshorteditorwidth=\skip134
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1008,47 +1065,43 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count482
-\c@textcitetotal=\count483
-\c@textcitemaxnames=\count484
-\c@biburlbigbreakpenalty=\count485
-\c@biburlbreakpenalty=\count486
-\c@biburlnumpenalty=\count487
-\c@biburlucpenalty=\count488
-\c@biburllcpenalty=\count489
+\c@textcitecount=\count483
+\c@textcitetotal=\count484
+\c@textcitemaxnames=\count485
+\c@biburlbigbreakpenalty=\count486
+\c@biburlbreakpenalty=\count487
+\c@biburlnumpenalty=\count488
+\c@biburlucpenalty=\count489
+\c@biburllcpenalty=\count490
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count490
+\c@smartand=\count491
 )
-Package biblatex Info: Trying to load bibliography style 'apa'...
-Package biblatex Info: ... file 'apa.bbx' found.
+Package biblatex Info: Trying to load bibliography style 'verbose-ibid'...
+Package biblatex Info: ... file 'verbose-ibid.bbx' found.
 
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/biblatex-apa\apa.bbx
-File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
+(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\verbose-ibid.bbx
+File: verbose-ibid.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'authortitle'...
+Package biblatex Info: ... file 'authortitle.bbx' found.
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\authortitle.bbx
+File: authortitle.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count491
-\c@bbx:relatedtotal=\count492
-)
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
-ed, overwriting.
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already d
-efined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already def
-ined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already
- defined, overwriting.
-)
-Package biblatex Info: Trying to load citation style 'authoryear'...
-Package biblatex Info: ... file 'authoryear.cbx' found.
+\c@bbx:relatedcount=\count492
+\c@bbx:relatedtotal=\count493
+)))
+Package biblatex Info: Trying to load citation style 'verbose-ibid'...
+Package biblatex Info: ... file 'verbose-ibid.cbx' found.
 
-(C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\authoryear.cbx
-File: authoryear.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
+(C:\Program Files\MiKTeX\tex/latex/biblatex/cbx\verbose-ibid.cbx
+File: verbose-ibid.cbx 2025/07/10 v3.21 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -1095,15 +1148,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count493
+\c@section@level=\count494
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen313
-\Hy@linkcounter=\count494
-\Hy@pagecounter=\count495
+\@linkdim=\dimen322
+\Hy@linkcounter=\count495
+\Hy@pagecounter=\count496
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -1111,7 +1164,7 @@ File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count496
+\Hy@SavedSpaceFactor=\count497
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -1123,9 +1176,9 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count497
+\c@Hy@tempcnt=\count498
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen314
+\XeTeXLinkMargin=\dimen323
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1134,9 +1187,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count498
-\Field@Width=\dimen315
-\Fld@charsize=\dimen316
+\Fld@menulength=\count499
+\Field@Width=\dimen324
+\Fld@charsize=\dimen325
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1144,19 +1197,19 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count499
-\c@Item=\count500
-\c@Hfootnote=\count501
+\Hy@abspage=\count500
+\c@Item=\count501
+\c@Hfootnote=\count502
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
 File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
-\pdfm@box=\box88
-\c@Hy@AnnotLevel=\count502
-\HyField@AnnotCount=\count503
-\Fld@listcount=\count504
-\c@bookmark@seq@number=\count505
+\pdfm@box=\box134
+\c@Hy@AnnotLevel=\count503
+\HyField@AnnotCount=\count504
+\Fld@listcount=\count505
+\c@bookmark@seq@number=\count506
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.s
 ty
@@ -1169,28 +1222,28 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip133
+\Hy@SectionHShift=\skip135
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 128.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 128.
+Package hyperref Info: Option `colorlinks' set `true' on input line 130.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 130.
 
 ) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty
 (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
 Package: l3keys2e 2025-10-09 LaTeX2e option processing using LaTeX3 keys
 )
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count506
-\l__lipsum_a_int=\count507
-\l__lipsum_b_int=\count508
+\g__lipsum_par_int=\count507
+\l__lipsum_a_int=\count508
+\l__lipsum_b_int=\count509
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count509
+\c@float@type=\count510
 \float@exts=\toks48
-\float@box=\box89
+\float@box=\box135
 \@float@everytoks=\toks49
-\@floatcapt=\box90
+\@floatcapt=\box136
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1198,10 +1251,10 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
 (template-institucional.aux
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 12.
+(babel)             Reported on input line 13.
 )
 \openout1 = `template-institucional.aux'.
 
@@ -1345,23 +1398,12 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
 
 ))
-Package biblatex Info: Trying to load language 'spanish' -> 'spanish-apa'...
-Package biblatex Info: ... file 'spanish-apa.lbx' found.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/biblatex-apa\spanish-apa.lbx
-File: spanish-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
 File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load language 'spanish'...
-Package biblatex Info: ... file 'spanish.lbx' found.
-
-(C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
-File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
-))
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -1473,77 +1515,104 @@ File: img/logo_sener.png Graphic file (type bmp)
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 107.
-LaTeX Info: Redefining \% on input line 107.
+LaTeX Info: Redefining \. on input line 108.
+LaTeX Info: Redefining \% on input line 108.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [5] [6
 
 ]
-LaTeX Info: Redefining \. on input line 144.
-LaTeX Info: Redefining \% on input line 144.
+Underfull \hbox (badness 5637) in paragraph at lines 127--128
+\TU/NotoSans(0)/m/n/12 titor diam. Donec felis erat, con-
+ []
+
+LaTeX Info: Redefining \. on input line 128.
+LaTeX Info: Redefining \% on input line 128.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [7
+[7
 
 ]
-LaTeX Info: Redefining \. on input line 150.
-LaTeX Info: Redefining \% on input line 150.
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [8] [9
 
 ]
-LaTeX Info: Redefining \. on input line 211.
-LaTeX Info: Redefining \% on input line 211.
+LaTeX Info: Redefining \. on input line 171.
+LaTeX Info: Redefining \% on input line 171.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [10
 
 ]
-File: img/figura-.ejemplo.png Graphic file (type bmp)
-<img/figura-.ejemplo.png>
-LaTeX Info: Redefining \. on input line 229.
-LaTeX Info: Redefining \% on input line 229.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [11] [12
 
 ]
-LaTeX Info: Redefining \. on input line 257.
-LaTeX Info: Redefining \% on input line 257.
+LaTeX Info: Redefining \. on input line 238.
+LaTeX Info: Redefining \% on input line 238.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [13
 
 ]
-LaTeX Info: Redefining \. on input line 264.
-LaTeX Info: Redefining \% on input line 264.
+File: img/figura-.ejemplo.png Graphic file (type bmp)
+<img/figura-.ejemplo.png>
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-
-[14
+ [14] [15
 
 ]
-LaTeX Info: Redefining \. on input line 294.
-LaTeX Info: Redefining \% on input line 294.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 267.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 267.
+LaTeX Info: Redefining \. on input line 280.
+LaTeX Info: Redefining \% on input line 280.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [15
+ [16
+
+]
+LaTeX Info: Redefining \. on input line 286.
+LaTeX Info: Redefining \% on input line 286.
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+ [17]
+LaTeX Info: Redefining \. on input line 293.
+LaTeX Info: Redefining \% on input line 293.
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+ [18
+
+]
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+ [19
 
 ]
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 294.
+(Font)              <10.95> on input line 323.
 File: img/logo_gob.png Graphic file (type bmp)
 <img/logo_gob.png>
- [16
+ [20
 
-] (template-institucional.aux
-LaTeX Info: Redefining \sptext on input line 12.
-LaTeX Info: Redefining \. on input line 12.
-LaTeX Info: Redefining \% on input line 12.
+]
+(template-institucional.aux
+LaTeX Info: Redefining \sptext on input line 13.
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
 )
  ***********
 LaTeX2e <2025-11-01>
@@ -1551,18 +1620,18 @@ L3 programming layer <2025-10-24>
  ***********
 Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
-(rerunfilecheck)             Checksum: EC79A700914AEA5400C8A155C0DDC8EB;3611.
+(rerunfilecheck)             Checksum: 376E57E328DFB596D734E234820C455D;4294.
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 39455 strings out of 402987
- 813613 string characters out of 5452870
- 1920205 words of memory out of 5000000
- 67657 multiletter control sequences out of 15000+600000
- 634964 words of font info for 83 fonts, out of 8000000 for 9000
+ 39192 strings out of 402987
+ 808119 string characters out of 5452870
+ 1831914 words of memory out of 5000000
+ 67387 multiletter control sequences out of 15000+600000
+ 635028 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,12n,122p,1217b,5856s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,122p,1217b,5829s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (18 pages).
+Output written on template-institucional.pdf (22 pages).
