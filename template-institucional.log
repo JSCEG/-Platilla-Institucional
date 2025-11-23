@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 02:09
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 11:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1271,8 +1271,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip136
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 134.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 134.
+Package hyperref Info: Option `colorlinks' set `true' on input line 140.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 140.
 
 ) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
@@ -1295,10 +1295,10 @@ Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
 (template-institucional.aux
-LaTeX Info: Redefining \. on input line 13.
-LaTeX Info: Redefining \% on input line 13.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 13.
+(babel)             Reported on input line 12.
 )
 \openout1 = `template-institucional.aux'.
 
@@ -1482,8 +1482,8 @@ Package hyperref Info: Link coloring ON on input line 21.
 \@outlinefile=\write5
 \openout5 = `template-institucional.out'.
 
-File: img/logo_sener_transparente.png Graphic file (type bmp)
-<img/logo_sener_transparente.png>
+File: img/logo_sener_portada.png Graphic file (type bmp)
+<img/logo_sener_portada.png>
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -1519,12 +1519,11 @@ File: img/logo_gob_trasnparente.png Graphic file (type bmp)
 <img/logo_gob_trasnparente.png>
 File: img/mujer.png Graphic file (type bmp)
 <img/mujer.png>
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
  [1
 
 ]
-File: img/logo_sener.png Graphic file (type bmp)
-<img/logo_sener.png>
- [2]
 Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
@@ -1614,7 +1613,10 @@ LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [5] [6
+ [5]
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
+ [6
 
 ]
 LaTeX Info: Redefining \. on input line 128.
@@ -1629,7 +1631,10 @@ LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [8] [9
+ [8]
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
+ [9
 
 ]
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
@@ -1657,7 +1662,10 @@ LaTeX Info: Redefining \. on input line 197.
 LaTeX Info: Redefining \% on input line 197.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-[11] [12
+[11]
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
+ [12
 
 ]
 LaTeX Info: Redefining \. on input line 258.
@@ -1669,64 +1677,67 @@ File: img/logo_sener.png Graphic file (type bmp)
 ]
 File: img/graficos/mapa_sen_2025.png Graphic file (type bmp)
 <img/graficos/mapa_sen_2025.png>
-LaTeX Info: Redefining \. on input line 271.
-LaTeX Info: Redefining \% on input line 271.
+LaTeX Info: Redefining \. on input line 281.
+LaTeX Info: Redefining \% on input line 281.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [14]
 File: img/graficos/adicion_capacidad.png Graphic file (type bmp)
 <img/graficos/adicion_capacidad.png>
-LaTeX Info: Redefining \. on input line 280.
-LaTeX Info: Redefining \% on input line 280.
+LaTeX Info: Redefining \. on input line 290.
+LaTeX Info: Redefining \% on input line 290.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [15]
 File: img/graficos/mapa_gasoductos_2024.png Graphic file (type bmp)
 <img/graficos/mapa_gasoductos_2024.png>
-LaTeX Info: Redefining \. on input line 289.
-LaTeX Info: Redefining \% on input line 289.
+LaTeX Info: Redefining \. on input line 299.
+LaTeX Info: Redefining \% on input line 299.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [16]
 File: img/figura-.ejemplo.png Graphic file (type bmp)
 <img/figura-.ejemplo.png>
-LaTeX Info: Redefining \. on input line 300.
-LaTeX Info: Redefining \% on input line 300.
+LaTeX Info: Redefining \. on input line 310.
+LaTeX Info: Redefining \% on input line 310.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [17]
-LaTeX Info: Redefining \. on input line 307.
-LaTeX Info: Redefining \% on input line 307.
+LaTeX Info: Redefining \. on input line 317.
+LaTeX Info: Redefining \% on input line 317.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [18] [19
+ [18]
+File: img/fondo_guinda.png Graphic file (type bmp)
+<img/fondo_guinda.png>
+ [19
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 318.
+(Font)              <7> on input line 328.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 318.
-LaTeX Info: Redefining \. on input line 331.
-LaTeX Info: Redefining \% on input line 331.
+(Font)              <5> on input line 328.
+LaTeX Info: Redefining \. on input line 341.
+LaTeX Info: Redefining \% on input line 341.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [20
 
 ]
-LaTeX Info: Redefining \. on input line 337.
-LaTeX Info: Redefining \% on input line 337.
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [21]
-LaTeX Info: Redefining \. on input line 344.
-LaTeX Info: Redefining \% on input line 344.
+LaTeX Info: Redefining \. on input line 354.
+LaTeX Info: Redefining \% on input line 354.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [22
 
 ]
-LaTeX Info: Redefining \. on input line 374.
-LaTeX Info: Redefining \% on input line 374.
+LaTeX Info: Redefining \. on input line 384.
+LaTeX Info: Redefining \% on input line 384.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
  [23
@@ -1735,35 +1746,41 @@ File: img/logo_sener.png Graphic file (type bmp)
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 374.
+(Font)              <10.95> on input line 384.
 File: img/logo_gob.png Graphic file (type bmp)
 <img/logo_gob.png>
  [24
 
 ]
 (template-institucional.aux
-LaTeX Info: Redefining \sptext on input line 13.
-LaTeX Info: Redefining \. on input line 13.
-LaTeX Info: Redefining \% on input line 13.
+LaTeX Info: Redefining \sptext on input line 12.
+LaTeX Info: Redefining \. on input line 12.
+LaTeX Info: Redefining \% on input line 12.
 )
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
-(rerunfilecheck)             Checksum: 2A0651B883A12BB88D9B7F5D6881EE42;5642.
+
+Package rerunfilecheck Warning: File `template-institucional.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `template-institucional.out':
+(rerunfilecheck)             Before: D0BAE92C2D7A388AFE3C914E46D080FE;5891
+(rerunfilecheck)             After:  2A0651B883A12BB88D9B7F5D6881EE42;5642.
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
  42661 strings out of 402987
- 862965 string characters out of 5452870
- 1910718 words of memory out of 5000000
- 70817 multiletter control sequences out of 15000+600000
- 635052 words of font info for 94 fonts, out of 8000000 for 9000
+ 862967 string characters out of 5452870
+ 1910731 words of memory out of 5000000
+ 70814 multiletter control sequences out of 15000+600000
+ 635068 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,12n,122p,1217b,5862s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (26 pages).
+Output written on template-institucional.pdf (25 pages).

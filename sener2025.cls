@@ -12,7 +12,12 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{geometry}
-\RequirePackage{graphicx}
+\RequirePackage[final]{graphicx}
+% Configuración para evitar compresión agresiva de imágenes
+\ifdefined\XeTeXversion
+  \special{pdf:minorversion 7} % Usar PDF 1.7 (mejor soporte de transparencias y calidad)
+  \special{pdf:objcompresslevel 0} % Evitar compresión de objetos que pueda degradar calidad
+\fi
 \RequirePackage{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome5}
@@ -27,7 +32,8 @@
 \definecolor{gobmxDorado}{HTML}{C99700}
 \definecolor{gobmxGris}{HTML}{6C6C6C}
 \definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
-\definecolor{gobmxAmbarClaro}{HTML}{E3B130}
+\definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
+\definecolor{gobmxAmbarClaro}{HTML}{DDC6A2}
 
 % ============================================================================
 % TIPOGRAFÍAS INSTITUCIONALES
@@ -210,7 +216,7 @@
 % ESTILOS DE TÍTULOS Y SECCIONES
 % ============================================================================
 \titleformat{\section}
-  {\Large\bfseries\color{gobmxGuinda}}
+  {\Large\bfseries\sffamily\color{gobmxGuinda}}
   {\thesection.}{0.5em}{}
   [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
 
@@ -609,12 +615,10 @@
       }%
     }
     
-    % Capa oscura semitransparente para legibilidad
+    % Imagen de fondo (fondo_guinda.png)
     \AddToShipoutPictureBG*{%
       \AtPageLowerLeft{%
-        \begin{tikzpicture}[remember picture,overlay]
-          \fill[black,opacity=0.4] (current page.south west) rectangle (current page.north east);
-        \end{tikzpicture}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
       }%
     }
     
@@ -622,7 +626,7 @@
       \vspace*{2cm}
 
       % Logo SENER transparente
-      \includegraphics[height=2.5cm]{img/logo_sener_transparente.png}\\[2.5cm]
+      \includegraphics[height=2.5cm]{img/logo_sener_portada.png}\\[2.5cm]
 
       % Título principal en Ambar Claro y fuente Patria
       {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
@@ -734,21 +738,27 @@
 % ============================================================================
 % PORTADA DE SECCIÓN
 % ============================================================================
-\newcommand{\portadaseccion}[2]{
+\newcommand{\portadaseccion}[3]{
   \clearpage
   \thispagestyle{empty}
   \begingroup
     \color{white}
-    % Fondo guinda para la página
+    % Fondo con imagen (fondo_guinda.png)
     \AddToShipoutPictureBG*{%
       \AtPageLowerLeft{%
-        \color{gobmxGuinda}\rule{\paperwidth}{\paperheight}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
       }%
     }
     \vspace*{\fill}
     \begin{center}
-      {\Huge\bfseries\color{gobmxDorado} #1}\\[1cm]
-      {\Large #2}
+      % Número de sección grande en blanco
+      {\fontsize{80}{80}\selectfont\bfseries\color{white} #1}\\[0.5cm]
+      
+      % Título en Ambar Claro y fuente Patria
+      {\Huge\bfseries\patriafont\color{gobmxAmbarClaro} #2}\\[1cm]
+      
+      % Subtítulo en blanco
+      {\Large #3}
     \end{center}
     \vspace*{\fill}
   \endgroup

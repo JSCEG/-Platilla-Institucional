@@ -399,3 +399,47 @@ Ver archivos:
 - `ejemplo-tablas-profesionales.tex` - Enfoque en tablas y recuadros oficiales
 - `ejemplo-citas-bibliografia.tex` - Guía completa de citas y referencias en formato APA
 - `referencias.bib` - Ejemplos de todos los tipos de fuentes bibliográficas
+
+## Guía de Imágenes y Gráficos (Calidad Premium)
+
+Para asegurar que los documentos impresos y digitales mantengan una calidad profesional, es crítico utilizar los formatos de archivo correctos.
+
+### Regla de Oro: Vectores vs. Pixeles
+
+*   **Gráficos Vectoriales (PDF, EPS, SVG):** Son fórmulas matemáticas. Se pueden escalar infinitamente sin perder calidad. **Úsalos siempre para gráficos generados por computadora (Excel, Python, R, Illustrator).**
+*   **Gráficos de Mapa de Bits (JPG, PNG):** Son rejillas de pixeles. Si los agrandas, se ven borrosos ("pixelados"). **Úsalos solo para fotografías o capturas de pantalla.**
+
+### Recomendaciones por Tipo de Contenido
+
+| Tipo de Imagen | Formato Recomendado | Resolución Mínima | Herramienta de Origen |
+| :--- | :--- | :--- | :--- |
+| **Gráficos de datos** (Barras, Líneas, Pastel) | **PDF** (Vectorial) | N/A (Infinito) | Excel ("Guardar como PDF"), Python (Matplotlib `savefig('plot.pdf')`), R |
+| **Diagramas y Esquemas** | **PDF** o **EPS** | N/A (Infinito) | Adobe Illustrator, Inkscape, Visio ("Exportar a PDF") |
+| **Fotografías** | **JPG** (Alta calidad) | 300 DPI | Cámara, Stock Photos |
+| **Capturas de Pantalla** (Software, Web) | **PNG** | 72-96 DPI (Nativo) | Recortes de Windows, Snagit |
+| **Logotipos** | **PDF** o **EPS** | N/A (Infinito) | Archivos oficiales de identidad gráfica |
+
+### Cómo Exportar Gráficos Correctamente
+
+#### Desde Excel
+1.  Selecciona tu gráfico.
+2.  Ve a `Archivo > Guardar como`.
+3.  Elige formato **PDF**.
+4.  Usa `\includegraphics{grafico.pdf}` en LaTeX.
+
+#### Desde Python (Matplotlib/Seaborn)
+```python
+plt.savefig('mi_grafico.pdf', bbox_inches='tight')
+```
+
+#### Desde R (ggplot2)
+```r
+ggsave("mi_grafico.pdf", width = 10, height = 6)
+```
+
+### Problemas Comunes y Soluciones
+
+*   **"Mi imagen se ve borrosa":** Probablemente estás usando un JPG de baja resolución o tomaste una captura de pantalla de un gráfico en lugar de exportarlo.
+*   **"El archivo PDF pesa demasiado":** Revisa si tienes imágenes PNG/JPG innecesariamente grandes (ej. 4000px de ancho para una imagen pequeña).
+*   **"Los colores se ven diferentes":** Asegúrate de que tus imágenes estén en modo de color **RGB** para pantalla o **CMYK** para impresión profesional. LaTeX maneja ambos, pero la mezcla puede variar.
+
