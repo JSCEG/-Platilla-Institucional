@@ -61,6 +61,11 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5.sty
@@ -236,17 +241,12 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tocloft\tocloft.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tocloft\tocloft.sty
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pdfpages.sty
@@ -385,15 +385,18 @@ INPUT template-institucional.out
 INPUT .\template-institucional.out
 INPUT .\template-institucional.out
 OUTPUT template-institucional.out
-INPUT .\img\logo_sener_transparente.png
-INPUT .\img\logo_sener_transparente.png
-INPUT .\img\logo_sener_transparente.png
+INPUT .\img\logo_sener_portada.png
+INPUT .\img\logo_sener_portada.png
+INPUT .\img\logo_sener_portada.png
 INPUT .\img\logo_gob_trasnparente.png
 INPUT .\img\logo_gob_trasnparente.png
 INPUT .\img\logo_gob_trasnparente.png
 INPUT .\img\mujer.png
 INPUT .\img\mujer.png
 INPUT .\img\mujer.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 OUTPUT template-institucional.xdv
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
@@ -425,6 +428,14 @@ INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT .\template-institucional.lot
+INPUT .\template-institucional.lot
+INPUT template-institucional.lot
+OUTPUT template-institucional.lot
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
 INPUT .\template-institucional.lof
 INPUT .\template-institucional.lof
 INPUT template-institucional.lof
@@ -435,8 +446,16 @@ INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
@@ -444,6 +463,11 @@ INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\logo_sener.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\graficos\mapa_sen_2025.png
@@ -468,6 +492,9 @@ INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png
 INPUT .\img\logo_sener.png

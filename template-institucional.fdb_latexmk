@@ -1,17 +1,17 @@
 # Fdb version 4
-["biber template-institucional"] 1763885293.0185 "template-institucional.bcf" "template-institucional.bbl" "template-institucional" 1763915537.8123 0
+["biber template-institucional"] 1763922818.70701 "template-institucional.bcf" "template-institucional.bbl" "template-institucional" 1763922855.19126 0
   "referencias.bib" 1763866649 7195 93cc823040ea444f126dde6b77028f91 ""
-  "template-institucional.bcf" 1763915514 109276 cae9e3fa103a095ac307d3c23f922399 "xelatex"
+  "template-institucional.bcf" 1763922829 109276 cae9e3fa103a095ac307d3c23f922399 "xelatex"
   (generated)
   "template-institucional.bbl"
   "template-institucional.blg"
   (rewritten before read)
-["xdvipdfmx"] 1763915514.82806 "template-institucional.xdv" "template-institucional.pdf" "template-institucional" 1763915537.82669 0
-  "template-institucional.xdv" 1763915514 239860 a07922aa62921d32ffc12cdd37c53e78 "xelatex"
+["xdvipdfmx"] 1763922829.55176 "template-institucional.xdv" "template-institucional.pdf" "template-institucional" 1763922855.20241 0
+  "template-institucional.xdv" 1763922829 239480 0b200c9fb7958060e16ae44b664d34db "xelatex"
   (generated)
   "template-institucional.pdf"
   (rewritten before read)
-["xelatex"] 1763915507.72332 "c:/Proyectos/40.-PlantillasLatex/template-institucional.tex" "template-institucional.xdv" "template-institucional" 1763915537.81269 0
+["xelatex"] 1763922825.24578 "c:/Proyectos/40.-PlantillasLatex/template-institucional.tex" "template-institucional.xdv" "template-institucional" 1763922855.19176 0
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136793854 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi10.tfm" 1136765053 1528 abec98dbc43e172678c11b3b9031252a ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmmi12.tfm" 1136765053 1524 4414a8315f39513458b80dfc63bff03a ""
@@ -208,25 +208,26 @@
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tikzfill/tikzlibraryfill.image.code.tex" 1691489948 10931 717eb52299f416934beb8b2b7cd8cee6 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tocloft/tocloft.sty" 1578908763 37263 3e78d14f0f4b1a30560fea5e04de805d ""
-  "c:/Proyectos/40.-PlantillasLatex/template-institucional.tex" 1763915490 14682 e25cb5876f86a4fc437488041a93051c ""
+  "c:/Proyectos/40.-PlantillasLatex/template-institucional.tex" 1763922754 15013 4db1716caebf1899858e9d807b0aa685 ""
   "img/figura-.ejemplo.png" 1763753974 3719760 a9935eb9f65e7c567f1fc88bfb6b8f89 ""
+  "img/fondo_guinda.png" 1763916536 761871 3bf3af1a55760b4bc5896b2056f00709 ""
   "img/graficos/adicion_capacidad.png" 1763884296 3385918 ffd6a212dcd306f8474751a905f7aa79 ""
   "img/graficos/mapa_gasoductos_2024.png" 1763884296 2929242 675d4d0a3c73a4fb3b4476a524fab4c6 ""
   "img/graficos/mapa_sen_2025.png" 1763884296 3662574 46a304fdec930c5e2c4135709f0c53e8 ""
   "img/logo_gob.png" 1754928710 105519 cd0ec7830d42aa0b4976b8a86a35f4e1 ""
   "img/logo_gob_trasnparente.png" 1763880172 56777 b0ff1a283a3dd7538f9f210ef336a0be ""
   "img/logo_sener.png" 1754191676 30704 3d4e7aacf4f4c52692135944bf60b1d3 ""
-  "img/logo_sener_transparente.png" 1763880106 47936 2b21bba9a1db76bb87c317808470714f ""
+  "img/logo_sener_portada.png" 1763918010 65992 ff6fb224fda4ceaf9f9dda952b4bab45 ""
   "img/mujer.png" 1754615781 309843 a5bdc493fab2a226a5fa50bac36f5b30 ""
-  "sener2025.cls" 1763915477 21415 ea29b2ec9ada271d9ac5de49821c8139 ""
-  "template-institucional.aux" 1763915514 8156 450fed9339b1f809d2da97d25e8bb767 "xelatex"
-  "template-institucional.bbl" 1763885295 6333 30396d924a567af42daae491adc53ac9 "biber template-institucional"
-  "template-institucional.lof" 1763915514 779 ea93e6617cba9e8e2a4d21c4b712513f "xelatex"
-  "template-institucional.lot" 1763915514 401 ed860854d18368ddba3f623eed18f559 "xelatex"
-  "template-institucional.out" 1763915514 5891 d0bae92c2d7a388afe3c914e46d080fe "xelatex"
-  "template-institucional.run.xml" 1763915514 2512 bfcc9fac6f791fb8a6f6711fe6fd2534 "xelatex"
-  "template-institucional.tex" 1763915490 14682 e25cb5876f86a4fc437488041a93051c ""
-  "template-institucional.toc" 1763915514 2684 00520a0c8381f1742de1bfad6ab845b4 "xelatex"
+  "sener2025.cls" 1763922119 21297 eea7251845a780caa8e9b0a2c3265c6c ""
+  "template-institucional.aux" 1763922829 8029 fb72b03e2bb512c36002d0dcc57233b8 "xelatex"
+  "template-institucional.bbl" 1763922820 6333 30396d924a567af42daae491adc53ac9 "biber template-institucional"
+  "template-institucional.lof" 1763922829 779 3f06f99c3f545c393b3435e8f36c7e1e "xelatex"
+  "template-institucional.lot" 1763922829 401 7684f1a19d766e2d1dc63cb50682ef9b "xelatex"
+  "template-institucional.out" 1763922829 5642 2a0651b883a12bb88d9b7f5d6881ee42 "xelatex"
+  "template-institucional.run.xml" 1763922829 2512 bfcc9fac6f791fb8a6f6711fe6fd2534 "xelatex"
+  "template-institucional.tex" 1763922754 15013 4db1716caebf1899858e9d807b0aa685 ""
+  "template-institucional.toc" 1763922829 2582 f4d222bf9ab05c03b83f64b7557a30b5 "xelatex"
   "tipografias/NotoSans-Regular.ttf" 1763756805 582748 fe700e4601ad1567290857922c30b9d1 ""
   "tipografias/Patria_Regular.otf" 1763756834 136816 7b38cee4c6282c8faf3f72df9518f3fb ""
   (generated)

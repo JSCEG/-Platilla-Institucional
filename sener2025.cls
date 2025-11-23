@@ -676,11 +676,13 @@
     {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
     
     % Título del índice
-    {\Large\bfseries\color{gobmxGuinda}índice de tablas}\\[1cm]
+    {\Large\bfseries\color{gobmxGuinda}Índice de Tablas}\\[1cm]
   \end{center}
   
   % Contenido del índice (generado automáticamente)
-  \listoftables
+  \makeatletter
+  \@starttoc{lot}
+  \makeatother
 }
 
 \newcommand{\listafiguras}{
@@ -695,11 +697,13 @@
     {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
     
     % Título del índice
-    {\Large\bfseries\color{gobmxGuinda}índice de figuras}\\[1cm]
+    {\Large\bfseries\color{gobmxGuinda}Índice de Figuras}\\[1cm]
   \end{center}
   
   % Contenido del índice (generado automáticamente)
-  \listoffigures
+  \makeatletter
+  \@starttoc{lof}
+  \makeatother
 }
 
 % ============================================================================
