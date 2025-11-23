@@ -18,7 +18,7 @@
   \special{pdf:minorversion 7} % Usar PDF 1.7 (mejor soporte de transparencias y calidad)
   \special{pdf:objcompresslevel 0} % Evitar compresión de objetos que pueda degradar calidad
 \fi
-\RequirePackage{xcolor}
+\RequirePackage[table]{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome5}
 \RequirePackage{fancyhdr}
@@ -29,7 +29,7 @@
 % ============================================================================
 \definecolor{gobmxGuinda}{HTML}{691B32}
 \definecolor{gobmxVerde}{HTML}{006B5C}
-\definecolor{gobmxDorado}{HTML}{C99700}
+\definecolor{gobmxDorado}{HTML}{DDC6A2}
 \definecolor{gobmxGris}{HTML}{6C6C6C}
 \definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
 \definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
@@ -187,10 +187,10 @@
 \fancypagestyle{plain}{
   \fancyhf{}
   \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
-  \fancyhead[R]{\small\thepage}
+  \fancyhead[R]{\small\thepage\ \textcolor{gobmxAmbarClaro}{|}\ \leftmark}
   
   % Pie de página mejorado con logo centrado y líneas decorativas
-  \fancyfoot[L]{\tiny\textcolor{gobmxGris}{\leftmark}}
+  \fancyfoot[L]{}
   \fancyfoot[C]{%
     \raisebox{-0.5\height}{%
       \IfFileExists{img/logo_sener.png}{%
@@ -212,11 +212,16 @@
 
 \pagestyle{plain}
 
+% Configuración de párrafo y espaciado moderno
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}
+\linespread{1.15}
+
 % ============================================================================
 % ESTILOS DE TÍTULOS Y SECCIONES
 % ============================================================================
 \titleformat{\section}
-  {\Large\bfseries\sffamily\color{gobmxGuinda}}
+  {\Large\bfseries\patriafont\color{gobmxGuinda}}
   {\thesection.}{0.5em}{}
   [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
 
@@ -229,8 +234,8 @@
 %   {}
 
 \titleformat{\subsection}
-  {\large\bfseries\color{gobmxVerde}}
-  {\thesubsection}{0.5em}{}
+  {\large\bfseries\color{gobmxGuinda}}
+  {\thesubsection}{1em}{}
 
 \titleformat{\subsubsection}
   {\normalsize\bfseries\color{gobmxDorado}}
@@ -626,7 +631,7 @@
       \vspace*{2cm}
 
       % Logo SENER transparente
-      \includegraphics[height=2.5cm]{img/logo_sener_portada.png}\\[2.5cm]
+      \includegraphics[height=5.0cm]{img/logo_sener_portada.png}\\[2.5cm]
 
       % Título principal en Ambar Claro y fuente Patria
       {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]

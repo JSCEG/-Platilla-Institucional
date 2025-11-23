@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 11:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  23 NOV 2025 12:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -162,17 +162,34 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box53
+\extrarowheight=\dimen161
+\NC@list=\toks22
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box54
+)
+\everycr=\toks23
+\minrowclearance=\skip53
+\rownum=\count285
+)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box53
-\beforetitleunit=\skip51
-\aftertitleunit=\skip52
-\ttl@plus=\dimen160
-\ttl@minus=\dimen161
-\ttl@toksa=\toks22
-\titlewidth=\dimen162
-\titlewidthlast=\dimen163
-\titlewidthfirst=\dimen164
+\ttl@box=\box55
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen162
+\ttl@minus=\dimen163
+\ttl@toksa=\toks24
+\titlewidth=\dimen164
+\titlewidthlast=\dimen165
+\titlewidthfirst=\dimen166
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/fontawesome5\fontawesome5.sty
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
@@ -180,9 +197,9 @@ Package: expl3 2025-10-24 L3 programming layer (loader)
 
 (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
 File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
-\g__graphics_track_int=\count285
-\g__pdfannot_backend_int=\count286
-\g__pdfannot_backend_link_int=\count287
+\g__graphics_track_int=\count286
+\g__pdfannot_backend_int=\count287
+\g__pdfannot_backend_link_int=\count288
 ))
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
 
@@ -208,21 +225,21 @@ LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
 s.fd))) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip53
-\f@nch@offset@elh=\skip54
-\f@nch@offset@erh=\skip55
-\f@nch@offset@olh=\skip56
-\f@nch@offset@orh=\skip57
-\f@nch@offset@elf=\skip58
-\f@nch@offset@erf=\skip59
-\f@nch@offset@olf=\skip60
-\f@nch@offset@orf=\skip61
-\f@nch@height=\skip62
-\f@nch@footalignment=\skip63
-\f@nch@widthL=\skip64
-\f@nch@widthC=\skip65
-\f@nch@widthR=\skip66
-\@temptokenb=\toks23
+\f@nch@headwidth=\skip56
+\f@nch@offset@elh=\skip57
+\f@nch@offset@erh=\skip58
+\f@nch@offset@olh=\skip59
+\f@nch@offset@orh=\skip60
+\f@nch@offset@elf=\skip61
+\f@nch@offset@erf=\skip62
+\f@nch@offset@olf=\skip63
+\f@nch@offset@orf=\skip64
+\f@nch@height=\skip65
+\f@nch@footalignment=\skip66
+\f@nch@widthL=\skip67
+\f@nch@widthC=\skip68
+\f@nch@widthR=\skip69
+\@temptokenb=\toks25
 )
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
@@ -230,20 +247,20 @@ Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count288
-\l__fontspec_language_int=\count289
-\l__fontspec_strnum_int=\count290
-\l__fontspec_tmp_int=\count291
-\l__fontspec_tmpa_int=\count292
-\l__fontspec_tmpb_int=\count293
-\l__fontspec_tmpc_int=\count294
-\l__fontspec_em_int=\count295
-\l__fontspec_emdef_int=\count296
-\l__fontspec_strong_int=\count297
-\l__fontspec_strongdef_int=\count298
-\l__fontspec_tmpa_dim=\dimen165
-\l__fontspec_tmpb_dim=\dimen166
-\l__fontspec_tmpc_dim=\dimen167
+\l__fontspec_script_int=\count289
+\l__fontspec_language_int=\count290
+\l__fontspec_strnum_int=\count291
+\l__fontspec_tmp_int=\count292
+\l__fontspec_tmpa_int=\count293
+\l__fontspec_tmpb_int=\count294
+\l__fontspec_tmpc_int=\count295
+\l__fontspec_em_int=\count296
+\l__fontspec_emdef_int=\count297
+\l__fontspec_strong_int=\count298
+\l__fontspec_strongdef_int=\count299
+\l__fontspec_tmpa_dim=\dimen167
+\l__fontspec_tmpb_dim=\dimen168
+\l__fontspec_tmpc_dim=\dimen169
 
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
@@ -308,12 +325,12 @@ guage=dflt;+smcp;mapping=tex-text;"
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip67
-\enit@outerparindent=\dimen168
-\enit@toks=\toks24
-\enit@inbox=\box54
-\enit@count@id=\count299
-\enitdp@description=\count300
+\labelindent=\skip70
+\enit@outerparindent=\dimen170
+\enit@toks=\toks26
+\enit@inbox=\box56
+\enit@count@id=\count300
+\enitdp@description=\count301
 )
 (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
@@ -322,12 +339,12 @@ Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
 (C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
 (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks25
-\pgfutil@tempdima=\dimen169
-\pgfutil@tempdimb=\dimen170
+\pgfutil@everybye=\toks27
+\pgfutil@tempdima=\dimen171
+\pgfutil@tempdimb=\dimen172
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box55
+\pgfutil@abb=\box57
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -341,33 +358,33 @@ Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
 Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks26
-\pgfkeys@temptoks=\toks27
+\pgfkeys@pathtoks=\toks28
+\pgfkeys@temptoks=\toks29
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
 tex
-\pgfkeys@tmptoks=\toks28
+\pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen171
-\pgf@y=\dimen172
-\pgf@xa=\dimen173
-\pgf@ya=\dimen174
-\pgf@xb=\dimen175
-\pgf@yb=\dimen176
-\pgf@xc=\dimen177
-\pgf@yc=\dimen178
-\pgf@xd=\dimen179
-\pgf@yd=\dimen180
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\pgf@xd=\dimen181
+\pgf@yd=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count301
-\c@pgf@countb=\count302
-\c@pgf@countc=\count303
-\c@pgf@countd=\count304
-\t@pgf@toka=\toks29
-\t@pgf@tokb=\toks30
-\t@pgf@tokc=\toks31
-\pgf@sys@id@count=\count305
+\c@pgf@counta=\count302
+\c@pgf@countb=\count303
+\c@pgf@countc=\count304
+\c@pgf@countd=\count305
+\t@pgf@toka=\toks31
+\t@pgf@tokb=\toks32
+\t@pgf@tokc=\toks33
+\pgf@sys@id@count=\count306
  (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -382,12 +399,12 @@ File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
-\pgfsys@objnum=\count306
+\pgfsys@objnum=\count307
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count307
-\pgfsyssoftpath@bigbuffer@items=\count308
+\pgfsyssoftpath@smallbuffer@items=\count308
+\pgfsyssoftpath@bigbuffer@items=\count309
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -398,12 +415,12 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen181
-\pgfmath@count=\count309
-\pgfmath@box=\box56
-\pgfmath@toks=\toks32
-\pgfmath@stack@operand=\toks33
-\pgfmath@stack@operation=\toks34
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count310
+\pgfmath@box=\box58
+\pgfmath@toks=\toks34
+\pgfmath@stack@operand=\toks35
+\pgfmath@stack@operation=\toks36
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
@@ -419,55 +436,55 @@ tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
 cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count310
+\c@pgfmathroundto@lastzeros=\count311
 ))
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen182
-\pgf@picmaxx=\dimen183
-\pgf@picminy=\dimen184
-\pgf@picmaxy=\dimen185
-\pgf@pathminx=\dimen186
-\pgf@pathmaxx=\dimen187
-\pgf@pathminy=\dimen188
-\pgf@pathmaxy=\dimen189
-\pgf@xx=\dimen190
-\pgf@xy=\dimen191
-\pgf@yx=\dimen192
-\pgf@yy=\dimen193
-\pgf@zx=\dimen194
-\pgf@zy=\dimen195
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
 ex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen196
-\pgf@path@lasty=\dimen197
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen198
-\pgf@shorten@start@additional=\dimen199
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box57
-\pgf@hbox=\box58
-\pgf@layerbox@main=\box59
-\pgf@picture@serial@count=\count311
+\pgfpic=\box59
+\pgf@hbox=\box60
+\pgf@layerbox@main=\box61
+\pgf@picture@serial@count=\count312
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
 x
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen256
+\pgflinewidth=\dimen258
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
 .tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen257
-\pgf@pt@y=\dimen258
-\pgf@pt@temp=\dimen259
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -478,19 +495,19 @@ tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen260
+\pgfarrowsep=\dimen262
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen261
-\pgf@sys@shading@range@num=\count312
-\pgf@shadingcount=\count313
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count313
+\pgf@shadingcount=\count314
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box60
+\pgfexternal@startupbox=\box62
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -505,15 +522,15 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box61
+\pgfnodeparttextbox=\box63
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen262
-\pgf@nodesepend=\dimen263
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
@@ -524,10 +541,10 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen264
-\pgffor@skip=\dimen265
-\pgffor@stack=\toks35
-\pgffor@toks=\toks36
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
+\pgffor@stack=\toks37
+\pgffor@toks=\toks38
 ))
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
@@ -535,40 +552,40 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
 tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count314
-\pgfplotmarksize=\dimen266
+\pgf@plot@mark@count=\count315
+\pgfplotmarksize=\dimen268
 )
-\tikz@lastx=\dimen267
-\tikz@lasty=\dimen268
-\tikz@lastxsaved=\dimen269
-\tikz@lastysaved=\dimen270
-\tikz@lastmovetox=\dimen271
-\tikz@lastmovetoy=\dimen272
-\tikzleveldistance=\dimen273
-\tikzsiblingdistance=\dimen274
-\tikz@figbox=\box62
-\tikz@figbox@bg=\box63
-\tikz@tempbox=\box64
-\tikz@tempbox@bg=\box65
-\tikztreelevel=\count315
-\tikznumberofchildren=\count316
-\tikznumberofcurrentchild=\count317
-\tikz@fig@count=\count318
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikz@lastmovetox=\dimen273
+\tikz@lastmovetoy=\dimen274
+\tikzleveldistance=\dimen275
+\tikzsiblingdistance=\dimen276
+\tikz@figbox=\box64
+\tikz@figbox@bg=\box65
+\tikz@tempbox=\box66
+\tikz@tempbox@bg=\box67
+\tikztreelevel=\count316
+\tikznumberofchildren=\count317
+\tikznumberofcurrentchild=\count318
+\tikz@fig@count=\count319
  (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count319
-\pgfmatrixcurrentcolumn=\count320
-\pgf@matrix@numberofcolumns=\count321
+\pgfmatrixcurrentrow=\count320
+\pgfmatrixcurrentcolumn=\count321
+\pgf@matrix@numberofcolumns=\count322
 )
-\tikz@expandcount=\count322
+\tikz@expandcount=\count323
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ))) (C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
 Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks37
-\verbatim@line=\toks38
+\every@verbatim=\toks39
+\verbatim@line=\toks40
 \verbatim@in@stream=\read4
 )
 (C:\Program Files\MiKTeX\tex/latex/environ\environ.sty
@@ -577,25 +594,25 @@ Package: environ 2014/05/04 v0.3 A new way to define environments
 (C:\Program Files\MiKTeX\tex/latex/trimspaces\trimspaces.sty
 Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
-\@envbody=\toks39
+\@envbody=\toks41
 )
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count323
+\etb@tempcnta=\count324
 )
-\tcb@titlebox=\box66
-\tcb@upperbox=\box67
-\tcb@lowerbox=\box68
-\tcb@phantombox=\box69
-\c@tcbbreakpart=\count324
-\c@tcblayer=\count325
-\c@tcolorbox@number=\count326
-\l__tcobox_tmpa_box=\box70
-\l__tcobox_tmpa_dim=\dimen275
-\tcb@temp=\box71
-\tcb@temp=\box72
+\tcb@titlebox=\box68
+\tcb@upperbox=\box69
+\tcb@lowerbox=\box70
+\tcb@phantombox=\box71
+\c@tcbbreakpart=\count325
+\c@tcblayer=\count326
+\c@tcolorbox@number=\count327
+\l__tcobox_tmpa_box=\box72
+\l__tcobox_tmpa_dim=\dimen277
 \tcb@temp=\box73
 \tcb@temp=\box74
+\tcb@temp=\box75
+\tcb@temp=\box76
 )
 (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.8.0'
@@ -608,7 +625,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.
 code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box75
+\l__tikzfill_img_box=\box77
 )) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.8.0'
 )) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
@@ -625,44 +642,44 @@ Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
 Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box76
-\tcb@totalupperbox=\box77
-\tcb@totallowerbox=\box78
+\tcb@testbox=\box78
+\tcb@totalupperbox=\box79
+\tcb@totallowerbox=\box80
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen276
-\captionmargin=\dimen277
-\caption@leftmargin=\dimen278
-\caption@rightmargin=\dimen279
-\caption@width=\dimen280
-\caption@indent=\dimen281
-\caption@parindent=\dimen282
-\caption@hangindent=\dimen283
+\caption@tempdima=\dimen278
+\captionmargin=\dimen279
+\caption@leftmargin=\dimen280
+\caption@rightmargin=\dimen281
+\caption@width=\dimen282
+\caption@indent=\dimen283
+\caption@parindent=\dimen284
+\caption@hangindent=\dimen285
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count327
-\c@continuedfloat=\count328
+\c@caption@flags=\count328
+\c@continuedfloat=\count329
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count329
+\c@subfigure=\count330
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count330
+\c@subtable=\count331
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count331
-\csq@gtype=\count332
-\csq@glevel=\count333
-\csq@qlevel=\count334
-\csq@maxlvl=\count335
-\csq@tshold=\count336
-\csq@ltx@everypar=\toks40
+\csq@reset=\count332
+\csq@gtype=\count333
+\csq@glevel=\count334
+\csq@qlevel=\count335
+\csq@maxlvl=\count336
+\csq@tshold=\count337
+\csq@ltx@everypar=\toks42
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
 File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
@@ -675,102 +692,86 @@ File: csquotes.cfg
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen284
-\lightrulewidth=\dimen285
-\cmidrulewidth=\dimen286
-\belowrulesep=\dimen287
-\belowbottomsep=\dimen288
-\aboverulesep=\dimen289
-\abovetopsep=\dimen290
-\cmidrulesep=\dimen291
-\cmidrulekern=\dimen292
-\defaultaddspace=\dimen293
-\@cmidla=\count337
-\@cmidlb=\count338
-\@aboverulesep=\dimen294
-\@belowrulesep=\dimen295
-\@thisruleclass=\count339
-\@lastruleclass=\count340
-\@thisrulewidth=\dimen296
-)
-(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen297
-\ar@mcellbox=\box79
-\extrarowheight=\dimen298
-\NC@list=\toks41
-\extratabsurround=\skip68
-\backup@length=\skip69
-\ar@cellbox=\box80
+\heavyrulewidth=\dimen286
+\lightrulewidth=\dimen287
+\cmidrulewidth=\dimen288
+\belowrulesep=\dimen289
+\belowbottomsep=\dimen290
+\aboverulesep=\dimen291
+\abovetopsep=\dimen292
+\cmidrulesep=\dimen293
+\cmidrulekern=\dimen294
+\defaultaddspace=\dimen295
+\@cmidla=\count338
+\@cmidlb=\count339
+\@aboverulesep=\dimen296
+\@belowrulesep=\dimen297
+\@thisruleclass=\count340
+\@lastruleclass=\count341
+\@thisrulewidth=\dimen298
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip70
-\LTright=\skip71
-\LTpre=\skip72
-\LTpost=\skip73
-\LTchunksize=\count341
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count342
 \LTcapwidth=\dimen299
 \LT@head=\box81
 \LT@firsthead=\box82
 \LT@foot=\box83
 \LT@lastfoot=\box84
 \LT@gbox=\box85
-\LT@cols=\count342
-\LT@rows=\count343
-\c@LT@tables=\count344
-\c@LT@chunks=\count345
-\LT@p@ftn=\toks42
+\LT@cols=\count343
+\LT@rows=\count344
+\c@LT@tables=\count345
+\c@LT@chunks=\count346
+\LT@p@ftn=\toks43
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip74
-\multirow@cntb=\count346
-\multirow@dima=\skip75
+\multirow@colwidth=\skip75
+\multirow@cntb=\count347
+\multirow@dima=\skip76
 \bigstrutjot=\dimen300
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip76
-\cftbeforetoctitleskip=\skip77
-\cftaftertoctitleskip=\skip78
-\cftbeforepartskip=\skip79
-\cftpartnumwidth=\skip80
-\cftpartindent=\skip81
-\cftbeforesecskip=\skip82
-\cftsecindent=\skip83
-\cftsecnumwidth=\skip84
-\cftbeforesubsecskip=\skip85
-\cftsubsecindent=\skip86
-\cftsubsecnumwidth=\skip87
-\cftbeforesubsubsecskip=\skip88
-\cftsubsubsecindent=\skip89
-\cftsubsubsecnumwidth=\skip90
-\cftbeforeparaskip=\skip91
-\cftparaindent=\skip92
-\cftparanumwidth=\skip93
-\cftbeforesubparaskip=\skip94
-\cftsubparaindent=\skip95
-\cftsubparanumwidth=\skip96
-\cftbeforeloftitleskip=\skip97
-\cftafterloftitleskip=\skip98
-\cftbeforefigskip=\skip99
-\cftfigindent=\skip100
-\cftfignumwidth=\skip101
-\c@lofdepth=\count347
-\c@lotdepth=\count348
-\cftbeforelottitleskip=\skip102
-\cftafterlottitleskip=\skip103
-\cftbeforetabskip=\skip104
-\cfttabindent=\skip105
-\cfttabnumwidth=\skip106
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/colortbl\colortbl.sty
-Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
-\everycr=\toks43
-\minrowclearance=\skip107
-\rownum=\count349
+\cftparskip=\skip77
+\cftbeforetoctitleskip=\skip78
+\cftaftertoctitleskip=\skip79
+\cftbeforepartskip=\skip80
+\cftpartnumwidth=\skip81
+\cftpartindent=\skip82
+\cftbeforesecskip=\skip83
+\cftsecindent=\skip84
+\cftsecnumwidth=\skip85
+\cftbeforesubsecskip=\skip86
+\cftsubsecindent=\skip87
+\cftsubsecnumwidth=\skip88
+\cftbeforesubsubsecskip=\skip89
+\cftsubsubsecindent=\skip90
+\cftsubsubsecnumwidth=\skip91
+\cftbeforeparaskip=\skip92
+\cftparaindent=\skip93
+\cftparanumwidth=\skip94
+\cftbeforesubparaskip=\skip95
+\cftsubparaindent=\skip96
+\cftsubparanumwidth=\skip97
+\cftbeforeloftitleskip=\skip98
+\cftafterloftitleskip=\skip99
+\cftbeforefigskip=\skip100
+\cftfigindent=\skip101
+\cftfignumwidth=\skip102
+\c@lofdepth=\count348
+\c@lotdepth=\count349
+\cftbeforelottitleskip=\skip103
+\cftafterlottitleskip=\skip104
+\cftbeforetabskip=\skip105
+\cfttabindent=\skip106
+\cfttabnumwidth=\skip107
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
@@ -1524,6 +1525,9 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [1
 
 ]
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+ [2]
 Underfull \hbox (badness 10000) in paragraph at lines 51--51
 
  []
@@ -1568,15 +1572,22 @@ LaTeX Info: Redefining \. on input line 57.
 LaTeX Info: Redefining \% on input line 57.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 57.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [2
+[2
 
 ]
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-
-(template-institucional.lot
+ (template-institucional.lot
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1586,9 +1597,17 @@ LaTeX Info: Redefining \% on input line 1.
 
 LaTeX Info: Redefining \. on input line 60.
 LaTeX Info: Redefining \% on input line 60.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [3
+[3
 
 
 ]
@@ -1604,49 +1623,127 @@ LaTeX Info: Redefining \% on input line 1.
 
 LaTeX Info: Redefining \. on input line 79.
 LaTeX Info: Redefining \% on input line 79.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [4
+[4
 
 ]
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Info: Redefining \. on input line 102.
+LaTeX Info: Redefining \% on input line 102.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[5]
 LaTeX Info: Redefining \. on input line 108.
 LaTeX Info: Redefining \% on input line 108.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [5]
+[6]
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [6
+ [7
 
 ]
-LaTeX Info: Redefining \. on input line 128.
-LaTeX Info: Redefining \% on input line 128.
+LaTeX Info: Redefining \. on input line 124.
+LaTeX Info: Redefining \% on input line 124.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-
-[7
+[8
 
 ]
 LaTeX Info: Redefining \. on input line 134.
 LaTeX Info: Redefining \% on input line 134.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [8]
+[9]
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [9
+ [10
 
 ]
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
-LaTeX Info: Redefining \. on input line 171.
-LaTeX Info: Redefining \% on input line 171.
+LaTeX Info: Redefining \. on input line 160.
+LaTeX Info: Redefining \% on input line 160.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-
-[10
+[11
 
 ]
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1658,89 +1755,181 @@ Overfull \hbox (25.13042pt too wide) in paragraph at lines 177--177
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 197.
-LaTeX Info: Redefining \% on input line 197.
+LaTeX Info: Redefining \. on input line 177.
+LaTeX Info: Redefining \% on input line 177.
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
-[11]
+[12]
+LaTeX Info: Redefining \. on input line 197.
+LaTeX Info: Redefining \% on input line 197.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
+File: img/logo_sener.png Graphic file (type bmp)
+<img/logo_sener.png>
+[13]
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [12
+ [14
 
 ]
 LaTeX Info: Redefining \. on input line 258.
 LaTeX Info: Redefining \% on input line 258.
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [13
+ [15
 
 ]
 File: img/graficos/mapa_sen_2025.png Graphic file (type bmp)
 <img/graficos/mapa_sen_2025.png>
 LaTeX Info: Redefining \. on input line 281.
 LaTeX Info: Redefining \% on input line 281.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [14]
+[16]
 File: img/graficos/adicion_capacidad.png Graphic file (type bmp)
 <img/graficos/adicion_capacidad.png>
 LaTeX Info: Redefining \. on input line 290.
 LaTeX Info: Redefining \% on input line 290.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [15]
+[17]
 File: img/graficos/mapa_gasoductos_2024.png Graphic file (type bmp)
 <img/graficos/mapa_gasoductos_2024.png>
 LaTeX Info: Redefining \. on input line 299.
 LaTeX Info: Redefining \% on input line 299.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [16]
+[18]
 File: img/figura-.ejemplo.png Graphic file (type bmp)
 <img/figura-.ejemplo.png>
 LaTeX Info: Redefining \. on input line 310.
 LaTeX Info: Redefining \% on input line 310.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [17]
+[19]
 LaTeX Info: Redefining \. on input line 317.
 LaTeX Info: Redefining \% on input line 317.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [18]
+[20]
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [19
+ [21
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 328.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 328.
-LaTeX Info: Redefining \. on input line 341.
-LaTeX Info: Redefining \% on input line 341.
+LaTeX Info: Redefining \. on input line 339.
+LaTeX Info: Redefining \% on input line 339.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [20
+[22
 
 ]
 LaTeX Info: Redefining \. on input line 347.
 LaTeX Info: Redefining \% on input line 347.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [21]
+[23]
 LaTeX Info: Redefining \. on input line 354.
 LaTeX Info: Redefining \% on input line 354.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [22
+[24
 
 ]
 LaTeX Info: Redefining \. on input line 384.
 LaTeX Info: Redefining \% on input line 384.
+
+
+Package fancyhdr Warning: \headheight is too small (14.0pt): 
+(fancyhdr)                Make it at least 14.41682pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.41682pt}.
+(fancyhdr)                You might also make \topmargin smaller:
+(fancyhdr)                \addtolength{\topmargin}{-0.41682pt}.
+
 File: img/logo_sener.png Graphic file (type bmp)
 <img/logo_sener.png>
- [23
+[25
 
 ]
 File: img/logo_sener.png Graphic file (type bmp)
@@ -1749,10 +1938,9 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 384.
 File: img/logo_gob.png Graphic file (type bmp)
 <img/logo_gob.png>
- [24
+ [26
 
-]
-(template-institucional.aux
+] (template-institucional.aux
 LaTeX Info: Redefining \sptext on input line 12.
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -1763,24 +1951,26 @@ L3 programming layer <2025-10-24>
  ***********
 
 
-Package rerunfilecheck Warning: File `template-institucional.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: Checksums for `template-institucional.out':
-(rerunfilecheck)             Before: D0BAE92C2D7A388AFE3C914E46D080FE;5891
-(rerunfilecheck)             After:  2A0651B883A12BB88D9B7F5D6881EE42;5642.
+Package rerunfilecheck Info: File `template-institucional.out' has not changed.
+
+(rerunfilecheck)             Checksum: 2A0651B883A12BB88D9B7F5D6881EE42;5642.
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42661 strings out of 402987
- 862967 string characters out of 5452870
- 1910731 words of memory out of 5000000
- 70814 multiletter control sequences out of 15000+600000
- 635068 words of font info for 96 fonts, out of 8000000 for 9000
+ 42666 strings out of 402987
+ 863197 string characters out of 5452870
+ 1910769 words of memory out of 5000000
+ 70818 multiletter control sequences out of 15000+600000
+ 635076 words of font info for 97 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,12n,122p,1217b,5862s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,122p,1217b,5858s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (25 pages).
+Output written on template-institucional.pdf (28 pages).
