@@ -741,8 +741,12 @@
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    % Sobrescribir con fondo blanco limpio
-    \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
+    % Agregar imagen de fondo de portada
+    \AddToShipoutPictureBG*{%
+      \AtPageLowerLeft{%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
+      }%
+    }
     \begin{center}
       \vspace*{1.5cm}
 
