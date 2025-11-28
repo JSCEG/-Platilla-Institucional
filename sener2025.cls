@@ -194,14 +194,8 @@
   
   % Pie de página mejorado con logo centrado y líneas decorativas
   \fancyfoot[L]{}
-  \fancyfoot[C]{%
-    \raisebox{-0.5\height}{%
-      \IfFileExists{img/logo_sener.png}{%
-        \includegraphics[height=0.5cm]{img/logo_sener.png}%
-      }{}%
-    }%
-  }
-  \fancyfoot[R]{\tiny Gobierno de México}
+  \fancyfoot[C]{}
+  \fancyfoot[R]{}
   \renewcommand{\headrulewidth}{1pt}
   \renewcommand{\headrule}{\vspace{3pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
