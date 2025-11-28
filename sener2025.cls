@@ -750,8 +750,7 @@
     \begin{center}
       \vspace*{1.5cm}
 
-      % Logo SENER
-      \includegraphics[height=2.5cm]{img/logo_sener.png}\\[3cm]
+      \vspace*{2cm}
 
       % "PLAN DE" o texto superior
       {\Large\bfseries\color{gobmxGris} PLAN DE}\\[1cm]
@@ -792,22 +791,15 @@
     % Imagen de fondo
     \AddToShipoutPictureBG*{%
       \AtPageLowerLeft{%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/mujer.png}%
-      }%
-    }
-    
-    % Imagen de fondo (fondo_guinda.png)
-    \AddToShipoutPictureBG*{%
-      \AtPageLowerLeft{%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
       }%
     }
     
     \begin{center}
       \vspace*{2cm}
 
-      % Logo SENER transparente
-      \includegraphics[height=5.0cm]{img/logo_sener_portada.png}\\[2.5cm]
+      % Logo SENER eliminado por solicitud
+      \vspace*{5cm}
 
       % Título principal en Ambar Claro y fuente Patria
       {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
@@ -843,11 +835,6 @@
 \newcommand{\listatablas}{
   \clearpage
   \begin{center}
-    % Logo en la parte superior
-    \IfFileExists{img/logo_sener.png}{%
-      \includegraphics[height=1.5cm]{img/logo_sener.png}\\[0.5cm]
-    }{}
-    
     % Línea decorativa
     {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
     
@@ -864,11 +851,6 @@
 \newcommand{\listafiguras}{
   \clearpage
   \begin{center}
-    % Logo en la parte superior
-    \IfFileExists{img/logo_sener.png}{%
-      \includegraphics[height=1.5cm]{img/logo_sener.png}\\[0.5cm]
-    }{}
-    
     % Línea decorativa
     {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
     
@@ -891,13 +873,13 @@
   % Agregar imagen de fondo de contraportada
   \AddToShipoutPictureBG*{%
     \AtPageLowerLeft{%
-      \includegraphics[width=\paperwidth,height=\paperheight]{img/contra_portada.jpg}%
+      \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
     }%
   }
   \vspace*{\fill}
   
   \begin{center}
-    \includegraphics[height=2cm]{img/logo_sener.png}\\[1cm]
+    \vspace{1cm}
     
     {\large\textbf{\@title}}\\[0.3cm]
     \ifx\@subtitle\empty
