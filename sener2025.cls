@@ -22,7 +22,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome5}
 \RequirePackage{fancyhdr}
-\setlength{\headheight}{14pt}
+\setlength{\headheight}{20pt}
 
 % ============================================================================
 % COLORES INSTITUCIONALES
@@ -202,9 +202,9 @@
     }%
   }
   \fancyfoot[R]{\tiny Gobierno de México}
-  \renewcommand{\headrulewidth}{0.4pt}
-  \renewcommand{\footrulewidth}{0.8pt}
-  \renewcommand{\footrule}{{\color{gobmxDorado}\hrule width\headwidth height\footrulewidth \vskip 1mm}}
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\headrule}{\vspace{3pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}
 }
 
 \fancypagestyle{portada}{
