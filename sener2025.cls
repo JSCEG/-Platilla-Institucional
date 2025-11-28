@@ -207,10 +207,21 @@
   \renewcommand{\footrule}{{\color{gobmxDorado}\hrule width\headwidth height\footrulewidth \vskip 1mm}}
 }
 
+% Configurar fondo para todas las páginas normales
+\AddToShipoutPictureBG{%
+  \IfFileExists{img/foja_blanca.jpg}{%
+    \AtPageLowerLeft{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{img/foja_blanca.jpg}%
+    }%
+  }{}%
+}
+
 \fancypagestyle{portada}{
   \fancyhf{}
   \renewcommand{\headrulewidth}{0pt}
   \renewcommand{\footrulewidth}{0pt}
+  % Limpiar el fondo para páginas de portada
+  \ClearShipoutPictureBG
 }
 
 \pagestyle{plain}
@@ -732,6 +743,8 @@
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{portada}
+    % Asegurar fondo blanco limpio
+    \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
     \begin{center}
       \vspace*{1.5cm}
 
@@ -773,6 +786,9 @@
 \newcommand{\portadafondo}{%
   \begin{titlepage}
     \thispagestyle{portada}
+    
+    % Limpiar fondo predeterminado primero
+    \ClearShipoutPictureBG
     
     % Imagen de fondo
     \AddToShipoutPictureBG*{%
@@ -873,6 +889,9 @@
 \newcommand{\contraportada}[1]{
   \clearpage
   \thispagestyle{empty}
+  % Limpiar fondo para contraportada
+  \ClearShipoutPictureBG
+  \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
   \vspace*{\fill}
   
   \begin{center}
@@ -913,6 +932,8 @@
   \thispagestyle{empty}
   \begingroup
     \color{white}
+    % Limpiar fondo predeterminado
+    \ClearShipoutPictureBG
     % Fondo con imagen (fondo_guinda.png)
     \AddToShipoutPictureBG*{%
       \AtPageLowerLeft{%
@@ -941,6 +962,9 @@
 \newcommand{\paginacreditos}[1]{
   \clearpage
   \thispagestyle{empty}
+  % Limpiar fondo para página de créditos
+  \ClearShipoutPictureBG
+  \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
   
   \begin{center}
     {\Large\bfseries\color{gobmxGuinda} Directorio}\\[1cm]
