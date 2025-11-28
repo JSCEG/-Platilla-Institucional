@@ -798,11 +798,11 @@
       % Título principal en Ambar Claro y fuente Patria
       {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
 
-      % Subtítulo en blanco
-      \ifx\@subtitle\empty
-      \else
-        {\LARGE\color{white}\@subtitle}\\[2cm]
-      \fi
+      % Subtítulo eliminado por solicitud
+      % \ifx\@subtitle\empty
+      % \else
+      %   {\LARGE\color{white}\@subtitle}\\[2cm]
+      % \fi
 
       \vfill
 
@@ -815,8 +815,9 @@
       % Fecha en blanco
       {\large\color{white}\@date}\\[1.5cm]
 
-      % Logo Gobierno transparente
-      \includegraphics[height=1.5cm]{img/logo_gob_trasnparente.png}\\[1cm]
+      % Logo Gobierno transparente eliminado
+      % Espacio para subir el texto
+      \vspace{3cm}
 
     \end{center}
   \end{titlepage}
