@@ -829,8 +829,7 @@
 \newcommand{\listatablas}{
   \clearpage
   \begin{center}
-    % Línea decorativa
-    {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
+    % Línea decorativa eliminada
     
     % Título del índice
     {\Large\bfseries\color{gobmxGuinda}Índice de Tablas}\\[1cm]
@@ -845,8 +844,7 @@
 \newcommand{\listafiguras}{
   \clearpage
   \begin{center}
-    % Línea decorativa
-    {\color{gobmxDorado}\rule{\textwidth}{0.8pt}}\\[0.5cm]
+    % Línea decorativa eliminada
     
     % Título del índice
     {\Large\bfseries\color{gobmxGuinda}Índice de Figuras}\\[1cm]
