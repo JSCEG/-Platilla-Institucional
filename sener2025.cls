@@ -22,7 +22,7 @@
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome5}
 \RequirePackage{fancyhdr}
-\setlength{\headheight}{20pt}
+\setlength{\headheight}{45pt}
 
 % ============================================================================
 % COLORES INSTITUCIONALES
@@ -197,7 +197,7 @@
   \fancyfoot[C]{}
   \fancyfoot[R]{}
   \renewcommand{\headrulewidth}{1pt}
-  \renewcommand{\headrule}{\vspace{3pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
+  \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
 }
 
