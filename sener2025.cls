@@ -795,8 +795,8 @@
       % Logo SENER eliminado por solicitud
       \vspace*{5cm}
 
-      % Título principal en Ambar Claro y fuente Patria
-      {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
+      % Título principal eliminado por solicitud
+      % {\Huge\bfseries\patriafont\color{gobmxAmbarClaro}\@title}\\[1cm]
 
       % Subtítulo eliminado por solicitud
       % \ifx\@subtitle\empty
