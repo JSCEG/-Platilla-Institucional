@@ -9,7 +9,7 @@
 % PAQUETES BÁSICOS
 % ============================================================================
 \RequirePackage[spanish,es-tabla]{babel}
-\RequirePackage[utf8]{inputenc}
+% \\RequirePackage[utf8]{inputenc} % Not needed for XeLaTeX
 \RequirePackage[T1]{fontenc}
 \RequirePackage{geometry}
 \RequirePackage[final]{graphicx}
