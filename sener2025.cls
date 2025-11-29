@@ -107,11 +107,17 @@
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
 % ============================================================================
+% Usa Patria para el título de tablas y figuras
 \captionsetup{
-  font=small,
+  font={small,bf},             % Título en Patria (aprox 12 pt)
   labelfont={bf,color=gobmxGuinda},
-  labelsep=period
+  labelsep=space,                       % "Figura 1 Título ..." (sin punto tras el número)
+  justification=raggedright,
+  singlelinecheck=false
 }
+
+\captionsetup[table]{position=top, skip=8pt}
+\captionsetup[figure]{position=bottom, skip=8pt}
 
 \captionsetup[table]{
   position=top,
@@ -224,58 +230,71 @@
 \linespread{1.15}
 
 % ============================================================================
-% ESTILOS DE TÍTULOS Y SECCIONES
+% ESTILOS DE TÍTULOS Y SECCIONES  (A–E de la plantilla Word)
 % ============================================================================
+
+% Título A  -> \section  (Patria 17 pt, negritas)
 \titleformat{\section}
-  {\Large\bfseries\patriafont\color{gobmxGuinda}}
-  {\thesection.}{0.5em}{}
-  [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
+  {\patriafont\bfseries\fontsize{17pt}{20pt}\selectfont\color{gobmxGuinda}}
+  {\thesection}{1em}{}
 
-% Estilo alternativo de sección con barra vertical (más moderno)
-% Descomentar para usar este estilo por defecto
-% \titleformat{\section}
-%   {\Large\bfseries\color{gobmxGuinda}}
-%   {\makebox[0pt][r]{\color{gobmxDorado}\rule[-6pt]{3pt}{20pt}\hspace{10pt}}\thesection.}
-%   {0.5em}
-%   {}
-
+% Título B  -> \subsection  (Patria 14 pt, negritas)
 \titleformat{\subsection}
-  {\large\bfseries\color{gobmxGuinda}}
+  {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{gobmxGuinda}}
   {\thesubsection}{1em}{}
 
+% Título C  -> \subsubsection  (Noto Sans 12 pt, negritas)
 \titleformat{\subsubsection}
-  {\normalsize\bfseries\color{gobmxDorado}}
-  {\thesubsubsection}{0.5em}{}
+  {\sffamily\bfseries\fontsize{12pt}{14pt}\selectfont\color{gobmxGuinda}}
+  {\thesubsubsection}{1em}{}
 
+% Título D  -> \paragraph  (Noto Sans 12 pt, normal)
+\titleformat{\paragraph}
+  {\sffamily\fontsize{12pt}{14pt}\selectfont\color{gobmxGris}}
+  {\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{0.8em}{0.5em}
+
+% Título E  -> \subparagraph  (Noto Sans 10 pt, negritas)
+\titleformat{\subparagraph}
+  {\sffamily\bfseries\fontsize{10pt}{12pt}\selectfont\color{gobmxGris}}
+  {\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{0.6em}{0.4em}
+
+% Espaciados que ya tenías (ajusta si quieres)
 \titlespacing*{\section}{0pt}{2em}{1em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.8em}
 \titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
 
 % ============================================================================
-% LISTAS PERSONALIZADAS
+% LISTAS PERSONALIZADAS (alineado a la plantilla Word)
 % ============================================================================
-\setlist[itemize,1]{
-  label=\textcolor{gobmxGuinda}{$\bullet$},
+
+% 1er nivel: viñeta
+\setlist[itemize,1]{%
+  label=\textbullet,
   leftmargin=*,
   itemsep=0.3em
 }
 
-\setlist[itemize,2]{
-  label=\textcolor{gobmxVerde}{$\circ$},
-  leftmargin=*,
+% 2do nivel: guión
+\setlist[itemize,2]{%
+  label=--,
+  leftmargin=2em,
   itemsep=0.2em
 }
 
-\setlist[enumerate,1]{
-  label=\textcolor{gobmxGuinda}{\arabic*.},
-  leftmargin=*,
-  itemsep=0.3em
+% 3er nivel: viñeta
+\setlist[itemize,3]{%
+  label=\textbullet,
+  leftmargin=3em,
+  itemsep=0.15em
 }
 
-\setlist[enumerate,2]{
-  label=\textcolor{gobmxVerde}{\alph*)},
-  leftmargin=*,
-  itemsep=0.2em
+% 4to nivel: guión
+\setlist[itemize,4]{%
+  label=--,
+  leftmargin=4em,
+  itemsep=0.15em
 }
 
 % ============================================================================
@@ -947,4 +966,28 @@
   #1
   
   \clearpage
+}
+
+% ============================================================================
+% MACROS ADICIONALES (PLADERSE)
+% ============================================================================
+
+\newcommand{\notosanslight}{\sffamily}
+
+% Macro de fuente de gráfico/tabla
+\newcommand{\fuente}[1]{%
+  \par\vspace{0.3em}%
+  {\notosanslight\fontsize{9pt}{11pt}\selectfont
+    \textbf{FUENTE:} #1.%
+  }%
+}
+
+% Entrada de glosario
+\newcommand{\entradaGlosario}[2]{%
+  \noindent\textbf{#1} -- #2\par
+}
+
+% Entrada de sigla / acrónimo
+\newcommand{\entradaSigla}[2]{%
+  \noindent\textbf{#1} -- #2\par
 }

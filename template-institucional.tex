@@ -137,6 +137,23 @@ Para secciones que requieren mayor densidad de información o un estilo más per
 \textbf{Columna 2:} \lipsum[3]
 \end{multicols}
 
+\subsection{Listas y Viñetas}
+
+La plantilla define estilos específicos para hasta 4 niveles de anidación en listas no ordenadas:
+
+\begin{itemize}
+    \item \textbf{Nivel 1:} Utiliza una viñeta circular sólida.
+    \begin{itemize}
+        \item \textbf{Nivel 2:} Utiliza un guión largo.
+        \begin{itemize}
+            \item \textbf{Nivel 3:} Vuelve a la viñeta circular.
+            \begin{itemize}
+                \item \textbf{Nivel 4:} Finaliza con un guión.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
 % ============================================================================
 % SECCIÓN 1: ELEMENTOS DE LA PLANTILLA
 % ============================================================================
@@ -215,6 +232,7 @@ Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de
 \begin{tablaguinda}
   \caption{Capacidad instalada por región al cierre de 2024}
   \label{tab:capacidad-region}
+  \fuente{Elaboración propia con datos del CENACE}
   \begin{tabular}{lrrr}
     \toprule
     \rowcolor{gobmxGuinda}\encabezadoguinda{Región} & \encabezadoguinda{Capacidad (MW)} & \encabezadoguinda{Demanda (MW)} & \encabezadoguinda{Factor (\%)} \\
@@ -235,6 +253,7 @@ Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de
 \begin{tablaverde}
   \caption{Proyectos de energías renovables 2025-2030}
   \label{tab:renovables}
+  \fuente{PRODESEN 2025-2039}
   \begin{tabular}{lrrr}
     \toprule
     \rowcolor{gobmxVerde}\encabezadoverde{Tecnología} & \encabezadoverde{Proyectos} & \encabezadoverde{Capacidad (MW)} & \encabezadoverde{Inversión (MDP)} \\
@@ -253,6 +272,7 @@ Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de
 \begin{tabladorado}
   \caption{Inversión programada por sector 2025-2030 (MDP)}
   \label{tab:inversion}
+  \fuente{Secretaría de Hacienda y Crédito Público}
   \begin{tabular}{lrr}
     \toprule
     \rowcolor{gobmxDorado}\encabezadodorado{Sector} & \encabezadodorado{Inversión} & \encabezadodorado{Participación (\%)} \\
@@ -287,6 +307,7 @@ La plantilla permite la inclusión de gráficos de alta resolución, mapas y dia
   \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_1.png}
   \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025. Detalle de la infraestructura de transmisión.}
   \label{fig:mapa-sen}
+  \fuente{CENACE, 2025}
 \end{figure}
 
 \subsection{Gráficos de barras y tendencias}
@@ -296,6 +317,7 @@ La plantilla permite la inclusión de gráficos de alta resolución, mapas y dia
   \includegraphics[width=1.0\textwidth]{img/graficos/figura_3_5.png}
   \caption{Adición de capacidad proyectada 2025-2030. Comparativa por tecnología y año.}
   \label{fig:adicion-capacidad}
+  \fuente{Unidad de Planeación Energética}
 \end{figure}
 
 \subsection{Mapas de infraestructura}
@@ -305,6 +327,7 @@ La plantilla permite la inclusión de gráficos de alta resolución, mapas y dia
   \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_12.png}
   \caption{Red nacional de gasoductos en 2024. Infraestructura crítica para el sector energético.}
   \label{fig:mapa-gasoductos}
+  \fuente{CENAGAS}
 \end{figure}
 
 \section{Figuras y Gráficos}
@@ -316,6 +339,7 @@ Las figuras deben incluir un pie de foto (caption) descriptivo. El estilo instit
   \includegraphics[width=1.0\textwidth]{img/graficos/figura_4_3.png}
   \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025. El mapa muestra las nueve regiones de control y los principales enlaces de transmisión entre ellas.}
   \label{fig:sen2025}
+  \fuente{Sistema de Información Energética}
 \end{figure}
 
 Como se observa en la Figura~\ref{fig:sen2025}, el Sistema Eléctrico Nacional está dividido en regiones interconectadas.
@@ -418,21 +442,29 @@ La plantilla utiliza el formato \textbf{APA} para citas y referencias, gestionad
 
 La plantilla ahora soporta citas al pie de página para una lectura más fluida.
 
+\begin{ejemplo}
 \begin{itemize}
     \item \textbf{Libros:} \textcite{rodriguez2023planeacion} analizan la planeación energética\footcite{rodriguez2023planeacion}.
     \item \textbf{Artículos:} El crecimiento de renovables es notable\footcite{gomez2023renovables}.
     \item \textbf{Reportes:} El \textcite{sener2024pladese} define la política sectorial\footcite{sener2024pladese}.
     \item \textbf{Sitios Web:} Consulte el portal oficial\footcite{sener2024portal}.
 \end{itemize}
+\end{ejemplo}
+
+\section{Siglas y Acrónimos}
+
+\entradaSigla{SEN}{Sistema Eléctrico Nacional}
+\entradaSigla{RNI}{Red Nacional de Transmisión}
+\entradaSigla{RGD}{Redes Generales de Distribución}
+\entradaSigla{CENACE}{Centro Nacional de Control de Energía}
+\entradaSigla{CRE}{Comisión Reguladora de Energía}
 
 \section{Glosario de Términos}
 
-\begin{description}
-  \item[Capacidad instalada:] Potencia nominal de las centrales eléctricas disponibles para generar energía.
-  \item[Factor de planta:] Relación entre la energía generada y la energía que se generaría operando a capacidad nominal.
-  \item[Energías limpias:] Fuentes de energía que no emiten gases de efecto invernadero durante su operación.
-  \item[Sistema Eléctrico Nacional (SEN):] Conjunto de instalaciones destinadas a la generación, transmisión y distribución de energía eléctrica.
-\end{description}
+\entradaGlosario{Capacidad instalada}{Potencia nominal de las centrales eléctricas disponibles para generar energía.}
+\entradaGlosario{Factor de planta}{Relación entre la energía generada y la energía que se generaría operando a capacidad nominal.}
+\entradaGlosario{Energías limpias}{Fuentes de energía que no emiten gases de efecto invernadero durante su operación.}
+\entradaGlosario{Sistema Eléctrico Nacional (SEN)}{Conjunto de instalaciones destinadas a la generación, transmisión y distribución de energía eléctrica.}
 
 % ============================================================================
 % BIBLIOGRAFÍA
