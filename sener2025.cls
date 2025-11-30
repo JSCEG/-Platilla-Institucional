@@ -3,7 +3,7 @@
 \ProvidesClass{sener2025}[2025/11/21 Plantilla institucional SENER - Versión completa]
 
 % Basado en article tamaño carta, 12pt
-\LoadClass[12pt,letterpaper]{article}
+\LoadClass[12pt,letterpaper,twoside]{article}
 
 % ============================================================================
 % PAQUETES BÁSICOS
@@ -11,7 +11,7 @@
 \RequirePackage[spanish,es-tabla]{babel}
 % \\RequirePackage[utf8]{inputenc} % Not needed for XeLaTeX
 \RequirePackage[T1]{fontenc}
-\RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm]{geometry}
+\RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm,footskip=1.5cm]{geometry}
 \RequirePackage[final]{graphicx}
 % Configuración para evitar compresión agresiva de imágenes
 \ifdefined\XeTeXversion
@@ -208,8 +208,12 @@
 \fancypagestyle{plain}{
   \fancyhf{}
   \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
-  \fancyhead[R]{\small\thepage\ \textcolor{gobmxAmbarClaro}{|}\ \leftmark}
-  \fancyfoot{} % Limpiar pie de página
+  \fancyhead[R]{\small\textcolor{gobmxGuinda}{\leftmark}}
+  
+  % Pie de página alternado (Par/Impar)
+  \fancyfoot[LE]{\makebox[\headwidth][l]{\small\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
+  \fancyfoot[RO]{\makebox[\headwidth][r]{\small\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
+  
   \renewcommand{\headrulewidth}{1pt}
   \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
@@ -218,8 +222,12 @@
 \fancypagestyle{fancy}{
   \fancyhf{}
   \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
-  \fancyhead[R]{\small\thepage\ \textcolor{gobmxAmbarClaro}{|}\ \leftmark}
-  \fancyfoot{} % Limpiar pie de página
+  \fancyhead[R]{\small\textcolor{gobmxGuinda}{\leftmark}}
+  
+  % Pie de página alternado (Par/Impar)
+  \fancyfoot[LE]{\makebox[\headwidth][l]{\small\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
+  \fancyfoot[RO]{\makebox[\headwidth][r]{\small\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
+  
   \renewcommand{\headrulewidth}{1pt}
   \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
