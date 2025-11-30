@@ -195,7 +195,7 @@
 % ============================================================================
 % COMANDO PARA VALORES DESTACADOS (Recuadros naranjas)
 % ============================================================================
-\definecolor{highlightOrange}{HTML}{F5A623}
+\definecolor{highlightOrange}{RGB}{166,128,45}
 \newcommand{\highlight}[1]{%
   \colorbox{highlightOrange}{%
     \strut\textbf{\textcolor{white}{#1}}%
@@ -522,7 +522,7 @@
 % Recuadro de datos clave
 \newtcolorbox{datosclave}[1][]{
   enhanced,
-  colback=gobmxAmbarClaro,
+  colback=gobmxAmbarClaro!10,
   colframe=gobmxDorado,
   boxrule=2pt,
   arc=1mm,

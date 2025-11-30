@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 12:30
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1589,35 +1589,7 @@ File: img/portada.png Graphic file (type bmp)
 <img/portada.png>
  [1
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 54--54
-
- []
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[1
-
-
-]
-Package marginnote Info: Using workaround for absolute page number on input lin
-e 54.
- (template-institucional.toc
+] (template-institucional.toc
 LaTeX Info: Redefining \sptext on input line 1.
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1648,8 +1620,8 @@ e 33.
 \tf@toc=\write6
 \openout6 = `template-institucional.toc'.
 
-LaTeX Info: Redefining \. on input line 64.
-LaTeX Info: Redefining \% on input line 64.
+LaTeX Info: Redefining \. on input line 38.
+LaTeX Info: Redefining \% on input line 38.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
@@ -1661,8 +1633,8 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write7
 \openout7 = `template-institucional.lot'.
 
-LaTeX Info: Redefining \. on input line 67.
-LaTeX Info: Redefining \% on input line 67.
+LaTeX Info: Redefining \. on input line 41.
+LaTeX Info: Redefining \% on input line 41.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [3
@@ -1676,8 +1648,8 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write8
 \openout8 = `template-institucional.lof'.
 
-LaTeX Info: Redefining \. on input line 68.
-LaTeX Info: Redefining \% on input line 68.
+LaTeX Info: Redefining \. on input line 42.
+LaTeX Info: Redefining \% on input line 42.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [4
@@ -1795,15 +1767,15 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Info: Redefining \. on input line 106.
-LaTeX Info: Redefining \% on input line 106.
+LaTeX Info: Redefining \. on input line 80.
+LaTeX Info: Redefining \% on input line 80.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [1
 
 ]
-LaTeX Info: Redefining \. on input line 117.
-LaTeX Info: Redefining \% on input line 117.
+LaTeX Info: Redefining \. on input line 91.
+LaTeX Info: Redefining \% on input line 91.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
@@ -1842,15 +1814,15 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 137.
-LaTeX Info: Redefining \% on input line 137.
+LaTeX Info: Redefining \. on input line 111.
+LaTeX Info: Redefining \% on input line 111.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 160.
-LaTeX Info: Redefining \% on input line 160.
+LaTeX Info: Redefining \. on input line 134.
+LaTeX Info: Redefining \% on input line 134.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [5]
@@ -1861,8 +1833,8 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [6
 
 ]
-LaTeX Info: Redefining \. on input line 185.
-LaTeX Info: Redefining \% on input line 185.
+LaTeX Info: Redefining \. on input line 159.
+LaTeX Info: Redefining \% on input line 159.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [7
@@ -1877,23 +1849,23 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
-LaTeX Info: Redefining \. on input line 216.
-LaTeX Info: Redefining \% on input line 216.
+LaTeX Info: Redefining \. on input line 190.
+LaTeX Info: Redefining \% on input line 190.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
 [8]
-Overfull \hbox (25.13042pt too wide) in paragraph at lines 239--239
+Overfull \hbox (25.13042pt too wide) in paragraph at lines 213--213
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 239.
-LaTeX Info: Redefining \% on input line 239.
+LaTeX Info: Redefining \. on input line 213.
+LaTeX Info: Redefining \% on input line 213.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [9]
-LaTeX Info: Redefining \. on input line 259.
-LaTeX Info: Redefining \% on input line 259.
+LaTeX Info: Redefining \. on input line 233.
+LaTeX Info: Redefining \% on input line 233.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [10]
@@ -1961,29 +1933,29 @@ Package microtype Info: Character `\guillemotright ' is missing
 
 
 LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 270.
+(Font)              using `TU/NotoSans(1)/m/n' instead on input line 244.
 
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 271.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 245.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 271.
+(Font)              size <10.95> substituted on input line 245.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 271.
+(Font)              size <10.95> substituted on input line 245.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.5> on input line 271.
+(Font)              <10.5> on input line 245.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.34996> on input line 271.
+(Font)              <7.34996> on input line 245.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.25> on input line 271.
+(Font)              <5.25> on input line 245.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 271.
+(Font)              size <10.95> substituted on input line 245.
 
-LaTeX Info: Redefining \. on input line 323.
-LaTeX Info: Redefining \% on input line 323.
+LaTeX Info: Redefining \. on input line 297.
+LaTeX Info: Redefining \% on input line 297.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [12
@@ -1991,34 +1963,34 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 ]
 File: img/graficos/figura_2_1.png Graphic file (type bmp)
 <img/graficos/figura_2_1.png>
-LaTeX Info: Redefining \. on input line 347.
-LaTeX Info: Redefining \% on input line 347.
+LaTeX Info: Redefining \. on input line 321.
+LaTeX Info: Redefining \% on input line 321.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [13]
 File: img/graficos/figura_3_5.png Graphic file (type bmp)
 <img/graficos/figura_3_5.png>
-LaTeX Info: Redefining \. on input line 357.
-LaTeX Info: Redefining \% on input line 357.
+LaTeX Info: Redefining \. on input line 331.
+LaTeX Info: Redefining \% on input line 331.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [14]
 File: img/graficos/figura_2_12.png Graphic file (type bmp)
 <img/graficos/figura_2_12.png>
-LaTeX Info: Redefining \. on input line 367.
-LaTeX Info: Redefining \% on input line 367.
+LaTeX Info: Redefining \. on input line 341.
+LaTeX Info: Redefining \% on input line 341.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [15]
 File: img/graficos/figura_4_3.png Graphic file (type bmp)
 <img/graficos/figura_4_3.png>
-LaTeX Info: Redefining \. on input line 379.
-LaTeX Info: Redefining \% on input line 379.
+LaTeX Info: Redefining \. on input line 353.
+LaTeX Info: Redefining \% on input line 353.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [16]
-LaTeX Info: Redefining \. on input line 386.
-LaTeX Info: Redefining \% on input line 386.
+LaTeX Info: Redefining \. on input line 360.
+LaTeX Info: Redefining \% on input line 360.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [17]
@@ -2033,12 +2005,12 @@ Package lettrine.sty Info: Targeted height = 42.78183pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 42.78177pt (\color {gobmxGuinda}E)
 ;
-(lettrine.sty)             reported on input line 392.
-Package marginnote Info: Margin note 27.1 is on absolute page 27 on input line 
-393.
-Package marginnote Info: right page because not two side mode on input line 393
+(lettrine.sty)             reported on input line 366.
+Package marginnote Info: Margin note 25.1 is on absolute page 25 on input line 
+367.
+Package marginnote Info: right page because not two side mode on input line 367
 .
-Package marginnote Info: xpos seems to be 514.12515pt on input line 393.
+Package marginnote Info: xpos seems to be 514.12515pt on input line 367.
 
 
 
@@ -2046,28 +2018,28 @@ Package marginnote Info: xpos seems to be 514.12515pt on input line 393.
 
 <Copying the QR code for "https://www.gob.mx/sener" in version 2-M as previousl
 y calculated.>
-LaTeX Info: Redefining \. on input line 420.
-LaTeX Info: Redefining \% on input line 420.
+LaTeX Info: Redefining \. on input line 394.
+LaTeX Info: Redefining \% on input line 394.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [19
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 420.
+(Font)              <5> on input line 394.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 444.
-LaTeX Info: Redefining \. on input line 454.
-LaTeX Info: Redefining \% on input line 454.
+(Font)              <10.95> on input line 418.
+LaTeX Info: Redefining \. on input line 428.
+LaTeX Info: Redefining \% on input line 428.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [20]
-Overfull \hbox (4.78569pt too wide) in paragraph at lines 464--464
+Overfull \hbox (4.78569pt too wide) in paragraph at lines 438--438
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 470.
-LaTeX Info: Redefining \% on input line 470.
+LaTeX Info: Redefining \. on input line 444.
+LaTeX Info: Redefining \% on input line 444.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [21]
@@ -2079,31 +2051,55 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 482.
-LaTeX Info: Redefining \. on input line 493.
-LaTeX Info: Redefining \% on input line 493.
+(Font)              <7> on input line 456.
+LaTeX Info: Redefining \. on input line 467.
+LaTeX Info: Redefining \% on input line 467.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [23
 
 ]
-LaTeX Info: Redefining \. on input line 507.
-LaTeX Info: Redefining \% on input line 507.
+LaTeX Info: Redefining \. on input line 481.
+LaTeX Info: Redefining \% on input line 481.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [24]
-LaTeX Info: Redefining \. on input line 514.
-LaTeX Info: Redefining \% on input line 514.
+LaTeX Info: Redefining \. on input line 488.
+LaTeX Info: Redefining \% on input line 488.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [25
 
 ]
-LaTeX Info: Redefining \. on input line 544.
-LaTeX Info: Redefining \% on input line 544.
+LaTeX Info: Redefining \. on input line 528.
+LaTeX Info: Redefining \% on input line 528.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [26
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 528--528
+
+ []
+
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+[27
 
 ]
 File: img/logo_gob.png Graphic file (type bmp)
@@ -2112,7 +2108,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
- [27
+ [28
+
 
 ] (template-institucional.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2143,7 +2140,7 @@ Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 Here is how much of TeX's memory you used:
  44823 strings out of 402987
  897755 string characters out of 5452870
- 1957479 words of memory out of 5000000
+ 1957473 words of memory out of 5000000
  72930 multiletter control sequences out of 15000+600000
  635252 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
