@@ -11,7 +11,7 @@
 \RequirePackage[spanish,es-tabla]{babel}
 % \\RequirePackage[utf8]{inputenc} % Not needed for XeLaTeX
 \RequirePackage[T1]{fontenc}
-\RequirePackage{geometry}
+\RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm]{geometry}
 \RequirePackage[final]{graphicx}
 % Configuración para evitar compresión agresiva de imágenes
 \ifdefined\XeTeXversion
@@ -209,11 +209,17 @@
   \fancyhf{}
   \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
   \fancyhead[R]{\small\thepage\ \textcolor{gobmxAmbarClaro}{|}\ \leftmark}
-  
-  % Pie de página mejorado con logo centrado y líneas decorativas
-  \fancyfoot[L]{}
-  \fancyfoot[C]{}
-  \fancyfoot[R]{}
+  \fancyfoot{} % Limpiar pie de página
+  \renewcommand{\headrulewidth}{1pt}
+  \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\fancypagestyle{fancy}{
+  \fancyhf{}
+  \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
+  \fancyhead[R]{\small\thepage\ \textcolor{gobmxAmbarClaro}{|}\ \leftmark}
+  \fancyfoot{} % Limpiar pie de página
   \renewcommand{\headrulewidth}{1pt}
   \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
@@ -225,7 +231,7 @@
   \renewcommand{\footrulewidth}{0pt}
 }
 
-\pagestyle{plain}
+\pagestyle{fancy}
 
 % Agregar fondo a todas las páginas con estilo plain
 \AddToShipoutPictureBG{%
@@ -248,28 +254,28 @@
 % Título A  -> \section  (Patria 17 pt, negritas)
 \titleformat{\section}
   {\patriafont\bfseries\fontsize{17pt}{20pt}\selectfont\color{gobmxGuinda}}
-  {\thesection}{1em}{}
+  {\thesection}{0.3em}{}
 
 % Título B  -> \subsection  (Patria 14 pt, negritas)
 \titleformat{\subsection}
   {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{gobmxGuinda}}
-  {\thesubsection}{1em}{}
+  {\thesubsection}{0.3em}{}
 
 % Título C  -> \subsubsection  (Noto Sans 12 pt, negritas)
 \titleformat{\subsubsection}
   {\sffamily\bfseries\fontsize{12pt}{14pt}\selectfont\color{gobmxGuinda}}
-  {\thesubsubsection}{1em}{}
+  {\thesubsubsection}{0.3em}{}
 
 % Título D  -> \paragraph  (Noto Sans 12 pt, normal)
 \titleformat{\paragraph}
   {\sffamily\fontsize{12pt}{14pt}\selectfont\color{gobmxGris}}
-  {\theparagraph}{1em}{}
+  {\theparagraph}{0.3em}{}
 \titlespacing*{\paragraph}{0pt}{0.8em}{0.5em}
 
 % Título E  -> \subparagraph  (Noto Sans 10 pt, negritas)
 \titleformat{\subparagraph}
   {\sffamily\bfseries\fontsize{10pt}{12pt}\selectfont\color{gobmxGris}}
-  {\thesubparagraph}{1em}{}
+  {\thesubparagraph}{0.3em}{}
 \titlespacing*{\subparagraph}{0pt}{0.6em}{0.4em}
 
 % Espaciados que ya tenías (ajusta si quieres)
@@ -378,7 +384,7 @@
 
 % Tabla estilo dorado
 \newenvironment{tabladorado}[1][]{
-  \rowcolors{2}{gobmxDorado}{white}
+  \rowcolors{2}{gobmxDorado!12}{white}
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
@@ -754,8 +760,12 @@
   
   \titleformat{\section}
     {\Large\bfseries\color{gobmxGuinda}}
-    {\thesection:}{0.5em}{}
+    {\thesection:}{0.3em}{}
     [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
+
+  \titleformat{\subsection}
+    {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{gobmxGuinda}}
+    {\thesubsection}{0.3em}{}
 }
 
 % ============================================================================
@@ -1007,10 +1017,18 @@
 
 % Entrada de glosario
 \newcommand{\entradaGlosario}[2]{%
+  \par\begingroup
+  \setlength{\parindent}{0pt}%
+  \setlength{\hangindent}{0pt}%
   \noindent{\notosanssmall\textbf{#1} -- #2}\par
+  \endgroup
 }
 
 % Entrada de sigla / acrónimo
 \newcommand{\entradaSigla}[2]{%
+  \par\begingroup
+  \setlength{\parindent}{0pt}%
+  \setlength{\hangindent}{0pt}%
   \noindent{\notosanssmall\textbf{#1} -- #2}\par
+  \endgroup
 }

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 14:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 15:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1434,17 +1434,17 @@ LaTeX Info: Redefining \% on input line 21.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
-* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
-* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(99.58464pt, 595.8007pt, 99.58464pt)
 * \paperwidth=614.295pt
 * \paperheight=794.96999pt
-* \textwidth=430.00462pt
-* \textheight=556.47656pt
-* \oddsidemargin=19.8752pt
-* \evensidemargin=19.8752pt
-* \topmargin=-13.87262pt
+* \textwidth=472.03123pt
+* \textheight=595.8007pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-16.13809pt
 * \headheight=45.0pt
-* \headsep=25.0pt
+* \headsep=28.45274pt
 * \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=44.0pt
@@ -1604,18 +1604,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Info: Redefining \sptext on input line 33.
-LaTeX Info: Redefining \. on input line 33.
-LaTeX Info: Redefining \% on input line 33.
+LaTeX Info: Redefining \sptext on input line 35.
+LaTeX Info: Redefining \. on input line 35.
+LaTeX Info: Redefining \% on input line 35.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 33.
+(babel)             Reported on input line 35.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [1
 
 ]
 Package marginnote Info: Using workaround for absolute page number on input lin
-e 33.
+e 35.
 )
 \tf@toc=\write6
 \openout6 = `template-institucional.toc'.
@@ -1767,8 +1767,8 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Info: Redefining \. on input line 80.
-LaTeX Info: Redefining \% on input line 80.
+LaTeX Info: Redefining \. on input line 82.
+LaTeX Info: Redefining \% on input line 82.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [1
@@ -1833,8 +1833,8 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [6
 
 ]
-LaTeX Info: Redefining \. on input line 159.
-LaTeX Info: Redefining \% on input line 159.
+LaTeX Info: Redefining \. on input line 164.
+LaTeX Info: Redefining \% on input line 164.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [7
@@ -1849,13 +1849,20 @@ Package microtype Info: Loading generic protrusion settings for font family
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
 )
-LaTeX Info: Redefining \. on input line 190.
-LaTeX Info: Redefining \% on input line 190.
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
 [8]
-Overfull \hbox (25.13042pt too wide) in paragraph at lines 213--213
+Overfull \hbox (25.4728pt too wide) in paragraph at lines 211--212
+[]\TU/NotoSans(0)/m/n/12 Para resaltar frases impactantes o citas textuales imp
+ortantes, utilice el entorno \TU/lmtt/m/n/12 destacado\TU/NotoSans(0)/m/n/12 : 
+
+ []
+
+
+Overfull \hbox (18.82668pt too wide) in paragraph at lines 213--213
  [] 
  []
 
@@ -2006,11 +2013,9 @@ Package lettrine.sty Info: Targeted height = 42.78183pt
 (lettrine.sty)             Lettrine height = 42.78177pt (\color {gobmxGuinda}E)
 ;
 (lettrine.sty)             reported on input line 366.
-Package marginnote Info: Margin note 25.1 is on absolute page 25 on input line 
-367.
 Package marginnote Info: right page because not two side mode on input line 367
 .
-Package marginnote Info: xpos seems to be 514.12515pt on input line 367.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 367.
 
 
 
@@ -2018,31 +2023,27 @@ Package marginnote Info: xpos seems to be 514.12515pt on input line 367.
 
 <Copying the QR code for "https://www.gob.mx/sener" in version 2-M as previousl
 y calculated.>
-LaTeX Info: Redefining \. on input line 394.
-LaTeX Info: Redefining \% on input line 394.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 394.
+LaTeX Info: Redefining \. on input line 396.
+LaTeX Info: Redefining \% on input line 396.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [19
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 394.
-LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <10.95> on input line 418.
-LaTeX Info: Redefining \. on input line 428.
-LaTeX Info: Redefining \% on input line 428.
+LaTeX Info: Redefining \. on input line 438.
+LaTeX Info: Redefining \% on input line 438.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [20]
-Overfull \hbox (4.78569pt too wide) in paragraph at lines 438--438
- [] 
- []
-
 LaTeX Info: Redefining \. on input line 444.
 LaTeX Info: Redefining \% on input line 444.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[21]
+ [21]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
@@ -2052,8 +2053,8 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 456.
-LaTeX Info: Redefining \. on input line 467.
-LaTeX Info: Redefining \% on input line 467.
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [23
@@ -2130,19 +2131,26 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
 (rerunfilecheck)             Checksum: 6E78D2BB53190C7674A7BD0D380D1A3E;9057.
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44823 strings out of 402987
- 897755 string characters out of 5452870
- 1957473 words of memory out of 5000000
- 72930 multiletter control sequences out of 15000+600000
- 635252 words of font info for 119 fonts, out of 8000000 for 9000
+ 44832 strings out of 402987
+ 898071 string characters out of 5452870
+ 1960913 words of memory out of 5000000
+ 72937 multiletter control sequences out of 15000+600000
+ 635268 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,122p,1217b,6215s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
