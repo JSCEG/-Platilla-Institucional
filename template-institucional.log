@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 11:27
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 12:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,8 +1348,30 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip139
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 149.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 149.
+Package hyperref Info: Option `colorlinks' set `true' on input line 161.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 161.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'NotoSans(1)' created for font 'NotoSans'
+(fontspec)             with options [Path = tipografias/,Extension =
+(fontspec)             .ttf,UprightFont = *-Light,ItalicFont = *-LightItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"[tipografias/NotoSans-Light.ttf]/OT:script=latn;lang
+uage=dflt;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->"[tipografias/NotoSans-Light.ttf]/OT:script=latn;lang
+uage=dflt;+smcp;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->"[tipografias/NotoSans-LightItalic.ttf]/OT:script=lat
+n;language=dflt;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->"[tipografias/NotoSans-LightItalic.ttf]/OT:script=lat
+n;language=dflt;+smcp;"
 
 ) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
@@ -1371,7 +1393,14 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
 
-(template-institucional.aux)
+(template-institucional.aux
+LaTeX Info: Redefining \. on input line 13.
+LaTeX Info: Redefining \% on input line 13.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 13.
+
+<Reading QR code for "https://www.gob.mx/sener" at level 2-M from aux file.>
+)
 \openout1 = `template-institucional.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
@@ -1396,8 +1425,6 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 21.
 LaTeX Font Info:    ... okay on input line 21.
 LaTeX Info: Redefining \. on input line 21.
 LaTeX Info: Redefining \% on input line 21.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 21.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1556,15 +1583,11 @@ Package hyperref Info: Link coloring ON on input line 21.
 \@outlinefile=\write5
 \openout5 = `template-institucional.out'.
 
-
-
-Package hyperref Warning: Rerun to get /PageLabels entry.
-
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/portada.png Graphic file (type bmp)
 <img/portada.png>
-[1
+ [1
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 54--54
@@ -1609,18 +1632,18 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Info: Redefining \sptext on input line 32.
-LaTeX Info: Redefining \. on input line 32.
-LaTeX Info: Redefining \% on input line 32.
+LaTeX Info: Redefining \sptext on input line 33.
+LaTeX Info: Redefining \. on input line 33.
+LaTeX Info: Redefining \% on input line 33.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 32.
+(babel)             Reported on input line 33.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [1
 
 ]
 Package marginnote Info: Using workaround for absolute page number on input lin
-e 32.
+e 33.
 )
 \tf@toc=\write6
 \openout6 = `template-institucional.toc'.
@@ -1838,16 +1861,11 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [6
 
 ]
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
-File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
-ndard glyph set (RS)
-)
-LaTeX Info: Redefining \. on input line 186.
-LaTeX Info: Redefining \% on input line 186.
+LaTeX Info: Redefining \. on input line 185.
+LaTeX Info: Redefining \% on input line 185.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[7
+ [7
 
 ]
 Package microtype Info: Loading generic protrusion settings for font family
@@ -1855,201 +1873,237 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (25.13042pt too wide) in paragraph at lines 203--203
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
+ndard glyph set (RS)
+)
+LaTeX Info: Redefining \. on input line 216.
+LaTeX Info: Redefining \% on input line 216.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+
+[8]
+Overfull \hbox (25.13042pt too wide) in paragraph at lines 239--239
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 203.
-LaTeX Info: Redefining \% on input line 203.
+LaTeX Info: Redefining \. on input line 239.
+LaTeX Info: Redefining \% on input line 239.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[8]
-LaTeX Info: Redefining \. on input line 223.
-LaTeX Info: Redefining \% on input line 223.
+[9]
+LaTeX Info: Redefining \. on input line 259.
+LaTeX Info: Redefining \% on input line 259.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [9]
+ [10]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [10
+ [11
 
 ]
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+
+
+LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
+(Font)              using `TU/NotoSans(1)/m/n' instead on input line 270.
+
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 271.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 271.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 271.
+
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 235.
-LaTeX Info: Redefining \. on input line 287.
-LaTeX Info: Redefining \% on input line 287.
+(Font)              <10.5> on input line 271.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.34996> on input line 271.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.25> on input line 271.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 271.
+
+LaTeX Info: Redefining \. on input line 323.
+LaTeX Info: Redefining \% on input line 323.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [11
+[12
 
 ]
 File: img/graficos/figura_2_1.png Graphic file (type bmp)
 <img/graficos/figura_2_1.png>
-LaTeX Info: Redefining \. on input line 311.
-LaTeX Info: Redefining \% on input line 311.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [12]
-File: img/graficos/figura_3_5.png Graphic file (type bmp)
-<img/graficos/figura_3_5.png>
-LaTeX Info: Redefining \. on input line 321.
-LaTeX Info: Redefining \% on input line 321.
+LaTeX Info: Redefining \. on input line 347.
+LaTeX Info: Redefining \% on input line 347.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [13]
-File: img/graficos/figura_2_12.png Graphic file (type bmp)
-<img/graficos/figura_2_12.png>
-LaTeX Info: Redefining \. on input line 331.
-LaTeX Info: Redefining \% on input line 331.
+File: img/graficos/figura_3_5.png Graphic file (type bmp)
+<img/graficos/figura_3_5.png>
+LaTeX Info: Redefining \. on input line 357.
+LaTeX Info: Redefining \% on input line 357.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [14]
-File: img/graficos/figura_4_3.png Graphic file (type bmp)
-<img/graficos/figura_4_3.png>
-LaTeX Info: Redefining \. on input line 343.
-LaTeX Info: Redefining \% on input line 343.
+File: img/graficos/figura_2_12.png Graphic file (type bmp)
+<img/graficos/figura_2_12.png>
+LaTeX Info: Redefining \. on input line 367.
+LaTeX Info: Redefining \% on input line 367.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [15]
-
-LaTeX Warning: Reference `fig:sen2025' on page 16 undefined on input line 344.
-
-LaTeX Info: Redefining \. on input line 350.
-LaTeX Info: Redefining \% on input line 350.
+File: img/graficos/figura_4_3.png Graphic file (type bmp)
+<img/graficos/figura_4_3.png>
+LaTeX Info: Redefining \. on input line 379.
+LaTeX Info: Redefining \% on input line 379.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[16]
+ [16]
+LaTeX Info: Redefining \. on input line 386.
+LaTeX Info: Redefining \% on input line 386.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [17]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [17
+ [18
 
 ]
 Package lettrine.sty Info: Targeted height = 42.78183pt
 (lettrine.sty)             (for loversize=0, accent excluded),
 (lettrine.sty)             Lettrine height = 42.78177pt (\color {gobmxGuinda}E)
 ;
-(lettrine.sty)             reported on input line 356.
-Package marginnote Info: right page because not two side mode on input line 357
+(lettrine.sty)             reported on input line 392.
+Package marginnote Info: Margin note 27.1 is on absolute page 27 on input line 
+393.
+Package marginnote Info: right page because not two side mode on input line 393
 .
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 357.
+Package marginnote Info: xpos seems to be 514.12515pt on input line 393.
 
 
 
 <QR code requested for "https://www.gob.mx/sener" in version 0-M.>
-<Calculating QR code for "https://www.gob.mx/sener" in version 2-M.>
-<Splitting off block 1> <Making error block 1>
-<Interleaving datablocks of length 28\ and 29:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
-11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, .>
-<Interleaving errorblocks of length 16:  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,
-12, 13, 14, 15, 16, .><Interleaving complete.> <Writing data... done.>
-<Applying Mask 0... done. Calculating penalty... penalty is 1122>
-<Applying Mask 1... done. Calculating penalty... penalty is 1160>
-<Applying Mask 2... done. Calculating penalty... penalty is 1161>
-<Applying Mask 3... done. Calculating penalty... penalty is 1126>
-<Applying Mask 4... done. Calculating penalty... penalty is 1100>
-<Applying Mask 5... done. Calculating penalty... penalty is 1175>
-<Applying Mask 6... done. Calculating penalty... penalty is 1110>
-<Applying Mask 7... done. Calculating penalty... penalty is 1119>
-<Selected Mask 4>
-<Encoding and writing format string... done.>
-<Encoding and writing version information... done.>
-<Saving QR code to memory... done.>
-<Writing QR code to aux file... done.>
-<Printing matrix... done.>
 
-LaTeX Info: Redefining \. on input line 384.
-LaTeX Info: Redefining \% on input line 384.
+<Copying the QR code for "https://www.gob.mx/sener" in version 2-M as previousl
+y calculated.>
+LaTeX Info: Redefining \. on input line 420.
+LaTeX Info: Redefining \% on input line 420.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[18
+[19
 
 ]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 384.
-LaTeX Info: Redefining \. on input line 418.
-LaTeX Info: Redefining \% on input line 418.
+(Font)              <5> on input line 420.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 444.
+LaTeX Info: Redefining \. on input line 454.
+LaTeX Info: Redefining \% on input line 454.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [19]
-Overfull \hbox (4.78569pt too wide) in paragraph at lines 428--428
+ [20]
+Overfull \hbox (4.78569pt too wide) in paragraph at lines 464--464
  [] 
  []
 
-LaTeX Info: Redefining \. on input line 434.
-LaTeX Info: Redefining \% on input line 434.
+LaTeX Info: Redefining \. on input line 470.
+LaTeX Info: Redefining \% on input line 470.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[20]
+[21]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [21
+ [22
 
 ]
-
-LaTeX Warning: Citation 'rodriguez2023planeacion' on page 22 undefined on input
- line 446.
-
-
-LaTeX Warning: Citation '' on page 22 undefined on input line 446.
-
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 446.
-
-LaTeX Warning: Citation '' on page 22 undefined on input line 446.
-
-
-LaTeX Warning: Citation 'rodriguez2023planeacion' on page 22 undefined on input
- line 446.
-
-
-LaTeX Warning: Citation 'gomez2023renovables' on page 22 undefined on input lin
-e 447.
-
-
-LaTeX Warning: Citation 'sener2024pladese' on page 22 undefined on input line 4
-48.
-
-
-LaTeX Warning: Citation '' on page 22 undefined on input line 448.
-
-
-LaTeX Warning: Citation '' on page 22 undefined on input line 448.
-
-
-LaTeX Warning: Citation 'sener2024pladese' on page 22 undefined on input line 4
-48.
-
-
-LaTeX Warning: Citation 'sener2024portal' on page 22 undefined on input line 44
-9.
-
-LaTeX Info: Redefining \. on input line 459.
-LaTeX Info: Redefining \% on input line 459.
+(Font)              <7> on input line 482.
+LaTeX Info: Redefining \. on input line 493.
+LaTeX Info: Redefining \% on input line 493.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[22
+ [23
 
 ]
-LaTeX Info: Redefining \. on input line 472.
-LaTeX Info: Redefining \% on input line 472.
+LaTeX Info: Redefining \. on input line 507.
+LaTeX Info: Redefining \% on input line 507.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [23]
-
-LaTeX Warning: Empty bibliography on input line 473.
-
-LaTeX Info: Redefining \. on input line 509.
-LaTeX Info: Redefining \% on input line 509.
+ [24]
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[24
+ [25
 
+]
+LaTeX Info: Redefining \. on input line 544.
+LaTeX Info: Redefining \% on input line 544.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [26
 
 ]
 File: img/logo_gob.png Graphic file (type bmp)
@@ -2058,7 +2112,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
- [25
+ [27
 
 ] (template-institucional.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2073,35 +2127,26 @@ L3 programming layer <2025-10-24>
  ***********
 
 
-LaTeX Warning: There were undefined references.
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.45pt have occurred.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
-Package rerunfilecheck Warning: File `template-institucional.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `template-institucional.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  5157B4D12D4E7B85FD5F2BE30BD7F085;7542.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                template-institucional
-(biblatex)                and rerun LaTeX afterwards.
-
+(rerunfilecheck)             Checksum: 6E78D2BB53190C7674A7BD0D380D1A3E;9057.
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46553 strings out of 402987
- 923326 string characters out of 5452870
- 1953335 words of memory out of 5000000
- 74676 multiletter control sequences out of 15000+600000
- 635140 words of font info for 105 fonts, out of 8000000 for 9000
+ 44823 strings out of 402987
+ 897755 string characters out of 5452870
+ 1957479 words of memory out of 5000000
+ 72930 multiletter control sequences out of 15000+600000
+ 635252 words of font info for 119 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,228p,1217b,6139s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,13n,122p,1217b,6215s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (31 pages).
+Output written on template-institucional.pdf (33 pages).

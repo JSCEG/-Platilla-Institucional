@@ -1,0 +1,179 @@
+1
+
+Título A Patria 17 puntos
+Ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer
+adipiscing elit, sed diam t wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+
+Título B Patria negritas 14 puntos
+Aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie
+consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et.
+
+Título C Noto Sans negritas 12 puntos
+Dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat.
+
+Título D Noto Sans 12 puntos
+Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse
+Título E Noto Sans negritas 10 puntos
+
+Vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, cons
+• 1er nivel viñeta adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+volutpat.
+−
+
+2do nivel guiones wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+aliquip ex ea commodo consequat.
+•
+
+3er nivel viñeta ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+tincidunt ut laoreet dolore magna aliquam erat volutpat.
+−
+
+4to nivel guiones t wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
+lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendreri
+
+2
+
+Un vulputate.1 diam t wisi enim ad minim Dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+
+Gama cromática y estilo de gráficos
+En la medida de lo posible los gráficos deben ir solo en color rojo (Pantone 7420 C), como se muestra en la siguiente
+imagen, sobre todo cuando los datos pertenecen a un mismo rubro (por ejemplo, producción de barriles de petróleo
+en diferentes años).
+
+Título del gráfico Patria 12 pts, en negritas, alineado a la izquierda, inicial mayúscula, sin punto
+final
+(Unidad de Medida, Noto sans light, 9 puntos)
+
+45
+
+40
+
+40
+35
+
+30
+
+30
+25
+
+20
+
+20
+15
+10
+
+10
+
+5
+0
+Categoría 1
+
+Categoría 2
+
+Categoría 3
+
+Categoría 4
+
+Serie 1
+
+En caso de requerir más colores la gama institucional debe usarse en el siguiente orden:
+7420 C
+
+7421 C
+
+1255 C
+
+7402 C
+
+626 C
+
+627 C
+
+Cool
+gray 7 C
+
+FUENTE: Noto Sans Light 9 puntos. Alineado a la izquierda. Solamente la palabra FUENTE va en negritas, Lleva punto al final.
+
+R 156
+35al pie
+1G
+Nota
+B 72
+
+R 98
+G 19
+B 51
+
+R 166
+G 128
+B 45
+
+R 231
+G 210
+B 149
+
+R 30
+G 91
+B 79
+
+3
+
+R0
+G 47
+B 42
+
+R 152
+G 152
+B 154
+
+Neutral
+black C
+R 23
+G 27
+B 30
+
+Título de la tabla Patria 12 pts, en negritas, alineado a la izquierda, inicial mayúscula, sin punto
+final
+(Unidad de Medida, Noto sans light, 9 puntos)
+
+ENCABEZADO
+Texto noto sans 10.5 pts
+alineado a la izquierda
+Texto
+Texto
+Texto
+
+NOTO SANS 10.5
+10.5
+cifras centradas
+00
+00
+00
+
+NEGRITAS
+00
+TOTALES EN NEGRITAS
+00
+00
+00
+
+Glosario
+PALABRA – Descripción noto sans 10.5, estilo cuerpo de texto. Solo la palabra a describir va en negritas.
+PALABRA – Descripción noto sans 10.5, estilo cuerpo de texto. Solo la palabra a describir va en negritas.
+PALABRA – Descripción noto sans 10.5, estilo cuerpo de texto. Solo la palabra a describir va en negritas.
+PALABRA – Descripción noto sans 10.5, estilo cuerpo de texto. Solo la palabra a describir va en negritas.
+
+4
+
+Siglas y acrónimos
+ABC – Descripción noto sans 10.5, estilo cuerpo de texto. Solo las siglas van en negritas.
+DEF – Descripción noto sans 10.5, estilo cuerpo de texto. Solo las siglas van en negritas.
+GHI – Descripción noto sans 10.5, estilo cuerpo de texto. Solo las siglas van en negritas.
+
+5
+
+

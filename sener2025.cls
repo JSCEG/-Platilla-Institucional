@@ -27,13 +27,12 @@
 % ============================================================================
 % COLORES INSTITUCIONALES
 % ============================================================================
-\definecolor{gobmxGuinda}{HTML}{691B32}
-\definecolor{gobmxVerde}{HTML}{006B5C}
-\definecolor{gobmxDorado}{HTML}{DDC6A2}
-\definecolor{gobmxGris}{HTML}{6C6C6C}
+\definecolor{gobmxGuinda}{RGB}{156,35,72}
+\definecolor{gobmxVerde}{RGB}{30,91,79}
+\definecolor{gobmxDorado}{RGB}{166,128,45}
+\definecolor{gobmxGris}{RGB}{152,152,154}
 \definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
-\definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
-\definecolor{gobmxAmbarClaro}{HTML}{DDC6A2}
+\definecolor{gobmxAmbarClaro}{RGB}{231,210,149}
 
 % ============================================================================
 % TIPOGRAFÍAS INSTITUCIONALES
@@ -77,6 +76,13 @@
   }{}
 }{}
 
+
+% Fallback if fontspec or fonts are missing
+\ifdefined\patriafont
+\else
+  \newcommand{\patriafont}{\bfseries}
+\fi
+
 % ============================================================================
 % Packages for functionality and bibliography
 % ============================================================================
@@ -104,13 +110,19 @@
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
 
+% Definición de tamaño de fuente 10.5pt para tablas y glosario
+\newcommand{\notosanssmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
 % ============================================================================
 % Usa Patria para el título de tablas y figuras
+% Definir fuente Patria para captions
+\DeclareCaptionFont{patria}{\patriafont}
+
 \captionsetup{
-  font={small,bf},             % Título en Patria (aprox 12 pt)
-  labelfont={bf,color=gobmxGuinda},
+  font={small,patria},             % Título en Patria (aprox 12 pt)
+  labelfont={bf,patria,color=gobmxGuinda},
   labelsep=space,                       % "Figura 1 Título ..." (sin punto tras el número)
   justification=raggedright,
   singlelinecheck=false
@@ -346,7 +358,7 @@
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2} % Más aire
-  \sffamily\small % Fuente sans-serif y un poco más pequeña
+  \sffamily\notosanssmall % Fuente sans-serif 10.5pt
   #1
 }{
   \end{table}
@@ -358,7 +370,7 @@
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
-  \sffamily\small
+  \sffamily\notosanssmall
   #1
 }{
   \end{table}
@@ -366,11 +378,11 @@
 
 % Tabla estilo dorado
 \newenvironment{tabladorado}[1][]{
-  \rowcolors{2}{gobmxDorado!12}{white}
+  \rowcolors{2}{gobmxDorado}{white}
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
-  \sffamily\small
+  \sffamily\notosanssmall
   #1
 }{
   \end{table}
@@ -382,7 +394,7 @@
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
-  \sffamily\small
+  \sffamily\notosanssmall
   #1
 }{
   \end{table}
@@ -393,7 +405,7 @@
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
-  \sffamily\small
+  \sffamily\notosanssmall
   #1
 }{
   \end{table}
@@ -405,7 +417,7 @@
   \begin{table}[H]
   \centering
   \renewcommand{\arraystretch}{1.2}
-  \sffamily\small
+  \sffamily\notosanssmall
   #1
 }{
   \end{table}
@@ -469,7 +481,7 @@
 
 % Recuadro de ejemplo
 \newtcolorbox{ejemplo}[1][]{
-  colback=gobmxDorado!5,
+  colback=gobmxAmbarClaro,
   colframe=gobmxDorado,
   boxrule=1.5pt,
   arc=2mm,
@@ -510,7 +522,7 @@
 % Recuadro de datos clave
 \newtcolorbox{datosclave}[1][]{
   enhanced,
-  colback=gobmxDorado!8,
+  colback=gobmxAmbarClaro,
   colframe=gobmxDorado,
   boxrule=2pt,
   arc=1mm,
@@ -642,7 +654,7 @@
 }
 
 \newtcolorbox{calloutWarning}[1][Advertencia]{%
-  colback=gobmxDorado!5,%
+  colback=gobmxAmbarClaro,%
   colframe=gobmxDorado,%
   boxrule=0pt,%
   leftrule=4pt,%
@@ -972,7 +984,18 @@
 % MACROS ADICIONALES (PLADERSE)
 % ============================================================================
 
-\newcommand{\notosanslight}{\sffamily}
+% Si tienes Noto Sans Light instalada puedes definirla;
+% si no, simplemente hereda la sans estándar.
+\IfFileExists{tipografias/NotoSans-Light.ttf}{
+  \newfontfamily\notosanslight[
+    Path = tipografias/,
+    Extension = .ttf,
+    UprightFont = *-Light,
+    ItalicFont  = *-LightItalic
+  ]{NotoSans}
+}{
+  \newcommand{\notosanslight}{\sffamily}
+}
 
 % Macro de fuente de gráfico/tabla
 \newcommand{\fuente}[1]{%
@@ -984,10 +1007,10 @@
 
 % Entrada de glosario
 \newcommand{\entradaGlosario}[2]{%
-  \noindent\textbf{#1} -- #2\par
+  \noindent{\notosanssmall\textbf{#1} -- #2}\par
 }
 
 % Entrada de sigla / acrónimo
 \newcommand{\entradaSigla}[2]{%
-  \noindent\textbf{#1} -- #2\par
+  \noindent{\notosanssmall\textbf{#1} -- #2}\par
 }

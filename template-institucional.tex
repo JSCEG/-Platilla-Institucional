@@ -163,6 +163,42 @@ La plantilla define estilos específicos para hasta 4 niveles de anidación en l
 
 La plantilla utiliza las tipografías institucionales \textbf{Patria} para títulos y \textbf{Noto Sans} para el cuerpo del texto, asegurando legibilidad y consistencia con la identidad gráfica del Gobierno de México.
 
+\section{Jerarquía de Títulos (Niveles A--E)}
+
+A continuación se muestran los 5 niveles de títulos definidos en la plantilla:
+
+\section{Título A: Encabezado de Sección (Patria 17pt Negritas)}
+Este es el nivel más alto dentro del contenido. Se usa para separar temas principales.
+
+\subsection{Título B: Subtítulo (Patria 14pt Negritas)}
+Este nivel divide las secciones en subtemas específicos.
+
+\subsubsection{Título C: Tercer Nivel (Noto Sans 12pt Negritas)}
+Utilizado para apartados dentro de un subtema.
+
+\paragraph{Título D: Cuarto Nivel (Noto Sans 12pt Normal)}
+Este nivel se usa para párrafos destacados o subdivisiones menores. El texto continúa en la misma línea o en el siguiente bloque.
+
+\subparagraph{Título E: Quinto Nivel (Noto Sans 10pt Negritas)}
+El nivel más bajo de jerarquía, útil para notas o detalles muy específicos.
+
+\section{Niveles de Listas y Viñetas}
+
+La plantilla soporta hasta 4 niveles de anidación con estilos alternados (viñeta/guión):
+
+\begin{itemize}
+  \item \textbf{Nivel 1:} Viñeta circular (\texttt{textbullet}).
+  \begin{itemize}
+    \item \textbf{Nivel 2:} Guión corto (\texttt{--}).
+    \begin{itemize}
+      \item \textbf{Nivel 3:} Viñeta circular (\texttt{textbullet}).
+      \begin{itemize}
+        \item \textbf{Nivel 4:} Guión corto (\texttt{--}).
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
 \subsection{Recuadros y Cajas Destacadas}
 
 Se han diseñado recuadros específicos para resaltar información clave:
@@ -229,7 +265,7 @@ Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de
 \subsection{Tabla estilo guinda (Datos Generales)}
 
 \begin{tablaguinda}
-  \caption{Capacidad instalada por región al cierre de 2024}
+  \caption{Capacidad instalada por región al cierre de 2024 (Mega Watts)}
   \label{tab:capacidad-region}
   \fuente{Elaboración propia con datos del CENACE}
   \begin{tabular}{lrrr}
@@ -304,7 +340,7 @@ La plantilla permite la inclusión de gráficos de alta resolución, mapas y dia
 \begin{figure}[H]
   \centering
   \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_1.png}
-  \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025. Detalle de la infraestructura de transmisión.}
+  \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025 (Mega Watts)}
   \label{fig:mapa-sen}
   \fuente{CENACE, 2025}
 \end{figure}
@@ -452,18 +488,17 @@ La plantilla ahora soporta citas al pie de página para una lectura más fluida.
 
 \section{Siglas y Acrónimos}
 
-\entradaSigla{SEN}{Sistema Eléctrico Nacional}
-\entradaSigla{RNI}{Red Nacional de Transmisión}
-\entradaSigla{RGD}{Redes Generales de Distribución}
-\entradaSigla{CENACE}{Centro Nacional de Control de Energía}
-\entradaSigla{CRE}{Comisión Reguladora de Energía}
+\entradaSigla{CENACE}{Centro Nacional de Control de Energía.}
+\entradaSigla{CRE}{Comisión Reguladora de Energía.}
+\entradaSigla{SEN}{Sistema Eléctrico Nacional.}
+\entradaSigla{RNI}{Red Nacional de Transmisión.}
 
-\section{Glosario de Términos}
+\section{Glosario}
 
+\entradaGlosario{Demanda máxima}{Valor máximo de potencia demandada en el periodo considerado.}
+\entradaGlosario{Reserva operativa}{Capacidad adicional disponible para cubrir contingencias.}
 \entradaGlosario{Capacidad instalada}{Potencia nominal de las centrales eléctricas disponibles para generar energía.}
-\entradaGlosario{Factor de planta}{Relación entre la energía generada y la energía que se generaría operando a capacidad nominal.}
 \entradaGlosario{Energías limpias}{Fuentes de energía que no emiten gases de efecto invernadero durante su operación.}
-\entradaGlosario{Sistema Eléctrico Nacional (SEN)}{Conjunto de instalaciones destinadas a la generación, transmisión y distribución de energía eléctrica.}
 
 % ============================================================================
 % BIBLIOGRAFÍA

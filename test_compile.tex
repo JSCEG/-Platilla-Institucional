@@ -1,5 +1,6 @@
 \documentclass{sener2025}
 \usepackage{lipsum}
+\usepackage{float}
 
 \title{Test Document}
 \author{Antigravity}
@@ -28,5 +29,29 @@ This should be Noto Sans 12pt Normal Gris.
 \subparagraph{Título E (Subparagraph)}
 This should be Noto Sans 10pt Bold Gris.
 \lipsum[5]
+
+\section{List Verification}
+\begin{itemize}
+  \item Level 1 (Bullet)
+  \begin{itemize}
+    \item Level 2 (Dash)
+    \begin{itemize}
+      \item Level 3 (Bullet)
+      \begin{itemize}
+        \item Level 4 (Dash)
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\section{Caption Verification}
+\begin{figure}[H]
+  \centering
+  % Placeholder for image
+  \rule{4cm}{3cm}
+  \caption{Regiones y enlaces del Sistema Eléctrico Nacional (Unidad, Noto Sans Light 9 puntos)}
+  \label{fig:test}
+  \fuente{Elaboración propia con información de CENACE}
+\end{figure}
 
 \end{document}
