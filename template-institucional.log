@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 15:28
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 15:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2139,8 +2139,6 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 [27
 
 ]
-File: img/logo_gob.png Graphic file (type bmp)
-<img/logo_gob.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
@@ -2175,10 +2173,10 @@ Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44831 strings out of 402987
- 898059 string characters out of 5452870
- 1960338 words of memory out of 5000000
- 72936 multiletter control sequences out of 15000+600000
+ 44822 strings out of 402987
+ 897871 string characters out of 5452870
+ 1960326 words of memory out of 5000000
+ 72928 multiletter control sequences out of 15000+600000
  635268 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,122p,1217b,6215s stack positions out of 10000i,1000n,20000p,200000b,200000s

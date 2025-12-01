@@ -495,7 +495,7 @@
 
 % Recuadro de ejemplo
 \newtcolorbox{ejemplo}[1][]{
-  colback=gobmxAmbarClaro,
+  colback=gobmxAmbarClaro!10,
   colframe=gobmxDorado,
   boxrule=1.5pt,
   arc=2mm,
@@ -918,35 +918,34 @@
       \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
     }%
   }
-  \vspace*{\fill}
+  \vspace*{1cm}
   
   \begin{center}
-    \vspace{1cm}
-    
+    \color{white}
     {\large\textbf{\@title}}\\[0.3cm]
     \ifx\@subtitle\empty
     \else
       {\@subtitle}\\[1cm]
     \fi
-    
-    \vspace{1cm}
-    
+  \end{center}
+
+  \vfill
+  
+  \begin{center}
+    \color{white}
     {\small
     \textbf{\@institucion}\\
     \@unidad\\[0.5cm]
     
     #1
     
-    \vspace{1cm}
+    \vspace{0.5cm}
     
-    \@date\\[1cm]
+    \@date
     }
-    
-    \includegraphics[height=1.2cm]{img/logo_gob.png}
   \end{center}
   
-  \vspace*{\fill}
-  \vspace*{\fill}
+  \vspace*{-1.5cm}
   \clearpage
 }
 
