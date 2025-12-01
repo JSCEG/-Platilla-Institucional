@@ -912,6 +912,7 @@
 \newcommand{\contraportada}[1]{
   \clearpage
   \thispagestyle{empty}
+  \hypersetup{urlcolor=gobmxAmbarClaro} % URL en Ámbar Claro para contraste
   % Agregar imagen de fondo de contraportada
   \AddToShipoutPictureBG*{%
     \AtPageLowerLeft{%
@@ -925,7 +926,7 @@
     {\large\textbf{\@title}}\\[0.3cm]
     \ifx\@subtitle\empty
     \else
-      {\@subtitle}\\[1cm]
+      \textcolor{gobmxGrisClaro}{\@subtitle}\\[1cm]
     \fi
   \end{center}
 
@@ -934,14 +935,14 @@
   \begin{center}
     \color{white}
     {\small
-    \textbf{\@institucion}\\
+    \textbf{\textcolor{gobmxAmbarClaro}{\@institucion}}\\
     \@unidad\\[0.5cm]
     
     #1
     
     \vspace{0.5cm}
     
-    \@date
+    \textcolor{gobmxGrisClaro}{\@date}
     }
   \end{center}
   
