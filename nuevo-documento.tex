@@ -1,0 +1,69 @@
+% !TeX program = xelatex
+\documentclass{sener2025}
+
+% ============================================================================
+% DATOS DEL DOCUMENTO
+% ============================================================================
+\title{Título del Documento}
+\subtitle{Subtítulo o Descripción}
+\author{Nombre del Autor o Área}
+\date{Noviembre 2025}
+
+% Datos para la portada y contraportada
+\institucion{Secretaría de Energía}
+\unidad{Subsecretaría de Planeación y Transición Energética}
+\palabrasclave{Energía, Planeación, SENER}
+
+% ============================================================================
+% INICIO DEL DOCUMENTO
+% ============================================================================
+\begin{document}
+
+% 1. Portada
+\maketitle
+
+% 2. Índice General
+\tableofcontents
+\newpage
+
+% 3. Presentación (Opcional)
+\portadaseccion{1}{Presentación}{Introducción al documento}
+\section{Introducción}
+Escribe aquí la introducción de tu documento...
+
+% 4. Desarrollo del Contenido
+\portadaseccion{2}{Título de la Sección}{Descripción breve}
+\section{Primer Tema}
+Contenido del primer tema...
+
+\subsection{Subtema}
+Detalles del subtema...
+
+% Ejemplo de figura
+% \begin{figure}[H]
+%   \centering
+%   \includegraphics[width=0.8\textwidth]{ruta/a/tu/imagen.png}
+%   \caption{Descripción de la figura.}
+%   \label{fig:ejemplo}
+%   \fuente{Fuente de los datos}
+% \end{figure}
+
+% 5. Referencias (Opcional)
+\clearpage
+\printbibliography[title={Referencias Bibliográficas}]
+
+% 6. Contraportada
+\contraportada{
+  \textbf{\textcolor{gobmxAmbarClaro}{Elaboración:}}\\
+  Nombre del Área Responsable\\
+  Dirección General correspondiente\\[0.5cm]
+  
+  \textbf{\textcolor{gobmxAmbarClaro}{Contacto:}}\\
+  Secretaría de Energía\\
+  Jalapa 20, Col. Roma Norte\\
+  Ciudad de México, C.P. 06700\\
+  Tel: (55) 5000-6000\\
+  \url{www.gob.mx/sener}
+}
+
+\end{document}

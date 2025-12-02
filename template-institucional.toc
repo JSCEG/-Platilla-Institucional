@@ -37,12 +37,14 @@
 \contentsline {subsection}{\numberline {10.5}Callouts Mejorados}{20}{subsection.10.5}%
 \contentsline {subsection}{\numberline {10.6}Barras de Progreso}{20}{subsection.10.6}%
 \contentsline {subsection}{\numberline {10.7}Líneas de Tiempo}{20}{subsection.10.7}%
-\contentsline {section}{\numberline {11}Sistema de Citas y Referencias}{23}{section.11}%
-\contentsline {subsection}{\numberline {11.1}Ejemplos de citas al pie}{23}{subsection.11.1}%
-\contentsline {section}{\numberline {12}Siglas y Acrónimos}{23}{section.12}%
-\contentsline {section}{\numberline {13}Glosario}{24}{section.13}%
+\contentsline {section}{\numberline {11}Ejemplo de Referencia Visual}{21}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Pronóstico del PIB}{21}{subsection.11.1}%
+\contentsline {section}{\numberline {12}Sistema de Citas y Referencias}{24}{section.12}%
+\contentsline {subsection}{\numberline {12.1}Ejemplos de citas al pie}{24}{subsection.12.1}%
+\contentsline {section}{\numberline {13}Siglas y Acrónimos}{24}{section.13}%
+\contentsline {section}{\numberline {14}Glosario}{25}{section.14}%
 \setlength {\cftsecnumwidth }{5.5em}
 \setlength {\cftsubsecnumwidth }{6.5em}
 \setlength {\cftsubsubsecnumwidth }{7.5em}
-\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{26}{appendix.Alph1}%
-\contentsline {subsection}{\numberline {Anexo A.1}Modelo econométrico}{26}{subsection.Alph1.1}%
+\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{27}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {Anexo A.1}Modelo econométrico}{27}{subsection.Alph1.1}%

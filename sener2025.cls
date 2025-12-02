@@ -121,9 +121,9 @@
 \DeclareCaptionFont{patria}{\patriafont}
 
 \captionsetup{
-  font={small,patria},             % Título en Patria (aprox 12 pt)
-  labelfont={bf,patria,color=gobmxGuinda},
-  labelsep=space,                       % "Figura 1 Título ..." (sin punto tras el número)
+  font={small,color=gobmxGris},        % Texto en gris y pequeño
+  labelfont={small,color=gobmxGris},    % Etiqueta también en gris y pequeña (sin negrita)
+  labelsep=period,                      % Separador punto: "Figura 1. Descripción"
   justification=raggedright,
   singlelinecheck=false
 }
@@ -207,26 +207,26 @@
 % ============================================================================
 \fancypagestyle{plain}{
   \fancyhf{}
-  \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
-  \fancyhead[R]{\small\textcolor{gobmxGuinda}{\leftmark}}
+  \fancyhead[L]{} % Sin texto a la izquierda
+  \fancyhead[R]{} % Sin texto a la derecha
   
   % Pie de página alternado (Par/Impar)
-  \fancyfoot[LE]{\makebox[\headwidth][l]{\small\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
-  \fancyfoot[RO]{\makebox[\headwidth][r]{\small\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
+  \fancyfoot[LE]{\makebox[\headwidth][l]{\scriptsize\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
+  \fancyfoot[RO]{\makebox[\headwidth][r]{\scriptsize\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
   
   \renewcommand{\headrulewidth}{1pt}
-  \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
+  \renewcommand{\headrule}{\vspace{-35pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
   \renewcommand{\footrulewidth}{0pt}
 }
 
 \fancypagestyle{fancy}{
   \fancyhf{}
-  \fancyhead[L]{\small\textcolor{gobmxGuinda}{\DocumentoCorto}}
-  \fancyhead[R]{\small\textcolor{gobmxGuinda}{\leftmark}}
+  \fancyhead[L]{} % Sin texto a la izquierda
+  \fancyhead[R]{} % Sin texto a la derecha
   
   % Pie de página alternado (Par/Impar)
-  \fancyfoot[LE]{\makebox[\headwidth][l]{\small\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
-  \fancyfoot[RO]{\makebox[\headwidth][r]{\small\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
+  \fancyfoot[LE]{\makebox[\headwidth][l]{\scriptsize\bfseries\thepage\quad\textcolor{gobmxGuinda}{\DocumentoCorto}\ \textcolor{gobmxDorado}{\hrulefill}}}
+  \fancyfoot[RO]{\makebox[\headwidth][r]{\scriptsize\textcolor{gobmxDorado}{\hrulefill}\ \textcolor{gobmxGuinda}{\DocumentoCorto}\quad\bfseries\thepage}}
   
   \renewcommand{\headrulewidth}{1pt}
   \renewcommand{\headrule}{\vspace{10pt}{\color{gobmxDorado}\hrule width\headwidth height\headrulewidth}}
@@ -911,42 +911,50 @@
 % ============================================================================
 \newcommand{\contraportada}[1]{
   \clearpage
-  \thispagestyle{empty}
-  \hypersetup{urlcolor=gobmxAmbarClaro} % URL en Ámbar Claro para contraste
-  % Agregar imagen de fondo de contraportada
-  \AddToShipoutPictureBG*{%
-    \AtPageLowerLeft{%
-      \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
-    }%
-  }
+  \thispagestyle{plain}
+  % \hypersetup{urlcolor=gobmxAmbarClaro} % Ya no es necesario forzar color claro en fondo blanco
+  
+  % Penúltima página: Fondo blanco (por defecto), texto oscuro
   \vspace*{1cm}
   
   \begin{center}
-    \color{white}
-    {\large\textbf{\@title}}\\[0.3cm]
+    \color{gobmxGris}
+    {\large\textbf{\textcolor{gobmxGuinda}{\@title}}}\\[0.3cm]
     \ifx\@subtitle\empty
     \else
-      \textcolor{gobmxGrisClaro}{\@subtitle}\\[1cm]
+      \textcolor{gobmxGris}{\@subtitle}\\[1cm]
     \fi
+    
+    {\small
+    \textbf{\textcolor{gobmxDorado}{\@institucion}}\\
+    \@unidad\\[0.5cm]
+    
+    #1
+    }
   \end{center}
 
   \vfill
   
   \begin{center}
-    \color{white}
+    \color{gobmxGris}
     {\small
-    \textbf{\textcolor{gobmxAmbarClaro}{\@institucion}}\\
-    \@unidad\\[0.5cm]
-    
-    #1
-    
     \vspace{0.5cm}
     
-    \textcolor{gobmxGrisClaro}{\@date}
+    \textcolor{gobmxGris}{\@date}
     }
   \end{center}
   
   \vspace*{-1.5cm}
+  \clearpage
+  
+  % Última página: Solo fondo, sin texto
+  \thispagestyle{empty}
+  \AddToShipoutPictureBG*{%
+    \AtPageLowerLeft{%
+      \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
+    }%
+  }
+  \null
   \clearpage
 }
 
@@ -985,15 +993,19 @@
 % ============================================================================
 \newcommand{\paginacreditos}[1]{
   \clearpage
-  \thispagestyle{empty}
-  % Sobrescribir con fondo blanco limpio
-  \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
+  \thispagestyle{plain}
+  % Fondo blanco limpio eliminado para permitir el fondo institucional
+  % \AddToShipoutPictureBG*{\AtPageLowerLeft{\color{white}\rule{\paperwidth}{\paperheight}}}
   
   \begin{center}
     {\Large\bfseries\color{gobmxGuinda} Directorio}\\[1cm]
   \end{center}
   
+  \vspace*{2cm}
+  
   #1
+  
+  \vspace*{\fill}
   
   \clearpage
 }

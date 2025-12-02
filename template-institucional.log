@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  30 NOV 2025 19:47
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  2 DEC 2025 11:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1604,11 +1604,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Info: Redefining \sptext on input line 35.
-LaTeX Info: Redefining \. on input line 35.
-LaTeX Info: Redefining \% on input line 35.
-Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 35.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [1
@@ -1629,8 +1624,6 @@ e 35.
 \tf@toc=\write6
 \openout6 = `template-institucional.toc'.
 
-LaTeX Info: Redefining \. on input line 38.
-LaTeX Info: Redefining \% on input line 38.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [2] (template-institucional.lot
@@ -1641,8 +1634,6 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lot=\write7
 \openout7 = `template-institucional.lot'.
 
-LaTeX Info: Redefining \. on input line 41.
-LaTeX Info: Redefining \% on input line 41.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [3
@@ -1656,8 +1647,6 @@ LaTeX Info: Redefining \% on input line 1.
 \tf@lof=\write8
 \openout8 = `template-institucional.lof'.
 
-LaTeX Info: Redefining \. on input line 42.
-LaTeX Info: Redefining \% on input line 42.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [4
@@ -1775,16 +1764,12 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Info: Redefining \. on input line 82.
-LaTeX Info: Redefining \% on input line 82.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
 [1
 
 ]
-LaTeX Info: Redefining \. on input line 91.
-LaTeX Info: Redefining \% on input line 91.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [2]
@@ -1822,15 +1807,11 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [3
 
 ]
-LaTeX Info: Redefining \. on input line 111.
-LaTeX Info: Redefining \% on input line 111.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [4
 
 ]
-LaTeX Info: Redefining \. on input line 134.
-LaTeX Info: Redefining \% on input line 134.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [5]
@@ -1843,8 +1824,6 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 164.
-LaTeX Info: Redefining \% on input line 164.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [7
@@ -1861,8 +1840,6 @@ ndard glyph set (RS)
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 196.
-LaTeX Info: Redefining \% on input line 196.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [8]
@@ -1880,13 +1857,9 @@ Overfull \hbox (18.82668pt too wide) in paragraph at lines 213--213
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 213.
-LaTeX Info: Redefining \% on input line 213.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [9]
-LaTeX Info: Redefining \. on input line 233.
-LaTeX Info: Redefining \% on input line 233.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
@@ -1898,61 +1871,6 @@ File: img/fondo_guinda.png Graphic file (type bmp)
  [11
 
 ]
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/10.95'.
-(microtype)             Ignoring protrusion settings for this character.
-
 
 LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
 (Font)              using `TU/NotoSans(1)/m/n' instead on input line 244.
@@ -1979,8 +1897,6 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 
 Underfull \vbox (badness 2027) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 297.
-LaTeX Info: Redefining \% on input line 297.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [12
@@ -1991,8 +1907,6 @@ File: img/graficos/figura_2_1.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 321.
-LaTeX Info: Redefining \% on input line 321.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [13]
@@ -2001,8 +1915,6 @@ File: img/graficos/figura_3_5.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 331.
-LaTeX Info: Redefining \% on input line 331.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [14]
@@ -2011,21 +1923,15 @@ File: img/graficos/figura_2_12.png Graphic file (type bmp)
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 341.
-LaTeX Info: Redefining \% on input line 341.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [15]
 File: img/graficos/figura_4_3.png Graphic file (type bmp)
 <img/graficos/figura_4_3.png>
-LaTeX Info: Redefining \. on input line 353.
-LaTeX Info: Redefining \% on input line 353.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
 [16]
-LaTeX Info: Redefining \. on input line 360.
-LaTeX Info: Redefining \% on input line 360.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [17]
@@ -2053,8 +1959,6 @@ Package marginnote Info: xpos seems to be 412.14786pt on input line 367.
 y calculated.>
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 394.
-LaTeX Info: Redefining \. on input line 396.
-LaTeX Info: Redefining \% on input line 396.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [19
@@ -2065,86 +1969,94 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Info: Redefining \. on input line 438.
-LaTeX Info: Redefining \% on input line 438.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [20]
-LaTeX Info: Redefining \. on input line 444.
-LaTeX Info: Redefining \% on input line 444.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 448.
+File: img/graficos/figura_2_12.png Graphic file (type bmp)
+<img/graficos/figura_2_12.png>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [21]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
-[21]
+[22]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [22
-
-]
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 456.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-LaTeX Info: Redefining \. on input line 470.
-LaTeX Info: Redefining \% on input line 470.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
  [23
 
 ]
-LaTeX Info: Redefining \. on input line 481.
-LaTeX Info: Redefining \% on input line 481.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[24]
-LaTeX Info: Redefining \. on input line 488.
-LaTeX Info: Redefining \% on input line 488.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [25
+ [24
 
 ]
-LaTeX Info: Redefining \. on input line 528.
-LaTeX Info: Redefining \% on input line 528.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+
+[25]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [26
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--528
-
- []
-
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[27
+ [27
+
+]
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [28
+
+]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [29
+
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
- [28
-
+ [30
 
 ] (template-institucional.aux
 LaTeX Info: Redefining \sptext on input line 13.
@@ -2167,18 +2079,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `template-institucional.out' has not changed.
 
-(rerunfilecheck)             Checksum: 6E78D2BB53190C7674A7BD0D380D1A3E;9057.
+(rerunfilecheck)             Checksum: 0CCFCA6C3946ECE5CCE5BBE833562E24;9456.
 Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 \openout1 = `template-institucional.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44822 strings out of 402987
- 897871 string characters out of 5452870
- 1960411 words of memory out of 5000000
- 72928 multiletter control sequences out of 15000+600000
+ 44823 strings out of 402987
+ 897891 string characters out of 5452870
+ 1960364 words of memory out of 5000000
+ 72929 multiletter control sequences out of 15000+600000
  635268 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,122p,1217b,6215s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,13n,122p,1217b,6216s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on template-institucional.pdf (33 pages).
+Output written on template-institucional.pdf (35 pages).

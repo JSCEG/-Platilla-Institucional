@@ -1,0 +1,409 @@
+%!TEX TS-program = xelatex
+\documentclass{sener2025}
+
+% Utilidades
+\usepackage{lipsum}
+\usepackage{float}
+
+% ============================================================================
+% INFORMACIÓN DEL DOCUMENTO
+% ============================================================================
+\title{Programa de Desarrollo del Sistema Eléctrico Nacional}
+\subtitle{Nueva plantilla de comunicación}
+\author{Dr. Jorge Marcial Islas Samperio}
+\date{Noviembre 2025}
+\institucion{Secretaría de Energía}
+\unidad{Subsecretaría de Planeación y Transición Energética}
+\setDocumentoCorto{PRODESEN 2025–2039}
+\palabrasclave{energía, planeación, sistema eléctrico, renovables}
+\version{2.0}
+
+\begin{document}
+
+% ============================================================================
+% PORTADA CON FONDO GUINDA
+% ============================================================================
+\portadafondo
+
+
+
+% ============================================================================
+% TABLA DE CONTENIDOS E ÍNDICES
+% ============================================================================
+% ============================================================================
+% TABLA DE CONTENIDOS E ÍNDICES
+% ============================================================================
+\pagenumbering{gobble} % Sin numeración en índices
+\tableofcontents
+\clearpage
+
+\listatablas
+\listafiguras
+\clearpage
+\pagenumbering{arabic} % Numeración arábiga normal
+\setcounter{page}{1} % Reiniciar contador a 1
+
+% ============================================================================
+% RESUMEN EJECUTIVO
+% ============================================================================
+
+% Resumen Ejecutivo eliminado
+
+
+% ============================================================================
+% CONTENIDO PRINCIPAL
+% ============================================================================
+
+\section{Presentación}
+
+Este documento muestra todas las funcionalidades de la plantilla institucional SENER 2025. La plantilla ha sido actualizada para ofrecer una imagen más formal y estructurada, ideal para reportes oficiales y programas sectoriales.
+
+\subsection{Características de la plantilla}
+
+La plantilla incluye los siguientes elementos institucionales:
+
+\begin{enumerate}
+  \item Dos tipos de portada (estándar y con fondo guinda)
+  \item Portadas de sección para organizar el contenido
+  \item Página de créditos/directorio
+  \item Estilos de títulos con colores institucionales
+  \item Encabezados y pies de página personalizados
+  \item Contraportada institucional
+  \item Metadatos PDF embebidos
+\end{enumerate}
+
+% ============================================================================
+% SECCIÓN 2: DISPOSICIONES DE TEXTO
+% ============================================================================
+
+\portadaseccion{2}{Disposiciones de Texto}{Ortotipografía y Columnas}
+
+\section{Disposiciones de Texto y Ortotipografía}
+
+Esta sección demuestra las capacidades de la plantilla para manejar diferentes disposiciones de texto.
+
+\subsection{Texto a una columna}
+
+El texto estándar se presenta a una columna, ideal para la lectura continua y documentos oficiales que requieren claridad y formalidad. \lipsum[1]
+
+\subsection{Texto a dos columnas}
+
+Para secciones que requieren mayor densidad de información o un estilo más periodístico, se puede utilizar el entorno de dos columnas:
+
+\begin{multicols}{2}
+\textbf{Columna 1:} \lipsum[2]
+
+\columnbreak
+
+\textbf{Columna 2:} \lipsum[3]
+\end{multicols}
+
+\subsection{Listas y Viñetas}
+
+La plantilla define estilos específicos para hasta 4 niveles de anidación en listas no ordenadas:
+
+\begin{itemize}
+    \item \textbf{Nivel 1:} Utiliza una viñeta circular sólida.
+    \begin{itemize}
+        \item \textbf{Nivel 2:} Utiliza un guión largo.
+        \begin{itemize}
+            \item \textbf{Nivel 3:} Vuelve a la viñeta circular.
+            \begin{itemize}
+                \item \textbf{Nivel 4:} Finaliza con un guión.
+            \end{itemize}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+% ============================================================================
+% SECCIÓN 3: ELEMENTOS DE LA PLANTILLA
+% ============================================================================
+
+\portadaseccion{3}{Elementos de la Plantilla}{Tipografía, Estilos y Recuadros}
+
+\section{Tipografía y Texto}
+
+La plantilla utiliza las tipografías institucionales \textbf{Patria} para títulos y \textbf{Noto Sans} para el cuerpo del texto, asegurando legibilidad y consistencia con la identidad gráfica del Gobierno de México.
+
+\section{Jerarquía de Títulos (Niveles A--E)}
+
+A continuación se muestran los 5 niveles de títulos definidos en la plantilla:
+
+\section{Título A: Encabezado de Sección (Patria 17pt Negritas)}
+Este es el nivel más alto dentro del contenido. Se usa para separar temas principales.
+
+\subsection{Título B: Subtítulo (Patria 14pt Negritas)}
+Este nivel divide las secciones en subtemas específicos.
+
+\subsubsection{Título C: Tercer Nivel (Noto Sans 12pt Negritas)}
+Utilizado para apartados dentro de un subtema.
+
+\paragraph{Título D: Cuarto Nivel (Noto Sans 12pt Normal)}
+Este nivel se usa para párrafos destacados o subdivisiones menores. El texto continúa en la misma línea o en el siguiente bloque.
+
+\subparagraph{Título E: Quinto Nivel (Noto Sans 10pt Negritas)}
+El nivel más bajo de jerarquía, útil para notas o detalles muy específicos.
+
+\section{Niveles de Listas y Viñetas}
+
+La plantilla soporta hasta 4 niveles de anidación con estilos alternados (viñeta/guión):
+
+\begin{itemize}
+  \item \textbf{Nivel 1:} Viñeta circular (\texttt{textbullet}).
+  \begin{itemize}
+    \item \textbf{Nivel 2:} Guión corto (\texttt{--}).
+    \begin{itemize}
+      \item \textbf{Nivel 3:} Viñeta circular (\texttt{textbullet}).
+      \begin{itemize}
+        \item \textbf{Nivel 4:} Guión corto (\texttt{--}).
+      \end{itemize}
+    \end{itemize}
+  \end{itemize}
+\end{itemize}
+
+\subsection{Recuadros y Cajas Destacadas}
+
+Se han diseñado recuadros específicos para resaltar información clave:
+
+% Recuadros eliminados (solo se conserva Datos Clave)
+
+
+\subsubsection{Datos clave}
+
+\begin{datosclave}
+\textbf{Indicadores del sector eléctrico 2024:}
+\begin{itemize}
+  \item \textbf{Capacidad instalada:} \highlight{91,800 MW}
+  \item \textbf{Demanda máxima:} \highlight{52,302 MW}
+  \item \textbf{Energías limpias:} \highlight{31.2\%}
+\end{itemize}
+\end{datosclave}
+
+% Citas Destacadas y Diagramas de Proceso eliminados
+
+
+% ============================================================================
+% SECCIÓN 4: TABLAS Y GRÁFICOS
+% ============================================================================
+
+\portadaseccion{4}{Tablas y Gráficos}{Visualización de Datos Institucionales}
+
+\section{Tablas Profesionales}
+
+Se ofrecen 5 estilos de tablas predefinidos para cubrir distintas necesidades de presentación de datos.
+
+% Tablas guinda y verde eliminadas (solo se conserva la dorada)
+
+
+\subsection{Tabla estilo dorado (Finanzas)}
+
+\begin{tabladorado}
+  \caption{Inversión programada por sector 2025-2030 (MDP)}
+  \label{tab:inversion}
+  \fuente{Secretaría de Hacienda y Crédito Público}
+  \begin{tabular}{lrr}
+    \toprule
+    \rowcolor{gobmxDorado}\encabezadodorado{Sector} & \encabezadodorado{Inversión} & \encabezadodorado{Participación (\%)} \\
+    \midrule
+    Generación & 850\,000 & 63.0 \\
+    Transmisión & 320\,000 & 23.7 \\
+    Distribución & 180\,000 & 13.3 \\
+    \midrule
+    \textbf{Total} & \textbf{1\,350\,000} & \textbf{100.0} \\
+    \bottomrule
+  \end{tabular}
+\end{tabladorado}
+
+\section{Ejemplos de Gráficos Institucionales}
+
+
+
+% ============================================================================
+% PRO TIP: CALIDAD DE IMÁGENES
+% Para gráficos estadísticos (Excel, Python), use siempre formato PDF o EPS.
+% Para fotografías, use JPG en alta resolución (300 dpi).
+% Para capturas de pantalla, use PNG.
+% EVITE usar imágenes pixeladas o de baja resolución.
+% ============================================================================
+
+La plantilla permite la inclusión de gráficos de alta resolución, mapas y diagramas complejos.
+
+\subsection{Mapas a página completa}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_1.png}
+  \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025 (Mega Watts)}
+  \label{fig:mapa-sen}
+  \fuente{CENACE, 2025}
+\end{figure}
+
+\subsection{Gráficos de barras y tendencias}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/graficos/figura_3_5.png}
+  \caption{Adición de capacidad proyectada 2025-2030. Comparativa por tecnología y año.}
+  \label{fig:adicion-capacidad}
+  \fuente{Unidad de Planeación Energética}
+\end{figure}
+
+\subsection{Mapas de infraestructura}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_12.png}
+  \caption{Red nacional de gasoductos en 2024. Infraestructura crítica para el sector energético.}
+  \label{fig:mapa-gasoductos}
+  \fuente{CENAGAS}
+\end{figure}
+
+\section{Figuras y Gráficos}
+
+Las figuras deben incluir un pie de foto (caption) descriptivo. El estilo institucional coloca el caption debajo de la figura.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/graficos/figura_4_3.png}
+  \caption{Regiones y enlaces del Sistema Eléctrico Nacional en 2025. El mapa muestra las nueve regiones de control y los principales enlaces de transmisión entre ellas.}
+  \label{fig:sen2025}
+  \fuente{Sistema de Información Energética}
+\end{figure}
+
+Como se observa en la Figura~\ref{fig:sen2025}, el Sistema Eléctrico Nacional está dividido en regiones interconectadas.
+
+% ============================================================================
+% SECCIÓN 5: ELEMENTOS AVANZADOS (PRO)
+% ============================================================================
+
+% Sección 5 (Elementos Avanzados) eliminada
+
+
+% Líneas de Tiempo eliminadas
+
+
+% ============================================================================
+% SECCIÓN DE EJEMPLO (REFERENCIA VISUAL)
+% ============================================================================
+
+\section{Ejemplo de Referencia Visual}
+
+\subsection{Pronóstico del PIB}
+
+La estimación de número de viviendas para el periodo de planeación (2025-2039) se hizo con base en la tendencia histórica de cambio en los ocupantes por vivienda\footnote{Siguiendo la evolución del periodo 1960-2020, bajo un modelo logístico con valor límite inferior de 1.78 ocupantes por vivienda.} y su relación con la población total nacional descrita en la sección anterior. Como se presenta en la Figura 3.2, el decremento del número de ocupantes por vivienda es inversamente proporcional al número de viviendas que se estima en 38 millones para 2025 y llega a 43 millones en 2039.
+
+El pronóstico de la trayectoria del PIB recopiló diversos análisis a 15 años. En la Figura 3.3 se aprecia un comparativo de las distintas trayectorias estimadas para los años comprendidos entre 2010 y 2024, y para el escenario de planeación 2025 — 2039. Asimismo, se presenta la evolución real que ha mostrado esta variable hasta el 2024. Se observa que la proyección de crecimiento del PIB era, para los ciclos de planeación 2014 — 2028, 2015 — 2029 y 2016 — 2030, de alrededor del 4\% a tasa media anual. Sin embargo, el crecimiento real presentado en los años posteriores originó que las trayectorias previstas fueran ajustadas a la baja, siguiendo las nuevas tendencias económicas\footnote{De conformidad con la última información disponible del Marco macroeconómico previsto en los Criterios Generales de Política Económica para la Iniciativa de Ley de Ingresos y el Proyecto de Presupuesto de Egresos de la Federación emitidos por la Secretaría de Hacienda y Crédito Público (SHCP) y las proyecciones de la Subsecretaría de Electricidad de SENER.}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1.0\textwidth]{img/graficos/figura_2_12.png} % Usando imagen existente como placeholder
+  \caption{Central termoeléctrica General Manuel Álvarez Moreno. Manzanillo, Colima.}
+  \label{fig:ejemplo-visual}
+  \fuente{CENAGAS}
+\end{figure}
+
+\portadaseccion{6}{Referencias y Anexos}{Información Complementaria}
+
+\section{Sistema de Citas y Referencias}
+
+La plantilla utiliza el formato \textbf{APA} para citas y referencias, gestionado por \texttt{biblatex}.
+
+\subsection{Ejemplos de citas al pie}
+
+La plantilla ahora soporta citas al pie de página para una lectura más fluida.
+
+\begin{ejemplo}
+\begin{itemize}
+    \item \textbf{Libros:} \textcite{rodriguez2023planeacion} analizan la planeación energética\footcite{rodriguez2023planeacion}.
+    \item \textbf{Artículos:} El crecimiento de renovables es notable\footcite{gomez2023renovables}.
+    \item \textbf{Reportes:} El \textcite{sener2024pladese} define la política sectorial\footcite{sener2024pladese}.
+    \item \textbf{Sitios Web:} Consulte el portal oficial\footcite{sener2024portal}.
+\end{itemize}
+\end{ejemplo}
+
+\section{Siglas y Acrónimos}
+
+\entradaSigla{CENACE}{Centro Nacional de Control de Energía.}
+\entradaSigla{CRE}{Comisión Reguladora de Energía.}
+\entradaSigla{SEN}{Sistema Eléctrico Nacional.}
+\entradaSigla{RNI}{Red Nacional de Transmisión.}
+
+\section{Glosario}
+
+\entradaGlosario{Demanda máxima}{Valor máximo de potencia demandada en el periodo considerado.}
+\entradaGlosario{Reserva operativa}{Capacidad adicional disponible para cubrir contingencias.}
+\entradaGlosario{Capacidad instalada}{Potencia nominal de las centrales eléctricas disponibles para generar energía.}
+\entradaGlosario{Energías limpias}{Fuentes de energía que no emiten gases de efecto invernadero durante su operación.}
+
+% ============================================================================
+% BIBLIOGRAFÍA
+% ============================================================================
+
+\clearpage
+\printbibliography[title={Referencias Bibliográficas}]
+
+% ============================================================================
+% ANEXOS
+% ============================================================================
+
+\anexos
+
+\section{Metodología de Cálculo}
+
+Este anexo presenta la metodología utilizada para calcular las proyecciones de demanda energética.
+
+\subsection{Modelo econométrico}
+
+La ecuación general del modelo es:
+\[
+D_t = \beta_0 + \beta_1 PIB_t + \beta_2 POB_t + \beta_3 T_t + \varepsilon_t
+\]
+donde $D_t$ es la demanda de energía en el año $t$.
+
+% ============================================================================
+% PÁGINA DE CRÉDITOS/DIRECTORIO
+% ============================================================================
+\paginacreditos{
+  \begin{center}
+  
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Mtra. Luz Elena González Escobar}\\
+  {\patriafont\fontsize{9}{11}\selectfont Secretaria de Energía}\\[0.5cm]
+
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Mtro. Juan José Vidal Amaro}\\
+  {\patriafont\fontsize{9}{11}\selectfont Subsecretario de Hidrocarburos}\\[0.5cm]
+
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Dr. José Antonio Rojas Nieto}\\
+  {\patriafont\fontsize{9}{11}\selectfont Subsecretario de Electricidad}\\[0.5cm]
+
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Dr. Jorge Marcial Islas Samperio}\\
+  {\patriafont\fontsize{9}{11}\selectfont Subsecretario de Planeación y Transición Energética}\\[0.5cm]
+
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Mtra. Emilia Esther Calleja Alor}\\
+  {\patriafont\fontsize{9}{11}\selectfont Directora General de la Comisión Federal de Electricidad}\\[0.5cm]
+
+  {\patriafont\fontsize{12}{14}\selectfont\color{gobmxGuinda} Dr. Víctor Rodríguez Padilla}\\
+  {\patriafont\fontsize{9}{11}\selectfont Director General de Petróleos Mexicanos}\\[0.5cm]
+
+  \end{center}
+}
+
+
+% ============================================================================
+% CONTRAPORTADA
+% ============================================================================
+
+\contraportada{
+  \textbf{\textcolor{gobmxDorado}{Elaboración:}}\\
+  Dirección de Prospectiva del Sector Eléctrico\\
+  Dirección de Análisis de Redes y Mercados Eléctricos\\
+  Dirección de Planeación Energética\\[0.5cm]
+  
+  \textbf{\textcolor{gobmxDorado}{Contacto:}}\\
+  Secretaría de Energía\\
+  Jalapa 20, Col. Roma Norte\\
+  Ciudad de México, C.P. 06700\\
+  Tel: (55) 5000-6000\\
+  \url{www.gob.mx/sener}
+}
+
+\end{document}
