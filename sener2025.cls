@@ -99,6 +99,34 @@
 \RequirePackage{tocloft}
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 \setlength{\cftbeforesecskip}{0.5em}
+
+% Horizontal Spacing (Number to Text) - Defaults
+% \setlength{\cftsecnumwidth}{4em}
+% \setlength{\cftsubsecnumwidth}{5em}
+% \setlength{\cftsubsubsecnumwidth}{6em}
+% \setlength{\cftfignumwidth}{4.5em}
+% \setlength{\cfttabnumwidth}{4.5em}
+
+% Dot Separation
+\renewcommand{\cftdotsep}{10}
+\renewcommand{\cftfigdotsep}{\cftdotsep}
+\renewcommand{\cfttabdotsep}{\cftdotsep}
+
+% Leaders (Dots + Space)
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cfttableader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+
+% Standardize LOF and LOT (Margins and Spacing)
+\setlength{\cftfigindent}{0pt}
+\setlength{\cfttabindent}{0pt}
+\setlength{\cftfignumwidth}{3.5em} % Increased to ensure proper hanging indent
+\setlength{\cfttabnumwidth}{3.5em}
+
+% Right Margin (Text Wrapping)
+\cftsetrmarg{4.5em}
 \RequirePackage{colortbl}
 \RequirePackage{tabularx}
 \RequirePackage{pdfpages}

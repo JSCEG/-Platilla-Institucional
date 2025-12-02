@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  2 DEC 2025 11:21
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.11.21)  2 DEC 2025 14:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1348,8 +1348,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip139
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 161.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 161.
+Package hyperref Info: Option `colorlinks' set `true' on input line 189.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 189.
 
 
 Package fontspec Info: 
@@ -2087,7 +2087,7 @@ Package logreq Info: Writing requests to 'template-institucional.run.xml'.
 Here is how much of TeX's memory you used:
  44823 strings out of 402987
  897891 string characters out of 5452870
- 1960364 words of memory out of 5000000
+ 1960388 words of memory out of 5000000
  72929 multiletter control sequences out of 15000+600000
  635268 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
