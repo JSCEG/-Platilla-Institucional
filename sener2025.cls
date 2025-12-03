@@ -137,6 +137,7 @@
 \RequirePackage{lettrine}
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
+\RequirePackage[flushmargin]{footmisc}
 
 % Definición de tamaño de fuente 10.5pt para tablas y glosario
 \newcommand{\notosanssmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
@@ -176,6 +177,8 @@
   citestyle=verbose-ibid
 ]{biblatex}
 \addbibresource{referencias.bib}
+\setlength{\bibhang}{0pt}
+\setlength{\bibitemsep}{1em}
 % Hyperref (load after biblatex)
 \RequirePackage{hyperref}
 \hypersetup{
@@ -280,7 +283,7 @@
 
 % Configuración de párrafo y espaciado moderno
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.5em}
+\setlength{\parskip}{1.5em}
 \linespread{1.15}
 
 % ============================================================================
@@ -838,13 +841,13 @@
       \vfill
 
       % Unidad responsable
-      {\large\textbf{\@unidad}}\\[0.5cm]
+      % {\large\textbf{\@unidad}}\\[0.5cm]
       
       % Institución
-      {\large\@institucion}\\[1cm]
+      % {\large\@institucion}\\[1cm]
 
       % Fecha
-      {\large\@date}\\[1cm]
+      % {\large\@date}\\[1cm]
 
       % Logo Gobierno de México
       \includegraphics[height=1.5cm]{img/logo_gob.png}
@@ -883,14 +886,14 @@
 
       \vfill
 
-      % Unidad responsable en blanco
-      {\large\color{white}\textbf{\@unidad}}\\[0.5cm]
+      % Unidad responsable en blanco (ELIMINADO)
+      % {\large\color{white}\textbf{\@unidad}}\\[0.5cm]
       
-      % Institución en blanco
-      {\large\color{white}\@institucion}\\[1cm]
+      % Institución en blanco (ELIMINADO)
+      % {\large\color{white}\@institucion}\\[1cm]
 
-      % Fecha en blanco
-      {\large\color{white}\@date}\\[1.5cm]
+      % Fecha en blanco (ELIMINADO)
+      % {\large\color{white}\@date}\\[1.5cm]
 
       % Logo Gobierno transparente eliminado
       % Espacio para subir el texto
@@ -1058,9 +1061,9 @@
 % Macro de fuente de gráfico/tabla
 \newcommand{\fuente}[1]{%
   \par\vspace{0.3em}%
-  {\notosanslight\fontsize{9pt}{11pt}\selectfont
+  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
     \textbf{FUENTE:} #1.%
-  }%
+  \par}%
 }
 
 % Entrada de glosario
