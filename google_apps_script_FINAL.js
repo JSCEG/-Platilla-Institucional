@@ -736,7 +736,7 @@ function generarTabla(tabla, ss) {
             if (hojaDatos) {
                 const datosTabla = hojaDatos.getRange(rango).getValues();
                 log(`    ✅ Datos leídos: ${datosTabla.length} filas`);
-                tex += procesarDatosArray(datosTabla);
+                tex += procesarDatosArray(datosTabla, titulo);
             } else {
                 log(`    ⚠️ No se encontró la hoja: "${nombreHoja}"`);
                 log(`    💡 Hojas disponibles: ${ss.getSheets().map(s => s.getName()).join(', ')}`);
@@ -766,57 +766,175 @@ function generarTabla(tabla, ss) {
 
 /**
  * Procesa un array 2D de datos (desde Google Sheets) y genera tabla LaTeX
+ * Si la tabla tiene muchas columnas, la divide automáticamente
  */
-function procesarDatosArray(datos) {
+function procesarDatosArray(datos, tituloTabla) {
     if (!datos || datos.length === 0) {
         return `  \\begin{tabular}{lc}\n    % Sin datos\n  \\end{tabular}\n`;
     }
     
     const numCols = datos[0].length;
+    const MAX_COLS_POR_TABLA = 6; // Máximo 6 columnas por tabla (incluyendo la primera)
     
-    // Usar tabularx para autoajuste al ancho de página
-    let tex = `  \\begin{tabularx}{\\textwidth}{${'l' + 'X'.repeat(numCols - 1)}}\n`;
+    // Si la tabla cabe en una sola parte
+    if (numCols <= MAX_COLS_POR_TABLA) {
+        return generarTablaSimple(datos);
+    }
+    
+    // Dividir tabla en múltiples partes
+    return dividirTabla(datos, MAX_COLS_POR_TABLA, tituloTabla);
+}
+
+/**
+ * Genera una tabla simple sin división
+ */
+function generarTablaSimple(datos) {
+    const numCols = datos[0].length;
+    
+    // Calcular ancho de columnas para longtable
+    // Primera columna: 3cm, resto: distribuido equitativamente
+    const anchoRestante = `${(14 / (numCols - 1)).toFixed(2)}cm`; // 14cm = ancho útil aprox
+    const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
+    
+    // Usar longtable para permitir saltos de página automáticos
+    let tex = `  \\begin{longtable}{${especCols}}\n`;
+    
+    // Encabezado para la primera página
     tex += `    \\toprule\n`;
+    const encabezados = procesarCeldasFila(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+    tex += `    \\midrule\n`;
+    tex += `    \\endfirsthead\n\n`;
     
-    datos.forEach((fila, index) => {
-        const celdas = fila.map(c => {
-            if (c === null || c === undefined || c === '') return '';
-            
-            // Si es número, redondear a máximo 4 decimales
-            if (typeof c === 'number') {
-                // Si tiene más de 4 decimales, redondear
-                if (c % 1 !== 0) {
-                    return escaparLatex(c.toFixed(4).replace(/\.?0+$/, ''));
-                }
-                return escaparLatex(c.toString());
-            }
-            
-            // Si es string que parece número, intentar redondear
-            const num = parseFloat(c);
-            if (!isNaN(num) && c.toString().includes('.')) {
-                const decimales = c.toString().split('.')[1];
-                if (decimales && decimales.length > 4) {
-                    return escaparLatex(num.toFixed(4).replace(/\.?0+$/, ''));
-                }
-            }
-            
-            return escaparLatex(c.toString());
-        });
+    // Encabezado para páginas siguientes (con "Continuación...")
+    tex += `    \\multicolumn{${numCols}}{l}{\\small\\textit{Continuación...}} \\\\\n`;
+    tex += `    \\toprule\n`;
+    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+    tex += `    \\midrule\n`;
+    tex += `    \\endhead\n\n`;
+    
+    // Pie de tabla en páginas intermedias
+    tex += `    \\midrule\n`;
+    tex += `    \\multicolumn{${numCols}}{r}{\\small\\textit{Continúa en la siguiente página...}} \\\\\n`;
+    tex += `    \\endfoot\n\n`;
+    
+    // Pie de tabla en la última página
+    tex += `    \\bottomrule\n`;
+    tex += `    \\endlastfoot\n\n`;
+    
+    // Datos de la tabla (empezando desde la fila 1, ya que la 0 es el encabezado)
+    for (let i = 1; i < datos.length; i++) {
+        const celdas = procesarCeldasFila(datos[i]);
+        tex += `    ${celdas.join(' & ')} \\\\\n`;
+    }
+    
+    tex += `  \\end{longtable}\n`;
+    return tex;
+}
+
+/**
+ * Divide una tabla grande en múltiples partes (por columnas)
+ * Cada parte usa longtable para permitir saltos de página automáticos
+ */
+function dividirTabla(datos, maxCols, tituloTabla) {
+    const numCols = datos[0].length;
+    let tex = '';
+    let parte = 1;
+    
+    // Calcular cuántas partes necesitamos
+    // Primera columna siempre se repite, entonces: 1 + (maxCols - 1) columnas por parte
+    const colsPorParte = maxCols - 1;
+    let colInicio = 1; // Empezamos desde la columna 1 (la 0 es la primera que se repite)
+    
+    while (colInicio < numCols) {
+        const colFin = Math.min(colInicio + colsPorParte, numCols);
         
-        if (index === 0) {
-            // Encabezado
-            const encabezados = celdas.map(c => `\\encabezadodorado{${c}}`).join(' & ');
-            tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
-            tex += `    \\midrule\n`;
-        } else {
-            // Datos
+        // Agregar nota de continuación si no es la primera parte
+        if (parte > 1) {
+            tex += `\n  \\vspace{1em}\n`;
+            tex += `  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n`;
+            tex += `  \\vspace{0.5em}\n\n`;
+        }
+        
+        // Generar esta parte de la tabla
+        const colsEnEstaParte = [0].concat(Array.from({length: colFin - colInicio}, (_, i) => colInicio + i));
+        const numColsTabla = colsEnEstaParte.length;
+        
+        // Calcular ancho de columnas para longtable
+        const anchoRestante = `${(14 / (numColsTabla - 1)).toFixed(2)}cm`;
+        const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numColsTabla - 1);
+        
+        // Usar longtable para permitir saltos de página
+        tex += `  \\begin{longtable}{${especCols}}\n`;
+        
+        // Extraer encabezados de esta parte
+        const celdasEncabezado = colsEnEstaParte.map(colIdx => datos[0][colIdx]);
+        const encabezados = procesarCeldasFila(celdasEncabezado).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        
+        // Encabezado para la primera página
+        tex += `    \\toprule\n`;
+        tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+        tex += `    \\midrule\n`;
+        tex += `    \\endfirsthead\n\n`;
+        
+        // Encabezado para páginas siguientes
+        tex += `    \\multicolumn{${numColsTabla}}{l}{\\small\\textit{Continuación...}} \\\\\n`;
+        tex += `    \\toprule\n`;
+        tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+        tex += `    \\midrule\n`;
+        tex += `    \\endhead\n\n`;
+        
+        // Pie en páginas intermedias
+        tex += `    \\midrule\n`;
+        tex += `    \\multicolumn{${numColsTabla}}{r}{\\small\\textit{Continúa en la siguiente página...}} \\\\\n`;
+        tex += `    \\endfoot\n\n`;
+        
+        // Pie en la última página
+        tex += `    \\bottomrule\n`;
+        tex += `    \\endlastfoot\n\n`;
+        
+        // Datos de la tabla (empezando desde la fila 1)
+        for (let i = 1; i < datos.length; i++) {
+            const celdasParte = colsEnEstaParte.map(colIdx => datos[i][colIdx]);
+            const celdas = procesarCeldasFila(celdasParte);
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
-    });
+        
+        tex += `  \\end{longtable}\n`;
+        
+        colInicio = colFin;
+        parte++;
+    }
     
-    tex += `    \\bottomrule\n`;
-    tex += `  \\end{tabularx}\n`;
     return tex;
+}
+
+/**
+ * Procesa las celdas de una fila (redondeo de números)
+ */
+function procesarCeldasFila(fila) {
+    return fila.map(c => {
+        if (c === null || c === undefined || c === '') return '';
+        
+        // Si es número, redondear a máximo 4 decimales
+        if (typeof c === 'number') {
+            if (c % 1 !== 0) {
+                return escaparLatex(c.toFixed(4).replace(/\.?0+$/, ''));
+            }
+            return escaparLatex(c.toString());
+        }
+        
+        // Si es string que parece número, intentar redondear
+        const num = parseFloat(c);
+        if (!isNaN(num) && c.toString().includes('.')) {
+            const decimales = c.toString().split('.')[1];
+            if (decimales && decimales.length > 4) {
+                return escaparLatex(num.toFixed(4).replace(/\.?0+$/, ''));
+            }
+        }
+        
+        return escaparLatex(c.toString());
+    });
 }
 
 /**
