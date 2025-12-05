@@ -18,6 +18,7 @@
   \special{pdf:minorversion 7} % Usar PDF 1.7 (mejor soporte de transparencias y calidad)
   \special{pdf:objcompresslevel 0} % Evitar compresión de objetos que pueda degradar calidad
 \fi
+\RequirePackage{float} % Para usar [H] en figuras y tablas
 \RequirePackage[table]{xcolor}
 \RequirePackage{titlesec}
 \RequirePackage{fontawesome5}
