@@ -1069,7 +1069,7 @@
 
 % Macro de fuente de gráfico/tabla
 \newcommand{\fuente}[1]{%
-  \par\vspace{0.3em}%
+  \par\vspace{-0.5em}%
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
     \textbf{FUENTE:} #1.%
   \par}%

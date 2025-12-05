@@ -773,11 +773,35 @@ function procesarDatosArray(datos) {
     }
     
     const numCols = datos[0].length;
-    let tex = `  \\begin{tabular}{${'l' + 'c'.repeat(numCols - 1)}}\n`;
+    
+    // Usar tabularx para autoajuste al ancho de página
+    let tex = `  \\begin{tabularx}{\\textwidth}{${'l' + 'X'.repeat(numCols - 1)}}\n`;
     tex += `    \\toprule\n`;
     
     datos.forEach((fila, index) => {
-        const celdas = fila.map(c => escaparLatex(c !== null && c !== undefined ? c.toString() : ''));
+        const celdas = fila.map(c => {
+            if (c === null || c === undefined || c === '') return '';
+            
+            // Si es número, redondear a máximo 4 decimales
+            if (typeof c === 'number') {
+                // Si tiene más de 4 decimales, redondear
+                if (c % 1 !== 0) {
+                    return escaparLatex(c.toFixed(4).replace(/\.?0+$/, ''));
+                }
+                return escaparLatex(c.toString());
+            }
+            
+            // Si es string que parece número, intentar redondear
+            const num = parseFloat(c);
+            if (!isNaN(num) && c.toString().includes('.')) {
+                const decimales = c.toString().split('.')[1];
+                if (decimales && decimales.length > 4) {
+                    return escaparLatex(num.toFixed(4).replace(/\.?0+$/, ''));
+                }
+            }
+            
+            return escaparLatex(c.toString());
+        });
         
         if (index === 0) {
             // Encabezado
@@ -791,7 +815,7 @@ function procesarDatosArray(datos) {
     });
     
     tex += `    \\bottomrule\n`;
-    tex += `  \\end{tabular}\n`;
+    tex += `  \\end{tabularx}\n`;
     return tex;
 }
 
