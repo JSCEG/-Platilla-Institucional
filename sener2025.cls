@@ -284,7 +284,7 @@
 
 % Configuración de párrafo y espaciado moderno
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{1.5em}
+\setlength{\parskip}{0.5em}
 \linespread{1.15}
 
 % ============================================================================
@@ -331,28 +331,36 @@
 \setlist[itemize,1]{%
   label=\textbullet,
   leftmargin=*,
-  itemsep=0.3em
+  itemsep=0.1em,
+  topsep=0.3em,
+  parsep=0pt
 }
 
 % 2do nivel: guión
 \setlist[itemize,2]{%
   label=--,
   leftmargin=2em,
-  itemsep=0.2em
+  itemsep=0.1em,
+  topsep=0.2em,
+  parsep=0pt
 }
 
 % 3er nivel: viñeta
 \setlist[itemize,3]{%
   label=\textbullet,
   leftmargin=3em,
-  itemsep=0.15em
+  itemsep=0.1em,
+  topsep=0.15em,
+  parsep=0pt
 }
 
 % 4to nivel: guión
 \setlist[itemize,4]{%
   label=--,
   leftmargin=4em,
-  itemsep=0.15em
+  itemsep=0.1em,
+  topsep=0.15em,
+  parsep=0pt
 }
 
 % ============================================================================

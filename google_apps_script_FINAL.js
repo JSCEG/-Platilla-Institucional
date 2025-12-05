@@ -699,7 +699,7 @@ function generarTabla(tabla, ss) {
     
     log(`  📊 Tabla detectada: ${titulo.substring(0, 40)}...`);
     
-    let tex = `\\begin{tablaguinda}\n`;
+    let tex = `\\begin{tabladorado}\n`;
     tex += `  \\caption{${escaparLatex(titulo)}}\n`;
     tex += `  \\label{tab:${generarLabel(titulo)}}\n`;
     
@@ -754,7 +754,7 @@ function generarTabla(tabla, ss) {
         tex += procesarDatosCSV(datosRef);
     }
     
-    tex += `\\end{tablaguinda}\n`;
+    tex += `\\end{tabladorado}\n`;
     
     if (fuente) {
         tex += `\\fuente{${escaparLatex(fuente)}}\n`;
@@ -781,8 +781,8 @@ function procesarDatosArray(datos) {
         
         if (index === 0) {
             // Encabezado
-            const encabezados = celdas.map(c => `\\encabezadoguinda{${c}}`).join(' & ');
-            tex += `    \\rowcolor{gobmxGuinda} ${encabezados} \\\\\n`;
+            const encabezados = celdas.map(c => `\\encabezadodorado{${c}}`).join(' & ');
+            tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
             tex += `    \\midrule\n`;
         } else {
             // Datos
@@ -815,8 +815,8 @@ function procesarDatosCSV(csv) {
         
         if (index === 0) {
             // Encabezado
-            const encabezados = celdas.map(c => `\\encabezadoguinda{${c}}`).join(' & ');
-            tex += `    \\rowcolor{gobmxGuinda} ${encabezados} \\\\\n`;
+            const encabezados = celdas.map(c => `\\encabezadodorado{${c}}`).join(' & ');
+            tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
             tex += `    \\midrule\n`;
         } else {
             // Datos
