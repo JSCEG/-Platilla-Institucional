@@ -139,9 +139,12 @@
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
 \RequirePackage[flushmargin]{footmisc}
+\RequirePackage[spanish]{babel}
+\decimalpoint
 
 % Definición de tamaño de fuente 10.5pt para tablas y glosario
 \newcommand{\notosanssmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
+\newcommand{\notosanscompact}{\fontsize{9.5pt}{11.2pt}\selectfont}
 
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
@@ -440,6 +443,15 @@
   #1
 }{
   \end{table}
+}
+
+% Tabla dorada para tablas largas (sin entorno table)
+\newenvironment{tabladoradoLargo}[1][]{
+  \rowcolors{2}{gobmxDorado!12}{white}
+  \sffamily\notosanscompact
+  \renewcommand{\arraystretch}{1.15}
+  #1
+}{
 }
 
 % Tabla estilo gris (neutral)
@@ -824,12 +836,7 @@
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    % Agregar imagen de fondo de portada
-    \AddToShipoutPictureBG*{%
-      \AtPageLowerLeft{%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
-      }%
-    }
+    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
     \begin{center}
       \vspace*{1.5cm}
 
@@ -858,8 +865,7 @@
       % Fecha
       % {\large\@date}\\[1cm]
 
-      % Logo Gobierno de México
-      \includegraphics[height=1.5cm]{img/logo_gob.png}
+      \IfFileExists{img/logo_gob.png}{\includegraphics[height=1.5cm]{img/logo_gob.png}}{}
 
     \end{center}
   \end{titlepage}
@@ -870,13 +876,7 @@
 \newcommand{\portadafondo}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    
-    % Imagen de fondo
-    \AddToShipoutPictureBG*{%
-      \AtPageLowerLeft{%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
-      }%
-    }
+    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
     
     \begin{center}
       \vspace*{2cm}
@@ -989,11 +989,7 @@
   
   % Última página: Solo fondo, sin texto
   \thispagestyle{empty}
-  \AddToShipoutPictureBG*{%
-    \AtPageLowerLeft{%
-      \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
-    }%
-  }
+  \IfFileExists{img/contraportada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}}}}{}
   \null
   \clearpage
 }
@@ -1006,12 +1002,7 @@
   \thispagestyle{empty}
   \begingroup
     \color{white}
-    % Fondo con imagen (fondo_guinda.png)
-    \AddToShipoutPictureBG*{%
-      \AtPageLowerLeft{%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
-      }%
-    }
+    \IfFileExists{img/fondo_guinda.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}}}}{}
     \vspace*{\fill}
     \begin{center}
       % Número de sección grande en blanco

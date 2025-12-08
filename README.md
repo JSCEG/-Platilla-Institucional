@@ -16,18 +16,14 @@ Plantilla LaTeX oficial para documentos de la Secretaría de Energía de México
 ## 📁 Estructura del Proyecto
 
 ### Documentos LaTeX
-*   **`sener2025.cls`**: Clase LaTeX con todos los estilos institucionales
-*   **`template-institucional.tex`**: Ejemplo completo con portada estándar
-*   **`ejemplo-portada-fondo.tex`**: Ejemplo con portada de fondo guinda
-*   **`ejemplo-tablas-profesionales.tex`**: Guía de tablas con diferentes estilos
-*   **`ejemplo-citas-bibliografia.tex`**: Guía completa de citas y referencias APA
-*   **`referencias.bib`**: Base de datos bibliográfica con ejemplos de todos los tipos
-*   **`GUIA_USO_TEMPLATE.md`**: Documentación técnica completa
+*   `sener2025.cls`: Clase LaTeX con estilos institucionales
+*   `template-institucional.tex`: Ejemplo completo
+*   `InformeEnergia25.tex`: Documento institucional listo para compilar
+*   `referencias.bib`: Base de datos bibliográfica
+*   `GUIA_USO_TEMPLATE.md`: Documentación técnica
 
 ### Recursos Web
-*   **`index.html`**: Landing page con identidad web aplicada
-*   **`GUIA_ESTILOS_WEB.md`**: Guía para implementar estilos en proyectos web
-*   **`css/style.css`**: Hoja de estilos profesional
+*   `css/style.css`: Hoja de estilos
 
 ### Recursos Gráficos
 *   **`tipografias/`**: Fuentes institucionales (Patria y Noto Sans)
@@ -37,15 +33,15 @@ Plantilla LaTeX oficial para documentos de la Secretaría de Energía de México
 
 ### Compilación de Documentos
 
-```bash
-# Método 1: Compilación manual
-xelatex documento.tex
-biber documento
-xelatex documento.tex
-xelatex documento.tex
+```powershell
+# VS Code: receta latexmk (xelatex)
+# PowerShell: script de compilación
+./scripts/build.ps1 -Doc InformeEnergia25.tex
+./scripts/build.ps1 -All
 
-# Método 2: Usando latexmk (recomendado)
-latexmk -xelatex documento.tex
+# Manual
+latexmk -xelatex InformeEnergia25.tex
+latexmk -xelatex template-institucional.tex
 ```
 
 ### Estructura Básica de un Documento
@@ -81,7 +77,7 @@ Contenido del documento...
 ### Tipos de Portada
 
 **Portada estándar:** `\maketitle` - Fondo blanco, ideal para documentos técnicos  
-**Portada con fondo:** `\portadafondo` - Fondo guinda institucional, ideal para documentos principales (PRODESEN, PLADESE)
+**Portada con fondo:** `\portadafondo` - Fondo guinda si existe `img/portada.png`
 
 ## 📊 Estilos de Tablas
 
@@ -124,9 +120,9 @@ Diversos estudios lo confirman \autocite{autor1,autor2,autor3}.
 % Resultado: (Autor1, 2023; Autor2, 2024; Autor3, 2022)
 ```
 
-### Tipos de Fuentes en referencias.bib
+### Tipos de Fuentes en `referencias.bib`
 
-El archivo `referencias.bib` incluye ejemplos de:
+El archivo incluye ejemplos de:
 - 📖 Libros y capítulos de libro
 - 📄 Artículos de revista (con y sin DOI)
 - 📊 Reportes técnicos e informes gubernamentales
@@ -205,26 +201,12 @@ Cálculo de capacidad instalada: C = ...
 
 ## 🌐 Desarrollo Web
 
-Para implementar la identidad institucional en sitios web:
-
-1.  Consulte `GUIA_ESTILOS_WEB.md` para tokens de diseño (colores, fuentes, espaciados)
-2.  Use `css/style.css` como base para su hoja de estilos
-3.  Vea `index.html` para ejemplos de componentes web
+`css/style.css` contiene tokens de diseño básicos.
 
 ## 📝 Ejemplos de Uso
 
-```bash
-# Compilar ejemplo completo (portada estándar)
-latexmk -xelatex template-institucional.tex
-
-# Compilar ejemplo con portada de fondo
-latexmk -xelatex ejemplo-portada-fondo.tex
-
-# Compilar guía de tablas
-latexmk -xelatex ejemplo-tablas-profesionales.tex
-
-# Compilar guía de citas
-latexmk -xelatex ejemplo-citas-bibliografia.tex
+```powershell
+./scripts/build.ps1 -Doc template-institucional.tex
 ```
 
 ## 🆘 Solución de Problemas

@@ -124,7 +124,7 @@ function generarLatex() {
  */
 function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, siglas, glosario, ss) {
     let tex = '';
-    
+
     // Crear mapas para acceso rápido
     const figurasMap = crearMapaPorSeccion(figuras);
     const tablasMap = crearMapaPorSeccion(tablas);
@@ -143,11 +143,11 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += `\\subtitle{${escaparLatex(datosDoc['Subtitulo'])}}\n`;
     }
     tex += `\\author{${escaparLatex(datosDoc['Autor'] || 'SENER')}}\n`;
-    
+
     // Formatear fecha
     const fechaFormateada = formatearFecha(datosDoc['Fecha']);
     tex += `\\date{${escaparLatex(fechaFormateada)}}\n`;
-    
+
     tex += `\\institucion{${escaparLatex(datosDoc['Institucion'] || 'Secretaría de Energía')}}\n`;
     tex += `\\unidad{${escaparLatex(datosDoc['Unidad'] || '')}}\n`;
     tex += `\\setDocumentoCorto{${escaparLatex((datosDoc['DocumentoCorto'] || '').toString().trim())}}\n`;
@@ -161,7 +161,7 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
 
     // --- Tabla de Contenidos ---
     tex += `\\tableofcontents\n\\newpage\n\n`;
-    
+
     // --- Índices de Figuras y Tablas (si existen) ---
     if (figuras.length > 0) {
         tex += `\\listafiguras\n\\newpage\n\n`;
@@ -274,20 +274,20 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
         // --- NIVELES NORMALES ---
         contenido += generarComandoSeccion(nivel, titulo);
         contenido += procesarContenido(contenidoRaw);
-        
+
         // Insertar figuras y tablas de esta sección
         if (figurasMap[ordenSeccion]) {
             figurasMap[ordenSeccion].forEach(fig => {
                 contenido += generarFigura(fig);
             });
         }
-        
+
         if (tablasMap[ordenSeccion]) {
             tablasMap[ordenSeccion].forEach(tabla => {
                 contenido += generarTabla(tabla, ss);
             });
         }
-        
+
         contenido += '\n\n';
     });
 
@@ -303,7 +303,7 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
  */
 function generarComandoSeccion(nivel, titulo) {
     const tituloEscapado = escaparLatex(titulo);
-    
+
     // Normalizar nivel
     nivel = nivel.toLowerCase()
         .replace(/ó/g, 'o')
@@ -311,7 +311,7 @@ function generarComandoSeccion(nivel, titulo) {
         .replace(/é/g, 'e')
         .replace(/í/g, 'i')
         .replace(/ú/g, 'u');
-    
+
     if (nivel === 'subseccion' || nivel === 'subanexo') {
         return `\\subsection{${tituloEscapado}}\n\n`;
     } else if (nivel === 'subsubseccion' || nivel.includes('subsub')) {
@@ -419,7 +419,7 @@ function procesarContenido(contenidoRaw) {
 function generarBloque(tipo, titulo, contenido) {
     // Procesar el contenido del bloque (puede tener listas internas)
     const contenidoProcesado = procesarContenido(contenido);
-    
+
     const tituloSafe = escaparLatex(titulo);
     const opts = tituloSafe ? `[title={${tituloSafe}}]` : '';
 
@@ -434,7 +434,7 @@ function generarBloque(tipo, titulo, contenido) {
     } else if (tipo === 'destacado') {
         return `\\begin{destacado}\n${contenidoProcesado}\\end{destacado}\n`;
     }
-    
+
     return contenidoProcesado;
 }
 
@@ -444,7 +444,7 @@ function generarBloque(tipo, titulo, contenido) {
 function procesarDirectorio(contenidoRaw) {
     const lines = contenidoRaw.split('\n').map(l => l.trim()).filter(l => l);
     let dirTex = '\\begin{center}\n';
-    
+
     for (let i = 0; i < lines.length; i += 2) {
         const nombre = lines[i];
         const cargo = lines[i + 1] || '';
@@ -455,7 +455,7 @@ function procesarDirectorio(contenidoRaw) {
             dirTex += `\\\\[0.5cm]\n`;
         }
     }
-    
+
     dirTex += '\\end{center}';
     return dirTex;
 }
@@ -483,7 +483,7 @@ function procesarContraportada(contenidoRaw) {
             }
         }
     }
-    
+
     return contraTex;
 }
 
@@ -551,7 +551,7 @@ function obtenerRegistros(ss, nombreHoja, docId, columnaId = 'ID') {
 
     const headers = datos[0];
     const indiceId = headers.indexOf(columnaId);
-    
+
     if (indiceId === -1) {
         log(`⚠️ Advertencia: No se encuentra la columna "${columnaId}" en "${nombreHoja}"`);
         return [];
@@ -570,7 +570,7 @@ function obtenerRegistros(ss, nombreHoja, docId, columnaId = 'ID') {
             registros.push(obj);
         }
     }
-    
+
     return registros;
 }
 
@@ -592,7 +592,7 @@ function obtenerDatosFila(hoja, numFila) {
  */
 function formatearFecha(fechaRaw) {
     if (!fechaRaw) return '';
-    
+
     if (fechaRaw instanceof Date) {
         const meses = [
             'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
@@ -600,7 +600,7 @@ function formatearFecha(fechaRaw) {
         ];
         return `${fechaRaw.getDate()} de ${meses[fechaRaw.getMonth()]} de ${fechaRaw.getFullYear()}`;
     }
-    
+
     return fechaRaw.toString();
 }
 
@@ -630,7 +630,7 @@ function crearMapaPorSeccion(elementos) {
             mapa[seccion].push(elem);
         }
     });
-    
+
     // Ordenar elementos dentro de cada sección
     Object.keys(mapa).forEach(key => {
         mapa[key].sort((a, b) => {
@@ -639,7 +639,7 @@ function crearMapaPorSeccion(elementos) {
             return ordenA - ordenB;
         });
     });
-    
+
     return mapa;
 }
 
@@ -650,12 +650,12 @@ function generarFigura(figura) {
     const rutaArchivo = figura['RutaArchivo'] || '';
     const caption = figura['Caption'] || '';
     const fuente = figura['Fuente'] || '';
-    
+
     // Detectar si es URL de Google Drive
     let rutaFinal = rutaArchivo;
     let esGoogleDrive = false;
     const driveMatch = rutaArchivo.match(/\/d\/([a-zA-Z0-9_-]+)/);
-    
+
     if (driveMatch) {
         esGoogleDrive = true;
         const fileId = driveMatch[1];
@@ -667,24 +667,24 @@ function generarFigura(figura) {
     } else {
         log(`  🖼️ Figura local: ${caption.substring(0, 40)}...`);
     }
-    
+
     let tex = `\\begin{figure}[H]\n`;
     tex += `  \\centering\n`;
-    
+
     if (esGoogleDrive) {
         tex += `  % IMPORTANTE: Descarga la imagen de Google Drive\n`;
         tex += `  % URL: ${rutaArchivo}\n`;
         tex += `  % Guárdala como: ${rutaFinal}\n`;
     }
-    
+
     tex += `  \\includegraphics[width=0.8\\textwidth]{${rutaFinal}}\n`;
     tex += `  \\caption{${escaparLatex(caption)}}\n`;
     tex += `\\end{figure}\n`;
-    
+
     if (fuente) {
         tex += `\\fuente{${escaparLatex(fuente)}}\n`;
     }
-    
+
     tex += `\n`;
     return tex;
 }
@@ -696,24 +696,25 @@ function generarTabla(tabla, ss) {
     const titulo = tabla['Titulo'] || '';
     const fuente = tabla['Fuente'] || '';
     const datosRef = tabla['DatosCSV'] || '';
-    
+
     log(`  📊 Tabla detectada: ${titulo.substring(0, 40)}...`);
-    
-    let tex = `\\begin{tabladorado}\n`;
-    tex += `  \\caption{${escaparLatex(titulo)}}\n`;
-    tex += `  \\label{tab:${generarLabel(titulo)}}\n`;
-    
+
+    let esLarga = false;
+    let texInicio = '';
+    let texFin = '';
+    let tex = '';
+
     // Procesar datos de la tabla
     if (datosRef.includes('!')) {
         // Referencia a rango en otra hoja (ej: Datos_Tablas!A1:E4 o Datos Tablas!A1:E4)
         const [nombreHojaRaw, rango] = datosRef.split('!');
         const nombreHoja = nombreHojaRaw.trim();
         log(`    📋 Leyendo datos de "${nombreHoja}" rango ${rango}`);
-        
+
         try {
             // Intentar encontrar la hoja con el nombre exacto primero
             let hojaDatos = ss.getSheetByName(nombreHoja);
-            
+
             // Si no se encuentra, intentar variaciones comunes
             if (!hojaDatos) {
                 // Intentar con espacios en lugar de guiones bajos
@@ -723,7 +724,7 @@ function generarTabla(tabla, ss) {
                     log(`    ✅ Hoja encontrada como: "${nombreConEspacios}"`);
                 }
             }
-            
+
             // Si aún no se encuentra, intentar con guiones bajos en lugar de espacios
             if (!hojaDatos) {
                 const nombreConGuiones = nombreHoja.replace(/ /g, '_');
@@ -732,11 +733,22 @@ function generarTabla(tabla, ss) {
                     log(`    ✅ Hoja encontrada como: "${nombreConGuiones}"`);
                 }
             }
-            
+
             if (hojaDatos) {
                 const datosTabla = hojaDatos.getRange(rango).getValues();
                 log(`    ✅ Datos leídos: ${datosTabla.length} filas`);
-                tex += procesarDatosArray(datosTabla, titulo);
+                const resultado = procesarDatosArray(datosTabla, titulo);
+                esLarga = resultado.tipo === 'longtable';
+                if (esLarga) {
+                    texInicio = `\\begin{tabladoradoLargo}\n`;
+                    texFin = `\\end{tabladoradoLargo}\n`;
+                } else {
+                    texInicio = `\\begin{tabladorado}\n`;
+                    texInicio += `  \\caption{${escaparLatex(titulo)}}\n`;
+                    texInicio += `  \\label{tab:${generarLabel(titulo)}}\n`;
+                    texFin = `\\end{tabladorado}\n`;
+                }
+                texInicio += resultado.contenido;
             } else {
                 log(`    ⚠️ No se encontró la hoja: "${nombreHoja}"`);
                 log(`    💡 Hojas disponibles: ${ss.getSheets().map(s => s.getName()).join(', ')}`);
@@ -751,15 +763,21 @@ function generarTabla(tabla, ss) {
         }
     } else {
         // Datos CSV directos
-        tex += procesarDatosCSV(datosRef);
+        texInicio += procesarDatosCSV(datosRef);
     }
-    
-    tex += `\\end{tabladorado}\n`;
-    
+
+    if (!texInicio) {
+        texInicio = `\\begin{tabladorado}\n  \\caption{${escaparLatex(titulo)}}\n  \\label{tab:${generarLabel(titulo)}}\n`;
+        texFin = `\\end{tabladorado}\n`;
+    }
+    if (tex === '') {
+        tex = texInicio + texFin;
+    }
+
     if (fuente) {
         tex += `\\fuente{${escaparLatex(fuente)}}\n`;
     }
-    
+
     tex += `\n`;
     return tex;
 }
@@ -770,65 +788,98 @@ function generarTabla(tabla, ss) {
  */
 function procesarDatosArray(datos, tituloTabla) {
     if (!datos || datos.length === 0) {
-        return `  \\begin{tabular}{lc}\n    % Sin datos\n  \\end{tabular}\n`;
+        return { tipo: 'tabular', contenido: `  \\begin{tabular}{lc}\n    % Sin datos\n  \\end{tabular}\n` };
     }
-    
+
     const numCols = datos[0].length;
     const MAX_COLS_POR_TABLA = 6; // Máximo 6 columnas por tabla (incluyendo la primera)
-    
+    const MAX_FILAS_COMPACTA = 20; // Umbral para usar tabular en tablas cortas
+    const MAX_FILAS_POR_PARTE = 35; // Si hay demasiadas filas, dividir por partes
+
     // Si la tabla cabe en una sola parte
     if (numCols <= MAX_COLS_POR_TABLA) {
-        return generarTablaSimple(datos);
+        const numFilas = Math.max(0, datos.length - 1);
+        if (numFilas <= MAX_FILAS_COMPACTA) {
+            return { tipo: 'tabular', contenido: generarTablaCompacta(datos) };
+        }
+        if (numFilas > MAX_FILAS_POR_PARTE) {
+            return { tipo: 'longtable', contenido: dividirTablaPorFilas(datos, MAX_FILAS_POR_PARTE, tituloTabla) };
+        }
+        return { tipo: 'longtable', contenido: generarTablaSimple(datos, tituloTabla) };
     }
-    
+
     // Dividir tabla en múltiples partes
-    return dividirTabla(datos, MAX_COLS_POR_TABLA, tituloTabla);
+    return { tipo: 'longtable', contenido: dividirTabla(datos, MAX_COLS_POR_TABLA, tituloTabla) };
 }
 
 /**
  * Genera una tabla simple sin división
  */
-function generarTablaSimple(datos) {
+function generarTablaSimple(datos, tituloTabla) {
     const numCols = datos[0].length;
-    
+
     // Calcular ancho de columnas para longtable
     // Primera columna: 3cm, resto: distribuido equitativamente
-    const anchoRestante = `${(14 / (numCols - 1)).toFixed(2)}cm`; // 14cm = ancho útil aprox
+    const anchoRestante = `${(11 / (numCols - 1)).toFixed(2)}cm`; // ancho útil compacto
     const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
-    
+
     // Usar longtable para permitir saltos de página automáticos
     let tex = `  \\begin{longtable}{${especCols}}\n`;
-    
-    // Encabezado para la primera página
+    if (tituloTabla) {
+        tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
+    }
+
+    // Encabezado para la primera página con fondo dorado
     tex += `    \\toprule\n`;
     const encabezados = procesarCeldasFila(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     tex += `    \\endfirsthead\n\n`;
-    
+
     // Encabezado para páginas siguientes (con "Continuación...")
     tex += `    \\multicolumn{${numCols}}{l}{\\small\\textit{Continuación...}} \\\\\n`;
     tex += `    \\toprule\n`;
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     tex += `    \\endhead\n\n`;
-    
+
     // Pie de tabla en páginas intermedias
     tex += `    \\midrule\n`;
     tex += `    \\multicolumn{${numCols}}{r}{\\small\\textit{Continúa en la siguiente página...}} \\\\\n`;
     tex += `    \\endfoot\n\n`;
-    
+
     // Pie de tabla en la última página
     tex += `    \\bottomrule\n`;
     tex += `    \\endlastfoot\n\n`;
-    
+
     // Datos de la tabla (empezando desde la fila 1, ya que la 0 es el encabezado)
     for (let i = 1; i < datos.length; i++) {
         const celdas = procesarCeldasFila(datos[i]);
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
-    
+
     tex += `  \\end{longtable}\n`;
+    return tex;
+}
+
+/**
+ * Genera una tabla compacta usando tabular (sin saltos automáticos)
+ */
+function generarTablaCompacta(datos) {
+    const numCols = datos[0].length;
+    const especCols = 'p{3cm}' + 'c'.repeat(numCols - 1);
+    let tex = `  \\begin{tabular}{${especCols}}\n`;
+    tex += `    \\toprule\n`;
+    // Encabezados con fondo dorado
+    const encabezados = procesarCeldasFila(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+    tex += `    \\midrule\n`;
+    for (let i = 1; i < datos.length; i++) {
+        const celdas = procesarCeldasFila(datos[i]);
+        tex += `    ${celdas.join(' & ')} \\\\\n`;
+    }
+    tex += `    \\bottomrule\n`;
+    tex += `  \\end{tabular}\n`;
     return tex;
 }
 
@@ -840,72 +891,120 @@ function dividirTabla(datos, maxCols, tituloTabla) {
     const numCols = datos[0].length;
     let tex = '';
     let parte = 1;
-    
+
     // Calcular cuántas partes necesitamos
     // Primera columna siempre se repite, entonces: 1 + (maxCols - 1) columnas por parte
     const colsPorParte = maxCols - 1;
     let colInicio = 1; // Empezamos desde la columna 1 (la 0 es la primera que se repite)
-    
+
     while (colInicio < numCols) {
         const colFin = Math.min(colInicio + colsPorParte, numCols);
-        
+
         // Agregar nota de continuación si no es la primera parte
         if (parte > 1) {
             tex += `\n  \\vspace{1em}\n`;
             tex += `  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n`;
             tex += `  \\vspace{0.5em}\n\n`;
         }
-        
+
         // Generar esta parte de la tabla
-        const colsEnEstaParte = [0].concat(Array.from({length: colFin - colInicio}, (_, i) => colInicio + i));
+        const colsEnEstaParte = [0].concat(Array.from({ length: colFin - colInicio }, (_, i) => colInicio + i));
         const numColsTabla = colsEnEstaParte.length;
-        
+
         // Calcular ancho de columnas para longtable
-        const anchoRestante = `${(14 / (numColsTabla - 1)).toFixed(2)}cm`;
+        const anchoRestante = `${(11 / (numColsTabla - 1)).toFixed(2)}cm`;
         const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numColsTabla - 1);
-        
+
         // Usar longtable para permitir saltos de página
         tex += `  \\begin{longtable}{${especCols}}\n`;
-        
-        // Extraer encabezados de esta parte
+        if (tituloTabla && parte === 1) {
+            tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
+        }
+
+        // Extraer encabezados de esta parte con fondo dorado
         const celdasEncabezado = colsEnEstaParte.map(colIdx => datos[0][colIdx]);
         const encabezados = procesarCeldasFila(celdasEncabezado).map(c => `\\encabezadodorado{${c}}`).join(' & ');
-        
+
         // Encabezado para la primera página
         tex += `    \\toprule\n`;
         tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
         tex += `    \\midrule\n`;
         tex += `    \\endfirsthead\n\n`;
-        
+
         // Encabezado para páginas siguientes
         tex += `    \\multicolumn{${numColsTabla}}{l}{\\small\\textit{Continuación...}} \\\\\n`;
         tex += `    \\toprule\n`;
         tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
         tex += `    \\midrule\n`;
         tex += `    \\endhead\n\n`;
-        
+
         // Pie en páginas intermedias
         tex += `    \\midrule\n`;
         tex += `    \\multicolumn{${numColsTabla}}{r}{\\small\\textit{Continúa en la siguiente página...}} \\\\\n`;
         tex += `    \\endfoot\n\n`;
-        
+
         // Pie en la última página
         tex += `    \\bottomrule\n`;
         tex += `    \\endlastfoot\n\n`;
-        
+
         // Datos de la tabla (empezando desde la fila 1)
         for (let i = 1; i < datos.length; i++) {
             const celdasParte = colsEnEstaParte.map(colIdx => datos[i][colIdx]);
             const celdas = procesarCeldasFila(celdasParte);
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
-        
+
         tex += `  \\end{longtable}\n`;
-        
+
         colInicio = colFin;
         parte++;
     }
-    
+
+    return tex;
+}
+
+/**
+ * Divide una tabla por filas en partes con longtable y nota de continuación
+ */
+function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
+    const numCols = datos[0].length;
+    const anchoRestante = `${(11 / (numCols - 1)).toFixed(2)}cm`;
+    const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
+    let tex = '';
+    let inicio = 1; // Saltar encabezado
+    let parte = 1;
+    while (inicio < datos.length) {
+        const fin = Math.min(inicio + maxFilasParte, datos.length);
+        tex += `  \\begin{longtable}{${especCols}}\n`;
+        if (tituloTabla && parte === 1) {
+            tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
+        }
+        tex += `    \\toprule\n`;
+        const encabezados = procesarCeldasFilaEncabezado(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+        tex += `    \\midrule\n`;
+        tex += `    \\endfirsthead\n\n`;
+        tex += `    \\multicolumn{${numCols}}{l}{\\small\\textit{Continuación...}} \\\\\n`;
+        tex += `    \\toprule\n`;
+        tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+        tex += `    \\midrule\n`;
+        tex += `    \\endhead\n\n`;
+        tex += `    \\midrule\n`;
+        tex += `    \\multicolumn{${numCols}}{r}{\\small\\textit{Continúa en la siguiente página...}} \\\\\n`;
+        tex += `    \\endfoot\n\n`;
+        tex += `    \\bottomrule\n`;
+        tex += `    \\endlastfoot\n\n`;
+        for (let i = inicio; i < fin; i++) {
+            const celdas = procesarCeldasFila(datos[i]);
+            tex += `    ${celdas.join(' & ')} \\\\\n`;
+        }
+        tex += `  \\end{longtable}\n`;
+        if (fin < datos.length) {
+            tex += `\n  \\vspace{1em}\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n  \\vspace{0.5em}\n\n`;
+        }
+        inicio = fin;
+        parte++;
+    }
     return tex;
 }
 
@@ -913,27 +1012,31 @@ function dividirTabla(datos, maxCols, tituloTabla) {
  * Procesa las celdas de una fila (redondeo de números)
  */
 function procesarCeldasFila(fila) {
-    return fila.map(c => {
+    return fila.map((c, idx) => {
         if (c === null || c === undefined || c === '') return '';
-        
+
         // Si es número, redondear a máximo 4 decimales
         if (typeof c === 'number') {
-            if (c % 1 !== 0) {
-                return escaparLatex(c.toFixed(4).replace(/\.?0+$/, ''));
-            }
-            return escaparLatex(c.toString());
+            const nf = Intl.NumberFormat('en-US', { maximumFractionDigits: 4, useGrouping: true });
+            return escaparLatex(nf.format(c));
         }
-        
+
         // Si es string que parece número, intentar redondear
         const num = parseFloat(c);
         if (!isNaN(num) && c.toString().includes('.')) {
             const decimales = c.toString().split('.')[1];
             if (decimales && decimales.length > 4) {
-                return escaparLatex(num.toFixed(4).replace(/\.?0+$/, ''));
+                const nf = Intl.NumberFormat('en-US', { maximumFractionDigits: 4, useGrouping: true });
+                return escaparLatex(nf.format(num));
             }
         }
-        
-        return escaparLatex(c.toString());
+
+        let texto = escaparLatex(c.toString());
+        // Primera columna en negritas (sin color)
+        if (idx === 0) {
+            texto = `\\textbf{${texto}}`;
+        }
+        return texto;
     });
 }
 
@@ -944,28 +1047,29 @@ function procesarDatosCSV(csv) {
     if (!csv || csv.trim() === '') {
         return `  \\begin{tabular}{lc}\n    % Sin datos\n  \\end{tabular}\n`;
     }
-    
+
     const lineas = csv.trim().split('\n');
     if (lineas.length === 0) return '';
-    
+
     const numCols = lineas[0].split(',').length;
     let tex = `  \\begin{tabular}{${'l' + 'c'.repeat(numCols - 1)}}\n`;
     tex += `    \\toprule\n`;
-    
+
     lineas.forEach((linea, index) => {
         const celdas = linea.split(',').map(c => escaparLatex(c.trim()));
-        
+
         if (index === 0) {
-            // Encabezado
+            // Encabezado con fondo dorado
             const encabezados = celdas.map(c => `\\encabezadodorado{${c}}`).join(' & ');
             tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
             tex += `    \\midrule\n`;
         } else {
-            // Datos
-            tex += `    ${celdas.join(' & ')} \\\\\n`;
+            // Datos - primera columna en negritas
+            const celdasFormateadas = celdas.map((c, idx) => idx === 0 ? `\\textbf{${c}}` : c);
+            tex += `    ${celdasFormateadas.join(' & ')} \\\\\n`;
         }
     });
-    
+
     tex += `    \\bottomrule\n`;
     tex += `  \\end{tabular}\n`;
     return tex;
@@ -977,14 +1081,14 @@ function procesarDatosCSV(csv) {
 function generarGlosario(glosario) {
     let tex = `\\section*{Glosario}\n`;
     tex += `\\addcontentsline{toc}{section}{Glosario}\n\n`;
-    
+
     // Ordenar alfabéticamente
     glosario.sort((a, b) => {
         const termA = (a['Termino'] || '').toString().toLowerCase();
         const termB = (b['Termino'] || '').toString().toLowerCase();
         return termA.localeCompare(termB);
     });
-    
+
     glosario.forEach(entrada => {
         const termino = entrada['Termino'] || '';
         const definicion = entrada['Definicion'] || '';
@@ -992,7 +1096,7 @@ function generarGlosario(glosario) {
             tex += `\\entradaGlosario{${escaparLatex(termino)}}{${escaparLatex(definicion)}}\n`;
         }
     });
-    
+
     tex += `\n`;
     return tex;
 }
@@ -1003,14 +1107,14 @@ function generarGlosario(glosario) {
 function generarSiglas(siglas) {
     let tex = `\\section*{Siglas y Acrónimos}\n`;
     tex += `\\addcontentsline{toc}{section}{Siglas y Acrónimos}\n\n`;
-    
+
     // Ordenar alfabéticamente
     siglas.sort((a, b) => {
         const siglaA = (a['Sigla'] || '').toString().toLowerCase();
         const siglaB = (b['Sigla'] || '').toString().toLowerCase();
         return siglaA.localeCompare(siglaB);
     });
-    
+
     siglas.forEach(entrada => {
         const sigla = entrada['Sigla'] || '';
         const descripcion = entrada['Descripcion'] || '';
@@ -1018,7 +1122,7 @@ function generarSiglas(siglas) {
             tex += `\\entradaSigla{${escaparLatex(sigla)}}{${escaparLatex(descripcion)}}\n`;
         }
     });
-    
+
     tex += `\n`;
     return tex;
 }
@@ -1049,13 +1153,13 @@ function escaparTextoConEtiquetas(texto) {
 
     // 1. Extraer Ecuaciones para NO escaparlas
     const ecuaciones = [];
-    
+
     // [[ecuacion:...]] -> \begin{equation} ... \end{equation}
     str = str.replace(/\[\[ecuacion:([\s\S]*?)\]\]/g, function (_match, contenido) {
         ecuaciones.push(`\\begin{equation}\n${contenido}\n\\end{equation}`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
-    
+
     // [[math:...]] -> $ ... $
     str = str.replace(/\[\[math:([\s\S]*?)\]\]/g, function (_match, contenido) {
         ecuaciones.push(`$${contenido}$`);
