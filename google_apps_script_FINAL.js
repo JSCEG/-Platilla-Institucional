@@ -617,6 +617,24 @@ function escaparLatex(texto) {
 }
 
 /**
+ * Procesa texto de fuente/notas al pie
+ * Convierte \n en saltos de línea reales y escapa LaTeX
+ */
+function procesarTextoFuente(texto) {
+    if (!texto) return '';
+    
+    // Convertir \n literales en saltos de línea reales
+    const textoConSaltos = texto.toString().replace(/\\n/g, '\n');
+    
+    // Escapar cada línea por separado
+    const lineas = textoConSaltos.split('\n');
+    const lineasEscapadas = lineas.map(linea => escaparLatex(linea));
+    
+    // Unir con saltos de línea LaTeX
+    return lineasEscapadas.join('\n');
+}
+
+/**
  * Crea un mapa de elementos agrupados por SeccionOrden
  */
 function crearMapaPorSeccion(elementos) {
@@ -682,7 +700,7 @@ function generarFigura(figura) {
     tex += `\\end{figure}\n`;
 
     if (fuente) {
-        tex += `\\fuente{${escaparLatex(fuente)}}\n`;
+        tex += `\\fuente{${procesarTextoFuente(fuente)}}\n`;
     }
 
     tex += `\n`;
@@ -775,7 +793,7 @@ function generarTabla(tabla, ss) {
     }
 
     if (fuente) {
-        tex += `\\fuente{${escaparLatex(fuente)}}\n`;
+        tex += `\\fuente{${procesarTextoFuente(fuente)}}\n`;
     }
 
     tex += `\n`;
@@ -831,7 +849,7 @@ function generarTablaSimple(datos, tituloTabla) {
 
     // Encabezado para la primera página con fondo dorado
     tex += `    \\toprule\n`;
-    const encabezados = procesarCeldasFila(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     tex += `    \\endfirsthead\n\n`;
@@ -871,7 +889,7 @@ function generarTablaCompacta(datos) {
     let tex = `  \\begin{tabular}{${especCols}}\n`;
     tex += `    \\toprule\n`;
     // Encabezados con fondo dorado
-    const encabezados = procesarCeldasFila(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     for (let i = 1; i < datos.length; i++) {
@@ -923,7 +941,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
 
         // Extraer encabezados de esta parte con fondo dorado
         const celdasEncabezado = colsEnEstaParte.map(colIdx => datos[0][colIdx]);
-        const encabezados = procesarCeldasFila(celdasEncabezado).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = procesarCeldasFila(celdasEncabezado, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
 
         // Encabezado para la primera página
         tex += `    \\toprule\n`;
@@ -980,7 +998,7 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
         }
         tex += `    \\toprule\n`;
-        const encabezados = procesarCeldasFilaEncabezado(datos[0]).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
         tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
         tex += `    \\midrule\n`;
         tex += `    \\endfirsthead\n\n`;
@@ -1009,9 +1027,40 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
 }
 
 /**
- * Procesa las celdas de una fila (redondeo de números)
+ * Aplica estilo a las notas en el texto (superíndice en gris)
+ * Detecta patrones como: 1/, 6/, P/, e/, 1/,7/, 1/,7/,11/, etc.
+ * IMPORTANTE: Debe aplicarse ANTES de escapar LaTeX
  */
-function procesarCeldasFila(fila) {
+function estilizarNotas(texto) {
+    // Detectar notas al final del texto
+    // Patrón: espacio + una o más notas separadas por comas + opcional espacio final
+    // Ejemplos: " 6/", " 1/,7/", " P/,e/", " 1/,7/,11/"
+    
+    // Buscar patrón de notas al final
+    const match = texto.match(/^(.*?)\s+([0-9]+\/(?:,[0-9]+\/)*|[a-zA-Z]+\/(?:,[a-zA-Z]+\/)*)\s*$/);
+    
+    if (match) {
+        const textoBase = match[1];
+        const notas = match[2];
+        return {
+            textoBase: textoBase,
+            notas: notas,
+            tieneNotas: true
+        };
+    }
+    
+    return {
+        textoBase: texto,
+        notas: '',
+        tieneNotas: false
+    };
+}
+
+/**
+ * Procesa las celdas de una fila (redondeo de números)
+ * @param {boolean} esEncabezado - Si es fila de encabezado (para usar color blanco en notas)
+ */
+function procesarCeldasFila(fila, esEncabezado = false) {
     return fila.map((c, idx) => {
         if (c === null || c === undefined || c === '') return '';
 
@@ -1031,12 +1080,28 @@ function procesarCeldasFila(fila) {
             }
         }
 
-        let texto = escaparLatex(c.toString());
+        // Detectar y separar notas ANTES de escapar
+        const textoOriginal = c.toString();
+        const resultado = estilizarNotas(textoOriginal);
+        
+        let textoFinal;
+        if (resultado.tieneNotas) {
+            // Escapar el texto base y las notas por separado
+            const textoBaseEscapado = escaparLatex(resultado.textoBase);
+            const notasEscapadas = escaparLatex(resultado.notas);
+            
+            // Color blanco para encabezados (fondo dorado), gris para cuerpo
+            const colorNota = esEncabezado ? 'white' : 'gray';
+            textoFinal = `${textoBaseEscapado} \\textsuperscript{\\textcolor{${colorNota}}{${notasEscapadas}}}`;
+        } else {
+            textoFinal = escaparLatex(textoOriginal);
+        }
+        
         // Primera columna en negritas (sin color)
         if (idx === 0) {
-            texto = `\\textbf{${texto}}`;
+            textoFinal = `\\textbf{${textoFinal}}`;
         }
-        return texto;
+        return textoFinal;
     });
 }
 

@@ -74,18 +74,7 @@ Durante el periodo 2020–2025, la capacidad de generación eléctrica instalada
     \bottomrule
   \end{tabular}
 \end{tabladorado}
-\fuente{Elaboración propia con base en el Balance Nacional de Energía
-1/ Capacidad instalada de la CFE y del resto de los permisionarios, solo se consideran Centrales Eléctricas en operación al cierre del año.											
-2/ incluye uso de biomasa, bagazo de caña, biogás y licor negro como combustibles de acuerdo con la Ley de Promoción y Desarrollo de los Bioenergéticos.											
-3/ incluye Lecho Fluidizado											
-4/ incluye plantas móviles											
-5/ Con base a la reunión del 20-ene-2021, se modificaron las Centrales Eléctricas de Cogeneración que tienen Certificado de Energía Limpia a Cogeneración Eficiente CEL y Cogeneración Eficiente ACR. Con base a la Información publicada en el PRODESEN 2024-2038 - Cuadro A1.7. Evolución de la Capacidad Interconectada (MW) de la CFE y del resto de los Permisionarios 2018-2023.											
-6/ capacidad instalada al 31 de diciembre de 2024, solo Centrales Eléctricas en operación.											
-7/ Información publicada en el PRODESEN 2018-2032 (se usaron datos de Capacidad Bruta (MW).), en la Tabla 2.2.1 Capacidad Instalada por Tipo de Tecnología.											
-8/ Varias tecnologías incluidas.											
-9/ Fideicomiso de Riesgo Compartido (FIIRCO)											
-10/ Con base a la Información publicada en el PRODESEN 2023-2037 - Cuadro A1.8. Evolución de la capacidad interconectada a la Red (MW) de la CFE y del resto de los permisionarios 2018-2022.											
-11/ Con base a la Información publicada en el PRODESEN 2021-2035 - Anexo 3.3. Evolución de la Capacidad Instalada (MW) de la CFE y del resto de los Permisionarios 207-2021.											}
+\fuente{Elaboración propia con base en el Balance Nacional de Energía                                                                                      }
 
 
 
@@ -119,17 +108,36 @@ El consumo final de energía en México continúa concentrándose en los sectore
 \end{figure}
 \fuente{Cálculos de la Unidad de Planeación con información de SIE–SENER.}
 
+\begin{tabladorado}
+  \caption{Ejemplo de Notas al Pie de tablas}
+  \label{tab:ejemplo_de_notas_al_pie_de_tab}
+  \begin{tabular}{p{3cm}ccc}
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{A}} & \encabezadodorado{B} & \encabezadodorado{C} & \encabezadodorado{D} \\
+    \midrule
+    \textbf{Generación} & 1 & 2025 \textsuperscript{\textcolor{gray}{1/}} & 2026 \textsuperscript{\textcolor{gray}{2/}} \\
+    \textbf{Distribucion} & 56 & 6 & 7 \\
+    \textbf{olar Fotovoltaica \textsuperscript{\textcolor{gray}{3/}}} & 57 & 8 & 10 \\
+    \bottomrule
+  \end{tabular}
+\end{tabladorado}
+\fuente{Elaboración propia.
+
+1/ Incluye generación distribuida.
+2/ No incluye autoabastecimiento.
+3/ Datos sujetos a revisión. }
+
 \begin{tabladoradoLargo}
   \begin{longtable}{p{3cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}}
     \caption{Consumo final de energía por sector económico}\label{tab:consumo_final_de_energia_por_s}\\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2014 1/} & \encabezadodorado{2015 1/} & \encabezadodorado{2016 1/,7/} & \encabezadodorado{2017 1/,11/} & \encabezadodorado{2018 1/,10/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2014 \textsuperscript{\textcolor{gray}{1/}}} & \encabezadodorado{2015 \textsuperscript{\textcolor{gray}{1/}}} & \encabezadodorado{2016 \textsuperscript{\textcolor{gray}{1/,7/}}} & \encabezadodorado{2017 \textsuperscript{\textcolor{gray}{1/,11/}}} & \encabezadodorado{2018 \textsuperscript{\textcolor{gray}{1/,10/}}} \\
     \midrule
     \endfirsthead
 
     \multicolumn{6}{l}{\small\textit{Continuación...}} \\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2014 1/} & \encabezadodorado{2015 1/} & \encabezadodorado{2016 1/,7/} & \encabezadodorado{2017 1/,11/} & \encabezadodorado{2018 1/,10/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2014 \textsuperscript{\textcolor{gray}{1/}}} & \encabezadodorado{2015 \textsuperscript{\textcolor{gray}{1/}}} & \encabezadodorado{2016 \textsuperscript{\textcolor{gray}{1/,7/}}} & \encabezadodorado{2017 \textsuperscript{\textcolor{gray}{1/,11/}}} & \encabezadodorado{2018 \textsuperscript{\textcolor{gray}{1/,10/}}} \\
     \midrule
     \endhead
 
@@ -144,20 +152,20 @@ El consumo final de energía en México continúa concentrándose en los sectore
     \textbf{Geotermoeléctrica} & 873.6 & 898.6 & 909 & 898.6 & 898.6 \\
     \textbf{Eoloeléctrica} & 2,659.5 & 2,877 & 3,735 & 3,898 & 4,865.965 \\
     \textbf{Fotovoltaica} & 55.4141 & 57.2357 & 145 & 170.8111 & 1,877.6341 \\
-    \textbf{Bioenergía 2/} & 233.216 & 233.216 & 889 & 374.15 & 375.15 \\
+    \textbf{Bioenergía \textsuperscript{\textcolor{gray}{2/}}} & 233.216 & 233.216 & 889 & 374.15 & 375.15 \\
     \textbf{Suma limpia renovable} & 16,373.5041 & 16,626.2257 & 18,267 & 17,953.5611 & 20,629.3491 \\
     \textbf{Nucleoeléctrica} & 1,400 & 1,510 & 1,608 & 1,608 & 1,608 \\
     \textbf{Cogeneración Eficiente} & 819.315 & 943.266 & 1,036 & 1,321.813 & 1,708.876 \\
     \textbf{Frenos Regenerativos} & 7 & 6.5 & 6.61 &  &  \\
-    \textbf{Generación Distribuida (GD) 8/} &  &  & 248 &  &  \\
-    \textbf{FIRCO 9/} & 0.3 & 12.5 & 13.6 &  &  \\
+    \textbf{Generación Distribuida (GD) \textsuperscript{\textcolor{gray}{8/}}} &  &  & 248 &  &  \\
+    \textbf{FIRCO \textsuperscript{\textcolor{gray}{9/}}} & 0.3 & 12.5 & 13.6 &  &  \\
     \textbf{Hibrido Baterías-FV Solar} &  &  &  &  &  \\
     \textbf{Suma limpia no renovable} & 2,226.615 & 2,472.266 & 2,912.21 & 2,929.813 & 3,316.876 \\
     \textbf{Total energía limpia} & 18,600.1191 & 19,098.4917 & 21,179.21 & 20,883.3741 & 23,946.2251 \\
     \textbf{Porcentaje} & 0.0125 & 0.4388 & 0.2692 & 0 & 0 \\
     \textbf{Ciclo combinado} & 22,698.547 & 22,948.547 & 27,274 & 25,340.047 & 27,393.452 \\
-    \textbf{Térmica convencional 3/} & 12,664.95 & 12,664.95 & 13,174 & 12,664.95 & 12,314.95 \\
-    \textbf{Turbogás 4/} & 2,398.734 & 2,848.734 & 5,052 & 2,959.814 & 2,959.814 \\
+    \textbf{Térmica convencional \textsuperscript{\textcolor{gray}{3/}}} & 12,664.95 & 12,664.95 & 13,174 & 12,664.95 & 12,314.95 \\
+    \textbf{Turbogás \textsuperscript{\textcolor{gray}{4/}}} & 2,398.734 & 2,848.734 & 5,052 & 2,959.814 & 2,959.814 \\
     \textbf{Combustión interna} & 539.946 & 539.946 & 1,453 & 738.653 & 879.655 \\
     \textbf{Carboeléctrica} & 5,463.45 & 5,463.45 & 5,378 & 5,463.45 & 5,463.45 \\
     \textbf{TOTAL} & 62,365.7461 & 63,564.1187 & 73,510.21 & 68,050.2881 & 72,957.5461 \\
@@ -169,13 +177,13 @@ El consumo final de energía en México continúa concentrándose en los sectore
 
   \begin{longtable}{p{3cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}}
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2019 1/,10/} & \encabezadodorado{2020 1/,5/} & \encabezadodorado{2021 1/,5/} & \encabezadodorado{2022 1/,5/} & \encabezadodorado{2023 1/,5/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2019 \textsuperscript{\textcolor{gray}{1/,10/}}} & \encabezadodorado{2020 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2021 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2022 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2023 \textsuperscript{\textcolor{gray}{1/,5/}}} \\
     \midrule
     \endfirsthead
 
     \multicolumn{6}{l}{\small\textit{Continuación...}} \\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2019 1/,10/} & \encabezadodorado{2020 1/,5/} & \encabezadodorado{2021 1/,5/} & \encabezadodorado{2022 1/,5/} & \encabezadodorado{2023 1/,5/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2019 \textsuperscript{\textcolor{gray}{1/,10/}}} & \encabezadodorado{2020 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2021 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2022 \textsuperscript{\textcolor{gray}{1/,5/}}} & \encabezadodorado{2023 \textsuperscript{\textcolor{gray}{1/,5/}}} \\
     \midrule
     \endhead
 
@@ -190,20 +198,20 @@ El consumo final de energía en México continúa concentrándose en los sectore
     \textbf{Geotermoeléctrica} & 898.6 & 950.6 & 975.6 & 975.6 & 975.6 \\
     \textbf{Eoloeléctrica} & 6,050.465 & 6,504.165 & 6,977.165 & 6,921.325 & 7,055.325 \\
     \textbf{Fotovoltaica} & 3,646.3641 & 5,149.2701 & 5,954.6061 & 6,515.3357 & 7,437.1726 \\
-    \textbf{Bioenergía 2/} & 375.15 & 377.95 & 377.95 & 407.826 & 406.777 \\
+    \textbf{Bioenergía \textsuperscript{\textcolor{gray}{2/}}} & 375.15 & 377.95 & 377.95 & 407.826 & 406.777 \\
     \textbf{Suma limpia renovable} & 23,582.3646 & 25,593.7706 & 26,899.3066 & 27,433.1667 & 28,486.8046 \\
     \textbf{Nucleoeléctrica} & 1,608 & 1,608 & 1,608 & 1,608 & 1,608 \\
     \textbf{Cogeneración Eficiente} & 1,709.875 & 2,304.687 & 2,304.687 & 2,307.7 & 2,322.326 \\
     \textbf{Frenos Regenerativos} &  &  &  &  &  \\
-    \textbf{Generación Distribuida (GD) 8/} &  &  &  &  &  \\
-    \textbf{FIRCO 9/} &  &  &  &  &  \\
+    \textbf{Generación Distribuida (GD) \textsuperscript{\textcolor{gray}{8/}}} &  &  &  &  &  \\
+    \textbf{FIRCO \textsuperscript{\textcolor{gray}{9/}}} &  &  &  &  &  \\
     \textbf{Hibrido Baterías-FV Solar} &  &  &  & 20 & 32 \\
     \textbf{Suma limpia no renovable} & 3,317.875 & 3,912.687 & 3,912.687 & 3,935.7 & 3,962.326 \\
     \textbf{Total energía limpia} & 26,900.2396 & 29,506.4576 & 30,811.9936 & 31,368.8667 & 32,449.1306 \\
     \textbf{Porcentaje} & 0 & 0 & 0 & 0 & 0 \\
     \textbf{Ciclo combinado} & 30,402.08 & 31,947.604 & 33,640.368 & 34,412.569 & 35,178.329 \\
-    \textbf{Térmica convencional 3/} & 11,830.95 & 11,808.95 & 11,792.95 & 11,342.95 & 11,300.05 \\
-    \textbf{Turbogás 4/} & 2,959.814 & 3,545.014 & 3,743.594 & 3,814.594 & 3,887.714 \\
+    \textbf{Térmica convencional \textsuperscript{\textcolor{gray}{3/}}} & 11,830.95 & 11,808.95 & 11,792.95 & 11,342.95 & 11,300.05 \\
+    \textbf{Turbogás \textsuperscript{\textcolor{gray}{4/}}} & 2,959.814 & 3,545.014 & 3,743.594 & 3,814.594 & 3,887.714 \\
     \textbf{Combustión interna} & 890.608 & 849.512 & 700.602 & 727.581 & 729.435 \\
     \textbf{Carboeléctrica} & 5,463.45 & 5,463.45 & 5,463.45 & 5,463.45 & 5,463.45 \\
     \textbf{TOTAL} & 78,447.1416 & 83,120.9876 & 86,152.9576 & 87,130.0107 & 89,008.1086 \\
@@ -215,13 +223,13 @@ El consumo final de energía en México continúa concentrándose en los sectore
 
   \begin{longtable}{p{3cm}p{11.00cm}}
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2024 6/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2024 \textsuperscript{\textcolor{gray}{6/}}} \\
     \midrule
     \endfirsthead
 
     \multicolumn{2}{l}{\small\textit{Continuación...}} \\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2024 6/} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2024 \textsuperscript{\textcolor{gray}{6/}}} \\
     \midrule
     \endhead
 
@@ -236,26 +244,38 @@ El consumo final de energía en México continúa concentrándose en los sectore
     \textbf{Geotermoeléctrica} & 975.6 \\
     \textbf{Eoloeléctrica} & 7,512.165 \\
     \textbf{Fotovoltaica} & 7,960.943 \\
-    \textbf{Bioenergía 2/} & 387.342 \\
+    \textbf{Bioenergía \textsuperscript{\textcolor{gray}{2/}}} & 387.342 \\
     \textbf{Suma limpia renovable} & 29,447.98 \\
     \textbf{Nucleoeléctrica} & 1,608 \\
     \textbf{Cogeneración Eficiente} & 2,293.273 \\
     \textbf{Frenos Regenerativos} &  \\
-    \textbf{Generación Distribuida (GD) 8/} &  \\
-    \textbf{FIRCO 9/} &  \\
+    \textbf{Generación Distribuida (GD) \textsuperscript{\textcolor{gray}{8/}}} &  \\
+    \textbf{FIRCO \textsuperscript{\textcolor{gray}{9/}}} &  \\
     \textbf{Hibrido Baterías-FV Solar} & 92 \\
     \textbf{Suma limpia no renovable} & 3,993.273 \\
     \textbf{Total energía limpia} & 33,441.253 \\
     \textbf{Porcentaje} & 0 \\
     \textbf{Ciclo combinado} & 35,668.929 \\
-    \textbf{Térmica convencional 3/} & 11,300.05 \\
-    \textbf{Turbogás 4/} & 3,952.57 \\
+    \textbf{Térmica convencional \textsuperscript{\textcolor{gray}{3/}}} & 11,300.05 \\
+    \textbf{Turbogás \textsuperscript{\textcolor{gray}{4/}}} & 3,952.57 \\
     \textbf{Combustión interna} & 716.515 \\
     \textbf{Carboeléctrica} & 5,463.45 \\
     \textbf{TOTAL} & 90,542.767 \\
   \end{longtable}
 \end{tabladoradoLargo}
-\fuente{Cálculos de la Unidad de Planeación con datos de SIE–SENER}
+\fuente{laboración propia con datos del Sistema de Información Energética (SIE) de la Secretaría de Energía.
+
+1/ Cifras al cierre del año.
+2/ Incluye bagazo de caña, biogás y residuos sólidos urbanos.
+3/ Incluye combustóleo, diésel y gas natural en ciclo simple.
+4/ Unidades de respaldo y emergencia.
+5/ Cifras al cierre de mayo.
+6/ Cifras al cierre de junio.
+7/ Cifras al cierre de julio.
+8/ Generación Distribuida registrada en el SIE.
+9/ Fondo para el Incentivo de Energías Renovables en la Agricultura.
+10/ Cifras al cierre de octubre.
+11/ Cifras al cierre de noviembre. }
 
 
 
