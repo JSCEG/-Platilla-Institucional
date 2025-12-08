@@ -408,9 +408,9 @@ Algunas tecnologías también tienen notas:
 
 ---
 
-## 🎨 Estilo Automático de Notas
+## 🎨 Estilo Automático de Notas (Con Enlaces Clicables)
 
-El script aplica automáticamente **superíndice en color gris** a todas las notas en las tablas.
+El script aplica automáticamente **superíndice clicable** a todas las notas en las tablas, creando enlaces a las explicaciones en la sección FUENTE.
 
 ### Cómo se ven las notas:
 
@@ -436,17 +436,36 @@ Térmica convencional³/    (3/ en superíndice GRIS - en cuerpo de tabla)
 
 ### Código LaTeX generado:
 
-**Encabezados (fondo dorado):**
+**Encabezados (fondo dorado) - con enlaces:**
 ```latex
-2024 \textsuperscript{\textcolor{white}{6/}}
-2016 \textsuperscript{\textcolor{white}{1/,7/}}
+2024 \textsuperscript{\hyperlink{nota6}{\textcolor{white}{6/}}}
+2016 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota7}{\textcolor{white}{7/}}}
 ```
 
-**Cuerpo de tabla:**
+**Cuerpo de tabla - con enlaces:**
 ```latex
-\textbf{Bioenergía} \textsuperscript{\textcolor{gray}{2/}}
-\textbf{Térmica convencional} \textsuperscript{\textcolor{gray}{3/}}
+\textbf{Bioenergía} \textsuperscript{\hyperlink{nota2}{\textcolor{gray}{2/}}}
+\textbf{Térmica convencional} \textsuperscript{\hyperlink{nota3}{\textcolor{gray}{3/}}}
 ```
+
+**Fuente - con destinos de enlaces (formato lista):**
+```latex
+\fuente{Elaboración propia.
+
+{\fontsize{9pt}{11pt}\selectfont
+\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=3pt]
+  \item[\hypertarget{nota1}{1/}] Cifras al cierre del año.
+  \item[\hypertarget{nota2}{2/}] Incluye bagazo de caña, biogás y residuos sólidos urbanos.
+  \item[\hypertarget{nota6}{6/}] Cifras al cierre de junio.
+  \item[\hypertarget{nota7}{7/}] Cifras al cierre de julio.
+\end{itemize}
+}}
+```
+
+**Cómo funciona:**
+1. En la tabla: `\hyperlink{nota6}{...}` crea un enlace clicable
+2. En la fuente: `\hypertarget{nota6}{...}` marca el destino del enlace
+3. Al hacer clic en `⁶/` en la tabla → El PDF te lleva a la explicación en la fuente
 
 ### Ventajas de este estilo:
 
@@ -456,7 +475,8 @@ Térmica convencional³/    (3/ en superíndice GRIS - en cuerpo de tabla)
 - ✅ **Compacto**: Ahorra espacio en la tabla
 - ✅ **Automático**: No necesitas hacer nada especial, el script lo detecta
 - ✅ **Compatible**: Funciona con notas simples y múltiples
-- ✅ **No son enlaces**: Los superíndices son solo visuales, no clicables
+- ✅ **Interactivo**: Los superíndices son **clicables** y te llevan a la explicación
+- ✅ **Enlaces individuales**: En notas múltiples (`1/,7/`), cada nota es clicable por separado
 
 ### Notas detectadas automáticamente:
 
@@ -474,10 +494,94 @@ El script detecta estos patrones al **final** del texto:
 
 ---
 
+### 🔗 Cómo Funcionan los Enlaces
+
+**1. En la tabla:**
+- Cada nota se convierte en un enlace clicable
+- Ejemplo: `2024 6/` → Al hacer clic en `⁶/` te lleva a la explicación
+
+**2. En la fuente:**
+- Cada línea que empieza con una nota se marca como destino
+- Formato: `6/ Cifras al cierre de junio.`
+- El script detecta automáticamente el patrón `nota/ texto`
+
+**3. Notas múltiples:**
+- `2016 1/,7/` → Cada nota es clicable por separado
+- Clic en `¹/` → Va a la explicación de `1/`
+- Clic en `⁷/` → Va a la explicación de `7/`
+
+**4. Requisitos para que funcione:**
+- ✅ La nota en la tabla debe coincidir con la nota en la fuente
+- ✅ En la fuente, la línea debe empezar con: `nota/ texto`
+- ✅ Ejemplos válidos en fuente:
+  - `1/ Cifras al cierre del año.`
+  - `6/ Cifras al cierre de junio.`
+  - `P/ Cifras preliminares.`
+  - `e/ Cifras estimadas.`
+
+**5. Formato automático de notas:**
+- Las notas se formatean automáticamente como **lista con viñetas**
+- Cada nota en su propia línea
+- Tamaño de fuente: **9pt** (mismo que el comando `\fuente`)
+- Espaciado compacto entre notas
+
+**Ejemplo completo:**
+
+**En Google Sheets - Hoja "Tablas", columna Fuente:**
+```
+Elaboración propia con datos de SENER.
+
+1/ Cifras al cierre del año.
+2/ Incluye bagazo de caña, biogás y residuos sólidos urbanos.
+6/ Cifras al cierre de junio.
+7/ Cifras al cierre de julio.
+```
+
+**En Google Sheets - Hoja "Datos_Tablas":**
+```
+TECNOLOGÍA       2016 1/,7/    2024 6/
+Bioenergía 2/    889           387
+```
+
+**Resultado en PDF:**
+
+La fuente aparecerá formateada así:
+
+```
+FUENTE: Elaboración propia con datos de SENER.
+
+  1/ Cifras al cierre del año.
+  2/ Incluye bagazo de caña, biogás y residuos sólidos urbanos.
+  6/ Cifras al cierre de junio.
+  7/ Cifras al cierre de julio.
+```
+(Cada nota en su línea, tamaño 9pt igual que FUENTE)
+
+**Interactividad:**
+- Clic en `¹/` en "2016" → Te lleva a "1/ Cifras al cierre del año."
+- Clic en `⁷/` en "2016" → Te lleva a "7/ Cifras al cierre de julio."
+- Clic en `⁶/` en "2024" → Te lleva a "6/ Cifras al cierre de junio."
+- Clic en `²/` en "Bioenergía" → Te lleva a "2/ Incluye bagazo..."
+
+---
+
 ## 📝 Notas Adicionales
 
 - Puedes tener múltiples tablas en la misma sección (usa OrdenTabla: 1, 2, 3...)
 - Las tablas se insertan automáticamente después del contenido de la sección
 - El estilo (colores, fuentes) se aplica automáticamente según el template SENER
 - Las notas al pie aparecen debajo de cada tabla con el comando `\fuente{}`
-- Las notas dentro de la tabla se estilizan automáticamente como superíndice en gris
+- Las notas dentro de la tabla se estilizan automáticamente como superíndice clicable
+- Las notas en la fuente se formatean automáticamente como lista con viñetas
+
+## 📦 Paquetes LaTeX Requeridos
+
+El template debe incluir estos paquetes (ya están en `sener2025.cls`):
+
+```latex
+\usepackage{hyperref}     % Para enlaces clicables (\hyperlink, \hypertarget)
+\usepackage{xcolor}       % Para colores (\textcolor)
+\usepackage{enumitem}     % Para listas personalizadas (itemize con opciones)
+```
+
+Si usas otro template, asegúrate de incluir estos paquetes en el preámbulo.

@@ -618,7 +618,8 @@ function escaparLatex(texto) {
 
 /**
  * Procesa texto de fuente/notas al pie
- * Convierte \n en saltos de línea reales y escapa LaTeX
+ * Convierte \n en saltos de línea reales, escapa LaTeX, agrega hypertargets
+ * y formatea las notas como lista con viñetas
  */
 function procesarTextoFuente(texto) {
     if (!texto) return '';
@@ -626,12 +627,50 @@ function procesarTextoFuente(texto) {
     // Convertir \n literales en saltos de línea reales
     const textoConSaltos = texto.toString().replace(/\\n/g, '\n');
     
-    // Escapar cada línea por separado
-    const lineas = textoConSaltos.split('\n');
-    const lineasEscapadas = lineas.map(linea => escaparLatex(linea));
+    // Separar en líneas
+    const lineas = textoConSaltos.split('\n').filter(l => l.trim() !== '');
     
-    // Unir con saltos de línea LaTeX
-    return lineasEscapadas.join('\n');
+    // Separar fuente principal de notas
+    const lineasFuente = [];
+    const lineasNotas = [];
+    
+    lineas.forEach(linea => {
+        const matchNota = linea.match(/^([0-9]+\/|[a-zA-Z]+\/)\s+(.*)$/);
+        if (matchNota) {
+            lineasNotas.push({
+                nota: matchNota[1],
+                texto: matchNota[2]
+            });
+        } else {
+            lineasFuente.push(linea);
+        }
+    });
+    
+    // Construir resultado
+    let resultado = '';
+    
+    // Agregar fuente principal
+    if (lineasFuente.length > 0) {
+        resultado += lineasFuente.map(l => escaparLatex(l)).join('\n');
+    }
+    
+    // Agregar notas como lista si existen
+    if (lineasNotas.length > 0) {
+        resultado += '\n\n{\\fontsize{9pt}{11pt}\\selectfont\n';
+        resultado += '\\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=3pt]\n';
+        
+        lineasNotas.forEach(item => {
+            const idNota = generarIdNota(item.nota);
+            const notaEscapada = escaparLatex(item.nota);
+            const textoEscapado = escaparLatex(item.texto);
+            
+            resultado += `  \\item[\\hypertarget{${idNota}}{${notaEscapada}}] ${textoEscapado}\n`;
+        });
+        
+        resultado += '\\end{itemize}\n}';
+    }
+    
+    return resultado;
 }
 
 /**
@@ -1027,7 +1066,16 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
 }
 
 /**
- * Aplica estilo a las notas en el texto (superíndice en gris)
+ * Genera un ID único para una nota (para enlaces)
+ * Ejemplos: "1/" -> "nota1", "6/" -> "nota6", "P/" -> "notaP"
+ */
+function generarIdNota(nota) {
+    // Remover el "/" y agregar prefijo
+    return 'nota' + nota.replace('/', '');
+}
+
+/**
+ * Aplica estilo a las notas en el texto (superíndice clicable)
  * Detecta patrones como: 1/, 6/, P/, e/, 1/,7/, 1/,7/,11/, etc.
  * IMPORTANTE: Debe aplicarse ANTES de escapar LaTeX
  */
@@ -1041,17 +1089,21 @@ function estilizarNotas(texto) {
     
     if (match) {
         const textoBase = match[1];
-        const notas = match[2];
+        const notasStr = match[2];
+        
+        // Separar notas múltiples (ej: "1/,7/" -> ["1/", "7/"])
+        const notasArray = notasStr.split(',');
+        
         return {
             textoBase: textoBase,
-            notas: notas,
+            notas: notasArray,
             tieneNotas: true
         };
     }
     
     return {
         textoBase: texto,
-        notas: '',
+        notas: [],
         tieneNotas: false
     };
 }
@@ -1086,13 +1138,21 @@ function procesarCeldasFila(fila, esEncabezado = false) {
         
         let textoFinal;
         if (resultado.tieneNotas) {
-            // Escapar el texto base y las notas por separado
+            // Escapar el texto base
             const textoBaseEscapado = escaparLatex(resultado.textoBase);
-            const notasEscapadas = escaparLatex(resultado.notas);
             
             // Color blanco para encabezados (fondo dorado), gris para cuerpo
             const colorNota = esEncabezado ? 'white' : 'gray';
-            textoFinal = `${textoBaseEscapado} \\textsuperscript{\\textcolor{${colorNota}}{${notasEscapadas}}}`;
+            
+            // Procesar cada nota por separado para crear enlaces individuales
+            const notasLatex = resultado.notas.map(nota => {
+                const notaEscapada = escaparLatex(nota);
+                const idNota = generarIdNota(nota);
+                // Crear enlace clicable a la explicación en la fuente
+                return `\\hyperlink{${idNota}}{\\textcolor{${colorNota}}{${notaEscapada}}}`;
+            }).join(',');
+            
+            textoFinal = `${textoBaseEscapado} \\textsuperscript{${notasLatex}}`;
         } else {
             textoFinal = escaparLatex(textoOriginal);
         }
