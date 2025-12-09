@@ -187,11 +187,23 @@
 % ============================================================================
 % CONFIGURACIÓN DE ACCESIBILIDAD PDF/UA
 % ============================================================================
+
+% Detectar si estamos usando LuaLaTeX
+\RequirePackage{iftex}
+
 % Paquete accsupp para texto alternativo y accesibilidad
 \RequirePackage{accsupp}
 
-% Hyperref (load after biblatex)
-\RequirePackage{hyperref}
+\ifluatex
+  % Para LuaLaTeX: usar hyperref con configuración de accesibilidad
+  \RequirePackage{hyperref}
+\else
+  % Para XeLaTeX: usar pdfx como antes
+  \RequirePackage[a-3u]{pdfx}
+  \RequirePackage{hyperref}
+\fi
+
+% Configuración de hyperref con accesibilidad
 \hypersetup{
   colorlinks=true,
   linkcolor=gobmxGris,
@@ -204,11 +216,15 @@
   pdfstartview=FitH,
   pdfdisplaydoctitle=true,
   pdfpagemode=UseOutlines,
-  pdflang={es-MX}
+  pdflang={es-MX},
+  pdfversion=1.7
 }
 
-% Paquete pdfx para cumplir con PDF/A y PDF/UA
-\RequirePackage[a-3u]{pdfx}
+% Configuración adicional para LuaLaTeX (accesibilidad)
+\ifluatex
+  \pdfvariable suppressoptionalinfo 512
+  \pdfvariable omitcidset=1
+\fi
 % ============================================================================
 % DATOS DEL DOCUMENTO
 % ============================================================================
@@ -296,7 +312,9 @@
 \AddToShipoutPictureBG{%
   \IfFileExists{img/foja_blanca.jpg}{%
     \AtPageLowerLeft{%
+      \BeginAccSupp{method=escape,Alt={Membrete institucional de fondo}}%
       \includegraphics[width=\paperwidth,height=\paperheight]{img/foja_blanca.jpg}%
+      \EndAccSupp{}%
     }%
   }{}%
 }
@@ -534,7 +552,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\faExclamationTriangle\ \ \textbf{Nota importante}},
+  title={\BeginAccSupp{method=escape,ActualText={Icono de advertencia}}\faExclamationTriangle\EndAccSupp{}\ \ \textbf{Nota importante}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxGuinda,
@@ -553,7 +571,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\faBook\ \ \textbf{Definición}},
+  title={\BeginAccSupp{method=escape,ActualText={Icono de libro}}\faBook\EndAccSupp{}\ \ \textbf{Definición}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxVerde,
@@ -572,7 +590,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\faLightbulb\ \ \textbf{Ejemplo}},
+  title={\BeginAccSupp{method=escape,ActualText={Icono de bombilla}}\faLightbulb\EndAccSupp{}\ \ \textbf{Ejemplo}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
@@ -612,7 +630,7 @@
   right=12pt,
   top=12pt,
   bottom=12pt,
-  title={\faKey\ \ \textbf{Datos Clave}},
+  title={\BeginAccSupp{method=escape,ActualText={Icono de llave}}\faKey\EndAccSupp{}\ \ \textbf{Datos Clave}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
@@ -694,7 +712,7 @@
   \marginnote{%
     \footnotesize\color{gobmxGuinda}\sffamily%
     \raggedright%
-    \faInfoCircle\ #1%
+    \BeginAccSupp{method=escape,ActualText={Icono de información}}\faInfoCircle\EndAccSupp{}\ #1%
   }%
 }
 
@@ -728,7 +746,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\faLightbulb\ \ \textbf{#1}},%
+  title={\BeginAccSupp{method=escape,ActualText={Icono de bombilla}}\faLightbulb\EndAccSupp{}\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxVerde},%
   coltitle=gobmxVerde,%
   colbacktitle=gobmxVerde!5,%
@@ -745,7 +763,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\faExclamationTriangle\ \ \textbf{#1}},%
+  title={\BeginAccSupp{method=escape,ActualText={Icono de advertencia}}\faExclamationTriangle\EndAccSupp{}\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxDorado},%
   coltitle=gobmxDorado,%
   colbacktitle=gobmxDorado!5,%
@@ -762,7 +780,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\faExclamationCircle\ \ \textbf{#1}},%
+  title={\BeginAccSupp{method=escape,ActualText={Icono de exclamación}}\faExclamationCircle\EndAccSupp{}\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxGuinda},%
   coltitle=gobmxGuinda,%
   colbacktitle=gobmxGuinda!5,%
@@ -852,7 +870,15 @@
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
+    \IfFileExists{img/portada.png}{%
+      \AddToShipoutPictureBG*{%
+        \AtPageLowerLeft{%
+          \BeginAccSupp{method=escape,Alt={Portada institucional - Imagen decorativa de fondo}}%
+          \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
+          \EndAccSupp{}%
+        }%
+      }%
+    }{}
     \begin{center}
       \vspace*{1.5cm}
 
@@ -881,7 +907,11 @@
       % Fecha
       % {\large\@date}\\[1cm]
 
-      \IfFileExists{img/logo_gob.png}{\includegraphics[height=1.5cm]{img/logo_gob.png}}{}
+      \IfFileExists{img/logo_gob.png}{%
+        \BeginAccSupp{method=escape,Alt={Logo del Gobierno de México}}%
+        \includegraphics[height=1.5cm]{img/logo_gob.png}%
+        \EndAccSupp{}%
+      }{}
 
     \end{center}
   \end{titlepage}
@@ -889,10 +919,25 @@
 }
 
 % Portada con fondo guinda
-\newcommand{\portadafondo}{%
+\newcommand{\portadafondo}[1][img/portada.png]{%
   \begin{titlepage}
     \thispagestyle{portada}
-    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
+    \IfFileExists{#1}{%
+      \AddToShipoutPictureBG*{%
+        \AtPageLowerLeft{%
+          \BeginAccSupp{method=escape,Alt={Portada institucional - Imagen decorativa de fondo}}%
+          \includegraphics[width=\paperwidth,height=\paperheight]{#1}%
+          \EndAccSupp{}%
+        }%
+      }%
+    }{%
+      % Si no existe la imagen, mostrar un fondo de color
+      \AddToShipoutPictureBG*{%
+        \AtPageLowerLeft{%
+          \color{gobmxGuinda}\rule{\paperwidth}{\paperheight}%
+        }%
+      }%
+    }
     
     \begin{center}
       \vspace*{2cm}
@@ -1005,7 +1050,15 @@
   
   % Última página: Solo fondo, sin texto
   \thispagestyle{empty}
-  \IfFileExists{img/contraportada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}}}}{}
+  \IfFileExists{img/contraportada.png}{%
+    \AddToShipoutPictureBG*{%
+      \AtPageLowerLeft{%
+        \BeginAccSupp{method=escape,Alt={Contraportada institucional - Imagen decorativa de fondo}}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
+        \EndAccSupp{}%
+      }%
+    }%
+  }{}
   \null
   \clearpage
 }
@@ -1018,7 +1071,15 @@
   \thispagestyle{empty}
   \begingroup
     \color{white}
-    \IfFileExists{img/fondo_guinda.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}}}}{}
+    \IfFileExists{img/fondo_guinda.png}{%
+      \AddToShipoutPictureBG*{%
+        \AtPageLowerLeft{%
+          \BeginAccSupp{method=escape,Alt={Fondo decorativo de sección - Color guinda institucional}}%
+          \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
+          \EndAccSupp{}%
+        }%
+      }%
+    }{}
     \vspace*{\fill}
     \begin{center}
       % Número de sección grande en blanco

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Editor - SENER LaTeX</title>
-    
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    
+
     <!-- Fuentes Locales -->
     <style>
         @font-face {
@@ -18,6 +19,7 @@
             font-weight: 400;
             font-style: normal;
         }
+
         @font-face {
             font-family: 'Patria';
             src: url('../tipografias/Patria_Bold.otf') format('opentype');
@@ -25,14 +27,15 @@
             font-style: normal;
         }
     </style>
-    
+
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/editor.css">
 </head>
+
 <body>
     <!-- Preloader -->
     <div id="preloader" class="preloader">
@@ -112,7 +115,7 @@
                     <!-- Tab: Metadatos -->
                     <section id="tab-metadatos" class="editor-tab-content active">
                         <h2 class="section-title">Metadatos del Documento</h2>
-                        
+
                         <div class="form-grid">
                             <div class="form-group">
                                 <label for="input-id">ID del Documento</label>
@@ -121,12 +124,14 @@
 
                             <div class="form-group full-width">
                                 <label for="input-titulo">Título *</label>
-                                <input type="text" id="input-titulo" class="form-control" placeholder="Título del documento">
+                                <input type="text" id="input-titulo" class="form-control"
+                                    placeholder="Título del documento">
                             </div>
 
                             <div class="form-group full-width">
                                 <label for="input-subtitulo">Subtítulo</label>
-                                <input type="text" id="input-subtitulo" class="form-control" placeholder="Subtítulo (opcional)">
+                                <input type="text" id="input-subtitulo" class="form-control"
+                                    placeholder="Subtítulo (opcional)">
                             </div>
 
                             <div class="form-group">
@@ -141,17 +146,20 @@
 
                             <div class="form-group">
                                 <label for="input-institucion">Institución</label>
-                                <input type="text" id="input-institucion" class="form-control" placeholder="Secretaría de Energía">
+                                <input type="text" id="input-institucion" class="form-control"
+                                    placeholder="Secretaría de Energía">
                             </div>
 
                             <div class="form-group">
                                 <label for="input-unidad">Unidad</label>
-                                <input type="text" id="input-unidad" class="form-control" placeholder="Unidad responsable">
+                                <input type="text" id="input-unidad" class="form-control"
+                                    placeholder="Unidad responsable">
                             </div>
 
                             <div class="form-group">
                                 <label for="input-documento-corto">Nombre Corto</label>
-                                <input type="text" id="input-documento-corto" class="form-control" placeholder="nombre_archivo">
+                                <input type="text" id="input-documento-corto" class="form-control"
+                                    placeholder="nombre_archivo">
                                 <small class="form-help">Usado para el nombre del archivo .tex</small>
                             </div>
 
@@ -162,14 +170,16 @@
 
                             <div class="form-group full-width">
                                 <label for="input-palabras-clave">Palabras Clave</label>
-                                <input type="text" id="input-palabras-clave" class="form-control" placeholder="energía, renovables, México">
+                                <input type="text" id="input-palabras-clave" class="form-control"
+                                    placeholder="energía, renovables, México">
                                 <small class="form-help">Separadas por comas</small>
                             </div>
 
                             <div class="form-group full-width">
                                 <label for="input-portada-ruta">Ruta de Portada</label>
                                 <div class="input-group">
-                                    <input type="text" id="input-portada-ruta" class="form-control" placeholder="img/portada.png">
+                                    <input type="text" id="input-portada-ruta" class="form-control"
+                                        placeholder="img/portada.png">
                                     <button class="btn btn-secondary btn-small" id="btn-seleccionar-portada">
                                         <i class="fas fa-folder-open"></i>
                                         Seleccionar
@@ -180,7 +190,8 @@
                             <div class="form-group full-width">
                                 <label for="input-contraportada-ruta">Ruta de Contraportada</label>
                                 <div class="input-group">
-                                    <input type="text" id="input-contraportada-ruta" class="form-control" placeholder="img/contraportada.png">
+                                    <input type="text" id="input-contraportada-ruta" class="form-control"
+                                        placeholder="img/contraportada.png">
                                     <button class="btn btn-secondary btn-small" id="btn-seleccionar-contraportada">
                                         <i class="fas fa-folder-open"></i>
                                         Seleccionar
@@ -190,12 +201,14 @@
 
                             <div class="form-group full-width">
                                 <label for="input-resumen">Resumen Ejecutivo</label>
-                                <textarea id="input-resumen" class="form-control" rows="6" placeholder="Resumen ejecutivo del documento..."></textarea>
+                                <textarea id="input-resumen" class="form-control" rows="6"
+                                    placeholder="Resumen ejecutivo del documento..."></textarea>
                             </div>
 
                             <div class="form-group full-width">
                                 <label for="input-datos-clave">Datos Clave</label>
-                                <textarea id="input-datos-clave" class="form-control" rows="4" placeholder="Dato 1; Dato 2; Dato 3"></textarea>
+                                <textarea id="input-datos-clave" class="form-control" rows="4"
+                                    placeholder="Dato 1; Dato 2; Dato 3"></textarea>
                                 <small class="form-help">Separados por punto y coma (;) o saltos de línea</small>
                             </div>
                         </div>
@@ -247,19 +260,46 @@
                     </section>
 
                     <!-- Tabs restantes (placeholder) -->
+                    <!-- Tab: Bibliografía -->
                     <section id="tab-bibliografia" class="editor-tab-content">
-                        <h2 class="section-title">Bibliografía</h2>
-                        <p class="text-muted">En desarrollo...</p>
+                        <div class="section-header">
+                            <h2 class="section-title">Bibliografía</h2>
+                            <button class="btn btn-primary" id="btn-nueva-bibliografia">
+                                <i class="fas fa-plus"></i>
+                                Nueva Referencia
+                            </button>
+                        </div>
+                        <div id="bibliografia-lista" class="items-grid">
+                            <!-- La bibliografía se cargará aquí -->
+                        </div>
                     </section>
 
+                    <!-- Tab: Siglas -->
                     <section id="tab-siglas" class="editor-tab-content">
-                        <h2 class="section-title">Siglas y Acrónimos</h2>
-                        <p class="text-muted">En desarrollo...</p>
+                        <div class="section-header">
+                            <h2 class="section-title">Siglas y Acrónimos</h2>
+                            <button class="btn btn-primary" id="btn-nueva-sigla">
+                                <i class="fas fa-plus"></i>
+                                Nueva Sigla
+                            </button>
+                        </div>
+                        <div id="siglas-lista" class="items-grid">
+                            <!-- Las siglas se cargarán aquí -->
+                        </div>
                     </section>
 
+                    <!-- Tab: Glosario -->
                     <section id="tab-glosario" class="editor-tab-content">
-                        <h2 class="section-title">Glosario</h2>
-                        <p class="text-muted">En desarrollo...</p>
+                        <div class="section-header">
+                            <h2 class="section-title">Glosario</h2>
+                            <button class="btn btn-primary" id="btn-nuevo-glosario">
+                                <i class="fas fa-plus"></i>
+                                Nuevo Término
+                            </button>
+                        </div>
+                        <div id="glosario-lista" class="items-grid">
+                            <!-- El glosario se cargará aquí -->
+                        </div>
                     </section>
                 </div>
             </div>
@@ -271,4 +311,5 @@
     <script src="js/api.js"></script>
     <script src="js/editor.js"></script>
 </body>
+
 </html>
