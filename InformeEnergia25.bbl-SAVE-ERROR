@@ -1,0 +1,123 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{cenace2023_flexibilidad}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2712bc64359d0e08854377e18f66629f}{%
+           family={CENACE},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Revista de Operación del Sistema Eléctrico}%
+      }
+      \strng{namehash}{2712bc64359d0e08854377e18f66629f}
+      \strng{fullhash}{2712bc64359d0e08854377e18f66629f}
+      \strng{fullhashraw}{2712bc64359d0e08854377e18f66629f}
+      \strng{bibnamehash}{2712bc64359d0e08854377e18f66629f}
+      \strng{authorbibnamehash}{2712bc64359d0e08854377e18f66629f}
+      \strng{authornamehash}{2712bc64359d0e08854377e18f66629f}
+      \strng{authorfullhash}{2712bc64359d0e08854377e18f66629f}
+      \strng{authorfullhashraw}{2712bc64359d0e08854377e18f66629f}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Retos operativos para la integración de energías renovables variables en el sistema eléctrico nacional}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.cenace.gob.mx
+      \endverb
+      \verb{url}
+      \verb https://www.cenace.gob.mx
+      \endverb
+    \endentry
+    \entry{inventarioGEI2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=30fc49e09a7cba953bdaf7a8cfa512da}{%
+           family={Ecología\bibnamedelimb y\bibnamedelimb Cambio\bibnamedelima Climático},
+           familyi={E\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Instituto\bibnamedelima Nacional},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INECC}%
+      }
+      \strng{namehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{fullhash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{fullhashraw}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{bibnamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorbibnamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authornamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorfullhash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorfullhashraw}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inventario Nacional de Emisiones de Gases y Compuestos de Efecto Invernadero 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.gob.mx/inecc
+      \endverb
+      \verb{url}
+      \verb https://www.gob.mx/inecc
+      \endverb
+    \endentry
+    \entry{bne2024_generacion}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=005b6c40887f574a18272d32ef4e1a58}{%
+           family={Energía\bibnamedelima (SENER)},
+           familyi={E\bibinitperiod\bibinitdelim (\bibinitperiod},
+           given={Secretaría},
+           giveni={S\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {SENER}%
+      }
+      \strng{namehash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{fullhash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{fullhashraw}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{bibnamehash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{authorbibnamehash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{authornamehash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{authorfullhash}{005b6c40887f574a18272d32ef4e1a58}
+      \strng{authorfullhashraw}{005b6c40887f574a18272d32ef4e1a58}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Balance Nacional de Energía 2024}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.gob.mx/sener
+      \endverb
+      \verb{url}
+      \verb https://www.gob.mx/sener
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

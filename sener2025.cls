@@ -183,6 +183,13 @@
 \addbibresource{referencias.bib}
 \setlength{\bibhang}{0pt}
 \setlength{\bibitemsep}{1em}
+
+% ============================================================================
+% CONFIGURACIÓN DE ACCESIBILIDAD PDF/UA
+% ============================================================================
+% Paquete accsupp para texto alternativo y accesibilidad
+\RequirePackage{accsupp}
+
 % Hyperref (load after biblatex)
 \RequirePackage{hyperref}
 \hypersetup{
@@ -192,8 +199,16 @@
   urlcolor=gobmxGuinda,
   citecolor=gobmxVerde,
   bookmarksnumbered=true,
-  pdfborder={0 0 0}
+  pdfborder={0 0 0},
+  pdfpagelayout=OneColumn,
+  pdfstartview=FitH,
+  pdfdisplaydoctitle=true,
+  pdfpagemode=UseOutlines,
+  pdflang={es-MX}
 }
+
+% Paquete pdfx para cumplir con PDF/A y PDF/UA
+\RequirePackage[a-3u]{pdfx}
 % ============================================================================
 % DATOS DEL DOCUMENTO
 % ============================================================================
@@ -223,7 +238,8 @@
     pdfsubject={\@subtitle},
     pdfkeywords={\@palabrasclave},
     pdfproducer={Secretaría de Energía - Gobierno de México},
-    pdfcreator={LaTeX con clase sener2025}
+    pdfcreator={LaTeX con clase sener2025},
+    pdflang={es-MX}
   }
 }
 

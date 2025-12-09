@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Conexión Google Sheets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #621132;
+            border-bottom: 3px solid #621132;
+            padding-bottom: 10px;
+        }
+        .status {
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        .success {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        .loading {
+            background: #fff3cd;
+            color: #856404;
+            border: 1px solid #ffeaa7;
+        }
+        button {
+            background: #621132;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #8b1646;
+        }
+        .data-section {
+            margin: 20px 0;
+            padding: 15px;
+            background: #f8f9fa;
+            border-left: 4px solid #621132;
+        }
+        .data-section h3 {
+            margin-top: 0;
+            color: #621132;
+        }
+        pre {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            max-height: 400px;
+        }
+        .count {
+            display: inline-block;
+            background: #621132;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔌 Test de Conexión con Google Sheets</h1>
+        
+        <div id="status" class="status loading">
+            ⏳ Esperando prueba...
+        </div>
+        
+        <div>
+            <button onclick="probarConexion()">🚀 Probar Conexión</button>
+            <button onclick="limpiarResultados()">🗑️ Limpiar</button>
+        </div>
+        
+        <div id="resultados"></div>
+    </div>
+    
+    <script src="js/config.js"></script>
+    <script>
+        async function probarConexion() {
+            const statusDiv = document.getElementById('status');
+            const resultadosDiv = document.getElementById('resultados');
+            
+            statusDiv.className = 'status loading';
+            statusDiv.textContent = '⏳ Conectando con Google Sheets...';
+            resultadosDiv.innerHTML = '';
+            
+            try {
+                // Probar cargar todas las hojas
+                const inicio = Date.now();
+                const datos = await cargarTodosDatos();
+                const tiempo = Date.now() - inicio;
+                
+                // Mostrar éxito
+                statusDiv.className = 'status success';
+                statusDiv.innerHTML = `✅ Conexión exitosa! (${tiempo}ms)`;
+                
+                // Mostrar resultados
+                resultadosDiv.innerHTML = `
+                    <div class="data-section">
+                        <h3>📄 Documentos <span class="count">${datos.documentos.length}</span></h3>
+                        <pre>${JSON.stringify(datos.documentos, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>📑 Secciones <span class="count">${datos.secciones.length}</span></h3>
+                        <pre>${JSON.stringify(datos.secciones, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>📊 Tablas <span class="count">${datos.tablas.length}</span></h3>
+                        <pre>${JSON.stringify(datos.tablas, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>🖼️ Figuras <span class="count">${datos.figuras.length}</span></h3>
+                        <pre>${JSON.stringify(datos.figuras, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>📚 Bibliografía <span class="count">${datos.bibliografia.length}</span></h3>
+                        <pre>${JSON.stringify(datos.bibliografia, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>🔤 Siglas <span class="count">${datos.siglas.length}</span></h3>
+                        <pre>${JSON.stringify(datos.siglas, null, 2)}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>📖 Glosario <span class="count">${datos.glosario.length}</span></h3>
+                        <pre>${JSON.stringify(datos.glosario, null, 2)}</pre>
+                    </div>
+                `;
+                
+            } catch (error) {
+                statusDiv.className = 'status error';
+                statusDiv.innerHTML = `❌ Error: ${error.message}`;
+                
+                resultadosDiv.innerHTML = `
+                    <div class="data-section">
+                        <h3>⚠️ Detalles del Error</h3>
+                        <pre>${error.stack || error.message}</pre>
+                    </div>
+                    
+                    <div class="data-section">
+                        <h3>💡 Posibles Soluciones</h3>
+                        <ul>
+                            <li>Verifica que el Google Sheets esté publicado en la web</li>
+                            <li>Verifica que la URL en config.js sea correcta</li>
+                            <li>Verifica que los GIDs de las hojas sean correctos</li>
+                            <li>Abre la consola del navegador (F12) para más detalles</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+        
+        function limpiarResultados() {
+            document.getElementById('status').className = 'status loading';
+            document.getElementById('status').textContent = '⏳ Esperando prueba...';
+            document.getElementById('resultados').innerHTML = '';
+        }
+        
+        // Información de configuración
+        console.log('📋 Configuración actual:');
+        console.log('URL Base:', CONFIG.GOOGLE_SHEETS_BASE_URL);
+        console.log('Hojas:', CONFIG.HOJAS);
+    </script>
+</body>
+</html>

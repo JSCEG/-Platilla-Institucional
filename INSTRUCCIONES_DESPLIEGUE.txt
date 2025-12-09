@@ -1,0 +1,61 @@
+
+# INSTRUCCIONES PARA GOOGLE APPS SCRIPT
+
+## Paso 1: Copiar Code.gs
+
+1. Abre tu Google Sheets
+2. Ve a Extensiones > Apps Script
+3. Selecciona todo el contenido de Code.gs
+4. Bórralo
+5. Abre el archivo: google_apps_script_FINAL.js
+6. Copia TODO el contenido
+7. Pégalo en Code.gs
+8. Guarda (Ctrl+S)
+
+## Paso 2: Crear index.html
+
+1. En Apps Script, haz clic en el + junto a "Archivos"
+2. Selecciona "HTML"
+3. Nómbralo: index
+4. Abre el archivo: web/index_completo.html
+5. Copia TODO el contenido
+6. Pégalo en index.html
+7. Guarda
+
+## Paso 3: Crear editor.html
+
+1. Crear nuevo archivo HTML
+2. Nómbralo: editor
+3. Abre el archivo: web/editor_completo.html
+4. Copia TODO el contenido
+5. Pégalo en editor.html
+6. Guarda
+
+## Paso 4: Desplegar
+
+1. Haz clic en "Implementar" > "Nueva implementación"
+2. Tipo: "Aplicación web"
+3. Ejecutar como: "Yo"
+4. Acceso: "Cualquier usuario de tu organización"
+5. Haz clic en "Implementar"
+6. Copia la URL
+7. Abre la URL en tu navegador
+
+## ¡Listo!
+
+Ahora deberías ver tus documentos reales de Google Sheets.
+
+## Solución de Problemas
+
+### No veo mis documentos
+- Verifica que la hoja "Documentos" exista
+- Verifica que tenga datos (al menos una fila)
+- Abre la consola del navegador (F12) y busca errores
+
+### Error de permisos
+- Autoriza los permisos cuando te lo pida
+- Ve a "Avanzado" y permite el acceso
+
+### Los estilos no se ven
+- Verifica que copiaste TODO el contenido de los archivos _completo.html
+- Recarga la página con Ctrl+F5

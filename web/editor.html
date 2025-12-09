@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor - SENER LaTeX</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fuentes Locales -->
+    <style>
+        @font-face {
+            font-family: 'Patria';
+            src: url('../tipografias/Patria_Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Patria';
+            src: url('../tipografias/Patria_Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+        }
+    </style>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/editor.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader" class="preloader">
+        <div class="preloader-content">
+            <img src="../img/logo-sener.svg" alt="SENER" class="preloader-logo">
+            <div class="spinner"></div>
+            <p class="preloader-text">Cargando documento...</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <a href="index.html" class="btn-back">
+                        <i class="fas fa-arrow-left"></i>
+                        Volver
+                    </a>
+                    <div class="header-divider"></div>
+                    <h1 class="header-title" id="documento-titulo">Cargando...</h1>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="btn-guardar">
+                        <i class="fas fa-save"></i>
+                        Guardar
+                    </button>
+                    <button class="btn btn-primary" id="btn-generar">
+                        <i class="fas fa-file-code"></i>
+                        Generar .tex
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="editor-layout">
+                <!-- Sidebar con Tabs -->
+                <aside class="editor-sidebar">
+                    <nav class="editor-tabs">
+                        <button class="editor-tab active" data-tab="metadatos">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Metadatos</span>
+                        </button>
+                        <button class="editor-tab" data-tab="secciones">
+                            <i class="fas fa-list"></i>
+                            <span>Secciones</span>
+                        </button>
+                        <button class="editor-tab" data-tab="tablas">
+                            <i class="fas fa-table"></i>
+                            <span>Tablas</span>
+                        </button>
+                        <button class="editor-tab" data-tab="figuras">
+                            <i class="fas fa-image"></i>
+                            <span>Figuras</span>
+                        </button>
+                        <button class="editor-tab" data-tab="bibliografia">
+                            <i class="fas fa-book"></i>
+                            <span>Bibliografía</span>
+                        </button>
+                        <button class="editor-tab" data-tab="siglas">
+                            <i class="fas fa-font"></i>
+                            <span>Siglas</span>
+                        </button>
+                        <button class="editor-tab" data-tab="glosario">
+                            <i class="fas fa-spell-check"></i>
+                            <span>Glosario</span>
+                        </button>
+                    </nav>
+                </aside>
+
+                <!-- Contenido Principal -->
+                <div class="editor-content">
+                    <!-- Tab: Metadatos -->
+                    <section id="tab-metadatos" class="editor-tab-content active">
+                        <h2 class="section-title">Metadatos del Documento</h2>
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="input-id">ID del Documento</label>
+                                <input type="text" id="input-id" class="form-control" readonly>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-titulo">Título *</label>
+                                <input type="text" id="input-titulo" class="form-control" placeholder="Título del documento">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-subtitulo">Subtítulo</label>
+                                <input type="text" id="input-subtitulo" class="form-control" placeholder="Subtítulo (opcional)">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-autor">Autor *</label>
+                                <input type="text" id="input-autor" class="form-control" placeholder="Nombre del autor">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-fecha">Fecha</label>
+                                <input type="date" id="input-fecha" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-institucion">Institución</label>
+                                <input type="text" id="input-institucion" class="form-control" placeholder="Secretaría de Energía">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-unidad">Unidad</label>
+                                <input type="text" id="input-unidad" class="form-control" placeholder="Unidad responsable">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-documento-corto">Nombre Corto</label>
+                                <input type="text" id="input-documento-corto" class="form-control" placeholder="nombre_archivo">
+                                <small class="form-help">Usado para el nombre del archivo .tex</small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="input-version">Versión</label>
+                                <input type="text" id="input-version" class="form-control" placeholder="1.0">
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-palabras-clave">Palabras Clave</label>
+                                <input type="text" id="input-palabras-clave" class="form-control" placeholder="energía, renovables, México">
+                                <small class="form-help">Separadas por comas</small>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-portada-ruta">Ruta de Portada</label>
+                                <div class="input-group">
+                                    <input type="text" id="input-portada-ruta" class="form-control" placeholder="img/portada.png">
+                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-portada">
+                                        <i class="fas fa-folder-open"></i>
+                                        Seleccionar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-contraportada-ruta">Ruta de Contraportada</label>
+                                <div class="input-group">
+                                    <input type="text" id="input-contraportada-ruta" class="form-control" placeholder="img/contraportada.png">
+                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-contraportada">
+                                        <i class="fas fa-folder-open"></i>
+                                        Seleccionar
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-resumen">Resumen Ejecutivo</label>
+                                <textarea id="input-resumen" class="form-control" rows="6" placeholder="Resumen ejecutivo del documento..."></textarea>
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="input-datos-clave">Datos Clave</label>
+                                <textarea id="input-datos-clave" class="form-control" rows="4" placeholder="Dato 1; Dato 2; Dato 3"></textarea>
+                                <small class="form-help">Separados por punto y coma (;) o saltos de línea</small>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Tab: Secciones -->
+                    <section id="tab-secciones" class="editor-tab-content">
+                        <div class="section-header">
+                            <h2 class="section-title">Secciones del Documento</h2>
+                            <button class="btn btn-primary" id="btn-nueva-seccion">
+                                <i class="fas fa-plus"></i>
+                                Nueva Sección
+                            </button>
+                        </div>
+
+                        <div id="secciones-lista" class="secciones-tree">
+                            <!-- Las secciones se cargarán aquí -->
+                        </div>
+                    </section>
+
+                    <!-- Tab: Tablas -->
+                    <section id="tab-tablas" class="editor-tab-content">
+                        <div class="section-header">
+                            <h2 class="section-title">Tablas</h2>
+                            <button class="btn btn-primary" id="btn-nueva-tabla">
+                                <i class="fas fa-plus"></i>
+                                Nueva Tabla
+                            </button>
+                        </div>
+
+                        <div id="tablas-lista" class="items-grid">
+                            <!-- Las tablas se cargarán aquí -->
+                        </div>
+                    </section>
+
+                    <!-- Tab: Figuras -->
+                    <section id="tab-figuras" class="editor-tab-content">
+                        <div class="section-header">
+                            <h2 class="section-title">Figuras</h2>
+                            <button class="btn btn-primary" id="btn-nueva-figura">
+                                <i class="fas fa-plus"></i>
+                                Nueva Figura
+                            </button>
+                        </div>
+
+                        <div id="figuras-lista" class="items-grid">
+                            <!-- Las figuras se cargarán aquí -->
+                        </div>
+                    </section>
+
+                    <!-- Tabs restantes (placeholder) -->
+                    <section id="tab-bibliografia" class="editor-tab-content">
+                        <h2 class="section-title">Bibliografía</h2>
+                        <p class="text-muted">En desarrollo...</p>
+                    </section>
+
+                    <section id="tab-siglas" class="editor-tab-content">
+                        <h2 class="section-title">Siglas y Acrónimos</h2>
+                        <p class="text-muted">En desarrollo...</p>
+                    </section>
+
+                    <section id="tab-glosario" class="editor-tab-content">
+                        <h2 class="section-title">Glosario</h2>
+                        <p class="text-muted">En desarrollo...</p>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+</html>
