@@ -1010,7 +1010,7 @@
 % ============================================================================
 % CONTRAPORTADA INSTITUCIONAL
 % ============================================================================
-\newcommand{\contraportada}[1]{
+\newcommand{\contraportada}[2][img/contraportada.png]{
   \clearpage
   \thispagestyle{plain}
   % \hypersetup{urlcolor=gobmxAmbarClaro} % Ya no es necesario forzar color claro en fondo blanco
@@ -1030,7 +1030,7 @@
     \textbf{\textcolor{gobmxDorado}{\@institucion}}\\
     \@unidad\\[0.5cm]
     
-    #1
+    #2
     }
   \end{center}
 
@@ -1050,11 +1050,11 @@
   
   % Última página: Solo fondo, sin texto
   \thispagestyle{empty}
-  \IfFileExists{img/contraportada.png}{%
+  \IfFileExists{#1}{%
     \AddToShipoutPictureBG*{%
       \AtPageLowerLeft{%
         \BeginAccSupp{method=escape,Alt={Contraportada institucional - Imagen decorativa de fondo}}%
-        \includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}%
+        \includegraphics[width=\paperwidth,height=\paperheight]{#1}%
         \EndAccSupp{}%
       }%
     }%

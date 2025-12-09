@@ -5,10 +5,10 @@
 class SenerAPI {
     constructor() {
         // Detectar si estamos en Google Apps Script
-        this.isGoogleAppsScript = typeof google !== 'undefined' && 
-                                   google.script && 
-                                   google.script.run;
-        
+        this.isGoogleAppsScript = typeof google !== 'undefined' &&
+            google.script &&
+            google.script.run;
+
         if (this.isGoogleAppsScript) {
             console.log('✅ Modo Google Apps Script - Conectado a Google Sheets');
         } else {
@@ -28,7 +28,6 @@ class SenerAPI {
                     .getDocumentos();
             });
         } else {
-            // Modo demo/desarrollo
             console.warn('Modo demo: usando datos de ejemplo');
             return Promise.resolve([]);
         }
@@ -136,6 +135,135 @@ class SenerAPI {
                 success: true,
                 ruta: `${carpeta}/${file.name}`
             });
+        }
+    }
+
+    // ========================================================================
+    // SIGLAS
+    // ========================================================================
+
+    async guardarSigla(docId, siglaId, descripcion) {
+        const url = CONFIG.APPS_SCRIPT_URLS.SIGLAS;
+        const payload = { action: 'UPDATE_SIGLA', docId, siglaId, descripcion };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API guardarSigla:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async crearSigla(docId, siglaId, descripcion) {
+        const url = CONFIG.APPS_SCRIPT_URLS.SIGLAS;
+        const payload = { action: 'CREATE_SIGLA', docId, siglaId, descripcion };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API crearSigla:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async eliminarSigla(docId, siglaId) {
+        const url = CONFIG.APPS_SCRIPT_URLS.SIGLAS;
+        const payload = { action: 'DELETE_SIGLA', docId, siglaId };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API eliminarSigla:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    // ========================================================================
+    // GLOSARIO
+    // ========================================================================
+
+    async crearGlosario(docId, termino, definicion) {
+        const url = CONFIG.APPS_SCRIPT_URLS.GLOSARIO;
+        const payload = { action: 'CREATE_GLOSARIO', docId, termino, definicion };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API crearGlosario:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async guardarGlosario(docId, termino, definicion) {
+        const url = CONFIG.APPS_SCRIPT_URLS.GLOSARIO;
+        const payload = { action: 'UPDATE_GLOSARIO', docId, termino, definicion };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API guardarGlosario:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async eliminarGlosario(docId, termino) {
+        const url = CONFIG.APPS_SCRIPT_URLS.GLOSARIO;
+        const payload = { action: 'DELETE_GLOSARIO', docId, termino };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API eliminarGlosario:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    // ========================================================================
+    // BIBLIOGRAFÍA
+    // ========================================================================
+
+    async crearBibliografia(docId, datos) {
+        const url = CONFIG.APPS_SCRIPT_URLS.BIBLIOGRAFIA;
+        const payload = { action: 'CREATE_BIBLIOGRAFIA', docId, ...datos };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API crearBibliografia:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async guardarBibliografia(docId, datos) {
+        const url = CONFIG.APPS_SCRIPT_URLS.BIBLIOGRAFIA;
+        const payload = { action: 'UPDATE_BIBLIOGRAFIA', docId, ...datos };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API guardarBibliografia:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async eliminarBibliografia(docId, clave) {
+        const url = CONFIG.APPS_SCRIPT_URLS.BIBLIOGRAFIA;
+        const payload = { action: 'DELETE_BIBLIOGRAFIA', docId, clave };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API eliminarBibliografia:', error);
+            return { status: 'error', message: error.message };
         }
     }
 }

@@ -15,26 +15,26 @@ const editor = {
  */
 document.addEventListener('DOMContentLoaded', async () => {
     console.log('🚀 Iniciando Editor...');
-    
+
     // Obtener ID del documento desde URL
     const urlParams = new URLSearchParams(window.location.search);
     editor.docId = urlParams.get('id');
-    
+
     if (!editor.docId) {
         alert('❌ No se especificó un documento');
         window.location.href = 'index.html';
         return;
     }
-    
+
     // Cargar documento
     await cargarDocumento();
-    
+
     // Ocultar preloader
     hidePreloader();
-    
+
     // Setup event listeners
     setupEventListeners();
-    
+
     // Iniciar autoguardado
     iniciarAutoguardado();
 });
@@ -45,17 +45,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function cargarDocumento() {
     try {
         showLoading('Cargando documento desde Google Sheets...');
-        
+
         // Cargar todos los datos del Google Sheets público
         const datos = await cargarTodosDatos();
-        
+
         // Buscar el documento por ID
         const docMetadata = datos.documentos.find(doc => doc.ID === editor.docId);
-        
+
         if (!docMetadata) {
             throw new Error(`No se encontró el documento con ID: ${editor.docId}`);
         }
-        
+
         // Filtrar secciones, tablas y figuras de este documento
         const documento = {
             metadata: docMetadata,
@@ -66,23 +66,26 @@ async function cargarDocumento() {
             siglas: datos.siglas.filter(s => s.DocumentoID === editor.docId),
             glosario: datos.glosario.filter(g => g.DocumentoID === editor.docId)
         };
-        
+
         console.log('✅ Documento cargado:', documento);
-        
+
         editor.documento = documento;
-        
+
         // Renderizar datos
         renderMetadatos(documento.metadata);
         renderSecciones(documento.secciones);
         renderTablas(documento.tablas);
         renderFiguras(documento.figuras);
-        
+        renderBibliografia(documento.bibliografia);
+        renderSiglas(documento.siglas);
+        renderGlosario(documento.glosario);
+
         // Actualizar título del header
-        document.getElementById('documento-titulo').textContent = 
+        document.getElementById('documento-titulo').textContent =
             documento.metadata.Titulo || 'Sin título';
-        
+
         console.log('📄 Documento cargado:', documento);
-        
+
     } catch (error) {
         console.error('Error al cargar documento:', error);
         alert('❌ No se pudo cargar el documento');
@@ -97,12 +100,12 @@ async function cargarDocumento() {
  */
 function renderMetadatos(metadata) {
     console.log('📋 Renderizando metadatos:', metadata);
-    
+
     document.getElementById('input-id').value = metadata.ID || '';
     document.getElementById('input-titulo').value = metadata.Titulo || '';
     document.getElementById('input-subtitulo').value = metadata.Subtitulo || '';
     document.getElementById('input-autor').value = metadata.Autor || '';
-    
+
     // Fecha - manejar diferentes formatos
     if (metadata.Fecha) {
         try {
@@ -123,7 +126,7 @@ function renderMetadatos(metadata) {
             console.warn('Error al parsear fecha:', error);
         }
     }
-    
+
     document.getElementById('input-institucion').value = metadata.Institucion || '';
     document.getElementById('input-unidad').value = metadata.Unidad || '';
     document.getElementById('input-documento-corto').value = metadata.DocumentoCorto || '';
@@ -133,7 +136,7 @@ function renderMetadatos(metadata) {
     document.getElementById('input-contraportada-ruta').value = metadata.ContraportadaRuta || '';
     document.getElementById('input-resumen').value = metadata.ResumenEjecutivo || '';
     document.getElementById('input-datos-clave').value = metadata.DatosClave || '';
-    
+
     // Marcar campos requeridos visualmente
     marcarCamposRequeridos();
 }
@@ -143,11 +146,11 @@ function renderMetadatos(metadata) {
  */
 function marcarCamposRequeridos() {
     const camposRequeridos = ['input-titulo', 'input-autor'];
-    
+
     camposRequeridos.forEach(id => {
         const input = document.getElementById(id);
         if (input) {
-            input.addEventListener('blur', function() {
+            input.addEventListener('blur', function () {
                 if (!this.value.trim()) {
                     this.style.borderColor = '#dc3545';
                 } else {
@@ -163,7 +166,7 @@ function marcarCamposRequeridos() {
  */
 function renderSecciones(secciones) {
     const container = document.getElementById('secciones-lista');
-    
+
     if (!secciones || secciones.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
@@ -173,10 +176,10 @@ function renderSecciones(secciones) {
         `;
         return;
     }
-    
+
     // Ordenar por orden
     secciones.sort((a, b) => parseFloat(a.Orden) - parseFloat(b.Orden));
-    
+
     container.innerHTML = secciones.map(seccion => {
         const nivelClass = getNivelClass(seccion.Nivel);
         return `
@@ -216,7 +219,7 @@ function getNivelClass(nivel) {
  */
 function renderTablas(tablas) {
     const container = document.getElementById('tablas-lista');
-    
+
     if (!tablas || tablas.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
@@ -226,7 +229,7 @@ function renderTablas(tablas) {
         `;
         return;
     }
-    
+
     container.innerHTML = tablas.map(tabla => `
         <div class="item-card">
             <div class="item-card-header">
@@ -255,7 +258,7 @@ function renderTablas(tablas) {
  */
 function renderFiguras(figuras) {
     const container = document.getElementById('figuras-lista');
-    
+
     if (!figuras || figuras.length === 0) {
         container.innerHTML = `
             <div class="empty-state">
@@ -265,7 +268,7 @@ function renderFiguras(figuras) {
         `;
         return;
     }
-    
+
     container.innerHTML = figuras.map(figura => `
         <div class="item-card">
             <div class="item-card-header">
@@ -290,6 +293,117 @@ function renderFiguras(figuras) {
 }
 
 /**
+ * Renderizar bibliografía (Vista Tabla)
+ */
+function renderBibliografia(bibliografia) {
+    const container = document.getElementById('bibliografia-lista');
+    const tbody = container.querySelector('tbody');
+
+    if (!bibliografia || bibliografia.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="5" class="empty-state">
+                    <i class="fas fa-book" style="font-size: 2rem;"></i>
+                    <p>No hay referencias. Agrega una nueva para comenzar.</p>
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = bibliografia.map(item => `
+        <tr>
+            <td><strong>${item.Clave}</strong></td>
+            <td>${item.Tipo || 'misc'}</td>
+            <td>${item.Anio || 's/f'}</td>
+            <td>
+                <strong>${item.Autor || 'Autor desconocido'}</strong>. 
+                <em>${item.Titulo || 'Sin título'}</em>.
+                ${item.Editorial ? item.Editorial : ''}
+            </td>
+            <td class="col-actions">
+                <button class="btn-icon" onclick="editarBibliografia('${item.Clave}')" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" onclick="eliminarBibliografia('${item.Clave}')" title="Eliminar">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+/**
+ * Renderizar siglas (Vista Tabla)
+ */
+function renderSiglas(siglas) {
+    const container = document.getElementById('siglas-lista');
+    const tbody = container.querySelector('tbody');
+
+    if (!siglas || siglas.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="3" class="empty-state">
+                    <i class="fas fa-font" style="font-size: 2rem;"></i>
+                    <p>No hay siglas. Agrega una nueva para comenzar.</p>
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = siglas.map(item => `
+        <tr>
+            <td><strong>${item.Sigla}</strong></td>
+            <td>${item.Descripcion || ''}</td>
+            <td class="col-actions">
+                <button class="btn-icon" onclick="editarSigla('${item.Sigla}')" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" onclick="eliminarSigla('${item.Sigla}')" title="Eliminar">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+/**
+ * Renderizar glosario (Vista Tabla)
+ */
+function renderGlosario(glosario) {
+    const container = document.getElementById('glosario-lista');
+    const tbody = container.querySelector('tbody');
+
+    if (!glosario || glosario.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="3" class="empty-state">
+                    <i class="fas fa-spell-check" style="font-size: 2rem;"></i>
+                    <p>No hay términos en el glosario.</p>
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    tbody.innerHTML = glosario.map(item => `
+        <tr>
+            <td><strong>${item.Termino}</strong></td>
+            <td>${item.Definicion || ''}</td>
+            <td class="col-actions">
+                <button class="btn-icon" onclick="editarGlosario('${item.Termino}')" title="Editar">
+                    <i class="fas fa-edit"></i>
+                </button>
+                <button class="btn-icon" onclick="eliminarGlosario('${item.Termino}')" title="Eliminar">
+                    <i class="fas fa-trash"></i>
+                </button>
+            </td>
+        </tr>
+    `).join('');
+}
+
+/**
  * Setup event listeners
  */
 function setupEventListeners() {
@@ -300,31 +414,34 @@ function setupEventListeners() {
             switchTab(tabName);
         });
     });
-    
+
     // Botón guardar
     document.getElementById('btn-guardar').addEventListener('click', guardarCambios);
-    
+
     // Botón generar .tex
     document.getElementById('btn-generar').addEventListener('click', generarTex);
-    
+
     // Detectar cambios en formularios
     document.querySelectorAll('.form-control').forEach(input => {
         input.addEventListener('input', () => {
             editor.cambiosPendientes = true;
         });
     });
-    
+
     // Botones de nueva entidad
     document.getElementById('btn-nueva-seccion')?.addEventListener('click', () => {
         alert('Función en desarrollo: Nueva Sección');
     });
-    
+
     document.getElementById('btn-nueva-tabla')?.addEventListener('click', () => {
         alert('Función en desarrollo: Nueva Tabla');
     });
-    
+
     document.getElementById('btn-nueva-figura')?.addEventListener('click', () => {
         alert('Función en desarrollo: Nueva Figura');
+    });
+
+    document.getElementById('btn-nueva-bibliografia')?.addEventListener('click', () => {
     });
 }
 
@@ -337,7 +454,7 @@ function switchTab(tabName) {
         tab.classList.remove('active');
     });
     document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
-    
+
     // Actualizar contenido
     document.querySelectorAll('.editor-tab-content').forEach(content => {
         content.classList.remove('active');
@@ -351,23 +468,23 @@ function switchTab(tabName) {
 async function guardarCambios() {
     try {
         showLoading('Guardando cambios...');
-        
+
         // Validar campos requeridos
         const titulo = document.getElementById('input-titulo').value.trim();
         const autor = document.getElementById('input-autor').value.trim();
-        
+
         if (!titulo) {
             mostrarError('El título es obligatorio');
             hideLoading();
             return;
         }
-        
+
         if (!autor) {
             mostrarError('El autor es obligatorio');
             hideLoading();
             return;
         }
-        
+
         // Recopilar datos del formulario
         const metadata = {
             ID: document.getElementById('input-id').value,
@@ -385,24 +502,15 @@ async function guardarCambios() {
             ResumenEjecutivo: document.getElementById('input-resumen').value.trim(),
             DatosClave: document.getElementById('input-datos-clave').value.trim()
         };
-        
+
         console.log('📝 Guardando metadatos:', metadata);
-        
+
         // Por ahora solo guardamos localmente (sin backend)
         editor.documento.metadata = metadata;
         editor.cambiosPendientes = false;
-        
+
         mostrarExito('✅ Cambios guardados localmente. Nota: Para guardar en Google Sheets necesitas configurar el backend.');
-        
-        // TODO: Cuando tengas backend, descomentar esto:
-        // const resultado = await api.guardarDocumento(editor.docId, { metadata });
-        // if (resultado.success) {
-        //     editor.cambiosPendientes = false;
-        //     mostrarExito('Cambios guardados correctamente');
-        // } else {
-        //     throw new Error(resultado.message || 'Error al guardar');
-        // }
-        
+
     } catch (error) {
         console.error('Error al guardar:', error);
         mostrarError('No se pudieron guardar los cambios: ' + error.message);
@@ -417,10 +525,10 @@ async function guardarCambios() {
 async function generarTex() {
     try {
         showLoading('Generando archivo .tex...');
-        
+
         // Llamar a la API
         const resultado = await api.generarTex(editor.docId);
-        
+
         if (resultado.success) {
             // Descargar el archivo
             descargarArchivo(resultado.contenido, resultado.nombreArchivo);
@@ -428,7 +536,7 @@ async function generarTex() {
         } else {
             throw new Error(resultado.message || 'Error al generar');
         }
-        
+
     } catch (error) {
         console.error('Error al generar .tex:', error);
         mostrarError('No se pudo generar el archivo .tex: ' + error.message);
@@ -503,20 +611,302 @@ function eliminarFigura(id) {
     }
 }
 
+
+// ==========================================
+// Módulos de Edición (Bibliografía, Siglas, Glosario)
+// ==========================================
+
+// --- UTILIDADES MODAL ---
+function abrirModal(idModal) {
+    const modal = document.getElementById(idModal);
+    if (modal) {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex'); // Asumiendo que usamos flex para centrar
+    }
+}
+
+function cerrarModal(idModal) {
+    const modal = document.getElementById(idModal);
+    if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+    }
+}
+
+// Cerrar modal al hacer clic fuera
+window.onclick = function (event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.classList.add('hidden');
+        event.target.classList.remove('flex');
+    }
+}
+
+
+// --- BIBLIOGRAFÍA ---
+
+function editarBibliografia(clave) {
+    const item = editor.documento.bibliografia.find(b => b.Clave === clave);
+    if (!item) return;
+
+    // Poblar formulario
+    document.getElementById('bib-clave').value = item.Clave || '';
+    document.getElementById('bib-tipo').value = item.Tipo || 'misc';
+    document.getElementById('bib-titulo').value = item.Titulo || '';
+    document.getElementById('bib-autor').value = item.Autor || '';
+    document.getElementById('bib-anio').value = item.Anio || '';
+    document.getElementById('bib-editorial').value = item.Editorial || '';
+    document.getElementById('bib-url').value = item.Url || '';
+
+    abrirModal('modal-bibliografia');
+}
+
+function guardarModalBibliografia() {
+    const clave = document.getElementById('bib-clave').value;
+
+    // Buscar índice
+    const index = editor.documento.bibliografia.findIndex(b => b.Clave === clave);
+    if (index === -1) return; // O manejar creación nueva si fuera el caso
+
+    // Actualizar objeto
+    editor.documento.bibliografia[index] = {
+        ...editor.documento.bibliografia[index],
+        Tipo: document.getElementById('bib-tipo').value,
+        Titulo: document.getElementById('bib-titulo').value,
+        Autor: document.getElementById('bib-autor').value,
+        Anio: document.getElementById('bib-anio').value,
+        Editorial: document.getElementById('bib-editorial').value,
+        Url: document.getElementById('bib-url').value
+    };
+
+    editor.cambiosPendientes = true;
+    renderBibliografia(editor.documento.bibliografia);
+    cerrarModal('modal-bibliografia');
+    mostrarExito('Referencia actualizada localmente');
+}
+
+function eliminarBibliografia(clave) {
+    if (confirm(`¿Estás seguro de eliminar la referencia "${clave}"?`)) {
+        editor.documento.bibliografia = editor.documento.bibliografia.filter(b => b.Clave !== clave);
+        editor.cambiosPendientes = true;
+        renderBibliografia(editor.documento.bibliografia);
+    }
+}
+
+
+// --- SIGLAS ---
+
+function editarSigla(siglaId) {
+    const item = editor.documento.siglas.find(s => s.Sigla === siglaId);
+    if (!item) return;
+
+    // Guardar el ID original para poder actualizar después
+    document.getElementById('sigla-id').value = item.Sigla || '';
+    document.getElementById('sigla-id').readOnly = false; // Permitir editar el nombre
+    document.getElementById('sigla-id').dataset.originalId = item.Sigla; // Guardar ID original
+    document.getElementById('sigla-descripcion').value = item.Descripcion || '';
+
+    // Marcar como modo edición
+    document.getElementById('modal-siglas').dataset.mode = 'edit';
+    document.querySelector('#modal-siglas .modal-title').textContent = 'Editar Sigla';
+
+    abrirModal('modal-siglas');
+}
+
+function nuevaSigla() {
+    // Limpiar formulario
+    document.getElementById('sigla-id').value = '';
+    document.getElementById('sigla-id').readOnly = false; // Permitir editar ID en modo creación
+    document.getElementById('sigla-descripcion').value = '';
+
+    // Marcar como modo creación
+    document.getElementById('modal-siglas').dataset.mode = 'create';
+    document.querySelector('#modal-siglas .modal-title').textContent = 'Nueva Sigla';
+
+    abrirModal('modal-siglas');
+}
+
+async function guardarModalSiglas() {
+    const id = document.getElementById('sigla-id').value.trim();
+    const descripcion = document.getElementById('sigla-descripcion').value.trim();
+    const mode = document.getElementById('modal-siglas').dataset.mode || 'edit';
+
+    if (!id) {
+        mostrarError('La sigla no puede estar vacía');
+        return;
+    }
+
+    try {
+        showLoading(mode === 'create' ? 'Creando sigla...' : 'Guardando cambios...');
+
+        let resultado;
+
+        if (mode === 'create') {
+            // Crear nueva sigla
+            resultado = await api.crearSigla(editor.docId, id, descripcion);
+
+            if (resultado.status === 'success') {
+                // Agregar localmente
+                editor.documento.siglas.push({
+                    DocumentoID: editor.docId,
+                    Sigla: id,
+                    Descripcion: descripcion
+                });
+
+                renderSiglas(editor.documento.siglas);
+                cerrarModal('modal-siglas');
+                mostrarExito('✅ Sigla creada correctamente');
+            } else {
+                throw new Error(resultado.message || 'Error al crear sigla');
+            }
+        } else {
+            // Actualizar sigla existente
+            const originalId = document.getElementById('sigla-id').dataset.originalId || id;
+            const index = editor.documento.siglas.findIndex(s => s.Sigla === originalId);
+
+            if (index === -1) {
+                throw new Error('Sigla no encontrada');
+            }
+
+            // Si el nombre cambió, necesitamos eliminar la vieja y crear una nueva
+            if (originalId !== id) {
+                // Eliminar la vieja
+                await api.eliminarSigla(editor.docId, originalId);
+                // Crear la nueva
+                resultado = await api.crearSigla(editor.docId, id, descripcion);
+
+                if (resultado.status === 'success') {
+                    // Actualizar localmente
+                    editor.documento.siglas[index] = {
+                        DocumentoID: editor.docId,
+                        Sigla: id,
+                        Descripcion: descripcion
+                    };
+                    renderSiglas(editor.documento.siglas);
+                    cerrarModal('modal-siglas');
+                    mostrarExito('✅ Sigla actualizada correctamente');
+                } else {
+                    throw new Error(resultado.message || 'Error al actualizar sigla');
+                }
+            } else {
+                // Solo actualizar descripción
+                resultado = await api.guardarSigla(editor.docId, id, descripcion);
+
+                if (resultado.status === 'success') {
+                    editor.documento.siglas[index].Descripcion = descripcion;
+                    renderSiglas(editor.documento.siglas);
+                    cerrarModal('modal-siglas');
+                    mostrarExito('✅ Sigla actualizada correctamente');
+                } else {
+                    throw new Error(resultado.message || 'Error al actualizar sigla');
+                }
+            }
+        }
+
+    } catch (error) {
+        console.error('Error al guardar sigla:', error);
+        mostrarError('❌ Error: ' + error.message);
+    } finally {
+        hideLoading();
+    }
+}
+
+async function eliminarSigla(id) {
+    // Configurar modal de confirmación
+    document.getElementById('confirmar-mensaje').textContent =
+        `¿Estás seguro de eliminar la sigla "${id}"? Esta acción no se puede deshacer.`;
+
+    // Configurar el botón de confirmar
+    const btnConfirmar = document.getElementById('btn-confirmar-accion');
+
+    // Limpiar listeners anteriores clonando el botón
+    const nuevoBtn = btnConfirmar.cloneNode(true);
+    btnConfirmar.parentNode.replaceChild(nuevoBtn, btnConfirmar);
+
+    // Agregar nuevo listener
+    nuevoBtn.addEventListener('click', async () => {
+        cerrarModal('modal-confirmar');
+
+        try {
+            showLoading('Eliminando sigla...');
+
+            const resultado = await api.eliminarSigla(editor.docId, id);
+
+            if (resultado.status === 'success') {
+                // Eliminar localmente
+                editor.documento.siglas = editor.documento.siglas.filter(s => s.Sigla !== id);
+                renderSiglas(editor.documento.siglas);
+                mostrarExito('✅ Sigla eliminada correctamente');
+            } else {
+                throw new Error(resultado.message || 'Error al eliminar sigla');
+            }
+
+        } catch (error) {
+            console.error('Error al eliminar sigla:', error);
+            mostrarError('❌ Error: ' + error.message);
+        } finally {
+            hideLoading();
+        }
+    });
+
+    // Abrir modal de confirmación
+    abrirModal('modal-confirmar');
+}
+
+
+// --- GLOSARIO ---
+
+function editarGlosario(termino) {
+    const item = editor.documento.glosario.find(g => g.Termino === termino);
+    if (!item) return;
+
+    document.getElementById('glosario-termino').value = item.Termino || '';
+    document.getElementById('glosario-termino').readOnly = true;
+    document.getElementById('glosario-definicion').value = item.Definicion || '';
+
+    abrirModal('modal-glosario');
+}
+
+function guardarModalGlosario() {
+    const termino = document.getElementById('glosario-termino').value;
+    const index = editor.documento.glosario.findIndex(g => g.Termino === termino);
+
+    if (index === -1) return;
+
+    editor.documento.glosario[index] = {
+        ...editor.documento.glosario[index],
+        Definicion: document.getElementById('glosario-definicion').value
+    };
+
+    editor.cambiosPendientes = true;
+    renderGlosario(editor.documento.glosario);
+    cerrarModal('modal-glosario');
+    mostrarExito('Término actualizado localmente');
+}
+
+function eliminarGlosario(termino) {
+    if (confirm(`¿Eliminar término "${termino}"?`)) {
+        editor.documento.glosario = editor.documento.glosario.filter(g => g.Termino !== termino);
+        editor.cambiosPendientes = true;
+        renderGlosario(editor.documento.glosario);
+    }
+}
+
 /**
  * Utilidades
  */
 function hidePreloader() {
     const preloader = document.getElementById('preloader');
-    preloader.classList.add('hidden');
-    setTimeout(() => {
-        preloader.style.display = 'none';
-    }, 500);
+    if (preloader) {
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+        }, 500);
+    }
 }
 
 function showLoading(mensaje = 'Cargando...') {
     console.log('⏳ Loading:', mensaje);
-    
+
     // Crear overlay si no existe
     let overlay = document.getElementById('loading-overlay');
     if (!overlay) {
@@ -528,20 +918,20 @@ function showLoading(mensaje = 'Cargando...') {
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.7);
+            background: rgba(0,0,0,0.7);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
         `;
-        
+
         overlay.innerHTML = `
             <div style="background: white; padding: 30px; border-radius: 10px; text-align: center;">
                 <div class="spinner" style="margin: 0 auto 15px;"></div>
                 <p style="margin: 0; color: #621132; font-weight: 600;">${mensaje}</p>
             </div>
         `;
-        
+
         document.body.appendChild(overlay);
     } else {
         overlay.querySelector('p').textContent = mensaje;
@@ -582,7 +972,7 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
         max-width: 400px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     `;
-    
+
     // Colores según tipo
     const colores = {
         success: '#28a745',
@@ -590,9 +980,9 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
         info: '#17a2b8',
         warning: '#ffc107'
     };
-    
+
     notif.style.background = colores[tipo] || colores.info;
-    
+
     // Icono según tipo
     const iconos = {
         success: '✅',
@@ -600,11 +990,11 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
         info: 'ℹ️',
         warning: '⚠️'
     };
-    
+
     notif.innerHTML = `${iconos[tipo] || ''} ${mensaje}`;
-    
+
     document.body.appendChild(notif);
-    
+
     // Auto-cerrar después de 3 segundos
     setTimeout(() => {
         notif.style.animation = 'slideOut 0.3s ease';
@@ -618,105 +1008,21 @@ if (!document.getElementById('notification-styles')) {
     style.id = 'notification-styles';
     style.textContent = `
         @keyframes slideIn {
-            from {
-                transform: translateX(400px);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+            from { transform: translateX(400px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
         @keyframes slideOut {
-            from {
-                transform: translateX(0);
-                opacity: 1;
-            }
-            to {
-                transform: translateX(400px);
-                opacity: 0;
-            }
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(400px); opacity: 0; }
         }
     `;
     document.head.appendChild(style);
 }
 
-/**
- * Datos de ejemplo (para demo)
- */
-function getDatosDocumentoEjemplo() {
-    return {
-        metadata: {
-            ID: 'D01',
-            Titulo: 'Informe de Energía 2025',
-            Subtitulo: 'Análisis del sector energético mexicano',
-            Autor: 'Secretaría de Energía',
-            Fecha: new Date(2025, 11, 8),
-            Institucion: 'Secretaría de Energía',
-            Unidad: 'Unidad de Planeación Energética',
-            DocumentoCorto: 'InformeEnergia25',
-            Version: '1.0',
-            PalabrasClave: 'energía, renovables, México, transición energética',
-            PortadaRuta: 'img/portada.png',
-            ContraportadaRuta: 'img/contraportada.png',
-            ResumenEjecutivo: 'El sistema energético mexicano enfrenta un proceso de transformación profunda...',
-            DatosClave: 'Incremento del 15% en capacidad renovable; Reducción de 10% en emisiones; Inversión de $50,000 MDP'
-        },
-        secciones: [
-            {
-                Orden: '1',
-                Nivel: 'Seccion',
-                Titulo: 'Contexto general del sistema energético mexicano',
-                Contenido: 'El sistema energético mexicano...'
-            },
-            {
-                Orden: '1.1',
-                Nivel: 'Subseccion',
-                Titulo: 'Evolución de la capacidad de generación eléctrica',
-                Contenido: 'Durante el periodo 2020-2025...'
-            },
-            {
-                Orden: '1.1.1',
-                Nivel: 'Subsubseccion',
-                Titulo: 'Integración de energías renovables',
-                Contenido: 'La integración de fuentes renovables...'
-            },
-            {
-                Orden: '2',
-                Nivel: 'Seccion',
-                Titulo: 'Análisis de resultados',
-                Contenido: 'Los resultados obtenidos...'
-            }
-        ],
-        tablas: [
-            {
-                SeccionOrden: '1',
-                OrdenTabla: '1',
-                Titulo: 'Capacidad instalada por tecnología',
-                Fuente: 'Elaboración propia',
-                DatosCSV: 'Datos_Tablas!A1:E5'
-            },
-            {
-                SeccionOrden: '2',
-                OrdenTabla: '1',
-                Titulo: 'Consumo final de energía por sector',
-                Fuente: 'SIE-SENER',
-                DatosCSV: 'Datos_Tablas!A7:C13'
-            }
-        ],
-        figuras: [
-            {
-                SeccionOrden: '1',
-                OrdenFigura: '1',
-                RutaArchivo: 'img/grafica1.png',
-                Caption: 'Evolución de la capacidad instalada',
-                Fuente: 'Elaboración propia'
-            }
-        ],
-        bibliografia: [],
-        siglas: [],
-        glosario: []
-    };
+// Event listener para botón Nueva Sigla
+const btnNuevaSigla = document.getElementById('btn-nueva-sigla');
+if (btnNuevaSigla) {
+    btnNuevaSigla.addEventListener('click', nuevaSigla);
 }
 
 // Limpiar al salir
@@ -725,7 +1031,7 @@ window.addEventListener('beforeunload', (e) => {
         e.preventDefault();
         e.returnValue = '¿Estás seguro? Tienes cambios sin guardar.';
     }
-    
+
     // Limpiar autoguardado
     if (editor.autoguardadoInterval) {
         clearInterval(editor.autoguardadoInterval);

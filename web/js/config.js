@@ -7,6 +7,13 @@ const CONFIG = {
     // URL base del Google Sheets (Vista de edición/compartida)
     GOOGLE_SHEETS_BASE_URL: 'https://docs.google.com/spreadsheets/d/1zKKvxR_56Gk5ku4ZZ682hSpOgQQo3gC0xXOB_nta3Zg',
 
+    // URLs de los Web Apps de Google Apps Script (Backends modulares)
+    APPS_SCRIPT_URLS: {
+        SIGLAS: 'https://script.google.com/macros/s/AKfycbxfOQsDyrtMOXbCmUe5BRwfsj-5rvk9dc8-QQMdJz0DThcz89BzGVz5UkMllIS570NINA/exec',
+        GLOSARIO: 'https://script.google.com/macros/s/AKfycby1M-F3mvRsajgPlqFG4OhvVq2sWg2fEYupk2IAabYbxk8zbJ_25Kp5Du5z5qXQpaG5Og/exec',
+        BIBLIOGRAFIA: 'https://script.google.com/macros/s/AKfycbyiCez8WA_9tV2pOy6M2MKAqV0M3YVQ3rQXakkdw9kZzRbAvb4Pb9ttKlJqOhnRqlc3jg/exec'
+    },
+
     // GIDs de cada hoja (obtenidos de la URL de cada pestaña)
     // Para obtener el GID: abre la pestaña en Google Sheets y copia el número después de "gid=" en la URL
     HOJAS: {
