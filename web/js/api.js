@@ -266,6 +266,36 @@ class SenerAPI {
             return { status: 'error', message: error.message };
         }
     }
+
+    // ========================================================================
+    // METADATOS
+    // ========================================================================
+
+    async guardarMetadatos(docId, metadatos) {
+        const url = CONFIG.APPS_SCRIPT_URLS.METADATOS;
+        const payload = { action: 'UPDATE_METADATOS', docId, metadatos };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API guardarMetadatos:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
+
+    async crearDocumento(docId, metadatos) {
+        const url = CONFIG.APPS_SCRIPT_URLS.METADATOS;
+        const payload = { action: 'CREATE_DOCUMENTO', docId, metadatos };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API crearDocumento:', error);
+            return { status: 'error', message: error.message };
+        }
+    }
 }
 
 // Instancia global
