@@ -314,42 +314,89 @@ function getNivelClass(nivel) {
 }
 
 /**
- * Renderizar tablas
+ * Renderizar tablas - Coordinar con módulo de tablas
  */
 function renderTablas(tablas) {
-    const container = document.getElementById('tablas-lista');
-
+    console.log('📊 Renderizando tablas:', tablas?.length || 0);
+    
+    // Si el módulo de tablas está disponible, no hacer nada aquí
+    // El módulo maneja su propia carga y renderizado
+    if (typeof window.tablasModule !== 'undefined') {
+        console.log('✅ Módulo de tablas disponible - delegando renderizado');
+        return;
+    }
+    
+    // Fallback si el módulo no está disponible
+    console.warn('⚠️ Módulo de tablas no disponible, usando renderizado básico');
+    
+    const container = document.getElementById('tablas-tbody');
+    if (!container) {
+        console.warn('⚠️ Contenedor tablas-tbody no encontrado');
+        return;
+    }
+    
     if (!tablas || tablas.length === 0) {
         container.innerHTML = `
-            <div class="empty-state">
-                <i class="fas fa-table"></i>
-                <p>No hay tablas. Crea una nueva para comenzar.</p>
-            </div>
+            <tr>
+                <td colspan="5" class="text-center py-5">
+                    <i class="fas fa-table text-muted mb-3" style="font-size: 3rem; opacity: 0.3;"></i>
+                    <p class="text-muted mb-0">No hay tablas disponibles</p>
+                    <button class="btn btn-primary btn-sm mt-2" onclick="mostrarModalNuevaTabla()">
+                        <i class="fas fa-plus me-1"></i>
+                        Agregar Primera Tabla
+                    </button>
+                </td>
+            </tr>
         `;
         return;
     }
 
-    container.innerHTML = tablas.map(tabla => `
-        <div class="item-card">
-            <div class="item-card-header">
-                <h4 class="item-card-title">${tabla.Titulo}</h4>
-                <div class="item-card-actions">
-                    <button class="btn-icon" onclick="editarTabla('${tabla.SeccionOrden}-${tabla.OrdenTabla}')" title="Editar">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn-icon" onclick="eliminarTabla('${tabla.SeccionOrden}-${tabla.OrdenTabla}')" title="Eliminar">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="item-card-meta">
-                Sección: ${tabla.SeccionOrden} | Orden: ${tabla.OrdenTabla}
-            </div>
-            <div class="item-card-meta">
-                Datos: ${tabla.DatosCSV || 'No especificado'}
-            </div>
-        </div>
-    `).join('');
+    // Renderizar tablas básicas
+    container.innerHTML = tablas.map(tabla => {
+        const numeroTabla = `${tabla.SeccionOrden || '?'}.${tabla.OrdenTabla || '?'}`;
+        const titulo = tabla.Titulo || 'Sin título';
+        const datosCSV = tabla.DatosCSV || 'Sin datos';
+        const fuente = tabla.Fuente || '-';
+        const tablaId = `${tabla.SeccionOrden}-${tabla.OrdenTabla}`;
+
+        return `
+            <tr>
+                <td class="text-center">
+                    <span class="badge bg-success">
+                        <i class="fas fa-table me-1"></i>
+                        ${numeroTabla}
+                    </span>
+                </td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-file-alt me-2 text-muted"></i>
+                        <span>${titulo}</span>
+                    </div>
+                </td>
+                <td>
+                    <code class="text-muted small">${datosCSV}</code>
+                </td>
+                <td>
+                    <small class="text-muted">${fuente}</small>
+                </td>
+                <td>
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn btn-outline-info" onclick="previewTabla('${tablaId}')" title="Vista previa">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                        <button class="btn btn-outline-primary" onclick="editarTabla('${tablaId}')" title="Editar">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn btn-outline-danger" onclick="eliminarTabla('${tablaId}')" title="Eliminar">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+    
+    console.log(`✅ ${tablas.length} tablas renderizadas (fallback)`);
 }
 
 /**
@@ -754,6 +801,33 @@ function switchTab(tabName) {
             }, 100);
         }
         
+        if (tabName === 'tablas') {
+            // Forzar inicialización del módulo de tablas
+            setTimeout(() => {
+                try {
+                    console.log('🔄 Forzando inicialización de módulo de tablas...');
+                    
+                    // Verificar si las funciones están disponibles
+                    if (typeof window.previewTabla === 'function') {
+                        console.log('✅ Funciones de tablas ya disponibles');
+                    } else {
+                        console.log('⚠️ Funciones no disponibles, forzando carga...');
+                        
+                        // Forzar re-inicialización
+                        if (typeof window.inicializarModuloTablas === 'function') {
+                            window.inicializarModuloTablas();
+                        } else if (typeof initTablas === 'function') {
+                            initTablas();
+                        } else {
+                            console.error('❌ No se puede inicializar módulo de tablas');
+                        }
+                    }
+                } catch (error) {
+                    console.warn('⚠️ Error al inicializar módulo de tablas:', error);
+                }
+            }, 200);
+        }
+        
         console.log(`🎯 Tab switch completado: ${tabName}`);
         
     } catch (error) {
@@ -888,15 +962,47 @@ function eliminarSeccion(orden) {
 }
 
 function editarTabla(id) {
-    console.log('Editar tabla:', id);
-    alert('Función en desarrollo: Editar Tabla');
+    console.log('📊 Redirigiendo edición de tabla a módulo tablas:', id);
+    
+    // Redirigir al módulo de tablas si está disponible
+    if (typeof window.tablasModule !== 'undefined' && window.tablasModule.editarTabla) {
+        window.tablasModule.editarTabla(id);
+        return;
+    }
+    
+    // Fallback si el módulo no está disponible
+    console.log('⚠️ Módulo de tablas no disponible, usando fallback');
+    alert('Función de edición de tablas en desarrollo.\n\nPor favor recarga la página para acceder al módulo completo.');
 }
 
 function eliminarTabla(id) {
-    if (confirm('¿Estás seguro de eliminar esta tabla?')) {
-        console.log('Eliminar tabla:', id);
-        alert('Función en desarrollo: Eliminar Tabla');
+    console.log('🗑️ Redirigiendo eliminación de tabla a módulo tablas:', id);
+    
+    // Redirigir al módulo de tablas si está disponible
+    if (typeof window.tablasModule !== 'undefined' && window.tablasModule.eliminarTabla) {
+        window.tablasModule.eliminarTabla(id);
+        return;
     }
+    
+    // Fallback local
+    if (confirm('¿Estás seguro de eliminar esta tabla?')) {
+        console.log('🗑️ Eliminando tabla localmente:', id);
+        alert('Función de eliminación de tablas en desarrollo.\n\nPor favor recarga la página para acceder al módulo completo.');
+    }
+}
+
+function previewTabla(id) {
+    console.log('👁️ Redirigiendo vista previa de tabla a módulo tablas:', id);
+    
+    // Redirigir al módulo de tablas si está disponible
+    if (typeof window.tablasModule !== 'undefined' && window.tablasModule.previewTabla) {
+        window.tablasModule.previewTabla(id);
+        return;
+    }
+    
+    // Fallback básico
+    console.log('⚠️ Módulo de tablas no disponible, usando fallback');
+    alert('Vista previa de tablas en desarrollo.\n\nPor favor recarga la página para acceder al módulo completo.');
 }
 
 function editarFigura(id) {

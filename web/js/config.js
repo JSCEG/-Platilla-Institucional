@@ -22,7 +22,7 @@ const CONFIG = {
         'Documentos': '0',      // Primera hoja (gid=0)
         'Secciones': '624164950', // Actualizado
         'Tablas': '1233547389',        // Actualizado
-        'DatosTablas': '1828040720',   // Actualizado: Hoja con los datos crudos de las tablas
+        'Datos Tablas': '1828040720',   // Actualizado: Hoja con los datos crudos de las tablas
         'Figuras': '19478262',         // Actualizado
         'Bibliografia': '1970507614',  // Actualizado
         'Siglas': '1732595035',        // Actualizado
@@ -54,10 +54,7 @@ function getUrlHojaCSV(nombreHoja) {
 async function cargarHojaCSV(nombreHoja) {
     // Si no tiene GID configurado (excepto Documentos que tiene default 0 en fallback pero configurable), retornamos vacío para no dar error 400
     if (nombreHoja !== 'Documentos' && (!CONFIG.HOJAS[nombreHoja] || CONFIG.HOJAS[nombreHoja] === '')) {
-        // Silenciar advertencia para opcionales que a;un no tienen GID
-        if (nombreHoja !== 'DatosTablas') {
-            console.warn(`⚠️ Hoja "${nombreHoja}" no tiene GID configurado en config.js. Saltando carga.`);
-        }
+        console.warn(`⚠️ Hoja "${nombreHoja}" no tiene GID configurado en config.js. Saltando carga.`);
         return [];
     }
 
@@ -181,7 +178,7 @@ async function cargarTodosDatos() {
             cargarHojaCSV('Bibliografia'),
             cargarHojaCSV('Siglas'),
             cargarHojaCSV('Glosario'),
-            cargarHojaCSV('DatosTablas')
+            cargarHojaCSV('Datos Tablas')
         ]);
 
         console.log('✅ Todos los datos cargados correctamente');

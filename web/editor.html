@@ -266,15 +266,78 @@
                     <!-- Tab: Tablas -->
                     <section id="tab-tablas" class="editor-tab-content">
                         <div class="section-header">
-                            <h2 class="section-title">Tablas</h2>
+                            <h2 class="section-title">
+                                <i class="fas fa-table me-2"></i>
+                                Tablas y Datos
+                            </h2>
                             <button class="btn btn-primary" id="btn-nueva-tabla">
                                 <i class="fas fa-plus"></i>
                                 Nueva Tabla
                             </button>
                         </div>
 
-                        <div id="tablas-lista" class="items-grid">
-                            <!-- Las tablas se cargarán aquí -->
+                        <!-- Mensaje informativo -->
+                        <div class="alert alert-info d-flex align-items-start mb-4">
+                            <i class="fas fa-lightbulb me-3 mt-1 text-warning"></i>
+                            <div class="flex-grow-1">
+                                <strong>Gestión de Tablas:</strong> Agrega, edita o elimina tablas del documento.
+                                <br>
+                                <small class="text-muted mt-1 d-block">
+                                    Las tablas incluyen metadatos y datos CSV • Soporte para notas al pie LaTeX
+                                </small>
+                            </div>
+
+                        </div>
+
+                        <!-- Tabla Responsiva de Tablas -->
+                        <div class="tablas-table-container">
+                            <!-- Vista de tabla para desktop/tablet -->
+                            <div class="d-block" id="tablas-table-view">
+                                <table class="tablas-table table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 80px;">
+                                                <i class="fas fa-hashtag me-1 text-primary"></i>
+                                                Tabla
+                                            </th>
+                                            <th style="width: 35%;">
+                                                <i class="fas fa-align-left me-1 text-secondary"></i>
+                                                Título
+                                            </th>
+                                            <th style="width: 20%;">
+                                                <i class="fas fa-database me-1 text-info"></i>
+                                                Datos CSV
+                                            </th>
+                                            <th style="width: 20%;">
+                                                <i class="fas fa-external-link-alt me-1 text-success"></i>
+                                                Fuente
+                                            </th>
+                                            <th style="width: 15%; text-align: center;">
+                                                <i class="fas fa-tools me-1 text-muted"></i>
+                                                Acciones
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tablas-tbody">
+                                        <!-- Contenido generado dinámicamente -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Estado vacío -->
+                            <div class="text-center py-5 d-none" id="tablas-empty-state">
+                                <i class="fas fa-table text-muted" style="font-size: 3rem; opacity: 0.3;"></i>
+                                <p class="text-muted mt-3 mb-0">No hay tablas agregadas</p>
+                                <small class="text-muted">Haz clic en "Nueva Tabla" para comenzar</small>
+                            </div>
+                        </div>
+
+                        <!-- Loading state -->
+                        <div class="text-center py-4 d-none" id="tablas-loading">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando tablas...</span>
+                            </div>
+                            <p class="text-muted mt-2 mb-0">Cargando tablas...</p>
                         </div>
                     </section>
 
@@ -549,6 +612,112 @@
         </div>
     </div>
 
+    <!-- Modal Tabla -->
+    <div class="modal fade" id="modal-tabla" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-table me-2"></i>
+                        Nueva Tabla
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-tabla">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Sección *</label>
+                                    <input type="text" class="form-control" id="tabla-seccion-orden"
+                                        placeholder="Ej: 1, 1.1, 2" required>
+                                    <div class="form-text">Formato: 1, 1.1, 1.2.1, etc.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Orden *</label>
+                                    <input type="number" class="form-control" id="tabla-orden" placeholder="1" min="1"
+                                        required>
+                                    <div class="form-text">
+                                        Número de tabla en la sección
+                                        <button type="button" class="btn btn-link btn-sm p-0 ms-2" onclick="mostrarTablasExistentes()" 
+                                                title="Ver tablas existentes">
+                                            <i class="fas fa-list"></i> Ver existentes
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Título *</label>
+                            <input type="text" class="form-control" id="tabla-titulo"
+                                placeholder="Capacidad instalada de generación eléctrica" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Fuente</label>
+                            <input type="text" class="form-control" id="tabla-fuente" placeholder="SENER, 2024">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Datos CSV *</label>
+                            <input type="text" class="form-control" id="tabla-datos-csv" 
+                                placeholder="Datos_Tablas!A1:E4" required>
+                            <div class="form-text">Referencia al rango de datos en Google Sheets</div>
+                        </div>
+
+                        <!-- Editor CSV Integrado -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Editor de Datos CSV
+                                <button type="button" class="btn btn-outline-secondary btn-sm ms-2" onclick="toggleEditorCSV()">
+                                    <i class="fas fa-table"></i> Mostrar/Ocultar Editor
+                                </button>
+                            </label>
+                            <div id="csv-editor-container" class="border rounded p-3" style="display: none;">
+                                <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <small class="text-muted">Editor CSV básico - Los datos se guardarán en Google Sheets</small>
+                                    <div>
+                                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="agregarFilaCSV()">
+                                            <i class="fas fa-plus"></i> Fila
+                                        </button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary" onclick="agregarColumnaCSV()">
+                                            <i class="fas fa-plus"></i> Columna
+                                        </button>
+                                    </div>
+                                </div>
+                                <textarea id="csv-data" class="form-control" rows="8" 
+                                    placeholder="Generación,2014,2015,2016&#10;Distribución,56,6,7&#10;Total,57,8,10"></textarea>
+                                <div class="form-text">
+                                    Formato CSV: separar columnas con comas, filas con saltos de línea
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Notas al Pie -->
+                        <div class="mb-3">
+                            <label class="form-label">
+                                Notas al Pie (LaTeX)
+                                <small class="text-muted">- Opcional</small>
+                            </label>
+                            <textarea id="tabla-notas" class="form-control" rows="3" 
+                                placeholder="Elaboración propia.\nIncluye generación distribuida.\nDatos sujetos a revisión."></textarea>
+                            <div class="form-text">
+                                Cada línea será una nota numerada. Usa \n para referencias LaTeX específicas.
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarTabla()">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Modal Figura -->
     <div class="modal fade" id="modal-figura" tabindex="-1" aria-hidden="true" style="display: none;">
         <div class="modal-dialog">
@@ -685,10 +854,18 @@
         </div>
     </div>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
 
     <!-- Bootstrap Initialization -->
     <script src="js/bootstrap-init.js"></script>
@@ -701,6 +878,7 @@
     <script src="js/bibliografia.js"></script>
     <script src="js/metadatos.js"></script>
     <script src="js/figuras.js"></script>
+    <script src="js/tablas.js"></script>
 </body>
 
 </html>
