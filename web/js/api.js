@@ -300,40 +300,64 @@ class SenerAPI {
         }
     }
 
-    /**
-     * ========================================================================
-     * FIGURAS
-     * ========================================================================
-     */
+    // ========================================================================
+    // FIGURAS
+    // ========================================================================
 
-    async crearFigura(docId, figura) {
-        return this.post(this.urls.FIGURAS, {
-            action: 'CREATE_FIGURA',
-            docId,
-            figura
-        });
+    async crearFigura(docId, seccionOrden, ordenFigura, rutaArchivo, caption, fuente) {
+        const url = CONFIG.APPS_SCRIPT_URLS.FIGURAS;
+        const payload = { 
+            action: 'CREATE_FIGURA', 
+            docId, 
+            seccionOrden, 
+            ordenFigura, 
+            rutaArchivo, 
+            caption, 
+            fuente 
+        };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API crearFigura:', error);
+            return { status: 'error', message: error.message };
+        }
     }
 
-    async actualizarFigura(docId, figuraId, figura) {
-        return this.post(this.urls.FIGURAS, {
-            action: 'UPDATE_FIGURA',
-            docId,
-            figuraId,
-            figura
-        });
+    async actualizarFigura(docId, figuraId, seccionOrden, ordenFigura, rutaArchivo, caption, fuente) {
+        const url = CONFIG.APPS_SCRIPT_URLS.FIGURAS;
+        const payload = { 
+            action: 'UPDATE_FIGURA', 
+            docId, 
+            figuraId, 
+            seccionOrden, 
+            ordenFigura, 
+            rutaArchivo, 
+            caption, 
+            fuente 
+        };
+
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API actualizarFigura:', error);
+            return { status: 'error', message: error.message };
+        }
     }
 
     async eliminarFigura(docId, figuraId) {
-        return this.post(this.urls.FIGURAS, {
-            action: 'DELETE_FIGURA',
-            docId,
-            figuraId
-        });
-    }
+        const url = CONFIG.APPS_SCRIPT_URLS.FIGURAS;
+        const payload = { action: 'DELETE_FIGURA', docId, figuraId };
 
-    async obtenerFiguras(docId) {
-        const datos = await cargarHojaCSV('Figuras');
-        return datos.filter(f => f.DocumentoID == docId);
+        try {
+            const response = await fetch(url, { method: 'POST', body: JSON.stringify(payload) });
+            return await response.json();
+        } catch (error) {
+            console.error('Error en API eliminarFigura:', error);
+            return { status: 'error', message: error.message };
+        }
     }
 
     /**

@@ -35,7 +35,8 @@
     <script src="https://unpkg.com/feather-icons"></script>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css">
@@ -66,23 +67,31 @@
                     <h1 class="header-title" id="documento-titulo">Cargando...</h1>
                 </div>
                 <div class="header-actions">
-                    <button class="btn btn-secondary" id="btn-guardar" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Guardar cambios en Google Sheets">
+                    <button class="btn btn-secondary" id="btn-guardar" data-bs-toggle="tooltip"
+                        data-bs-placement="bottom" title="Guardar cambios en Google Sheets">
                         <i class="fas fa-save"></i>
                         Guardar
                     </button>
                     <div class="btn-group" role="group">
-                        <button class="btn btn-primary" id="btn-generar" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Generar archivo LaTeX">
+                        <button class="btn btn-primary" id="btn-generar" data-bs-toggle="tooltip"
+                            data-bs-placement="bottom" title="Generar archivo LaTeX">
                             <i class="fas fa-file-code"></i>
                             Generar .tex
                         </button>
-                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                            data-bs-toggle="dropdown" aria-expanded="false">
                             <span class="visually-hidden">Opciones adicionales</span>
                         </button>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#" id="btn-preview"><i class="fas fa-eye me-2"></i>Vista previa</a></li>
-                            <li><a class="dropdown-item" href="#" id="btn-download"><i class="fas fa-download me-2"></i>Descargar .tex</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" id="btn-export-pdf"><i class="fas fa-file-pdf me-2"></i>Exportar PDF</a></li>
+                            <li><a class="dropdown-item" href="#" id="btn-preview"><i class="fas fa-eye me-2"></i>Vista
+                                    previa</a></li>
+                            <li><a class="dropdown-item" href="#" id="btn-download"><i
+                                        class="fas fa-download me-2"></i>Descargar .tex</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#" id="btn-export-pdf"><i
+                                        class="fas fa-file-pdf me-2"></i>Exportar PDF</a></li>
                         </ul>
                     </div>
                 </div>
@@ -276,22 +285,18 @@
                                 <i class="fas fa-image me-2"></i>
                                 Figuras y Gráficos
                             </h2>
-                            <button class="btn btn-primary" id="btn-nueva-figura" data-bs-toggle="tooltip" title="Agregar nueva figura">
-                                <i class="fas fa-plus"></i>
-                                Nueva Figura
-                            </button>
                         </div>
 
                         <!-- Mensaje informativo -->
                         <div class="alert alert-info d-flex align-items-start mb-4">
-                            <i class="fas fa-lightbulb me-3 mt-1 text-warning"></i>
+                            <i class="fas fa-info-circle me-3 mt-1"></i>
                             <div>
-                                <strong>Tip:</strong> Haz clic en cualquier celda para editarla directamente. 
-                                Las imágenes deben estar en <code class="bg-light px-2 py-1 rounded">img/graficos/</code>
+                                <strong>Modo Solo Lectura:</strong> Las figuras se cargan automáticamente desde Google
+                                Sheets.
                                 <br>
                                 <small class="text-muted mt-1 d-block">
-                                    <i class="fas fa-mouse-pointer me-1"></i>
-                                    Ejemplo: <code class="bg-light px-1 rounded">img/graficos/figura_2_1.png</code>
+                                    Las imágenes deben estar en: <code
+                                        class="bg-light px-1 rounded">img/graficos/</code>
                                 </small>
                             </div>
                         </div>
@@ -300,28 +305,24 @@
                         <div class="figuras-table-container">
                             <!-- Vista de tabla para desktop/tablet -->
                             <div class="d-block" id="figuras-table-view">
-                                <table class="figuras-table">
+                                <table class="figuras-table table table-hover">
                                     <thead>
                                         <tr>
-                                            <th style="width: 80px;">
-                                                <i class="fas fa-image me-1 text-primary"></i>
+                                            <th style="width: 100px;">
+                                                <i class="fas fa-hashtag me-1 text-primary"></i>
                                                 Fig.
                                             </th>
-                                            <th style="width: 35%;">
+                                            <th style="width: 40%;">
                                                 <i class="fas fa-align-left me-1 text-secondary"></i>
                                                 Título/Descripción
                                             </th>
-                                            <th style="width: 30%;">
+                                            <th style="width: 35%;">
                                                 <i class="fas fa-folder-open me-1 text-info"></i>
                                                 Ruta de Imagen
                                             </th>
-                                            <th class="col-fuente" style="width: 20%;">
+                                            <th style="width: 25%;">
                                                 <i class="fas fa-external-link-alt me-1 text-success"></i>
                                                 Fuente
-                                            </th>
-                                            <th style="width: 100px; text-align: center;">
-                                                <i class="fas fa-tools me-1 text-muted"></i>
-                                                Acciones
                                             </th>
                                         </tr>
                                     </thead>
@@ -541,64 +542,6 @@
         </div>
     </div>
 
-    <!-- Modal Figura -->
-    <div id="modal-figura" class="modal hidden">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Editar Figura</h3>
-                <button class="btn-close" onclick="cerrarModal('modal-figura')">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="form-figura" class="form-grid">
-                    <input type="hidden" id="figura-id">
-
-                    <div class="form-group">
-                        <label for="figura-seccion-orden">Sección</label>
-                        <input type="number" id="figura-seccion-orden" class="form-control" placeholder="1" min="1">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="figura-orden">Orden</label>
-                        <input type="number" id="figura-orden" class="form-control" placeholder="1" min="1">
-                        <small class="form-help">Número de la figura dentro de la sección</small>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="figura-ruta">Ruta de Imagen *</label>
-                        <div class="input-group">
-                            <input type="text" id="figura-ruta" class="form-control"
-                                placeholder="img/graficos/figura_2_1.png">
-                            <input type="file" id="file-figura" accept="image/*" style="display:none">
-                            <button class="btn btn-secondary btn-small" type="button"
-                                onclick="seleccionarImagenFigura()">
-                                <i class="fas fa-folder-open"></i>
-                                Seleccionar
-                            </button>
-                        </div>
-                        <small class="form-help">
-                            La imagen se guardará en <code>img/graficos/</code>
-                        </small>
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="figura-caption">Título/Descripción</label>
-                        <input type="text" id="figura-caption" class="form-control"
-                            placeholder="Evolución de la capacidad instalada">
-                    </div>
-
-                    <div class="form-group full-width">
-                        <label for="figura-fuente">Fuente</label>
-                        <input type="text" id="figura-fuente" class="form-control" placeholder="SENER, 2024">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-outline" onclick="cerrarModal('modal-figura')">Cancelar</button>
-                <button class="btn btn-primary" onclick="guardarFigura()">Guardar</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Modal de Confirmación (Genérico para eliminar) -->
     <div id="modal-confirmar" class="modal hidden">
         <div class="modal-content" style="max-width: 400px;">
@@ -619,43 +562,51 @@
 
     <!-- Toast Container para notificaciones -->
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
-        <div id="toast-success" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div id="toast-success" class="toast align-items-center text-white bg-success border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body">
                     <i class="fas fa-check-circle me-2"></i>
                     <span id="toast-success-message">Operación completada exitosamente</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
-        
-        <div id="toast-error" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+
+        <div id="toast-error" class="toast align-items-center text-white bg-danger border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body">
                     <i class="fas fa-exclamation-circle me-2"></i>
                     <span id="toast-error-message">Ha ocurrido un error</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
-        
-        <div id="toast-info" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+
+        <div id="toast-info" class="toast align-items-center text-white bg-primary border-0" role="alert"
+            aria-live="assertive" aria-atomic="true">
             <div class="d-flex">
                 <div class="toast-body">
                     <i class="fas fa-info-circle me-2"></i>
                     <span id="toast-info-message">Información</span>
                 </div>
-                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Close"></button>
             </div>
         </div>
     </div>
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
     <!-- Bootstrap Initialization -->
     <script src="js/bootstrap-init.js"></script>
-    
+
     <!-- Scripts -->
     <script src="js/config.js"></script>
     <script src="js/api.js"></script>

@@ -13,7 +13,7 @@ const CONFIG = {
         GLOSARIO: 'https://script.google.com/macros/s/AKfycby1M-F3mvRsajgPlqFG4OhvVq2sWg2fEYupk2IAabYbxk8zbJ_25Kp5Du5z5qXQpaG5Og/exec',
         BIBLIOGRAFIA: 'https://script.google.com/macros/s/AKfycbyiCez8WA_9tV2pOy6M2MKAqV0M3YVQ3rQXakkdw9kZzRbAvb4Pb9ttKlJqOhnRqlc3jg/exec',
         METADATOS: 'https://script.google.com/macros/s/AKfycbwUeJrtk0Jz4sv1XixuA-tb2c_ykfE5ohCWCnJQYsaw-UrqRBtAZWQXwSqmXvivbj7VWg/exec',
-        FIGURAS: 'https://script.google.com/macros/s/AKfycbx83R7-iJxqJsdXDCytkpKfwHov5wVzGqIlKQBIM2OziDFY9Hq_JflEW6rqPyzCuo179w/exec' // URL actualizada del Web App de figuras debug
+        FIGURAS: 'https://script.google.com/macros/s/AKfycbx83R7-iJxqJsdXDCytkpKfwHov5wVzGqIlKQBIM2OziDFY9Hq_JflEW6rqPyzCuo179w/exec' // URL del script de figuras
     },
 
     // GIDs de cada hoja (obtenidos de la URL de cada pestaña)

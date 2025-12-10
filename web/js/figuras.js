@@ -1,267 +1,200 @@
 /**
  * ============================================================================
- * FRONTEND FIGURAS
+ * MÓDULO FIGURAS - SOLO LECTURA
  * ============================================================================
- * Funciones para manejar CRUD de Figuras del documento
+ * Sistema simplificado que ÚNICAMENTE lee y muestra figuras desde Google Sheets
+ * No incluye funcionalidad de crear/editar/eliminar (CRUD)
  */
 
+// Estado
+let figurasData = [];
+let isLoading = false;
+
 /**
- * Cargar figuras del documento actual
+ * Inicializar módulo de figuras
+ */
+function initFiguras() {
+    console.log('📸 Inicializando módulo de figuras (solo lectura)...');
+    cargarFiguras();
+}
+
+/**
+ * Cargar figuras desde Google Sheets (usando el método del sistema)
  */
 async function cargarFiguras() {
+    if (isLoading) {
+        console.log('⏳ Ya hay una carga en progreso...');
+        return;
+    }
+
     try {
-        showLoading('Cargando figuras...');
-        const figuras = await api.obtenerFiguras(editor.docId);
-        renderizarFiguras(figuras);
+        isLoading = true;
+        mostrarEstadoCarga(true);
+
+        console.log('📡 Cargando figuras desde Google Sheets...');
+
+        // Usar la función del sistema para cargar datos
+        if (typeof cargarTodosDatos === 'function') {
+            const datos = await cargarTodosDatos();
+            
+            if (datos && datos.figuras) {
+                // Filtrar por documento actual si está disponible
+                if (window.editor && window.editor.docId) {
+                    const docId = window.editor.docId.toString().trim().toUpperCase();
+                    figurasData = datos.figuras.filter(fig => {
+                        const figDocId = (fig.DocumentoID || fig.DocumentoId || fig.Documento || '').toString().trim().toUpperCase();
+                        return figDocId === docId;
+                    });
+                    console.log(`📦 Figuras filtradas para documento ${docId}:`, figurasData.length);
+                } else {
+                    figurasData = datos.figuras || [];
+                    console.log('📦 Todas las figuras cargadas:', figurasData.length);
+                }
+                
+                renderizarFiguras();
+                console.log(`✅ ${figurasData.length} figuras cargadas exitosamente`);
+                
+                if (figurasData.length > 0) {
+                    mostrarToast('success', `${figurasData.length} figuras cargadas`);
+                }
+            } else {
+                console.warn('⚠️ No se encontraron figuras en los datos');
+                figurasData = [];
+                renderizarFiguras();
+            }
+        } else {
+            console.error('❌ Función cargarTodosDatos no disponible');
+            figurasData = [];
+            renderizarFiguras();
+            mostrarToast('error', 'Sistema de carga no disponible');
+        }
+
     } catch (error) {
-        console.error('Error al cargar figuras:', error);
-        mostrarError('Error al cargar figuras');
+        console.error('❌ Error al cargar figuras:', error);
+        figurasData = [];
+        renderizarFiguras();
+        mostrarToast('error', 'Error al cargar figuras: ' + error.message);
     } finally {
-        hideLoading();
+        isLoading = false;
+        mostrarEstadoCarga(false);
     }
 }
 
 /**
- * Renderizar lista de figuras en tabla
+ * Renderizar tabla de figuras
  */
+function renderizarFiguras() {
+    const tbody = document.getElementById('figuras-tbody');
 
-function renderizarFiguras(figuras) {
-    // Actualizar cache global para el resto del editor
-    editor.documento.figuras = figuras || [];
+    if (!tbody) {
+        console.warn('⚠️ Elemento #figuras-tbody no encontrado');
+        return;
+    }
 
-    // Ordenar por seccion/orden
-    editor.documento.figuras.sort((a, b) => {
-        const secA = parseInt(a.SeccionOrden) || 0;
-        const secB = parseInt(b.SeccionOrden) || 0;
-        if (secA !== secB) return secA - secB;
-        return (parseInt(a.OrdenFigura) || 0) - (parseInt(b.OrdenFigura) || 0);
+    // Estado vacío
+    if (figurasData.length === 0) {
+        tbody.innerHTML = `
+            <tr>
+                <td colspan="4" class="text-center py-5">
+                    <i class="fas fa-image text-muted mb-3" style="font-size: 3rem; opacity: 0.3;"></i>
+                    <p class="text-muted mb-0">No hay figuras disponibles</p>
+                    <small class="text-muted">Las figuras se cargan desde Google Sheets</small>
+                </td>
+            </tr>
+        `;
+        return;
+    }
+
+    // Ordenar figuras por sección y orden
+    const figurasOrdenadas = [...figurasData].sort((a, b) => {
+        // Primero por sección
+        const seccionA = parseFloat(a.SeccionOrden || 0);
+        const seccionB = parseFloat(b.SeccionOrden || 0);
+        if (seccionA !== seccionB) {
+            return seccionA - seccionB;
+        }
+        // Luego por orden dentro de la sección
+        const ordenA = parseInt(a.OrdenFigura || 0);
+        const ordenB = parseInt(b.OrdenFigura || 0);
+        return ordenA - ordenB;
     });
 
-    // Reusar renderer principal (tabla responsiva)
-    if (typeof renderFiguras === 'function') {
-        renderFiguras(editor.documento.figuras);
-    }
+    // Renderizar filas
+    tbody.innerHTML = figurasOrdenadas.map((figura, index) => {
+        const numeroFigura = `${figura.SeccionOrden || '?'}.${figura.OrdenFigura || '?'}`;
+        const caption = figura.Caption || 'Sin título';
+        const ruta = figura.RutaArchivo || 'Sin archivo';
+        const fuente = figura.Fuente || '-';
+
+        return `
+            <tr>
+                <td class="text-center">
+                    <span class="badge bg-primary">${numeroFigura}</span>
+                </td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-image me-2 text-muted"></i>
+                        <span>${caption}</span>
+                    </div>
+                </td>
+                <td>
+                    <code class="text-muted small">${ruta}</code>
+                </td>
+                <td>
+                    <small class="text-muted">${fuente}</small>
+                </td>
+            </tr>
+        `;
+    }).join('');
+
+    console.log(`✅ ${figurasOrdenadas.length} figuras renderizadas`);
 }
 
-
 /**
- * Abrir modal para nueva figura
+ * Mostrar/ocultar estado de carga
  */
-document.addEventListener('DOMContentLoaded', () => {
-    const btnNuevaFigura = document.getElementById('btn-nueva-figura');
-    if (btnNuevaFigura) {
-        btnNuevaFigura.addEventListener('click', () => {
-            document.getElementById('figura-id').value = '';
-            document.getElementById('form-figura').reset();
-            document.querySelector('#modal-figura .modal-title').textContent = 'Nueva Figura';
-            abrirModal('modal-figura');
-        });
+function mostrarEstadoCarga(mostrar) {
+    const loadingElement = document.getElementById('figuras-loading');
+    const tableView = document.getElementById('figuras-table-view');
+    const emptyState = document.getElementById('figuras-empty-state');
+
+    if (loadingElement) {
+        loadingElement.classList.toggle('d-none', !mostrar);
     }
-});
 
-/**
- * Editar figura existente
- */
-async function editarFigura(figuraKey) {
-    try {
-        showLoading('Cargando figura...');
-        const figuras = await api.obtenerFiguras(editor.docId);
+    if (tableView) {
+        tableView.classList.toggle('d-none', mostrar);
+    }
 
-        // Parse composite key "seccion-orden"
-        const [seccion, orden] = figuraKey.split('-');
-        const figura = figuras.find(f =>
-            String(f.SeccionOrden) === String(seccion) &&
-            String(f.OrdenFigura) === String(orden)
-        );
-
-        if (!figura) {
-            throw new Error('Figura no encontrada');
-        }
-
-        // Llenar formulario
-        document.getElementById('figura-id').value = figuraKey;
-        document.getElementById('figura-seccion-orden').value = figura.SeccionOrden || '';
-        document.getElementById('figura-orden').value = figura.OrdenFigura || '';
-        document.getElementById('figura-ruta').value = figura.RutaArchivo || '';
-        document.getElementById('figura-caption').value = figura.Caption || '';
-        document.getElementById('figura-fuente').value = figura.Fuente || '';
-
-        document.querySelector('#modal-figura .modal-title').textContent = 'Editar Figura';
-        abrirModal('modal-figura');
-
-    } catch (error) {
-        console.error('Error al editar figura:', error);
-        mostrarError('Error al cargar figura: ' + error.message);
-    } finally {
-        hideLoading();
+    if (emptyState) {
+        emptyState.classList.add('d-none');
     }
 }
 
 /**
- * Guardar figura (crear o actualizar)
+ * Mostrar notificación toast
  */
-async function guardarFigura() {
-    const figuraKey = document.getElementById('figura-id').value;
-    const figura = {
-        SeccionOrden: document.getElementById('figura-seccion-orden').value.trim(),
-        OrdenFigura: document.getElementById('figura-orden').value.trim(),
-        RutaArchivo: document.getElementById('figura-ruta').value.trim(),
-        Caption: document.getElementById('figura-caption').value.trim(),
-        Fuente: document.getElementById('figura-fuente').value.trim()
-    };
+function mostrarToast(tipo, mensaje) {
+    // Usar el sistema de toasts de Bootstrap si está disponible
+    const toastId = `toast-${tipo}`;
+    const toastElement = document.getElementById(toastId);
+    const toastMessage = document.getElementById(`${toastId}-message`);
 
-    // Validar campos requeridos
-    if (!figura.SeccionOrden) {
-        mostrarError('La sección es obligatoria');
-        return;
-    }
-
-    if (!figura.OrdenFigura) {
-        mostrarError('El orden de la figura es obligatorio');
-        return;
-    }
-
-    if (!figura.RutaArchivo) {
-        mostrarError('La ruta de la imagen es obligatoria');
-        return;
-    }
-
-    // Validar orden jerárquico dentro de la sección
-    try {
-        const todasFiguras = await api.obtenerFiguras(editor.docId);
-        const figurasEnSeccion = todasFiguras.filter(f =>
-            String(f.SeccionOrden) === String(figura.SeccionOrden) &&
-            !(figuraKey && String(f.SeccionOrden) === figuraKey.split('-')[0] && String(f.OrdenFigura) === figuraKey.split('-')[1])
-        );
-
-        const ordenesExistentes = figurasEnSeccion.map(f => parseInt(f.OrdenFigura)).sort((a, b) => a - b);
-        const nuevoOrden = parseInt(figura.OrdenFigura);
-
-        // Validar que el orden sea secuencial
-        if (ordenesExistentes.length > 0) {
-            const maxOrden = Math.max(...ordenesExistentes);
-
-            // Si es una figura nueva, debe ser el siguiente número
-            if (!figuraKey && nuevoOrden !== maxOrden + 1 && nuevoOrden !== 1) {
-                mostrarError(`⚠️ Orden incorrecto. En la sección ${figura.SeccionOrden} ya hay ${ordenesExistentes.length} figura(s).\nEl siguiente orden debe ser ${maxOrden + 1} o puedes usar 1 si es la primera.`);
-                return;
-            }
-
-            // Verificar que no haya duplicados
-            if (ordenesExistentes.includes(nuevoOrden)) {
-                mostrarError(`⚠️ Ya existe una figura con orden ${nuevoOrden} en la sección ${figura.SeccionOrden}`);
-                return;
-            }
-
-            // Verificar que no haya saltos (ej: 1, 2, 5)
-            const todosOrdenes = [...ordenesExistentes, nuevoOrden].sort((a, b) => a - b);
-            for (let i = 0; i < todosOrdenes.length; i++) {
-                if (todosOrdenes[i] !== i + 1) {
-                    mostrarError(`⚠️ Orden jerárquico incorrecto. Las figuras deben numerarse secuencialmente (1, 2, 3...).\nFalta la figura ${i + 1} en la sección ${figura.SeccionOrden}`);
-                    return;
-                }
-            }
-        } else {
-            // Primera figura en la sección, debe ser orden 1
-            if (nuevoOrden !== 1) {
-                mostrarError(`⚠️ Esta es la primera figura en la sección ${figura.SeccionOrden}. El orden debe ser 1`);
-                return;
-            }
-        }
-
-    } catch (error) {
-        console.error('Error al validar orden:', error);
-        mostrarError('Error al validar el orden de la figura');
-        return;
-    }
-
-    try {
-        showLoading('Guardando figura...');
-
-        if (figuraKey) {
-            // Actualizar - parse composite key
-            const [seccion, orden] = figuraKey.split('-');
-            await api.actualizarFigura(editor.docId, figuraKey, figura);
-            mostrarExito('✅ Figura actualizada correctamente');
-        } else {
-            // Crear
-            await api.crearFigura(editor.docId, figura);
-            mostrarExito('✅ Figura creada correctamente');
-        }
-
-        cerrarModal('modal-figura');
-        await cargarFiguras();
-
-    } catch (error) {
-        console.error('Error al guardar figura:', error);
-        mostrarError('❌ Error al guardar figura: ' + error.message);
-    } finally {
-        hideLoading();
+    if (toastElement && toastMessage) {
+        toastMessage.textContent = mensaje;
+        const toast = new bootstrap.Toast(toastElement);
+        toast.show();
+    } else {
+        // Fallback: console
+        console.log(`${tipo.toUpperCase()}: ${mensaje}`);
     }
 }
 
 /**
- * Confirmar eliminación de figura
+ * Inicializar cuando el DOM esté listo
  */
-function confirmarEliminarFigura(figuraKey) {
-    if (confirm('¿Estás seguro de eliminar esta figura?\n\nEsta acción no se puede deshacer.')) {
-        eliminarFigura(figuraKey);
-    }
-}
-
-/**
- * Eliminar figura
- */
-async function eliminarFigura(figuraKey) {
-    try {
-        showLoading('Eliminando figura...');
-        // Parse composite key
-        const [seccion, orden] = figuraKey.split('-');
-        await api.eliminarFigura(editor.docId, figuraKey);
-        await cargarFiguras();
-        mostrarExito('✅ Figura eliminada correctamente');
-    } catch (error) {
-        console.error('Error al eliminar figura:', error);
-        mostrarError('❌ Error al eliminar figura: ' + error.message);
-    } finally {
-        hideLoading();
-    }
-}
-
-/**
- * Seleccionar imagen para figura desde el sistema local
- */
-function seleccionarImagenFigura() {
-    const input = document.getElementById('file-figura');
-    input.click();
-
-    input.onchange = async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-
-        // Validar tipo de archivo
-        const validTypes = ['image/png', 'image/jpeg', 'image/jpg'];
-        if (!validTypes.includes(file.type)) {
-            mostrarError('❌ Formato no válido. Solo se permiten PNG y JPG');
-            return;
-        }
-
-        showLoading('Subiendo imagen...');
-
-        try {
-            const resultado = await api.subirImagen(file, 'img/graficos');
-
-            if (resultado.success) {
-                document.getElementById('figura-ruta').value = resultado.ruta;
-                mostrarExito('✅ Imagen subida correctamente');
-            } else {
-                throw new Error(resultado.message || 'Error al subir imagen');
-            }
-        } catch (error) {
-            console.error('Error al subir imagen:', error);
-            mostrarError('❌ Error al subir imagen: ' + error.message);
-        } finally {
-            hideLoading();
-        }
-    };
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFiguras);
+} else {
+    initFiguras();
 }

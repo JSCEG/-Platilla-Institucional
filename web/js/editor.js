@@ -429,11 +429,11 @@ function renderFiguras(figuras) {
                 </td>
                 <td>
                     <div class="table-actions">
-                        <button class="btn-table-action btn-edit" onclick="editarFigura('${seccion}-${orden}')" 
+                        <button class="btn-table-action btn-edit" onclick="editFigura('${seccion}-${orden}')" 
                                 data-bs-toggle="tooltip" title="Editar figura completa">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="btn-table-action btn-delete" onclick="eliminarFigura('${seccion}-${orden}')"
+                        <button class="btn-table-action btn-delete" onclick="deleteFigura('${seccion}-${orden}')"
                                 data-bs-toggle="tooltip" title="Eliminar figura">
                             <i class="fas fa-trash-alt"></i>
                         </button>
@@ -688,12 +688,8 @@ function setupEditorEventListeners() {
         });
     }
 
-    const btnNuevaFigura = document.getElementById('btn-nueva-figura');
-    if (btnNuevaFigura) {
-        btnNuevaFigura.addEventListener('click', () => {
-            mostrarNotificacion('Función en desarrollo: Nueva Figura', 'info');
-        });
-    }
+    // El botón de nueva figura ahora es manejado por figuras-table.js
+    // No agregar event listener aquí para evitar conflictos
 
     const btnNuevaBibliografia = document.getElementById('btn-nueva-bibliografia');
     if (btnNuevaBibliografia) {
@@ -813,7 +809,7 @@ async function guardarCambios() {
         editor.documento.metadata = metadata;
         editor.cambiosPendientes = false;
 
-        mostrarExito('✅ Cambios guardados localmente. Nota: Para guardar en Google Sheets necesitas configurar el backend.');
+        mostrarExito('✅ Metadatos guardados correctamente.');
 
     } catch (error) {
         console.error('Error al guardar:', error);
