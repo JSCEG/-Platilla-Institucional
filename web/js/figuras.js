@@ -75,6 +75,39 @@ function setupValidacionTiempoReal() {
         seccionInput.addEventListener('input', validarDuplicado);
         ordenInput.addEventListener('input', validarDuplicado);
     }
+    
+    // Validación en tiempo real para el campo de ruta
+    const rutaInput = document.getElementById('figura-ruta');
+    const btnPreviewRuta = document.getElementById('btn-preview-ruta');
+    const btnSeleccionarImagen = document.getElementById('btn-seleccionar-imagen');
+    
+    if (rutaInput && btnPreviewRuta) {
+        const validarRuta = () => {
+            const ruta = rutaInput.value.trim();
+            
+            if (ruta) {
+                btnPreviewRuta.disabled = false;
+                btnPreviewRuta.classList.remove('btn-outline-secondary');
+                btnPreviewRuta.classList.add('btn-outline-info');
+                btnPreviewRuta.title = 'Vista previa de la imagen';
+            } else {
+                btnPreviewRuta.disabled = true;
+                btnPreviewRuta.classList.remove('btn-outline-info');
+                btnPreviewRuta.classList.add('btn-outline-secondary');
+                btnPreviewRuta.title = 'Ingresa una ruta primero';
+            }
+        };
+        
+        rutaInput.addEventListener('input', validarRuta);
+        
+        // Validar estado inicial
+        validarRuta();
+    }
+    
+    // El botón de seleccionar imagen siempre está habilitado
+    if (btnSeleccionarImagen) {
+        btnSeleccionarImagen.title = 'Seleccionar imagen desde tu computadora';
+    }
 }
 
 /**
@@ -234,6 +267,10 @@ function renderizarFiguras() {
                 </td>
                 <td>
                     <div class="btn-group btn-group-sm">
+                        <button class="btn btn-outline-info btn-preview" id="preview-${figuraId}" 
+                                onclick="previewFigura('${figuraId}')" title="Vista previa de imagen">
+                            <i class="fas fa-eye"></i>
+                        </button>
                         <button class="btn btn-outline-primary" onclick="editarFigura('${figuraId}')" title="Editar">
                             <i class="fas fa-edit"></i>
                         </button>
@@ -247,6 +284,11 @@ function renderizarFiguras() {
     }).join('');
 
     console.log(`✅ ${figurasOrdenadas.length} figuras renderizadas`);
+    
+    // Verificar disponibilidad de imágenes después del renderizado
+    setTimeout(() => {
+        verificarImagenesDisponibles();
+    }, 100);
 }
 
 /**
@@ -496,7 +538,7 @@ async function guardarFigura() {
 }
 
 /**
- * Eliminar figura
+ * Eliminar figura - Mostrar modal de confirmación
  */
 async function eliminarFigura(figuraId) {
     const figura = figurasData.find(f => f.id === figuraId);
@@ -506,7 +548,108 @@ async function eliminarFigura(figuraId) {
         return;
     }
 
-    if (!confirm(`¿Eliminar figura ${figura.SeccionOrden}.${figura.OrdenFigura}?`)) {
+    console.log('🗑️ Solicitando confirmación para eliminar figura:', figuraId);
+    
+    // Mostrar modal de confirmación
+    mostrarModalEliminarFigura(figura);
+}
+
+/**
+ * Mostrar modal de confirmación para eliminar figura
+ */
+function mostrarModalEliminarFigura(figura) {
+    const figuraId = figura.id;
+    const numeroFigura = `${figura.SeccionOrden}.${figura.OrdenFigura}`;
+    const titulo = figura.Caption || 'Sin título';
+    const ruta = figura.RutaArchivo || 'Sin ruta';
+    
+    const modalHtml = `
+        <div class="modal fade" id="eliminar-figura-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-danger text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            Confirmar Eliminación
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="text-center mb-3">
+                            <i class="fas fa-image text-danger" style="font-size: 3rem; opacity: 0.7;"></i>
+                        </div>
+                        
+                        <div class="alert alert-warning">
+                            <i class="fas fa-exclamation-triangle me-2"></i>
+                            <strong>¿Estás seguro de eliminar esta figura?</strong>
+                        </div>
+                        
+                        <div class="card">
+                            <div class="card-body">
+                                <h6 class="card-title text-danger">
+                                    <i class="fas fa-hashtag me-1"></i>
+                                    Figura ${numeroFigura}
+                                </h6>
+                                <p class="card-text">
+                                    <strong>Título:</strong> ${titulo}
+                                </p>
+                                <p class="card-text">
+                                    <strong>Archivo:</strong> <code class="text-muted">${ruta}</code>
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="alert alert-info mt-3">
+                            <i class="fas fa-info-circle me-2"></i>
+                            <small>
+                                <strong>Nota:</strong> Esta acción no se puede deshacer. 
+                                El archivo de imagen no será eliminado de tu computadora.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>
+                            Cancelar
+                        </button>
+                        <button type="button" class="btn btn-danger" onclick="confirmarEliminarFigura('${figuraId}')" data-bs-dismiss="modal">
+                            <i class="fas fa-trash me-1"></i>
+                            Sí, Eliminar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remover modal anterior si existe
+    const existingModal = document.getElementById('eliminar-figura-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Agregar nuevo modal
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('eliminar-figura-modal'));
+    modal.show();
+    
+    // Limpiar modal al cerrar
+    document.getElementById('eliminar-figura-modal').addEventListener('hidden.bs.modal', function() {
+        this.remove();
+    });
+}
+
+/**
+ * Confirmar y ejecutar eliminación de figura
+ */
+async function confirmarEliminarFigura(figuraId) {
+    console.log('🗑️ Confirmando eliminación de figura:', figuraId);
+    
+    const figura = figurasData.find(f => f.id === figuraId);
+    if (!figura) {
+        mostrarToast('error', 'Figura no encontrada');
         return;
     }
 
@@ -534,7 +677,10 @@ async function eliminarFigura(figuraId) {
         console.log('📥 Respuesta:', result);
 
         if (result.success) {
-            mostrarToast('success', '✅ Figura eliminada');
+            // Eliminar de la lista local también
+            figurasData = figurasData.filter(f => f.id !== figuraId);
+            
+            mostrarToast('success', `✅ Figura ${figura.SeccionOrden}.${figura.OrdenFigura} eliminada`);
             await cargarFiguras();
         } else {
             throw new Error(result.error || 'Error al eliminar figura');
@@ -767,6 +913,58 @@ function limpiarResiduosModal() {
 }
 
 /**
+ * Verificar disponibilidad de imágenes y habilitar/deshabilitar botones de preview
+ */
+function verificarImagenesDisponibles() {
+    console.log('🔍 Verificando disponibilidad de imágenes...');
+    
+    figurasData.forEach(figura => {
+        const figuraId = figura.id;
+        const rutaImagen = figura.RutaArchivo;
+        const btnPreview = document.getElementById(`preview-${figuraId}`);
+        
+        if (btnPreview && rutaImagen) {
+            verificarImagen(rutaImagen, figuraId, btnPreview);
+        }
+    });
+}
+
+/**
+ * Verificar si una imagen específica existe
+ */
+function verificarImagen(rutaImagen, figuraId, btnPreview) {
+    // Crear una imagen temporal para verificar si existe
+    const img = new Image();
+    
+    img.onload = function() {
+        // Imagen existe - habilitar botón
+        btnPreview.disabled = false;
+        btnPreview.classList.remove('btn-outline-secondary');
+        btnPreview.classList.add('btn-outline-info');
+        btnPreview.title = 'Vista previa de imagen';
+        btnPreview.querySelector('i').className = 'fas fa-eye';
+        
+        console.log(`✅ Imagen disponible: ${rutaImagen}`);
+    };
+    
+    img.onerror = function() {
+        // Imagen no existe - deshabilitar botón
+        btnPreview.disabled = true;
+        btnPreview.classList.remove('btn-outline-info');
+        btnPreview.classList.add('btn-outline-secondary');
+        btnPreview.title = 'Imagen no encontrada: ' + rutaImagen;
+        btnPreview.querySelector('i').className = 'fas fa-eye-slash';
+        
+        console.log(`❌ Imagen no disponible: ${rutaImagen}`);
+    };
+    
+    // Intentar cargar la imagen
+    // Construir ruta relativa desde la ubicación del HTML
+    const rutaCompleta = rutaImagen.startsWith('../') ? rutaImagen : '../' + rutaImagen;
+    img.src = rutaCompleta;
+}
+
+/**
  * Obtener el siguiente número de figura disponible para una sección
  */
 function obtenerSiguienteNumeroDisponible(seccion) {
@@ -825,12 +1023,448 @@ function mostrarFigurasExistentes() {
 }
 
 /**
+ * Previsualizar figura en modal
+ */
+function previewFigura(figuraId) {
+    console.log('👁️ Previsualizando figura:', figuraId);
+    
+    const figura = figurasData.find(f => f.id === figuraId);
+    if (!figura) {
+        mostrarToast('error', 'Figura no encontrada');
+        return;
+    }
+    
+    const rutaImagen = figura.RutaArchivo;
+    const titulo = figura.Caption || 'Sin título';
+    const fuente = figura.Fuente || 'No especificado';
+    const [seccion, orden] = figuraId.split('-');
+    
+    // Construir ruta completa
+    const rutaCompleta = rutaImagen.startsWith('../') ? rutaImagen : '../' + rutaImagen;
+    
+    // Crear modal de previsualización
+    const modalHtml = `
+        <div class="modal fade" id="preview-figura-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-info text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-eye me-2"></i>
+                            Vista Previa - Figura ${seccion}.${orden}
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center p-4">
+                        <div class="mb-3">
+                            <img id="preview-image" src="${rutaCompleta}" alt="${titulo}" 
+                                 class="img-fluid rounded shadow" 
+                                 style="max-height: 500px; max-width: 100%;"
+                                 onload="imagenCargadaCorrectamente()"
+                                 onerror="imagenNoEncontrada('${rutaImagen}')">
+                        </div>
+                        <h6 class="text-primary mb-2">${titulo}</h6>
+                        <div class="row text-start">
+                            <div class="col-md-6">
+                                <p class="text-muted mb-1">
+                                    <i class="fas fa-folder me-1 text-info"></i>
+                                    <strong>Ruta:</strong>
+                                </p>
+                                <code class="text-muted small">${rutaImagen}</code>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-muted mb-1">
+                                    <i class="fas fa-quote-left me-1 text-success"></i>
+                                    <strong>Fuente:</strong>
+                                </p>
+                                <em class="text-muted">${fuente}</em>
+                            </div>
+                        </div>
+                        <div id="image-info" class="mt-3 text-muted small"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>
+                            Cerrar
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="editarFigura('${figuraId}'); bootstrap.Modal.getInstance(document.getElementById('preview-figura-modal')).hide();">
+                            <i class="fas fa-edit me-1"></i>
+                            Editar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remover modal anterior si existe
+    const existingModal = document.getElementById('preview-figura-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Agregar nuevo modal
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('preview-figura-modal'));
+    modal.show();
+    
+    // Limpiar modal al cerrar
+    document.getElementById('preview-figura-modal').addEventListener('hidden.bs.modal', function() {
+        this.remove();
+    });
+}
+
+/**
+ * Callback cuando la imagen se carga correctamente
+ */
+function imagenCargadaCorrectamente() {
+    const img = document.getElementById('preview-image');
+    const infoDiv = document.getElementById('image-info');
+    
+    if (img && infoDiv) {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+        const size = ((img.src.length * 0.75) / 1024).toFixed(1); // Estimación aproximada
+        
+        infoDiv.innerHTML = `
+            <i class="fas fa-info-circle me-1"></i>
+            Dimensiones: ${width} × ${height} px | Tamaño estimado: ~${size} KB
+        `;
+    }
+}
+
+/**
+ * Callback cuando la imagen no se puede cargar
+ */
+function imagenNoEncontrada(rutaOriginal) {
+    const img = document.getElementById('preview-image');
+    const infoDiv = document.getElementById('image-info');
+    
+    if (img) {
+        // Mostrar imagen de placeholder
+        img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIiBzdHJva2U9IiNkZWUyZTYiIHN0cm9rZS13aWR0aD0iMiIvPjx0ZXh0IHg9IjUwJSIgeT0iNDAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iMTYiIGZpbGw9IiM2Yzc1N2QiIHRleHQtYW5jaG9yPSJtaWRkbGUiPjxpIGNsYXNzPSJmYXMgZmEtaW1hZ2UiPjwvaT4gSW1hZ2VuIG5vIGVuY29udHJhZGE8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI2MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzZjNzU3ZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VmVyaWZpY2EgbGEgcnV0YTogJyArIHJ1dGFPcmlnaW5hbCArICc8L3RleHQ+PC9zdmc+';
+        img.alt = 'Imagen no encontrada';
+        img.style.border = '2px dashed #dc3545';
+    }
+    
+    if (infoDiv) {
+        infoDiv.innerHTML = `
+            <div class="alert alert-warning mb-0">
+                <i class="fas fa-exclamation-triangle me-1"></i>
+                <strong>Imagen no encontrada:</strong> ${rutaOriginal}
+                <br><small>Verifica que el archivo existe en la ruta especificada.</small>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Previsualizar imagen desde el campo de ruta en el modal de edición
+ */
+function previewRutaImagen() {
+    const rutaInput = document.getElementById('figura-ruta');
+    const ruta = rutaInput.value.trim();
+    
+    if (!ruta) {
+        mostrarToast('warning', '⚠️ Ingresa una ruta de imagen primero');
+        rutaInput.focus();
+        return;
+    }
+    
+    console.log('👁️ Previsualizando ruta:', ruta);
+    
+    // Obtener otros datos del formulario para contexto
+    const seccion = document.getElementById('figura-seccion-orden').value.trim() || '?';
+    const orden = document.getElementById('figura-orden').value.trim() || '?';
+    const titulo = document.getElementById('figura-caption').value.trim() || 'Vista previa';
+    
+    // Construir ruta completa
+    const rutaCompleta = ruta.startsWith('../') ? ruta : '../' + ruta;
+    
+    // Crear modal de previsualización simple
+    const modalHtml = `
+        <div class="modal fade" id="preview-ruta-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-primary text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-eye me-2"></i>
+                            Vista Previa - Figura ${seccion}.${orden}
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center p-4">
+                        <div class="mb-3">
+                            <img id="preview-ruta-image" src="${rutaCompleta}" alt="${titulo}" 
+                                 class="img-fluid rounded shadow" 
+                                 style="max-height: 400px; max-width: 100%;"
+                                 onload="rutaImagenCargada()"
+                                 onerror="rutaImagenError('${ruta}')">
+                        </div>
+                        <h6 class="text-primary mb-2">${titulo}</h6>
+                        <p class="text-muted mb-1">
+                            <i class="fas fa-folder me-1 text-info"></i>
+                            <code class="text-muted">${ruta}</code>
+                        </p>
+                        <div id="ruta-image-info" class="mt-3 text-muted small"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>
+                            Cerrar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remover modal anterior si existe
+    const existingModal = document.getElementById('preview-ruta-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Agregar nuevo modal
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('preview-ruta-modal'));
+    modal.show();
+    
+    // Limpiar modal al cerrar
+    document.getElementById('preview-ruta-modal').addEventListener('hidden.bs.modal', function() {
+        this.remove();
+    });
+}
+
+/**
+ * Callback para imagen cargada desde ruta
+ */
+function rutaImagenCargada() {
+    const img = document.getElementById('preview-ruta-image');
+    const infoDiv = document.getElementById('ruta-image-info');
+    
+    if (img && infoDiv) {
+        const width = img.naturalWidth;
+        const height = img.naturalHeight;
+        
+        infoDiv.innerHTML = `
+            <div class="alert alert-success mb-0">
+                <i class="fas fa-check-circle me-1"></i>
+                <strong>Imagen encontrada:</strong> ${width} × ${height} px
+            </div>
+        `;
+    }
+}
+
+/**
+ * Callback para error de imagen desde ruta
+ */
+function rutaImagenError(rutaOriginal) {
+    const img = document.getElementById('preview-ruta-image');
+    const infoDiv = document.getElementById('ruta-image-info');
+    
+    if (img) {
+        // Mostrar imagen de error
+        img.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjhmOWZhIiBzdHJva2U9IiNkYzM1NDUiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLWRhc2hhcnJheT0iMTAiLz48dGV4dCB4PSI1MCUiIHk9IjQ1JSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjE4IiBmaWxsPSIjZGMzNTQ1IiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7inYwgSW1hZ2VuIG5vIGVuY29udHJhZGE8L3RleHQ+PHRleHQgeD0iNTAlIiB5PSI2MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzZjNzU3ZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+VmVyaWZpY2EgbGEgcnV0YTwvdGV4dD48L3N2Zz4=';
+        img.alt = 'Imagen no encontrada';
+    }
+    
+    if (infoDiv) {
+        infoDiv.innerHTML = `
+            <div class="alert alert-danger mb-0">
+                <i class="fas fa-exclamation-triangle me-1"></i>
+                <strong>Imagen no encontrada:</strong> ${rutaOriginal}
+                <br><small>Verifica que el archivo existe y la ruta es correcta.</small>
+            </div>
+        `;
+    }
+}
+
+/**
+ * Abrir selector de archivos para imágenes
+ */
+function seleccionarImagen() {
+    console.log('📁 Abriendo selector de imágenes...');
+    
+    const fileInput = document.getElementById('file-selector-imagen');
+    if (fileInput) {
+        fileInput.click();
+    } else {
+        console.error('❌ No se encontró el input de archivo');
+        mostrarToast('error', 'Error al abrir selector de archivos');
+    }
+}
+
+/**
+ * Manejar imagen seleccionada
+ */
+function imagenSeleccionada(input) {
+    const file = input.files[0];
+    if (!file) {
+        console.log('❌ No se seleccionó ningún archivo');
+        return;
+    }
+    
+    console.log('📷 Imagen seleccionada:', file.name);
+    
+    // Validar que sea una imagen
+    if (!file.type.startsWith('image/')) {
+        mostrarToast('error', '❌ Por favor selecciona un archivo de imagen válido');
+        input.value = ''; // Limpiar selección
+        return;
+    }
+    
+    // Generar ruta sugerida basada en la sección y orden
+    const seccion = document.getElementById('figura-seccion-orden').value.trim();
+    const orden = document.getElementById('figura-orden').value.trim();
+    
+    let rutaSugerida;
+    if (seccion && orden) {
+        // Obtener extensión del archivo
+        const extension = file.name.split('.').pop().toLowerCase();
+        rutaSugerida = `img/graficos/figura_${seccion}_${orden}.${extension}`;
+    } else {
+        // Usar nombre original pero en la carpeta correcta
+        rutaSugerida = `img/graficos/${file.name}`;
+    }
+    
+    // Actualizar campo de ruta
+    const rutaInput = document.getElementById('figura-ruta');
+    rutaInput.value = rutaSugerida;
+    
+    // Trigger validación
+    rutaInput.dispatchEvent(new Event('input'));
+    
+    // Mostrar información al usuario
+    mostrarToast('success', `✅ Ruta sugerida: ${rutaSugerida}`);
+    
+    // Mostrar modal de confirmación con preview
+    mostrarModalConfirmacionImagen(file, rutaSugerida);
+    
+    // Limpiar input para permitir seleccionar el mismo archivo otra vez
+    input.value = '';
+}
+
+/**
+ * Mostrar modal de confirmación con preview de la imagen seleccionada
+ */
+function mostrarModalConfirmacionImagen(file, rutaSugerida) {
+    // Crear URL temporal para preview
+    const urlTemporal = URL.createObjectURL(file);
+    
+    const modalHtml = `
+        <div class="modal fade" id="confirmacion-imagen-modal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header bg-success text-white">
+                        <h5 class="modal-title">
+                            <i class="fas fa-image me-2"></i>
+                            Imagen Seleccionada
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img src="${urlTemporal}" alt="Preview" 
+                                     class="img-fluid rounded shadow mb-3" 
+                                     style="max-height: 300px; width: 100%; object-fit: contain;">
+                            </div>
+                            <div class="col-md-6">
+                                <h6 class="text-primary mb-3">Información del Archivo</h6>
+                                <div class="mb-2">
+                                    <strong>Nombre:</strong> ${file.name}
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Tamaño:</strong> ${(file.size / 1024).toFixed(1)} KB
+                                </div>
+                                <div class="mb-2">
+                                    <strong>Tipo:</strong> ${file.type}
+                                </div>
+                                <div class="mb-3">
+                                    <strong>Ruta sugerida:</strong>
+                                    <br><code class="text-primary">${rutaSugerida}</code>
+                                </div>
+                                
+                                <div class="alert alert-info">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    <strong>Importante:</strong> Debes copiar manualmente este archivo a la carpeta 
+                                    <code>img/graficos/</code> de tu proyecto LaTeX con el nombre sugerido.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>
+                            Cancelar
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="confirmarRutaImagen('${rutaSugerida}')" data-bs-dismiss="modal">
+                            <i class="fas fa-check me-1"></i>
+                            Usar esta Ruta
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remover modal anterior si existe
+    const existingModal = document.getElementById('confirmacion-imagen-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Agregar nuevo modal
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Mostrar modal
+    const modal = new bootstrap.Modal(document.getElementById('confirmacion-imagen-modal'));
+    modal.show();
+    
+    // Limpiar modal y URL temporal al cerrar
+    document.getElementById('confirmacion-imagen-modal').addEventListener('hidden.bs.modal', function() {
+        URL.revokeObjectURL(urlTemporal);
+        this.remove();
+    });
+}
+
+/**
+ * Confirmar y usar la ruta de imagen sugerida
+ */
+function confirmarRutaImagen(ruta) {
+    const rutaInput = document.getElementById('figura-ruta');
+    rutaInput.value = ruta;
+    
+    // Trigger validación
+    rutaInput.dispatchEvent(new Event('input'));
+    
+    mostrarToast('info', `📋 Ruta configurada: ${ruta}`);
+    
+    console.log('✅ Ruta de imagen confirmada:', ruta);
+}
+
+/**
  * Función de emergencia para usuarios - accesible desde consola
  */
 window.limpiarModales = limpiarModalesProblematicos;
 window.abrirModalFiguraSimple = abrirModalFiguraSimple;
 window.cerrarModalFiguraSimple = cerrarModalFiguraSimple;
 window.mostrarFigurasExistentes = mostrarFigurasExistentes;
+window.previewFigura = previewFigura;
+window.previewRutaImagen = previewRutaImagen;
+window.seleccionarImagen = seleccionarImagen;
+window.imagenSeleccionada = imagenSeleccionada;
+window.confirmarRutaImagen = confirmarRutaImagen;
+window.mostrarModalEliminarFigura = mostrarModalEliminarFigura;
+window.confirmarEliminarFigura = confirmarEliminarFigura;
+window.imagenCargadaCorrectamente = imagenCargadaCorrectamente;
+window.imagenNoEncontrada = imagenNoEncontrada;
+window.rutaImagenCargada = rutaImagenCargada;
+window.rutaImagenError = rutaImagenError;
 
 /**
  * Exponer funciones globalmente para evitar conflictos

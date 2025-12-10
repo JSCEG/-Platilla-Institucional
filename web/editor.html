@@ -285,17 +285,10 @@
                                 <i class="fas fa-image me-2"></i>
                                 Figuras y Gráficos
                             </h2>
-                            <div class="d-flex gap-2">
-                                <button class="btn btn-primary" id="btn-nueva-figura">
-                                    <i class="fas fa-plus"></i>
-                                    Nueva Figura
-                                </button>
-                                <button class="btn btn-outline-warning btn-sm" onclick="limpiarModales()" 
-                                        title="Limpiar modales problemáticos">
-                                    <i class="fas fa-tools"></i>
-                                    Reparar
-                                </button>
-                            </div>
+                            <button class="btn btn-primary" id="btn-nueva-figura">
+                                <i class="fas fa-plus"></i>
+                                Nueva Figura
+                            </button>
                         </div>
 
                         <!-- Mensaje informativo -->
@@ -596,9 +589,23 @@
 
                         <div class="mb-3">
                             <label class="form-label">Ruta de Imagen *</label>
-                            <input type="text" class="form-control" id="figura-ruta"
-                                placeholder="img/graficos/figura_2_1.png" required>
-                            <div class="form-text">Ruta relativa desde la raíz del proyecto</div>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="figura-ruta"
+                                    placeholder="img/graficos/figura_2_1.png" required>
+                                <button class="btn btn-outline-secondary" type="button" id="btn-seleccionar-imagen" 
+                                        onclick="seleccionarImagen()" title="Seleccionar imagen desde carpeta img/">
+                                    <i class="fas fa-folder-open"></i>
+                                </button>
+                                <button class="btn btn-outline-info" type="button" id="btn-preview-ruta" 
+                                        onclick="previewRutaImagen()" title="Vista previa de la imagen">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                            <div class="form-text">
+                                Ruta relativa desde la raíz del proyecto (carpeta img/)
+                                <input type="file" id="file-selector-imagen" accept="image/*" style="display: none;" 
+                                       onchange="imagenSeleccionada(this)">
+                            </div>
                         </div>
 
                         <div class="mb-3">
