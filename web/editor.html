@@ -180,7 +180,9 @@
                                 <div class="input-group">
                                     <input type="text" id="input-portada-ruta" class="form-control"
                                         placeholder="img/portada.png">
-                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-portada">
+                                    <input type="file" id="file-portada" accept="image/*" style="display:none">
+                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-portada"
+                                        type="button" onclick="seleccionarPortada()">
                                         <i class="fas fa-folder-open"></i>
                                         Seleccionar
                                     </button>
@@ -192,7 +194,9 @@
                                 <div class="input-group">
                                     <input type="text" id="input-contraportada-ruta" class="form-control"
                                         placeholder="img/contraportada.png">
-                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-contraportada">
+                                    <input type="file" id="file-contraportada" accept="image/*" style="display:none">
+                                    <button class="btn btn-secondary btn-small" id="btn-seleccionar-contraportada"
+                                        type="button" onclick="seleccionarContraportada()">
                                         <i class="fas fa-folder-open"></i>
                                         Seleccionar
                                     </button>

@@ -79,3 +79,93 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+/**
+ * Seleccionar imagen de portada desde el sistema local
+ */
+function seleccionarPortada() {
+    const input = document.getElementById('file-portada');
+    input.click();
+
+    input.onchange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        // Validar tipo de archivo
+        const validTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+        if (!validTypes.includes(file.type)) {
+            mostrarError('❌ Formato no válido. Solo se permiten PNG y JPG');
+            return;
+        }
+
+        // Validar tamaño (máx 5MB)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            mostrarError('❌ La imagen es muy grande (máximo 5MB)');
+            return;
+        }
+
+        showLoading('Subiendo imagen de portada...');
+
+        try {
+            const resultado = await api.subirImagen(file, 'img');
+
+            if (resultado.success) {
+                document.getElementById('input-portada-ruta').value = resultado.ruta;
+                mostrarExito('✅ Imagen de portada subida correctamente');
+            } else {
+                throw new Error(resultado.message || 'Error al subir imagen');
+            }
+        } catch (error) {
+            console.error('Error al subir portada:', error);
+            mostrarError('❌ Error al subir imagen: ' + error.message);
+        } finally {
+            hideLoading();
+        }
+    };
+}
+
+/**
+ * Seleccionar imagen de contraportada desde el sistema local
+ */
+function seleccionarContraportada() {
+    const input = document.getElementById('file-contraportada');
+    input.click();
+
+    input.onchange = async (e) => {
+        const file = e.target.files[0];
+        if (!file) return;
+
+        // Validar tipo de archivo
+        const validTypes = ['image/png', 'image/jpeg', 'image/jpg'];
+        if (!validTypes.includes(file.type)) {
+            mostrarError('❌ Formato no válido. Solo se permiten PNG y JPG');
+            return;
+        }
+
+        // Validar tamaño (máx 5MB)
+        const maxSize = 5 * 1024 * 1024;
+        if (file.size > maxSize) {
+            mostrarError('❌ La imagen es muy grande (máximo 5MB)');
+            return;
+        }
+
+        showLoading('Subiendo imagen de contraportada...');
+
+        try {
+            const resultado = await api.subirImagen(file, 'img');
+
+            if (resultado.success) {
+                document.getElementById('input-contraportada-ruta').value = resultado.ruta;
+                mostrarExito('✅ Imagen de contraportada subida correctamente');
+            } else {
+                throw new Error(resultado.message || 'Error al subir imagen');
+            }
+        } catch (error) {
+            console.error('Error al subir contraportada:', error);
+            mostrarError('❌ Error al subir imagen: ' + error.message);
+        } finally {
+            hideLoading();
+        }
+    };
+}

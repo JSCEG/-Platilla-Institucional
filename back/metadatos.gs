@@ -91,7 +91,7 @@ function updateMetadatos(data) {
     throw new Error(`No se encontró el documento con ID "${docId}"`);
   }
 
-  // Mapeo de campos a columnas (basado en el orden típico)
+  // Mapeo de campos a columnas (basado en el orden real en Google Sheets)
   const columnMap = {
     'Titulo': 1,
     'Subtitulo': 2,
@@ -102,10 +102,10 @@ function updateMetadatos(data) {
     'DocumentoCorto': 7,
     'Version': 8,
     'PalabrasClave': 9,
-    'PortadaRuta': 10,
-    'ContraportadaRuta': 11,
-    'ResumenEjecutivo': 12,
-    'DatosClave': 13
+    'ResumenEjecutivo': 10,      // Columna K
+    'DatosClave': 11,             // Columna L
+    'PortadaRuta': 12,            // Columna M
+    'ContraportadaRuta': 13       // Columna N
   };
 
   // Actualizar cada campo
@@ -141,7 +141,7 @@ function createDocumento(data) {
     }
   }
 
-  // Crear nueva fila
+  // Crear nueva fila (orden correcto según Google Sheets)
   const newRow = [
     docId,
     metadatos.Titulo || '',
@@ -153,10 +153,10 @@ function createDocumento(data) {
     metadatos.DocumentoCorto || '',
     metadatos.Version || '',
     metadatos.PalabrasClave || '',
-    metadatos.PortadaRuta || '',
-    metadatos.ContraportadaRuta || '',
-    metadatos.ResumenEjecutivo || '',
-    metadatos.DatosClave || ''
+    metadatos.ResumenEjecutivo || '',      // Columna K
+    metadatos.DatosClave || '',             // Columna L
+    metadatos.PortadaRuta || '',            // Columna M
+    metadatos.ContraportadaRuta || ''       // Columna N
   ];
 
   sheet.appendRow(newRow);
