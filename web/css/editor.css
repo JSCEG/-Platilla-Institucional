@@ -148,20 +148,6 @@
 .form-group label {
   font-weight: 600;
   color: var(--color-text-primary);
-  font-size: 0.95rem;
-}
-
-.form-control {
-  padding: var(--spacing-xs) var(--spacing-sm);
-  border: 2px solid var(--color-border);
-  border-radius: var(--border-radius-sm);
-  font-family: var(--font-family-body);
-  font-size: 0.95rem;
-  transition: all 0.3s ease;
-  background: white;
-}
-
-.form-control:focus {
   outline: none;
   border-color: var(--color-gobmx-guinda);
   box-shadow: 0 0 0 3px rgba(155, 34, 71, 0.1);

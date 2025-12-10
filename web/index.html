@@ -31,8 +31,15 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
     <!-- Estilos -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-overrides.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -55,7 +62,7 @@
                 </div>
                 <h1 class="header-title">Editor de Documentos LaTeX</h1>
                 <div class="header-actions">
-                    <button class="btn btn-secondary" id="btn-ayuda">
+                    <button class="btn btn-secondary" id="btn-ayuda" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Obtener ayuda sobre el editor">
                         <i class="fas fa-question-circle"></i>
                         Ayuda
                     </button>
@@ -71,7 +78,7 @@
             <section id="dashboard" class="dashboard">
                 <div class="dashboard-header">
                     <h2 class="section-title">Documentos Disponibles</h2>
-                    <button class="btn btn-primary" id="btn-nuevo-documento">
+                    <button class="btn btn-primary" id="btn-nuevo-documento" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Crear un nuevo documento LaTeX">
                         <i class="fas fa-plus"></i>
                         Nuevo Documento
                     </button>
@@ -80,6 +87,14 @@
                 <!-- Lista de Documentos -->
                 <div id="documentos-lista" class="documentos-grid">
                     <!-- Los documentos se cargarán dinámicamente aquí -->
+                    <div class="d-none" id="loading-documentos">
+                        <div class="text-center p-4">
+                            <div class="spinner-border text-primary" role="status">
+                                <span class="visually-hidden">Cargando...</span>
+                            </div>
+                            <p class="mt-2 text-muted">Cargando documentos...</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>
@@ -99,6 +114,45 @@
         </div>
     </footer>
 
+    <!-- Toast Container para notificaciones -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="toast-success" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-check-circle me-2"></i>
+                    <span id="toast-success-message">Operación completada exitosamente</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        
+        <div id="toast-error" class="toast align-items-center text-white bg-danger border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-exclamation-circle me-2"></i>
+                    <span id="toast-error-message">Ha ocurrido un error</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        
+        <div id="toast-info" class="toast align-items-center text-white bg-primary border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <i class="fas fa-info-circle me-2"></i>
+                    <span id="toast-info-message">Información</span>
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+    <!-- Bootstrap Initialization -->
+    <script src="js/bootstrap-init.js"></script>
+    
     <!-- Scripts -->
     <script src="js/config.js"></script>
     <script src="js/api.js"></script>

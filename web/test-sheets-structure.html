@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Estructura Google Sheets - SENER LaTeX</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .test-section {
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background: #f8f9fa;
+        }
+        .sheets-preview {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+        }
+        .column-header {
+            background: #e9ecef;
+            font-weight: bold;
+            padding: 5px;
+            border: 1px solid #ccc;
+        }
+        .cell {
+            padding: 5px;
+            border: 1px solid #eee;
+            min-height: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">
+                    <i class="fas fa-table me-2 text-success"></i>
+                    Test Estructura Google Sheets
+                </h1>
+                
+                <!-- Estructura Actual -->
+                <div class="test-section">
+                    <h5><i class="fas fa-eye me-2"></i>Estructura Actual de Google Sheets</h5>
+                    <div class="sheets-preview">
+                        <div class="row g-0">
+                            <div class="col column-header">A: DocumentoID</div>
+                            <div class="col column-header">B: SeccionOrden</div>
+                            <div class="col column-header">C: OrdenFigura</div>
+                            <div class="col column-header">D: RutaArchivo</div>
+                            <div class="col column-header">E: Caption</div>
+                            <div class="col column-header">F: Fuente</div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col cell">D01</div>
+                            <div class="col cell">2</div>
+                            <div class="col cell">1</div>
+                            <div class="col cell">img/graficos/figura_2_1.png</div>
+                            <div class="col cell">Evolución de la capacidad instalada por tecnología, 2020-2025</div>
+                            <div class="col cell">Elaboración propia con datos del Sistema Nacional de Energía 2024 (SENER).</div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col cell">D01</div>
+                            <div class="col cell">3</div>
+                            <div class="col cell">1</div>
+                            <div class="col cell">img/graficos/figura_3_1.png</div>
+                            <div class="col cell">Distribución del consumo final de energía por sector, 2024</div>
+                            <div class="col cell">Cálculos de la Unidad de Planeación con información de la CFE y SENER.</div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col cell">D01</div>
+                            <div class="col cell">4</div>
+                            <div class="col cell">1</div>
+                            <div class="col cell">img/graficos/figura_4_1.png</div>
+                            <div class="col cell">Emisiones de GEI del sector energético y contribución a la generación eléctrica</div>
+                            <div class="col cell">Inventario Nacional de Emisiones de GEI 2024 y proyecciones institucionales. SENER, 2025</div>
+                        </div>
+                        <div class="row g-0">
+                            <div class="col cell">D01</div>
+                            <div class="col cell">5</div>
+                            <div class="col cell">1</div>
+                            <div class="col cell">img/graficos/figura_5_1.png</div>
+                            <div class="col cell">Evolución de la capacidad instalada por tecnología, 2020-2025.</div>
+                            <div class="col cell">SENER, 2025</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pruebas de Operaciones -->
+                <div class="test-section">
+                    <h5><i class="fas fa-cogs me-2"></i>Pruebas de Operaciones CRUD</h5>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <button class="btn btn-success w-100 mb-2" onclick="probarCrearFiguraReal()">
+                                <i class="fas fa-plus me-1"></i>
+                                Crear Figura Real
+                            </button>
+                            <small class="text-muted">Crea: D01, Sección 6, Orden 1</small>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-warning w-100 mb-2" onclick="probarActualizarFiguraReal()">
+                                <i class="fas fa-edit me-1"></i>
+                                Actualizar Figura Existente
+                            </button>
+                            <small class="text-muted">Actualiza: D01, Sección 2, Orden 1</small>
+                        </div>
+                        <div class="col-md-4">
+                            <button class="btn btn-danger w-100 mb-2" onclick="probarEliminarFiguraReal()">
+                                <i class="fas fa-trash me-1"></i>
+                                Eliminar Figura Test
+                            </button>
+                            <small class="text-muted">Elimina: D01, Sección 6, Orden 1</small>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Verificación de Datos -->
+                <div class="test-section">
+                    <h5><i class="fas fa-search me-2"></i>Verificación de Datos</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-info w-100 mb-2" onclick="verificarFigurasD01()">
+                                <i class="fas fa-list me-1"></i>
+                                Listar Figuras D01
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-secondary w-100 mb-2" onclick="limpiarResultados()">
+                                <i class="fas fa-broom me-1"></i>
+                                Limpiar Resultados
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Resultados -->
+                <div class="test-section">
+                    <h5><i class="fas fa-clipboard-list me-2"></i>Resultados de Pruebas</h5>
+                    <div id="resultados" style="max-height: 400px; overflow-y: auto;">
+                        <p class="text-muted">Los resultados aparecerán aquí...</p>
+                    </div>
+                </div>
+                
+                <!-- Navegación -->
+                <div class="text-center mt-4">
+                    <a href="editor.html?id=D01" class="btn btn-primary me-2">
+                        <i class="fas fa-edit me-1"></i>
+                        Ir al Editor (D01)
+                    </a>
+                    <a href="debug-api-figuras.html" class="btn btn-outline-warning me-2">
+                        <i class="fas fa-bug me-1"></i>
+                        Debug API
+                    </a>
+                    <a href="index.html" class="btn btn-outline-secondary">
+                        <i class="fas fa-home me-1"></i>
+                        Inicio
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts necesarios -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    
+    <script>
+        function log(mensaje, tipo = 'info') {
+            const timestamp = new Date().toLocaleTimeString();
+            const resultados = document.getElementById('resultados');
+            
+            // Si es el primer mensaje, limpiar
+            if (resultados.innerHTML.includes('Los resultados aparecerán aquí')) {
+                resultados.innerHTML = '';
+            }
+            
+            const alertClass = tipo === 'success' ? 'alert-success' : 
+                              tipo === 'error' ? 'alert-danger' : 
+                              tipo === 'warning' ? 'alert-warning' : 'alert-info';
+            
+            const div = document.createElement('div');
+            div.className = `alert ${alertClass} alert-dismissible fade show`;
+            div.innerHTML = `
+                <small class="text-muted">[${timestamp}]</small><br>
+                ${mensaje}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            `;
+            
+            resultados.appendChild(div);
+            resultados.scrollTop = resultados.scrollHeight;
+            
+            console.log(`[${timestamp}] ${mensaje}`);
+        }
+        
+        async function probarCrearFiguraReal() {
+            log('=== CREANDO FIGURA REAL EN GOOGLE SHEETS ===');
+            
+            try {
+                const figuraTest = {
+                    SeccionOrden: '6',
+                    OrdenFigura: '1',
+                    Caption: 'TEST - Figura creada desde web',
+                    RutaArchivo: 'img/test/figura_web_test.png',
+                    Fuente: 'Prueba desde aplicación web - ' + new Date().toLocaleString()
+                };
+                
+                log(`Creando figura: Sección ${figuraTest.SeccionOrden}, Orden ${figuraTest.OrdenFigura}`);
+                log(`Título: ${figuraTest.Caption}`);
+                
+                const resultado = await api.crearFigura('D01', figuraTest);
+                
+                if (resultado.status === 'success') {
+                    log('✅ Figura creada exitosamente en Google Sheets', 'success');
+                    log(`Respuesta: ${resultado.message}`);
+                } else {
+                    log(`❌ Error: ${resultado.message}`, 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ Error al crear figura: ${error.message}`, 'error');
+            }
+        }
+        
+        async function probarActualizarFiguraReal() {
+            log('=== ACTUALIZANDO FIGURA EXISTENTE ===');
+            
+            try {
+                const figuraId = '2-1'; // Sección 2, Orden 1
+                const figuraActualizada = {
+                    SeccionOrden: '2',
+                    OrdenFigura: '1',
+                    Caption: 'ACTUALIZADA - Evolución de la capacidad instalada por tecnología, 2020-2025',
+                    RutaArchivo: 'img/graficos/figura_2_1_actualizada.png',
+                    Fuente: 'ACTUALIZADO - Elaboración propia con datos del Sistema Nacional de Energía 2024 (SENER). Actualizado: ' + new Date().toLocaleString()
+                };
+                
+                log(`Actualizando figura ID: ${figuraId}`);
+                log(`Nuevo título: ${figuraActualizada.Caption}`);
+                
+                const resultado = await api.actualizarFigura('D01', figuraId, figuraActualizada);
+                
+                if (resultado.status === 'success') {
+                    log('✅ Figura actualizada exitosamente en Google Sheets', 'success');
+                    log(`Respuesta: ${resultado.message}`);
+                } else {
+                    log(`❌ Error: ${resultado.message}`, 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ Error al actualizar figura: ${error.message}`, 'error');
+            }
+        }
+        
+        async function probarEliminarFiguraReal() {
+            log('=== ELIMINANDO FIGURA DE PRUEBA ===');
+            
+            try {
+                const figuraId = '6-1'; // La figura de prueba que creamos
+                
+                log(`Eliminando figura ID: ${figuraId} (Sección 6, Orden 1)`);
+                
+                const resultado = await api.eliminarFigura('D01', figuraId);
+                
+                if (resultado.status === 'success') {
+                    log('✅ Figura eliminada exitosamente de Google Sheets', 'success');
+                    log(`Respuesta: ${resultado.message}`);
+                } else {
+                    log(`❌ Error: ${resultado.message}`, 'error');
+                }
+                
+            } catch (error) {
+                log(`❌ Error al eliminar figura: ${error.message}`, 'error');
+            }
+        }
+        
+        async function verificarFigurasD01() {
+            log('=== VERIFICANDO FIGURAS DEL DOCUMENTO D01 ===');
+            
+            try {
+                const figuras = await cargarHojaCSV('Figuras');
+                const figurasD01 = figuras.filter(f => f.DocumentoID === 'D01');
+                
+                log(`Total de figuras en Google Sheets: ${figuras.length}`);
+                log(`Figuras del documento D01: ${figurasD01.length}`);
+                
+                if (figurasD01.length > 0) {
+                    log('--- LISTADO DE FIGURAS D01 ---');
+                    figurasD01.forEach((figura, index) => {
+                        log(`${index + 1}. Sección ${figura.SeccionOrden}, Orden ${figura.OrdenFigura}: ${figura.Caption}`);
+                        log(`   Ruta: ${figura.RutaArchivo}`);
+                        log(`   Fuente: ${figura.Fuente}`);
+                        log('');
+                    });
+                } else {
+                    log('No se encontraron figuras para el documento D01', 'warning');
+                }
+                
+            } catch (error) {
+                log(`❌ Error al verificar figuras: ${error.message}`, 'error');
+            }
+        }
+        
+        function limpiarResultados() {
+            document.getElementById('resultados').innerHTML = '<p class="text-muted">Los resultados aparecerán aquí...</p>';
+        }
+    </script>
+</body>
+</html>

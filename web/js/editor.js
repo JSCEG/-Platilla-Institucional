@@ -19,55 +19,140 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Obtener ID del documento desde URL
     const urlParams = new URLSearchParams(window.location.search);
     editor.docId = urlParams.get('id');
+    
+    // Si es nuevo documento, generar ID
+    const esNuevo = urlParams.get('nuevo') === 'true';
+    if (esNuevo) {
+        editor.docId = 'SENER-' + new Date().getFullYear() + '-' + String(Date.now()).slice(-3);
+        console.log('📝 Creando nuevo documento con ID:', editor.docId);
+    }
 
     if (!editor.docId) {
-        alert('❌ No se especificó un documento');
-        window.location.href = 'index.html';
+        mostrarError('No se especificó un documento válido');
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 2000);
         return;
     }
 
-    // Cargar documento
-    await cargarDocumento();
+    try {
+        // Cargar documento
+        await cargarDocumento();
 
-    // Ocultar preloader
-    hidePreloader();
+        // Ocultar preloader
+        hidePreloader();
 
-    // Setup event listeners
-    setupEventListeners();
+        // Verificar elementos críticos antes de configurar
+        verificarElementosEditor();
+        
+        // Setup event listeners con manejo de errores
+        try {
+            console.log('🔧 Iniciando configuración de event listeners...');
+            setupEditorEventListeners();
+            console.log('✅ Event listeners configurados exitosamente');
+        } catch (error) {
+            console.error('❌ Error al configurar event listeners:', error);
+            mostrarError('Error al configurar la navegación de tabs');
+        }
 
-    // Iniciar autoguardado
-    iniciarAutoguardado();
+        // Iniciar autoguardado
+        try {
+            iniciarAutoguardado();
+            console.log('✅ Autoguardado iniciado');
+        } catch (error) {
+            console.error('❌ Error al iniciar autoguardado:', error);
+        }
+        
+        console.log('✅ Editor inicializado correctamente');
+        
+    } catch (error) {
+        console.error('❌ Error al inicializar editor:', error);
+        mostrarError('Error al inicializar el editor');
+        
+        // Redirigir al index después de un momento
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 3000);
+    }
 });
 
 /**
- * Cargar documento desde Google Sheets público
+ * Cargar documento desde Google Sheets público o datos de ejemplo
  */
 async function cargarDocumento() {
     try {
-        showLoading('Cargando documento desde Google Sheets...');
+        showLoading('Cargando documento...');
 
-        // Cargar todos los datos del Google Sheets público
-        const datos = await cargarTodosDatos();
+        let documento = null;
 
-        // Buscar el documento por ID
-        const docMetadata = datos.documentos.find(doc => doc.ID === editor.docId);
+        // Intentar cargar desde Google Sheets si está disponible
+        try {
+            if (typeof cargarTodosDatos === 'function') {
+                console.log('📥 Intentando cargar desde Google Sheets...');
+                const datos = await cargarTodosDatos();
+                
+                console.log('📊 Datos recibidos:', {
+                    documentos: datos.documentos?.length || 0,
+                    secciones: datos.secciones?.length || 0,
+                    figuras: datos.figuras?.length || 0
+                });
 
-        if (!docMetadata) {
-            throw new Error(`No se encontró el documento con ID: ${editor.docId}`);
+                const normalizeId = (val) => (val || '').toString().trim().toUpperCase();
+                const getDocId = (item = {}) => {
+                    // Prefer campos conocidos
+                    const direct = item.DocumentoID || item.DocumentoId || item.Documento || item.DocID;
+                    if (direct) return normalizeId(direct);
+
+                    // Buscar cualquier key que contenga "doc" e "id" (por si el header viene con espacios)
+                    const key = Object.keys(item).find(k => {
+                        const nk = k.toLowerCase().replace(/[^a-z0-9]/g, '');
+                        return nk.includes('doc') && nk.includes('id');
+                    });
+                    if (key) return normalizeId(item[key]);
+
+                    return '';
+                };
+                const targetId = normalizeId(editor.docId);
+
+                // Buscar el documento por ID (tolerando espacios/casos)
+                const docMetadata = datos.documentos?.find(doc => {
+                    return normalizeId(doc.ID) === targetId || getDocId(doc) === targetId;
+                });
+                
+                if (docMetadata) {
+                    // Filtrar secciones, tablas y figuras de este documento (tolerando variantes de campo)
+                    const matchDoc = (item) => getDocId(item) === targetId;
+
+                    documento = {
+                        metadata: docMetadata,
+                        secciones: (datos.secciones || []).filter(matchDoc),
+                        tablas: (datos.tablas || []).filter(matchDoc),
+                        figuras: (datos.figuras || []).filter(matchDoc),
+                        bibliografia: (datos.bibliografia || []).filter(matchDoc),
+                        siglas: (datos.siglas || []).filter(matchDoc),
+                        glosario: (datos.glosario || []).filter(matchDoc)
+                    };
+                    console.log('✅ Documento encontrado en Google Sheets:', docMetadata.Titulo);
+                } else {
+                    console.warn(`⚠️ Documento con ID "${editor.docId}" no encontrado en Google Sheets`);
+                    console.log('📋 IDs disponibles:', datos.documentos?.map(d => d.ID) || []);
+                }
+            } else {
+                console.warn('⚠️ Función cargarTodosDatos no disponible');
+            }
+        } catch (error) {
+            console.warn('⚠️ Error al cargar desde Google Sheets:', error.message);
+            console.error('Stack trace:', error);
         }
 
-        // Filtrar secciones, tablas y figuras de este documento
-        const documento = {
-            metadata: docMetadata,
-            secciones: datos.secciones.filter(s => s.DocumentoID === editor.docId),
-            tablas: datos.tablas.filter(t => t.DocumentoID === editor.docId),
-            figuras: datos.figuras.filter(f => f.DocumentoID === editor.docId),
-            bibliografia: datos.bibliografia.filter(b => b.DocumentoID === editor.docId),
-            siglas: datos.siglas.filter(s => s.DocumentoID === editor.docId),
-            glosario: datos.glosario.filter(g => g.DocumentoID === editor.docId)
-        };
-
-        console.log('✅ Documento cargado:', documento);
+        // Si no se pudo cargar desde Google Sheets, usar datos de ejemplo
+        if (!documento) {
+            console.log('📋 Documento no encontrado en Google Sheets, usando datos de ejemplo');
+            documento = crearDocumentoEjemplo(editor.docId);
+            
+            // Mostrar notificación más específica
+            mostrarNotificacion(`Documento "${editor.docId}" no encontrado. Mostrando plantilla de ejemplo.`, 'warning');
+        }
 
         editor.documento = documento;
 
@@ -84,12 +169,26 @@ async function cargarDocumento() {
         document.getElementById('documento-titulo').textContent =
             documento.metadata.Titulo || 'Sin título';
 
-        console.log('📄 Documento cargado:', documento);
+        console.log('📄 Documento cargado exitosamente:', documento);
 
     } catch (error) {
-        console.error('Error al cargar documento:', error);
-        alert('❌ No se pudo cargar el documento');
-        window.location.href = 'index.html';
+        console.error('❌ Error crítico al cargar documento:', error);
+        
+        // Como último recurso, crear documento básico
+        const documentoBasico = crearDocumentoBasico(editor.docId);
+        editor.documento = documentoBasico;
+        
+        renderMetadatos(documentoBasico.metadata);
+        renderSecciones(documentoBasico.secciones);
+        renderTablas(documentoBasico.tablas);
+        renderFiguras(documentoBasico.figuras);
+        renderBibliografia(documentoBasico.bibliografia);
+        renderSiglas(documentoBasico.siglas);
+        renderGlosario(documentoBasico.glosario);
+        
+        document.getElementById('documento-titulo').textContent = documentoBasico.metadata.Titulo;
+        
+        mostrarError('Error al cargar documento. Mostrando plantilla básica.');
     } finally {
         hideLoading();
     }
@@ -254,42 +353,107 @@ function renderTablas(tablas) {
 }
 
 /**
- * Renderizar figuras
+ * Renderizar figuras - Compatible con nueva tabla responsiva
  */
 function renderFiguras(figuras) {
-    const container = document.getElementById('figuras-lista');
-
-    if (!figuras || figuras.length === 0) {
-        container.innerHTML = `
-            <div class="empty-state">
-                <i class="fas fa-image"></i>
-                <p>No hay figuras. Agrega una nueva para comenzar.</p>
-            </div>
-        `;
+    // Buscar elementos de la nueva estructura
+    const tbody = document.getElementById('figuras-tbody');
+    const emptyState = document.getElementById('figuras-empty-state');
+    const tableContainer = document.querySelector('.figuras-table-container');
+    
+    // Si no encuentra los elementos nuevos, usar fallback
+    if (!tbody) {
+        console.warn('⚠️ Elemento figuras-tbody no encontrado, usando renderizado básico');
         return;
     }
 
-    container.innerHTML = figuras.map(figura => `
-        <div class="item-card">
-            <div class="item-card-header">
-                <h4 class="item-card-title">${figura.Caption}</h4>
-                <div class="item-card-actions">
-                    <button class="btn-icon" onclick="editarFigura('${figura.SeccionOrden}-${figura.OrdenFigura}')" title="Editar">
-                        <i class="fas fa-edit"></i>
-                    </button>
-                    <button class="btn-icon" onclick="eliminarFigura('${figura.SeccionOrden}-${figura.OrdenFigura}')" title="Eliminar">
-                        <i class="fas fa-trash"></i>
-                    </button>
-                </div>
-            </div>
-            <div class="item-card-meta">
-                Sección: ${figura.SeccionOrden} | Orden: ${figura.OrdenFigura}
-            </div>
-            <div class="item-card-meta">
-                Archivo: ${figura.RutaArchivo || 'No especificado'}
-            </div>
-        </div>
-    `).join('');
+    if (!figuras || figuras.length === 0) {
+        // Mostrar estado vacío
+        if (emptyState) {
+            emptyState.classList.remove('d-none');
+        }
+        if (tableContainer) {
+            tableContainer.classList.add('d-none');
+        }
+        tbody.innerHTML = '';
+        return;
+    }
+
+    // Ocultar estado vacío y mostrar tabla
+    if (emptyState) {
+        emptyState.classList.add('d-none');
+    }
+    if (tableContainer) {
+        tableContainer.classList.remove('d-none');
+    }
+
+    // Renderizar filas de la tabla
+    tbody.innerHTML = figuras.map(figura => {
+        const seccion = figura.SeccionOrden || '1';
+        const orden = figura.OrdenFigura || '1';
+        const titulo = figura.Caption || figura.Titulo || 'Sin título';
+        const ruta = figura.RutaArchivo || figura.Ruta || 'No especificado';
+        const fuente = figura.Fuente || 'No especificado';
+        
+        return `
+            <tr>
+                <td class="text-center">
+                    <span class="badge bg-primary">
+                        <i class="fas fa-image me-1"></i>
+                        ${seccion}.${orden}
+                    </span>
+                </td>
+                <td>
+                    <div class="editable-cell" data-field="titulo" data-id="${seccion}-${orden}">
+                        <span class="cell-content">
+                            <i class="fas fa-file-alt me-2 text-muted" style="font-size: 0.8rem;"></i>
+                            ${titulo}
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div class="editable-cell" data-field="ruta" data-id="${seccion}-${orden}">
+                        <span class="cell-content">
+                            <i class="fas fa-folder me-1 text-info"></i>
+                            <code class="text-muted">${ruta}</code>
+                        </span>
+                    </div>
+                </td>
+                <td class="col-fuente">
+                    <div class="editable-cell" data-field="fuente" data-id="${seccion}-${orden}">
+                        <span class="cell-content">
+                            <i class="fas fa-quote-left me-1 text-success" style="font-size: 0.7rem;"></i>
+                            ${fuente}
+                        </span>
+                    </div>
+                </td>
+                <td>
+                    <div class="table-actions">
+                        <button class="btn-table-action btn-edit" onclick="editarFigura('${seccion}-${orden}')" 
+                                data-bs-toggle="tooltip" title="Editar figura completa">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-table-action btn-delete" onclick="eliminarFigura('${seccion}-${orden}')"
+                                data-bs-toggle="tooltip" title="Eliminar figura">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button class="btn-table-action" onclick="previewFigura('${seccion}-${orden}')"
+                                data-bs-toggle="tooltip" title="Vista previa">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        `;
+    }).join('');
+    
+    // Inicializar tooltips si Bootstrap está disponible
+    if (typeof bootstrap !== 'undefined') {
+        const tooltipTriggerList = tbody.querySelectorAll('[data-bs-toggle="tooltip"]');
+        tooltipTriggerList.forEach(tooltipTriggerEl => {
+            new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    }
 }
 
 /**
@@ -404,62 +568,202 @@ function renderGlosario(glosario) {
 }
 
 /**
+ * Verificar que los elementos críticos del editor existan
+ */
+function verificarElementosEditor() {
+    console.log('🔍 Verificando elementos del editor...');
+    
+    const elementosCriticos = [
+        'documento-titulo',
+        'btn-guardar',
+        'btn-generar',
+        'tab-metadatos',
+        'tab-secciones',
+        'tab-tablas',
+        'tab-figuras',
+        'tab-bibliografia',
+        'tab-siglas',
+        'tab-glosario'
+    ];
+    
+    const tabs = [
+        'metadatos',
+        'secciones',
+        'tablas',
+        'figuras',
+        'bibliografia',
+        'siglas',
+        'glosario'
+    ];
+    
+    let errores = [];
+    
+    // Verificar elementos por ID
+    elementosCriticos.forEach(id => {
+        const elemento = document.getElementById(id);
+        if (!elemento) {
+            errores.push(`Elemento faltante: ${id}`);
+        } else {
+            console.log(`✅ ${id}: encontrado`);
+        }
+    });
+    
+    // Verificar tabs
+    tabs.forEach(tabName => {
+        const tabButton = document.querySelector(`[data-tab="${tabName}"]`);
+        if (!tabButton) {
+            errores.push(`Tab button faltante: ${tabName}`);
+        } else {
+            console.log(`✅ Tab ${tabName}: encontrado`);
+        }
+    });
+    
+    if (errores.length > 0) {
+        console.error('❌ Elementos faltantes:', errores);
+        mostrarError(`Elementos faltantes en el editor: ${errores.length} problemas encontrados`);
+    } else {
+        console.log('✅ Todos los elementos críticos encontrados');
+    }
+    
+    return errores.length === 0;
+}
+
+/**
  * Setup event listeners
  */
-function setupEventListeners() {
-    // Tabs
-    document.querySelectorAll('.editor-tab').forEach(tab => {
-        tab.addEventListener('click', () => {
-            const tabName = tab.dataset.tab;
+function setupEditorEventListeners() {
+    console.log('🔧 Configurando event listeners...');
+    
+    // Tabs - con verificación robusta
+    const tabs = document.querySelectorAll('.editor-tab');
+    console.log(`📋 Encontrados ${tabs.length} tabs`);
+    
+    tabs.forEach((tab, index) => {
+        const tabName = tab.dataset.tab;
+        console.log(`🏷️ Configurando tab ${index + 1}: ${tabName}`);
+        
+        tab.addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log(`🖱️ Click en tab: ${tabName}`);
             switchTab(tabName);
         });
     });
 
     // Botón guardar
-    document.getElementById('btn-guardar').addEventListener('click', guardarCambios);
+    const btnGuardar = document.getElementById('btn-guardar');
+    if (btnGuardar) {
+        btnGuardar.addEventListener('click', guardarCambios);
+        console.log('✅ Botón guardar configurado');
+    }
 
     // Botón generar .tex
-    document.getElementById('btn-generar').addEventListener('click', generarTex);
+    const btnGenerar = document.getElementById('btn-generar');
+    if (btnGenerar) {
+        btnGenerar.addEventListener('click', generarTex);
+        console.log('✅ Botón generar configurado');
+    }
 
     // Detectar cambios en formularios
-    document.querySelectorAll('.form-control').forEach(input => {
+    const formControls = document.querySelectorAll('.form-control');
+    console.log(`📝 Configurando ${formControls.length} form controls`);
+    
+    formControls.forEach(input => {
         input.addEventListener('input', () => {
             editor.cambiosPendientes = true;
         });
     });
 
     // Botones de nueva entidad
-    document.getElementById('btn-nueva-seccion')?.addEventListener('click', () => {
-        alert('Función en desarrollo: Nueva Sección');
-    });
+    const btnNuevaSeccion = document.getElementById('btn-nueva-seccion');
+    if (btnNuevaSeccion) {
+        btnNuevaSeccion.addEventListener('click', () => {
+            mostrarNotificacion('Función en desarrollo: Nueva Sección', 'info');
+        });
+    }
 
-    document.getElementById('btn-nueva-tabla')?.addEventListener('click', () => {
-        alert('Función en desarrollo: Nueva Tabla');
-    });
+    const btnNuevaTabla = document.getElementById('btn-nueva-tabla');
+    if (btnNuevaTabla) {
+        btnNuevaTabla.addEventListener('click', () => {
+            mostrarNotificacion('Función en desarrollo: Nueva Tabla', 'info');
+        });
+    }
 
-    document.getElementById('btn-nueva-figura')?.addEventListener('click', () => {
-        alert('Función en desarrollo: Nueva Figura');
-    });
+    const btnNuevaFigura = document.getElementById('btn-nueva-figura');
+    if (btnNuevaFigura) {
+        btnNuevaFigura.addEventListener('click', () => {
+            mostrarNotificacion('Función en desarrollo: Nueva Figura', 'info');
+        });
+    }
 
-    document.getElementById('btn-nueva-bibliografia')?.addEventListener('click', () => {
-    });
+    const btnNuevaBibliografia = document.getElementById('btn-nueva-bibliografia');
+    if (btnNuevaBibliografia) {
+        btnNuevaBibliografia.addEventListener('click', () => {
+            mostrarNotificacion('Función en desarrollo: Nueva Bibliografía', 'info');
+        });
+    }
+    
+    console.log('✅ Event listeners configurados correctamente');
 }
 
 /**
  * Cambiar de tab
  */
 function switchTab(tabName) {
-    // Actualizar tabs
-    document.querySelectorAll('.editor-tab').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    document.querySelector(`[data-tab="${tabName}"]`).classList.add('active');
+    try {
+        console.log(`🔄 Cambiando a tab: ${tabName}`);
+        
+        // Verificar que el tab existe
+        const targetTab = document.querySelector(`[data-tab="${tabName}"]`);
+        const targetContent = document.getElementById(`tab-${tabName}`);
+        
+        if (!targetTab) {
+            console.error(`❌ Tab no encontrado: ${tabName}`);
+            mostrarError(`Tab "${tabName}" no encontrado`);
+            return;
+        }
+        
+        if (!targetContent) {
+            console.error(`❌ Contenido de tab no encontrado: tab-${tabName}`);
+            mostrarError(`Contenido del tab "${tabName}" no encontrado`);
+            return;
+        }
 
-    // Actualizar contenido
-    document.querySelectorAll('.editor-tab-content').forEach(content => {
-        content.classList.remove('active');
-    });
-    document.getElementById(`tab-${tabName}`).classList.add('active');
+        // Remover clase active de todos los tabs
+        document.querySelectorAll('.editor-tab').forEach(tab => {
+            tab.classList.remove('active');
+        });
+        
+        // Agregar clase active al tab seleccionado
+        targetTab.classList.add('active');
+        console.log(`✅ Tab activado: ${tabName}`);
+
+        // Remover clase active de todo el contenido
+        document.querySelectorAll('.editor-tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Agregar clase active al contenido seleccionado
+        targetContent.classList.add('active');
+        console.log(`✅ Contenido activado: tab-${tabName}`);
+        
+        // Trigger refresh de componentes específicos si es necesario
+        if (tabName === 'figuras' && typeof initFigurasTable === 'function') {
+            // Re-inicializar tabla de figuras si existe
+            setTimeout(() => {
+                try {
+                    initFigurasTable();
+                } catch (error) {
+                    console.warn('⚠️ Error al re-inicializar tabla de figuras:', error);
+                }
+            }, 100);
+        }
+        
+        console.log(`🎯 Tab switch completado: ${tabName}`);
+        
+    } catch (error) {
+        console.error('❌ Error en switchTab:', error);
+        mostrarError(`Error al cambiar de tab: ${error.message}`);
+    }
 }
 
 /**
@@ -607,7 +911,113 @@ function editarFigura(id) {
 function eliminarFigura(id) {
     if (confirm('¿Estás seguro de eliminar esta figura?')) {
         console.log('Eliminar figura:', id);
-        alert('Función en desarrollo: Eliminar Figura');
+        
+        // Buscar y eliminar la figura del array
+        if (editor.documento && editor.documento.figuras) {
+            const [seccion, orden] = id.split('-');
+            editor.documento.figuras = editor.documento.figuras.filter(f => 
+                !(f.SeccionOrden === seccion && f.OrdenFigura === orden)
+            );
+            
+            // Re-renderizar
+            renderFiguras(editor.documento.figuras);
+            editor.cambiosPendientes = true;
+            
+            mostrarExito('Figura eliminada correctamente');
+        }
+    }
+}
+
+/**
+ * Vista previa de figura
+ */
+function previewFigura(id) {
+    console.log('Vista previa figura:', id);
+    
+    if (!editor.documento || !editor.documento.figuras) {
+        mostrarError('No hay datos de figuras disponibles');
+        return;
+    }
+    
+    const [seccion, orden] = id.split('-');
+    const figura = editor.documento.figuras.find(f => 
+        f.SeccionOrden === seccion && f.OrdenFigura === orden
+    );
+    
+    if (!figura) {
+        mostrarError('Figura no encontrada');
+        return;
+    }
+    
+    const titulo = figura.Caption || figura.Titulo || 'Sin título';
+    const ruta = figura.RutaArchivo || figura.Ruta || '';
+    const fuente = figura.Fuente || 'No especificado';
+    
+    // Crear modal de vista previa
+    const modalHtml = `
+        <div class="modal fade" id="preview-figura-modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">
+                            <i class="fas fa-eye me-2"></i>
+                            Vista Previa - Figura ${seccion}.${orden}
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body text-center">
+                        <div class="mb-3">
+                            <img src="../${ruta}" alt="${titulo}" 
+                                 class="img-fluid rounded shadow" 
+                                 style="max-height: 400px;"
+                                 onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZGRkIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPkltYWdlbiBubyBlbmNvbnRyYWRhPC90ZXh0Pjwvc3ZnPg=='">
+                        </div>
+                        <h6 class="text-primary">${titulo}</h6>
+                        <p class="text-muted mb-1">
+                            <i class="fas fa-folder me-1"></i>
+                            <code>${ruta}</code>
+                        </p>
+                        <p class="text-muted">
+                            <i class="fas fa-quote-left me-1"></i>
+                            <em>Fuente: ${fuente}</em>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                            <i class="fas fa-times me-1"></i>
+                            Cerrar
+                        </button>
+                        <button type="button" class="btn btn-primary" onclick="editarFigura('${id}'); bootstrap.Modal.getInstance(document.getElementById('preview-figura-modal')).hide();">
+                            <i class="fas fa-edit me-1"></i>
+                            Editar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    
+    // Remover modal anterior si existe
+    const existingModal = document.getElementById('preview-figura-modal');
+    if (existingModal) {
+        existingModal.remove();
+    }
+    
+    // Agregar nuevo modal
+    document.body.insertAdjacentHTML('beforeend', modalHtml);
+    
+    // Mostrar modal
+    if (typeof bootstrap !== 'undefined') {
+        const modal = new bootstrap.Modal(document.getElementById('preview-figura-modal'));
+        modal.show();
+        
+        // Limpiar modal al cerrar
+        document.getElementById('preview-figura-modal').addEventListener('hidden.bs.modal', function() {
+            this.remove();
+        });
+    } else {
+        // Fallback sin Bootstrap
+        alert(`Figura ${seccion}.${orden}: ${titulo}\nRuta: ${ruta}\nFuente: ${fuente}`);
     }
 }
 
@@ -957,7 +1367,21 @@ function mostrarError(mensaje) {
 }
 
 function mostrarNotificacion(mensaje, tipo = 'info') {
-    // Crear notificación
+    // Intentar usar el sistema de toasts de Bootstrap si está disponible
+    if (typeof showSuccess === 'function' && tipo === 'success') {
+        showSuccess(mensaje);
+        return;
+    }
+    if (typeof showError === 'function' && tipo === 'error') {
+        showError(mensaje);
+        return;
+    }
+    if (typeof showInfo === 'function' && (tipo === 'info' || tipo === 'warning')) {
+        showInfo(mensaje);
+        return;
+    }
+
+    // Fallback: crear notificación personalizada
     const notif = document.createElement('div');
     notif.style.cssText = `
         position: fixed;
@@ -982,6 +1406,9 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
     };
 
     notif.style.background = colores[tipo] || colores.info;
+    if (tipo === 'warning') {
+        notif.style.color = '#000';
+    }
 
     // Icono según tipo
     const iconos = {
@@ -995,11 +1422,12 @@ function mostrarNotificacion(mensaje, tipo = 'info') {
 
     document.body.appendChild(notif);
 
-    // Auto-cerrar después de 3 segundos
+    // Auto-cerrar después de 4 segundos (más tiempo para warnings)
+    const duracion = tipo === 'warning' ? 5000 : 3000;
     setTimeout(() => {
         notif.style.animation = 'slideOut 0.3s ease';
         setTimeout(() => notif.remove(), 300);
-    }, 3000);
+    }, duracion);
 }
 
 // Agregar estilos de animación
@@ -1023,6 +1451,162 @@ if (!document.getElementById('notification-styles')) {
 const btnNuevaSigla = document.getElementById('btn-nueva-sigla');
 if (btnNuevaSigla) {
     btnNuevaSigla.addEventListener('click', nuevaSigla);
+}
+
+/**
+ * Crear documento de ejemplo basado en ID
+ */
+function crearDocumentoEjemplo(docId) {
+    // Datos base según el ID (coinciden con Google Sheets)
+    const ejemplos = {
+        'D01': {
+            metadata: {
+                ID: 'D01',
+                Titulo: 'Informe Institucional de Energía 2025',
+                Subtitulo: 'Avances, retos y Dirección General',
+                Autor: 'Secretaría de Energía',
+                Institucion: 'Secretaría de Energía',
+                Unidad: 'Unidad de Planeación Energética',
+                Fecha: '2025-12-08',
+                DocumentoCorto: 'InformeEnergia25',
+                Version: '1.0',
+                PalabrasClave: 'energía, transición energética',
+                PortadaRuta: 'img/portada.png',
+                ContraportadaRuta: 'img/contraportada.png',
+                ResumenEjecutivo: 'Este informe también presenta capacidad renovable en el sector energético mexicano...'
+            }
+        },
+        'D02': {
+            metadata: {
+                ID: 'D02',
+                Titulo: 'Reporte de Energías Renovables',
+                Subtitulo: 'Avances y perspectivas 2025',
+                Autor: 'Dirección General de Energías Limpias',
+                Institucion: 'SENER',
+                Unidad: 'Dirección General de Energías Limpias',
+                Fecha: '2025-11-15',
+                DocumentoCorto: 'ReporteRenovables2025',
+                Version: '1.0',
+                PalabrasClave: 'energías renovables, solar, eólica',
+                ResumenEjecutivo: 'Reporte sobre los avances en energías renovables en México...'
+            }
+        },
+        'D03': {
+            metadata: {
+                ID: 'D03',
+                Titulo: 'Balance Nacional de Energía',
+                Subtitulo: 'Datos preliminares 2024',
+                Autor: 'Subsecretaría de Planeación',
+                Institucion: 'SENER',
+                Unidad: 'Dirección General de Planeación Energética',
+                Fecha: '2025-10-20',
+                DocumentoCorto: 'BalanceEnergia2024',
+                Version: '1.0',
+                ResumenEjecutivo: 'Balance energético nacional con datos preliminares...'
+            }
+        }
+    };
+
+    // Usar ejemplo específico o crear uno genérico
+    const ejemplo = ejemplos[docId] || {
+        metadata: {
+            ID: docId,
+            Titulo: `Documento ${docId}`,
+            Subtitulo: 'Documento de ejemplo generado automáticamente',
+            Autor: 'Secretaría de Energía',
+            Institucion: 'SENER',
+            Fecha: new Date().toISOString().split('T')[0],
+            DocumentoCorto: docId.toLowerCase().replace(/[^a-z0-9]/g, '_'),
+            Version: '1.0',
+            ResumenEjecutivo: 'Este es un documento de ejemplo creado automáticamente.'
+        }
+    };
+
+    return {
+        metadata: ejemplo.metadata,
+        secciones: [
+            {
+                DocumentoID: docId,
+                Orden: '1',
+                Titulo: 'Introducción',
+                Nivel: 'Sección',
+                Contenido: 'Contenido de introducción...'
+            },
+            {
+                DocumentoID: docId,
+                Orden: '2',
+                Titulo: 'Desarrollo',
+                Nivel: 'Sección',
+                Contenido: 'Contenido de desarrollo...'
+            }
+        ],
+        tablas: [],
+        figuras: [
+            {
+                DocumentoID: docId,
+                SeccionOrden: '2',
+                OrdenFigura: '1',
+                Caption: 'Figura de ejemplo',
+                RutaArchivo: 'img/graficos/ejemplo.png',
+                Fuente: 'SENER, 2025'
+            }
+        ],
+        bibliografia: [
+            {
+                DocumentoID: docId,
+                Clave: 'SENER2025',
+                Tipo: 'report',
+                Titulo: 'Informe Energético Nacional',
+                Autor: 'SENER',
+                Anio: '2025',
+                Editorial: 'Secretaría de Energía'
+            }
+        ],
+        siglas: [
+            {
+                DocumentoID: docId,
+                Sigla: 'SENER',
+                Descripcion: 'Secretaría de Energía'
+            },
+            {
+                DocumentoID: docId,
+                Sigla: 'CFE',
+                Descripcion: 'Comisión Federal de Electricidad'
+            }
+        ],
+        glosario: [
+            {
+                DocumentoID: docId,
+                Termino: 'Energía renovable',
+                Definicion: 'Energía obtenida de fuentes naturales virtualmente inagotables'
+            }
+        ]
+    };
+}
+
+/**
+ * Crear documento básico para casos de emergencia
+ */
+function crearDocumentoBasico(docId) {
+    return {
+        metadata: {
+            ID: docId,
+            Titulo: 'Nuevo Documento',
+            Subtitulo: '',
+            Autor: 'Usuario',
+            Institucion: 'SENER',
+            Fecha: new Date().toISOString().split('T')[0],
+            DocumentoCorto: 'nuevo_documento',
+            Version: '1.0',
+            ResumenEjecutivo: ''
+        },
+        secciones: [],
+        tablas: [],
+        figuras: [],
+        bibliografia: [],
+        siglas: [],
+        glosario: []
+    };
 }
 
 // Limpiar al salir

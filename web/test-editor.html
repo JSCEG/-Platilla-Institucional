@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Editor - SENER LaTeX</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/bootstrap-overrides.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="text-center mb-4">
+                    <i class="fas fa-bug me-2 text-warning"></i>
+                    Diagnóstico del Editor
+                </h1>
+                
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="fas fa-search me-2"></i>
+                            Diagnóstico de Conexión
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="diagnostico-resultado">
+                            <div class="text-center">
+                                <div class="spinner-border text-primary" role="status">
+                                    <span class="visually-hidden">Diagnosticando...</span>
+                                </div>
+                                <p class="mt-2">Ejecutando diagnóstico...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <h6>🔧 Pruebas Disponibles:</h6>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-primary w-100 mb-2" onclick="probarConexionSheets()">
+                                <i class="fas fa-table me-1"></i>
+                                Probar Google Sheets
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-secondary w-100 mb-2" onclick="probarEditorConID('D01')">
+                                <i class="fas fa-edit me-1"></i>
+                                Probar Editor con ID válido (D01)
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-success w-100 mb-2" onclick="probarEditorNuevo()">
+                                <i class="fas fa-plus me-1"></i>
+                                Probar Editor Nuevo
+                            </button>
+                        </div>
+                        <div class="col-md-6">
+                            <button class="btn btn-outline-info w-100 mb-2" onclick="mostrarIDsDisponibles()">
+                                <i class="fas fa-list me-1"></i>
+                                Ver IDs Disponibles
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4">
+                    <div class="text-center">
+                        <a href="index.html" class="btn btn-primary me-2">
+                            <i class="fas fa-home me-1"></i>
+                            Volver al Index
+                        </a>
+                        <a href="editor.html?nuevo=true" class="btn btn-success">
+                            <i class="fas fa-edit me-1"></i>
+                            Ir al Editor (Nuevo)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Scripts necesarios -->
+    <script src="js/config.js"></script>
+    <script src="js/bootstrap-init.js"></script>
+    
+    <script>
+        let diagnosticoCompleto = false;
+        
+        // Ejecutar diagnóstico automático al cargar
+        document.addEventListener('DOMContentLoaded', async function() {
+            console.log('🔍 Iniciando diagnóstico automático...');
+            await ejecutarDiagnostico();
+        });
+        
+        async function ejecutarDiagnostico() {
+            const resultado = document.getElementById('diagnostico-resultado');
+            
+            try {
+                let html = '<h6 class="text-primary mb-3">📊 Resultados del Diagnóstico:</h6>';
+                
+                // 1. Verificar funciones disponibles
+                html += '<div class="mb-3">';
+                html += '<strong>1. Funciones JavaScript:</strong><br>';
+                html += `<span class="badge ${typeof cargarTodosDatos === 'function' ? 'bg-success' : 'bg-danger'}">`;
+                html += `cargarTodosDatos: ${typeof cargarTodosDatos === 'function' ? 'Disponible' : 'No disponible'}</span> `;
+                html += `<span class="badge ${typeof cargarHojaCSV === 'function' ? 'bg-success' : 'bg-danger'}">`;
+                html += `cargarHojaCSV: ${typeof cargarHojaCSV === 'function' ? 'Disponible' : 'No disponible'}</span>`;
+                html += '</div>';
+                
+                // 2. Probar conexión a Google Sheets
+                html += '<div class="mb-3">';
+                html += '<strong>2. Conexión a Google Sheets:</strong><br>';
+                
+                try {
+                    if (typeof cargarHojaCSV === 'function') {
+                        const documentos = await cargarHojaCSV('Documentos');
+                        html += `<span class="badge bg-success">Conectado - ${documentos.length} documentos encontrados</span><br>`;
+                        
+                        if (documentos.length > 0) {
+                            html += '<small class="text-muted">IDs encontrados: ';
+                            html += documentos.slice(0, 5).map(d => d.ID).join(', ');
+                            if (documentos.length > 5) html += '...';
+                            html += '</small>';
+                        }
+                    } else {
+                        html += '<span class="badge bg-warning">Función no disponible</span>';
+                    }
+                } catch (error) {
+                    html += `<span class="badge bg-danger">Error: ${error.message}</span>`;
+                }
+                html += '</div>';
+                
+                // 3. Verificar configuración
+                html += '<div class="mb-3">';
+                html += '<strong>3. Configuración:</strong><br>';
+                html += `<span class="badge ${typeof CONFIG !== 'undefined' ? 'bg-success' : 'bg-danger'}">`;
+                html += `CONFIG: ${typeof CONFIG !== 'undefined' ? 'Cargado' : 'No cargado'}</span>`;
+                if (typeof CONFIG !== 'undefined') {
+                    html += `<br><small class="text-muted">URL Base: ${CONFIG.GOOGLE_SHEETS_BASE_URL ? 'Configurado' : 'No configurado'}</small>`;
+                }
+                html += '</div>';
+                
+                // 4. Verificar parámetros URL actuales
+                html += '<div class="mb-3">';
+                html += '<strong>4. Parámetros URL actuales:</strong><br>';
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+                const nuevo = urlParams.get('nuevo');
+                html += `<span class="badge ${id ? 'bg-info' : 'bg-secondary'}">ID: ${id || 'No especificado'}</span> `;
+                html += `<span class="badge ${nuevo ? 'bg-info' : 'bg-secondary'}">Nuevo: ${nuevo || 'No'}</span>`;
+                html += '</div>';
+                
+                resultado.innerHTML = html;
+                diagnosticoCompleto = true;
+                
+            } catch (error) {
+                resultado.innerHTML = `
+                    <div class="alert alert-danger">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        <strong>Error en diagnóstico:</strong> ${error.message}
+                    </div>
+                `;
+            }
+        }
+        
+        async function probarConexionSheets() {
+            if (typeof showInfo === 'function') {
+                showInfo('Probando conexión a Google Sheets...');
+            }
+            
+            try {
+                const documentos = await cargarHojaCSV('Documentos');
+                const mensaje = `✅ Conexión exitosa: ${documentos.length} documentos encontrados`;
+                console.log(mensaje, documentos);
+                
+                if (typeof showSuccess === 'function') {
+                    showSuccess(mensaje);
+                } else {
+                    alert(mensaje);
+                }
+            } catch (error) {
+                const mensaje = `❌ Error de conexión: ${error.message}`;
+                console.error(mensaje, error);
+                
+                if (typeof showError === 'function') {
+                    showError(mensaje);
+                } else {
+                    alert(mensaje);
+                }
+            }
+        }
+        
+        function probarEditorConID(id) {
+            console.log(`🧪 Probando editor con ID: ${id}`);
+            window.open(`editor.html?id=${id}`, '_blank');
+        }
+        
+        function probarEditorNuevo() {
+            console.log('🧪 Probando editor nuevo');
+            window.open('editor.html?nuevo=true', '_blank');
+        }
+        
+        async function mostrarIDsDisponibles() {
+            try {
+                if (typeof showInfo === 'function') {
+                    showInfo('Cargando IDs disponibles...');
+                }
+                
+                const documentos = await cargarHojaCSV('Documentos');
+                const ids = documentos.map(d => d.ID).filter(id => id && id.trim());
+                
+                const mensaje = `📋 IDs disponibles (${ids.length}): ${ids.join(', ')}`;
+                console.log(mensaje);
+                
+                // Mostrar en modal o alert
+                if (ids.length > 0) {
+                    const lista = ids.map(id => `• ${id}`).join('\\n');
+                    alert(`IDs disponibles:\\n\\n${lista}`);
+                } else {
+                    alert('No se encontraron IDs válidos');
+                }
+                
+            } catch (error) {
+                const mensaje = `❌ Error al obtener IDs: ${error.message}`;
+                console.error(mensaje);
+                alert(mensaje);
+            }
+        }
+    </script>
+</body>
+</html>

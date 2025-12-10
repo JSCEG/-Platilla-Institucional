@@ -98,13 +98,6 @@ function seleccionarPortada() {
             return;
         }
 
-        // Validar tamaño (máx 5MB)
-        const maxSize = 5 * 1024 * 1024;
-        if (file.size > maxSize) {
-            mostrarError('❌ La imagen es muy grande (máximo 5MB)');
-            return;
-        }
-
         showLoading('Subiendo imagen de portada...');
 
         try {
@@ -140,13 +133,6 @@ function seleccionarContraportada() {
         const validTypes = ['image/png', 'image/jpeg', 'image/jpg'];
         if (!validTypes.includes(file.type)) {
             mostrarError('❌ Formato no válido. Solo se permiten PNG y JPG');
-            return;
-        }
-
-        // Validar tamaño (máx 5MB)
-        const maxSize = 5 * 1024 * 1024;
-        if (file.size > maxSize) {
-            mostrarError('❌ La imagen es muy grande (máximo 5MB)');
             return;
         }
 

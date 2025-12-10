@@ -9,6 +9,9 @@ class SenerAPI {
             google.script &&
             google.script.run;
 
+        // Endpoints de Apps Script (modo navegador)
+        this.urls = (typeof CONFIG !== 'undefined' && CONFIG.APPS_SCRIPT_URLS) ? CONFIG.APPS_SCRIPT_URLS : {};
+
         if (this.isGoogleAppsScript) {
             console.log('✅ Modo Google Apps Script - Conectado a Google Sheets');
         } else {
@@ -294,6 +297,81 @@ class SenerAPI {
         } catch (error) {
             console.error('Error en API crearDocumento:', error);
             return { status: 'error', message: error.message };
+        }
+    }
+
+    /**
+     * ========================================================================
+     * FIGURAS
+     * ========================================================================
+     */
+
+    async crearFigura(docId, figura) {
+        return this.post(this.urls.FIGURAS, {
+            action: 'CREATE_FIGURA',
+            docId,
+            figura
+        });
+    }
+
+    async actualizarFigura(docId, figuraId, figura) {
+        return this.post(this.urls.FIGURAS, {
+            action: 'UPDATE_FIGURA',
+            docId,
+            figuraId,
+            figura
+        });
+    }
+
+    async eliminarFigura(docId, figuraId) {
+        return this.post(this.urls.FIGURAS, {
+            action: 'DELETE_FIGURA',
+            docId,
+            figuraId
+        });
+    }
+
+    async obtenerFiguras(docId) {
+        const datos = await cargarHojaCSV('Figuras');
+        return datos.filter(f => f.DocumentoID == docId);
+    }
+
+    /**
+     * Helper para POST hacia Apps Script
+     */
+    async post(url, payload) {
+        if (!url) {
+            console.warn('URL de Apps Script no configurada para esta operaci\u00f3n');
+            return { success: false, message: 'URL no configurada' };
+        }
+
+        if (this.isGoogleAppsScript && typeof google !== 'undefined' && google.script?.run) {
+            return new Promise((resolve, reject) => {
+                google.script.run
+                    .withSuccessHandler(resolve)
+                    .withFailureHandler(reject)
+                    .doPost(JSON.stringify(payload));
+            });
+        }
+
+        // Usar content-type simple para evitar preflight/CORS de Apps Script
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            const text = await response.text();
+            throw new Error(`HTTP ${response.status}: ${text}`);
+        }
+
+        // Intentar parsear JSON; si falla, devolver texto plano
+        const text = await response.text();
+        try {
+            return JSON.parse(text);
+        } catch (err) {
+            return { status: 'success', raw: text };
         }
     }
 }
