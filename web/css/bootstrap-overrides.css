@@ -931,8 +931,34 @@ code {
 }
 
 /* Indicador de campo con error */
-#nueva-figura-modal .form-control:invalid:not(:placeholder-shown) {
+#nueva-figura-modal .form-control:invalid:not(:placeholder-shown),
+#modal-figura .form-control.is-invalid {
   border-left: 4px solid #dc3545;
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.15) !important;
+}
+
+/* Animación para campos con error */
+#modal-figura .form-control.is-invalid {
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* Mensaje de error personalizado */
+.field-error-message {
+  color: #dc3545;
+  font-size: 0.85rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+.form-control.is-invalid + .field-error-message {
+  display: block;
 }
 /* ========================================
    CORRECCIONES ESPECÍFICAS PARA MODAL

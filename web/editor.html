@@ -285,21 +285,28 @@
                                 <i class="fas fa-image me-2"></i>
                                 Figuras y Gráficos
                             </h2>
-                            <button class="btn btn-primary" id="btn-nueva-figura">
-                                <i class="fas fa-plus"></i>
-                                Nueva Figura
-                            </button>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-primary" id="btn-nueva-figura">
+                                    <i class="fas fa-plus"></i>
+                                    Nueva Figura
+                                </button>
+                                <button class="btn btn-outline-warning btn-sm" onclick="limpiarModales()" 
+                                        title="Limpiar modales problemáticos">
+                                    <i class="fas fa-tools"></i>
+                                    Reparar
+                                </button>
+                            </div>
                         </div>
 
                         <!-- Mensaje informativo -->
                         <div class="alert alert-info d-flex align-items-start mb-4">
                             <i class="fas fa-lightbulb me-3 mt-1 text-warning"></i>
-                            <div>
+                            <div class="flex-grow-1">
                                 <strong>Gestión de Figuras:</strong> Agrega, edita o elimina figuras del documento.
                                 <br>
                                 <small class="text-muted mt-1 d-block">
-                                    Las imágenes deben estar en: <code
-                                        class="bg-light px-1 rounded">img/graficos/</code>
+                                    Las imágenes deben estar en: <code class="bg-light px-1 rounded">img/graficos/</code>
+                                    • Si los modales no abren, usa el botón "Reparar"
                                 </small>
                             </div>
                         </div>
@@ -576,7 +583,13 @@
                                     <label class="form-label">Orden *</label>
                                     <input type="number" class="form-control" id="figura-orden" placeholder="1" min="1"
                                         required>
-                                    <div class="form-text">Número de figura en la sección</div>
+                                    <div class="form-text">
+                                        Número de figura en la sección
+                                        <button type="button" class="btn btn-link btn-sm p-0 ms-2" onclick="mostrarFigurasExistentes()" 
+                                                title="Ver figuras existentes">
+                                            <i class="fas fa-list"></i> Ver existentes
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

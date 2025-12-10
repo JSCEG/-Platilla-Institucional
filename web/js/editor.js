@@ -900,26 +900,55 @@ function eliminarTabla(id) {
 }
 
 function editarFigura(id) {
-    console.log('Editar figura:', id);
-    alert('Función en desarrollo: Editar Figura');
+    console.log('📸 Redirigiendo edición de figura a módulo figuras:', id);
+    
+    // Redirigir al módulo de figuras si está disponible
+    if (typeof editarFigura === 'function' && window.editarFigura !== editarFigura) {
+        window.editarFigura(id);
+        return;
+    }
+    
+    // Fallback si el módulo de figuras no está disponible
+    console.log('⚠️ Módulo de figuras no disponible, usando fallback');
+    alert('Función de edición de figuras en desarrollo.\n\nPor favor recarga la página para acceder al módulo completo.');
 }
 
 function eliminarFigura(id) {
+    console.log('🗑️ Redirigiendo eliminación de figura a módulo figuras:', id);
+    
+    // Redirigir al módulo de figuras si está disponible
+    if (typeof eliminarFigura === 'function' && window.eliminarFigura !== eliminarFigura) {
+        window.eliminarFigura(id);
+        return;
+    }
+    
+    // Fallback local
     if (confirm('¿Estás seguro de eliminar esta figura?')) {
-        console.log('Eliminar figura:', id);
+        console.log('🗑️ Eliminando figura localmente:', id);
         
         // Buscar y eliminar la figura del array
         if (editor.documento && editor.documento.figuras) {
             const [seccion, orden] = id.split('-');
+            const figuraAntes = editor.documento.figuras.length;
+            
             editor.documento.figuras = editor.documento.figuras.filter(f => 
                 !(f.SeccionOrden === seccion && f.OrdenFigura === orden)
             );
             
-            // Re-renderizar
-            renderFiguras(editor.documento.figuras);
-            editor.cambiosPendientes = true;
+            const figuraDespues = editor.documento.figuras.length;
             
-            mostrarExito('Figura eliminada correctamente');
+            if (figuraAntes > figuraDespues) {
+                // Re-renderizar
+                renderFiguras(editor.documento.figuras);
+                editor.cambiosPendientes = true;
+                
+                mostrarExito('✅ Figura eliminada correctamente (solo localmente)');
+                console.log(`📊 Figuras: ${figuraAntes} → ${figuraDespues}`);
+            } else {
+                mostrarError('❌ No se pudo encontrar la figura para eliminar');
+            }
+        } else {
+            mostrarError('❌ No hay datos de figuras disponibles');
         }
     }
 }
@@ -1039,9 +1068,12 @@ function cerrarModal(idModal) {
     }
 }
 
-// Cerrar modal al hacer clic fuera
+// Cerrar modal al hacer clic fuera - SOLO para modales personalizados (no Bootstrap)
 window.onclick = function (event) {
-    if (event.target.classList.contains('modal')) {
+    // Solo aplicar a modales personalizados que tienen la clase 'hidden'
+    if (event.target.classList.contains('modal') && 
+        event.target.classList.contains('hidden') &&
+        !event.target.classList.contains('fade')) { // Los modales de Bootstrap tienen clase 'fade'
         event.target.classList.add('hidden');
         event.target.classList.remove('flex');
     }
