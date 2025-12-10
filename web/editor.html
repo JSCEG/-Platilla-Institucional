@@ -285,14 +285,17 @@
                                 <i class="fas fa-image me-2"></i>
                                 Figuras y Gráficos
                             </h2>
+                            <button class="btn btn-primary" id="btn-nueva-figura">
+                                <i class="fas fa-plus"></i>
+                                Nueva Figura
+                            </button>
                         </div>
 
                         <!-- Mensaje informativo -->
                         <div class="alert alert-info d-flex align-items-start mb-4">
-                            <i class="fas fa-info-circle me-3 mt-1"></i>
+                            <i class="fas fa-lightbulb me-3 mt-1 text-warning"></i>
                             <div>
-                                <strong>Modo Solo Lectura:</strong> Las figuras se cargan automáticamente desde Google
-                                Sheets.
+                                <strong>Gestión de Figuras:</strong> Agrega, edita o elimina figuras del documento.
                                 <br>
                                 <small class="text-muted mt-1 d-block">
                                     Las imágenes deben estar en: <code
@@ -308,21 +311,25 @@
                                 <table class="figuras-table table table-hover">
                                     <thead>
                                         <tr>
-                                            <th style="width: 100px;">
+                                            <th style="width: 80px;">
                                                 <i class="fas fa-hashtag me-1 text-primary"></i>
                                                 Fig.
                                             </th>
-                                            <th style="width: 40%;">
+                                            <th style="width: 35%;">
                                                 <i class="fas fa-align-left me-1 text-secondary"></i>
                                                 Título/Descripción
                                             </th>
-                                            <th style="width: 35%;">
+                                            <th style="width: 30%;">
                                                 <i class="fas fa-folder-open me-1 text-info"></i>
                                                 Ruta de Imagen
                                             </th>
-                                            <th style="width: 25%;">
+                                            <th style="width: 20%;">
                                                 <i class="fas fa-external-link-alt me-1 text-success"></i>
                                                 Fuente
+                                            </th>
+                                            <th style="width: 15%; text-align: center;">
+                                                <i class="fas fa-tools me-1 text-muted"></i>
+                                                Acciones
                                             </th>
                                         </tr>
                                     </thead>
@@ -538,6 +545,65 @@
             <div class="modal-footer">
                 <button class="btn btn-outline" onclick="cerrarModal('modal-glosario')">Cancelar</button>
                 <button class="btn btn-primary" onclick="guardarModalGlosario()">Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Figura -->
+    <div class="modal fade" id="modal-figura" tabindex="-1" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">
+                        <i class="fas fa-image me-2"></i>
+                        Nueva Figura
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="form-figura">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Sección *</label>
+                                    <input type="text" class="form-control" id="figura-seccion-orden"
+                                        placeholder="Ej: 1, 1.1, 2.3" required>
+                                    <div class="form-text">Formato: 1, 1.1, 1.2.1, etc.</div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <label class="form-label">Orden *</label>
+                                    <input type="number" class="form-control" id="figura-orden" placeholder="1" min="1"
+                                        required>
+                                    <div class="form-text">Número de figura en la sección</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Ruta de Imagen *</label>
+                            <input type="text" class="form-control" id="figura-ruta"
+                                placeholder="img/graficos/figura_2_1.png" required>
+                            <div class="form-text">Ruta relativa desde la raíz del proyecto</div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Título/Caption</label>
+                            <input type="text" class="form-control" id="figura-caption"
+                                placeholder="Evolución de la capacidad instalada">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Fuente</label>
+                            <input type="text" class="form-control" id="figura-fuente" placeholder="SENER, 2024">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" onclick="guardarFigura()">Guardar</button>
+                </div>
             </div>
         </div>
     </div>

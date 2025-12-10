@@ -500,9 +500,9 @@ textarea.form-control {
 }
 
 /* ========================================
-   MODALES
+   MODALES PERSONALIZADOS (no Bootstrap)
    ======================================== */
-.modal {
+.modal.hidden {
   display: flex;
   position: fixed;
   top: 0;
@@ -518,7 +518,7 @@ textarea.form-control {
   transition: all 0.3s ease;
 }
 
-.modal:not(.hidden) {
+.modal.hidden:not(.hidden) {
   opacity: 1;
   visibility: visible;
 }
