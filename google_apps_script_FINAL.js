@@ -29,13 +29,13 @@ function onOpen() {
  */
 function doGet(e) {
     const page = e.parameter.page || 'index';
-    
+
     if (page === 'editor') {
         return HtmlService.createHtmlOutputFromFile('editor')
             .setTitle('SENER LaTeX Editor')
             .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
     }
-    
+
     return HtmlService.createHtmlOutputFromFile('index')
         .setTitle('SENER LaTeX - Dashboard')
         .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
@@ -229,14 +229,14 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
     const resultado = procesarSecciones(secciones, figurasMap, tablasMap, ss);
     tex += resultado.contenido;
 
-    // --- Directorio ---
-    if (resultado.directorio) {
-        tex += `\\paginacreditos{\n${resultado.directorio}\n}\n`;
-    }
-
     // --- Glosario ---
     if (glosario.length > 0) {
         tex += generarGlosario(glosario);
+    }
+
+    // --- Directorio ---
+    if (bibliografia.length > 0) {
+        tex += `\\printbibliography\n\n`;
     }
 
     // --- Siglas y Acrónimos ---
@@ -244,9 +244,9 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += generarSiglas(siglas);
     }
 
-    // --- Bibliografía ---
-    if (bibliografia.length > 0) {
-        tex += `\\printbibliography\n\n`;
+    // --- Página de Créditos (si existe) ---
+    if (resultado.directorio) {
+        tex += `\\paginacreditos{\n${resultado.directorio}\n}\n`;
     }
 
     // --- Contraportada ---
@@ -661,17 +661,17 @@ function escaparLatex(texto) {
  */
 function procesarTextoFuente(texto) {
     if (!texto) return '';
-    
+
     // Convertir \n literales en saltos de línea reales
     const textoConSaltos = texto.toString().replace(/\\n/g, '\n');
-    
+
     // Separar en líneas
     const lineas = textoConSaltos.split('\n').filter(l => l.trim() !== '');
-    
+
     // Separar fuente principal de notas
     const lineasFuente = [];
     const lineasNotas = [];
-    
+
     lineas.forEach(linea => {
         const matchNota = linea.match(/^([0-9]+\/|[a-zA-Z]+\/)\s+(.*)$/);
         if (matchNota) {
@@ -683,31 +683,31 @@ function procesarTextoFuente(texto) {
             lineasFuente.push(linea);
         }
     });
-    
+
     // Construir resultado
     let resultado = '';
-    
+
     // Agregar fuente principal
     if (lineasFuente.length > 0) {
         resultado += lineasFuente.map(l => escaparLatex(l)).join('\n');
     }
-    
+
     // Agregar notas como lista si existen
     if (lineasNotas.length > 0) {
         resultado += '\n\n{\\fontsize{9pt}{11pt}\\selectfont\n';
         resultado += '\\begin{itemize}[leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=3pt]\n';
-        
+
         lineasNotas.forEach(item => {
             const idNota = generarIdNota(item.nota);
             const notaEscapada = escaparLatex(item.nota);
             const textoEscapado = escaparLatex(item.texto);
-            
+
             resultado += `  \\item[\\hypertarget{${idNota}}{${notaEscapada}}] ${textoEscapado}\n`;
         });
-        
+
         resultado += '\\end{itemize}\n}';
     }
-    
+
     return resultado;
 }
 
@@ -1121,24 +1121,24 @@ function estilizarNotas(texto) {
     // Detectar notas al final del texto
     // Patrón: espacio + una o más notas separadas por comas + opcional espacio final
     // Ejemplos: " 6/", " 1/,7/", " P/,e/", " 1/,7/,11/"
-    
+
     // Buscar patrón de notas al final
     const match = texto.match(/^(.*?)\s+([0-9]+\/(?:,[0-9]+\/)*|[a-zA-Z]+\/(?:,[a-zA-Z]+\/)*)\s*$/);
-    
+
     if (match) {
         const textoBase = match[1];
         const notasStr = match[2];
-        
+
         // Separar notas múltiples (ej: "1/,7/" -> ["1/", "7/"])
         const notasArray = notasStr.split(',');
-        
+
         return {
             textoBase: textoBase,
             notas: notasArray,
             tieneNotas: true
         };
     }
-    
+
     return {
         textoBase: texto,
         notas: [],
@@ -1173,15 +1173,15 @@ function procesarCeldasFila(fila, esEncabezado = false) {
         // Detectar y separar notas ANTES de escapar
         const textoOriginal = c.toString();
         const resultado = estilizarNotas(textoOriginal);
-        
+
         let textoFinal;
         if (resultado.tieneNotas) {
             // Escapar el texto base
             const textoBaseEscapado = escaparLatex(resultado.textoBase);
-            
+
             // Color blanco para encabezados (fondo dorado), gris para cuerpo
             const colorNota = esEncabezado ? 'white' : 'gray';
-            
+
             // Procesar cada nota por separado para crear enlaces individuales
             const notasLatex = resultado.notas.map(nota => {
                 const notaEscapada = escaparLatex(nota);
@@ -1189,12 +1189,12 @@ function procesarCeldasFila(fila, esEncabezado = false) {
                 // Crear enlace clicable a la explicación en la fuente
                 return `\\hyperlink{${idNota}}{\\textcolor{${colorNota}}{${notaEscapada}}}`;
             }).join(',');
-            
+
             textoFinal = `${textoBaseEscapado} \\textsuperscript{${notasLatex}}`;
         } else {
             textoFinal = escaparLatex(textoOriginal);
         }
-        
+
         // Primera columna en negritas (sin color)
         if (idx === 0) {
             textoFinal = `\\textbf{${textoFinal}}`;
@@ -1316,34 +1316,34 @@ function generarLabel(texto) {
 function getDocumentos() {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const hoja = ss.getSheetByName('Documentos');
-    
+
     if (!hoja) {
         return [];
     }
-    
+
     const datos = hoja.getDataRange().getValues();
-    
+
     if (datos.length < 2) {
         return [];
     }
-    
+
     const headers = datos[0];
     const documentos = [];
-    
+
     for (let i = 1; i < datos.length; i++) {
         const fila = datos[i];
         const doc = {};
-        
+
         headers.forEach((header, j) => {
             doc[header] = fila[j];
         });
-        
+
         // Solo agregar si tiene ID
         if (doc['ID']) {
             documentos.push(doc);
         }
     }
-    
+
     return documentos;
 }
 
@@ -1352,17 +1352,17 @@ function getDocumentos() {
  */
 function getDocumento(docId) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
-    
+
     // Obtener metadatos
     const hojaDocs = ss.getSheetByName('Documentos');
     if (!hojaDocs) {
         throw new Error('No se encuentra la hoja "Documentos"');
     }
-    
+
     const datosDocs = hojaDocs.getDataRange().getValues();
     const headersDocs = datosDocs[0];
     let metadata = null;
-    
+
     for (let i = 1; i < datosDocs.length; i++) {
         if (datosDocs[i][0] == docId) {
             metadata = {};
@@ -1372,11 +1372,11 @@ function getDocumento(docId) {
             break;
         }
     }
-    
+
     if (!metadata) {
         throw new Error(`No se encontró el documento con ID: ${docId}`);
     }
-    
+
     return {
         metadata: metadata,
         secciones: obtenerRegistros(ss, 'Secciones', docId, 'DocumentoID'),
@@ -1394,14 +1394,14 @@ function getDocumento(docId) {
 function guardarDocumento(docId, datos) {
     const ss = SpreadsheetApp.getActiveSpreadsheet();
     const hoja = ss.getSheetByName('Documentos');
-    
+
     if (!hoja) {
         return { success: false, message: 'No se encuentra la hoja "Documentos"' };
     }
-    
+
     const datosFila = hoja.getDataRange().getValues();
     const headers = datosFila[0];
-    
+
     // Buscar la fila del documento
     for (let i = 1; i < datosFila.length; i++) {
         if (datosFila[i][0] == docId) {
@@ -1414,11 +1414,11 @@ function guardarDocumento(docId, datos) {
                     }
                 });
             }
-            
+
             return { success: true, message: 'Documento guardado correctamente' };
         }
     }
-    
+
     return { success: false, message: 'No se encontró el documento' };
 }
 
@@ -1428,18 +1428,18 @@ function guardarDocumento(docId, datos) {
 function generarTexDesdeWeb(docId) {
     try {
         const ss = SpreadsheetApp.getActiveSpreadsheet();
-        
+
         // Obtener datos del documento
         const hojaDocs = ss.getSheetByName('Documentos');
         if (!hojaDocs) {
             throw new Error('No se encuentra la hoja "Documentos"');
         }
-        
+
         const datosDocs = hojaDocs.getDataRange().getValues();
         const headersDocs = datosDocs[0];
         let datosDoc = null;
         let filaDoc = -1;
-        
+
         for (let i = 1; i < datosDocs.length; i++) {
             if (datosDocs[i][0] == docId) {
                 datosDoc = {};
@@ -1450,11 +1450,11 @@ function generarTexDesdeWeb(docId) {
                 break;
             }
         }
-        
+
         if (!datosDoc) {
             throw new Error(`No se encontró el documento con ID: ${docId}`);
         }
-        
+
         // Obtener todas las hojas relacionadas
         const secciones = obtenerRegistros(ss, 'Secciones', docId, 'DocumentoID');
         const bibliografia = obtenerRegistros(ss, 'Bibliografia', docId, 'DocumentoID');
@@ -1462,23 +1462,23 @@ function generarTexDesdeWeb(docId) {
         const tablas = obtenerRegistros(ss, 'Tablas', docId, 'DocumentoID');
         const siglas = obtenerRegistros(ss, 'Siglas', docId, 'DocumentoID');
         const glosario = obtenerRegistros(ss, 'Glosario', docId, 'DocumentoID');
-        
+
         // Ordenar secciones
         secciones.sort((a, b) => {
             const oa = parseFloat(a.Orden) || 0;
             const ob = parseFloat(b.Orden) || 0;
             return oa - ob;
         });
-        
+
         // Construir el contenido LaTeX
         const tex = construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, siglas, glosario, ss);
-        
+
         return {
             success: true,
             contenido: tex,
             nombreArchivo: `${datosDoc['DocumentoCorto'] || 'documento'}.tex`
         };
-        
+
     } catch (error) {
         return {
             success: false,
