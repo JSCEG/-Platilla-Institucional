@@ -87,11 +87,8 @@
 % ============================================================================
 % PAQUETES DE ACCESIBILIDAD PDF/UA
 % ============================================================================
-% Accesibilidad completa para PDFs
-\RequirePackage{axessibility}
-
-% Hyperref con configuración de accesibilidad
-\RequirePackage[pdfa,pdfusetitle]{hyperref}
+% Hyperref con configuración MÁXIMA de accesibilidad para publicación
+\RequirePackage[pdfa,pdfusetitle,pdfversion=1.7]{hyperref}
 \hypersetup{
   colorlinks=true,
   linkcolor=gobmxGuinda,
@@ -102,14 +99,17 @@
   bookmarksopen=true,
   bookmarksnumbered=true,
   pdflang={es-MX},
-  pdfcreator={XeLaTeX con sener2025.cls},
-  pdfproducer={Secretaría de Energía},
+  pdfcreator={XeLaTeX con sener2025.cls - PDF Accesible},
+  pdfproducer={Secretaría de Energía - México},
   pdfstartview=FitH,
-  unicode=true
+  unicode=true,
+  pdfencoding=auto,
+  pdfdisplaydoctitle=true,
+  pdfpagelayout=SinglePage
 }
 
-% Comentarios y anotaciones accesibles
-\RequirePackage{pdfcomment}
+% Estructura semántica básica con accsupp
+\RequirePackage{accsupp}
 
 % ============================================================================
 % Packages for functionality and bibliography

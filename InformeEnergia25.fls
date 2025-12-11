@@ -1,0 +1,192 @@
+PWD c:\Proyectos\40.-PlantillasLatex
+INPUT C:\Users\User\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
+INPUT c:\Proyectos\40.-PlantillasLatex\InformeEnergia25.tex
+OUTPUT InformeEnergia25.log
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement-testphase.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement-testphase.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-base.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-base.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\l3backend-testphase-pdftex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\l3backend-testphase-pdftex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-latest.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-latest.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-mc-code-generic.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-mc-code-generic.sty
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf2.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf2.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-mathml.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-mathml.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-latex-book.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-latex-book.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-latex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-latex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\tagpdf-ns-latex-lab.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\tagpdf-ns-latex-lab.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-ns-pdf2.def
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-parent-child-2.csv
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\tagpdf\tagpdf-parent-child-2.csv
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-names.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-names.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-new-or-2.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-new-or-2.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\footmisc\footmisc.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-footmisc.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-footnotes.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-footnotes.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-footnotes.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-block.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-block.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-kernel-changes.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-kernel-changes.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\glyphtounicode-cmex.tex
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\glyphtounicode-cmex.tex
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\glyphtounicode-cmex.tex
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\glyphtounicode-cmex.tex
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\glyphtounicode-cmex.tex
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-context.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-context.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-sec.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-sec.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-toc.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-toc.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-minipage.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-minipage.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-new-or-1.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-new-or-1.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-graphic.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-graphic.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-float.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-float.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-bib.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-bib.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-text.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-text.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-marginpar.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-marginpar.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-title.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-title.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-table.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-table.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\tools\array.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-math.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-math.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-math.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-math.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-math.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathpkg.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathpkg.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathpkg.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathintent.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathintent.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-mathintent.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-firstaid.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-firstaid.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-tikz.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\latex-lab-testphase-tikz.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement-firstaid.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\pdfmanagement-firstaid.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\color-ltx.sty
+INPUT .\sener2025.cls
+INPUT sener2025.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\fonts\tfm\jknappen\ec\ecrm1200.tfm
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\txtbabel.def
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-mexican.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-mexican.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-mexican.tex
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es.ini
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
+INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\ifvtex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Program Files\MiKTeX\tex\generic\iftex\iftex.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphicx.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\graphics.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\trig.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\graphics.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-def\pdftex.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\float\float.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\xcolor\xcolor.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics-cfg\color.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\mathcolor.ltx
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\xcolor-patches-tmp-ltx.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfmanagement-testphase\xcolor-patches-tmp-ltx.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\colortbl\colortbl.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\graphics\color.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\titlesec\titlesec.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3kernel\expl3.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\l3keys2e\l3keys2e.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\l3packages\xparse\xparse.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-generic-helper.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-generic-helper.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-mapping.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fontawesome5\fontawesome5-mapping.def
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty

@@ -19,36 +19,8 @@ function onOpen() {
     const ui = SpreadsheetApp.getUi();
     ui.createMenu('📄 SENER LaTeX')
         .addItem('✨ Generar .tex de este documento', 'generarLatex')
-        .addItem('🌐 Abrir Editor Web', 'abrirEditorWeb')
         .addItem('📋 Ver log de errores', 'mostrarLog')
         .addToUi();
-}
-
-/**
- * Servir la aplicación web
- */
-function doGet(e) {
-    const page = e.parameter.page || 'index';
-
-    if (page === 'editor') {
-        return HtmlService.createHtmlOutputFromFile('editor')
-            .setTitle('SENER LaTeX Editor')
-            .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-    }
-
-    return HtmlService.createHtmlOutputFromFile('index')
-        .setTitle('SENER LaTeX - Dashboard')
-        .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.ALLOWALL);
-}
-
-/**
- * Abrir editor web desde el menú
- */
-function abrirEditorWeb() {
-    const url = ScriptApp.getService().getUrl();
-    const html = `<script>window.open('${url}', '_blank'); google.script.host.close();</script>`;
-    const ui = HtmlService.createHtmlOutput(html);
-    SpreadsheetApp.getUi().showModalDialog(ui, 'Abriendo Editor Web...');
 }
 
 /**
@@ -798,15 +770,15 @@ function generarFigura(figura) {
         tex += `  % Guárdala como: ${rutaFinal}\n`;
     }
 
-    // Agregar texto alternativo para accesibilidad
-    tex += `  % Texto alternativo para accesibilidad\n`;
-    tex += `  \\pdftooltip{\\includegraphics[width=0.8\\textwidth]{${rutaFinal}}}{${escaparLatex(textoAlt)}}\n`;
+    // Incluir imagen con texto alternativo como comentario
+    tex += `  % Texto alternativo: ${escaparLatex(textoAlt)}\n`;
+    tex += `  \\includegraphics[width=0.8\\textwidth]{${rutaFinal}}\n`;
     tex += `  \\caption{${escaparLatex(caption)}}\n`;
-    
+
     // Generar label automático para referencias cruzadas
     const labelFigura = generarLabel(caption);
     tex += `  \\label{fig:${labelFigura}}\n`;
-    
+
     tex += `\\end{figure}\n`;
 
     if (fuente) {
@@ -1339,186 +1311,7 @@ function generarLabel(texto) {
         .substring(0, 30);
 }
 
-// ============================================================================
-// API WEB - FUNCIONES PARA LA INTERFAZ WEB
-// ============================================================================
 
-/**
- * API: Obtener lista de todos los documentos
- */
-function getDocumentos() {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-    const hoja = ss.getSheetByName('Documentos');
-
-    if (!hoja) {
-        return [];
-    }
-
-    const datos = hoja.getDataRange().getValues();
-
-    if (datos.length < 2) {
-        return [];
-    }
-
-    const headers = datos[0];
-    const documentos = [];
-
-    for (let i = 1; i < datos.length; i++) {
-        const fila = datos[i];
-        const doc = {};
-
-        headers.forEach((header, j) => {
-            doc[header] = fila[j];
-        });
-
-        // Solo agregar si tiene ID
-        if (doc['ID']) {
-            documentos.push(doc);
-        }
-    }
-
-    return documentos;
-}
-
-/**
- * API: Obtener documento completo por ID
- */
-function getDocumento(docId) {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-
-    // Obtener metadatos
-    const hojaDocs = ss.getSheetByName('Documentos');
-    if (!hojaDocs) {
-        throw new Error('No se encuentra la hoja "Documentos"');
-    }
-
-    const datosDocs = hojaDocs.getDataRange().getValues();
-    const headersDocs = datosDocs[0];
-    let metadata = null;
-
-    for (let i = 1; i < datosDocs.length; i++) {
-        if (datosDocs[i][0] == docId) {
-            metadata = {};
-            headersDocs.forEach((header, j) => {
-                metadata[header] = datosDocs[i][j];
-            });
-            break;
-        }
-    }
-
-    if (!metadata) {
-        throw new Error(`No se encontró el documento con ID: ${docId}`);
-    }
-
-    return {
-        metadata: metadata,
-        secciones: obtenerRegistros(ss, 'Secciones', docId, 'DocumentoID'),
-        tablas: obtenerRegistros(ss, 'Tablas', docId, 'DocumentoID'),
-        figuras: obtenerRegistros(ss, 'Figuras', docId, 'DocumentoID'),
-        bibliografia: obtenerRegistros(ss, 'Bibliografia', docId, 'DocumentoID'),
-        siglas: obtenerRegistros(ss, 'Siglas', docId, 'DocumentoID'),
-        glosario: obtenerRegistros(ss, 'Glosario', docId, 'DocumentoID')
-    };
-}
-
-/**
- * API: Guardar cambios en metadatos del documento
- */
-function guardarDocumento(docId, datos) {
-    const ss = SpreadsheetApp.getActiveSpreadsheet();
-    const hoja = ss.getSheetByName('Documentos');
-
-    if (!hoja) {
-        return { success: false, message: 'No se encuentra la hoja "Documentos"' };
-    }
-
-    const datosFila = hoja.getDataRange().getValues();
-    const headers = datosFila[0];
-
-    // Buscar la fila del documento
-    for (let i = 1; i < datosFila.length; i++) {
-        if (datosFila[i][0] == docId) {
-            // Actualizar cada campo
-            if (datos.metadata) {
-                Object.keys(datos.metadata).forEach(key => {
-                    const colIndex = headers.indexOf(key);
-                    if (colIndex !== -1) {
-                        hoja.getRange(i + 1, colIndex + 1).setValue(datos.metadata[key]);
-                    }
-                });
-            }
-
-            return { success: true, message: 'Documento guardado correctamente' };
-        }
-    }
-
-    return { success: false, message: 'No se encontró el documento' };
-}
-
-/**
- * API: Generar .tex desde la interfaz web
- */
-function generarTexDesdeWeb(docId) {
-    try {
-        const ss = SpreadsheetApp.getActiveSpreadsheet();
-
-        // Obtener datos del documento
-        const hojaDocs = ss.getSheetByName('Documentos');
-        if (!hojaDocs) {
-            throw new Error('No se encuentra la hoja "Documentos"');
-        }
-
-        const datosDocs = hojaDocs.getDataRange().getValues();
-        const headersDocs = datosDocs[0];
-        let datosDoc = null;
-        let filaDoc = -1;
-
-        for (let i = 1; i < datosDocs.length; i++) {
-            if (datosDocs[i][0] == docId) {
-                datosDoc = {};
-                headersDocs.forEach((header, j) => {
-                    datosDoc[header] = datosDocs[i][j];
-                });
-                filaDoc = i + 1;
-                break;
-            }
-        }
-
-        if (!datosDoc) {
-            throw new Error(`No se encontró el documento con ID: ${docId}`);
-        }
-
-        // Obtener todas las hojas relacionadas
-        const secciones = obtenerRegistros(ss, 'Secciones', docId, 'DocumentoID');
-        const bibliografia = obtenerRegistros(ss, 'Bibliografia', docId, 'DocumentoID');
-        const figuras = obtenerRegistros(ss, 'Figuras', docId, 'DocumentoID');
-        const tablas = obtenerRegistros(ss, 'Tablas', docId, 'DocumentoID');
-        const siglas = obtenerRegistros(ss, 'Siglas', docId, 'DocumentoID');
-        const glosario = obtenerRegistros(ss, 'Glosario', docId, 'DocumentoID');
-
-        // Ordenar secciones
-        secciones.sort((a, b) => {
-            const oa = parseFloat(a.Orden) || 0;
-            const ob = parseFloat(b.Orden) || 0;
-            return oa - ob;
-        });
-
-        // Construir el contenido LaTeX
-        const tex = construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, siglas, glosario, ss);
-
-        return {
-            success: true,
-            contenido: tex,
-            nombreArchivo: `${datosDoc['DocumentoCorto'] || 'documento'}.tex`
-        };
-
-    } catch (error) {
-        return {
-            success: false,
-            message: error.toString()
-        };
-    }
-}
 
 /**
  * Escapa texto LaTeX pero procesa etiquetas especiales [[...]]
