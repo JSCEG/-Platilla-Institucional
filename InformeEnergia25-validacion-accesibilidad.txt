@@ -1,0 +1,57 @@
+===============================================================================
+REPORTE DE VALIDACIÓN DE ACCESIBILIDAD
+Archivo: .\InformeEnergia25.tex
+Fecha: 2025-12-10 21:30:55
+===============================================================================
+
+PROBLEMAS CRÍTICOS (6)
+  - Falta paquete: \usepackage{hyperref}
+  - Falta paquete: \usepackage{pdfcomment}
+  - Falta paquete: \usepackage{axessibility}
+  - Figura sin texto alternativo (\pdftooltip)
+  - Figura sin texto alternativo (\pdftooltip)
+  - Figura sin texto alternativo (\pdftooltip)
+
+
+ADVERTENCIAS (6)
+  - Metadato faltante: pdftitle
+  - Metadato faltante: pdfsubject
+  - Metadato faltante: pdflang
+  - Metadato faltante: pdfkeywords
+  - Metadato faltante: pdfauthor
+  - Algunas tablas no tienen \caption
+
+
+SUGERENCIAS DE MEJORA (3)
+  - Figura sin \label (dificulta referencias cruzadas)
+  - Figura sin \label (dificulta referencias cruzadas)
+  - Figura sin \label (dificulta referencias cruzadas)
+
+
+ESTADÍSTICAS DEL DOCUMENTO
+--------------------------
+- Figuras totales: 3
+- Figuras con problemas: 3
+- Tablas totales: 5
+- Tablas con caption: 1
+- Enlaces totales: 0
+- Tiene estructura jerárquica: Sí
+- Tiene tabla de contenidos: Sí
+
+RECOMENDACIONES
+---------------
+1. Asegurarse de que todas las figuras tengan \pdftooltip para texto alternativo
+2. Todas las tablas deben tener \caption descriptivo
+3. Usar \section, \subsection para estructura clara
+4. Incluir \tableofcontents para navegación
+5. Configurar metadatos PDF/UA completos en \hypersetup{}
+6. Compilar con XeLaTeX para mejor soporte de accesibilidad
+
+PRÓXIMOS PASOS
+--------------
+1. Corregir problemas críticos marcados arriba
+2. Revisar advertencias y sugerencias
+3. Ejecutar: .\compilar-pdf-accesible.ps1 -TexFile .\InformeEnergia25.tex
+4. Validar PDF resultante con Adobe Acrobat o PAC
+
+===============================================================================

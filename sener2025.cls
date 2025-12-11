@@ -85,6 +85,33 @@
 \fi
 
 % ============================================================================
+% PAQUETES DE ACCESIBILIDAD PDF/UA
+% ============================================================================
+% Accesibilidad completa para PDFs
+\RequirePackage{axessibility}
+
+% Hyperref con configuración de accesibilidad
+\RequirePackage[pdfa,pdfusetitle]{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=gobmxGuinda,
+  filecolor=gobmxVerde,
+  urlcolor=gobmxDorado,
+  citecolor=gobmxGuinda,
+  pdfpagemode=UseOutlines,
+  bookmarksopen=true,
+  bookmarksnumbered=true,
+  pdflang={es-MX},
+  pdfcreator={XeLaTeX con sener2025.cls},
+  pdfproducer={Secretaría de Energía},
+  pdfstartview=FitH,
+  unicode=true
+}
+
+% Comentarios y anotaciones accesibles
+\RequirePackage{pdfcomment}
+
+% ============================================================================
 % Packages for functionality and bibliography
 % ============================================================================
 \RequirePackage{enumitem}

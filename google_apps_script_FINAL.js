@@ -164,7 +164,18 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += `\\addbibresource{referencias.bib}\n\n`;
     }
 
-    // --- Metadatos ---
+    // --- Metadatos PDF/UA para Accesibilidad ---
+    tex += `% --- Metadatos PDF/UA (Accesibilidad Universal) ---\n`;
+    tex += `\\hypersetup{\n`;
+    tex += `  pdftitle={${escaparLatex(datosDoc['Titulo'] || 'Documento SENER')}},\n`;
+    tex += `  pdfauthor={${escaparLatex(datosDoc['Autor'] || 'Secretaría de Energía')}},\n`;
+    tex += `  pdfsubject={${escaparLatex(datosDoc['Subtitulo'] || datosDoc['Titulo'] || 'Documento Institucional')}},\n`;
+    tex += `  pdfkeywords={${escaparLatex(datosDoc['PalabrasClave'] || 'SENER, Energía, México')}},\n`;
+    tex += `  pdfcreationdate={D:${generarFechaPDF()}},\n`;
+    tex += `  pdfversion={${escaparLatex(datosDoc['Version'] || '1.0')}}\n`;
+    tex += `}\n\n`;
+
+    // --- Metadatos del Documento ---
     tex += `% --- Metadatos del Documento ---\n`;
     tex += `\\title{${escaparLatex(datosDoc['Titulo'] || '')}}\n`;
     if (datosDoc['Subtitulo']) {
@@ -643,6 +654,20 @@ function formatearFecha(fechaRaw) {
 }
 
 /**
+ * Genera fecha en formato PDF (YYYYMMDDHHmmSS) para metadatos
+ */
+function generarFechaPDF() {
+    const ahora = new Date();
+    const año = ahora.getFullYear();
+    const mes = String(ahora.getMonth() + 1).padStart(2, '0');
+    const dia = String(ahora.getDate()).padStart(2, '0');
+    const hora = String(ahora.getHours()).padStart(2, '0');
+    const min = String(ahora.getMinutes()).padStart(2, '0');
+    const seg = String(ahora.getSeconds()).padStart(2, '0');
+    return `${año}${mes}${dia}${hora}${min}${seg}`;
+}
+
+/**
  * Escapa caracteres especiales de LaTeX
  */
 function escaparLatex(texto) {
@@ -745,6 +770,7 @@ function generarFigura(figura) {
     const rutaArchivo = figura['RutaArchivo'] || '';
     const caption = figura['Caption'] || '';
     const fuente = figura['Fuente'] || '';
+    const textoAlt = figura['TextoAlternativo'] || caption; // Usar campo específico o caption como fallback
 
     // Detectar si es URL de Google Drive
     let rutaFinal = rutaArchivo;
@@ -772,8 +798,15 @@ function generarFigura(figura) {
         tex += `  % Guárdala como: ${rutaFinal}\n`;
     }
 
-    tex += `  \\includegraphics[width=0.8\\textwidth]{${rutaFinal}}\n`;
+    // Agregar texto alternativo para accesibilidad
+    tex += `  % Texto alternativo para accesibilidad\n`;
+    tex += `  \\pdftooltip{\\includegraphics[width=0.8\\textwidth]{${rutaFinal}}}{${escaparLatex(textoAlt)}}\n`;
     tex += `  \\caption{${escaparLatex(caption)}}\n`;
+    
+    // Generar label automático para referencias cruzadas
+    const labelFigura = generarLabel(caption);
+    tex += `  \\label{fig:${labelFigura}}\n`;
+    
     tex += `\\end{figure}\n`;
 
     if (fuente) {
