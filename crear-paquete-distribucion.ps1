@@ -73,7 +73,7 @@ Write-Host "`n📂 Copiando carpetas:" -ForegroundColor Yellow
 
 $carpetas = @(
     @{Nombre = "tipografias"; Esencial = $true },
-    @{Nombre = "image"; Esencial = $true },
+    @{Nombre = "img"; Esencial = $true },
     @{Nombre = "ejemplos"; Esencial = $false }
 )
 
@@ -94,13 +94,6 @@ foreach ($carpeta in $carpetas) {
         }
     }
 }
-
-# ============================================================================
-# CREAR CARPETA IMG VACÍA
-# ============================================================================
-$carpetaImg = Join-Path $carpetaTemporal "img"
-New-Item -ItemType Directory -Path $carpetaImg -Force | Out-Null
-Write-Host "   ✓ img/ (vacía para figuras)" -ForegroundColor Cyan
 
 # ============================================================================
 # VERIFICAR ARCHIVOS CRÍTICOS
