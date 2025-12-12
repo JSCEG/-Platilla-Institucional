@@ -970,9 +970,9 @@ function generarTablaSimple(datos, tituloTabla) {
     const numCols = datos[0].length;
 
     // Calcular ancho de columnas para longtable
-    // Primera columna: 3cm, resto: distribuido equitativamente
+    // Primera columna: 3cm con negritas automáticas (B), resto: distribuido equitativamente
     const anchoRestante = `${(11 / (numCols - 1)).toFixed(2)}cm`; // ancho útil compacto
-    const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
+    const especCols = 'B{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
 
     // Usar longtable para permitir saltos de página automáticos
     let tex = `  \\begin{longtable}{${especCols}}\n`;
@@ -1014,23 +1014,33 @@ function generarTablaSimple(datos, tituloTabla) {
 }
 
 /**
- * Genera una tabla compacta usando tabular (sin saltos automáticos)
+ * Genera una tabla compacta usando longtable (para consistencia)
  */
 function generarTablaCompacta(datos) {
     const numCols = datos[0].length;
-    const especCols = 'p{3cm}' + 'c'.repeat(numCols - 1);
-    let tex = `  \\begin{tabular}{${especCols}}\n`;
+    // Para tablas compactas, usar anchos más pequeños: primera 3cm, resto 2cm cada una
+    const especCols = 'B{3cm}' + 'p{2cm}'.repeat(numCols - 1);
+    let tex = `  \\begin{longtable}{${especCols}}\n`;
     tex += `    \\toprule\n`;
     // Encabezados con fondo dorado
     const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
+    tex += `    \\endfirsthead\n\n`;
+
+    // Encabezado para páginas siguientes (aunque sea compacta, por consistencia)
+    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+    tex += `    \\midrule\n`;
+    tex += `    \\endhead\n\n`;
+
+    tex += `    \\bottomrule\n`;
+    tex += `    \\endlastfoot\n\n`;
+
     for (let i = 1; i < datos.length; i++) {
         const celdas = procesarCeldasFila(datos[i]);
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
-    tex += `    \\bottomrule\n`;
-    tex += `  \\end{tabular}\n`;
+    tex += `  \\end{longtable}\n`;
     return tex;
 }
 
@@ -1064,7 +1074,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
 
         // Calcular ancho de columnas para longtable
         const anchoRestante = `${(11 / (numColsTabla - 1)).toFixed(2)}cm`;
-        const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numColsTabla - 1);
+        const especCols = 'B{3cm}' + ('p{' + anchoRestante + '}').repeat(numColsTabla - 1);
 
         // Usar longtable para permitir saltos de página
         tex += `  \\begin{longtable}{${especCols}}\n`;

@@ -1,7 +1,7 @@
 PWD c:\Proyectos\40.-PlantillasLatex
 INPUT C:\Users\User\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT c:\Proyectos\40.-PlantillasLatex\InformeEnergia25.tex
-OUTPUT InformeEnergia25.log
+INPUT c:\Proyectos\40.-PlantillasLatex\test_enlaces.tex
+OUTPUT test_enlaces.log
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
@@ -499,10 +499,10 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
-INPUT .\InformeEnergia25.aux
-INPUT .\InformeEnergia25.aux
-INPUT InformeEnergia25.aux
-OUTPUT InformeEnergia25.aux
+INPUT .\test_enlaces.aux
+INPUT .\test_enlaces.aux
+INPUT test_enlaces.aux
+OUTPUT test_enlaces.aux
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
@@ -512,68 +512,19 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
-OUTPUT InformeEnergia25.bcf
-INPUT InformeEnergia25.bbl
-INPUT .\InformeEnergia25.bbl
-INPUT .\InformeEnergia25.bbl
-INPUT .\InformeEnergia25.bbl
-INPUT InformeEnergia25.bbl
-INPUT .\img\portada.png
-INPUT .\img\portada.png
+OUTPUT test_enlaces.bcf
+INPUT test_enlaces.bbl
+INPUT .\test_enlaces.bbl
+INPUT .\test_enlaces.bbl
+INPUT .\test_enlaces.bbl
+INPUT test_enlaces.bbl
+OUTPUT test_enlaces.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT .\InformeEnergia25.toc
-INPUT .\InformeEnergia25.toc
-INPUT InformeEnergia25.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-OUTPUT InformeEnergia25.toc
+OUTPUT test_enlaces.lof
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT .\InformeEnergia25.lof
-INPUT .\InformeEnergia25.lof
-INPUT InformeEnergia25.lof
-OUTPUT InformeEnergia25.lof
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\InformeEnergia25.lot
-INPUT .\InformeEnergia25.lot
-INPUT InformeEnergia25.lot
-OUTPUT InformeEnergia25.lot
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-TU-empty.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\graficos\figura_2_1.png
-INPUT .\img\graficos\figura_2_1.png
-INPUT .\img\graficos\figura_2_1.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\graficos\figura_2_12.png
-INPUT .\img\graficos\figura_2_12.png
-INPUT .\img\graficos\figura_2_12.png
+OUTPUT test_enlaces.lot
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
@@ -582,46 +533,10 @@ INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\graficos\figura_4_3.png
-INPUT .\img\graficos\figura_4_3.png
-INPUT .\img\graficos\figura_4_3.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\contraportada.png
-INPUT .\img\contraportada.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT InformeEnergia25.aux
-INPUT InformeEnergia25.run.xml
-OUTPUT InformeEnergia25.run.xml
+INPUT test_enlaces.aux
+OUTPUT test_enlaces.run.xml

@@ -79,17 +79,24 @@ El marco regulatorio mexicano ha evolucionado significativamente en los últimos
 \fuente{SENER,2025}
 
 \begin{tabladorado}
-  \caption{Capacidad instalada de generación eléctrica por tecnología seleccionada}
-  \label{tab:capacidad_instalada_de_generac}
-  \begin{tabular}{p{3cm}ccccc}
+  \begin{longtable}{B{3cm}p{2cm}p{2cm}p{2cm}p{2cm}p{2cm}}
+    \caption{Capacidad instalada de generación eléctrica por tecnología seleccionada}\label{tab:capacidad_instalada_de_generac}\\
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{\textbf{A}} & \encabezadodorado{B} & \encabezadodorado{C} & \encabezadodorado{D} & \encabezadodorado{} & \encabezadodorado{} \\
     \midrule
+    \endfirsthead
+    
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{A}} & \encabezadodorado{B} & \encabezadodorado{C} & \encabezadodorado{D} & \encabezadodorado{} & \encabezadodorado{} \\
+    \midrule
+    \endhead
+    
+    \bottomrule
+    \endlastfoot
+    
     \textbf{Generación} & 100,000 & 2 & 3 &  &  \\
     \textbf{Distribucion} & 56 & 6 & 7 &  &  \\
     \textbf{Total} & 57 & 8 & 10 &  &  \\
-    \bottomrule
-  \end{tabular}
+  \end{longtable}
 \end{tabladorado}
 \fuente{Elaboración propia con base en el Balance Nacional de Energía                                                                                      }
 
@@ -146,20 +153,27 @@ La reducción de la intensidad energética es un factor clave para desacoplar el
 }}
 
 \begin{tabladorado}
-  \caption{Ejemplo de Notas al Pie de tablas}
-  \label{tab:ejemplo_de_notas_al_pie_de_tab}
-  \begin{tabular}{p{3cm}cc}
+  \begin{longtable}{B{3cm}p{2cm}p{2cm}}
+    \caption{Ejemplo de Notas al Pie de tablas}\label{tab:ejemplo_de_notas_al_pie_de_tab}\\
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{\textbf{X}} & \encabezadodorado{Y} & \encabezadodorado{z} \\
     \midrule
+    \endfirsthead
+    
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{X}} & \encabezadodorado{Y} & \encabezadodorado{z} \\
+    \midrule
+    \endhead
+    
+    \bottomrule
+    \endlastfoot
+    
     \textbf{Generación MW} & 1 & 1 \\
     \textbf{Distribucion MW} & 56 & 4 \\
     \textbf{Solar Fotovoltaica \textsuperscript{\hyperlink{nota3}{\textcolor{gray}{3/}}}} & 57 & 23 \\
     \textbf{De Pura pruba} & 1 & 5 \\
     \textbf{J1} & 11,111 & 7 \\
     \textbf{J2} & 3 & 9 \\
-    \bottomrule
-  \end{tabular}
+  \end{longtable}
 \end{tabladorado}
 \fuente{Elaboración propia.
 
@@ -172,7 +186,7 @@ La reducción de la intensidad energética es un factor clave para desacoplar el
 }}
 
 \begin{tabladoradoLargo}
-  \begin{longtable}{p{3cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}}
+  \begin{longtable}{B{3cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}}
     \caption{Consumo final de energía por sector económico}\label{tab:consumo_final_de_energia_por_s}\\
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2014 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}}}} & \encabezadodorado{2015 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}}}} & \encabezadodorado{2016 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota7}{\textcolor{white}{7/}}}} & \encabezadodorado{2019 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota10}{\textcolor{white}{10/}}}} & \encabezadodorado{2020 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota5}{\textcolor{white}{5/}}}} \\
@@ -219,7 +233,7 @@ La reducción de la intensidad energética es un factor clave para desacoplar el
   {\small\textit{Continuación Tabla. Consumo final de energía por sector económico}}
   \vspace{0.5em}
 
-  \begin{longtable}{p{3cm}p{2.75cm}p{2.75cm}p{2.75cm}p{2.75cm}}
+  \begin{longtable}{B{3cm}p{2.75cm}p{2.75cm}p{2.75cm}p{2.75cm}}
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{\textbf{TECNOLOGÍA}} & \encabezadodorado{2021 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota5}{\textcolor{white}{5/}}}} & \encabezadodorado{2022 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota5}{\textcolor{white}{5/}}}} & \encabezadodorado{2023 \textsuperscript{\hyperlink{nota1}{\textcolor{white}{1/}},\hyperlink{nota5}{\textcolor{white}{5/}}}} & \encabezadodorado{2024 \textsuperscript{\hyperlink{nota6}{\textcolor{white}{6/}}}} \\
     \midrule

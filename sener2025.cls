@@ -167,7 +167,7 @@
   parskip=0pt
 }
 
-% Configuración específica para tablas (IGUAL que longtable)
+% Configuración específica para tablas (texto gris, sin fondo)
 \captionsetup[table]{
   position=top,
   skip=8pt,
@@ -188,7 +188,7 @@
   textfont={small,color=gobmxGris}
 }
 
-% Configuración específica para longtable (IGUAL que table)
+% Para longtable, usar el mismo formato que table
 \captionsetup[longtable]{
   position=top,
   skip=8pt,
@@ -197,26 +197,6 @@
   labelfont={footnotesize,color=gobmxGris},
   textfont={small,color=gobmxGris},
   font={small,color=gobmxGris}
-}
-
-% Configuración adicional para longtable usando comandos nativos
-\AtBeginDocument{
-  % Asegurar que longtable use el mismo formato que las tablas normales
-  \renewcommand{\LT@makecaption}[3]{%
-    \LT@mcol\LT@cols c{\hbox to\z@{\hss\parbox[t]\LTcapwidth{%
-      \sbox\@tempboxa{%
-        {\footnotesize\color{gobmxGris}#1}%
-        {\small\color{gobmxGris}#2}%
-      }%
-      \ifdim\wd\@tempboxa>\hsize
-        {\footnotesize\color{gobmxGris}#1}%
-        {\small\color{gobmxGris}#2}\par
-      \else
-        \hbox to\hsize{\raggedright\unhbox\@tempboxa\hfil}%
-      \fi
-      \endgraf\vskip\baselineskip}%
-    \hss}}%
-  }
 }
 % Bibliography (APA style)
 \RequirePackage[
@@ -423,6 +403,11 @@
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
 \newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
 
+% Tipos de columnas con negritas (para primera columna de conceptos)
+\newcolumntype{B}[1]{>{\raggedright\arraybackslash\bfseries}p{#1}}
+\newcolumntype{M}[1]{>{\centering\arraybackslash\bfseries}p{#1}}
+\newcolumntype{N}[1]{>{\raggedleft\arraybackslash\bfseries}p{#1}}
+
 % ============================================================================
 % ESTILOS DE ENCABEZADOS DE TABLA
 % ============================================================================
@@ -464,7 +449,6 @@
   \renewcommand{\arraystretch}{1.2} % Más aire
   \sffamily\notosanssmall % Fuente sans-serif 10.5pt
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -476,21 +460,17 @@
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
 
-% Tabla estilo dorado
+% Tabla estilo dorado (ahora sin entorno table, para usar con longtable)
 \newenvironment{tabladorado}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
-  \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
+  \renewcommand{\arraystretch}{1.2}
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
-  \end{table}
 }
 
 % Tabla dorada para tablas largas (sin entorno table)
@@ -509,7 +489,6 @@
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -520,7 +499,6 @@
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -532,7 +510,6 @@
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }

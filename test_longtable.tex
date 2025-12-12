@@ -17,22 +17,29 @@
 \section{Prueba de Tabla Normal}
 
 \begin{tabladorado}
-  \caption{Esta es una tabla normal con tabladorado}
-  \label{tab:normal}
-  \begin{tabular}{p{4cm}p{3cm}p{3cm}}
+  \begin{longtable}{B{4cm}p{3cm}p{3cm}}
+    \caption{Esta es una tabla normal con tabladorado}\label{tab:normal}\\
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{2023} & \encabezadodorado{2024} \\
     \midrule
+    \endfirsthead
+    
+    \caption[]{(continuación)}\\
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{2023} & \encabezadodorado{2024} \\
+    \midrule
+    \endhead
+    
     Capacidad Total & 85,000 & 87,500 \\
     Renovables & 25,000 & 30,000 \\
     \bottomrule
-  \end{tabular}
+  \end{longtable}
 \end{tabladorado}
 
 \section{Prueba de Tabla Larga}
 
 \begin{tabladoradoLargo}
-  \begin{longtable}{p{4cm}p{3cm}p{3cm}}
+  \begin{longtable}{B{4cm}p{3cm}p{3cm}}
     \caption{Esta es una tabla larga con tabladoradoLargo}\label{tab:larga}\\
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{2023} & \encabezadodorado{2024} \\

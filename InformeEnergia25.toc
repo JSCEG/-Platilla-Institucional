@@ -1,0 +1,16 @@
+\babel@toc {mexican}{}\relax 
+\contentsline {section}{\numberline {1}Contexto general del sistema energético mexicano}{5}{section.1}%
+\contentsline {section}{\numberline {2}Evolución de la capacidad de generación eléctrica}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Integración de energías renovables variables al sistema eléctrico}{8}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Papel de las Energías renovables}{8}{subsubsection.2.1.1}%
+\contentsline {paragraph}{Papel de las Energías renovables Sub}{8}{paragraph*.6}%
+\contentsline {section}{\numberline {3}Consumo final de energía por sector}{8}{section.3}%
+\contentsline {section}{\numberline {4}Emisiones de gases de efecto invernadero del sector energético}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Medidas de mitigación y escenarios de transición}{14}{subsection.4.1}%
+\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{16}{appendix.A}%
+\contentsline {subsection}{\numberline {Anexo A.1}Modelo Econométrico}{16}{subsection.A.1}%
+\contentsline {subsection}{\numberline {Anexo A.2}Ejemplo de Bloques}{16}{subsection.A.2}%
+\contentsline {section}{\numberline {Anexo B}Sistema de Citas}{18}{appendix.B}%
+\contentsline {section}{\numberline {Anexo C}123}{18}{appendix.C}%
+\contentsline {section}{Glosario}{18}{appendix.C}%
+\contentsline {section}{Siglas y Acrónimos}{18}{*.31}%

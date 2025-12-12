@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 13:14
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 13:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2000,72 +2000,41 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 10.5pt on input line 20.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 22.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 22.
+(Font)              scaled to size 10.95pt on input line 21.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 22.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 22.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 22.
-
-
-LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 22.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 22.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
+(Font)              scaled to size 10.0pt on input line 21.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 24.
+(Font)              scaled to size 10.5pt on input line 23.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 35.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 36.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 36.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 9.5pt on input line 38.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
 (Font)              scaled to size 9.5pt on input line 42.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 57.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 57.
+(Font)              scaled to size 9.5pt on input line 45.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
+(Font)              scaled to size 9.5pt on input line 49.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 64.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 64.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [1
+[1
 
-]
-(test_longtable.aux)
+] (test_longtable.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
-
 Package logreq Info: Writing requests to 'test_longtable.run.xml'.
 \openout1 = `test_longtable.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50473 strings out of 402987
- 1076365 string characters out of 5452871
- 2097603 words of memory out of 5000000
- 78521 multiletter control sequences out of 15000+600000
- 649532 words of font info for 84 fonts, out of 8000000 for 9000
+ 50349 strings out of 402987
+ 1073565 string characters out of 5452871
+ 2098751 words of memory out of 5000000
+ 78403 multiletter control sequences out of 15000+600000
+ 647922 words of font info for 76 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,12n,122p,1193b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
