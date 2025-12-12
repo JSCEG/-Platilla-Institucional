@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber InformeEnergia25"] 1765569110.67566 "InformeEnergia25.bcf" "InformeEnergia25.bbl" "InformeEnergia25" 1765569199.77833 0
-  "InformeEnergia25.bcf" 1765569199 108847 8d6240fce34893141a2fff750e855c40 "pdflatex"
-  "referencias.bib" 1765564802 760 704fd64536404d49732c866308ea2d99 ""
+["biber InformeEnergia25"] 1765582469.39582 "InformeEnergia25.bcf" "InformeEnergia25.bbl" "InformeEnergia25" 1765582582.18648 0
+  "InformeEnergia25.bcf" 1765582581 108847 8d6240fce34893141a2fff750e855c40 "pdflatex"
+  "referencias.bib" 1765571190 760 704fd64536404d49732c866308ea2d99 ""
   (generated)
   "InformeEnergia25.bbl"
   "InformeEnergia25.blg"
   (rewritten before read)
-["pdflatex"] 1765569151.83615 "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" "InformeEnergia25.pdf" "InformeEnergia25" 1765569199.77943 2
+["pdflatex"] 1765582548.46666 "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" "InformeEnergia25.pdf" "InformeEnergia25" 1765582582.18756 0
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136793854 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -267,14 +267,14 @@
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tikzfill/tikzfill.image.sty" 1691489948 1120 ba535da48caa03bf1fd3f03ea87779f8 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tikzfill/tikzlibraryfill.image.code.tex" 1691489948 10931 717eb52299f416934beb8b2b7cd8cee6 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
-  "InformeEnergia25.aux" 1765569199 5518 810c51823a0d51ddf2fe014018b88e51 "pdflatex"
-  "InformeEnergia25.bbl" 1765569112 2206 9417e4471a15e18c1d6c3b26e1148df7 "biber InformeEnergia25"
-  "InformeEnergia25.lof" 1765569199 432 0145041aa31a63e234e811043d3dc0be "pdflatex"
-  "InformeEnergia25.lot" 1765569199 390 9052b8a72cbc75cdc3494474766b7489 "pdflatex"
-  "InformeEnergia25.run.xml" 1765569199 2470 5aa9f7a728927f62fe05c8e30a9cf549 "pdflatex"
-  "InformeEnergia25.tex" 1765569109 23604 e73b959cce79350d95a09324fb9b0801 ""
-  "InformeEnergia25.toc" 1765569199 1424 aafd4b673a6187756c4d4b21df9d7869 "pdflatex"
-  "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" 1765569109 23604 e73b959cce79350d95a09324fb9b0801 ""
+  "InformeEnergia25.aux" 1765582581 5803 2dd8ae96d3997532525ff44a708528fa "pdflatex"
+  "InformeEnergia25.bbl" 1765582472 2206 9417e4471a15e18c1d6c3b26e1148df7 "biber InformeEnergia25"
+  "InformeEnergia25.lof" 1765582581 432 0145041aa31a63e234e811043d3dc0be "pdflatex"
+  "InformeEnergia25.lot" 1765582581 467 35f0bec170e41b18366e24aa97f397d0 "pdflatex"
+  "InformeEnergia25.run.xml" 1765582581 2470 5aa9f7a728927f62fe05c8e30a9cf549 "pdflatex"
+  "InformeEnergia25.tex" 1765573054 23724 5aa1559c7ee5a34c4a78ae8218efa2b4 ""
+  "InformeEnergia25.toc" 1765582581 1444 4eb2ed2afea8e63f025d1afe7b410bac "pdflatex"
+  "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" 1765573054 23724 5aa1559c7ee5a34c4a78ae8218efa2b4 ""
   "img/contraportada.png" 1764184372 650761 8088095ff020320e0fa792bf365679b2 ""
   "img/foja_blanca.jpg" 1764184372 1322587 91471d7602f13a986992eb0110249d4b ""
   "img/fondo_guinda.png" 1764184373 390545 6d8671468807fa6f0a39cc4969969939 ""
@@ -282,7 +282,7 @@
   "img/graficos/figura_2_12.png" 1764293071 8137183 c5e4081b90083ac6ccc74b1307450f4f ""
   "img/graficos/figura_4_3.png" 1764292479 6422727 ea9f4d871a66c59c44440a938a4ff319 ""
   "img/portada.png" 1764184373 1249808 ee7f25d428e87e31ba2f57ea2b8eb76f ""
-  "sener2025.cls" 1765568182 33425 e02269322359bdac89e2d1c217f0e3c4 ""
+  "sener2025.cls" 1765574154 35450 aadb509156c5da37653c2471f8b52f3d ""
   "tipografias/NotoSans-Light.ttf" 1763756805 583272 56ff3edc9a6a8b16feade46549dbec04 ""
   "tipografias/NotoSans-Regular.ttf" 1763756805 582748 fe700e4601ad1567290857922c30b9d1 ""
   "tipografias/Patria_Regular.otf" 1763756834 136816 7b38cee4c6282c8faf3f72df9518f3fb ""

@@ -1,0 +1,61 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{inventarioGEI2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=30fc49e09a7cba953bdaf7a8cfa512da}{%
+           family={Ecología\bibnamedelimb y\bibnamedelimb Cambio\bibnamedelima Climático},
+           familyi={E\bibinitperiod\bibinitdelim y\bibinitperiod\bibinitdelim C\bibinitperiod\bibinitdelim C\bibinitperiod},
+           given={Instituto\bibnamedelima Nacional},
+           giveni={I\bibinitperiod\bibinitdelim N\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {INECC}%
+      }
+      \strng{namehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{fullhash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{fullhashraw}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{bibnamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorbibnamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authornamehash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorfullhash}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \strng{authorfullhashraw}{30fc49e09a7cba953bdaf7a8cfa512da}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Inventario Nacional de Emisiones de Gases y Compuestos de Efecto Invernadero 2024}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.gob.mx/inecc
+      \endverb
+      \verb{url}
+      \verb https://www.gob.mx/inecc
+      \endverb
+    \endentry
+  \enddatalist
+  \missing{geo2024_potencial}
+  \missing{sener2024_empleos}
+\endrefsection
+\endinput
+

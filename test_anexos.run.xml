@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>test_enlaces.bcf</file>
+      <file>test_anexos.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>test_enlaces.bbl</file>
+      <file>test_anexos.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>test_enlaces</infile>
+      <infile>test_anexos</infile>
     </cmdline>
     <input>
-      <file>test_enlaces.bcf</file>
+      <file>test_anexos.bcf</file>
     </input>
     <output>
-      <file>test_enlaces.bbl</file>
+      <file>test_anexos.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>test_enlaces.bbl</file>
+      <file>test_anexos.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>test_enlaces.bcf</file>
+      <file>test_anexos.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>

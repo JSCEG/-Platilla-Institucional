@@ -124,8 +124,44 @@
 \RequirePackage{array}
 \RequirePackage{longtable}
 \RequirePackage{multirow}
-% Configuración básica de TOC usando comandos nativos de LaTeX
-% Mejor compatibilidad con hyperref sin tocloft
+% NOTA: No usamos tocloft.
+% Con documentos que usan \DocumentMetadata (LaTeX 2025+), el kernel carga
+% latex-lab-testphase-toc y redefine \@starttoc; tocloft detecta esto y "bails out",
+% pudiendo dejar el TOC/LOF/LOT en un estado inconsistente.
+% Preferimos mantener el mecanismo nativo (y compatibilidad con hyperref).
+
+% Compatibilidad: si un .toc viejo trae ajustes de tocloft (\cft...),
+% evitamos errores aunque ya no usemos ese paquete.
+% Importante: preservamos el catcode original de '@' para no romper la clase.
+\chardef\SENER@AtCatcode=\catcode`\@\relax
+\catcode`\@=11\relax
+\@ifundefined{cftsecnumwidth}{\newlength\cftsecnumwidth}{}
+\@ifundefined{cftsubsecnumwidth}{\newlength\cftsubsecnumwidth}{}
+\@ifundefined{cftsecindent}{\newlength\cftsecindent}{}
+\@ifundefined{cftsubsecindent}{\newlength\cftsubsecindent}{}
+\catcode`\@=\SENER@AtCatcode\relax
+\let\SENER@AtCatcode\relax
+
+% Ajuste local para el TOC en anexos:
+% - Evita empalme de "Anexo A" con el título
+% - Pero sin dejar un hueco exagerado; buscamos que el espaciado se parezca al
+%   de secciones normales ("2", "2.1", "2.1.1").
+\newdimen\SENER@appendixsecnumwidth
+\newcommand{\SENERAppendixTOCSetup}{%
+  \makeatletter
+  % Calcula un ancho "justo" para el número ("Anexo A") + un pequeño colchón.
+  \begingroup
+    \settowidth{\@tempdima}{Anexo\ A\hspace{0.8em}}%
+    \global\SENER@appendixsecnumwidth=\@tempdima
+  \endgroup
+  % Sección de anexo: mantiene el indent estándar de \section (1.5em), pero con
+  % numwidth calculado (en vez de 6em fijo).
+  \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{\SENER@appendixsecnumwidth}}%
+  % Sub-secciones de anexo: usamos el estilo nativo de article para que queden
+  % alineadas como "2.1" / "2.1.1" (sin el indent grande que se veía antes).
+  \renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}%
+  \makeatother
+}
 
 % Configuración de puntos en TOC con más espaciado
 \renewcommand{\@dotsep}{1.5}
@@ -178,14 +214,20 @@
   font={small,color=gobmxGris}
 }
 
-% Configuración específica para figuras (abajo, alineado izquierda)
+% Configuración específica para figuras (abajo, alineado izquierda, texto gris)
 \captionsetup[figure]{
   position=bottom,
   skip=8pt,
   justification=raggedright,
   singlelinecheck=false,
   labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris}
+  textfont={small,color=gobmxGris},
+  font={small,color=gobmxGris}
+}
+
+% Cambiar "Cuadro" a "Tabla" para tablas en español
+\AtBeginDocument{
+  \renewcommand{\tablename}{Tabla}
 }
 
 % Para longtable, usar el mismo formato que table
@@ -353,6 +395,26 @@
 \titlespacing*{\section}{0pt}{2em}{1em}
 \titlespacing*{\subsection}{0pt}{1.5em}{0.8em}
 \titlespacing*{\subsubsection}{0pt}{1em}{0.5em}
+
+% ============================================================================
+% COMANDO PARA ANEXOS
+% ============================================================================
+% Comando para iniciar la sección de anexos con numeración alfabética
+\newcommand{\anexos}{%
+  \clearpage
+  \appendix
+  % Mostrar "Anexo A", "Anexo B", ...
+  \renewcommand{\thesection}{Anexo \Alph{section}}%
+  % Sub-secciones como "A.1", "A.2" (sin el prefijo "Anexo")
+  \renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}%
+
+  % Ajuste del índice (TOC): el ancho por defecto no alcanza para "Anexo A"
+  % 1) Aplicar en esta corrida (por si el TOC se imprime después de anexos)
+  \SENERAppendixTOCSetup%
+  % 2) Persistir en el .toc para que el \tableofcontents al inicio aplique
+  %    este formato justo antes de listar los anexos.
+  \addtocontents{toc}{\protect\SENERAppendixTOCSetup}%
+}
 
 % ============================================================================
 % LISTAS PERSONALIZADAS (alineado a la plantilla Word)
@@ -833,23 +895,7 @@
 % ============================================================================
 % AMBIENTE PARA ANEXOS
 % ============================================================================
-\newcommand{\anexos}{
-  \clearpage
-  \appendix
-  \renewcommand{\thesection}{Anexo \Alph{section}}
-  
-  % Ajuste para evitar empalmes en anexos (sin tocloft)
-  % Los anexos usan títulos más largos, se ajusta automáticamente
-  
-  \titleformat{\section}
-    {\Large\bfseries\color{gobmxGuinda}}
-    {\thesection:}{0.3em}{}
-    [\vspace{-0.5em}\textcolor{gobmxGuinda}{\titlerule[1pt]}]
-
-  \titleformat{\subsection}
-    {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{gobmxGuinda}}
-    {\thesubsection}{0.3em}{}
-}
+% (Definición de \anexos unificada arriba; evitar redefinirla aquí.)
 
 % ============================================================================
 % PORTADA INSTITUCIONAL

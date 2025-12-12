@@ -788,42 +788,37 @@ function generarFigura(figura) {
     const rutaArchivo = figura['RutaArchivo'] || '';
     const caption = figura['Caption'] || '';
     const fuente = figura['Fuente'] || '';
-    const textoAlt = figura['TextoAlternativo'] || caption; // Usar campo específico o caption como fallback
+    const textoAlt = figura['TextoAlternativo'] || caption;
+    const ancho = figura['Ancho'] || '0.8';
 
-    // Detectar si es URL de Google Drive
-    let rutaFinal = rutaArchivo;
-    let esGoogleDrive = false;
-    const driveMatch = rutaArchivo.match(/\/d\/([a-zA-Z0-9_-]+)/);
-
-    if (driveMatch) {
-        esGoogleDrive = true;
-        const fileId = driveMatch[1];
-        // Generar nombre de archivo local
-        rutaFinal = `img/figura_${fileId.substring(0, 8)}.png`;
-        log(`  🖼️ Figura de Google Drive detectada: ${previewTexto(caption, 40)}...`);
-        log(`  ⚠️ IMPORTANTE: Descarga manualmente el archivo con ID: ${fileId}`);
-        log(`  📁 Guárdalo como: ${rutaFinal}`);
-    } else {
-        log(`  🖼️ Figura local: ${previewTexto(caption, 40)}...`);
-    }
+    log(`  🖼️  Figura detectada: ${previewTexto(caption, 40)}...`);
 
     let tex = `\\begin{figure}[H]\n`;
-    tex += `  \\centering\n`;
+    // Agrupar \centering e imagen para que no afecte al caption
+    tex += `  {\\centering\n`;
 
-    if (esGoogleDrive) {
-        tex += `  % IMPORTANTE: Descarga la imagen de Google Drive\n`;
-        tex += `  % URL: ${rutaArchivo}\n`;
-        tex += `  % Guárdala como: ${rutaFinal}\n`;
+    if (rutaArchivo) {
+        if (textoAlt) {
+            // Con texto alternativo para accesibilidad
+            tex += `  % Texto alternativo para accesibilidad\n`;
+            tex += `  \\pdftooltip{\\includegraphics[width=${ancho}\\textwidth]{${rutaArchivo}}}{${escaparLatex(textoAlt)}}\n`;
+        } else {
+            // Sin texto alternativo
+            tex += `  \\includegraphics[width=${ancho}\\textwidth]{${rutaArchivo}}\n`;
+        }
     }
 
-    // Agregar texto alternativo para accesibilidad
-    tex += `  % Texto alternativo para accesibilidad\n`;
-    tex += `  \\pdftooltip{\\includegraphics[width=0.8\\textwidth]{${rutaFinal}}}{${escaparLatex(textoAlt)}}\n`;
-    tex += `  \\caption{${escaparLatex(caption)}}\n`;
+    // Cerrar el grupo con \par para finalizar el párrafo centrado
+    tex += `  \\par}\n`;
 
-    // Generar label automático para referencias cruzadas
-    const labelFigura = generarLabel(caption);
-    tex += `  \\label{fig:${labelFigura}}\n`;
+    // Forzar alineación a la izquierda para el caption
+    tex += `  \\raggedright\n`;
+
+    // Caption va después de la imagen (abajo, alineado a la izquierda por configuración del cls)
+    if (caption) {
+        tex += `  \\caption{${escaparLatex(caption)}}\n`;
+        tex += `  \\label{fig:${generarLabel(caption)}}\n`;
+    }
 
     tex += `\\end{figure}\n`;
 
@@ -1309,6 +1304,9 @@ function procesarDatosCSV(csv) {
  */
 function generarGlosario(glosario) {
     let tex = `\\section*{Glosario}\n`;
+    // Necesario para que el vínculo del índice apunte a la sección correcta
+    // cuando usamos secciones sin numeración (\\section*).
+    tex += `\\phantomsection\n`;
     tex += `\\addcontentsline{toc}{section}{Glosario}\n\n`;
 
     // Ordenar alfabéticamente
@@ -1335,6 +1333,9 @@ function generarGlosario(glosario) {
  */
 function generarSiglas(siglas) {
     let tex = `\\section*{Siglas y Acrónimos}\n`;
+    // Necesario para que el vínculo del índice apunte a la sección correcta
+    // cuando usamos secciones sin numeración (\\section*).
+    tex += `\\phantomsection\n`;
     tex += `\\addcontentsline{toc}{section}{Siglas y Acrónimos}\n\n`;
 
     // Ordenar alfabéticamente
