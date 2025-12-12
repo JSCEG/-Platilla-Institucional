@@ -1,0 +1,60 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  lang=es-MX,
+  pdfstandard=ua-2
+}
+
+\documentclass{sener2025}
+
+\title{Prueba de Captions y Listas}
+\subtitle{Verificación de formato}
+\author{Test}
+\date{\today}
+\setDocumentoCorto{TestCaptions}
+
+\begin{document}
+
+\section{Prueba de Captions}
+
+\begin{tabladorado}
+  \caption{Esta es una tabla de prueba para verificar que el caption esté alineado a la izquierda y use la fuente Patria en negrita}
+  \label{tab:test}
+  \begin{tabular}{p{4cm}p{3cm}p{3cm}}
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{2023} & \encabezadodorado{2024} \\
+    \midrule
+    Capacidad Total & 85,000 & 87,500 \\
+    Renovables & 25,000 & 30,000 \\
+    \bottomrule
+  \end{tabular}
+\end{tabladorado}
+
+\begin{figure}[H]
+  \centering
+  \rule{6cm}{4cm}
+  \caption{Esta es una figura de prueba para verificar que el caption esté alineado a la izquierda y use la fuente Patria en negrita}
+  \label{fig:test}
+\end{figure}
+
+\section{Prueba de Listas}
+
+Lista con espaciado reducido:
+
+\begin{itemize}
+  \item Primer elemento de la lista
+  \item Segundo elemento de la lista
+  \item Tercer elemento con sublista:
+  \begin{itemize}
+    \item Subelemento 1
+    \item Subelemento 2
+  \end{itemize}
+  \item Cuarto elemento
+\end{itemize}
+
+\section{Prueba de Enlaces}
+
+Referencia a la tabla: Ver Tabla~\ref{tab:test}
+
+Referencia a la figura: Ver Figura~\ref{fig:test}
+
+\end{document}

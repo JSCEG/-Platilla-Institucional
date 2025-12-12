@@ -8,7 +8,7 @@
 % ============================================================================
 % PAQUETES BÁSICOS
 % ============================================================================
-\RequirePackage[spanish,mexico,es-tabla]{babel}
+\RequirePackage[spanish,es-tabla]{babel}
 % \\RequirePackage[utf8]{inputenc} % Not needed for XeLaTeX
 \RequirePackage[T1]{fontenc}
 \RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm,footskip=1.5cm]{geometry}
@@ -53,10 +53,7 @@
       BoldFont = *_Bold,
       ItalicFont = *_Light
     ]{Patria}
-  }{
-    % Fallback para Patria
-    \newfontfamily\patriafont{Latin Modern Sans}
-  }
+  }{}
   
   % Tipografía secundaria: Noto Sans (para cuerpo de texto)
   \IfFileExists{tipografias/NotoSans-Regular.ttf}{
@@ -66,8 +63,7 @@
       UprightFont = *-Regular,
       BoldFont = *-Bold,
       ItalicFont = *-Italic,
-      BoldItalicFont = *-BoldItalic,
-      Scale = 1.0
+      BoldItalicFont = *-BoldItalic
     ]
     
     \setsansfont{NotoSans}[
@@ -76,40 +72,17 @@
       UprightFont = *-Regular,
       BoldFont = *-Bold,
       ItalicFont = *-Italic,
-      BoldItalicFont = *-BoldItalic,
-      Scale = 1.0
+      BoldItalicFont = *-BoldItalic
     ]
-  }{
-    % Fallback si no están las fuentes personalizadas
-    \setmainfont{Latin Modern Roman}
-    \setsansfont{Latin Modern Sans}
-  }
-}{
-  % Si no hay fontspec, usar fuentes por defecto
-  \newcommand{\patriafont}{\sffamily\bfseries}
-}
+  }{}
+}{}
 
 
 % Fallback if fontspec or fonts are missing
 \ifdefined\patriafont
 \else
-  \newcommand{\patriafont}{\sffamily\bfseries}
+  \newcommand{\patriafont}{\bfseries}
 \fi
-
-% Comando adicional para asegurar compatibilidad
-\providecommand{\notosansfont}{\sffamily}
-
-% ============================================================================
-% PAQUETES DE ACCESIBILIDAD PDF/UA
-% ============================================================================
-% Hyperref se carga más adelante con configuración específica
-
-% Estructura semántica básica con accsupp
-\RequirePackage{accsupp}
-
-% Fallback: algunos documentos generados usan \pdftooltip para anotaciones/alt.
-% Si no hay paquete que lo defina, evitamos que falle la compilación.
-\providecommand{\pdftooltip}[2]{#1}
 
 % ============================================================================
 % Packages for functionality and bibliography
@@ -124,16 +97,37 @@
 \RequirePackage{array}
 \RequirePackage{longtable}
 \RequirePackage{multirow}
-% Configuración básica de TOC usando comandos nativos de LaTeX
-% Mejor compatibilidad con hyperref sin tocloft
+\RequirePackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\setlength{\cftbeforesecskip}{0.5em}
 
-% Configuración de puntos en TOC con más espaciado
-\renewcommand{\@dotsep}{1.5}
+% Horizontal Spacing (Number to Text) - Defaults
+% \setlength{\cftsecnumwidth}{4em}
+% \setlength{\cftsubsecnumwidth}{5em}
+% \setlength{\cftsubsubsecnumwidth}{6em}
+% \setlength{\cftfignumwidth}{4.5em}
+% \setlength{\cfttabnumwidth}{4.5em}
 
-% Configuración de espaciado en TOC usando comandos nativos
-% Más espacio entre puntos y números de página
-\renewcommand{\@tocrmarg}{5em}
-\renewcommand{\@pnumwidth}{3em}
+% Dot Separation
+\renewcommand{\cftdotsep}{10}
+\renewcommand{\cftfigdotsep}{\cftdotsep}
+\renewcommand{\cfttabdotsep}{\cftdotsep}
+
+% Leaders (Dots + Space)
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftsubsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftsubsubsecleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cftfigleader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+\renewcommand{\cfttableader}{\cftdotfill{\cftdotsep}\hspace{2em}}
+
+% Standardize LOF and LOT (Margins and Spacing)
+\setlength{\cftfigindent}{0pt}
+\setlength{\cfttabindent}{0pt}
+\setlength{\cftfignumwidth}{3.5em} % Increased to ensure proper hanging indent
+\setlength{\cfttabnumwidth}{3.5em}
+
+% Right Margin (Text Wrapping)
+\cftsetrmarg{4.5em}
 \RequirePackage{colortbl}
 \RequirePackage{tabularx}
 \RequirePackage{pdfpages}
@@ -155,68 +149,29 @@
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
 % ============================================================================
-% Configuración unificada para todos los captions
+% Usa Patria para el título de tablas y figuras
+% Definir fuente Patria para captions
+\DeclareCaptionFont{patria}{\patriafont}
+
 \captionsetup{
   font={small,color=gobmxGris},        % Texto en gris y pequeño
-  labelfont={footnotesize,color=gobmxGris},    % Etiqueta en gris y más pequeña
-  textfont={small,color=gobmxGris},    % Texto en gris
+  labelfont={small,color=gobmxGris},    % Etiqueta también en gris y pequeña (sin negrita)
   labelsep=period,                      % Separador punto: "Figura 1. Descripción"
-  justification=raggedright,           % Alineación a la izquierda
-  singlelinecheck=false,               % No centrar títulos cortos
-  margin=0pt,
-  parskip=0pt
+  justification=raggedright,
+  singlelinecheck=false
 }
 
-% Configuración específica para tablas (IGUAL que longtable)
+\captionsetup[table]{position=top, skip=8pt}
+\captionsetup[figure]{position=bottom, skip=8pt}
+
 \captionsetup[table]{
   position=top,
-  skip=8pt,
-  justification=raggedright,
-  singlelinecheck=false,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris},
-  font={small,color=gobmxGris}
+  skip=8pt
 }
 
-% Configuración específica para figuras (abajo, alineado izquierda)
 \captionsetup[figure]{
   position=bottom,
-  skip=8pt,
-  justification=raggedright,
-  singlelinecheck=false,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris}
-}
-
-% Configuración específica para longtable (IGUAL que table)
-\captionsetup[longtable]{
-  position=top,
-  skip=8pt,
-  justification=raggedright,
-  singlelinecheck=false,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris},
-  font={small,color=gobmxGris}
-}
-
-% Configuración adicional para longtable usando comandos nativos
-\AtBeginDocument{
-  % Asegurar que longtable use el mismo formato que las tablas normales
-  \renewcommand{\LT@makecaption}[3]{%
-    \LT@mcol\LT@cols c{\hbox to\z@{\hss\parbox[t]\LTcapwidth{%
-      \sbox\@tempboxa{%
-        {\footnotesize\color{gobmxGris}#1}%
-        {\small\color{gobmxGris}#2}%
-      }%
-      \ifdim\wd\@tempboxa>\hsize
-        {\footnotesize\color{gobmxGris}#1}%
-        {\small\color{gobmxGris}#2}\par
-      \else
-        \hbox to\hsize{\raggedright\unhbox\@tempboxa\hfil}%
-      \fi
-      \endgraf\vskip\baselineskip}%
-    \hss}}%
-  }
+  skip=8pt
 }
 % Bibliography (APA style)
 \RequirePackage[
@@ -268,8 +223,7 @@
     pdfsubject={\@subtitle},
     pdfkeywords={\@palabrasclave},
     pdfproducer={Secretaría de Energía - Gobierno de México},
-    pdfcreator={LaTeX con clase sener2025},
-    pdflang={es-MX}
+    pdfcreator={LaTeX con clase sener2025}
   }
 }
 
@@ -326,9 +280,7 @@
 \AddToShipoutPictureBG{%
   \IfFileExists{img/foja_blanca.jpg}{%
     \AtPageLowerLeft{%
-      \BeginAccSupp{method=escape,Alt={Membrete institucional de fondo}}%
       \includegraphics[width=\paperwidth,height=\paperheight]{img/foja_blanca.jpg}%
-      \EndAccSupp{}%
     }%
   }{}%
 }
@@ -382,8 +334,8 @@
 \setlist[itemize,1]{%
   label=\textbullet,
   leftmargin=*,
-  itemsep=0.05em,
-  topsep=0.2em,
+  itemsep=0.1em,
+  topsep=0.3em,
   parsep=0pt
 }
 
@@ -391,8 +343,8 @@
 \setlist[itemize,2]{%
   label=--,
   leftmargin=2em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0.1em,
+  topsep=0.2em,
   parsep=0pt
 }
 
@@ -400,8 +352,8 @@
 \setlist[itemize,3]{%
   label=\textbullet,
   leftmargin=3em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0.1em,
+  topsep=0.15em,
   parsep=0pt
 }
 
@@ -409,8 +361,8 @@
 \setlist[itemize,4]{%
   label=--,
   leftmargin=4em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0.1em,
+  topsep=0.15em,
   parsep=0pt
 }
 
@@ -461,10 +413,10 @@
 \newenvironment{tablaguinda}[1][]{
   \rowcolors{2}{gobmxGuinda!10}{white}
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2} % Más aire
   \sffamily\notosanssmall % Fuente sans-serif 10.5pt
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -473,10 +425,10 @@
 \newenvironment{tablaverde}[1][]{
   \rowcolors{2}{gobmxVerde!15}{white}
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -485,10 +437,10 @@
 \newenvironment{tabladorado}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -506,10 +458,10 @@
 \newenvironment{tablagris}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -517,10 +469,10 @@
 % Tabla sin stripes (solo encabezado con color)
 \newenvironment{tablalimpia}[1][]{
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -529,10 +481,10 @@
 \newenvironment{tablainstitucional}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
+  \centering
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
   #1
-  \centering % Centrar solo el contenido de la tabla, no el caption
 }{
   \end{table}
 }
@@ -566,7 +518,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\BeginAccSupp{method=escape,ActualText={Icono de advertencia}}\faExclamationTriangle\EndAccSupp{}\ \ \textbf{Nota importante}},
+  title={\faExclamationTriangle\ \ \textbf{Nota importante}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxGuinda,
@@ -585,7 +537,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\BeginAccSupp{method=escape,ActualText={Icono de libro}}\faBook\EndAccSupp{}\ \ \textbf{Definición}},
+  title={\faBook\ \ \textbf{Definición}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxVerde,
@@ -604,7 +556,7 @@
   top=10pt,
   bottom=10pt,
   bottom=10pt,
-  title={\BeginAccSupp{method=escape,ActualText={Icono de bombilla}}\faLightbulb\EndAccSupp{}\ \ \textbf{Ejemplo}},
+  title={\faLightbulb\ \ \textbf{Ejemplo}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
@@ -644,7 +596,7 @@
   right=12pt,
   top=12pt,
   bottom=12pt,
-  title={\BeginAccSupp{method=escape,ActualText={Icono de llave}}\faKey\EndAccSupp{}\ \ \textbf{Datos Clave}},
+  title={\faKey\ \ \textbf{Datos Clave}},
   fonttitle=\bfseries\color{white},
   coltitle=white,
   colbacktitle=gobmxDorado,
@@ -726,7 +678,7 @@
   \marginnote{%
     \footnotesize\color{gobmxGuinda}\sffamily%
     \raggedright%
-    \BeginAccSupp{method=escape,ActualText={Icono de información}}\faInfoCircle\EndAccSupp{}\ #1%
+    \faInfoCircle\ #1%
   }%
 }
 
@@ -760,7 +712,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\BeginAccSupp{method=escape,ActualText={Icono de bombilla}}\faLightbulb\EndAccSupp{}\ \ \textbf{#1}},%
+  title={\faLightbulb\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxVerde},%
   coltitle=gobmxVerde,%
   colbacktitle=gobmxVerde!5,%
@@ -777,7 +729,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\BeginAccSupp{method=escape,ActualText={Icono de advertencia}}\faExclamationTriangle\EndAccSupp{}\ \ \textbf{#1}},%
+  title={\faExclamationTriangle\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxDorado},%
   coltitle=gobmxDorado,%
   colbacktitle=gobmxDorado!5,%
@@ -794,7 +746,7 @@
   right=8pt,%
   top=8pt,%
   bottom=8pt,%
-  title={\BeginAccSupp{method=escape,ActualText={Icono de exclamación}}\faExclamationCircle\EndAccSupp{}\ \ \textbf{#1}},%
+  title={\faExclamationCircle\ \ \textbf{#1}},%
   fonttitle=\bfseries\color{gobmxGuinda},%
   coltitle=gobmxGuinda,%
   colbacktitle=gobmxGuinda!5,%
@@ -861,8 +813,10 @@
   \appendix
   \renewcommand{\thesection}{Anexo \Alph{section}}
   
-  % Ajuste para evitar empalmes en anexos (sin tocloft)
-  % Los anexos usan títulos más largos, se ajusta automáticamente
+  % Ajuste dinámico de anchos en ToC para Anexos (evita empalmes)
+  \addtocontents{toc}{\protect\setlength{\cftsecnumwidth}{5.5em}}
+  \addtocontents{toc}{\protect\setlength{\cftsubsecnumwidth}{6.5em}}
+  \addtocontents{toc}{\protect\setlength{\cftsubsubsecnumwidth}{7.5em}}
   
   \titleformat{\section}
     {\Large\bfseries\color{gobmxGuinda}}
@@ -882,15 +836,7 @@
 \renewcommand{\maketitle}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    \IfFileExists{img/portada.png}{%
-      \AddToShipoutPictureBG*{%
-        \AtPageLowerLeft{%
-          \BeginAccSupp{method=escape,Alt={Portada institucional - Imagen decorativa de fondo}}%
-          \includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}%
-          \EndAccSupp{}%
-        }%
-      }%
-    }{}
+    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
     \begin{center}
       \vspace*{1.5cm}
 
@@ -919,11 +865,7 @@
       % Fecha
       % {\large\@date}\\[1cm]
 
-      \IfFileExists{img/logo_gob.png}{%
-        \BeginAccSupp{method=escape,Alt={Logo del Gobierno de México}}%
-        \includegraphics[height=1.5cm]{img/logo_gob.png}%
-        \EndAccSupp{}%
-      }{}
+      \IfFileExists{img/logo_gob.png}{\includegraphics[height=1.5cm]{img/logo_gob.png}}{}
 
     \end{center}
   \end{titlepage}
@@ -931,25 +873,10 @@
 }
 
 % Portada con fondo guinda
-\newcommand{\portadafondo}[1][img/portada.png]{%
+\newcommand{\portadafondo}{%
   \begin{titlepage}
     \thispagestyle{portada}
-    \IfFileExists{#1}{%
-      \AddToShipoutPictureBG*{%
-        \AtPageLowerLeft{%
-          \BeginAccSupp{method=escape,Alt={Portada institucional - Imagen decorativa de fondo}}%
-          \includegraphics[width=\paperwidth,height=\paperheight]{#1}%
-          \EndAccSupp{}%
-        }%
-      }%
-    }{%
-      % Si no existe la imagen, mostrar un fondo de color
-      \AddToShipoutPictureBG*{%
-        \AtPageLowerLeft{%
-          \color{gobmxGuinda}\rule{\paperwidth}{\paperheight}%
-        }%
-      }%
-    }
+    \IfFileExists{img/portada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/portada.png}}}}{}
     
     \begin{center}
       \vspace*{2cm}
@@ -1022,7 +949,7 @@
 % ============================================================================
 % CONTRAPORTADA INSTITUCIONAL
 % ============================================================================
-\newcommand{\contraportada}[2][img/contraportada.png]{
+\newcommand{\contraportada}[1]{
   \clearpage
   \thispagestyle{plain}
   % \hypersetup{urlcolor=gobmxAmbarClaro} % Ya no es necesario forzar color claro en fondo blanco
@@ -1042,7 +969,7 @@
     \textbf{\textcolor{gobmxDorado}{\@institucion}}\\
     \@unidad\\[0.5cm]
     
-    #2
+    #1
     }
   \end{center}
 
@@ -1062,15 +989,7 @@
   
   % Última página: Solo fondo, sin texto
   \thispagestyle{empty}
-  \IfFileExists{#1}{%
-    \AddToShipoutPictureBG*{%
-      \AtPageLowerLeft{%
-        \BeginAccSupp{method=escape,Alt={Contraportada institucional - Imagen decorativa de fondo}}%
-        \includegraphics[width=\paperwidth,height=\paperheight]{#1}%
-        \EndAccSupp{}%
-      }%
-    }%
-  }{}
+  \IfFileExists{img/contraportada.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/contraportada.png}}}}{}
   \null
   \clearpage
 }
@@ -1083,15 +1002,7 @@
   \thispagestyle{empty}
   \begingroup
     \color{white}
-    \IfFileExists{img/fondo_guinda.png}{%
-      \AddToShipoutPictureBG*{%
-        \AtPageLowerLeft{%
-          \BeginAccSupp{method=escape,Alt={Fondo decorativo de sección - Color guinda institucional}}%
-          \includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}%
-          \EndAccSupp{}%
-        }%
-      }%
-    }{}
+    \IfFileExists{img/fondo_guinda.png}{\AddToShipoutPictureBG*{\AtPageLowerLeft{\includegraphics[width=\paperwidth,height=\paperheight]{img/fondo_guinda.png}}}}{}
     \vspace*{\fill}
     \begin{center}
       % Número de sección grande en blanco
@@ -1149,7 +1060,6 @@
 
 % Macro de fuente de gráfico/tabla
 \newcommand{\fuente}[1]{%
-  \vspace{0.3em}%
   \par\vspace{-0.5em}%
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
     \textbf{FUENTE:} #1.%

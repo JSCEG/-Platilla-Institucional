@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 13:16
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 13:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./InformeEnergia25.tex
-(InformeEnergia25.tex
+**./test_longtable.tex
+(test_longtable.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 
@@ -1657,13 +1657,7 @@ n;language=dflt;"
 (fontspec)             <->"[tipografias/NotoSans-LightItalic.ttf]/OT:script=lat
 n;language=dflt;+smcp;"
 
-)
-
-Package hyperref Warning: This hyperref driver ignores the pdfversion key!
-(hyperref)                Set the pdfversion in \DocumentMetadata
-(hyperref)                orwith\SetKeys [document/metadata]
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip116
 
@@ -1746,29 +1740,29 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 \BKM@id=\count583
 ))
-(InformeEnergia25.aux)
-\openout1 = `InformeEnergia25.aux'.
+(test_longtable.aux)
+\openout1 = `test_longtable.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1811,59 +1805,59 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
-LaTeX Font Info:    Redeclaring math accent \check on input line 32.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 15.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 15.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 15.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 15.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 15.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 15.
+LaTeX Font Info:    Redeclaring math accent \check on input line 15.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 15.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 15.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 15.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 15.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 32.
+(Font)              `operators' in the math version `normal' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 15.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 32.
+(Font)              `operators' in the math version `bold' on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/m/n on input line
- 32.
+ 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 32.
+(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 15.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/b/n on input line
- 32.
+ 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 32.
+(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 15.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 15.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 15.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1878,13 +1872,13 @@ Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ))
-LaTeX Info: Redefining \microtypecontext on input line 32.
-Package microtype Info: Applying patch `item' on input line 32.
-Package microtype Info: Applying patch `toc' on input line 32.
-Package microtype Info: Applying patch `eqnum' on input line 32.
-Package microtype Info: Applying patch `footnote' on input line 32.
-Package microtype Info: Applying patch `verbatim' on input line 32.
-LaTeX Info: Redefining \microtypesetup on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 15.
+Package microtype Info: Applying patch `item' on input line 15.
+Package microtype Info: Applying patch `toc' on input line 15.
+Package microtype Info: Applying patch `eqnum' on input line 15.
+Package microtype Info: Applying patch `footnote' on input line 15.
+Package microtype Info: Applying patch `verbatim' on input line 15.
+LaTeX Info: Redefining \microtypesetup on input line 15.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1905,27 +1899,20 @@ Package biblatex Info: ... file 'mexican.lbx' not found.
 
 
 Package biblatex Warning: Language 'mexican' not supported.
-(biblatex)                Using dummy definitions on input line 32.
+(biblatex)                Using dummy definitions on input line 15.
 
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `InformeEnergia25.bcf'.
+\openout4 = `test_longtable.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'InformeEnergia25.bbl' found.
-(InformeEnergia25.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
-Package hyperref Info: Link coloring OFF on input line 32.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-File: img/portada.png Graphic file (type bmp)
-<img/portada.png>
- [1
-
-]
+Package biblatex Info: ... file 'test_longtable.bbl' not found.
+No file test_longtable.bbl.
+Package biblatex Info: Reference section=0 on input line 15.
+Package biblatex Info: Reference segment=0 on input line 15.
+Package hyperref Info: Link coloring OFF on input line 15.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2011,160 +1998,75 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
- (InformeEnergia25.toc)
-\tf@toc=\write5
-\openout5 = `InformeEnergia25.toc'.
-
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 37.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 37.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [2
-
-]
+(Font)              scaled to size 10.5pt on input line 20.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 22.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 39.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 39.
- (InformeEnergia25.lof)
-\tf@lof=\write6
-\openout6 = `InformeEnergia25.lof'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-
-[3
-
-] (InformeEnergia25.lot)
-\tf@lot=\write7
-\openout7 = `InformeEnergia25.lot'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [4
-
-]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 46.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
-File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
-ndard glyph set (RS)
-)
+(Font)              scaled to size 7.34996pt on input line 22.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 62.
+(Font)              scaled to size 5.25pt on input line 22.
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 22.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 22.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 22.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 22.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 62.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 62.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 62.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 17.28pt on input line 63.
-
-Overfull \hbox (18.82668pt too wide) in paragraph at lines 63--63
- [][] 
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [5]
-
-LaTeX Warning: Citation 'sener2024_empleos' on page 6 undefined on input line 6
-4.
-
-
-Overfull \hbox (78.11679pt too wide) in paragraph at lines 63--66
-\TU/NotoSans(0)/m/n/12 desarrollo tecnológico\{}n- Generar empleos verdes []\{}
-n\{}n[[ejemplo:Ejemplo
- []
-
-
-Overfull \hbox (4.41676pt too wide) in paragraph at lines 63--66
-\TU/NotoSans(0)/m/n/12 una capacidad instalada de 164 MW, genera energía sufici
-ente para abastecer a 65,000
- []
-
-File: img/graficos/figura_2_1.png Graphic file (type bmp)
-<img/graficos/figura_2_1.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[6]
-
-LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 79.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 82.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 84.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 84.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 84.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 84.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 84.
-
-
-LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 84.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 84.
-
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 86.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
+(Font)              scaled to size 10.5pt on input line 24.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 9.5pt on input line 35.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 10.95pt on input line 36.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 36.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 9.5pt on input line 38.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
+(Font)              scaled to size 9.5pt on input line 42.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 57.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 57.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [1
 
-LaTeX Warning: Citation 'geo2024_potencial' on page 7 undefined on input line 1
-00.
+]
+(test_longtable.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2025-10-24>
+ ***********
 
 
-Overfull \hbox (24.41281pt too wide) in paragraph at lines 100--108
-\TU/NotoSans(0)/m/n/12 Las principales tecnologías renovables en México son:\{}
-n\{}n[[info:Datos Técnicos]]\{}nLa
- []
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.45pt have occurred.
 
+Package logreq Info: Writing requests to 'test_longtable.run.xml'.
+\openout1 = `test_longtable.run.xml'.
 
-Overfull \hbox (40.38078pt too wide) in paragraph at lines 100--108
+ ) 
+Here is how much of TeX's memory you used:
+ 50473 strings out of 402987
+ 1076365 string characters out of 5452871
+ 2097603 words of memory out of 5000000
+ 78521 multiletter control sequences out of 15000+600000
+ 649532 words of font info for 84 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 113i,12n,122p,1193b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on test_longtable.pdf (1 page).
