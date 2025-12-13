@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 15:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 17:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1060,13 +1060,19 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@dima=\skip83
 \bigstrutjot=\dimen302
 )
+\cftsecnumwidth=\skip84
+\cftsubsecnumwidth=\skip85
+\cftsecindent=\skip86
+\cftsubsecindent=\skip87
+\SENER@appendixsecnumwidth=\dimen303
+
 (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen303
-\TX@old@table=\dimen304
-\TX@old@col=\dimen305
-\TX@target=\dimen306
-\TX@delta=\dimen307
+\TX@col@width=\dimen304
+\TX@old@table=\dimen305
+\TX@old@col=\dimen306
+\TX@target=\dimen307
+\TX@delta=\dimen308
 \TX@cols=\count385
 \TX@ftn=\toks44
 )
@@ -1080,23 +1086,23 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count386
 \calc@Bcount=\count387
-\calc@Adimen=\dimen308
-\calc@Bdimen=\dimen309
-\calc@Askip=\skip84
-\calc@Bskip=\skip85
+\calc@Adimen=\dimen309
+\calc@Bdimen=\dimen310
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count388
-\calc@Cskip=\skip86
+\calc@Cskip=\skip90
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen310
-\ESO@tempdimb=\dimen311
+\ESO@tempdima=\dimen311
+\ESO@tempdimb=\dimen312
 )
-\AM@pagewidth=\dimen312
-\AM@pageheight=\dimen313
-\AM@fboxrule=\dimen314
+\AM@pagewidth=\dimen313
+\AM@pageheight=\dimen314
+\AM@fboxrule=\dimen315
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\ppxetex.def
 File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
@@ -1114,22 +1120,22 @@ File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@tracingmulticols=\count392
 \mult@box=\box97
-\multicol@leftmargin=\dimen315
+\multicol@leftmargin=\dimen316
 \c@unbalance=\count393
 \c@collectmore=\count394
 \doublecol@number=\count395
 \multicoltolerance=\count396
 \multicolpretolerance=\count397
-\full@width=\dimen316
-\page@free=\dimen317
-\premulticols=\dimen318
-\postmulticols=\dimen319
-\multicolsep=\skip87
-\multicolbaselineskip=\skip88
+\full@width=\dimen317
+\page@free=\dimen318
+\premulticols=\dimen319
+\postmulticols=\dimen320
+\multicolsep=\skip91
+\multicolbaselineskip=\skip92
 \partial@page=\box98
 \last@line=\box99
 \mc@boxedresult=\box100
-\maxbalancingoverflow=\dimen320
+\maxbalancingoverflow=\dimen321
 \mult@rightbox=\box101
 \mult@grightbox=\box102
 \mult@firstbox=\box103
@@ -1173,9 +1179,9 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \c@minrows=\count398
 \c@columnbadness=\count399
 \c@finalcolumnbadness=\count400
-\last@try=\dimen321
-\multicolovershoot=\dimen322
-\multicolundershoot=\dimen323
+\last@try=\dimen322
+\multicolovershoot=\dimen323
+\multicolundershoot=\dimen324
 \mult@nat@firstbox=\box141
 \colbreak@box=\box142
 \mc@col@check@num=\count401
@@ -1191,7 +1197,7 @@ LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks49
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen324
+\MT@outer@kern=\dimen325
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count404
@@ -1200,7 +1206,7 @@ LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 443.
 LaTeX Info: Redefining \lslig on input line 451.
-\MT@outer@space=\skip89
+\MT@outer@space=\skip93
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1218,32 +1224,32 @@ Package: xfp 2025-10-09 L3 Floating point unit
 )
 \c@DefaultLines=\count405
 \c@DefaultDepth=\count406
-\DefaultFindent=\dimen325
-\DefaultNindent=\dimen326
-\DefaultSlope=\dimen327
-\DiscardVskip=\dimen328
+\DefaultFindent=\dimen326
+\DefaultNindent=\dimen327
+\DefaultSlope=\dimen328
+\DiscardVskip=\dimen329
 \L@lettrine=\box144
 \L@lbox=\box145
 \L@tbox=\box146
 \c@L@lines=\count407
 \c@L@depth=\count408
-\L@Pindent=\dimen329
-\L@Findent=\dimen330
-\L@Nindent=\dimen331
-\L@lraise=\dimen332
-\L@first=\dimen333
-\L@next=\dimen334
-\L@slope=\dimen335
-\L@height=\dimen336
-\L@novskip=\dimen337
-\L@target@ht=\dimen338
-\L@target@dp=\dimen339
-\L@target@tht=\dimen340
-\LettrineWidth=\dimen341
-\LettrineHeight=\dimen342
-\LettrineDepth=\dimen343
-\L@finalht=\dimen344
-\L@finaldp=\dimen345
+\L@Pindent=\dimen330
+\L@Findent=\dimen331
+\L@Nindent=\dimen332
+\L@lraise=\dimen333
+\L@first=\dimen334
+\L@next=\dimen335
+\L@slope=\dimen336
+\L@height=\dimen337
+\L@novskip=\dimen338
+\L@target@ht=\dimen339
+\L@target@dp=\dimen340
+\L@target@tht=\dimen341
+\LettrineWidth=\dimen342
+\LettrineHeight=\dimen343
+\LettrineDepth=\dimen344
+\L@finalht=\dimen345
+\L@finaldp=\dimen346
 
 Loading lettrine.cfg
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
@@ -1276,9 +1282,9 @@ File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 \qr@for@step=\count419
 \qr@newforcount=\count420
 \qr@newforcount=\count421
-\qr@desiredheight=\skip90
-\qr@modulesize=\skip91
-\qr@minipagewidth=\skip92
+\qr@desiredheight=\skip94
+\qr@modulesize=\skip95
+\qr@minipagewidth=\skip96
 \c@maski=\count422
 \c@maskj=\count423
 \c@totalones=\count424
@@ -1364,14 +1370,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorderinternal@0=\count474
 \blx@entrysetcounter=\count475
 \blx@biblioinstance=\count476
-\labelnumberwidth=\skip93
-\labelalphawidth=\skip94
-\biblabelsep=\skip95
-\bibitemsep=\skip96
-\bibnamesep=\skip97
-\bibinitsep=\skip98
-\bibparsep=\skip99
-\bibhang=\skip100
+\labelnumberwidth=\skip97
+\labelalphawidth=\skip98
+\biblabelsep=\skip99
+\bibitemsep=\skip100
+\bibnamesep=\skip101
+\bibinitsep=\skip102
+\bibparsep=\skip103
+\bibhang=\skip104
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
@@ -1456,20 +1462,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count545
 \c@pageref=\count546
 \c@savedpageref=\count547
-\shorthandwidth=\skip101
-\shortjournalwidth=\skip102
-\shortserieswidth=\skip103
-\shorttitlewidth=\skip104
-\shortauthorwidth=\skip105
-\shorteditorwidth=\skip106
-\locallabelnumberwidth=\skip107
-\locallabelalphawidth=\skip108
-\localshorthandwidth=\skip109
-\localshortjournalwidth=\skip110
-\localshortserieswidth=\skip111
-\localshorttitlewidth=\skip112
-\localshortauthorwidth=\skip113
-\localshorteditorwidth=\skip114
+\shorthandwidth=\skip105
+\shortjournalwidth=\skip106
+\shortserieswidth=\skip107
+\shorttitlewidth=\skip108
+\shortauthorwidth=\skip109
+\shorteditorwidth=\skip110
+\locallabelnumberwidth=\skip111
+\locallabelalphawidth=\skip112
+\localshorthandwidth=\skip113
+\localshortjournalwidth=\skip114
+\localshortserieswidth=\skip115
+\localshorttitlewidth=\skip116
+\localshortauthorwidth=\skip117
+\localshorteditorwidth=\skip118
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1571,7 +1577,7 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen346
+\@linkdim=\dimen347
 \Hy@linkcounter=\count560
 \Hy@pagecounter=\count561
 
@@ -1595,7 +1601,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
 \c@Hy@tempcnt=\count563
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen347
+\XeTeXLinkMargin=\dimen348
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1605,8 +1611,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count564
-\Field@Width=\dimen348
-\Fld@charsize=\dimen349
+\Field@Width=\dimen349
+\Fld@charsize=\dimen350
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1634,7 +1640,7 @@ LaTeX Info: Redefining \url on input line 348.
 \g__hyp_linknestlevel_int=\count568
 \HyAnn@Count=\count569
 \Fld@listcount=\count570
-\Hy@SectionHShift=\skip115
+\Hy@SectionHShift=\skip119
 )
 
 Package fontspec Info: 
@@ -1660,7 +1666,7 @@ n;language=dflt;+smcp;"
 
 ) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip116
+\@mathmargin=\skip120
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -1669,11 +1675,11 @@ Package: amstext 2024/11/17 v2.01 AMS text
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks55
-\ex@=\dimen350
+\ex@=\dimen351
 ))
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen351
+\pmbraise@=\dimen352
 )
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
@@ -1695,7 +1701,7 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen352
+\big@size=\dimen353
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
 \macc@depth=\count576
@@ -1713,15 +1719,15 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \column@=\count581
 \maxfields@=\count582
 \andhelp@=\toks57
-\eqnshift@=\dimen353
-\alignsep@=\dimen354
-\tagshift@=\dimen355
-\tagwidth@=\dimen356
-\totwidth@=\dimen357
-\lineht@=\dimen358
+\eqnshift@=\dimen354
+\alignsep@=\dimen355
+\tagshift@=\dimen356
+\tagwidth@=\dimen357
+\totwidth@=\dimen358
+\lineht@=\dimen359
 \@envbody=\toks58
-\multlinegap=\skip117
-\multlinetaggap=\skip118
+\multlinegap=\skip121
+\multlinetaggap=\skip122
 \mathdisplay@stack=\toks59
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
@@ -2023,8 +2029,60 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 17.28pt on input line 20.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 20.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
 
 (test_enlaces.lof)
 \tf@lof=\write6
@@ -2102,11 +2160,11 @@ Package logreq Info: Writing requests to 'test_enlaces.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 50526 strings out of 402987
- 1077059 string characters out of 5452871
- 2090569 words of memory out of 5000000
- 78552 multiletter control sequences out of 15000+600000
- 651364 words of font info for 92 fonts, out of 8000000 for 9000
+ 50536 strings out of 402987
+ 1077270 string characters out of 5452871
+ 2090627 words of memory out of 5000000
+ 78561 multiletter control sequences out of 15000+600000
+ 651372 words of font info for 93 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,12n,122p,1191b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

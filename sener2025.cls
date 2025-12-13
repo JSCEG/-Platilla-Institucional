@@ -151,15 +151,15 @@
   \makeatletter
   % Calcula un ancho "justo" para el número ("Anexo A") + un pequeño colchón.
   \begingroup
-    \settowidth{\@tempdima}{Anexo\ A\hspace{0.8em}}%
+    \settowidth{\@tempdima}{Anexo\ A\hspace{0.4em}}%
     \global\SENER@appendixsecnumwidth=\@tempdima
   \endgroup
   % Sección de anexo: mantiene el indent estándar de \section (1.5em), pero con
   % numwidth calculado (en vez de 6em fijo).
   \renewcommand*\l@section{\@dottedtocline{1}{1.5em}{\SENER@appendixsecnumwidth}}%
-  % Sub-secciones de anexo: usamos el estilo nativo de article para que queden
-  % alineadas como "2.1" / "2.1.1" (sin el indent grande que se veía antes).
-  \renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.2em}}%
+  % Sub-secciones de anexo: parecido a article, pero con un numwidth apenas menor
+  % para reducir el hueco entre "A.1" y el título.
+  \renewcommand*\l@subsection{\@dottedtocline{2}{3.8em}{3.0em}}%
   \makeatother
 }
 
@@ -1018,12 +1018,19 @@
     % Línea decorativa eliminada
     
     % Título del índice
-    {\Large\bfseries\color{gobmxGuinda}Índice de Tablas}\\[1cm]
+    {\Large\patriafont\bfseries\color{gobmxGuinda}Índice de Tablas}\\[1cm]
   \end{center}
   
   % Contenido del índice (generado automáticamente)
   \makeatletter
-  \@starttoc{lot}
+  {%
+    % Forzar Patria también en las entradas (\@dottedtocline usa \normalfont)
+    \begingroup
+      \let\SENER@orig@normalfont\normalfont
+      \def\normalfont{\SENER@orig@normalfont\patriafont}%
+      \@starttoc{lot}%
+    \endgroup
+  }%
   \makeatother
 }
 
@@ -1033,12 +1040,19 @@
     % Línea decorativa eliminada
     
     % Título del índice
-    {\Large\bfseries\color{gobmxGuinda}Índice de Figuras}\\[1cm]
+    {\Large\patriafont\bfseries\color{gobmxGuinda}Índice de Figuras}\\[1cm]
   \end{center}
   
   % Contenido del índice (generado automáticamente)
   \makeatletter
-  \@starttoc{lof}
+  {%
+    % Forzar Patria también en las entradas (\@dottedtocline usa \normalfont)
+    \begingroup
+      \let\SENER@orig@normalfont\normalfont
+      \def\normalfont{\SENER@orig@normalfont\patriafont}%
+      \@starttoc{lof}%
+    \endgroup
+  }%
   \makeatother
 }
 
