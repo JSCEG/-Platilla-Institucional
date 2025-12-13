@@ -193,6 +193,7 @@
 % ============================================================================
 % Configuración unificada para todos los captions
 \captionsetup{
+  format=plain,                        % Evita heredar centrado del float
   font={small,color=gobmxGris},        % Texto en gris y pequeño
   labelfont={footnotesize,color=gobmxGris},    % Etiqueta en gris y más pequeña
   textfont={small,color=gobmxGris},    % Texto en gris
@@ -203,10 +204,28 @@
   parskip=0pt
 }
 
+% IMPORTANTE: con placement [H], el paquete `float` NO usa la rutina estándar
+% de captions; usa su propio formateador (`\@fs@capt`), cuyo estilo `plain`
+% centra captions cortos. Para figuras institucionales lo forzamos a izquierda.
+\makeatletter
+\newcommand\floatc@SENERfigure[2]{%
+  {\footnotesize\color{gobmxGris}\raggedright #1.\ #2\par}%
+}
+\newcommand\fs@SENERfigure{%
+  \let\@fs@capt\floatc@SENERfigure
+  \def\@fs@pre{}\def\@fs@post{}%
+  \def\@fs@mid{\vspace\abovecaptionskip\relax}%
+  \let\@fs@iftopcapt\iffalse
+}
+\makeatother
+\floatstyle{SENERfigure}
+\restylefloat{figure}
+
 % Configuración específica para tablas (texto gris, sin fondo)
 \captionsetup[table]{
   position=top,
   skip=8pt,
+  format=plain,
   justification=raggedright,
   singlelinecheck=false,
   labelfont={footnotesize,color=gobmxGris},
@@ -218,22 +237,41 @@
 \captionsetup[figure]{
   position=bottom,
   skip=8pt,
+  format=plain,
+  width=\textwidth,
   justification=raggedright,
   singlelinecheck=false,
+  margin=0pt,
+  parskip=0pt,
   labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris},
-  font={small,color=gobmxGris}
+  textfont={footnotesize,color=gobmxGris},
+  font={footnotesize,color=gobmxGris}
 }
 
 % Cambiar "Cuadro" a "Tabla" para tablas en español
 \AtBeginDocument{
   \renewcommand{\tablename}{Tabla}
+
+  % Refuerzo tardío: con latex-lab/testphase algunos defaults de caption/floats
+  % pueden activarse en \AtBeginDocument; volvemos a fijar SOLO figuras aquí.
+  \captionsetup[figure]{
+    format=plain,
+    width=\textwidth,
+    justification=raggedright,
+    singlelinecheck=false,
+    margin=0pt,
+    parskip=0pt,
+    labelfont={footnotesize,color=gobmxGris},
+    textfont={footnotesize,color=gobmxGris},
+    font={footnotesize,color=gobmxGris}
+  }
 }
 
 % Para longtable, usar el mismo formato que table
 \captionsetup[longtable]{
   position=top,
   skip=8pt,
+  format=plain,
   justification=raggedright,
   singlelinecheck=false,
   labelfont={footnotesize,color=gobmxGris},
@@ -264,6 +302,7 @@
 % ============================================================================
 % DATOS DEL DOCUMENTO
 % ============================================================================
+\makeatletter
 \newcommand{\@subtitle}{}
 \newcommand{\subtitle}[1]{\gdef\@subtitle{#1}}
 
@@ -294,6 +333,7 @@
     pdflang={es-MX}
   }
 }
+\makeatother
 
 % ============================================================================
 % COMANDO PARA VALORES DESTACADOS (Recuadros naranjas)
@@ -1012,6 +1052,7 @@
 % ============================================================================
 % ÍNDICES PERSONALIZADOS (Tablas y Figuras)
 % ============================================================================
+\makeatletter
 \newcommand{\listatablas}{
   \clearpage
   \begin{center}
@@ -1022,16 +1063,14 @@
   \end{center}
   
   % Contenido del índice (generado automáticamente)
-  \makeatletter
   {%
     % Forzar Patria también en las entradas (\@dottedtocline usa \normalfont)
     \begingroup
-      \let\SENER@orig@normalfont\normalfont
-      \def\normalfont{\SENER@orig@normalfont\patriafont}%
+      \let\SENERorigNormalfont\normalfont
+      \def\normalfont{\SENERorigNormalfont\patriafont}%
       \@starttoc{lot}%
     \endgroup
   }%
-  \makeatother
 }
 
 \newcommand{\listafiguras}{
@@ -1044,21 +1083,21 @@
   \end{center}
   
   % Contenido del índice (generado automáticamente)
-  \makeatletter
   {%
     % Forzar Patria también en las entradas (\@dottedtocline usa \normalfont)
     \begingroup
-      \let\SENER@orig@normalfont\normalfont
-      \def\normalfont{\SENER@orig@normalfont\patriafont}%
+      \let\SENERorigNormalfont\normalfont
+      \def\normalfont{\SENERorigNormalfont\patriafont}%
       \@starttoc{lof}%
     \endgroup
   }%
-  \makeatother
 }
+\makeatother
 
 % ============================================================================
 % CONTRAPORTADA INSTITUCIONAL
 % ============================================================================
+\makeatletter
 \newcommand{\contraportada}[2][img/contraportada.png]{
   \clearpage
   \thispagestyle{plain}
@@ -1111,6 +1150,7 @@
   \null
   \clearpage
 }
+\makeatother
 
 % ============================================================================
 % PORTADA DE SECCIÓN
@@ -1185,12 +1225,43 @@
 }
 
 % Macro de fuente de gráfico/tabla
+% - Reduce espacio vertical
+% - Agrega punto final SOLO si falta (evita duplicados)
+\ExplSyntaxOn
+\cs_new_protected:Npn \sener_fuente_autopunctuate:n #1
+  {
+    \csname tl_set:Nn\endcsname \l_tmpa_tl { #1 }
+    \csname tl_trim_spaces:N\endcsname \l_tmpa_tl
+    \csname tl_use:N\endcsname \l_tmpa_tl
+    \csname tl_if_empty:NF\endcsname \l_tmpa_tl
+      {
+        \csname tl_set:Nx\endcsname \l_tmpb_tl
+          { \csname tl_item:Nn\endcsname \l_tmpa_tl { -1 } }
+        \str_case:nnF { \l_tmpb_tl }
+          {
+            {.}{}
+            {!}{}
+            {?}{}
+            {:}{}
+            {;}{}
+          }
+          {.}
+      }
+  }
+\ExplSyntaxOff
+
+% Wrapper LaTeX2e-safe (sin '_' ni ':')
+% (usa \csname para no depender de catcodes de expl3)
+\newcommand{\SENERfuenteAutopunctuate}[1]{%
+  \csname sener_fuente_autopunctuate:n\endcsname{#1}%
+}
+
 \newcommand{\fuente}[1]{%
-  \vspace{0.3em}%
-  \par\vspace{-0.5em}%
+  \par\addvspace{0.1\baselineskip}% menos espacio entre figura/tabla y fuente
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
-    \textbf{FUENTE:} #1.%
-  \par}%
+
+    \textbf{FUENTE:}~\SENERfuenteAutopunctuate{#1}%
+    \par}%
 }
 
 % Entrada de glosario

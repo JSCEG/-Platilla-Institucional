@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>test_caption_simple.bcf</file>
+      <file>test_figuras.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>test_caption_simple.bbl</file>
+      <file>test_figuras.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>test_caption_simple</infile>
+      <infile>test_figuras</infile>
     </cmdline>
     <input>
-      <file>test_caption_simple.bcf</file>
+      <file>test_figuras.bcf</file>
     </input>
     <output>
-      <file>test_caption_simple.bbl</file>
+      <file>test_figuras.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>test_caption_simple.bbl</file>
+      <file>test_figuras.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>test_caption_simple.bcf</file>
+      <file>test_figuras.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>

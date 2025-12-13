@@ -1,6 +1,7 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 12:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 19:01
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **./test_documento.tex
 (test_documento.tex
@@ -1059,55 +1060,20 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@dima=\skip83
 \bigstrutjot=\dimen302
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tocloft\tocloft.sty
-Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
-Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip84
-\cftbeforetoctitleskip=\skip85
-\cftaftertoctitleskip=\skip86
-\cftbeforepartskip=\skip87
-\cftpartnumwidth=\skip88
-\cftpartindent=\skip89
-\cftbeforesecskip=\skip90
-\cftsecindent=\skip91
-\cftsecnumwidth=\skip92
-\cftbeforesubsecskip=\skip93
-\cftsubsecindent=\skip94
-\cftsubsecnumwidth=\skip95
-\cftbeforesubsubsecskip=\skip96
-\cftsubsubsecindent=\skip97
-\cftsubsubsecnumwidth=\skip98
-\cftbeforeparaskip=\skip99
-\cftparaindent=\skip100
-\cftparanumwidth=\skip101
-\cftbeforesubparaskip=\skip102
-\cftsubparaindent=\skip103
-\cftsubparanumwidth=\skip104
-\cftbeforeloftitleskip=\skip105
-\cftafterloftitleskip=\skip106
-\cftbeforefigskip=\skip107
-\cftfigindent=\skip108
-\cftfignumwidth=\skip109
-\c@lofdepth=\count385
-\c@lotdepth=\count386
-\cftbeforelottitleskip=\skip110
-\cftafterlottitleskip=\skip111
-\cftbeforetabskip=\skip112
-\cfttabindent=\skip113
-\cfttabnumwidth=\skip114
+\cftsecnumwidth=\skip84
+\cftsubsecnumwidth=\skip85
+\cftsecindent=\skip86
+\cftsubsecindent=\skip87
+\SENER@appendixsecnumwidth=\dimen303
 
-
-Package tocloft Warning: \@starttoc has already been redefined; tocloft bailing
- out. on input line 1156.
-
-) (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
+(C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen303
-\TX@old@table=\dimen304
-\TX@old@col=\dimen305
-\TX@target=\dimen306
-\TX@delta=\dimen307
-\TX@cols=\count387
+\TX@col@width=\dimen304
+\TX@old@table=\dimen305
+\TX@old@col=\dimen306
+\TX@target=\dimen307
+\TX@delta=\dimen308
+\TX@cols=\count385
 \TX@ftn=\toks44
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
@@ -1118,58 +1084,58 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count388
-\calc@Bcount=\count389
-\calc@Adimen=\dimen308
-\calc@Bdimen=\dimen309
-\calc@Askip=\skip115
-\calc@Bskip=\skip116
+\calc@Acount=\count386
+\calc@Bcount=\count387
+\calc@Adimen=\dimen309
+\calc@Bdimen=\dimen310
+\calc@Askip=\skip88
+\calc@Bskip=\skip89
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count390
-\calc@Cskip=\skip117
+\calc@Ccount=\count388
+\calc@Cskip=\skip90
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen310
-\ESO@tempdimb=\dimen311
+\ESO@tempdima=\dimen311
+\ESO@tempdimb=\dimen312
 )
-\AM@pagewidth=\dimen312
-\AM@pageheight=\dimen313
-\AM@fboxrule=\dimen314
+\AM@pagewidth=\dimen313
+\AM@pageheight=\dimen314
+\AM@fboxrule=\dimen315
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\ppxetex.def
 File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 )
-\pdfpages@includegraphics@status=\count391
+\pdfpages@includegraphics@status=\count389
 \AM@pagebox=\box95
 \AM@global@opts=\toks45
-\AM@pagecnt=\count392
+\AM@pagecnt=\count390
 \AM@toc@title=\toks46
 \AM@lof@heading=\toks47
-\c@AM@survey=\count393
+\c@AM@survey=\count391
 \AM@templatesizebox=\box96
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count394
+\c@tracingmulticols=\count392
 \mult@box=\box97
-\multicol@leftmargin=\dimen315
-\c@unbalance=\count395
-\c@collectmore=\count396
-\doublecol@number=\count397
-\multicoltolerance=\count398
-\multicolpretolerance=\count399
-\full@width=\dimen316
-\page@free=\dimen317
-\premulticols=\dimen318
-\postmulticols=\dimen319
-\multicolsep=\skip118
-\multicolbaselineskip=\skip119
+\multicol@leftmargin=\dimen316
+\c@unbalance=\count393
+\c@collectmore=\count394
+\doublecol@number=\count395
+\multicoltolerance=\count396
+\multicolpretolerance=\count397
+\full@width=\dimen317
+\page@free=\dimen318
+\premulticols=\dimen319
+\postmulticols=\dimen320
+\multicolsep=\skip91
+\multicolbaselineskip=\skip92
 \partial@page=\box98
 \last@line=\box99
 \mc@boxedresult=\box100
-\maxbalancingoverflow=\dimen320
+\maxbalancingoverflow=\dimen321
 \mult@rightbox=\box101
 \mult@grightbox=\box102
 \mult@firstbox=\box103
@@ -1210,37 +1176,37 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box138
 \@tempa=\box139
 \@tempa=\box140
-\c@minrows=\count400
-\c@columnbadness=\count401
-\c@finalcolumnbadness=\count402
-\last@try=\dimen321
-\multicolovershoot=\dimen322
-\multicolundershoot=\dimen323
+\c@minrows=\count398
+\c@columnbadness=\count399
+\c@finalcolumnbadness=\count400
+\last@try=\dimen322
+\multicolovershoot=\dimen323
+\multicolundershoot=\dimen324
 \mult@nat@firstbox=\box141
 \colbreak@box=\box142
-\mc@col@check@num=\count403
-\g__mc_curr_col_int=\count404
+\mc@col@check@num=\count401
+\g__mc_curr_col_int=\count402
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks48
 \MT@tempbox=\box143
-\MT@count=\count405
+\MT@count=\count403
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks49
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen324
+\MT@outer@kern=\dimen325
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count406
+\MT@listname@count=\count404
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-xetex.def
 File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 443.
 LaTeX Info: Redefining \lslig on input line 451.
-\MT@outer@space=\skip120
+\MT@outer@space=\skip93
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1256,34 +1222,34 @@ File: lettrine.sty 2025-01-30 v2.80 (Daniel Flipo)
 (C:\Program Files\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
 Package: xfp 2025-10-09 L3 Floating point unit
 )
-\c@DefaultLines=\count407
-\c@DefaultDepth=\count408
-\DefaultFindent=\dimen325
-\DefaultNindent=\dimen326
-\DefaultSlope=\dimen327
-\DiscardVskip=\dimen328
+\c@DefaultLines=\count405
+\c@DefaultDepth=\count406
+\DefaultFindent=\dimen326
+\DefaultNindent=\dimen327
+\DefaultSlope=\dimen328
+\DiscardVskip=\dimen329
 \L@lettrine=\box144
 \L@lbox=\box145
 \L@tbox=\box146
-\c@L@lines=\count409
-\c@L@depth=\count410
-\L@Pindent=\dimen329
-\L@Findent=\dimen330
-\L@Nindent=\dimen331
-\L@lraise=\dimen332
-\L@first=\dimen333
-\L@next=\dimen334
-\L@slope=\dimen335
-\L@height=\dimen336
-\L@novskip=\dimen337
-\L@target@ht=\dimen338
-\L@target@dp=\dimen339
-\L@target@tht=\dimen340
-\LettrineWidth=\dimen341
-\LettrineHeight=\dimen342
-\LettrineDepth=\dimen343
-\L@finalht=\dimen344
-\L@finaldp=\dimen345
+\c@L@lines=\count407
+\c@L@depth=\count408
+\L@Pindent=\dimen330
+\L@Findent=\dimen331
+\L@Nindent=\dimen332
+\L@lraise=\dimen333
+\L@first=\dimen334
+\L@next=\dimen335
+\L@slope=\dimen336
+\L@height=\dimen337
+\L@novskip=\dimen338
+\L@target@ht=\dimen339
+\L@target@dp=\dimen340
+\L@target@tht=\dimen341
+\LettrineWidth=\dimen342
+\LettrineHeight=\dimen343
+\LettrineDepth=\dimen344
+\L@finalht=\dimen345
+\L@finaldp=\dimen346
 
 Loading lettrine.cfg
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
@@ -1301,38 +1267,38 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks52
 \XKV@tempa@toks=\toks53
 )
-\XKV@depth=\count411
+\XKV@depth=\count409
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@qr@i=\count412
-\c@qr@j=\count413
-\qr@a=\count414
-\qr@b=\count415
-\qr@c=\count416
-\qr@for@depth=\count417
-\qr@for@maxdepth=\count418
-\qr@for@start=\count419
-\qr@for@end=\count420
-\qr@for@step=\count421
-\qr@newforcount=\count422
-\qr@newforcount=\count423
-\qr@desiredheight=\skip121
-\qr@modulesize=\skip122
-\qr@minipagewidth=\skip123
-\c@maski=\count424
-\c@maskj=\count425
-\c@totalones=\count426
-\c@penaltyi=\count427
-\c@penaltyii=\count428
-\c@penaltyiii=\count429
-\c@penaltyiv=\count430
-\c@qr@hexchars=\count431
-\qr@newforcount=\count432
-\c@qr@divisionsremaining=\count433
+\c@qr@i=\count410
+\c@qr@j=\count411
+\qr@a=\count412
+\qr@b=\count413
+\qr@c=\count414
+\qr@for@depth=\count415
+\qr@for@maxdepth=\count416
+\qr@for@start=\count417
+\qr@for@end=\count418
+\qr@for@step=\count419
+\qr@newforcount=\count420
+\qr@newforcount=\count421
+\qr@desiredheight=\skip94
+\qr@modulesize=\skip95
+\qr@minipagewidth=\skip96
+\c@maski=\count422
+\c@maskj=\count423
+\c@totalones=\count424
+\c@penaltyi=\count425
+\c@penaltyii=\count426
+\c@penaltyiii=\count427
+\c@penaltyiv=\count428
+\c@qr@hexchars=\count429
+\qr@newforcount=\count430
+\c@qr@divisionsremaining=\count431
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/marginnote\marginnote.sty
 Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count434
+\c@mn@abspage=\count432
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-footmisc.lt
 x
@@ -1347,12 +1313,14 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
 Package footmisc Info: Declaring symbol style lamport* on input line 556.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 577
 .
-) (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+)
+\@float@every@figure=\toks55
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count435
+\lrq@indent=\count433
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1361,63 +1329,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count436
-\c@listtotal=\count437
-\c@listcount=\count438
-\c@liststart=\count439
-\c@liststop=\count440
-\c@citecount=\count441
-\c@citetotal=\count442
-\c@multicitecount=\count443
-\c@multicitetotal=\count444
-\c@instcount=\count445
-\c@maxnames=\count446
-\c@minnames=\count447
-\c@maxitems=\count448
-\c@minitems=\count449
-\c@citecounter=\count450
-\c@maxcitecounter=\count451
-\c@savedcitecounter=\count452
-\c@uniquelist=\count453
-\c@uniquename=\count454
-\c@refsection=\count455
-\c@refsegment=\count456
-\c@maxextratitle=\count457
-\c@maxextratitleyear=\count458
-\c@maxextraname=\count459
-\c@maxextradate=\count460
-\c@maxextraalpha=\count461
-\c@abbrvpenalty=\count462
-\c@highnamepenalty=\count463
-\c@lownamepenalty=\count464
-\c@maxparens=\count465
-\c@parenlevel=\count466
-\blx@tempcnta=\count467
-\blx@tempcntb=\count468
-\blx@tempcntc=\count469
-\c@blx@maxsection=\count470
-\blx@maxsegment@0=\count471
-\blx@notetype=\count472
-\blx@parenlevel@text=\count473
-\blx@parenlevel@foot=\count474
-\blx@sectionciteorder@0=\count475
-\blx@sectionciteorderinternal@0=\count476
-\blx@entrysetcounter=\count477
-\blx@biblioinstance=\count478
-\labelnumberwidth=\skip124
-\labelalphawidth=\skip125
-\biblabelsep=\skip126
-\bibitemsep=\skip127
-\bibnamesep=\skip128
-\bibinitsep=\skip129
-\bibparsep=\skip130
-\bibhang=\skip131
+\c@tabx@nest=\count434
+\c@listtotal=\count435
+\c@listcount=\count436
+\c@liststart=\count437
+\c@liststop=\count438
+\c@citecount=\count439
+\c@citetotal=\count440
+\c@multicitecount=\count441
+\c@multicitetotal=\count442
+\c@instcount=\count443
+\c@maxnames=\count444
+\c@minnames=\count445
+\c@maxitems=\count446
+\c@minitems=\count447
+\c@citecounter=\count448
+\c@maxcitecounter=\count449
+\c@savedcitecounter=\count450
+\c@uniquelist=\count451
+\c@uniquename=\count452
+\c@refsection=\count453
+\c@refsegment=\count454
+\c@maxextratitle=\count455
+\c@maxextratitleyear=\count456
+\c@maxextraname=\count457
+\c@maxextradate=\count458
+\c@maxextraalpha=\count459
+\c@abbrvpenalty=\count460
+\c@highnamepenalty=\count461
+\c@lownamepenalty=\count462
+\c@maxparens=\count463
+\c@parenlevel=\count464
+\blx@tempcnta=\count465
+\blx@tempcntb=\count466
+\blx@tempcntc=\count467
+\c@blx@maxsection=\count468
+\blx@maxsegment@0=\count469
+\blx@notetype=\count470
+\blx@parenlevel@text=\count471
+\blx@parenlevel@foot=\count472
+\blx@sectionciteorder@0=\count473
+\blx@sectionciteorderinternal@0=\count474
+\blx@entrysetcounter=\count475
+\blx@biblioinstance=\count476
+\labelnumberwidth=\skip97
+\labelalphawidth=\skip98
+\biblabelsep=\skip99
+\bibitemsep=\skip100
+\bibnamesep=\skip101
+\bibinitsep=\skip102
+\bibparsep=\skip103
+\bibhang=\skip104
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count479
-\c@maxcomprange=\count480
-\c@mincompwidth=\count481
+\c@mincomprange=\count477
+\c@maxcomprange=\count478
+\c@mincompwidth=\count479
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1428,88 +1396,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'verbose-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count482
-\c@savedafterword=\count483
-\c@annotator=\count484
-\c@savedannotator=\count485
-\c@author=\count486
-\c@savedauthor=\count487
-\c@bookauthor=\count488
-\c@savedbookauthor=\count489
-\c@commentator=\count490
-\c@savedcommentator=\count491
-\c@editor=\count492
-\c@savededitor=\count493
-\c@editora=\count494
-\c@savededitora=\count495
-\c@editorb=\count496
-\c@savededitorb=\count497
-\c@editorc=\count498
-\c@savededitorc=\count499
-\c@foreword=\count500
-\c@savedforeword=\count501
-\c@holder=\count502
-\c@savedholder=\count503
-\c@introduction=\count504
-\c@savedintroduction=\count505
-\c@namea=\count506
-\c@savednamea=\count507
-\c@nameb=\count508
-\c@savednameb=\count509
-\c@namec=\count510
-\c@savednamec=\count511
-\c@translator=\count512
-\c@savedtranslator=\count513
-\c@shortauthor=\count514
-\c@savedshortauthor=\count515
-\c@shorteditor=\count516
-\c@savedshorteditor=\count517
-\c@labelname=\count518
-\c@savedlabelname=\count519
-\c@institution=\count520
-\c@savedinstitution=\count521
-\c@lista=\count522
-\c@savedlista=\count523
-\c@listb=\count524
-\c@savedlistb=\count525
-\c@listc=\count526
-\c@savedlistc=\count527
-\c@listd=\count528
-\c@savedlistd=\count529
-\c@liste=\count530
-\c@savedliste=\count531
-\c@listf=\count532
-\c@savedlistf=\count533
-\c@location=\count534
-\c@savedlocation=\count535
-\c@organization=\count536
-\c@savedorganization=\count537
-\c@origlocation=\count538
-\c@savedoriglocation=\count539
-\c@origpublisher=\count540
-\c@savedorigpublisher=\count541
-\c@publisher=\count542
-\c@savedpublisher=\count543
-\c@language=\count544
-\c@savedlanguage=\count545
-\c@origlanguage=\count546
-\c@savedoriglanguage=\count547
-\c@pageref=\count548
-\c@savedpageref=\count549
-\shorthandwidth=\skip132
-\shortjournalwidth=\skip133
-\shortserieswidth=\skip134
-\shorttitlewidth=\skip135
-\shortauthorwidth=\skip136
-\shorteditorwidth=\skip137
-\locallabelnumberwidth=\skip138
-\locallabelalphawidth=\skip139
-\localshorthandwidth=\skip140
-\localshortjournalwidth=\skip141
-\localshortserieswidth=\skip142
-\localshorttitlewidth=\skip143
-\localshortauthorwidth=\skip144
-\localshorteditorwidth=\skip145
+\c@afterword=\count480
+\c@savedafterword=\count481
+\c@annotator=\count482
+\c@savedannotator=\count483
+\c@author=\count484
+\c@savedauthor=\count485
+\c@bookauthor=\count486
+\c@savedbookauthor=\count487
+\c@commentator=\count488
+\c@savedcommentator=\count489
+\c@editor=\count490
+\c@savededitor=\count491
+\c@editora=\count492
+\c@savededitora=\count493
+\c@editorb=\count494
+\c@savededitorb=\count495
+\c@editorc=\count496
+\c@savededitorc=\count497
+\c@foreword=\count498
+\c@savedforeword=\count499
+\c@holder=\count500
+\c@savedholder=\count501
+\c@introduction=\count502
+\c@savedintroduction=\count503
+\c@namea=\count504
+\c@savednamea=\count505
+\c@nameb=\count506
+\c@savednameb=\count507
+\c@namec=\count508
+\c@savednamec=\count509
+\c@translator=\count510
+\c@savedtranslator=\count511
+\c@shortauthor=\count512
+\c@savedshortauthor=\count513
+\c@shorteditor=\count514
+\c@savedshorteditor=\count515
+\c@labelname=\count516
+\c@savedlabelname=\count517
+\c@institution=\count518
+\c@savedinstitution=\count519
+\c@lista=\count520
+\c@savedlista=\count521
+\c@listb=\count522
+\c@savedlistb=\count523
+\c@listc=\count524
+\c@savedlistc=\count525
+\c@listd=\count526
+\c@savedlistd=\count527
+\c@liste=\count528
+\c@savedliste=\count529
+\c@listf=\count530
+\c@savedlistf=\count531
+\c@location=\count532
+\c@savedlocation=\count533
+\c@organization=\count534
+\c@savedorganization=\count535
+\c@origlocation=\count536
+\c@savedoriglocation=\count537
+\c@origpublisher=\count538
+\c@savedorigpublisher=\count539
+\c@publisher=\count540
+\c@savedpublisher=\count541
+\c@language=\count542
+\c@savedlanguage=\count543
+\c@origlanguage=\count544
+\c@savedoriglanguage=\count545
+\c@pageref=\count546
+\c@savedpageref=\count547
+\shorthandwidth=\skip105
+\shortjournalwidth=\skip106
+\shortserieswidth=\skip107
+\shorttitlewidth=\skip108
+\shortauthorwidth=\skip109
+\shorteditorwidth=\skip110
+\locallabelnumberwidth=\skip111
+\locallabelalphawidth=\skip112
+\localshorthandwidth=\skip113
+\localshortjournalwidth=\skip114
+\localshortserieswidth=\skip115
+\localshorttitlewidth=\skip116
+\localshortauthorwidth=\skip117
+\localshorteditorwidth=\skip118
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1525,19 +1493,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count550
-\c@textcitetotal=\count551
-\c@textcitemaxnames=\count552
-\c@biburlbigbreakpenalty=\count553
-\c@biburlbreakpenalty=\count554
-\c@biburlnumpenalty=\count555
-\c@biburlucpenalty=\count556
-\c@biburllcpenalty=\count557
+\c@textcitecount=\count548
+\c@textcitetotal=\count549
+\c@textcitemaxnames=\count550
+\c@biburlbigbreakpenalty=\count551
+\c@biburlbreakpenalty=\count552
+\c@biburlnumpenalty=\count553
+\c@biburlucpenalty=\count554
+\c@biburllcpenalty=\count555
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count558
+\c@smartand=\count556
 )
 Package biblatex Info: Trying to load bibliography style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.bbx' found.
@@ -1554,8 +1522,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count559
-\c@bbx:relatedtotal=\count560
+\c@bbx:relatedcount=\count557
+\c@bbx:relatedtotal=\count558
 )))
 Package biblatex Info: Trying to load citation style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.cbx' found.
@@ -1587,12 +1555,6 @@ Package biblatex Info: ... and expl3
 (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-case-expl3.sty
 Package: blx-case-expl3 2025/07/10 v3.21 expl3 case changing code for biblatex
 ))
-
-Package pdfmanagement Warning: The loading of package pdfx is disabled.
-(pdfmanagement)                It is not compatible with the PDF management.
-
-LaTeX Info: Package 'pdfx.sty' has been disabled.
-            Load request ignored on input line 236.
 (C:\Program Files\MiKTeX\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-07-12 v7.01o Hypertext links for LaTeX
 
@@ -1611,15 +1573,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count561
+\c@section@level=\count559
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen346
-\Hy@linkcounter=\count562
-\Hy@pagecounter=\count563
+\@linkdim=\dimen347
+\Hy@linkcounter=\count560
+\Hy@pagecounter=\count561
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -1627,7 +1589,7 @@ File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count564
+\Hy@SavedSpaceFactor=\count562
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -1639,9 +1601,9 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count565
+\c@Hy@tempcnt=\count563
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen347
+\XeTeXLinkMargin=\dimen348
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1650,9 +1612,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count566
-\Field@Width=\dimen348
-\Fld@charsize=\dimen349
+\Fld@menulength=\count564
+\Field@Width=\dimen349
+\Fld@charsize=\dimen350
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1660,8 +1622,8 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count567
-\c@Item=\count568
+\Hy@abspage=\count565
+\c@Item=\count566
 )
 Package hyperref Info: Driver (custom): hgeneric-testphase.
 
@@ -1675,17 +1637,13 @@ f-colorschemes.def)
 LaTeX Info: Redefining \href on input line 262.
 LaTeX Info: Redefining \url on input line 348.
 \l__hyp_tmpa_box=\box147
-\l__hyp_tmpa_int=\count569
+\l__hyp_tmpa_int=\count567
 \l__hyp_dest_box=\box148
-\g__hyp_linknestlevel_int=\count570
-\HyAnn@Count=\count571
-\Fld@listcount=\count572
-\Hy@SectionHShift=\skip146
+\g__hyp_linknestlevel_int=\count568
+\HyAnn@Count=\count569
+\Fld@listcount=\count570
+\Hy@SectionHShift=\skip119
 )
-
-Package hyperref Warning: unknown key pdfpagelabels of module 'hyp' set to
-(hyperref)                'true'.
-
 
 Package fontspec Info: 
 (fontspec)             Font family 'NotoSans(1)' created for font 'NotoSans'
@@ -1716,7 +1674,7 @@ Package hyperref Warning: This hyperref driver ignores the pdfversion key!
 
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip147
+\@mathmargin=\skip120
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -1724,24 +1682,24 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks55
-\ex@=\dimen350
+\@emptytoks=\toks56
+\ex@=\dimen351
 ))
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen351
+\pmbraise@=\dimen352
 )
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count573
+\inf@bad=\count571
 LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count574
-\leftroot@=\count575
+\uproot@=\count572
+\leftroot@=\count573
 LaTeX Info: Redefining \overline on input line 398.
 LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count576
-\DOTSCASE@=\count577
+\classnum@=\count574
+\DOTSCASE@=\count575
 LaTeX Info: Redefining \ldots on input line 495.
 LaTeX Info: Redefining \dots on input line 498.
 LaTeX Info: Redefining \cdots on input line 619.
@@ -1751,34 +1709,34 @@ LaTeX Info: Redefining \big on input line 721.
 LaTeX Info: Redefining \Big on input line 722.
 LaTeX Info: Redefining \bigg on input line 723.
 LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen352
+\big@size=\dimen353
 LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count578
+\macc@depth=\count576
 LaTeX Info: Redefining \bmod on input line 904.
 LaTeX Info: Redefining \pmod on input line 909.
 LaTeX Info: Redefining \smash on input line 939.
 LaTeX Info: Redefining \relbar on input line 969.
 LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count579
+\c@MaxMatrixCols=\count577
 \dotsspace@=\muskip22
-\c@parentequation=\count580
-\dspbrk@lvl=\count581
-\tag@help=\toks56
-\row@=\count582
-\column@=\count583
-\maxfields@=\count584
-\andhelp@=\toks57
-\eqnshift@=\dimen353
-\alignsep@=\dimen354
-\tagshift@=\dimen355
-\tagwidth@=\dimen356
-\totwidth@=\dimen357
-\lineht@=\dimen358
-\@envbody=\toks58
-\multlinegap=\skip148
-\multlinetaggap=\skip149
-\mathdisplay@stack=\toks59
+\c@parentequation=\count578
+\dspbrk@lvl=\count579
+\tag@help=\toks57
+\row@=\count580
+\column@=\count581
+\maxfields@=\count582
+\andhelp@=\toks58
+\eqnshift@=\dimen354
+\alignsep@=\dimen355
+\tagshift@=\dimen356
+\tagwidth@=\dimen357
+\totwidth@=\dimen358
+\lineht@=\dimen359
+\@envbody=\toks59
+\multlinegap=\skip121
+\multlinetaggap=\skip122
+\mathdisplay@stack=\toks60
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -1795,7 +1753,7 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/bookmark\bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
-\BKM@id=\count585
+\BKM@id=\count583
 ))
 (test_documento.aux)
 \openout1 = `test_documento.aux'.
@@ -1977,53 +1935,6 @@ File: img/portada.png Graphic file (type bmp)
 [1
 
 ]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 36.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 36.
- (test_documento.toc
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 2.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 2.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 2.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-))
-\tf@toc=\write5
-\openout5 = `test_documento.toc'.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 37.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [2
-
-]
-(test_documento.lof)
-\tf@lof=\write6
-\openout6 = `test_documento.lof'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [3
-
-] (test_documento.lot)
-\tf@lot=\write7
-\openout7 = `test_documento.lot'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [4
-
-]
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
-File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
-ndard glyph set (RS)
-)
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2109,6 +2020,109 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
+ (test_documento.toc
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 3.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+))
+\tf@toc=\write5
+\openout5 = `test_documento.toc'.
+
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 8.0pt on input line 37.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [2
+
+]
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 17.28pt on input line 39.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
+(microtype)             Ignoring protrusion settings for this character.
+
+(test_documento.lof)
+\tf@lof=\write6
+\openout6 = `test_documento.lof'.
+
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [3
+
+] (test_documento.lot)
+\tf@lot=\write7
+\openout7 = `test_documento.lot'.
+
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [4
+
+]
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 17.28pt on input line 46.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
+File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
+ndard glyph set (RS)
+)
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
 (Font)              scaled to size 12.0pt on input line 60.
 Package microtype Info: Character `~ (= ~)' is missing
@@ -2144,12 +2158,27 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 [5]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 10.5pt on input line 80.
+
+
+test_documento.tex:80: Package caption Error: \caption outside float.
+
+See the caption package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.80   \caption
+               {Tabla de prueba con formato institucional}
+If you do not understand this error, please take a closer look
+at the documentation of the `caption' package, especially the
+section about errors.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 82.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 7.34996pt on input line 82.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 5.25pt on input line 82.
-
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 82.
@@ -2168,18 +2197,116 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 10.5pt on input line 84.
+test_documento.tex:92: Undefined control sequence.
+\fuente ...11pt}\selectfont extbf{FUENTE:}~\sener 
+                                                  _fuente_autopunctuate:n{#1...
+l.92 ...boración propia para pruebas del template}
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 92.
+test_documento.tex:92: Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...boración propia para pruebas del template}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 9.0pt on input line 92.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 5.0pt on input line 92.
+test_documento.tex:92: Argument of \__math_grab_dollar_delim:w has an extra }.
+<inserted text> 
+                \par 
+l.92 ...boración propia para pruebas del template}
+                                                  
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+_fuente_autopunctuate:n{Elaboración propia para pruebas del template\ETC.
+test_documento.tex:92: Paragraph ended before \__math_grab_dollar_delim:w was c
+omplete.
+<to be read again> 
+                   \par 
+l.92 ...boración propia para pruebas del template}
+                                                  
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+test_documento.tex:92: Missing $ inserted.
+<inserted text> 
+                $
+l.92 ...boración propia para pruebas del template}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
 File: img/graficos/figura_2_1.png Graphic file (type bmp)
 <img/graficos/figura_2_1.png>
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 99.
+test_documento.tex:102: Undefined control sequence.
+\fuente ...11pt}\selectfont extbf{FUENTE:}~\sener 
+                                                  _fuente_autopunctuate:n{#1...
+l.102 \fuente{Imagen de prueba del template}
+                                            
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+test_documento.tex:102: Missing $ inserted.
+<inserted text> 
+                $
+l.102 \fuente{Imagen de prueba del template}
+                                            
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
 
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [6]
+test_documento.tex:102: Argument of \__math_grab_dollar_delim:w has an extra }.
+<inserted text> 
+                \par 
+l.102 \fuente{Imagen de prueba del template}
+                                            
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+_fuente_autopunctuate:n{Imagen de prueba del template}\par 
+test_documento.tex:102: Paragraph ended before \__math_grab_dollar_delim:w was 
+complete.
+<to be read again> 
+                   \par 
+l.102 \fuente{Imagen de prueba del template}
+                                            
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+test_documento.tex:102: Missing $ inserted.
+<inserted text> 
+                $
+l.102 \fuente{Imagen de prueba del template}
+                                            
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
 (Font)              scaled to size 17.28pt on input line 107.
 
@@ -2187,19 +2314,19 @@ Overfull \hbox (18.82668pt too wide) in paragraph at lines 107--107
  [] 
  []
 
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+[6]
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[7]
+ [7]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [8]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [9]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 14.4pt on input line 159.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
@@ -2210,16 +2337,25 @@ LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 10.95pt on input line 159.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [10
+ [9
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
- [11
+ [10
 
-] (test_documento.aux)
+]
+
+Package caption Warning: Unused \captionsetup[table] on input line 234.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[longtable] on input line 280.
+See the caption package documentation for explanation.
+
+(test_documento.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -2229,20 +2365,17 @@ L3 programming layer <2025-10-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
-
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
 Package logreq Info: Writing requests to 'test_documento.run.xml'.
 \openout1 = `test_documento.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51055 strings out of 402987
- 1087852 string characters out of 5452871
- 2100049 words of memory out of 5000000
- 79062 multiletter control sequences out of 15000+600000
- 653014 words of font info for 105 fonts, out of 8000000 for 9000
+ 50834 strings out of 402987
+ 1084825 string characters out of 5452871
+ 2095351 words of memory out of 5000000
+ 78835 multiletter control sequences out of 15000+600000
+ 654418 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,122p,1193b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,122p,1193b,1375s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on test_documento.pdf (11 pages).
+Output written on test_documento.pdf (10 pages).

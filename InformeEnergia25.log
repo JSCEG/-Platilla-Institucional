@@ -1,7 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 17:58
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 20:00
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./InformeEnergia25.tex
 (InformeEnergia25.tex
@@ -1313,7 +1312,9 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
 Package footmisc Info: Declaring symbol style lamport* on input line 556.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 577
 .
-) (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+)
+\@float@every@figure=\toks55
+ (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
@@ -1680,7 +1681,7 @@ Package: amstext 2024/11/17 v2.01 AMS text
 
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks55
+\@emptytoks=\toks56
 \ex@=\dimen351
 ))
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
@@ -1720,21 +1721,21 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \dotsspace@=\muskip22
 \c@parentequation=\count578
 \dspbrk@lvl=\count579
-\tag@help=\toks56
+\tag@help=\toks57
 \row@=\count580
 \column@=\count581
 \maxfields@=\count582
-\andhelp@=\toks57
+\andhelp@=\toks58
 \eqnshift@=\dimen354
 \alignsep@=\dimen355
 \tagshift@=\dimen356
 \tagwidth@=\dimen357
 \totwidth@=\dimen358
 \lineht@=\dimen359
-\@envbody=\toks58
+\@envbody=\toks59
 \multlinegap=\skip121
 \multlinetaggap=\skip122
-\mathdisplay@stack=\toks59
+\mathdisplay@stack=\toks60
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
@@ -2033,21 +2034,12 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
- (InformeEnergia25.toc
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 2.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 4.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 4.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-))
+ (InformeEnergia25.toc)
 \tf@toc=\write5
 \openout5 = `InformeEnergia25.toc'.
 
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 37.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 8.0pt on input line 37.
 File: img/foja_blanca.jpg Graphic file (type bmp)
@@ -2111,8 +2103,7 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
-
-(InformeEnergia25.lof)
+ (InformeEnergia25.lof)
 \tf@lof=\write6
 \openout6 = `InformeEnergia25.lof'.
 
@@ -2120,7 +2111,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [3
 
-] (InformeEnergia25.lot)
+]
+(InformeEnergia25.lot)
 \tf@lot=\write7
 \openout7 = `InformeEnergia25.lot'.
 
@@ -2130,11 +2122,20 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 46.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 17.28pt on input line 46.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
 ndard glyph set (RS)
+)
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 62.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 10.0pt on input line 62.
@@ -2236,7 +2237,7 @@ cala\{}n- Sistemas híbridos\{}n\{}n**Energía
  []
 
 
-Underfull \vbox (badness 6775) has occurred while \output is active []
+Underfull \vbox (badness 6364) has occurred while \output is active []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -2256,7 +2257,7 @@ Overfull \hbox (18.82668pt too wide) in paragraph at lines 145--145
  []
 
 
-Underfull \vbox (badness 6204) has occurred while \output is active []
+Underfull \vbox (badness 4899) has occurred while \output is active []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -2293,8 +2294,7 @@ LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 7.34996pt on input line 187.
-InformeEnergia25.tex:191: ignored error: Infinite glue shrinkage found in box b
-eing split
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [10]
@@ -2333,8 +2333,7 @@ Overfull \hbox (3.23874pt too wide) in paragraph at lines 225--225
 []|\TU/NotoSans(0)/b/n/9.5 Geotermoeléctrica| 
  []
 
-InformeEnergia25.tex:245: ignored error: Infinite glue shrinkage found in box b
-eing split
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [11]
@@ -2342,8 +2341,7 @@ Overfull \hbox (3.23874pt too wide) in paragraph at lines 271--271
 []|\TU/NotoSans(0)/b/n/9.5 Geotermoeléctrica| 
  []
 
-InformeEnergia25.tex:291: ignored error: Infinite glue shrinkage found in box b
-eing split
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [12]
@@ -2364,7 +2362,8 @@ LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 14.0pt on input line 329.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [14]
+
+[14]
 Overfull \hbox (18.82668pt too wide) in paragraph at lines 332--332
  [][] 
  []
@@ -2474,7 +2473,7 @@ File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
  [21
 
-] (InformeEnergia25.aux)
+] [22] (InformeEnergia25.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -2487,17 +2486,30 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+(biblatex)                Page breaks have changed.
+
 Package logreq Info: Writing requests to 'InformeEnergia25.run.xml'.
 \openout1 = `InformeEnergia25.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51167 strings out of 402987
- 1093085 string characters out of 5452871
- 2127676 words of memory out of 5000000
- 79149 multiletter control sequences out of 15000+600000
+ 51169 strings out of 402987
+ 1093048 string characters out of 5452871
+ 2128717 words of memory out of 5000000
+ 79151 multiletter control sequences out of 15000+600000
  655219 words of font info for 133 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,122p,1195b,5299s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on InformeEnergia25.pdf (21 pages).
+Output written on InformeEnergia25.pdf (22 pages).
