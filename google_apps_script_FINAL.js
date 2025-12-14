@@ -12,6 +12,9 @@
 
 const CARPETA_SALIDA_ID = '1NnO4B8EJCx6VNrmDxWwwW3KsHCTID_c2';
 
+// FIX: Flag de debug para optimizar logging en producción
+const DEBUG = false;
+
 /**
  * Crea el menú en la interfaz de Google Sheets
  */
@@ -58,7 +61,10 @@ let logMensajes = [];
 
 function log(mensaje) {
     console.log(mensaje);
-    logMensajes.push(mensaje);
+    // FIX: Solo acumular logs en modo debug para evitar timeout
+    if (DEBUG) {
+        logMensajes.push(mensaje);
+    }
 }
 
 function mostrarLog() {
@@ -337,7 +343,8 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
         }
 
         // --- NIVELES NORMALES ---
-        contenido += generarComandoSeccion(nivel, titulo);
+        // FIX: Pasar estado de anexos para limpiar prefijos duplicados
+        contenido += generarComandoSeccion(nivel, titulo, anexosIniciados);
         contenido += procesarContenido(contenidoRaw);
 
         // Insertar figuras y tablas de esta sección
@@ -364,10 +371,44 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
 }
 
 /**
- * Genera el comando LaTeX apropiado según el nivel
+ * FIX: Limpia prefijos de anexo del título cuando estamos en modo anexos
+ * Evita duplicación como "Anexo A Anexo A ..." en el PDF
  */
-function generarComandoSeccion(nivel, titulo) {
-    const tituloEscapado = escaparLatex(titulo);
+function limpiarPrefijoAnexoEnTitulo(titulo) {
+    if (!titulo) return '';
+    
+    let tituloLimpio = titulo.toString().trim();
+    
+    // Patrones a eliminar al inicio del título:
+    // - "Anexo A", "ANEXO B.", "Anexo C –"
+    // - "A.1", "A1", "B.12", con o sin punto/espacio/guión
+    const patronesAnexo = [
+        /^Anexo\s+[A-Z][\.\s\-–]*\s*/i,     // "Anexo A", "Anexo B.", "Anexo C –"
+        /^ANEXO\s+[A-Z][\.\s\-–]*\s*/i,     // "ANEXO A", "ANEXO B."
+        /^[A-Z]\.?\d*[\.\s\-–]+\s*/,        // "A.1", "A1", "B.12", "A."
+        /^[A-Z]\d*[\.\s\-–]+\s*/            // "A1", "B2"
+    ];
+    
+    for (const patron of patronesAnexo) {
+        tituloLimpio = tituloLimpio.replace(patron, '');
+    }
+    
+    return tituloLimpio.trim();
+}
+
+/**
+ * FIX: Genera el comando LaTeX apropiado según el nivel
+ * Ahora recibe anexosIniciados para limpiar prefijos duplicados
+ */
+function generarComandoSeccion(nivel, titulo, anexosIniciados = false) {
+    let tituloFinal = titulo;
+    
+    // FIX: Si estamos en anexos y es nivel anexo/subanexo, limpiar prefijos
+    if (anexosIniciados && (nivel === 'anexo' || nivel === 'subanexo')) {
+        tituloFinal = limpiarPrefijoAnexoEnTitulo(titulo);
+    }
+    
+    const tituloEscapado = escaparLatex(tituloFinal);
 
     // Normalizar nivel
     nivel = nivel.toLowerCase()
@@ -384,7 +425,7 @@ function generarComandoSeccion(nivel, titulo) {
     } else if (nivel.includes('parrafo') || nivel.includes('titulo pequeño')) {
         return `\\paragraph{${tituloEscapado}}\n\n`;
     } else {
-        // Default: sección principal
+        // Default: sección principal (incluyendo anexos)
         return `\\section{${tituloEscapado}}\n\n`;
     }
 }
@@ -553,40 +594,50 @@ function procesarContraportada(contenidoRaw) {
 }
 
 /**
- * Guarda los archivos .tex y .bib en Drive
+ * FIX: Guarda los archivos .tex y .bib en Drive (optimizado para evitar timeout)
  */
 function guardarArchivos(datosDoc, tex, bibliografia) {
     const carpeta = DriveApp.getFolderById(CARPETA_SALIDA_ID);
     const nombreBase = datosDoc['DocumentoCorto'] || 'documento_generado';
 
-    // Guardar .tex
-    const archivosTexExistentes = carpeta.getFilesByName(nombreBase + '.tex');
-    if (archivosTexExistentes.hasNext()) {
-        archivosTexExistentes.next().setTrashed(true);
-    }
-    carpeta.createFile(nombreBase + '.tex', tex, 'text/plain');
-    log(`✅ Archivo ${nombreBase}.tex creado`);
-
-    // Guardar .bib si hay referencias
-    if (bibliografia.length > 0) {
-        let bibContent = '';
-        bibliografia.forEach(ref => {
-            const tipo = ref['Tipo'] ? ref['Tipo'].toLowerCase() : 'misc';
-            bibContent += `@${tipo}{${ref['Clave']},\n`;
-            if (ref['Autor']) bibContent += `  author = {${ref['Autor']}},\n`;
-            if (ref['Titulo']) bibContent += `  title = {${ref['Titulo']}},\n`;
-            if (ref['Anio']) bibContent += `  year = {${ref['Anio']}},\n`;
-            if (ref['Editorial']) bibContent += `  publisher = {${ref['Editorial']}},\n`;
-            if (ref['Url']) bibContent += `  url = {${ref['Url']}},\n`;
-            bibContent += `}\n\n`;
-        });
-
-        const archivosBibExistentes = carpeta.getFilesByName('referencias.bib');
-        if (archivosBibExistentes.hasNext()) {
-            archivosBibExistentes.next().setTrashed(true);
+    // FIX: Optimizar eliminación de archivos existentes
+    try {
+        // Guardar .tex (solo eliminar si existe)
+        const archivosTexExistentes = carpeta.getFilesByName(nombreBase + '.tex');
+        if (archivosTexExistentes.hasNext()) {
+            archivosTexExistentes.next().setTrashed(true);
         }
-        carpeta.createFile('referencias.bib', bibContent, 'text/plain');
-        log(`✅ Archivo referencias.bib creado con ${bibliografia.length} referencias`);
+        carpeta.createFile(nombreBase + '.tex', tex, 'text/plain');
+        log(`✅ Archivo ${nombreBase}.tex creado`);
+
+        // Guardar .bib si hay referencias (optimizado)
+        if (bibliografia.length > 0) {
+            // FIX: Usar array.join() en lugar de concatenación masiva
+            const bibEntries = [];
+            bibliografia.forEach(ref => {
+                const tipo = ref['Tipo'] ? ref['Tipo'].toLowerCase() : 'misc';
+                const entry = [`@${tipo}{${ref['Clave']},`];
+                if (ref['Autor']) entry.push(`  author = {${ref['Autor']}},`);
+                if (ref['Titulo']) entry.push(`  title = {${ref['Titulo']}},`);
+                if (ref['Anio']) entry.push(`  year = {${ref['Anio']}},`);
+                if (ref['Editorial']) entry.push(`  publisher = {${ref['Editorial']}},`);
+                if (ref['Url']) entry.push(`  url = {${ref['Url']}},`);
+                entry.push('}\n');
+                bibEntries.push(entry.join('\n'));
+            });
+            
+            const bibContent = bibEntries.join('\n');
+
+            const archivosBibExistentes = carpeta.getFilesByName('referencias.bib');
+            if (archivosBibExistentes.hasNext()) {
+                archivosBibExistentes.next().setTrashed(true);
+            }
+            carpeta.createFile('referencias.bib', bibContent, 'text/plain');
+            log(`✅ Archivo referencias.bib creado con ${bibliografia.length} referencias`);
+        }
+    } catch (e) {
+        log(`❌ Error al guardar archivos: ${e.toString()}`);
+        throw e;
     }
 }
 
@@ -1150,10 +1201,14 @@ function generarTabla(tabla, ss) {
                 texInicio += resultado.contenido;
             } else {
                 log(`    ⚠️ No se encontró la hoja: "${nombreHoja}"`);
-                log(`    💡 Hojas disponibles: ${ss.getSheets().map(s => s.getName()).join(', ')}`);
+                // FIX: Cachear lista de hojas para evitar llamadas repetidas
+                if (!this._hojasDisponiblesCache) {
+                    this._hojasDisponiblesCache = ss.getSheets().map(s => s.getName()).join(', ');
+                }
+                log(`    💡 Hojas disponibles: ${this._hojasDisponiblesCache}`);
                 // No inyectamos una tabla de error al PDF; dejamos el diagnóstico en comentarios del .tex.
                 tex += `  % ERROR: No se encontró la hoja "${nombreHoja}"\n`;
-                tex += `  % Hojas disponibles: ${ss.getSheets().map(s => s.getName()).join(', ')}\n`;
+                tex += `  % Hojas disponibles: ${this._hojasDisponiblesCache}\n`;
             }
         } catch (e) {
             log(`    ❌ Error al leer rango: ${e.toString()}`);
@@ -1338,11 +1393,11 @@ function dividirTabla(datos, maxCols, tituloTabla) {
     while (colInicio < numCols) {
         const colFin = Math.min(colInicio + colsPorParte, numCols);
 
-        // Agregar nota de continuación si no es la primera parte
+        // FIX: Reducir espacios en continuaciones de tablas
         if (parte > 1) {
-            tex += `\n  \\vspace{1em}\n`;
+            tex += `\n  \\vspace{0.25em}\n`;
             tex += `  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n`;
-            tex += `  \\vspace{0.5em}\n\n`;
+            tex += `  \\vspace{0.15em}\n\n`;
         }
 
         // Generar esta parte de la tabla
@@ -1438,7 +1493,8 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
         }
         tex += `  \\end{longtable}\n`;
         if (fin < datos.length) {
-            tex += `\n  \\vspace{1em}\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n  \\vspace{0.5em}\n\n`;
+            // FIX: Reducir espacios en continuaciones de tablas por filas
+            tex += `\n  \\vspace{0.25em}\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n  \\vspace{0.15em}\n\n`;
         }
         inicio = fin;
         parte++;

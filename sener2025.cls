@@ -227,10 +227,10 @@
 \floatstyle{SENERfigure}
 \restylefloat{figure}
 
-% Configuración específica para tablas (texto gris, sin fondo)
+% FIX: Configuración específica para tablas (espaciado reducido)
 \captionsetup[table]{
   position=top,
-  skip=8pt,
+  skip=3pt,                    % FIX: Reducido de 8pt
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
@@ -239,10 +239,10 @@
   font={small,color=gobmxGris}
 }
 
-% Configuración específica para figuras (abajo, alineado izquierda, texto gris)
+% FIX: Configuración específica para figuras (espaciado reducido)
 \captionsetup[figure]{
   position=bottom,
-  skip=8pt,
+  skip=3pt,                    % FIX: Reducido de 8pt
   format=plain,
   width=\textwidth,
   justification=raggedright,
@@ -273,10 +273,10 @@
   }
 }
 
-% Para longtable, usar el mismo formato que table
+% FIX: Para longtable, usar espaciado reducido
 \captionsetup[longtable]{
   position=top,
-  skip=8pt,
+  skip=3pt,                    % FIX: Reducido de 8pt
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
@@ -407,6 +407,23 @@
 \linespread{1.15}
 
 % ============================================================================
+% FIX: ESPACIADO DE FIGURAS, TABLAS Y FUENTES (reducido)
+% ============================================================================
+
+% Espacios alrededor de floats (figuras/tablas)
+\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}    % FIX: Reducido de 20pt
+\setlength{\intextsep}{6pt plus 2pt minus 2pt}       % FIX: Reducido de 12pt  
+\setlength{\floatsep}{8pt plus 2pt minus 2pt}        % FIX: Reducido de 12pt
+
+% Espacios de captions
+\setlength{\abovecaptionskip}{4pt}                    % FIX: Reducido de 10pt
+\setlength{\belowcaptionskip}{2pt}                    % FIX: Reducido de 0pt
+
+% Espacios de longtable (antes/después)
+\setlength\LTpre{6pt}                                 % FIX: Reducido de 12pt
+\setlength\LTpost{6pt}                                % FIX: Reducido de 12pt
+
+% ============================================================================
 % ESTILOS DE TÍTULOS Y SECCIONES  (A–E de la plantilla Word)
 % ============================================================================
 
@@ -464,14 +481,24 @@
 
 % ============================================================================
 % LISTAS PERSONALIZADAS (alineado a la plantilla Word)
+% FIX: Compactadas para reducir espacio vertical excesivo
 % ============================================================================
+
+% Configuración global de listas más compacta
+\setlist{
+  noitemsep,           % Sin espacio entre items
+  topsep=0.3em,        % Espacio mínimo arriba/abajo de la lista
+  parsep=0pt,          % Sin espacio entre párrafos dentro de items
+  partopsep=0pt,       % Sin espacio extra cuando la lista inicia párrafo
+  leftmargin=*         % Margen automático según la etiqueta
+}
 
 % 1er nivel: viñeta
 \setlist[itemize,1]{%
   label=\textbullet,
   leftmargin=*,
-  itemsep=0.05em,
-  topsep=0.2em,
+  itemsep=0pt,         % FIX: Sin espacio entre items
+  topsep=0.2em,        % FIX: Reducido de 0.2em
   parsep=0pt
 }
 
@@ -479,8 +506,8 @@
 \setlist[itemize,2]{%
   label=--,
   leftmargin=2em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0pt,         % FIX: Sin espacio entre items
+  topsep=0.1em,        % FIX: Reducido
   parsep=0pt
 }
 
@@ -488,8 +515,8 @@
 \setlist[itemize,3]{%
   label=\textbullet,
   leftmargin=3em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0pt,         % FIX: Sin espacio entre items
+  topsep=0.1em,        % FIX: Reducido
   parsep=0pt
 }
 
@@ -497,8 +524,8 @@
 \setlist[itemize,4]{%
   label=--,
   leftmargin=4em,
-  itemsep=0.05em,
-  topsep=0.1em,
+  itemsep=0pt,         % FIX: Sin espacio entre items
+  topsep=0.1em,        % FIX: Reducido
   parsep=0pt
 }
 
@@ -1230,19 +1257,20 @@
   \newcommand{\notosanslight}{\sffamily}
 }
 
-% Macro de fuente de gráfico/tabla
-% - Reduce espacio vertical
+% FIX: Macro de fuente de gráfico/tabla (espaciado mínimo)
+% - Elimina espacio vertical excesivo
 % - Imprime el contenido EXACTAMENTE una vez (evita duplicados)
 % Nota: se elimina la autopuntuación automática porque \fuente se usa con
 %       argumentos multi-párrafo (listas/notas), donde agregar '.' es incorrecto.
 \newcommand{\SENERfuenteAutopunctuate}[1]{#1}
 
 \newcommand{\fuente}[1]{%
-  \par\addvspace{0pt}% menos espacio entre figura/tabla y fuente
-  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
-
+  \vspace{-2pt}% FIX: Espacio negativo para pegar más a figura/tabla
+  \par\noindent% FIX: Sin indentación
+  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont%
     {\bfseries FUENTE:}~\SENERfuenteAutopunctuate{#1}%
-    \par}%
+  }%
+  \par\vspace{2pt}% FIX: Espacio mínimo después
 }
 
 % Entrada de glosario

@@ -1,15 +1,17 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'DemoSENER.blg'
-[114] biber-MSWIN64:342> INFO - === 
-[151] Biber.pm:421> INFO - Reading 'DemoSENER.bcf'
-[272] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
-[287] Biber.pm:4487> INFO - Processing section 0
-[299] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[352] bibtex.pm:1713> INFO - LaTeX decoding ...
-[368] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[417] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[417] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
-[417] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
-[417] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
-[424] bbl.pm:676> INFO - Writing 'DemoSENER.bbl' with encoding 'UTF-8'
-[425] bbl.pm:779> INFO - Output to DemoSENER.bbl
+[144] biber-MSWIN64:342> INFO - === 
+[206] Biber.pm:421> INFO - Reading 'DemoSENER.bcf'
+[350] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[365] Biber.pm:4487> INFO - Processing section 0
+[377] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[458] bibtex.pm:1713> INFO - LaTeX decoding ...
+[468] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[514] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[514] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
+[514] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
+[514] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
+[521] bbl.pm:676> INFO - Writing 'DemoSENER.bbl' with encoding 'UTF-8'
+[523] bbl.pm:779> INFO - Output to DemoSENER.bbl
+[524] Biber.pm:132> WARN - I didn't find a database entry for ')' (section 0)
+[524] Biber.pm:134> INFO - WARNINGS: 1
