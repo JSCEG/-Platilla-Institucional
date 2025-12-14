@@ -1,0 +1,73 @@
+\DocumentMetadata{
+  pdfversion=2.0,
+  lang=es-MX,
+  pdfstandard=ua-2
+}
+
+\documentclass{sener2025}
+
+% --- Metadatos del Documento ---
+\title{Prueba Normalización de Saltos}
+\subtitle{Verificación de corrección "There's no line here to end"}
+\author{Equipo de Desarrollo}
+\date{13 de diciembre de 2025}
+\institucion{Secretaría de Energía}
+\unidad{Dirección de Sistemas}
+\setDocumentoCorto{PRUEBA\_SALTOS}
+\palabrasclave{SENER, LaTeX, Saltos, Normalización}
+\version{1.0}
+
+\begin{document}
+
+\portadafondo
+
+\tableofcontents
+\newpage
+
+\section{Pruebas de Normalización de Saltos}
+
+\subsection{Caso 1: Texto normal sin problemas}
+
+Este es un texto normal que no debería causar problemas. Tiene párrafos separados correctamente.
+
+Este es otro párrafo que viene después de una línea en blanco.
+
+\subsection{Caso 2: Resumen Ejecutivo (caso problemático original)}
+
+\begin{resumenejecutivo}
+Objetivo: detectar errores de compilación causados por saltos de línea mal procesados.
+
+Este texto simula el contenido que venía de Google Sheets con saltos problemáticos.
+
+Antes se generaban comandos \textbackslash\textbackslash{} al inicio de párrafos causando "There's no line here to end".
+\end{resumenejecutivo}
+
+\subsection{Caso 3: Recuadro con saltos internos}
+
+\begin{recuadro}{Prueba de Saltos}
+Primera línea del recuadro.
+Segunda línea que debería estar en el mismo párrafo.
+
+Esta línea debería iniciar un nuevo párrafo dentro del recuadro.
+\end{recuadro}
+
+\subsection{Caso 4: Lista con elementos multilínea}
+
+\begin{itemize}
+  \item Primer elemento que puede tener texto largo y saltos internos sin causar problemas
+  \item Segundo elemento con contenido normal
+  \item Tercer elemento que también funciona correctamente
+\end{itemize}
+
+\section{Verificación de Corrección}
+
+Si la normalización funciona correctamente:
+\begin{itemize}
+  \item ✅ No aparece el error "There's no line here to end"
+  \item ✅ Los párrafos se separan correctamente
+  \item ✅ Los saltos simples se convierten en espacios
+  \item ✅ Los saltos dobles se convierten en \textbackslash par
+  \item ✅ No hay \textbackslash\textbackslash{} al inicio de bloques
+\end{itemize}
+
+\end{document}

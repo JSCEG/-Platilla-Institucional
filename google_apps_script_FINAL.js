@@ -233,7 +233,7 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
     // --- Resumen Ejecutivo ---
     if (datosDoc['ResumenEjecutivo']) {
         tex += `\\begin{resumenejecutivo}\n`;
-        tex += `${escaparTextoConEtiquetas(datosDoc['ResumenEjecutivo'])}\n`;
+        tex += `${procesarConEtiquetas(datosDoc['ResumenEjecutivo'])}\n`;
         tex += `\\end{resumenejecutivo}\n\n`;
     }
 
@@ -442,7 +442,7 @@ function procesarContenido(contenidoRaw) {
                 resultado += '\\begin{itemize}\n';
                 enLista = true;
             }
-            resultado += `  \\item ${escaparTextoConEtiquetas(esItemLista[1])}\n`;
+            resultado += `  \\item ${procesarConEtiquetas(esItemLista[1])}\n`;
         } else {
             if (enLista) {
                 resultado += '\\end{itemize}\n';
@@ -463,7 +463,7 @@ function procesarContenido(contenidoRaw) {
                     resultado += `% Referencia a figura: ${match[1]}\n`;
                 }
             } else if (lineaTrim !== '') {
-                resultado += `${escaparTextoConEtiquetas(linea)}\n`;
+                resultado += `${procesarConEtiquetas(linea)}\n`;
             } else {
                 resultado += '\n';
             }
@@ -542,7 +542,7 @@ function procesarContraportada(contenidoRaw) {
                 contraTex += `\\\\[0.5cm]\n`;
             }
         } else {
-            contraTex += escaparTextoConEtiquetas(l);
+            contraTex += procesarConEtiquetas(l);
             if (!esUltima && !siguienteEsVacia) {
                 contraTex += `\\\\\n`;
             }
@@ -684,15 +684,260 @@ function generarFechaPDF() {
 }
 
 /**
- * Escapa caracteres especiales de LaTeX
+ * Escapa caracteres especiales de LaTeX (básico)
  */
-function escaparLatex(texto) {
+function escaparLatexBasico(texto) {
     if (!texto) return '';
     return texto.toString()
         .replace(/\\/g, '\\textbackslash{}')
         .replace(/([&%$#_{}])/g, '\\$1')
         .replace(/~/g, '\\textasciitilde{}')
         .replace(/\^/g, '\\textasciicircum{}');
+}
+
+/**
+ * Escapa contenido específicamente para footnotes
+ * Aplica normalización + escape completo
+ */
+function escaparFootnote(texto) {
+    if (!texto) return '';
+    // Primero normalizar saltos, luego escapar
+    const normalizado = normalizarSaltosLatex(texto);
+    return escaparLatexBasico(normalizado);
+}
+
+/**
+ * FIX: Función de seguridad final - corrige patrones LaTeX inválidos
+ * Detecta y corrige automáticamente comandos LaTeX mal escapados
+ * Previene errores de compilación como "There's no line here to end"
+ */
+function validarYCorregirLatex(str) {
+    if (!str) return str;
+    
+    let corregido = str;
+    let cambios = [];
+    
+    // FIX: Detectar y corregir \textbackslash{}par
+    if (corregido.includes('\\textbackslash{}par')) {
+        corregido = corregido.replace(/\\textbackslash\{\}par/g, '\n\n');
+        cambios.push('\\textbackslash{}par → líneas en blanco');
+    }
+    
+    // FIX: Detectar líneas que empiezan con \\ (problemático)
+    const lineasProblematicas = corregido.match(/^\\\\[^\\]/gm);
+    if (lineasProblematicas) {
+        corregido = corregido.replace(/^\\\\([^\\])/gm, '$1');
+        cambios.push('líneas iniciando con \\\\ → texto normal');
+    }
+    
+    // FIX: Detectar \\ inmediatamente antes de texto (\\Texto)
+    if (corregido.match(/\\\\[A-Za-z]/)) {
+        corregido = corregido.replace(/\\\\([A-Za-z])/g, ' $1');
+        cambios.push('\\\\ antes de texto → espacio');
+    }
+    
+    // FIX: Detectar otros comandos LaTeX mal escapados comunes
+    if (corregido.includes('\\textbackslash{}begin')) {
+        corregido = corregido.replace(/\\textbackslash\{\}begin/g, '\\begin');
+        cambios.push('\\textbackslash{}begin → \\begin');
+    }
+    
+    if (corregido.includes('\\textbackslash{}end')) {
+        corregido = corregido.replace(/\\textbackslash\{\}end/g, '\\end');
+        cambios.push('\\textbackslash{}end → \\end');
+    }
+    
+    if (corregido.includes('\\textbackslash{}section')) {
+        corregido = corregido.replace(/\\textbackslash\{\}section/g, '\\section');
+        cambios.push('\\textbackslash{}section → \\section');
+    }
+    
+    if (corregido.includes('\\textbackslash{}item')) {
+        corregido = corregido.replace(/\\textbackslash\{\}item/g, '\\item');
+        cambios.push('\\textbackslash{}item → \\item');
+    }
+    
+    // FIX: Registrar correcciones con Logger.warn() si se corrige algo
+    if (cambios.length > 0) {
+        console.warn(`⚠️ PATRONES INVÁLIDOS CORREGIDOS: ${cambios.join(', ')}`);
+        log(`⚠️ Comandos LaTeX mal escapados corregidos: ${cambios.join(', ')}`);
+    }
+    
+    return corregido;
+}
+
+/**
+ * Escapa LaTeX pero preserva comandos LaTeX válidos
+ */
+function escaparLatex(texto) {
+    if (!texto) return '';
+    return escaparLatexBasico(texto);
+}
+
+/**
+ * FIX: Normaliza saltos de línea para LaTeX usando ÚNICAMENTE líneas en blanco
+ * NUNCA inserta comandos LaTeX (\par, \\) que puedan ser escapados después
+ * NUNCA genera \\ al inicio de párrafos
+ */
+function normalizarSaltosLatex(str) {
+    if (!str) return '';
+    
+    // 1. Convertir \\n literales (de Google Sheets) a saltos reales
+    str = str.replace(/\\n/g, '\n');
+    
+    // 2. Normalizar CRLF a LF
+    str = str.replace(/\r\n/g, '\n');
+    str = str.replace(/\r/g, '\n');
+    
+    // 3. Quitar espacios y tabs al final de cada línea
+    str = str.replace(/[ \t]+$/gm, '');
+    
+    // 4. FIX: Convertir múltiples saltos (2+) a UNA línea en blanco (\n\n)
+    // SOLO líneas en blanco, NO comandos \par que se escaparían
+    str = str.replace(/\n{2,}/g, '\n\n');
+    
+    // 5. FIX: NO convertir saltos simples a \\ ni a espacios
+    // LaTeX maneja saltos simples correctamente como espacios naturales
+    
+    // 6. Colapsar espacios múltiples dentro de líneas
+    str = str.replace(/[ \t]+/g, ' ');
+    
+    // 7. FIX: Trim final para eliminar espacios/saltos iniciales/finales problemáticos
+    // Esto previene \\ al inicio de párrafos
+    str = str.trim();
+    
+    return str;
+}
+
+/**
+ * FIX: Procesa texto con etiquetas completas - ORDEN LÓGICO CORREGIDO
+ * Orden OBLIGATORIO: texto crudo → normalizar saltos → proteger → escapar → restaurar → validar
+ * NUNCA escapa comandos LaTeX generados por el propio script
+ */
+function procesarConEtiquetas(texto) {
+    if (!texto) return '';
+    let str = texto.toString();
+
+    // FIX: PASO 1 - NORMALIZAR SALTOS PRIMERO (antes de proteger)
+    // Esto previene problemas con saltos dentro de etiquetas
+    str = normalizarSaltosLatex(str);
+
+    // FIX: PASO 2 - Extraer y proteger ECUACIONES (no escapar)
+    const ecuaciones = [];
+    
+    // Ecuaciones en línea: $...$
+    str = str.replace(/\$([^$]+)\$/g, function(match, contenido) {
+        ecuaciones.push(`$${contenido}$`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+    
+    // Ecuaciones display: $$...$$
+    str = str.replace(/\$\$([\s\S]*?)\$\$/g, function(match, contenido) {
+        ecuaciones.push(`$$${contenido}$$`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+    
+    // Ecuaciones LaTeX: \(...\) y \[...\]
+    str = str.replace(/\\\\?\(([\s\S]*?)\\\\?\)/g, function(match, contenido) {
+        ecuaciones.push(`\\(${contenido}\\)`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+    
+    str = str.replace(/\\\\?\[([\s\S]*?)\\\\?\]/g, function(match, contenido) {
+        ecuaciones.push(`\\[${contenido}\\]`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+
+    // [[ecuacion:...]] -> \begin{equation} ... \end{equation}
+    str = str.replace(/\[\[ecuacion:([\s\S]*?)\]\]/g, function(match, contenido) {
+        ecuaciones.push(`\\begin{equation}\n${contenido.trim()}\n\\end{equation}`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+
+    // [[math:...]] -> $ ... $
+    str = str.replace(/\[\[math:([\s\S]*?)\]\]/g, function(match, contenido) {
+        ecuaciones.push(`$${contenido.trim()}$`);
+        return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
+    });
+
+    // FIX: PASO 3 - Extraer y proteger CITAS
+    const citas = [];
+    str = str.replace(/\[\[cita:([\s\S]*?)\]\]/g, function(match, contenido) {
+        const clave = contenido.toString().trim();
+        citas.push(`\\cite{${clave}}`);
+        return `ZCITEPOLDER${citas.length - 1}Z`;
+    });
+
+    // FIX: PASO 4 - Extraer y proteger RECUADROS MULTI-LÍNEA
+    const recuadros = [];
+    str = str.replace(/\[\[recuadro:([^\]]*)\]\]([\s\S]*?)\[\[\/recuadro\]\]/g, function(match, titulo, contenido) {
+        const tituloLimpio = titulo.trim();
+        // FIX: NO aplicar normalización aquí, ya se hizo al inicio
+        const tituloArg = tituloLimpio ? `{${tituloLimpio}}` : '';
+        recuadros.push(`\\begin{recuadro}${tituloArg}\n${contenido}\n\\end{recuadro}`);
+        return `ZRECUADROPLACEHOLDER${recuadros.length - 1}Z`;
+    });
+    
+    // FIX: PASO 5 - Proteger otras etiquetas simples
+    const etiquetas = [];
+    
+    // [[nota:...]]
+    str = str.replace(/\[\[nota:([\s\S]*?)\]\]/g, function(match, contenido) {
+        etiquetas.push(`\\footnote{${escaparFootnote(contenido)}}`);
+        return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
+    });
+    
+    // [[destacado:...]]
+    str = str.replace(/\[\[destacado:([\s\S]*?)\]\]/g, function(match, contenido) {
+        etiquetas.push(`\\begin{destacado}\n${contenido}\n\\end{destacado}`);
+        return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
+    });
+    
+    // [[dorado:...]]
+    str = str.replace(/\[\[dorado:([\s\S]*?)\]\]/g, function(match, contenido) {
+        etiquetas.push(`\\textbf{\\textcolor{gobmxDorado}{${contenido}}}`);
+        return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
+    });
+    
+    // [[guinda:...]]
+    str = str.replace(/\[\[guinda:([\s\S]*?)\]\]/g, function(match, contenido) {
+        etiquetas.push(`\\textbf{\\textcolor{gobmxGuinda}{${contenido}}}`);
+        return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
+    });
+
+    // FIX: PASO 6 - ESCAPAR LaTeX SOLO en texto plano (ya normalizado y protegido)
+    str = escaparLatexBasico(str);
+
+    // FIX: PASO 7 - NORMALIZAR comillas tipográficas
+    str = str.replace(/[""]/g, '"');
+    str = str.replace(/['']/g, "'");
+
+    // FIX: PASO 8 - RESTAURAR contenido protegido (comandos LaTeX válidos)
+    
+    // Restaurar recuadros
+    str = str.replace(/ZRECUADROPLACEHOLDER(\d+)Z/g, function(match, index) {
+        return recuadros[parseInt(index)];
+    });
+    
+    // Restaurar etiquetas
+    str = str.replace(/ZETIQUETAPLACEHOLDER(\d+)Z/g, function(match, index) {
+        return etiquetas[parseInt(index)];
+    });
+    
+    // Restaurar citas
+    str = str.replace(/ZCITEPOLDER(\d+)Z/g, function(match, index) {
+        return citas[parseInt(index)];
+    });
+    
+    // Restaurar ecuaciones
+    str = str.replace(/ZEQPLACEHOLDER(\d+)Z/g, function(match, index) {
+        return ecuaciones[parseInt(index)];
+    });
+
+    // FIX: PASO 9 - VALIDACIÓN FINAL: corregir patrones inválidos
+    str = validarYCorregirLatex(str);
+
+    return str;
 }
 
 /**
@@ -703,41 +948,47 @@ function escaparLatex(texto) {
 function procesarTextoFuente(texto) {
     if (!texto) return '';
 
-    // Convertir \n literales en saltos de línea reales
-    const textoConSaltos = texto.toString().replace(/\\n/g, '\n');
+    // Usar normalización segura de saltos
+    const textoNormalizado = normalizarSaltosLatex(texto);
 
-    // Separar en líneas
-    const lineas = textoConSaltos.split('\n').filter(l => l.trim() !== '');
+    // Separar en líneas (después de normalización, los saltos ya son espacios)
+    const lineas = textoNormalizado.split(/\s+/).filter(l => l.trim() !== '');
 
     // Separar fuente principal de notas
     const lineasFuente = [];
     const lineasNotas = [];
 
-    lineas.forEach(linea => {
-        const matchNota = linea.match(/^([0-9]+\/|[a-zA-Z]+\/)\s+(.*)$/);
-        if (matchNota) {
+    // Reconstruir texto y buscar patrones de notas
+    const textoCompleto = lineas.join(' ');
+    const partesTexto = textoCompleto.split(/(\b[0-9]+\/|\b[a-zA-Z]+\/)/);
+
+    let textoFuente = '';
+    for (let i = 0; i < partesTexto.length; i++) {
+        const parte = partesTexto[i];
+        if (parte.match(/^([0-9]+\/|[a-zA-Z]+\/)$/)) {
+            // Es una nota, tomar el siguiente elemento como contenido
+            const contenidoNota = partesTexto[i + 1] || '';
             lineasNotas.push({
-                nota: matchNota[1],
-                texto: matchNota[2]
+                nota: parte,
+                texto: contenidoNota.trim()
             });
-        } else {
-            lineasFuente.push(linea);
+            i++; // Saltar el contenido ya procesado
+        } else if (parte.trim()) {
+            textoFuente += parte + ' ';
         }
-    });
+    }
 
     // Construir resultado
     let resultado = '';
 
     // Agregar fuente principal
-    if (lineasFuente.length > 0) {
-        resultado += lineasFuente.map(l => escaparLatex(l)).join('\n');
+    if (textoFuente.trim()) {
+        resultado += escaparLatex(textoFuente.trim());
     }
 
     // Agregar notas como lista si existen
     if (lineasNotas.length > 0) {
         resultado += '\n\n{\\fontsize{9pt}{11pt}\\selectfont\n';
-        // Evitar opciones en itemize: con latex-lab/testphase puede causar
-        // "Package block Error: Some keys specified on the itemize environment are unknown".
         resultado += '\\begin{itemize}\n';
 
         lineasNotas.forEach(item => {
@@ -886,13 +1137,15 @@ function generarTabla(tabla, ss) {
                 const resultado = procesarDatosArray(datosTabla, titulo);
                 esLarga = resultado.tipo === 'longtable';
                 if (esLarga) {
+                    // Para tablas largas: usar tabladoradoLargo (sin caption, va en longtable)
                     texInicio = `\\begin{tabladoradoLargo}\n`;
                     texFin = `\\end{tabladoradoLargo}\n`;
                 } else {
-                    texInicio = `\\begin{tabladorado}\n`;
+                    // Para tablas cortas: usar tablaguinda (con caption en el entorno table)
+                    texInicio = `\\begin{tablaguinda}\n`;
                     texInicio += `  \\caption{${escaparLatex(titulo)}}\n`;
                     texInicio += `  \\label{tab:${generarLabel(titulo)}}\n`;
-                    texFin = `\\end{tabladorado}\n`;
+                    texFin = `\\end{tablaguinda}\n`;
                 }
                 texInicio += resultado.contenido;
             } else {
@@ -913,8 +1166,9 @@ function generarTabla(tabla, ss) {
     }
 
     if (!texInicio) {
-        texInicio = `\\begin{tabladorado}\n  \\caption{${escaparLatex(titulo)}}\n  \\label{tab:${generarLabel(titulo)}}\n`;
-        texFin = `\\end{tabladorado}\n`;
+        // Fallback: usar tablaguinda para tablas simples
+        texInicio = `\\begin{tablaguinda}\n  \\caption{${escaparLatex(titulo)}}\n  \\label{tab:${generarLabel(titulo)}}\n`;
+        texFin = `\\end{tablaguinda}\n`;
     }
     if (tex === '') {
         tex = texInicio + texFin;
@@ -932,29 +1186,33 @@ function generarTabla(tabla, ss) {
  * Procesa un array 2D de datos (desde Google Sheets) y genera tabla LaTeX
  * Si la tabla tiene muchas columnas, la divide automáticamente
  */
-function procesarDatosArray(datos, tituloTabla) {
+function procesarDatosArray(datos, tituloTabla, forzarLongtable = false) {
     if (!datos || datos.length === 0) {
         return { tipo: 'tabular', contenido: `  \\begin{tabular}{lc}\n    % Sin datos\n  \\end{tabular}\n` };
     }
 
     const numCols = datos[0].length;
     const MAX_COLS_POR_TABLA = 6; // Máximo 6 columnas por tabla (incluyendo la primera)
-    const MAX_FILAS_COMPACTA = 20; // Umbral para usar tabular en tablas cortas
+    const MAX_FILAS_COMPACTA = 15; // Umbral para usar tabular en tablas cortas (reducido)
     const MAX_FILAS_POR_PARTE = 35; // Si hay demasiadas filas, dividir por partes
 
     // Si la tabla cabe en una sola parte
     if (numCols <= MAX_COLS_POR_TABLA) {
         const numFilas = Math.max(0, datos.length - 1);
-        if (numFilas <= MAX_FILAS_COMPACTA) {
+        
+        // Si es una tabla pequeña y no se fuerza longtable, usar tabular
+        if (numFilas <= MAX_FILAS_COMPACTA && !forzarLongtable) {
             return { tipo: 'tabular', contenido: generarTablaCompacta(datos) };
         }
+        
+        // Para tablas medianas o si se fuerza longtable
         if (numFilas > MAX_FILAS_POR_PARTE) {
             return { tipo: 'longtable', contenido: dividirTablaPorFilas(datos, MAX_FILAS_POR_PARTE, tituloTabla) };
         }
         return { tipo: 'longtable', contenido: generarTablaSimple(datos, tituloTabla) };
     }
 
-    // Dividir tabla en múltiples partes
+    // Dividir tabla en múltiples partes (siempre longtable)
     return { tipo: 'longtable', contenido: dividirTabla(datos, MAX_COLS_POR_TABLA, tituloTabla) };
 }
 
@@ -1009,9 +1267,33 @@ function generarTablaSimple(datos, tituloTabla) {
 }
 
 /**
- * Genera una tabla compacta usando longtable (para consistencia)
+ * Genera una tabla compacta usando tabular (para tablaguinda)
  */
 function generarTablaCompacta(datos) {
+    const numCols = datos[0].length;
+    // Para tablas compactas, usar anchos más pequeños: primera 3cm, resto 2cm cada una
+    const especCols = 'B{3cm}' + 'p{2cm}'.repeat(numCols - 1);
+    let tex = `  \\begin{tabular}{${especCols}}\n`;
+    tex += `    \\toprule\n`;
+    // Encabezados con fondo dorado
+    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
+    tex += `    \\midrule\n`;
+
+    for (let i = 1; i < datos.length; i++) {
+        const celdas = procesarCeldasFila(datos[i]);
+        tex += `    ${celdas.join(' & ')} \\\\\n`;
+    }
+    
+    tex += `    \\bottomrule\n`;
+    tex += `  \\end{tabular}\n`;
+    return tex;
+}
+
+/**
+ * Genera una tabla compacta usando longtable (para tabladorado)
+ */
+function generarTablaCompactaLarga(datos) {
     const numCols = datos[0].length;
     // Para tablas compactas, usar anchos más pequeños: primera 3cm, resto 2cm cada una
     const especCols = 'B{3cm}' + 'p{2cm}'.repeat(numCols - 1);
@@ -1619,3 +1901,104 @@ function escaparTextoConEtiquetas(texto) {
     return str;
 }
 
+
+/**
+ * Función de prueba para validar la normalización de saltos
+ * Ejecutar desde el editor de Google Apps Script para verificar
+ */
+function probarNormalizacionSaltos() {
+    console.log('=== PRUEBAS DE NORMALIZACIÓN DE SALTOS ===');
+    
+    // Caso 1: Salto al inicio (problemático)
+    const caso1 = '\nObjetivo: detectar errores...';
+    const resultado1 = normalizarSaltosLatex(caso1);
+    console.log('Caso 1 (salto inicial):');
+    console.log('Entrada:', JSON.stringify(caso1));
+    console.log('Salida:', JSON.stringify(resultado1));
+    console.log('✓ No inicia con \\\\:', !resultado1.startsWith('\\\\'));
+    
+    // Caso 2: Múltiples saltos
+    const caso2 = 'Primera línea\\n\\nSegunda línea\\nTercera línea';
+    const resultado2 = normalizarSaltosLatex(caso2);
+    console.log('\nCaso 2 (múltiples saltos):');
+    console.log('Entrada:', JSON.stringify(caso2));
+    console.log('Salida:', JSON.stringify(resultado2));
+    
+    // Caso 3: Recuadro con contenido multilínea
+    const caso3 = '[[recuadro:Título]]\\nPrimera línea\\nSegunda línea\\n\\nNuevo párrafo[[/recuadro]]';
+    const resultado3 = procesarConEtiquetas(caso3);
+    console.log('\nCaso 3 (recuadro multilínea):');
+    console.log('Entrada:', JSON.stringify(caso3));
+    console.log('Salida:', JSON.stringify(resultado3));
+    console.log('✓ Contiene \\begin{recuadro}:', resultado3.includes('\\begin{recuadro}'));
+    console.log('✓ No contiene [[recuadro:', !resultado3.includes('[[recuadro:'));
+    
+    // Caso 4: Ecuación con texto
+    const caso4 = 'La fórmula es $E=mc^2$ donde\\nE es energía';
+    const resultado4 = procesarConEtiquetas(caso4);
+    console.log('\nCaso 4 (ecuación con salto):');
+    console.log('Entrada:', JSON.stringify(caso4));
+    console.log('Salida:', JSON.stringify(resultado4));
+    console.log('✓ Preserva ecuación:', resultado4.includes('$E=mc^2$'));
+    
+    console.log('\n=== PRUEBAS COMPLETADAS ===');
+    return 'Todas las pruebas ejecutadas. Revisa la consola para resultados.';
+}
+/**
+ * Función de prueba para validar las correcciones del script
+ * Ejecutar desde el editor de Google Apps Script para verificar
+ */
+function probarCorreccionesScript() {
+    console.log('=== PRUEBAS DE CORRECCIONES DEL SCRIPT ===');
+    
+    // Prueba 1: Footnote con caracteres especiales
+    console.log('\n1. Prueba de footnote con caracteres especiales:');
+    const textoFootnote = 'Nota con símbolos como % y & que deben escaparse.';
+    const footnoteCorregida = escaparFootnote(textoFootnote);
+    console.log('Entrada:', JSON.stringify(textoFootnote));
+    console.log('Salida:', JSON.stringify(footnoteCorregida));
+    console.log('✓ Contiene \\%:', footnoteCorregida.includes('\\%'));
+    console.log('✓ Contiene \\&:', footnoteCorregida.includes('\\&'));
+    
+    // Prueba 2: Procesamiento de etiqueta [[nota:...]]
+    console.log('\n2. Prueba de etiqueta [[nota:...]] con caracteres especiales:');
+    const textoConNota = 'Texto normal [[nota:Nota con % y & especiales]] más texto.';
+    const notaProcesada = procesarConEtiquetas(textoConNota);
+    console.log('Entrada:', JSON.stringify(textoConNota));
+    console.log('Salida:', JSON.stringify(notaProcesada));
+    console.log('✓ Contiene \\footnote:', notaProcesada.includes('\\footnote'));
+    console.log('✓ No contiene [[nota:', !notaProcesada.includes('[[nota:'));
+    console.log('✓ Caracteres escapados:', notaProcesada.includes('\\%') && notaProcesada.includes('\\&'));
+    
+    // Prueba 3: Normalización sin \par
+    console.log('\n3. Prueba de normalización sin \\par:');
+    const textoConSaltos = 'Primera línea\\n\\nSegunda línea\\nTercera línea';
+    const normalizado = normalizarSaltosLatex(textoConSaltos);
+    console.log('Entrada:', JSON.stringify(textoConSaltos));
+    console.log('Salida:', JSON.stringify(normalizado));
+    console.log('✓ NO contiene \\par:', !normalizado.includes('\\par'));
+    console.log('✓ Contiene doble salto:', normalizado.includes('\n\n'));
+    
+    // Prueba 4: Validación de comandos mal escapados
+    console.log('\n4. Prueba de validación de comandos mal escapados:');
+    const textoConComandoMalEscapado = 'Texto con \\textbackslash{}par y \\textbackslash{}begin{test}';
+    const validado = validarYCorregirLatex(textoConComandoMalEscapado);
+    console.log('Entrada:', JSON.stringify(textoConComandoMalEscapado));
+    console.log('Salida:', JSON.stringify(validado));
+    console.log('✓ NO contiene \\textbackslash{}par:', !validado.includes('\\textbackslash{}par'));
+    console.log('✓ Contiene líneas en blanco:', validado.includes('\n\n'));
+    
+    // Prueba 5: Procesamiento completo sin comandos mal escapados
+    console.log('\n5. Prueba de procesamiento completo:');
+    const textoCompleto = 'Objetivo: detectar errores\\n\\nEste texto tiene párrafos separados.';
+    const procesadoCompleto = procesarConEtiquetas(textoCompleto);
+    console.log('Entrada:', JSON.stringify(textoCompleto));
+    console.log('Salida:', JSON.stringify(procesadoCompleto));
+    console.log('✓ NO contiene \\textbackslash{}par:', !procesadoCompleto.includes('\\textbackslash{}par'));
+    console.log('✓ NO contiene \\par literal:', !procesadoCompleto.includes('\\par'));
+    
+    console.log('\n=== PRUEBAS COMPLETADAS ===');
+    console.log('Revisa los resultados arriba para verificar que todas las correcciones funcionan.');
+    
+    return 'Pruebas ejecutadas. Revisa la consola para resultados detallados.';
+}

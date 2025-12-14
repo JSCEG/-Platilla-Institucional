@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>InformeEnergia25.bcf</file>
+      <file>test_normalizacion_saltos.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>InformeEnergia25.bbl</file>
+      <file>test_normalizacion_saltos.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>InformeEnergia25</infile>
+      <infile>test_normalizacion_saltos</infile>
     </cmdline>
     <input>
-      <file>InformeEnergia25.bcf</file>
+      <file>test_normalizacion_saltos.bcf</file>
     </input>
     <output>
-      <file>InformeEnergia25.bbl</file>
+      <file>test_normalizacion_saltos.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>InformeEnergia25.bbl</file>
+      <file>test_normalizacion_saltos.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>InformeEnergia25.bcf</file>
+      <file>test_normalizacion_saltos.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>

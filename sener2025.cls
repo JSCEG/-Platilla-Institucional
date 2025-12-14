@@ -8,15 +8,19 @@
 % ============================================================================
 % PAQUETES BÁSICOS
 % ============================================================================
+% babel se carga una sola vez con opciones completas
 \RequirePackage[spanish,mexico,es-tabla]{babel}
-% \\RequirePackage[utf8]{inputenc} % Not needed for XeLaTeX
-\RequirePackage[T1]{fontenc}
 \RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm,footskip=1.5cm]{geometry}
 \RequirePackage[final]{graphicx}
-% Configuración para evitar compresión agresiva de imágenes
-\ifdefined\XeTeXversion
-  \special{pdf:minorversion 7} % Usar PDF 1.7 (mejor soporte de transparencias y calidad)
-  \special{pdf:objcompresslevel 0} % Evitar compresión de objetos que pueda degradar calidad
+% Configuración PDF por motor
+\ifPDFTeX
+  \pdfminorversion=7
+  \pdfobjcompresslevel=0
+\else
+  \ifdefined\XeTeXversion
+    \special{pdf:minorversion 7}
+    \special{pdf:objcompresslevel 0}
+  \fi
 \fi
 \RequirePackage{float} % Para usar [H] en figuras y tablas
 \RequirePackage[table]{xcolor}
@@ -38,11 +42,21 @@
 % ============================================================================
 % TIPOGRAFÍAS INSTITUCIONALES
 % ============================================================================
-% Nota: Para usar las tipografías personalizadas, compila con XeLaTeX o LuaLaTeX
-% Si usas pdfLaTeX, estas líneas se ignorarán y usará las fuentes por defecto
+% Carga de fuentes por motor LaTeX (no por existencia de fontspec)
 
-\IfFileExists{fontspec.sty}{
+\RequirePackage{iftex}
+
+\ifPDFTeX
+  % pdfLaTeX: usar inputenc + fontenc + fuentes tradicionales
+  \RequirePackage[utf8]{inputenc}
+  \RequirePackage[T1]{fontenc}
+  \RequirePackage{lmodern}
+  \newcommand{\patriafont}{\sffamily\bfseries}
+  \newcommand{\notosansfont}{\sffamily}
+\else
+  % XeLaTeX/LuaLaTeX: usar fontspec
   \RequirePackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
   
   % Tipografía principal: Patria (para títulos y encabezados)
   \IfFileExists{tipografias/Patria_Regular.otf}{
@@ -84,20 +98,12 @@
     \setmainfont{Latin Modern Roman}
     \setsansfont{Latin Modern Sans}
   }
-}{
-  % Si no hay fontspec, usar fuentes por defecto
-  \newcommand{\patriafont}{\sffamily\bfseries}
-}
-
-
-% Fallback if fontspec or fonts are missing
-\ifdefined\patriafont
-\else
-  \newcommand{\patriafont}{\sffamily\bfseries}
+  
+  \newcommand{\notosansfont}{\sffamily}
 \fi
 
-% Comando adicional para asegurar compatibilidad
-\providecommand{\notosansfont}{\sffamily}
+
+% Fallback commands ya definidos arriba según el motor
 
 % ============================================================================
 % PAQUETES DE ACCESIBILIDAD PDF/UA
@@ -181,7 +187,7 @@
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
 \RequirePackage[flushmargin]{footmisc}
-\RequirePackage[spanish]{babel}
+% babel ya cargado arriba, solo aplicamos decimalpoint
 \decimalpoint
 
 % Definición de tamaño de fuente 10.5pt para tablas y glosario
@@ -1226,43 +1232,16 @@
 
 % Macro de fuente de gráfico/tabla
 % - Reduce espacio vertical
-% - Agrega punto final SOLO si falta (evita duplicados)
-\ExplSyntaxOn
-\cs_new_protected:Npn \sener_fuente_autopunctuate:n #1
-  {
-    \csname tl_set:Nn\endcsname \l_tmpa_tl { #1 }
-    \csname tl_trim_spaces:N\endcsname \l_tmpa_tl
-    \csname tl_if_empty:TF\endcsname \l_tmpa_tl
-      { }
-      {
-        \csname tl_use:N\endcsname \l_tmpa_tl
-
-        % Detecta si el texto (ya recortado) termina en puntuación.
-        % También cubre el caso común \textit{... .} donde el último token es '}'
-        % pero la puntuación está dentro del grupo.
-        \csname tl_set:Nx\endcsname \l_tmpb_tl
-          { \csname tl_to_str:N\endcsname \l_tmpa_tl }
-        \csname tl_trim_spaces:N\endcsname \l_tmpb_tl
-        \regex_match:nnTF
-          { [.!?:;] \s* ( \x{7D}+ \s* )? $ }
-          { \l_tmpb_tl }
-          { }
-          { . }
-      }
-  }
-\ExplSyntaxOff
-
-% Wrapper LaTeX2e-safe (sin '_' ni ':')
-% (usa \csname para no depender de catcodes de expl3)
-\newcommand{\SENERfuenteAutopunctuate}[1]{%
-  \csname sener_fuente_autopunctuate:n\endcsname{#1}%
-}
+% - Imprime el contenido EXACTAMENTE una vez (evita duplicados)
+% Nota: se elimina la autopuntuación automática porque \fuente se usa con
+%       argumentos multi-párrafo (listas/notas), donde agregar '.' es incorrecto.
+\newcommand{\SENERfuenteAutopunctuate}[1]{#1}
 
 \newcommand{\fuente}[1]{%
   \par\addvspace{0pt}% menos espacio entre figura/tabla y fuente
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
 
-    \textbf{FUENTE:}~\SENERfuenteAutopunctuate{#1}%
+    {\bfseries FUENTE:}~\SENERfuenteAutopunctuate{#1}%
     \par}%
 }
 

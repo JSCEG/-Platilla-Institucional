@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>InformeEnergia25.bcf</file>
+      <file>test_pipeline_completo.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>InformeEnergia25.bbl</file>
+      <file>test_pipeline_completo.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>InformeEnergia25</infile>
+      <infile>test_pipeline_completo</infile>
     </cmdline>
     <input>
-      <file>InformeEnergia25.bcf</file>
+      <file>test_pipeline_completo.bcf</file>
     </input>
     <output>
-      <file>InformeEnergia25.bbl</file>
+      <file>test_pipeline_completo.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>InformeEnergia25.bbl</file>
+      <file>test_pipeline_completo.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>InformeEnergia25.bcf</file>
+      <file>test_pipeline_completo.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>

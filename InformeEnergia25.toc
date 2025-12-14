@@ -5,13 +5,13 @@
 \contentsline {subsubsection}{\numberline {2.1.1}Papel de las Energías renovables}{8}{subsubsection.2.1.1}%
 \contentsline {paragraph}{Papel de las Energías renovables Sub}{8}{paragraph*.5}%
 \contentsline {section}{\numberline {3}Consumo final de energía por sector}{8}{section.3}%
-\contentsline {section}{\numberline {4}Emisiones de gases de efecto invernadero del sector energético}{14}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Medidas de mitigación y escenarios de transición}{15}{subsection.4.1}%
+\contentsline {section}{\numberline {4}Emisiones de gases de efecto invernadero del sector energético}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Medidas de mitigación y escenarios de transición}{14}{subsection.4.1}%
 \SENERAppendixTOCSetup 
-\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{17}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Modelo Econométrico}{17}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Ejemplo de Bloques}{17}{subsection.A.2}%
-\contentsline {section}{\numberline {Anexo B}Sistema de Citas}{19}{appendix.B}%
-\contentsline {section}{\numberline {Anexo C}123}{19}{appendix.C}%
-\contentsline {section}{Glosario}{19}{section*.44}%
-\contentsline {section}{Siglas y Acrónimos}{19}{section*.46}%
+\contentsline {section}{\numberline {Anexo A}Metodología de Cálculo}{16}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Modelo Econométrico}{16}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Ejemplo de Bloques}{16}{subsection.A.2}%
+\contentsline {section}{\numberline {Anexo B}Sistema de Citas}{18}{appendix.B}%
+\contentsline {section}{\numberline {Anexo C}123}{18}{appendix.C}%
+\contentsline {section}{Glosario}{18}{section*.28}%
+\contentsline {section}{Siglas y Acrónimos}{18}{section*.30}%

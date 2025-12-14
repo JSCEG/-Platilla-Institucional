@@ -1,16 +1,24 @@
-# Script de compilación y mejora para documentos LaTeX SENER
-# Versión mejorada con corrección de errores
+# Script de compilación SENER LaTeX - Versión robusta
+# Soporta múltiples motores: XeLaTeX, LuaLaTeX, pdfLaTeX
 
 param(
-    [string]$archivo = "InformeEnergia25"
+    [string]$archivo = "InformeEnergia25",
+    [string]$motor = "xelatex"  # xelatex, lualatex, pdflatex
 )
 
-Write-Host "=== COMPILACIÓN Y MEJORA DE DOCUMENTO LATEX SENER ===" -ForegroundColor Green
+Write-Host "=== COMPILACIÓN ROBUSTA DOCUMENTO LATEX SENER ===" -ForegroundColor Green
 Write-Host "Archivo: $archivo.tex" -ForegroundColor Yellow
+Write-Host "Motor: $motor" -ForegroundColor Yellow
+
+# Verificar que existe el archivo
+if (-not (Test-Path "$archivo.tex")) {
+    Write-Host "ERROR: No se encuentra el archivo $archivo.tex" -ForegroundColor Red
+    exit 1
+}
 
 # Limpiar archivos auxiliares previos
 Write-Host "`n1. Limpiando archivos auxiliares..." -ForegroundColor Cyan
-$extensiones = @("aux", "bbl", "bcf", "blg", "fdb_latexmk", "fls", "lof", "log", "lot", "run.xml", "synctex.gz", "toc")
+$extensiones = @("aux", "bbl", "bcf", "blg", "fdb_latexmk", "fls", "lof", "log", "lot", "run.xml", "synctex.gz", "toc", "out", "nav", "snm")
 foreach ($ext in $extensiones) {
     if (Test-Path "$archivo.$ext") {
         Remove-Item "$archivo.$ext" -Force
@@ -18,47 +26,80 @@ foreach ($ext in $extensiones) {
     }
 }
 
+# Función para ejecutar compilación
+function Compilar-LaTeX {
+    param([string]$paso, [string]$comando)
+    
+    Write-Host "`n$paso..." -ForegroundColor Cyan
+    $resultado = & $comando -interaction=nonstopmode "$archivo.tex" 2>&1
+    
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "   ERROR en $paso" -ForegroundColor Red
+        # Mostrar solo las líneas de error más relevantes
+        $lineasError = $resultado | Where-Object { $_ -match "Error|Fatal|Emergency" } | Select-Object -First 10
+        if ($lineasError) {
+            Write-Host "   Errores encontrados:" -ForegroundColor Red
+            $lineasError | ForEach-Object { Write-Host "     $_" -ForegroundColor Red }
+        }
+        return $false
+    } else {
+        Write-Host "   $paso exitosa" -ForegroundColor Green
+        return $true
+    }
+}
+
 # Primera compilación
-Write-Host "`n2. Primera compilación (XeLaTeX)..." -ForegroundColor Cyan
-$resultado1 = & xelatex -interaction=nonstopmode "$archivo.tex" 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "   ERROR en primera compilación" -ForegroundColor Red
-    Write-Host $resultado1 -ForegroundColor Red
+if (-not (Compilar-LaTeX "2. Primera compilación ($motor)" $motor)) {
+    Write-Host "`nFALLO: Revisa el archivo .log para más detalles" -ForegroundColor Red
     exit 1
-} else {
-    Write-Host "   Primera compilación exitosa" -ForegroundColor Green
 }
 
-# Procesamiento de bibliografía
-Write-Host "`n3. Procesando bibliografía (Biber)..." -ForegroundColor Cyan
-$resultado2 = & biber $archivo 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "   WARNING en procesamiento de bibliografía" -ForegroundColor Yellow
-    Write-Host $resultado2 -ForegroundColor Yellow
-} else {
-    Write-Host "   Bibliografía procesada correctamente" -ForegroundColor Green
+# Verificar si hay bibliografía
+$tieneBibliografia = $false
+if (Test-Path "$archivo.bcf") {
+    $contenidoBcf = Get-Content "$archivo.bcf" -Raw
+    if ($contenidoBcf -match "bibdata") {
+        $tieneBibliografia = $true
+    }
 }
 
-# Segunda compilación
-Write-Host "`n4. Segunda compilación (XeLaTeX)..." -ForegroundColor Cyan
-$resultado3 = & xelatex -interaction=nonstopmode "$archivo.tex" 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "   ERROR en segunda compilación" -ForegroundColor Red
-    Write-Host $resultado3 -ForegroundColor Red
-    exit 1
+# Procesamiento de bibliografía si es necesario
+if ($tieneBibliografia) {
+    Write-Host "`n3. Procesando bibliografía (Biber)..." -ForegroundColor Cyan
+    $resultado2 = & biber $archivo 2>&1
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host "   WARNING en procesamiento de bibliografía" -ForegroundColor Yellow
+        Write-Host "   Continuando sin bibliografía..." -ForegroundColor Yellow
+    } else {
+        Write-Host "   Bibliografía procesada correctamente" -ForegroundColor Green
+    }
 } else {
-    Write-Host "   Segunda compilación exitosa" -ForegroundColor Green
+    Write-Host "`n3. Sin bibliografía detectada, omitiendo biber..." -ForegroundColor Gray
 }
 
-# Tercera compilación (para referencias cruzadas)
-Write-Host "`n5. Tercera compilación final (XeLaTeX)..." -ForegroundColor Cyan
-$resultado4 = & xelatex -interaction=nonstopmode "$archivo.tex" 2>&1
-if ($LASTEXITCODE -ne 0) {
-    Write-Host "   ERROR en compilación final" -ForegroundColor Red
-    Write-Host $resultado4 -ForegroundColor Red
+# Segunda compilación (para referencias cruzadas y TOC)
+if (-not (Compilar-LaTeX "4. Segunda compilación ($motor)" $motor)) {
+    Write-Host "`nFALLO: Revisa el archivo .log para más detalles" -ForegroundColor Red
     exit 1
+}
+
+# Verificar si necesita tercera compilación (referencias cruzadas pendientes)
+$necesitaTercera = $false
+if (Test-Path "$archivo.log") {
+    $contenidoLog = Get-Content "$archivo.log" -Raw
+    if ($contenidoLog -match "Rerun to get cross-references right|There were undefined references") {
+        $necesitaTercera = $true
+    }
+}
+
+# Tercera compilación si es necesaria
+if ($necesitaTercera) {
+    if (-not (Compilar-LaTeX "5. Tercera compilación final ($motor)" $motor)) {
+        Write-Host "`nFALLO: Revisa el archivo .log para más detalles" -ForegroundColor Red
+        exit 1
+    }
 } else {
-    Write-Host "   Compilación final exitosa" -ForegroundColor Green
+    Write-Host "`n5. Tercera compilación no necesaria" -ForegroundColor Gray
 }
 
 # Verificar que se generó el PDF
