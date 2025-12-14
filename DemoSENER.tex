@@ -14,7 +14,7 @@
   pdfauthor={Equipo de Planeación (demo)},
   pdfsubject={Ejemplos de secciones, etiquetas y bloques (para pruebas del generador)},
   pdfkeywords={demo; plantilla; secciones; etiquetas; tablas; figuras},
-  pdfcreationdate={D:20251213222708},
+  pdfcreationdate={D:20251214105720},
   pdfversion={1}
 }
 
@@ -84,7 +84,6 @@ Lista simple (una línea = un item):
   \item Segundo punto con \textbf{\textcolor{gobmxGuinda}{énfasis guinda}}
   \item Tercer punto con referencia a tabla/figura (opcional): [[tabla:capacidad]] y [[figura:capacidad]]
 \end{itemize}
-
 Prueba de saltos como texto literal: escribe
 
  en una celda y asegúrate que el pipeline lo convierta en salto real (esto es un test).
@@ -99,7 +98,6 @@ Puedes mezclar etiquetas dentro de texto:
   \item Citas: \cite{demo_sener2025}
   \item Math inline: $E = mc^2$
 \end{itemize}
-
 Recomendación: usa estas etiquetas inline SOLO para fragmentos cortos. Para cajas completas usa bloques.
 
 
@@ -114,7 +112,6 @@ También acepta listas:
   \item Item A
   \item Item B con \textbf{\textcolor{gobmxDorado}{resaltado}}
 \end{itemize}
-
 \end{recuadro}
 
 \begin{ejemplo}[title={Ejemplo de cálculo}]
@@ -143,7 +140,6 @@ Esta sección está pensada para probar que el generador inserta automáticament
   \item 1 figura asociada con SeccionOrden=2.0 (ver hoja 'Figuras').
   \item 2 tablas asociadas con SeccionOrden=2.0 (ver hoja 'Tablas' y rangos en 'Datos Tablas').
 \end{itemize}
-
 Si quieres referenciar explícitamente en texto, puedes poner comentarios:
 % Referencia a figura: Figura 2.1
 % Referencia a tabla: Tabla 2.1
@@ -156,12 +152,13 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
   \caption{Evolución de la capacidad instalada por tecnología, 2020–2025s}
   \label{fig:evolucion_de_la_capacidad_inst}
 \end{figure}
+\vspace{-4pt}
 \fuente{SENER,2025}
 
-\begin{tablaguinda}
+\begin{tabladoradoCorto}
   \caption{Tabla demo (corta): Capacidad por tecnología}
   \label{tab:tabla_demo__corta___capacidad_}
-  \begin{tabular}{B{3cm}p{2cm}p{2cm}p{2cm}}
+  \begin{tabular}{H{3cm}G{2cm}G{2cm}G{2cm}}
     \toprule
     \rowcolor{gobmxDorado} \encabezadodorado{\textbf{Tecnología}} & \encabezadodorado{Capacidad (MW)} & \encabezadodorado{Participación (\%)} & \encabezadodorado{Nota} \\
     \midrule
@@ -172,7 +169,8 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
     \textbf{Otras} & 6,000 & 8.9 & Ejemplo \\
     \bottomrule
   \end{tabular}
-\end{tablaguinda}
+\end{tabladoradoCorto}
+\vspace{-4pt}
 \fuente{Elaboración propia (demo)}
 
 \begin{tabladoradoLargo}
@@ -224,6 +222,7 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
     2,025 & 1,940 & 2,280 & 1,160 & 2,260 & 7,640 \\
   \end{longtable}
 \end{tabladoradoLargo}
+\vspace{-4pt}
 \fuente{Elaboración propia (demo) Nota: tabla larga para probar longtable}
 
 
@@ -239,7 +238,6 @@ Ahora una lista:
   \item Línea 1
   \item Línea 2
 \end{itemize}
-
 Fin.
 \begin{figure}[H]
   {\centering
@@ -250,6 +248,7 @@ Fin.
   \caption{Distribución del consumo final de energía por sector, 2024}
   \label{fig:distribucion_del_consumo_final}
 \end{figure}
+\vspace{-4pt}
 \fuente{Elaboración propia con datos de CENACE y CRE
 
 {\fontsize{9pt}{11pt}\selectfont
@@ -273,6 +272,7 @@ Este nivel prueba el mapeo a \textbackslash\{\}paragraph\{...\} en el .tex.
   \caption{Figura demo: Evolución de capacidad instalada (placeholder)}
   \label{fig:figura_demo__evolucion_de_capa}
 \end{figure}
+\vspace{-4pt}
 \fuente{Elaboración propia
 
 {\fontsize{9pt}{11pt}\selectfont

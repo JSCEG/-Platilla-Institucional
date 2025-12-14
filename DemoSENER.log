@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  13 DEC 2025 22:31
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  14 DEC 2025 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1993,7 +1993,15 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'DemoSENER.bbl' found.
-(DemoSENER.bbl)
+(DemoSENER.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                )
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 32.
 Package biblatex Info: Reference segment=0 on input line 32.
 Package hyperref Info: Link coloring OFF on input line 32.
@@ -2269,7 +2277,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 10.95096pt on input line 93.
+(Font)              scaled to size 10.95096pt on input line 92.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2298,7 +2306,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
 
-LaTeX Warning: Citation ')' on page 7 undefined on input line 99.
+LaTeX Warning: Citation ')' on page 7 undefined on input line 98.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -2313,65 +2321,60 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/graficos/figura_2_1.png Graphic file (type bmp)
 <img/graficos/figura_2_1.png>
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 12.09027pt on input line 159.
+(Font)              scaled to size 12.09027pt on input line 156.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 9.0677pt on input line 159.
+(Font)              scaled to size 9.0677pt on input line 156.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 159.
+(Font)              using `TU/NotoSans(1)/m/n' instead on input line 156.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 162.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 164.
+(Font)              scaled to size 10.5pt on input line 159.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 161.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 164.
+(Font)              scaled to size 7.34996pt on input line 161.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 164.
+(Font)              scaled to size 5.25pt on input line 161.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 164.
+(Font)              size <10.95> substituted on input line 161.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 164.
+(Font)              size <10.95> substituted on input line 161.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 164.
+(Font)              size <10.95> substituted on input line 161.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 164.
+(Font)              size <10.95> substituted on input line 161.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 166.
+(Font)              scaled to size 10.5pt on input line 163.
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--166
-[]|[]\TU/NotoSans(0)/b/n/10.5 Capacidad
+Overfull \hbox (12.1425pt too wide) in paragraph at lines 163--163
+[]|[]\TU/NotoSans(0)/b/n/10.5 Participación 
  []
 
 
-Overfull \hbox (12.1425pt too wide) in paragraph at lines 166--166
-[]|[]\TU/NotoSans(0)/b/n/10.5 Participación
- []
-
-
-Underfull \vbox (badness 5388) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [9]
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/b/n' will be
-(Font)              scaled to size 9.0677pt on input line 176.
+(Font)              scaled to size 9.0677pt on input line 174.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 179.
+(Font)              scaled to size 9.5pt on input line 177.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 180.
+(Font)              scaled to size 10.95pt on input line 178.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 9.5pt on input line 182.
+(Font)              scaled to size 9.5pt on input line 180.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 186.
+(Font)              scaled to size 10.95pt on input line 184.
 
 ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
@@ -2490,23 +2493,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                DemoSENER
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'DemoSENER.run.xml'.
 \openout1 = `DemoSENER.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51073 strings out of 402987
- 1090933 string characters out of 5452871
- 2133515 words of memory out of 5000000
- 79069 multiletter control sequences out of 15000+600000
+ 51086 strings out of 402987
+ 1091121 string characters out of 5452871
+ 2131823 words of memory out of 5000000
+ 79082 multiletter control sequences out of 15000+600000
  650581 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1188b,5586s stack positions out of 10000i,1000n,20000p,200000b,200000s

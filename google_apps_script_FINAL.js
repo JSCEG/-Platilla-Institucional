@@ -431,7 +431,8 @@ function generarComandoSeccion(nivel, titulo, anexosIniciados = false) {
 }
 
 /**
- * Procesa el contenido de una sección (listas, bloques, etc.)
+ * FIX: Procesa el contenido de una sección (listas, bloques, etc.)
+ * Corregido para no romper listas con líneas en blanco
  */
 function procesarContenido(contenidoRaw) {
     const lineas = contenidoRaw.split('\n');
@@ -485,28 +486,54 @@ function procesarContenido(contenidoRaw) {
             }
             resultado += `  \\item ${procesarConEtiquetas(esItemLista[1])}\n`;
         } else {
-            if (enLista) {
-                resultado += '\\end{itemize}\n';
-                enLista = false;
+            // FIX: Si estamos en lista y encontramos línea vacía, NO cerrar la lista
+            // Solo ignorar la línea vacía para mantener la lista abierta
+            if (enLista && lineaTrim === '') {
+                // FIX: Línea vacía dentro de lista - ignorar sin cerrar
+                continue;
+            }
+            
+            // FIX: Solo cerrar lista si encontramos contenido real (no vacío)
+            if (enLista && lineaTrim !== '') {
+                // Verificar si las siguientes líneas contienen más items
+                let hayMasItems = false;
+                for (let j = i + 1; j < lineas.length; j++) {
+                    const siguienteLinea = lineas[j].trim();
+                    if (siguienteLinea === '') continue; // Saltar líneas vacías
+                    if (siguienteLinea.match(/^[-*•]\s+/)) {
+                        hayMasItems = true;
+                        break;
+                    } else {
+                        break; // Encontramos contenido no-item
+                    }
+                }
+                
+                // Solo cerrar si no hay más items
+                if (!hayMasItems) {
+                    resultado += '\\end{itemize}\n';
+                    enLista = false;
+                }
             }
 
-            // Procesar línea normal
-            if (lineaTrim.startsWith('[[tabla:')) {
-                // Referencia a tabla inline (opcional, las tablas se insertan automáticamente)
-                const match = lineaTrim.match(/\[\[tabla:(.+?)\]\]/);
-                if (match) {
-                    resultado += `% Referencia a tabla: ${match[1]}\n`;
+            // Procesar línea normal solo si no estamos en lista
+            if (!enLista) {
+                if (lineaTrim.startsWith('[[tabla:')) {
+                    // Referencia a tabla inline (opcional, las tablas se insertan automáticamente)
+                    const match = lineaTrim.match(/\[\[tabla:(.+?)\]\]/);
+                    if (match) {
+                        resultado += `% Referencia a tabla: ${match[1]}\n`;
+                    }
+                } else if (lineaTrim.startsWith('[[figura:')) {
+                    // Referencia a figura inline (opcional, las figuras se insertan automáticamente)
+                    const match = lineaTrim.match(/\[\[figura:(.+?)\]\]/);
+                    if (match) {
+                        resultado += `% Referencia a figura: ${match[1]}\n`;
+                    }
+                } else if (lineaTrim !== '') {
+                    resultado += `${procesarConEtiquetas(linea)}\n`;
+                } else {
+                    resultado += '\n';
                 }
-            } else if (lineaTrim.startsWith('[[figura:')) {
-                // Referencia a figura inline (opcional, las figuras se insertan automáticamente)
-                const match = lineaTrim.match(/\[\[figura:(.+?)\]\]/);
-                if (match) {
-                    resultado += `% Referencia a figura: ${match[1]}\n`;
-                }
-            } else if (lineaTrim !== '') {
-                resultado += `${procesarConEtiquetas(linea)}\n`;
-            } else {
-                resultado += '\n';
             }
         }
     }
@@ -1125,6 +1152,8 @@ function generarFigura(figura) {
     tex += `\\end{figure}\n`;
 
     if (fuente) {
+        // FIX: Reducir espacio antes de fuente para pegarla más a la figura
+        tex += `\\vspace{-4pt}\n`;
         tex += `\\fuente{${procesarTextoFuente(fuente)}}\n`;
     }
 
@@ -1192,11 +1221,11 @@ function generarTabla(tabla, ss) {
                     texInicio = `\\begin{tabladoradoLargo}\n`;
                     texFin = `\\end{tabladoradoLargo}\n`;
                 } else {
-                    // Para tablas cortas: usar tablaguinda (con caption en el entorno table)
-                    texInicio = `\\begin{tablaguinda}\n`;
+                    // FIX: Para tablas cortas: usar tabladoradoCorto (mismo estilo que longtable)
+                    texInicio = `\\begin{tabladoradoCorto}\n`;
                     texInicio += `  \\caption{${escaparLatex(titulo)}}\n`;
                     texInicio += `  \\label{tab:${generarLabel(titulo)}}\n`;
-                    texFin = `\\end{tablaguinda}\n`;
+                    texFin = `\\end{tabladoradoCorto}\n`;
                 }
                 texInicio += resultado.contenido;
             } else {
@@ -1221,15 +1250,17 @@ function generarTabla(tabla, ss) {
     }
 
     if (!texInicio) {
-        // Fallback: usar tablaguinda para tablas simples
-        texInicio = `\\begin{tablaguinda}\n  \\caption{${escaparLatex(titulo)}}\n  \\label{tab:${generarLabel(titulo)}}\n`;
-        texFin = `\\end{tablaguinda}\n`;
+        // FIX: Fallback: usar tabladoradoCorto para tablas simples (estilo consistente)
+        texInicio = `\\begin{tabladoradoCorto}\n  \\caption{${escaparLatex(titulo)}}\n  \\label{tab:${generarLabel(titulo)}}\n`;
+        texFin = `\\end{tabladoradoCorto}\n`;
     }
     if (tex === '') {
         tex = texInicio + texFin;
     }
 
     if (fuente) {
+        // FIX: Reducir espacio antes de fuente para pegarla más a la tabla
+        tex += `\\vspace{-4pt}\n`;
         tex += `\\fuente{${procesarTextoFuente(fuente)}}\n`;
     }
 
@@ -1322,12 +1353,13 @@ function generarTablaSimple(datos, tituloTabla) {
 }
 
 /**
- * Genera una tabla compacta usando tabular (para tablaguinda)
+ * FIX: Genera una tabla compacta usando tabular (para tabladoradoCorto)
+ * Ahora con estilo dorado + texto gris + alineación izquierda
  */
 function generarTablaCompacta(datos) {
     const numCols = datos[0].length;
-    // Para tablas compactas, usar anchos más pequeños: primera 3cm, resto 2cm cada una
-    const especCols = 'B{3cm}' + 'p{2cm}'.repeat(numCols - 1);
+    // FIX: Usar tipos de columna con texto gris y alineación izquierda
+    const especCols = 'H{3cm}' + ('G{2cm}'.repeat(numCols - 1));
     let tex = `  \\begin{tabular}{${especCols}}\n`;
     tex += `    \\toprule\n`;
     // Encabezados con fondo dorado

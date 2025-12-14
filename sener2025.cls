@@ -407,21 +407,26 @@
 \linespread{1.15}
 
 % ============================================================================
-% FIX: ESPACIADO DE FIGURAS, TABLAS Y FUENTES (reducido)
+% FIX: ESPACIADO DE FIGURAS, TABLAS Y FUENTES (más reducido)
 % ============================================================================
 
-% Espacios alrededor de floats (figuras/tablas)
-\setlength{\textfloatsep}{8pt plus 2pt minus 2pt}    % FIX: Reducido de 20pt
-\setlength{\intextsep}{6pt plus 2pt minus 2pt}       % FIX: Reducido de 12pt  
-\setlength{\floatsep}{8pt plus 2pt minus 2pt}        % FIX: Reducido de 12pt
+% FIX: Definir constantes para espaciado consistente
+\newcommand{\SenerFloatSep}{6pt}
+\newcommand{\SenerCaptionSkip}{2pt}
+\newcommand{\SenerTableSep}{4pt}
 
-% Espacios de captions
-\setlength{\abovecaptionskip}{4pt}                    % FIX: Reducido de 10pt
-\setlength{\belowcaptionskip}{2pt}                    % FIX: Reducido de 0pt
+% Espacios alrededor de floats (figuras/tablas) - más compactos
+\setlength{\textfloatsep}{\SenerFloatSep plus 1pt minus 1pt}    % FIX: Más reducido
+\setlength{\intextsep}{\SenerFloatSep plus 1pt minus 1pt}       % FIX: Más reducido  
+\setlength{\floatsep}{\SenerFloatSep plus 1pt minus 1pt}        % FIX: Más reducido
 
-% Espacios de longtable (antes/después)
-\setlength\LTpre{6pt}                                 % FIX: Reducido de 12pt
-\setlength\LTpost{6pt}                                % FIX: Reducido de 12pt
+% Espacios de captions - mínimos
+\setlength{\abovecaptionskip}{\SenerCaptionSkip}                 % FIX: Mínimo
+\setlength{\belowcaptionskip}{\SenerCaptionSkip}                 % FIX: Mínimo
+
+% Espacios de longtable (antes/después) - compactos
+\setlength\LTpre{\SenerTableSep}                                 % FIX: Más compacto
+\setlength\LTpost{\SenerTableSep}                                % FIX: Más compacto
 
 % ============================================================================
 % ESTILOS DE TÍTULOS Y SECCIONES  (A–E de la plantilla Word)
@@ -462,14 +467,31 @@
 % ============================================================================
 % COMANDO PARA ANEXOS
 % ============================================================================
-% Comando para iniciar la sección de anexos con numeración alfabética
+
+% FIX: Flag para detectar si estamos en modo anexos
+\makeatletter
+\newif\ifsener@appendix
+\sener@appendixfalse
+\makeatother
+
+% FIX: Comando para iniciar la sección de anexos SIN duplicación en TOC
+\makeatletter
 \newcommand{\anexos}{%
   \clearpage
   \appendix
-  % Mostrar "Anexo A", "Anexo B", ...
-  \renewcommand{\thesection}{Anexo \Alph{section}}%
-  % Sub-secciones como "A.1", "A.2" (sin el prefijo "Anexo")
+  \sener@appendixtrue
+  
+  % FIX: Numeración interna SOLO alfabética (sin "Anexo" en \thesection)
+  % Esto evita duplicación en TOC: será "A" no "Anexo A Anexo A"
+  \setcounter{section}{0}%
+  \renewcommand{\thesection}{\Alph{section}}%
+  % Sub-secciones como "A.1", "A.2"
   \renewcommand{\thesubsection}{\Alph{section}.\arabic{subsection}}%
+
+  % FIX: Cambiar titleformat SOLO para anexos (mostrar "Anexo A" visualmente)
+  \titleformat{\section}
+    {\patriafont\bfseries\fontsize{17pt}{20pt}\selectfont\color{gobmxGuinda}}
+    {Anexo~\thesection}{0.3em}{}
 
   % Ajuste del índice (TOC): el ancho por defecto no alcanza para "Anexo A"
   % 1) Aplicar en esta corrida (por si el TOC se imprime después de anexos)
@@ -478,6 +500,7 @@
   %    este formato justo antes de listar los anexos.
   \addtocontents{toc}{\protect\SENERAppendixTOCSetup}%
 }
+\makeatother
 
 % ============================================================================
 % LISTAS PERSONALIZADAS (alineado a la plantilla Word)
@@ -533,6 +556,7 @@
 % ESTILOS DE TABLAS PROFESIONALES
 % ============================================================================
 
+% FIX: Definir tipos de columna después de cargar array y definir colores
 % Tipos de columnas personalizadas
 \newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
@@ -542,6 +566,10 @@
 \newcolumntype{B}[1]{>{\raggedright\arraybackslash\bfseries}p{#1}}
 \newcolumntype{M}[1]{>{\centering\arraybackslash\bfseries}p{#1}}
 \newcolumntype{N}[1]{>{\raggedleft\arraybackslash\bfseries}p{#1}}
+
+% FIX: Nuevos tipos de columna para tablas con texto gris y alineación izquierda
+\newcolumntype{G}[1]{>{\raggedright\arraybackslash\color{gobmxGris}}p{#1}}
+\newcolumntype{H}[1]{>{\raggedright\arraybackslash\bfseries\color{gobmxGris}}p{#1}}
 
 % ============================================================================
 % ESTILOS DE ENCABEZADOS DE TABLA
@@ -577,7 +605,21 @@
 % TABLAS CON ESTILOS PREDEFINIDOS
 % ============================================================================
 
-% Tabla estilo guinda (predeterminada)
+% FIX: Tabla estilo dorado corto (mismo look que longtable)
+\newenvironment{tabladoradoCorto}[1][]{
+  \rowcolors{2}{gobmxDorado!12}{white}
+  \begin{table}[H]
+  \raggedright % FIX: Alineación izquierda como longtable
+  \renewcommand{\arraystretch}{1.2}
+  \sffamily\notosanssmall
+  \captionsetup{justification=raggedright,singlelinecheck=false}
+  \color{gobmxGris} % FIX: Texto gris en cuerpo como longtable
+  #1
+}{
+  \end{table}
+}
+
+% Tabla estilo guinda (predeterminada) - mantenida para compatibilidad
 \newenvironment{tablaguinda}[1][]{
   \rowcolors{2}{gobmxGuinda!10}{white}
   \begin{table}[H]
@@ -1257,20 +1299,19 @@
   \newcommand{\notosanslight}{\sffamily}
 }
 
-% FIX: Macro de fuente de gráfico/tabla (espaciado mínimo)
+% FIX: Macro de fuente de gráfico/tabla (pegado a figura/tabla)
 % - Elimina espacio vertical excesivo
+% - Se pega directamente debajo de figura/tabla
 % - Imprime el contenido EXACTAMENTE una vez (evita duplicados)
-% Nota: se elimina la autopuntuación automática porque \fuente se usa con
-%       argumentos multi-párrafo (listas/notas), donde agregar '.' es incorrecto.
 \newcommand{\SENERfuenteAutopunctuate}[1]{#1}
 
 \newcommand{\fuente}[1]{%
-  \vspace{-2pt}% FIX: Espacio negativo para pegar más a figura/tabla
+  \vspace{-6pt}% FIX: Espacio negativo fijo para pegar más
   \par\noindent% FIX: Sin indentación
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont%
     {\bfseries FUENTE:}~\SENERfuenteAutopunctuate{#1}%
   }%
-  \par\vspace{2pt}% FIX: Espacio mínimo después
+  \par\vspace{\SenerCaptionSkip}% FIX: Espacio mínimo consistente después
 }
 
 % Entrada de glosario
