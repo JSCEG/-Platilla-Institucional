@@ -1,7 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 19:01
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  12 DEC 2025 20:16
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./test_documento.tex
 (test_documento.tex
@@ -2160,7 +2159,7 @@ LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 10.5pt on input line 80.
 
 
-test_documento.tex:80: Package caption Error: \caption outside float.
+! Package caption Error: \caption outside float.
 
 See the caption package documentation for explanation.
 Type  H <return>  for immediate help.
@@ -2174,208 +2173,13 @@ section about errors.
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 82.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 82.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 82.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 82.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 82.
-
-
-LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 82.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 82.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 84.
-test_documento.tex:92: Undefined control sequence.
-\fuente ...11pt}\selectfont extbf{FUENTE:}~\sener 
-                                                  _fuente_autopunctuate:n{#1...
-l.92 ...boración propia para pruebas del template}
-                                                  
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-test_documento.tex:92: Missing $ inserted.
-<inserted text> 
-                $
-l.92 ...boración propia para pruebas del template}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.0pt on input line 92.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 92.
-test_documento.tex:92: Argument of \__math_grab_dollar_delim:w has an extra }.
-<inserted text> 
-                \par 
-l.92 ...boración propia para pruebas del template}
-                                                  
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-_fuente_autopunctuate:n{Elaboración propia para pruebas del template\ETC.
-test_documento.tex:92: Paragraph ended before \__math_grab_dollar_delim:w was c
-omplete.
-<to be read again> 
-                   \par 
-l.92 ...boración propia para pruebas del template}
-                                                  
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-test_documento.tex:92: Missing $ inserted.
-<inserted text> 
-                $
-l.92 ...boración propia para pruebas del template}
-                                                  
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-File: img/graficos/figura_2_1.png Graphic file (type bmp)
-<img/graficos/figura_2_1.png>
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 99.
-test_documento.tex:102: Undefined control sequence.
-\fuente ...11pt}\selectfont extbf{FUENTE:}~\sener 
-                                                  _fuente_autopunctuate:n{#1...
-l.102 \fuente{Imagen de prueba del template}
-                                            
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-test_documento.tex:102: Missing $ inserted.
-<inserted text> 
-                $
-l.102 \fuente{Imagen de prueba del template}
-                                            
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-test_documento.tex:102: Argument of \__math_grab_dollar_delim:w has an extra }.
-<inserted text> 
-                \par 
-l.102 \fuente{Imagen de prueba del template}
-                                            
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-_fuente_autopunctuate:n{Imagen de prueba del template}\par 
-test_documento.tex:102: Paragraph ended before \__math_grab_dollar_delim:w was 
-complete.
-<to be read again> 
-                   \par 
-l.102 \fuente{Imagen de prueba del template}
-                                            
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-test_documento.tex:102: Missing $ inserted.
-<inserted text> 
-                $
-l.102 \fuente{Imagen de prueba del template}
-                                            
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 17.28pt on input line 107.
-
-Overfull \hbox (18.82668pt too wide) in paragraph at lines 107--107
- [] 
- []
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[6]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [7]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [8]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 159.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 159.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 159.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 159.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [9
-
-]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-File: img/contraportada.png Graphic file (type bmp)
-<img/contraportada.png>
- [10
-
-]
-
-Package caption Warning: Unused \captionsetup[table] on input line 234.
-See the caption package documentation for explanation.
-
-
-Package caption Warning: Unused \captionsetup[longtable] on input line 280.
-See the caption package documentation for explanation.
-
-(test_documento.aux)
- ***********
-LaTeX2e <2025-11-01>
-L3 programming layer <2025-10-24>
- ***********
-
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
-
-Package logreq Info: Writing requests to 'test_documento.run.xml'.
-\openout1 = `test_documento.run.xml'.
-
- ) 
+ 
 Here is how much of TeX's memory you used:
- 50834 strings out of 402987
- 1084825 string characters out of 5452871
- 2095351 words of memory out of 5000000
- 78835 multiletter control sequences out of 15000+600000
- 654418 words of font info for 115 fonts, out of 8000000 for 9000
+ 50643 strings out of 402987
+ 1079875 string characters out of 5452871
+ 2095402 words of memory out of 5000000
+ 78670 multiletter control sequences out of 15000+600000
+ 651348 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,12n,122p,1193b,1375s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-Output written on test_documento.pdf (10 pages).
+Output written on test_documento.pdf (5 pages).

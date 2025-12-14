@@ -1232,20 +1232,22 @@
   {
     \csname tl_set:Nn\endcsname \l_tmpa_tl { #1 }
     \csname tl_trim_spaces:N\endcsname \l_tmpa_tl
-    \csname tl_use:N\endcsname \l_tmpa_tl
-    \csname tl_if_empty:NF\endcsname \l_tmpa_tl
+    \csname tl_if_empty:TF\endcsname \l_tmpa_tl
+      { }
       {
+        \csname tl_use:N\endcsname \l_tmpa_tl
+
+        % Detecta si el texto (ya recortado) termina en puntuación.
+        % También cubre el caso común \textit{... .} donde el último token es '}'
+        % pero la puntuación está dentro del grupo.
         \csname tl_set:Nx\endcsname \l_tmpb_tl
-          { \csname tl_item:Nn\endcsname \l_tmpa_tl { -1 } }
-        \str_case:nnF { \l_tmpb_tl }
-          {
-            {.}{}
-            {!}{}
-            {?}{}
-            {:}{}
-            {;}{}
-          }
-          {.}
+          { \csname tl_to_str:N\endcsname \l_tmpa_tl }
+        \csname tl_trim_spaces:N\endcsname \l_tmpb_tl
+        \regex_match:nnTF
+          { [.!?:;] \s* ( \x{7D}+ \s* )? $ }
+          { \l_tmpb_tl }
+          { }
+          { . }
       }
   }
 \ExplSyntaxOff
@@ -1257,7 +1259,7 @@
 }
 
 \newcommand{\fuente}[1]{%
-  \par\addvspace{0.1\baselineskip}% menos espacio entre figura/tabla y fuente
+  \par\addvspace{0pt}% menos espacio entre figura/tabla y fuente
   {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont
 
     \textbf{FUENTE:}~\SENERfuenteAutopunctuate{#1}%
