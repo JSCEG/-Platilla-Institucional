@@ -125,12 +125,6 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\babel-spanish\spanish.ldf
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
-INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\tex\latex\lm\t1lmr.fd
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\ec-lmr12.tfm
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\geometry\geometry.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\keyval.sty
@@ -191,9 +185,9 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\fancyhdr\fancyhdr.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
-INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec-xetex.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\fontenc.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\fontspec\fontspec.cfg
@@ -518,25 +512,41 @@ INPUT .\test_enlaces.bbl
 INPUT .\test_enlaces.bbl
 INPUT .\test_enlaces.bbl
 INPUT test_enlaces.bbl
+INPUT .\test_enlaces.toc
+INPUT .\test_enlaces.toc
+INPUT test_enlaces.toc
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 OUTPUT test_enlaces.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
+INPUT .\test_enlaces.lof
+INPUT .\test_enlaces.lof
+INPUT test_enlaces.lof
 OUTPUT test_enlaces.lof
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
+INPUT .\test_enlaces.lot
+INPUT .\test_enlaces.lot
+INPUT test_enlaces.lot
 OUTPUT test_enlaces.lot
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT test_enlaces.aux
+INPUT test_enlaces.run.xml
 OUTPUT test_enlaces.run.xml

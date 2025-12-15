@@ -1377,36 +1377,7 @@ function generarTablaCompacta(datos) {
     return tex;
 }
 
-/**
- * Genera una tabla compacta usando longtable (para tabladorado)
- */
-function generarTablaCompactaLarga(datos) {
-    const numCols = datos[0].length;
-    // Para tablas compactas, usar anchos más pequeños: primera 3cm, resto 2cm cada una
-    const especCols = 'B{3cm}' + 'p{2cm}'.repeat(numCols - 1);
-    let tex = `  \\begin{longtable}{${especCols}}\n`;
-    tex += `    \\toprule\n`;
-    // Encabezados con fondo dorado
-    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
-    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
-    tex += `    \\midrule\n`;
-    tex += `    \\endfirsthead\n\n`;
 
-    // Encabezado para páginas siguientes (aunque sea compacta, por consistencia)
-    tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
-    tex += `    \\midrule\n`;
-    tex += `    \\endhead\n\n`;
-
-    tex += `    \\bottomrule\n`;
-    tex += `    \\endlastfoot\n\n`;
-
-    for (let i = 1; i < datos.length; i++) {
-        const celdas = procesarCeldasFila(datos[i]);
-        tex += `    ${celdas.join(' & ')} \\\\\n`;
-    }
-    tex += `  \\end{longtable}\n`;
-    return tex;
-}
 
 /**
  * Divide una tabla grande en múltiples partes (por columnas)

@@ -2,280 +2,10 @@ This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./DemoSENER.tex
-(DemoSENER.tex
+**./test_caption_fix.tex
+(test_caption_fix.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\documentmetadata-supp
-ort.ltx
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\pdfmana
-gement-testphase.sty
-Package: pdfmanagement-testphase 2025-11-12 v0.96x LaTeX PDF management bundle
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tagpdf\tagpdf-base.sty
-Package: tagpdf-base 2025-10-31 v0.99w part of tagpdf - provide base, no-op ver
-sions of the user commands 
-\c@g__tag_MCID_abs_int=\count271
-\c@g__tag_struct_abs_int=\count272
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\pdfmana
-gement.ltx
-File: pdfmanagement.ltx 2025-11-12 v0.96x PDF management code
-\g__pdfmanagement_EmbeddedFiles_int=\count273
-\l__pdfmeta_xmp_indent_int=\count274
-\g_pdffile_embed_pdfa_int=\count275
-\g_pdffile_embed_nonpdfa_int=\count276
-))) (C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
-File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
-\g__graphics_track_int=\count277
-\g__pdfannot_backend_int=\count278
-\g__pdfannot_backend_link_int=\count279
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\l3backe
-nd-testphase-xetex.def
-File: l3backend-testphase-xetex.def 2025-11-12 v0.96s LaTeX PDF management bund
-le backend support:XeTeX
-\l__pdf_backend_tmpa_box=\box53
-\l__pdf_backend_tmpb_box=\box54
-\g__pdf_backend_resourceid_int=\count280
-\g__pdf_backend_name_int=\count281
-\g__pdf_backend_page_int=\count282
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-l
-atest.sty
-Package: latex-lab-testphase-latest 2025-09-13 v0.1d latex-lab modules
- (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tagpdf\tagpdf.sty
-Package: tagpdf 2025-10-31 v0.99w  LaTeX kernel code for PDF tagging 
-\l__tag_tmpa_int=\count283
-\l__tag_tmpa_box=\box55
-\l__tag_tmpb_box=\box56
-\l__tag_loglevel_int=\count284
-\g__tag_unique_cnt_int=\count285
-\l__tag_tag_stop_int=\count286
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tagpdf\tagpdf-mc-code-generic.s
-ty
-Package: tagpdf-mc-code-generic 2025-10-31 v0.99w part of tagpdf - code related
- to marking chunks - generic mode
-\g__tag_mc_marks=\marks4
-)
-\g__tag_tree_id_pad_int=\count287
-\c@g__tag_parenttree_obj_int=\count288
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-mathml.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-book.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-latex.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-latex-lab.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf.def
-
-
-Package tagpdf Info: reading namespace definitions tagpdf-ns-pdf2.def
-
-\g__tag_struct_AFobj_int=\count289
-\g__tag_para_begin_int=\count290
-\g__tag_para_end_int=\count291
-\g__tag_para_main_begin_int=\count292
-\g__tag_para_main_end_int=\count293
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-n
-ames.sty
-Package: latex-lab-testphase-names 2025-08-14 v0.8f Code related to the names o
-f tags
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-n
-ew-or-2.sty
-Package: latex-lab-testphase-new-or-2 2025-05-10 v0.86d Changes to the output r
-outine
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-footnotes.l
-tx
-File: latex-lab-footnotes.ltx 2025-07-04 v0.8o changes to the footnote interfac
-es
-\footnotemargin=\dimen148
-\g_fnote_id_int=\count294
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-b
-lock.sty
-Package: latex-lab-testphase-block 2025-07-26 v0.9k blockenv implementation
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-kernel-chan
-ges.sty
-Package: latex-lab-kernel-changes 2025-07-09 v0.85i General kernel and class ch
-anges
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-c
-ontext.sty
-Package: latex-lab-testphase-context 2025-10-09 v0.5b Providing context for ins
-tance, etc.
-)
-
-LaTeX template Info: Declaring template type 'blockenv' taking 1 argument(s)
-(template)           on line 96.
-
-
-LaTeX template Info: Declaring template type 'block' taking 1 argument(s) on
-(template)           line 97.
-
-
-LaTeX template Info: Declaring template type 'para' taking 1 argument(s) on
-(template)           line 98.
-
-
-LaTeX template Info: Declaring template type 'list' taking 1 argument(s) on
-(template)           line 99.
-
-
-LaTeX template Info: Declaring template type 'item' taking 1 argument(s) on
-(template)           line 100.
-
-\c@maxblocklevels=\count295
-\l__par_start_skip=\skip49
-\l__block_botsep_skip=\skip50
-\l__block_parbotsep_skip=\skip51
-\l__block_parindent_dim=\dimen149
-\l__block_counter_start_int=\count296
-\l__block_one_label_box=\box57
-\g__block_labels_box=\box58
-\l__block_tmpa_skip=\skip52
-\l__block_topsepadd_skip=\skip53
-\l__block_effective_top_skip=\skip54
-LaTeX Info: Redefining \centering on input line 1476.
-LaTeX Info: Redefining \raggedleft on input line 1477.
-LaTeX Info: Redefining \raggedright on input line 1478.
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-s
-ec.sty
-Package: latex-lab-testphase-sec 2025-10-20 v0.84k Code related to the tagging 
-of sectioning commands
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-t
-oc.sty
-Package: latex-lab-testphase-toc 2025-07-02 v0.85h  Code related to the tagging
- of toc-like lists
-\g__tag_toc_level_int=\count297
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-m
-inipage.sty
-Package: latex-lab-testphase-minipage 2025-05-10 v0.81g Code related to the tag
-ging of minipages and parboxes
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-n
-ew-or-1.sty
-Package: latex-lab-testphase-new-or-1 2025-05-10 v0.85d Temporary output patche
-s for tagging and better link support -- no longer active
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-g
-raphic.sty
-Package: latex-lab-testphase-graphic 2025-09-25 v0.80i Code related to the tagg
-ing of graphics
-\g__tag_graphic_int=\count298
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-f
-loat.sty
-Package: latex-lab-testphase-float 2025-10-17 v0.81l Code related to the taggin
-g of floats
-\g__tag_float_int=\count299
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-b
-ib.sty
-Package: latex-lab-testphase-bib 2025-05-09 v0.81c Code related to the tagging 
-of bibliography and cite command
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-t
-ext.sty
-Package: latex-lab-testphase-text 2025-05-10 v0.85f Code related to the tagging
- of various small text commands
-LaTeX Info: Redefining \mbox on input line 84.
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-m
-arginpar.sty
-Package: latex-lab-testphase-marginpar 2025-07-23 v0.85h Changes related to the
- tagging of the margin notes
-\g__kernel_marginpar_int=\count300
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-t
-itle.sty
-Package: latex-lab-testphase-title 2025-03-08 v0.85d Changes related to the tag
-ging of the title
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-t
-able.sty
-Package: latex-lab-testphase-table 2025-08-01 v0.85s Code related to the taggin
-g of tables
- (C:\Program Files\MiKTeX\tex/latex/tools\array.sty
-Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
-\col@sep=\dimen150
-\ar@mcellbox=\box59
-\extrarowheight=\dimen151
-\NC@list=\toks17
-\extratabsurround=\skip55
-\backup@length=\skip56
-\ar@cellbox=\box60
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-m
-ath.sty
-Package: latex-lab-testphase-math 2025-03-10 v0.8d code related to the math tag
-ging
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-math.ltx
-File: latex-lab-math.ltx 2025-10-02 v0.6w Grab all the math(s) and tag it (expe
-riments)
-\l__math_tmpa_skip=\skip57
-\g__math_mathml_total_int=\count301
-\g__math_mathml_int=\count302
-\g__math_math_total_int=\count303
-\g__math_mathml_AF_found_int=\count304
-\g__math_mathml_AF_attached_int=\count305
-\l__math_tmpa_box=\box61
-\l__math_mathstyle_int=\count306
-\g__math_mathchoice_int=\count307
-\l__math_grab_env_int=\count308
-\g__math_postdisplaypenalty_int=\count309
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-mathpkg.ltx
-File: latex-lab-mathpkg.ltx 2025-06-20 v0.1c mathpkg adaptions
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-mathintent.
-ltx
-File: latex-lab-mathintent.ltx 2025-08-03 v0.1c MathML intent attributes
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-f
-irstaid.sty
-Package: latex-lab-testphase-firstaid 2025-11-03 v2025-11-03 Temporary patches 
-to external packages needed for the tagging project
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-testphase-t
-ikz.sty
-Package: latex-lab-testphase-tikz 2025-09-27 v0.80d Code related to the tagging
- of tikz pictures
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\pdfmana
-gement-firstaid.sty
-Package: pdfmanagement-firstaid 2025-11-12 v0.96x LaTeX PDF management bundle /
- firstaid-patches
-
-Package pdfmanagement Info: loading pdfmanagement firstaid code for pgf
-
-)
-
-Package tagpdf Warning: engine/output mode xetex doesn't support the interword
-(tagpdf)                spaces
-
 (sener2025.cls
 Document Class: sener2025 2025/11/21 Plantilla institucional SENER - Versión co
 mpleta
@@ -284,22 +14,22 @@ Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (C:\Program Files\MiKTeX\tex/latex/base\size12.clo
 File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
-\c@part=\count310
-\c@section=\count311
-\c@subsection=\count312
-\c@subsubsection=\count313
-\c@paragraph=\count314
-\c@subparagraph=\count315
-\c@figure=\count316
-\c@table=\count317
-\abovecaptionskip=\skip58
-\belowcaptionskip=\skip59
-\bibindent=\dimen152
+\c@part=\count271
+\c@section=\count272
+\c@subsection=\count273
+\c@subsubsection=\count274
+\c@paragraph=\count275
+\c@subparagraph=\count276
+\c@figure=\count277
+\c@table=\count278
+\abovecaptionskip=\skip49
+\belowcaptionskip=\skip50
+\bibindent=\dimen148
 )
 (C:\Program Files\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2025/10/22 v25.14 The multilingual framework for LuaLaTeX, pdfLa
 TeX and XeLaTeX
-\babel@savecnt=\count318
+\babel@savecnt=\count279
 LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
 ne 2050.
 LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
@@ -314,15 +44,12 @@ LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?)
 on input line 2058.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2083.
-\U@D=\dimen153
+\U@D=\dimen149
 \l@unhyphenated=\language79
 
 (C:\Program Files\MiKTeX\tex/generic/babel\xebabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count319
-Package babel Info: Fetching locale name for tag es-MX
-(babel)             from babel-es-MX.ini. Reported on input line 4153.
-Package babel Info: Passing mexican to babel on input line 4158.
+\bbl@dirlevel=\count280
 
 
 Package babel Warning: Configuration files are deprecated, as
@@ -337,27 +64,26 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
  babel
 )
 (C:\Program Files\MiKTeX\tex/generic/babel/locale/es\babel-spanish.tex)
-(C:\Program Files\MiKTeX\tex/generic/babel/locale/es\babel-mexican.tex)
 Package babel Info: Importing font and identification data for spanish
 (babel)             from babel-es.ini. Reported on input line 4295.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/babel-spanish\spanish.ldf
 Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
-\es@quottoks=\toks18
-\es@quotdepth=\count320
+\es@quottoks=\toks17
+\es@quotdepth=\count281
 Package babel Info: Making " an active character on input line 570.
-)
-Package babel Info: Importing data for mexican
-(babel)             from babel-es-MX.ini. Reported on input line 4295.
-Package babel Info: Hyphen rules for 'mexican' set to \l@spanish
-(babel)             (\language65). Reported on input line 4295.
-)
+))
+LaTeX Encoding Info:    Redeclaring text command \guillemotleft (encoding OT1) 
+on input line 13.
+LaTeX Encoding Info:    Redeclaring text command \guillemotright (encoding OT1)
+ on input line 13.
+
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Program Files\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks19
+\KV@toks@=\toks18
 )
 (C:\Program Files\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
@@ -365,18 +91,18 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Program Files\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
-\Gm@cnth=\count321
-\Gm@cntv=\count322
-\c@Gm@tempcnt=\count323
-\Gm@bindingoffset=\dimen154
-\Gm@wd@mp=\dimen155
-\Gm@odd@mp=\dimen156
-\Gm@even@mp=\dimen157
-\Gm@layoutwidth=\dimen158
-\Gm@layoutheight=\dimen159
-\Gm@layouthoffset=\dimen160
-\Gm@layoutvoffset=\dimen161
-\Gm@dimlist=\toks20
+\Gm@cnth=\count282
+\Gm@cntv=\count283
+\c@Gm@tempcnt=\count284
+\Gm@bindingoffset=\dimen150
+\Gm@wd@mp=\dimen151
+\Gm@odd@mp=\dimen152
+\Gm@even@mp=\dimen153
+\Gm@layoutwidth=\dimen154
+\Gm@layoutheight=\dimen155
+\Gm@layouthoffset=\dimen156
+\Gm@layoutvoffset=\dimen157
+\Gm@dimlist=\toks19
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/geometry\geometry.cfg))
 (C:\Program Files\MiKTeX\tex/latex/graphics\graphicx.sty
@@ -396,16 +122,16 @@ Package graphics Info: Driver file: xetex.def on input line 106.
 (C:\Program Files\MiKTeX\tex/latex/graphics-def\xetex.def
 File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 ))
-\Gin@req@height=\dimen162
-\Gin@req@width=\dimen163
+\Gin@req@height=\dimen158
+\Gin@req@width=\dimen159
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count324
-\float@exts=\toks21
-\float@box=\box62
-\@float@everytoks=\toks22
-\@floatcapt=\box63
+\c@float@type=\count285
+\float@exts=\toks20
+\float@box=\box53
+\@float@everytoks=\toks21
+\@floatcapt=\box54
 )
 (C:\Program Files\MiKTeX\tex/latex/xcolor\xcolor.sty
 Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
@@ -425,32 +151,45 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\xcolor-
-patches-tmp-ltx.sty
-Package: xcolor-patches-tmp-ltx 2025-11-12 v0.96x patch xcolor for l3color
-)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/colortbl\colortbl.sty
 Package: colortbl 2024/10/29 v1.0k Color table columns (DPC)
+
+(C:\Program Files\MiKTeX\tex/latex/tools\array.sty
+Package: array 2025/09/25 v2.6n Tabular extension package (FMi)
+\col@sep=\dimen160
+\ar@mcellbox=\box55
+\extrarowheight=\dimen161
+\NC@list=\toks22
+\extratabsurround=\skip51
+\backup@length=\skip52
+\ar@cellbox=\box56
+)
 \everycr=\toks23
-\minrowclearance=\skip60
-\rownum=\count325
+\minrowclearance=\skip53
+\rownum=\count286
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
-\ttl@box=\box64
-\beforetitleunit=\skip61
-\aftertitleunit=\skip62
-\ttl@plus=\dimen164
-\ttl@minus=\dimen165
+\ttl@box=\box57
+\beforetitleunit=\skip54
+\aftertitleunit=\skip55
+\ttl@plus=\dimen162
+\ttl@minus=\dimen163
 \ttl@toksa=\toks24
-\titlewidth=\dimen166
-\titlewidthlast=\dimen167
-\titlewidthfirst=\dimen168
+\titlewidth=\dimen164
+\titlewidthlast=\dimen165
+\titlewidthfirst=\dimen166
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/fontawesome5\fontawesome5.sty
 (C:\Program Files\MiKTeX\tex/latex/l3kernel\expl3.sty
 Package: expl3 2025-10-24 L3 programming layer (loader) 
-)
+
+(C:\Program Files\MiKTeX\tex/latex/l3backend\l3backend-xetex.def
+File: l3backend-xetex.def 2025-10-09 L3 backend support: XeTeX
+\g__graphics_track_int=\count287
+\g__pdfannot_backend_int=\count288
+\g__pdfannot_backend_link_int=\count289
+))
 Package: fontawesome5 2022/05/02 v5.15.4 Font Awesome 5
 
 (C:\Program Files\MiKTeX\tex/latex/l3packages/l3keys2e\l3keys2e.sty
@@ -475,20 +214,20 @@ LaTeX Font Info:    Trying to load font information for TU+fontawesomebrands on
 s.fd))) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip63
-\f@nch@offset@elh=\skip64
-\f@nch@offset@erh=\skip65
-\f@nch@offset@olh=\skip66
-\f@nch@offset@orh=\skip67
-\f@nch@offset@elf=\skip68
-\f@nch@offset@erf=\skip69
-\f@nch@offset@olf=\skip70
-\f@nch@offset@orf=\skip71
-\f@nch@height=\skip72
-\f@nch@footalignment=\skip73
-\f@nch@widthL=\skip74
-\f@nch@widthC=\skip75
-\f@nch@widthR=\skip76
+\f@nch@headwidth=\skip56
+\f@nch@offset@elh=\skip57
+\f@nch@offset@erh=\skip58
+\f@nch@offset@olh=\skip59
+\f@nch@offset@orh=\skip60
+\f@nch@offset@elf=\skip61
+\f@nch@offset@erf=\skip62
+\f@nch@offset@olf=\skip63
+\f@nch@offset@orf=\skip64
+\f@nch@height=\skip65
+\f@nch@footalignment=\skip66
+\f@nch@widthL=\skip67
+\f@nch@widthC=\skip68
+\f@nch@widthR=\skip69
 \@temptokenb=\toks25
 )
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
@@ -497,20 +236,20 @@ Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count326
-\l__fontspec_language_int=\count327
-\l__fontspec_strnum_int=\count328
-\l__fontspec_tmp_int=\count329
-\l__fontspec_tmpa_int=\count330
-\l__fontspec_tmpb_int=\count331
-\l__fontspec_tmpc_int=\count332
-\l__fontspec_em_int=\count333
-\l__fontspec_emdef_int=\count334
-\l__fontspec_strong_int=\count335
-\l__fontspec_strongdef_int=\count336
-\l__fontspec_tmpa_dim=\dimen169
-\l__fontspec_tmpb_dim=\dimen170
-\l__fontspec_tmpc_dim=\dimen171
+\l__fontspec_script_int=\count290
+\l__fontspec_language_int=\count291
+\l__fontspec_strnum_int=\count292
+\l__fontspec_tmp_int=\count293
+\l__fontspec_tmpa_int=\count294
+\l__fontspec_tmpb_int=\count295
+\l__fontspec_tmpc_int=\count296
+\l__fontspec_em_int=\count297
+\l__fontspec_emdef_int=\count298
+\l__fontspec_strong_int=\count299
+\l__fontspec_strongdef_int=\count300
+\l__fontspec_tmpa_dim=\dimen167
+\l__fontspec_tmpb_dim=\dimen168
+\l__fontspec_tmpc_dim=\dimen169
 
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
@@ -703,12 +442,12 @@ File: accsupp-dvipdfm.def 2019/12/05 v0.6 accsupp driver for dvipdfm (HO)
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip77
-\enit@outerparindent=\dimen172
+\labelindent=\skip70
+\enit@outerparindent=\dimen170
 \enit@toks=\toks26
-\enit@inbox=\box65
-\enit@count@id=\count337
-\enitdp@description=\count338
+\enit@inbox=\box58
+\enit@count@id=\count301
+\enitdp@description=\count302
 )
 (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
@@ -718,11 +457,11 @@ Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
 (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen173
-\pgfutil@tempdimb=\dimen174
+\pgfutil@tempdima=\dimen171
+\pgfutil@tempdimb=\dimen172
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box66
+\pgfutil@abb=\box59
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
@@ -743,26 +482,26 @@ Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
 tex
 \pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen175
-\pgf@y=\dimen176
-\pgf@xa=\dimen177
-\pgf@ya=\dimen178
-\pgf@xb=\dimen179
-\pgf@yb=\dimen180
-\pgf@xc=\dimen181
-\pgf@yc=\dimen182
-\pgf@xd=\dimen183
-\pgf@yd=\dimen184
+\pgf@x=\dimen173
+\pgf@y=\dimen174
+\pgf@xa=\dimen175
+\pgf@ya=\dimen176
+\pgf@xb=\dimen177
+\pgf@yb=\dimen178
+\pgf@xc=\dimen179
+\pgf@yc=\dimen180
+\pgf@xd=\dimen181
+\pgf@yd=\dimen182
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count339
-\c@pgf@countb=\count340
-\c@pgf@countc=\count341
-\c@pgf@countd=\count342
+\c@pgf@counta=\count303
+\c@pgf@countb=\count304
+\c@pgf@countc=\count305
+\c@pgf@countd=\count306
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count343
+\pgf@sys@id@count=\count307
  (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
 )
@@ -777,12 +516,12 @@ File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
 File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
 )
-\pgfsys@objnum=\count344
+\pgfsys@objnum=\count308
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
 File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count345
-\pgfsyssoftpath@bigbuffer@items=\count346
+\pgfsyssoftpath@smallbuffer@items=\count309
+\pgfsyssoftpath@bigbuffer@items=\count310
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
 File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -793,9 +532,9 @@ Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen185
-\pgfmath@count=\count347
-\pgfmath@box=\box67
+\pgfmath@dimen=\dimen183
+\pgfmath@count=\count311
+\pgfmath@box=\box60
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
 \pgfmath@stack@operation=\toks36
@@ -814,55 +553,55 @@ tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
 cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count348
+\c@pgfmathroundto@lastzeros=\count312
 ))
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen186
-\pgf@picmaxx=\dimen187
-\pgf@picminy=\dimen188
-\pgf@picmaxy=\dimen189
-\pgf@pathminx=\dimen190
-\pgf@pathmaxx=\dimen191
-\pgf@pathminy=\dimen192
-\pgf@pathmaxy=\dimen193
-\pgf@xx=\dimen194
-\pgf@xy=\dimen195
-\pgf@yx=\dimen196
-\pgf@yy=\dimen197
-\pgf@zx=\dimen198
-\pgf@zy=\dimen199
+\pgf@picminx=\dimen184
+\pgf@picmaxx=\dimen185
+\pgf@picminy=\dimen186
+\pgf@picmaxy=\dimen187
+\pgf@pathminx=\dimen188
+\pgf@pathmaxx=\dimen189
+\pgf@pathminy=\dimen190
+\pgf@pathmaxy=\dimen191
+\pgf@xx=\dimen192
+\pgf@xy=\dimen193
+\pgf@yx=\dimen194
+\pgf@yy=\dimen195
+\pgf@zx=\dimen196
+\pgf@zy=\dimen197
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
 ex
 File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen256
-\pgf@path@lasty=\dimen257
+\pgf@path@lastx=\dimen198
+\pgf@path@lasty=\dimen199
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
 File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen258
-\pgf@shorten@start@additional=\dimen259
+\pgf@shorten@end@additional=\dimen256
+\pgf@shorten@start@additional=\dimen257
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box68
-\pgf@hbox=\box69
-\pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count349
+\pgfpic=\box61
+\pgf@hbox=\box62
+\pgf@layerbox@main=\box63
+\pgf@picture@serial@count=\count313
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
 x
 File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen260
+\pgflinewidth=\dimen258
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
 .tex
 File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen261
-\pgf@pt@y=\dimen262
-\pgf@pt@temp=\dimen263
+\pgf@pt@x=\dimen259
+\pgf@pt@y=\dimen260
+\pgf@pt@temp=\dimen261
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
@@ -873,19 +612,19 @@ tex
 File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen264
+\pgfarrowsep=\dimen262
 ) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen265
-\pgf@sys@shading@range@num=\count350
-\pgf@shadingcount=\count351
+\pgf@max=\dimen263
+\pgf@sys@shading@range@num=\count314
+\pgf@shadingcount=\count315
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
 File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box71
+\pgfexternal@startupbox=\box64
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
 File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -900,15 +639,15 @@ File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )))
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
 File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box72
+\pgfnodeparttextbox=\box65
 )
 (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
 File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
 Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen266
-\pgf@nodesepend=\dimen267
+\pgf@nodesepstart=\dimen264
+\pgf@nodesepend=\dimen265
 )
 (C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
@@ -919,8 +658,8 @@ Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
 (C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen268
-\pgffor@skip=\dimen269
+\pgffor@iter=\dimen266
+\pgffor@skip=\dimen267
 \pgffor@stack=\toks37
 \pgffor@toks=\toks38
 ))
@@ -930,32 +669,32 @@ Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
 (C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
 tex
 File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count352
-\pgfplotmarksize=\dimen270
+\pgf@plot@mark@count=\count316
+\pgfplotmarksize=\dimen268
 )
-\tikz@lastx=\dimen271
-\tikz@lasty=\dimen272
-\tikz@lastxsaved=\dimen273
-\tikz@lastysaved=\dimen274
-\tikz@lastmovetox=\dimen275
-\tikz@lastmovetoy=\dimen276
-\tikzleveldistance=\dimen277
-\tikzsiblingdistance=\dimen278
-\tikz@figbox=\box73
-\tikz@figbox@bg=\box74
-\tikz@tempbox=\box75
-\tikz@tempbox@bg=\box76
-\tikztreelevel=\count353
-\tikznumberofchildren=\count354
-\tikznumberofcurrentchild=\count355
-\tikz@fig@count=\count356
+\tikz@lastx=\dimen269
+\tikz@lasty=\dimen270
+\tikz@lastxsaved=\dimen271
+\tikz@lastysaved=\dimen272
+\tikz@lastmovetox=\dimen273
+\tikz@lastmovetoy=\dimen274
+\tikzleveldistance=\dimen275
+\tikzsiblingdistance=\dimen276
+\tikz@figbox=\box66
+\tikz@figbox@bg=\box67
+\tikz@tempbox=\box68
+\tikz@tempbox@bg=\box69
+\tikztreelevel=\count317
+\tikznumberofchildren=\count318
+\tikznumberofcurrentchild=\count319
+\tikz@fig@count=\count320
  (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count357
-\pgfmatrixcurrentcolumn=\count358
-\pgf@matrix@numberofcolumns=\count359
+\pgfmatrixcurrentrow=\count321
+\pgfmatrixcurrentcolumn=\count322
+\pgf@matrix@numberofcolumns=\count323
 )
-\tikz@expandcount=\count360
+\tikz@expandcount=\count324
 
 (C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
 rytopaths.code.tex
@@ -976,21 +715,21 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 )
 (C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count361
+\etb@tempcnta=\count325
 )
-\tcb@titlebox=\box77
-\tcb@upperbox=\box78
-\tcb@lowerbox=\box79
-\tcb@phantombox=\box80
-\c@tcbbreakpart=\count362
-\c@tcblayer=\count363
-\c@tcolorbox@number=\count364
-\l__tcobox_tmpa_box=\box81
-\l__tcobox_tmpa_dim=\dimen279
-\tcb@temp=\box82
-\tcb@temp=\box83
-\tcb@temp=\box84
-\tcb@temp=\box85
+\tcb@titlebox=\box70
+\tcb@upperbox=\box71
+\tcb@lowerbox=\box72
+\tcb@phantombox=\box73
+\c@tcbbreakpart=\count326
+\c@tcblayer=\count327
+\c@tcolorbox@number=\count328
+\l__tcobox_tmpa_box=\box74
+\l__tcobox_tmpa_dim=\dimen277
+\tcb@temp=\box75
+\tcb@temp=\box76
+\tcb@temp=\box77
+\tcb@temp=\box78
 )
 (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
 Library (tcolorbox): 'tcbskins.code.tex' version '6.8.0'
@@ -1003,7 +742,7 @@ Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.
 code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box86
+\l__tikzfill_img_box=\box79
 )) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.8.0'
 )) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
@@ -1013,44 +752,44 @@ Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
 Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box87
-\tcb@totalupperbox=\box88
-\tcb@totallowerbox=\box89
+\tcb@testbox=\box80
+\tcb@totalupperbox=\box81
+\tcb@totallowerbox=\box82
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen280
-\captionmargin=\dimen281
-\caption@leftmargin=\dimen282
-\caption@rightmargin=\dimen283
-\caption@width=\dimen284
-\caption@indent=\dimen285
-\caption@parindent=\dimen286
-\caption@hangindent=\dimen287
+\caption@tempdima=\dimen278
+\captionmargin=\dimen279
+\caption@leftmargin=\dimen280
+\caption@rightmargin=\dimen281
+\caption@width=\dimen282
+\caption@indent=\dimen283
+\caption@parindent=\dimen284
+\caption@hangindent=\dimen285
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count365
-\c@continuedfloat=\count366
+\c@caption@flags=\count329
+\c@continuedfloat=\count330
 Package caption Info: float package is loaded.
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count367
+\c@subfigure=\count331
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count368
+\c@subtable=\count332
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count369
-\csq@gtype=\count370
-\csq@glevel=\count371
-\csq@qlevel=\count372
-\csq@maxlvl=\count373
-\csq@tshold=\count374
+\csq@reset=\count333
+\csq@gtype=\count334
+\csq@glevel=\count335
+\csq@qlevel=\count336
+\csq@maxlvl=\count337
+\csq@tshold=\count338
 \csq@ltx@everypar=\toks42
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
@@ -1064,64 +803,64 @@ File: csquotes.cfg
 ))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen288
-\lightrulewidth=\dimen289
-\cmidrulewidth=\dimen290
-\belowrulesep=\dimen291
-\belowbottomsep=\dimen292
-\aboverulesep=\dimen293
-\abovetopsep=\dimen294
-\cmidrulesep=\dimen295
-\cmidrulekern=\dimen296
-\defaultaddspace=\dimen297
-\@cmidla=\count375
-\@cmidlb=\count376
-\@aboverulesep=\dimen298
-\@belowrulesep=\dimen299
-\@thisruleclass=\count377
-\@lastruleclass=\count378
-\@thisrulewidth=\dimen300
+\heavyrulewidth=\dimen286
+\lightrulewidth=\dimen287
+\cmidrulewidth=\dimen288
+\belowrulesep=\dimen289
+\belowbottomsep=\dimen290
+\aboverulesep=\dimen291
+\abovetopsep=\dimen292
+\cmidrulesep=\dimen293
+\cmidrulekern=\dimen294
+\defaultaddspace=\dimen295
+\@cmidla=\count339
+\@cmidlb=\count340
+\@aboverulesep=\dimen296
+\@belowrulesep=\dimen297
+\@thisruleclass=\count341
+\@lastruleclass=\count342
+\@thisrulewidth=\dimen298
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip78
-\LTright=\skip79
-\LTpre=\skip80
-\LTpost=\skip81
-\LTchunksize=\count379
-\LTcapwidth=\dimen301
-\LT@head=\box90
-\LT@firsthead=\box91
-\LT@foot=\box92
-\LT@lastfoot=\box93
-\LT@gbox=\box94
-\LT@cols=\count380
-\LT@rows=\count381
-\c@LT@tables=\count382
-\c@LT@chunks=\count383
+\LTleft=\skip71
+\LTright=\skip72
+\LTpre=\skip73
+\LTpost=\skip74
+\LTchunksize=\count343
+\LTcapwidth=\dimen299
+\LT@head=\box83
+\LT@firsthead=\box84
+\LT@foot=\box85
+\LT@lastfoot=\box86
+\LT@gbox=\box87
+\LT@cols=\count344
+\LT@rows=\count345
+\c@LT@tables=\count346
+\c@LT@chunks=\count347
 \LT@p@ftn=\toks43
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip82
-\multirow@cntb=\count384
-\multirow@dima=\skip83
-\bigstrutjot=\dimen302
+\multirow@colwidth=\skip75
+\multirow@cntb=\count348
+\multirow@dima=\skip76
+\bigstrutjot=\dimen300
 )
-\cftsecnumwidth=\skip84
-\cftsubsecnumwidth=\skip85
-\cftsecindent=\skip86
-\cftsubsecindent=\skip87
-\SENER@appendixsecnumwidth=\dimen303
+\cftsecnumwidth=\skip77
+\cftsubsecnumwidth=\skip78
+\cftsecindent=\skip79
+\cftsubsecindent=\skip80
+\SENER@appendixsecnumwidth=\dimen301
 
 (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen304
-\TX@old@table=\dimen305
-\TX@old@col=\dimen306
-\TX@target=\dimen307
-\TX@delta=\dimen308
-\TX@cols=\count385
+\TX@col@width=\dimen302
+\TX@old@table=\dimen303
+\TX@old@col=\dimen304
+\TX@target=\dimen305
+\TX@delta=\dimen306
+\TX@cols=\count349
 \TX@ftn=\toks44
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
@@ -1132,62 +871,69 @@ Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count386
-\calc@Bcount=\count387
-\calc@Adimen=\dimen309
-\calc@Bdimen=\dimen310
-\calc@Askip=\skip88
-\calc@Bskip=\skip89
+\calc@Acount=\count350
+\calc@Bcount=\count351
+\calc@Adimen=\dimen307
+\calc@Bdimen=\dimen308
+\calc@Askip=\skip81
+\calc@Bskip=\skip82
 LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count388
-\calc@Cskip=\skip90
+\calc@Ccount=\count352
+\calc@Cskip=\skip83
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen311
-\ESO@tempdimb=\dimen312
+\ESO@tempdima=\dimen309
+\ESO@tempdimb=\dimen310
 )
-\AM@pagewidth=\dimen313
-\AM@pageheight=\dimen314
-\AM@fboxrule=\dimen315
+\AM@pagewidth=\dimen311
+\AM@pageheight=\dimen312
+\AM@fboxrule=\dimen313
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\ppxetex.def
 File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
 )
-\pdfpages@includegraphics@status=\count389
-\AM@pagebox=\box95
+\pdfpages@includegraphics@status=\count353
+\AM@pagebox=\box88
 \AM@global@opts=\toks45
-\AM@pagecnt=\count390
+\AM@pagecnt=\count354
 \AM@toc@title=\toks46
 \AM@lof@heading=\toks47
-\c@AM@survey=\count391
-\AM@templatesizebox=\box96
+\c@AM@survey=\count355
+\AM@templatesizebox=\box89
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count392
-\mult@box=\box97
-\multicol@leftmargin=\dimen316
-\c@unbalance=\count393
-\c@collectmore=\count394
-\doublecol@number=\count395
-\multicoltolerance=\count396
-\multicolpretolerance=\count397
-\full@width=\dimen317
-\page@free=\dimen318
-\premulticols=\dimen319
-\postmulticols=\dimen320
-\multicolsep=\skip91
-\multicolbaselineskip=\skip92
-\partial@page=\box98
-\last@line=\box99
-\mc@boxedresult=\box100
-\maxbalancingoverflow=\dimen321
-\mult@rightbox=\box101
-\mult@grightbox=\box102
-\mult@firstbox=\box103
-\mult@gfirstbox=\box104
+\c@tracingmulticols=\count356
+\mult@box=\box90
+\multicol@leftmargin=\dimen314
+\c@unbalance=\count357
+\c@collectmore=\count358
+\doublecol@number=\count359
+\multicoltolerance=\count360
+\multicolpretolerance=\count361
+\full@width=\dimen315
+\page@free=\dimen316
+\premulticols=\dimen317
+\postmulticols=\dimen318
+\multicolsep=\skip84
+\multicolbaselineskip=\skip85
+\partial@page=\box91
+\last@line=\box92
+\mc@boxedresult=\box93
+\maxbalancingoverflow=\dimen319
+\mult@rightbox=\box94
+\mult@grightbox=\box95
+\mult@firstbox=\box96
+\mult@gfirstbox=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
 \@tempa=\box105
 \@tempa=\box106
 \@tempa=\box107
@@ -1217,44 +963,37 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \@tempa=\box131
 \@tempa=\box132
 \@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\@tempa=\box136
-\@tempa=\box137
-\@tempa=\box138
-\@tempa=\box139
-\@tempa=\box140
-\c@minrows=\count398
-\c@columnbadness=\count399
-\c@finalcolumnbadness=\count400
-\last@try=\dimen322
-\multicolovershoot=\dimen323
-\multicolundershoot=\dimen324
-\mult@nat@firstbox=\box141
-\colbreak@box=\box142
-\mc@col@check@num=\count401
-\g__mc_curr_col_int=\count402
+\c@minrows=\count362
+\c@columnbadness=\count363
+\c@finalcolumnbadness=\count364
+\last@try=\dimen320
+\multicolovershoot=\dimen321
+\multicolundershoot=\dimen322
+\mult@nat@firstbox=\box134
+\colbreak@box=\box135
+\mc@col@check@num=\count365
+\g__mc_curr_col_int=\count366
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
 Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
 \MT@toks=\toks48
-\MT@tempbox=\box143
-\MT@count=\count403
+\MT@tempbox=\box136
+\MT@count=\count367
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
 LaTeX Info: Redefining \leftprotrusion on input line 1088.
 \MT@prot@toks=\toks49
 LaTeX Info: Redefining \rightprotrusion on input line 1107.
 LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen325
+\MT@outer@kern=\dimen323
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count404
+\MT@listname@count=\count368
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-xetex.def
 File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
 LaTeX Info: Redefining \lsstyle on input line 443.
 LaTeX Info: Redefining \lslig on input line 451.
-\MT@outer@space=\skip93
+\MT@outer@space=\skip86
 )
 Package microtype Info: Loading configuration file microtype.cfg.
 
@@ -1263,41 +1002,40 @@ File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 )
-==> First Aid for microtype.sty applied!
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.sty
 File: lettrine.sty 2025-01-30 v2.80 (Daniel Flipo)
 
 (C:\Program Files\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
 Package: xfp 2025-10-09 L3 Floating point unit
 )
-\c@DefaultLines=\count405
-\c@DefaultDepth=\count406
-\DefaultFindent=\dimen326
-\DefaultNindent=\dimen327
-\DefaultSlope=\dimen328
-\DiscardVskip=\dimen329
-\L@lettrine=\box144
-\L@lbox=\box145
-\L@tbox=\box146
-\c@L@lines=\count407
-\c@L@depth=\count408
-\L@Pindent=\dimen330
-\L@Findent=\dimen331
-\L@Nindent=\dimen332
-\L@lraise=\dimen333
-\L@first=\dimen334
-\L@next=\dimen335
-\L@slope=\dimen336
-\L@height=\dimen337
-\L@novskip=\dimen338
-\L@target@ht=\dimen339
-\L@target@dp=\dimen340
-\L@target@tht=\dimen341
-\LettrineWidth=\dimen342
-\LettrineHeight=\dimen343
-\LettrineDepth=\dimen344
-\L@finalht=\dimen345
-\L@finaldp=\dimen346
+\c@DefaultLines=\count369
+\c@DefaultDepth=\count370
+\DefaultFindent=\dimen324
+\DefaultNindent=\dimen325
+\DefaultSlope=\dimen326
+\DiscardVskip=\dimen327
+\L@lettrine=\box137
+\L@lbox=\box138
+\L@tbox=\box139
+\c@L@lines=\count371
+\c@L@depth=\count372
+\L@Pindent=\dimen328
+\L@Findent=\dimen329
+\L@Nindent=\dimen330
+\L@lraise=\dimen331
+\L@first=\dimen332
+\L@next=\dimen333
+\L@slope=\dimen334
+\L@height=\dimen335
+\L@novskip=\dimen336
+\L@target@ht=\dimen337
+\L@target@dp=\dimen338
+\L@target@tht=\dimen339
+\LettrineWidth=\dimen340
+\LettrineHeight=\dimen341
+\LettrineDepth=\dimen342
+\L@finalht=\dimen343
+\L@finaldp=\dimen344
 
 Loading lettrine.cfg
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
@@ -1315,60 +1053,60 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 \XKV@toks=\toks52
 \XKV@tempa@toks=\toks53
 )
-\XKV@depth=\count409
+\XKV@depth=\count373
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
-\c@qr@i=\count410
-\c@qr@j=\count411
-\qr@a=\count412
-\qr@b=\count413
-\qr@c=\count414
-\qr@for@depth=\count415
-\qr@for@maxdepth=\count416
-\qr@for@start=\count417
-\qr@for@end=\count418
-\qr@for@step=\count419
-\qr@newforcount=\count420
-\qr@newforcount=\count421
-\qr@desiredheight=\skip94
-\qr@modulesize=\skip95
-\qr@minipagewidth=\skip96
-\c@maski=\count422
-\c@maskj=\count423
-\c@totalones=\count424
-\c@penaltyi=\count425
-\c@penaltyii=\count426
-\c@penaltyiii=\count427
-\c@penaltyiv=\count428
-\c@qr@hexchars=\count429
-\qr@newforcount=\count430
-\c@qr@divisionsremaining=\count431
+\c@qr@i=\count374
+\c@qr@j=\count375
+\qr@a=\count376
+\qr@b=\count377
+\qr@c=\count378
+\qr@for@depth=\count379
+\qr@for@maxdepth=\count380
+\qr@for@start=\count381
+\qr@for@end=\count382
+\qr@for@step=\count383
+\qr@newforcount=\count384
+\qr@newforcount=\count385
+\qr@desiredheight=\skip87
+\qr@modulesize=\skip88
+\qr@minipagewidth=\skip89
+\c@maski=\count386
+\c@maskj=\count387
+\c@totalones=\count388
+\c@penaltyi=\count389
+\c@penaltyii=\count390
+\c@penaltyiii=\count391
+\c@penaltyiv=\count392
+\c@qr@hexchars=\count393
+\qr@newforcount=\count394
+\c@qr@divisionsremaining=\count395
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/marginnote\marginnote.sty
 Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count432
+\c@mn@abspage=\count396
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-footmisc.lt
-x
-Package: latex-lab-footmisc 2025/02/20 v6.0e a miscellany of footnote facilitie
-s -- latex-lab version
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/footmisc\footmisc.sty
+Package: footmisc 2025/05/09 v7.0b a miscellany of footnote facilities
 \FN@temptoken=\toks54
-Package footmisc Info: Declaring symbol style bringhurst on input line 508.
-Package footmisc Info: Declaring symbol style chicago on input line 516.
-Package footmisc Info: Declaring symbol style wiley on input line 525.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
+\footnotemargin=\dimen345
+Package footmisc Info: Declaring symbol style bringhurst on input line 549.
+Package footmisc Info: Declaring symbol style chicago on input line 557.
+Package footmisc Info: Declaring symbol style wiley on input line 566.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 577.
 
-Package footmisc Info: Declaring symbol style lamport* on input line 556.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 577
+Package footmisc Info: Declaring symbol style lamport* on input line 597.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 618
 .
 )
 \@float@every@figure=\toks55
- (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count433
+\lrq@indent=\count397
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1377,63 +1115,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count434
-\c@listtotal=\count435
-\c@listcount=\count436
-\c@liststart=\count437
-\c@liststop=\count438
-\c@citecount=\count439
-\c@citetotal=\count440
-\c@multicitecount=\count441
-\c@multicitetotal=\count442
-\c@instcount=\count443
-\c@maxnames=\count444
-\c@minnames=\count445
-\c@maxitems=\count446
-\c@minitems=\count447
-\c@citecounter=\count448
-\c@maxcitecounter=\count449
-\c@savedcitecounter=\count450
-\c@uniquelist=\count451
-\c@uniquename=\count452
-\c@refsection=\count453
-\c@refsegment=\count454
-\c@maxextratitle=\count455
-\c@maxextratitleyear=\count456
-\c@maxextraname=\count457
-\c@maxextradate=\count458
-\c@maxextraalpha=\count459
-\c@abbrvpenalty=\count460
-\c@highnamepenalty=\count461
-\c@lownamepenalty=\count462
-\c@maxparens=\count463
-\c@parenlevel=\count464
-\blx@tempcnta=\count465
-\blx@tempcntb=\count466
-\blx@tempcntc=\count467
-\c@blx@maxsection=\count468
-\blx@maxsegment@0=\count469
-\blx@notetype=\count470
-\blx@parenlevel@text=\count471
-\blx@parenlevel@foot=\count472
-\blx@sectionciteorder@0=\count473
-\blx@sectionciteorderinternal@0=\count474
-\blx@entrysetcounter=\count475
-\blx@biblioinstance=\count476
-\labelnumberwidth=\skip97
-\labelalphawidth=\skip98
-\biblabelsep=\skip99
-\bibitemsep=\skip100
-\bibnamesep=\skip101
-\bibinitsep=\skip102
-\bibparsep=\skip103
-\bibhang=\skip104
+\c@tabx@nest=\count398
+\c@listtotal=\count399
+\c@listcount=\count400
+\c@liststart=\count401
+\c@liststop=\count402
+\c@citecount=\count403
+\c@citetotal=\count404
+\c@multicitecount=\count405
+\c@multicitetotal=\count406
+\c@instcount=\count407
+\c@maxnames=\count408
+\c@minnames=\count409
+\c@maxitems=\count410
+\c@minitems=\count411
+\c@citecounter=\count412
+\c@maxcitecounter=\count413
+\c@savedcitecounter=\count414
+\c@uniquelist=\count415
+\c@uniquename=\count416
+\c@refsection=\count417
+\c@refsegment=\count418
+\c@maxextratitle=\count419
+\c@maxextratitleyear=\count420
+\c@maxextraname=\count421
+\c@maxextradate=\count422
+\c@maxextraalpha=\count423
+\c@abbrvpenalty=\count424
+\c@highnamepenalty=\count425
+\c@lownamepenalty=\count426
+\c@maxparens=\count427
+\c@parenlevel=\count428
+\blx@tempcnta=\count429
+\blx@tempcntb=\count430
+\blx@tempcntc=\count431
+\c@blx@maxsection=\count432
+\blx@maxsegment@0=\count433
+\blx@notetype=\count434
+\blx@parenlevel@text=\count435
+\blx@parenlevel@foot=\count436
+\blx@sectionciteorder@0=\count437
+\blx@sectionciteorderinternal@0=\count438
+\blx@entrysetcounter=\count439
+\blx@biblioinstance=\count440
+\labelnumberwidth=\skip90
+\labelalphawidth=\skip91
+\biblabelsep=\skip92
+\bibitemsep=\skip93
+\bibnamesep=\skip94
+\bibinitsep=\skip95
+\bibparsep=\skip96
+\bibhang=\skip97
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count477
-\c@maxcomprange=\count478
-\c@mincompwidth=\count479
+\c@mincomprange=\count441
+\c@maxcomprange=\count442
+\c@mincompwidth=\count443
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1444,88 +1182,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'verbose-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count480
-\c@savedafterword=\count481
-\c@annotator=\count482
-\c@savedannotator=\count483
-\c@author=\count484
-\c@savedauthor=\count485
-\c@bookauthor=\count486
-\c@savedbookauthor=\count487
-\c@commentator=\count488
-\c@savedcommentator=\count489
-\c@editor=\count490
-\c@savededitor=\count491
-\c@editora=\count492
-\c@savededitora=\count493
-\c@editorb=\count494
-\c@savededitorb=\count495
-\c@editorc=\count496
-\c@savededitorc=\count497
-\c@foreword=\count498
-\c@savedforeword=\count499
-\c@holder=\count500
-\c@savedholder=\count501
-\c@introduction=\count502
-\c@savedintroduction=\count503
-\c@namea=\count504
-\c@savednamea=\count505
-\c@nameb=\count506
-\c@savednameb=\count507
-\c@namec=\count508
-\c@savednamec=\count509
-\c@translator=\count510
-\c@savedtranslator=\count511
-\c@shortauthor=\count512
-\c@savedshortauthor=\count513
-\c@shorteditor=\count514
-\c@savedshorteditor=\count515
-\c@labelname=\count516
-\c@savedlabelname=\count517
-\c@institution=\count518
-\c@savedinstitution=\count519
-\c@lista=\count520
-\c@savedlista=\count521
-\c@listb=\count522
-\c@savedlistb=\count523
-\c@listc=\count524
-\c@savedlistc=\count525
-\c@listd=\count526
-\c@savedlistd=\count527
-\c@liste=\count528
-\c@savedliste=\count529
-\c@listf=\count530
-\c@savedlistf=\count531
-\c@location=\count532
-\c@savedlocation=\count533
-\c@organization=\count534
-\c@savedorganization=\count535
-\c@origlocation=\count536
-\c@savedoriglocation=\count537
-\c@origpublisher=\count538
-\c@savedorigpublisher=\count539
-\c@publisher=\count540
-\c@savedpublisher=\count541
-\c@language=\count542
-\c@savedlanguage=\count543
-\c@origlanguage=\count544
-\c@savedoriglanguage=\count545
-\c@pageref=\count546
-\c@savedpageref=\count547
-\shorthandwidth=\skip105
-\shortjournalwidth=\skip106
-\shortserieswidth=\skip107
-\shorttitlewidth=\skip108
-\shortauthorwidth=\skip109
-\shorteditorwidth=\skip110
-\locallabelnumberwidth=\skip111
-\locallabelalphawidth=\skip112
-\localshorthandwidth=\skip113
-\localshortjournalwidth=\skip114
-\localshortserieswidth=\skip115
-\localshorttitlewidth=\skip116
-\localshortauthorwidth=\skip117
-\localshorteditorwidth=\skip118
+\c@afterword=\count444
+\c@savedafterword=\count445
+\c@annotator=\count446
+\c@savedannotator=\count447
+\c@author=\count448
+\c@savedauthor=\count449
+\c@bookauthor=\count450
+\c@savedbookauthor=\count451
+\c@commentator=\count452
+\c@savedcommentator=\count453
+\c@editor=\count454
+\c@savededitor=\count455
+\c@editora=\count456
+\c@savededitora=\count457
+\c@editorb=\count458
+\c@savededitorb=\count459
+\c@editorc=\count460
+\c@savededitorc=\count461
+\c@foreword=\count462
+\c@savedforeword=\count463
+\c@holder=\count464
+\c@savedholder=\count465
+\c@introduction=\count466
+\c@savedintroduction=\count467
+\c@namea=\count468
+\c@savednamea=\count469
+\c@nameb=\count470
+\c@savednameb=\count471
+\c@namec=\count472
+\c@savednamec=\count473
+\c@translator=\count474
+\c@savedtranslator=\count475
+\c@shortauthor=\count476
+\c@savedshortauthor=\count477
+\c@shorteditor=\count478
+\c@savedshorteditor=\count479
+\c@labelname=\count480
+\c@savedlabelname=\count481
+\c@institution=\count482
+\c@savedinstitution=\count483
+\c@lista=\count484
+\c@savedlista=\count485
+\c@listb=\count486
+\c@savedlistb=\count487
+\c@listc=\count488
+\c@savedlistc=\count489
+\c@listd=\count490
+\c@savedlistd=\count491
+\c@liste=\count492
+\c@savedliste=\count493
+\c@listf=\count494
+\c@savedlistf=\count495
+\c@location=\count496
+\c@savedlocation=\count497
+\c@organization=\count498
+\c@savedorganization=\count499
+\c@origlocation=\count500
+\c@savedoriglocation=\count501
+\c@origpublisher=\count502
+\c@savedorigpublisher=\count503
+\c@publisher=\count504
+\c@savedpublisher=\count505
+\c@language=\count506
+\c@savedlanguage=\count507
+\c@origlanguage=\count508
+\c@savedoriglanguage=\count509
+\c@pageref=\count510
+\c@savedpageref=\count511
+\shorthandwidth=\skip98
+\shortjournalwidth=\skip99
+\shortserieswidth=\skip100
+\shorttitlewidth=\skip101
+\shortauthorwidth=\skip102
+\shorteditorwidth=\skip103
+\locallabelnumberwidth=\skip104
+\locallabelalphawidth=\skip105
+\localshorthandwidth=\skip106
+\localshortjournalwidth=\skip107
+\localshortserieswidth=\skip108
+\localshorttitlewidth=\skip109
+\localshortauthorwidth=\skip110
+\localshorteditorwidth=\skip111
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1541,19 +1279,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count548
-\c@textcitetotal=\count549
-\c@textcitemaxnames=\count550
-\c@biburlbigbreakpenalty=\count551
-\c@biburlbreakpenalty=\count552
-\c@biburlnumpenalty=\count553
-\c@biburlucpenalty=\count554
-\c@biburllcpenalty=\count555
+\c@textcitecount=\count512
+\c@textcitetotal=\count513
+\c@textcitemaxnames=\count514
+\c@biburlbigbreakpenalty=\count515
+\c@biburlbreakpenalty=\count516
+\c@biburlnumpenalty=\count517
+\c@biburlucpenalty=\count518
+\c@biburllcpenalty=\count519
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count556
+\c@smartand=\count520
 )
 Package biblatex Info: Trying to load bibliography style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.bbx' found.
@@ -1570,8 +1308,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count557
-\c@bbx:relatedtotal=\count558
+\c@bbx:relatedcount=\count521
+\c@bbx:relatedtotal=\count522
 )))
 Package biblatex Info: Trying to load citation style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.cbx' found.
@@ -1621,15 +1359,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count559
+\c@section@level=\count523
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen347
-\Hy@linkcounter=\count560
-\Hy@pagecounter=\count561
+\@linkdim=\dimen346
+\Hy@linkcounter=\count524
+\Hy@pagecounter=\count525
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -1637,7 +1375,7 @@ File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count562
+\Hy@SavedSpaceFactor=\count526
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -1649,9 +1387,9 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count563
+\c@Hy@tempcnt=\count527
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen348
+\XeTeXLinkMargin=\dimen347
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1660,9 +1398,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count564
-\Field@Width=\dimen349
-\Fld@charsize=\dimen350
+\Fld@menulength=\count528
+\Field@Width=\dimen348
+\Fld@charsize=\dimen349
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1670,28 +1408,36 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count565
-\c@Item=\count566
+\Hy@abspage=\count529
+\c@Item=\count530
+\c@Hfootnote=\count531
 )
-Package hyperref Info: Driver (custom): hgeneric-testphase.
+Package hyperref Info: Driver (autodetected): hxetex.
 
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\hgeneri
-c-testphase.def
-File: hgeneric-testphase.def 2025-11-12 v0.96x generic Hyperref driver for the 
-LaTeX PDF management bundle
+(C:\Program Files\MiKTeX\tex/latex/hyperref\hxetex.def
+File: hxetex.def 2025-07-12 v7.01o Hyperref driver for XeTeX
+\pdfm@box=\box140
+\c@Hy@AnnotLevel=\count532
+\HyField@AnnotCount=\count533
+\Fld@listcount=\count534
+\c@bookmark@seq@number=\count535
 
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\hyperre
-f-colorschemes.def)
-LaTeX Info: Redefining \href on input line 262.
-LaTeX Info: Redefining \url on input line 348.
-\l__hyp_tmpa_box=\box147
-\l__hyp_tmpa_int=\count567
-\l__hyp_dest_box=\box148
-\g__hyp_linknestlevel_int=\count568
-\HyAnn@Count=\count569
-\Fld@listcount=\count570
-\Hy@SectionHShift=\skip119
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/rerunfilecheck\rerunfilecheck.s
+ty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/uniquecounter\uniquecounter.s
+ty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 )
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip112
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 307.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 307.
+
 
 Package fontspec Info: 
 (fontspec)             NotoSans-Light scale = 1.007517035826025.
@@ -1736,117 +1482,40 @@ ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
 ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
 
 )
-
-Package hyperref Warning: This hyperref driver ignores the pdfversion key!
-(hyperref)                Set the pdfversion in \DocumentMetadata
-(hyperref)                orwith\SetKeys [document/metadata]
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
-Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip120
-
-For additional information on amsmath, use the `?' option.
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
-Package: amstext 2024/11/17 v2.01 AMS text
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsgen.sty
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks56
-\ex@=\dimen351
-))
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsbsy.sty
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen352
-)
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsopn.sty
-Package: amsopn 2022/04/08 v2.04 operator names
-)
-\inf@bad=\count571
-LaTeX Info: Redefining \frac on input line 233.
-\uproot@=\count572
-\leftroot@=\count573
-LaTeX Info: Redefining \overline on input line 398.
-LaTeX Info: Redefining \colon on input line 409.
-\classnum@=\count574
-\DOTSCASE@=\count575
-LaTeX Info: Redefining \ldots on input line 495.
-LaTeX Info: Redefining \dots on input line 498.
-LaTeX Info: Redefining \cdots on input line 619.
-\Mathstrutbox@=\box149
-\strutbox@=\box150
-LaTeX Info: Redefining \big on input line 721.
-LaTeX Info: Redefining \Big on input line 722.
-LaTeX Info: Redefining \bigg on input line 723.
-LaTeX Info: Redefining \Bigg on input line 724.
-\big@size=\dimen353
-LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
-\macc@depth=\count576
-LaTeX Info: Redefining \bmod on input line 904.
-LaTeX Info: Redefining \pmod on input line 909.
-LaTeX Info: Redefining \smash on input line 939.
-LaTeX Info: Redefining \relbar on input line 969.
-LaTeX Info: Redefining \Relbar on input line 970.
-\c@MaxMatrixCols=\count577
-\dotsspace@=\muskip22
-\c@parentequation=\count578
-\dspbrk@lvl=\count579
-\tag@help=\toks57
-\row@=\count580
-\column@=\count581
-\maxfields@=\count582
-\andhelp@=\toks58
-\eqnshift@=\dimen354
-\alignsep@=\dimen355
-\tagshift@=\dimen356
-\tagwidth@=\dimen357
-\totwidth@=\dimen358
-\lineht@=\dimen359
-\@envbody=\toks59
-\multlinegap=\skip121
-\multlinetaggap=\skip122
-\mathdisplay@stack=\toks60
-LaTeX Info: Redefining \[ on input line 2950.
-LaTeX Info: Redefining \] on input line 2951.
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-amsmath.ltx
-File: latex-lab-amsmath.ltx 2025-09-29 v0.1i amsmath adaptions
-LaTeX Info: Redefining \eqref on input line 57.
-)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
-Package csquotes Info: Redefining alias 'default' -> 'mexican'.
- (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/bookmark\bookmark.sty
-Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+Package csquotes Info: Redefining alias 'default' -> 'spanish'.
+ (test_caption_fix.aux
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+Package babel Info: 'spanish' activates 'spanish' shorthands.
+(babel)             Reported on input line 14.
+)
+\openout1 = `test_caption_fix.aux'.
 
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/bookmark\bkm-dvipdfm.def
-File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
-\BKM@id=\count583
-))
-(DemoSENER.aux)
-\openout1 = `DemoSENER.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
+LaTeX Font Info:    ... okay on input line 7.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1889,59 +1558,59 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
-LaTeX Font Info:    Redeclaring math accent \check on input line 32.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 7.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 7.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 7.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 7.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 7.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 7.
+LaTeX Font Info:    Redeclaring math accent \check on input line 7.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 7.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 7.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \colon on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 7.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 7.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 32.
+(Font)              `operators' in the math version `normal' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 7.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 32.
+(Font)              `operators' in the math version `bold' on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/m/n on input line
- 32.
+ 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 32.
+(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 7.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/b/n on input line
- 32.
+ 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 32.
-
+(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 7.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 7.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1953,16 +1622,23 @@ Package caption Info: End \AtBeginDocument code.
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape.sty
 Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 
-(C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape-nometadata.
+sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+ (C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package pdflscape Info: Auto-detected driver: dvipdfm (xetex) on input line 98.
+
 ))
-LaTeX Info: Redefining \microtypecontext on input line 32.
-Package microtype Info: Applying patch `item' on input line 32.
-Package microtype Info: Applying patch `toc' on input line 32.
-Package microtype Info: Applying patch `eqnum' on input line 32.
-Package microtype Info: Applying patch `footnote' on input line 32.
-Package microtype Info: Applying patch `verbatim' on input line 32.
-LaTeX Info: Redefining \microtypesetup on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 7.
+Package microtype Info: Applying patch `item' on input line 7.
+Package microtype Info: Applying patch `toc' on input line 7.
+Package microtype Info: Applying patch `eqnum' on input line 7.
+Package microtype Info: Applying patch `footnote' on input line 7.
+Package microtype Info: Applying patch `verbatim' on input line 7.
+LaTeX Info: Redefining \microtypesetup on input line 7.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1978,34 +1654,25 @@ Package biblatex Info: ... file 'spanish.lbx' found.
 (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
 File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load language 'mexican'...
-Package biblatex Info: ... file 'mexican.lbx' not found.
-
-
-Package biblatex Warning: Language 'mexican' not supported.
-(biblatex)                Using dummy definitions on input line 32.
-
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `DemoSENER.bcf'.
+\openout4 = `test_caption_fix.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'DemoSENER.bbl' found.
-(DemoSENER.bbl)
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
-Package hyperref Info: Link coloring OFF on input line 32.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-File: img/portada.png Graphic file (type bmp)
-<img/portada.png>
- [1
+Package biblatex Info: ... file 'test_caption_fix.bbl' not found.
 
-]
+No file test_caption_fix.bbl.
+Package biblatex Info: Reference section=0 on input line 7.
+Package biblatex Info: Reference segment=0 on input line 7.
+Package hyperref Info: Link coloring ON on input line 7.
+(test_caption_fix.out) (test_caption_fix.out)
+\@outlinefile=\write5
+\openout5 = `test_caption_fix.out'.
+
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 10.62012pt on input line 36.
+(Font)              scaled to size 10.62012pt on input line 9.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2038,7 +1705,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 36.
+(Font)              scaled to size 9.38654pt on input line 9.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2067,7 +1734,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.29759pt on input line 36.
+(Font)              scaled to size 13.29759pt on input line 9.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2095,370 +1762,96 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
- (DemoSENER.toc
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 12.0pt on input line 2.
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 10.95096pt on input line 13.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/14'.
+(microtype)             Ignoring protrusion settings for this character.
+\@float@every@table=\toks56
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 3.
+(Font)              scaled to size 10.5pt on input line 16.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 3.
+(Font)              scaled to size 10.95pt on input line 16.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 10.0pt on input line 16.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 18.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 7.34996pt on input line 18.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 5.25pt on input line 18.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 18.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.5> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7.34996> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5.25> on input line 18.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
+(Font)              size <10.95> substituted on input line 18.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
-))
-\tf@toc=\write5
-\openout5 = `DemoSENER.toc'.
-
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 37.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [2
-
-]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 17.28pt on input line 39.
-LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 15.29295pt on input line 39.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.5166pt on input line 39.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/17.28'.
-(microtype)             Ignoring protrusion settings for this character.
-
-(DemoSENER.lof)
-\tf@lof=\write6
-\openout6 = `DemoSENER.lof'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [3
-
-] (DemoSENER.lot)
-\tf@lot=\write7
-\openout7 = `DemoSENER.lot'.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [4
-
-]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 46.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
-File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonsta
-ndard glyph set (RS)
 )
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-
-[5]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 80.0pt on input line 65.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 80.0pt on input line 65.
+(Font)              scaled to size 10.5pt on input line 20.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 65.
+(Font)              scaled to size 9.5pt on input line 32.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 65.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 19.46141pt on input line 65.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/24.88'.
-(microtype)             Ignoring protrusion settings for this character.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-File: img/fondo_guinda.png Graphic file (type bmp)
-<img/fondo_guinda.png>
- [6
-
-]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 72.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 72.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 72.
+(Font)              scaled to size 9.5pt on input line 35.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 73.
+(Font)              scaled to size 10.95pt on input line 46.
 
 
-LaTeX Warning: Citation ')' on page 7 undefined on input line 73.
+Package caption Warning: Unused \captionsetup[figure] on input line 255.
+See the caption package documentation for explanation.
 
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 73.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmtt' (encoding: TU).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 10.95096pt on input line 92.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/14'.
-(microtype)             Ignoring protrusion settings for this character.
-
-LaTeX Warning: Citation ')' on page 7 undefined on input line 98.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[7
-
-]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [8]
-File: img/graficos/figura_2_1.png Graphic file (type bmp)
-<img/graficos/figura_2_1.png>
-LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 12.09027pt on input line 156.
-LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 9.0677pt on input line 156.
-
-
-LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 156.
-
-\@float@every@table=\toks61
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 159.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 159.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 161.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 161.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 161.
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 161.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 161.
-
-
-LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 161.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 161.
-
+(Font)              scaled to size 8.0pt on input line 60.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 163.
-
-Overfull \hbox (12.1425pt too wide) in paragraph at lines 163--163
-[]|[]\TU/NotoSans(0)/b/n/10.5 Participación 
- []
-
+(Font)              scaled to size 8.0pt on input line 60.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[9]
-LaTeX Font Info:    Font shape `TU/NotoSans(1)/b/n' will be
-(Font)              scaled to size 9.0677pt on input line 174.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 177.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 9.5pt on input line 180.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 184.
+[1
 
-ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [10]
-File: img/graficos/figura_2_12.png Graphic file (type bmp)
-<img/graficos/figura_2_12.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [11]
-File: img/graficos/figura_4_3.png Graphic file (type bmp)
-<img/graficos/figura_4_3.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-
-[12]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [13]
-Overfull \hbox (50.2109pt too wide) in paragraph at lines 309--309
-\TU/NotoSans(0)/b/n/10.5 Flexibilidad del sistema \TU/NotoSans(0)/m/n/10.5 – Ca
-pacidad del sistema eléctrico para responder a variaciones de oferta/demanda,
- []
-
-
-Overfull \hbox (3.3245pt too wide) in paragraph at lines 312--312
-[][]\TU/NotoSans(0)/m/n/12 CENACE. \TU/NotoSans(0)/m/it/12 Nota técnica sobre f
-lexibilidad operativa (demo)\TU/NotoSans(0)/m/n/12 . 2023. \TU/NotoSans(0)/m/sc
-/12 url\TU/NotoSans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][]
- []
- []
-
-
-LaTeX Warning: Citation ')' on page 14 undefined on input line 311.
-
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[14
-
-]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [15]
-LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 7.96509pt on input line 328.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [16
-
-]
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 335.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 335.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 335.
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [17
-
-
-]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-File: img/contraportada.png Graphic file (type bmp)
-<img/contraportada.png>
- [18
-
-] (DemoSENER.aux)
+] (test_caption_fix.aux
+LaTeX Info: Redefining \sptext on input line 14.
+LaTeX Info: Redefining \. on input line 14.
+LaTeX Info: Redefining \% on input line 14.
+)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -2469,30 +1862,21 @@ LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
 
-LaTeX Font Warning: Some font shapes were not available, defaults substituted.
-
-
-LaTeX Warning: There were undefined references.
-
-
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                DemoSENER
-(biblatex)                and rerun LaTeX afterwards.
-
-Package logreq Info: Writing requests to 'DemoSENER.run.xml'.
-\openout1 = `DemoSENER.run.xml'.
+Package rerunfilecheck Info: File `test_caption_fix.out' has not changed.
+(rerunfilecheck)             Checksum: 0C370DEE11454CA4D163B375E2739E7F;601.
+Package logreq Info: Writing requests to 'test_caption_fix.run.xml'.
+\openout1 = `test_caption_fix.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51090 strings out of 402987
- 1091195 string characters out of 5452871
- 2132877 words of memory out of 5000000
- 79086 multiletter control sequences out of 15000+600000
- 650581 words of font info for 120 fonts, out of 8000000 for 9000
+ 43514 strings out of 402987
+ 868139 string characters out of 5452871
+ 1850445 words of memory out of 5000000
+ 71697 multiletter control sequences out of 15000+600000
+ 629277 words of font info for 79 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,130p,1188b,5586s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,130p,1211b,4037s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on DemoSENER.pdf (18 pages).
+Output written on test_caption_fix.pdf (1 page).

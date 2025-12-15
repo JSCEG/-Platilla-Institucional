@@ -1,17 +1,15 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'DemoSENER.blg'
-[121] biber-MSWIN64:342> INFO - === 
-[160] Biber.pm:421> INFO - Reading 'DemoSENER.bcf'
-[294] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
-[310] Biber.pm:4487> INFO - Processing section 0
-[323] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[378] bibtex.pm:1713> INFO - LaTeX decoding ...
-[388] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[437] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
-[437] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[437] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
-[437] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
-[445] bbl.pm:676> INFO - Writing 'DemoSENER.bbl' with encoding 'UTF-8'
-[446] bbl.pm:779> INFO - Output to DemoSENER.bbl
-[446] Biber.pm:132> WARN - I didn't find a database entry for ')' (section 0)
-[447] Biber.pm:134> INFO - WARNINGS: 1
+[331] biber-MSWIN64:342> INFO - === 
+[459] Biber.pm:421> INFO - Reading 'DemoSENER.bcf'
+[624] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
+[644] Biber.pm:4487> INFO - Processing section 0
+[672] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[736] bibtex.pm:1713> INFO - LaTeX decoding ...
+[756] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[863] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[864] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
+[864] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
+[865] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
+[950] bbl.pm:676> INFO - Writing 'DemoSENER.bbl' with encoding 'UTF-8'
+[951] bbl.pm:779> INFO - Output to DemoSENER.bbl

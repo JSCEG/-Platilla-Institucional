@@ -406,6 +406,9 @@
 \setlength{\parskip}{0.5em}
 \linespread{1.15}
 
+% FIX: Evitar justificación vertical que estira contenido cuando floats saltan
+\AtBeginDocument{\raggedbottom}
+
 % ============================================================================
 % FIX: ESPACIADO DE FIGURAS, TABLAS Y FUENTES (más reducido)
 % ============================================================================
@@ -510,7 +513,7 @@
 % Configuración global de listas más compacta
 \setlist{
   noitemsep,           % Sin espacio entre items
-  topsep=0.3em,        % Espacio mínimo arriba/abajo de la lista
+  topsep=0.15em,       % FIX: Espacio reducido arriba/abajo de la lista
   parsep=0pt,          % Sin espacio entre párrafos dentro de items
   partopsep=0pt,       % Sin espacio extra cuando la lista inicia párrafo
   leftmargin=*         % Margen automático según la etiqueta
@@ -521,7 +524,7 @@
   label=\textbullet,
   leftmargin=*,
   itemsep=0pt,         % FIX: Sin espacio entre items
-  topsep=0.2em,        % FIX: Reducido de 0.2em
+  topsep=0.15em,       % FIX: Más reducido para evitar estiramiento
   parsep=0pt
 }
 
@@ -605,18 +608,33 @@
 % TABLAS CON ESTILOS PREDEFINIDOS
 % ============================================================================
 
+% FIX: Estilo de caption para tablas cortas (igual que longtable)
+\makeatletter
+\newcommand\floatc@SENERtable[2]{%
+  {\footnotesize\color{gobmxGris}\raggedright #1.\ #2\par}%
+}
+\newcommand\fs@SENERtable{%
+  \let\@fs@capt\floatc@SENERtable
+  \def\@fs@pre{}\def\@fs@post{}%
+  \def\@fs@mid{\vspace\abovecaptionskip\relax}%
+  \let\@fs@iftopcapt\iftrue
+}
+\makeatother
+
 % FIX: Tabla estilo dorado corto (mismo look que longtable)
 \newenvironment{tabladoradoCorto}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
+  \floatstyle{SENERtable}
+  \restylefloat{table}
   \begin{table}[H]
-  \raggedright % FIX: Alineación izquierda como longtable
   \renewcommand{\arraystretch}{1.2}
   \sffamily\notosanssmall
-  \captionsetup{justification=raggedright,singlelinecheck=false}
   \color{gobmxGris} % FIX: Texto gris en cuerpo como longtable
   #1
 }{
   \end{table}
+  \floatstyle{plain}
+  \restylefloat{table}
 }
 
 % Tabla estilo guinda (predeterminada) - mantenida para compatibilidad

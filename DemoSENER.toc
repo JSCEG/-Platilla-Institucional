@@ -4,9 +4,9 @@
 \contentsline {subsection}{\numberline {1.2}Bloques (cajas) usando líneas separadas}{8}{subsection.1.2}%
 \contentsline {section}{\numberline {2}Tablas y figuras (inserción automática)}{9}{section.2}%
 \contentsline {section}{\numberline {3}Prueba de párrafos y saltos de línea}{11}{section.3}%
-\contentsline {paragraph}{Mini encabezado dentro de sección}{12}{paragraph*.21}%
+\contentsline {paragraph}{Mini encabezado dentro de sección}{12}{paragraph*.20}%
 \SENERAppendixTOCSetup 
 \contentsline {section}{\numberline {A}Ejemplo de anexo}{14}{appendix.A}%
 \contentsline {subsection}{\numberline {A.1}Detalle adicional}{14}{subsection.A.1}%
-\contentsline {section}{Glosario}{14}{section*.23}%
-\contentsline {section}{Siglas y Acrónimos}{15}{section*.26}%
+\contentsline {section}{Glosario}{14}{section*.22}%
+\contentsline {section}{Siglas y Acrónimos}{15}{section*.25}%

@@ -1,0 +1,60 @@
+\documentclass{sener2025}
+
+\title{Test de Captions de Tablas}
+\author{Test}
+\date{\today}
+
+\begin{document}
+
+\section{Prueba de Captions}
+
+Esta es una prueba para verificar que los captions de las tablas cortas se vean igual que los de las tablas largas: gris y alineados a la izquierda.
+
+\subsection{Tabla Corta (tabladoradoCorto)}
+
+\begin{tabladoradoCorto}
+  \caption{Tabla corta - debe ser gris y alineada a la izquierda}
+  \label{tab:corta}
+  \begin{tabular}{H{3cm}G{2cm}G{2cm}}
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{Valor A} & \encabezadodorado{Valor B} \\
+    \midrule
+    \textbf{Item 1} & 100 & 200 \\
+    \textbf{Item 2} & 150 & 250 \\
+    \textbf{Item 3} & 200 & 300 \\
+    \bottomrule
+  \end{tabular}
+\end{tabladoradoCorto}
+
+\subsection{Tabla Larga (longtable)}
+
+\begin{tabladoradoLargo}
+  \begin{longtable}{B{3cm}p{2cm}p{2cm}}
+    \caption{Tabla larga - referencia del estilo correcto}\label{tab:larga}\\
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{Valor A} & \encabezadodorado{Valor B} \\
+    \midrule
+    \endfirsthead
+
+    \caption[]{Tabla larga (continuación)}\\
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{Valor A} & \encabezadodorado{Valor B} \\
+    \midrule
+    \endhead
+
+    \midrule
+    \multicolumn{3}{r}{\small\textit{Continúa en la siguiente página...}} \\
+    \endfoot
+
+    \bottomrule
+    \endlastfoot
+
+    \textbf{Item 1} & 100 & 200 \\
+    \textbf{Item 2} & 150 & 250 \\
+    \textbf{Item 3} & 200 & 300 \\
+    \textbf{Item 4} & 250 & 350 \\
+    \textbf{Item 5} & 300 & 400 \\
+  \end{longtable}
+\end{tabladoradoLargo}
+
+\end{document}
