@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  16 DEC 2025 08:38
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  16 DEC 2025 12:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Proyectos/40.-PlantillasLatex/DEMO_SENER.tex
-(c:/Proyectos/40.-PlantillasLatex/DEMO_SENER.tex
+**c:/Proyectos/40.-PlantillasLatex/DEMO_SENER_SASSO.tex
+(c:/Proyectos/40.-PlantillasLatex/DEMO_SENER_SASSO.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\documentmetadata-support.ltx (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfmanagement-testphase\pdfmanagement-testphase.sty
@@ -1522,8 +1522,8 @@ Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/bookmark\bkm-dvipdfm.def
 File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 \BKM@id=\count583
-)) (DEMO_SENER.aux)
-\openout1 = `DEMO_SENER.aux'.
+)) (DEMO_SENER_SASSO.aux)
+\openout1 = `DEMO_SENER_SASSO.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
 LaTeX Font Info:    ... okay on input line 32.
@@ -1681,11 +1681,11 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `DEMO_SENER.bcf'.
+\openout4 = `DEMO_SENER_SASSO.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'DEMO_SENER.bbl' found.
-(DEMO_SENER.bbl
+Package biblatex Info: ... file 'DEMO_SENER_SASSO.bbl' found.
+(DEMO_SENER_SASSO.bbl
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
@@ -1768,7 +1768,7 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17.28'.
 (microtype)             Ignoring protrusion settings for this character.
- (DEMO_SENER.toc
+ (DEMO_SENER_SASSO.toc
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 12.0pt on input line 2.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
@@ -1779,7 +1779,7 @@ LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 ))
 \tf@toc=\write5
-\openout5 = `DEMO_SENER.toc'.
+\openout5 = `DEMO_SENER_SASSO.toc'.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 8.0pt on input line 37.
@@ -1788,7 +1788,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [2
 
 
-] (DEMO_SENER.lof
+] (DEMO_SENER_SASSO.lof
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
 (Font)              scaled to size 10.62012pt on input line 2.
 Package microtype Info: Character `~ (= ~)' is missing
@@ -1820,15 +1820,15 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 )
 \tf@lof=\write6
-\openout6 = `DEMO_SENER.lof'.
+\openout6 = `DEMO_SENER_SASSO.lof'.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [3
 
-] (DEMO_SENER.lot)
+] (DEMO_SENER_SASSO.lot)
 \tf@lot=\write7
-\openout7 = `DEMO_SENER.lot'.
+\openout7 = `DEMO_SENER_SASSO.lot'.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -1850,16 +1850,21 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [7
 
 ]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [8
+
+]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 80.0pt on input line 81.
+(Font)              scaled to size 80.0pt on input line 88.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 80.0pt on input line 81.
+(Font)              scaled to size 80.0pt on input line 88.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 81.
+(Font)              scaled to size 24.88pt on input line 88.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 81.
+(Font)              scaled to size 24.88pt on input line 88.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 19.46141pt on input line 81.
+(Font)              scaled to size 19.46141pt on input line 88.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1891,11 +1896,11 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [8
+ [9
 
 ]
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 83.
+(Font)              scaled to size 9.38654pt on input line 90.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1924,7 +1929,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.29759pt on input line 83.
+(Font)              scaled to size 13.29759pt on input line 90.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1953,25 +1958,25 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 88.
+(Font)              scaled to size 10.0pt on input line 95.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 88.
+(Font)              scaled to size 7.0pt on input line 95.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 88.
+(Font)              scaled to size 5.0pt on input line 95.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 12.0pt on input line 89.
+(Font)              scaled to size 12.0pt on input line 96.
 
 
-LaTeX Warning: Citation ')' on page 9 undefined on input line 89.
+LaTeX Warning: Citation ')' on page 10 undefined on input line 96.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/sc' will be
-(Font)              scaled to size 12.0pt on input line 89.
+(Font)              scaled to size 12.0pt on input line 96.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 10.95096pt on input line 108.
+(Font)              scaled to size 10.95096pt on input line 115.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2000,115 +2005,115 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
 
-LaTeX Warning: Citation ')' on page 9 undefined on input line 114.
+LaTeX Warning: Citation ')' on page 10 undefined on input line 121.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[9
+[10
 
 ] (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-TU-empty.cfg
 File: mt-TU-empty.cfg 2021/06/22 v1.1 microtype config. file: fonts with nonstandard glyph set (RS)
 )
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [10]
+ [11]
 File: img/graficos/figura_2_1.png Graphic file (type bmp)
 <img/graficos/figura_2_1.png>
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 12.09027pt on input line 172.
+(Font)              scaled to size 12.09027pt on input line 179.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 9.0677pt on input line 172.
+(Font)              scaled to size 9.0677pt on input line 179.
 
 
 LaTeX Font Warning: Font shape `TU/NotoSans(1)/b/n' undefined
-(Font)              using `TU/NotoSans(1)/m/n' instead on input line 172.
+(Font)              using `TU/NotoSans(1)/m/n' instead on input line 179.
 
 \@float@every@table=\toks61
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 175.
+(Font)              scaled to size 10.5pt on input line 182.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 175.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 177.
+(Font)              scaled to size 10.95pt on input line 182.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 184.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 177.
+(Font)              scaled to size 7.34996pt on input line 184.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 177.
+(Font)              scaled to size 5.25pt on input line 184.
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 177.
+(Font)              size <10.95> substituted on input line 184.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 177.
+(Font)              size <10.95> substituted on input line 184.
 
 
 LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 177.
+(Font)              size <10.95> substituted on input line 184.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 177.
+(Font)              size <10.95> substituted on input line 184.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 179.
+(Font)              scaled to size 10.5pt on input line 186.
 
-Overfull \hbox (12.1425pt too wide) in paragraph at lines 179--180
+Overfull \hbox (12.1425pt too wide) in paragraph at lines 186--187
 []|[]\TU/NotoSans(0)/b/n/10.5 Participación 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[11]
+[12]
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/b/n' will be
-(Font)              scaled to size 9.0677pt on input line 187.
+(Font)              scaled to size 9.0677pt on input line 194.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 190.
+(Font)              scaled to size 9.5pt on input line 197.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 9.5pt on input line 193.
+(Font)              scaled to size 9.5pt on input line 200.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 197.
+(Font)              scaled to size 10.95pt on input line 204.
 
-c:/Proyectos/40.-PlantillasLatex/DEMO_SENER.tex:236: ignored error: Infinite glue shrinkage found in box being split
+c:/Proyectos/40.-PlantillasLatex/DEMO_SENER_SASSO.tex:243: ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [12]
+ [13]
 File: img/graficos/figura_2_12.png Graphic file (type bmp)
 <img/graficos/figura_2_12.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [13]
+ [14]
 File: img/graficos/figura_4_3.png Graphic file (type bmp)
 <img/graficos/figura_4_3.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [14]
+ [15]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [15]
-Overfull \hbox (50.2109pt too wide) in paragraph at lines 337--337
+ [16]
+Overfull \hbox (50.2109pt too wide) in paragraph at lines 329--329
 \TU/NotoSans(0)/b/n/10.5 Flexibilidad del sistema \TU/NotoSans(0)/m/n/10.5 – Capacidad del sistema eléctrico para responder a variaciones de oferta/demanda,
  []
 
 
-Overfull \hbox (3.3245pt too wide) in paragraph at lines 340--340
+Overfull \hbox (3.3245pt too wide) in paragraph at lines 332--332
 [][]\TU/NotoSans(0)/m/n/12 CENACE. \TU/NotoSans(0)/m/it/12 Nota técnica sobre flexibilidad operativa (demo)\TU/NotoSans(0)/m/n/12 . 2023. \TU/NotoSans(0)/m/sc/12 url\TU/NotoSans(0)/m/n/12 : [][]$[][][][][] [] [] [] [][][] [] [][][][][][] []
  []
 
 
-LaTeX Warning: Citation ')' on page 16 undefined on input line 339.
+LaTeX Warning: Citation ')' on page 17 undefined on input line 331.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[16
+[17
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [17]
+ [18]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 17.28pt on input line 356.
+(Font)              scaled to size 17.28pt on input line 348.
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 7.96509pt on input line 356.
+(Font)              scaled to size 7.96509pt on input line 348.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2138,18 +2143,18 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [18
+ [19
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 363.
+(Font)              scaled to size 14.4pt on input line 355.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 14.4pt on input line 363.
+(Font)              scaled to size 14.4pt on input line 355.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.95pt on input line 363.
+(Font)              scaled to size 10.95pt on input line 355.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [19
+ [20
 
 
 ]
@@ -2157,9 +2162,9 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/contraportada.png Graphic file (type bmp)
 <img/contraportada.png>
- [20
+ [21
 
-] (DEMO_SENER.aux)
+] (DEMO_SENER_SASSO.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -2172,17 +2177,17 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package logreq Info: Writing requests to 'DEMO_SENER.run.xml'.
-\openout1 = `DEMO_SENER.run.xml'.
+Package logreq Info: Writing requests to 'DEMO_SENER_SASSO.run.xml'.
+\openout1 = `DEMO_SENER_SASSO.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51037 strings out of 402987
- 1090182 string characters out of 5452871
- 2132952 words of memory out of 5000000
- 79033 multiletter control sequences out of 15000+600000
+ 51036 strings out of 402987
+ 1090382 string characters out of 5452871
+ 2132959 words of memory out of 5000000
+ 79032 multiletter control sequences out of 15000+600000
  650581 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,130p,1220b,5586s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,13n,130p,1226b,5586s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on DEMO_SENER.pdf (20 pages).
+Output written on DEMO_SENER_SASSO.pdf (21 pages).

@@ -10,12 +10,10 @@
  *    - Bibliografia: DocumentoID, Clave, Tipo, Autor, Titulo, Anio, Editorial, Url
  */
 
-// Carpeta destino en Drive (preferida). Ejemplo de URL:
-// https://drive.google.com/drive/folders/<ESTE_ES_EL_ID>
 const CARPETA_SALIDA_ID = '1NnO4B8EJCx6VNrmDxWwwW3KsHCTID_c2';
 
 // FIX: Flag de debug para optimizar logging en producción
-const DEBUG = true;
+const DEBUG = false;
 
 /**
  * Crea el menú en la interfaz de Google Sheets
@@ -63,12 +61,8 @@ let logMensajes = [];
 
 function log(mensaje) {
     console.log(mensaje);
-    // Acumular logs útiles para el usuario.
-    // Nota: Aunque DEBUG esté apagado, conviene mostrar ✅/⚠️/❌ para diagnóstico.
-    const esImportante =
-        mensaje &&
-        (mensaje.startsWith('✅') || mensaje.startsWith('⚠️') || mensaje.startsWith('❌'));
-    if (DEBUG || esImportante) {
+    // FIX: Solo acumular logs en modo debug para evitar timeout
+    if (DEBUG) {
         logMensajes.push(mensaje);
     }
 }
@@ -103,14 +97,7 @@ function generarLatex() {
     try {
         log('🚀 Iniciando generación de LaTeX...');
 
-        // 1. Verificar que estamos en la hoja "Documentos"
-        const hojaActiva = ss.getActiveSheet();
-        if (hojaActiva.getName() !== 'Documentos') {
-            ui.alert('⚠️ Por favor, selecciona una celda en la hoja "Documentos" antes de generar el archivo.');
-            return;
-        }
-
-        // 2. Obtener datos de la hoja "Documentos"
+        // 1. Obtener datos de la hoja "Documentos"
         const hojaDocs = ss.getSheetByName('Documentos');
         if (!hojaDocs) {
             ui.alert('❌ Error: No se encuentra la hoja "Documentos".');
@@ -126,20 +113,15 @@ function generarLatex() {
         const datosDoc = obtenerDatosFila(hojaDocs, filaActiva);
         const docId = datosDoc['ID'];
 
-        log(`🔍 Fila activa: ${filaActiva}`);
-        log(`📋 Datos obtenidos: ${JSON.stringify(datosDoc)}`);
-        log(`🆔 ID encontrado: "${docId}" (tipo: ${typeof docId})`);
-
-        if (!docId || docId.toString().trim() === '') {
-            ui.alert('❌ Error: La fila seleccionada no tiene un ID de documento válido.');
-            log('❌ ID vacío o inválido');
+        if (!docId) {
+            ui.alert('❌ Error: La fila seleccionada no tiene un ID de documento.');
             return;
         }
 
         log(`📄 Procesando documento ID: ${docId}`);
         log(`📝 Título: ${datosDoc['Titulo']}`);
 
-        // 3. Leer todas las hojas relacionadas
+        // 2. Leer todas las hojas relacionadas
         const secciones = obtenerRegistros(ss, 'Secciones', docId, 'DocumentoID');
         const bibliografia = obtenerRegistros(ss, 'Bibliografia', docId, 'DocumentoID');
         const figuras = obtenerRegistros(ss, 'Figuras', docId, 'DocumentoID');
@@ -165,23 +147,13 @@ function generarLatex() {
             return oa - ob;
         });
 
-        // 4. Construir el contenido LaTeX
+        // 3. Construir el contenido LaTeX
         const tex = construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, siglas, glosario, ss);
 
-        // 5. Guardar archivos en Drive
-        const salida = guardarArchivos(datosDoc, tex, bibliografia);
+        // 4. Guardar archivos en Drive
+        guardarArchivos(datosDoc, tex, bibliografia);
 
-        const resumenSalida = salida
-            ? `\n\n📁 Carpeta: ${salida.carpetaNombre}\n${salida.carpetaUrl}` +
-            `\n\n📄 Archivo: ${salida.texNombre}\n${salida.texUrl}` +
-            (salida.bibUrl ? `\n\n📚 Bibliografía:\n${salida.bibUrl}` : '')
-            : '';
-
-        ui.alert(
-            '✅ ¡Éxito!',
-            `Archivos generados correctamente.${resumenSalida}\n\n${logMensajes.join('\n')}`,
-            ui.ButtonSet.OK
-        );
+        ui.alert('✅ ¡Éxito!', `Archivos generados correctamente.\n\n${logMensajes.join('\n')}`, ui.ButtonSet.OK);
 
     } catch (e) {
         ui.alert('❌ Error', `${e.toString()}\n\nStack: ${e.stack}`, ui.ButtonSet.OK);
@@ -264,52 +236,26 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += `\\listatablas\n\\newpage\n\n`;
     }
 
-    // --- Agradecimientos ---
-    if (datosDoc['Agradecimientos'] && datosDoc['Agradecimientos'].toString().trim()) {
-        tex += `\\clearpage\n`;
-        tex += `\\begin{center}\n`;
-        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Agradecimientos}\\\\[1cm]\n`;
-        tex += `\\end{center}\n\n`;
-        tex += `${procesarConEtiquetas(datosDoc['Agradecimientos'])}\n\n`;
-    }
-
-    // --- Presentación ---
-    // Nota: en Sheets puede venir como "Presentación" (con acento) según el encabezado.
-    const presentacionRaw = (datosDoc['Presentación'] !== undefined && datosDoc['Presentación'] !== null)
-        ? datosDoc['Presentación']
-        : datosDoc['Presentacion'];
-    if (presentacionRaw && presentacionRaw.toString().trim()) {
-        tex += `\\clearpage\n`;
-        tex += `\\begin{center}\n`;
-        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Presentación}\\\\[1cm]\n`;
-        tex += `\\end{center}\n\n`;
-        tex += `${procesarConEtiquetas(presentacionRaw)}\n\n`;
-    }
-
     // --- Resumen Ejecutivo ---
-    if (datosDoc['ResumenEjecutivo'] && datosDoc['ResumenEjecutivo'].toString().trim()) {
-        tex += `\\clearpage\n`;
-        tex += `\\begin{center}\n`;
-        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Resumen Ejecutivo}\\\\[1cm]\n`;
-        tex += `\\end{center}\n\n`;
-        tex += `${procesarConEtiquetas(datosDoc['ResumenEjecutivo'])}\n\n`;
+    if (datosDoc['ResumenEjecutivo']) {
+        tex += `\\begin{resumenejecutivo}\n`;
+        tex += `${procesarConEtiquetas(datosDoc['ResumenEjecutivo'])}\n`;
+        tex += `\\end{resumenejecutivo}\n\n`;
     }
 
     // --- Datos Clave ---
-    if (datosDoc['DatosClave'] && datosDoc['DatosClave'].toString().trim()) {
-        tex += `\\clearpage\n`;
-        tex += `\\begin{center}\n`;
-        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Datos Clave}\\\\[1cm]\n`;
-        tex += `\\end{center}\n\n`;
+    if (datosDoc['DatosClave']) {
+        tex += `\\begin{datosclave}\n`;
         const textoDatos = datosDoc['DatosClave'].toString();
         const items = textoDatos.split(/[;\n]/);
-        tex += `\\begin{itemize}\n`;
+        tex += `  \\begin{itemize}\n`;
         items.forEach(item => {
             if (item.trim()) {
-                tex += `  \\item ${escaparLatex(item.trim())}\n`;
+                tex += `    \\item ${escaparLatex(item.trim())}\n`;
             }
         });
-        tex += `\\end{itemize}\n\n`;
+        tex += `  \\end{itemize}\n`;
+        tex += `\\end{datosclave}\n\n`;
     }
 
     // --- Secciones ---
@@ -678,47 +624,19 @@ function procesarContraportada(contenidoRaw) {
  * FIX: Guarda los archivos .tex y .bib en Drive (optimizado para evitar timeout)
  */
 function obtenerCarpetaSalida_() {
-    const userProps = PropertiesService.getUserProperties();
+    const props = PropertiesService.getScriptProperties();
+    const idConfigurado = (props.getProperty('CARPETA_SALIDA_ID') || CARPETA_SALIDA_ID || '').toString().trim();
 
-    // IMPORTANTE:
-    // - Priorizamos el ID fijo (CARPETA_SALIDA_ID) para que siempre genere en la carpeta “en línea”.
-    // - Para colaboradores, usamos UserProperties (por usuario) para recordar un fallback sin afectar a otros.
-    const idFijo = (CARPETA_SALIDA_ID || '').toString().trim();
-    const idUser = (userProps.getProperty('CARPETA_SALIDA_ID') || '').toString().trim();
-
-    const candidatos = [];
-    if (idFijo) candidatos.push({ id: idFijo, fuente: 'CARPETA_SALIDA_ID (const)' });
-    if (idUser && idUser !== idFijo) candidatos.push({ id: idUser, fuente: 'UserProperties.CARPETA_SALIDA_ID' });
-
-    for (let i = 0; i < candidatos.length; i++) {
-        const c = candidatos[i];
+    if (idConfigurado) {
         try {
-            const carpeta = DriveApp.getFolderById(c.id);
-            // Forzar lectura para validar acceso/permisos
-            carpeta.getName();
-            log(`✅ Carpeta de salida OK usando ${c.fuente}: ${carpeta.getName()} (ID: ${c.id})`);
-            return carpeta;
-        } catch (e) {
-            log(`⚠️ No se pudo acceder a carpeta (fuente: ${c.fuente}, ID: ${c.id}). ` +
-                `Asegura que la carpeta esté compartida con la cuenta que ejecuta el script. Detalle: ${e.toString()}`);
-        }
-    }
-
-    return obtenerCarpetaFallback_();
-}
-
-function obtenerCarpetaFallback_() {
-    const userProps = PropertiesService.getUserProperties();
-
-    // Si ya existe un fallback por-usuario, reusarlo.
-    const fallbackId = (userProps.getProperty('CARPETA_SALIDA_FALLBACK_ID') || '').toString().trim();
-    if (fallbackId) {
-        try {
-            const carpeta = DriveApp.getFolderById(fallbackId);
+            const carpeta = DriveApp.getFolderById(idConfigurado);
+            // Forzar una lectura para validar acceso/permisos
             carpeta.getName();
             return carpeta;
         } catch (e) {
-            // Si ya no existe/no hay acceso, se recrea abajo.
+            log(`⚠️ No se pudo acceder a la carpeta de salida (ID: ${idConfigurado}). ` +
+                `Si compartiste el proyecto, es normal: el otro usuario no tiene permiso sobre TU carpeta. ` +
+                `Se usará una carpeta alternativa en 'Mi unidad'. Detalle: ${e.toString()}`);
         }
     }
 
@@ -728,43 +646,25 @@ function obtenerCarpetaFallback_() {
     const existentes = root.getFoldersByName(nombreFallback);
     const carpetaFallback = existentes.hasNext() ? existentes.next() : root.createFolder(nombreFallback);
 
-    // Guardar solo por-usuario: no afecta a otros colaboradores.
-    userProps.setProperty('CARPETA_SALIDA_FALLBACK_ID', carpetaFallback.getId());
-    log(`⚠️ Usando carpeta fallback en 'Mi unidad': ${carpetaFallback.getName()} (ID: ${carpetaFallback.getId()})`);
+    // Guardar para siguientes ejecuciones
+    props.setProperty('CARPETA_SALIDA_ID', carpetaFallback.getId());
+    log(`✅ Carpeta de salida configurada automáticamente: ${carpetaFallback.getName()} (ID: ${carpetaFallback.getId()})`);
     return carpetaFallback;
 }
 
-function esAccesoDenegado_(e) {
-    const msg = (e && e.toString) ? e.toString() : String(e);
-    return /acceso denegado|access denied/i.test(msg);
-}
-
 function guardarArchivos(datosDoc, tex, bibliografia) {
-    let carpeta = obtenerCarpetaSalida_();
+    const carpeta = obtenerCarpetaSalida_();
     const nombreBase = datosDoc['DocumentoCorto'] || 'documento_generado';
 
-    const carpetaId = carpeta.getId();
-    const carpetaNombre = carpeta.getName();
-    const carpetaUrl = `https://drive.google.com/drive/folders/${carpetaId}`;
-    log(`📁 Guardando en carpeta: ${carpetaNombre} (ID: ${carpetaId})`);
-
     // FIX: Optimizar eliminación de archivos existentes
-    const intentarGuardarEnCarpeta_ = (carpetaDestino) => {
-        const carpetaIdLocal = carpetaDestino.getId();
-        const carpetaNombreLocal = carpetaDestino.getName();
-        const carpetaUrlLocal = `https://drive.google.com/drive/folders/${carpetaIdLocal}`;
-        log(`📁 Guardando en carpeta: ${carpetaNombreLocal} (ID: ${carpetaIdLocal})`);
-
+    try {
         // Guardar .tex (solo eliminar si existe)
-        const texNombre = nombreBase + '.tex';
-        const archivosTexExistentes = carpetaDestino.getFilesByName(texNombre);
+        const archivosTexExistentes = carpeta.getFilesByName(nombreBase + '.tex');
         if (archivosTexExistentes.hasNext()) {
             archivosTexExistentes.next().setTrashed(true);
         }
-        const fileTex = carpetaDestino.createFile(texNombre, tex, MimeType.PLAIN_TEXT);
-        const texId = fileTex.getId();
-        const texUrl = fileTex.getUrl();
-        log(`✅ Archivo ${texNombre} creado (ID: ${texId})`);
+        carpeta.createFile(nombreBase + '.tex', tex, 'text/plain');
+        log(`✅ Archivo ${nombreBase}.tex creado`);
 
         // Guardar .bib si hay referencias (optimizado)
         if (bibliografia.length > 0) {
@@ -784,53 +684,14 @@ function guardarArchivos(datosDoc, tex, bibliografia) {
 
             const bibContent = bibEntries.join('\n');
 
-            const archivosBibExistentes = carpetaDestino.getFilesByName('referencias.bib');
+            const archivosBibExistentes = carpeta.getFilesByName('referencias.bib');
             if (archivosBibExistentes.hasNext()) {
                 archivosBibExistentes.next().setTrashed(true);
             }
-            const fileBib = carpetaDestino.createFile('referencias.bib', bibContent, MimeType.PLAIN_TEXT);
-            log(`✅ Archivo referencias.bib creado con ${bibliografia.length} referencias (ID: ${fileBib.getId()})`);
-
-            return {
-                carpetaId: carpetaIdLocal,
-                carpetaNombre: carpetaNombreLocal,
-                carpetaUrl: carpetaUrlLocal,
-                texNombre,
-                texId,
-                texUrl,
-                bibId: fileBib.getId(),
-                bibUrl: fileBib.getUrl()
-            };
+            carpeta.createFile('referencias.bib', bibContent, 'text/plain');
+            log(`✅ Archivo referencias.bib creado con ${bibliografia.length} referencias`);
         }
-
-        return {
-            carpetaId: carpetaIdLocal,
-            carpetaNombre: carpetaNombreLocal,
-            carpetaUrl: carpetaUrlLocal,
-            texNombre,
-            texId,
-            texUrl,
-            bibId: '',
-            bibUrl: ''
-        };
-    };
-
-    try {
-        return intentarGuardarEnCarpeta_(carpeta);
     } catch (e) {
-        if (esAccesoDenegado_(e)) {
-            // Caso típico: el colaborador tiene acceso al Sheet pero NO permisos de edición en la carpeta.
-            log(
-                `⚠️ Acceso denegado al escribir en la carpeta de salida. ` +
-                `Esto pasa si el usuario no tiene permiso de EDITOR en esa carpeta de Drive. ` +
-                `Se guardará en una carpeta fallback en su 'Mi unidad'. Detalle: ${e.toString()}`
-            );
-            carpeta = obtenerCarpetaFallback_();
-            // Recordar por-usuario (no global) para evitar errores repetidos.
-            PropertiesService.getUserProperties().setProperty('CARPETA_SALIDA_ID', carpeta.getId());
-            return intentarGuardarEnCarpeta_(carpeta);
-        }
-
         log(`❌ Error al guardar archivos: ${e.toString()}`);
         throw e;
     }

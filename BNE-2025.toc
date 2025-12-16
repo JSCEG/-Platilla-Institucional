@@ -1,0 +1,5 @@
+\babel@toc {mexican}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{10}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Fundamento jurídico del Balance Nacional de Energía}{12}{subsection.1.1}%
+\contentsline {section}{Glosario}{13}{section*.7}%
+\contentsline {section}{Siglas y Acrónimos}{13}{section*.8}%

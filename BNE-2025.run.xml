@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>DEMO_SENER.bcf</file>
+      <file>BNE-2025.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>DEMO_SENER.bbl</file>
+      <file>BNE-2025.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>DEMO_SENER</infile>
+      <infile>BNE-2025</infile>
     </cmdline>
     <input>
-      <file>DEMO_SENER.bcf</file>
+      <file>BNE-2025.bcf</file>
     </input>
     <output>
-      <file>DEMO_SENER.bbl</file>
+      <file>BNE-2025.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>DEMO_SENER.bbl</file>
+      <file>BNE-2025.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>DEMO_SENER.bcf</file>
+      <file>BNE-2025.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>
