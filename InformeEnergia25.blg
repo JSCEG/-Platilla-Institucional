@@ -1,18 +1,18 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'InformeEnergia25.blg'
-[129] biber-MSWIN64:342> INFO - === 
-[166] Biber.pm:421> INFO - Reading 'InformeEnergia25.bcf'
-[285] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
-[301] Biber.pm:4487> INFO - Processing section 0
-[313] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
-[354] bibtex.pm:1713> INFO - LaTeX decoding ...
-[363] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
-[411] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
-[411] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[411] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
-[411] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
-[422] bbl.pm:676> INFO - Writing 'InformeEnergia25.bbl' with encoding 'UTF-8'
-[422] bbl.pm:779> INFO - Output to InformeEnergia25.bbl
-[423] Biber.pm:132> WARN - I didn't find a database entry for 'sener2024_empleos' (section 0)
-[423] Biber.pm:132> WARN - I didn't find a database entry for 'geo2024_potencial' (section 0)
-[423] Biber.pm:134> INFO - WARNINGS: 2
+[181] biber-MSWIN64:342> INFO - === 
+[222] Biber.pm:421> INFO - Reading 'InformeEnergia25.bcf'
+[359] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[376] Biber.pm:4487> INFO - Processing section 0
+[389] Biber.pm:4678> INFO - Looking for bibtex file 'referencias.bib' for section 0
+[449] bibtex.pm:1713> INFO - LaTeX decoding ...
+[466] bibtex.pm:1519> INFO - Found BibTeX data source 'referencias.bib'
+[513] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'variable = shifted' with 'variable = non-ignorable'
+[513] UCollate.pm:68> INFO - Overriding locale 'mexican' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[513] Biber.pm:4307> INFO - Sorting list 'nyt/global//global/global/global' of type 'entry' with template 'nyt' and locale 'mexican'
+[513] Biber.pm:4313> INFO - No sort tailoring available for locale 'mexican'
+[520] bbl.pm:676> INFO - Writing 'InformeEnergia25.bbl' with encoding 'UTF-8'
+[521] bbl.pm:779> INFO - Output to InformeEnergia25.bbl
+[522] Biber.pm:132> WARN - I didn't find a database entry for 'sener2024_empleos' (section 0)
+[522] Biber.pm:132> WARN - I didn't find a database entry for 'geo2024_potencial' (section 0)
+[522] Biber.pm:134> INFO - WARNINGS: 2

@@ -55,6 +55,10 @@ tipografias/
 └── NotoSans-MediumItalic.ttf
 ```
 
+**Nota:** Para compilar correctamente, la clase solo requiere (como mínimo) las variantes
+`Regular/Bold/Italic/BoldItalic` de Noto Sans y las 3 fuentes de Patria. Las variantes
+`Light/Medium` se incluyen para usos adicionales (si no están, no deberían romper la compilación).
+
 **IMPORTANTE**: Si las tipografías no están disponibles, el sistema usará fuentes por defecto, pero el resultado visual no será el oficial.
 
 ---
@@ -150,6 +154,10 @@ dir C:\PlantillasLatex\tipografias\
 ```
 
 Debe mostrar 14 archivos (.otf y .ttf)
+
+En el estado actual del proyecto, normalmente verás **11 archivos** (3 de Patria + 8 de Noto Sans).
+Si ves menos, es muy probable que falte la carpeta `tipografias/` completa o que estés compilando
+desde otra ruta.
 
 ### **PASO 4: Configurar Google Sheets**
 
@@ -258,6 +266,95 @@ Crear las siguientes hojas (pestañas) con estos nombres exactos:
    ```
 
 ---
+
+## 🖥️ Instalación en otra computadora (solo para compilar LaTeX)
+
+Si en la PC destino **solo quieres compilar** documentos (sin Google Sheets), basta con:
+
+1. Instalar TeX Live o MiKTeX (con **XeLaTeX** y **Biber**).
+2. Copiar a una carpeta local **estos elementos juntos**:
+    - `sener2025.cls`
+    - carpeta `tipografias/`
+    - carpeta `img/` (logos)
+    - tu documento `*.tex` (ej. `InformeEnergia25.tex`)
+    - `referencias.bib` (si usas bibliografía)
+
+Compila siempre desde esa carpeta (importante para que se encuentren `tipografias/` y `img/`).
+
+### Compilación recomendada (PowerShell)
+
+```powershell
+# Ejemplo
+cd C:\PlantillasLatex
+./compilar-y-mejorar.ps1 -archivo InformeEnergia25 -motor xelatex
+```
+
+### Compilación manual (sin script)
+
+```powershell
+cd C:\PlantillasLatex
+xelatex -interaction=nonstopmode InformeEnergia25.tex
+biber InformeEnergia25
+xelatex -interaction=nonstopmode InformeEnergia25.tex
+xelatex -interaction=nonstopmode InformeEnergia25.tex
+```
+
+---
+
+## 🆘 Problema típico: “No reconoce las fuentes” (Patria / Noto Sans)
+
+Este proyecto carga las fuentes desde archivos en `tipografias/` usando `fontspec` (XeLaTeX/LuaLaTeX).
+Si en otra PC no las reconoce, casi siempre es por **motor incorrecto** o **ruta de trabajo**.
+
+### Checklist rápido
+
+1) Confirmar motor
+
+```powershell
+xelatex --version
+where xelatex
+```
+
+- Si estás compilando con `pdflatex`, **no** se usarán las fuentes institucionales.
+
+2) Confirmar que compilas desde la carpeta correcta
+
+- En la carpeta actual deben estar `sener2025.cls` y la carpeta `tipografias/`.
+
+```powershell
+Get-Location
+dir .\sener2025.cls
+dir .\tipografias\NotoSans-Regular.ttf
+dir .\tipografias\Patria_Regular.otf
+```
+
+3) Revisar el `.log` (diagnóstico)
+
+- Compila una vez y luego busca errores de `fontspec`:
+
+```powershell
+xelatex -interaction=nonstopmode -halt-on-error InformeEnergia25.tex
+Select-String -Path .\InformeEnergia25.log -Pattern "fontspec|Font\\s.*not\\sfound|Cannot\\sfind\\sfont" -CaseSensitive:$false
+```
+
+4) Si usas MiKTeX
+
+- Asegura que MiKTeX tenga permisos para instalar paquetes “on-the-fly” o instala paquetes faltantes.
+- Si la PC está offline, haz una instalación completa o preinstala los paquetes en la PC con Internet.
+
+### Errores y causas comunes
+
+- **`fontspec error: The font ... cannot be found`**
+   - Falta `tipografias/` o estás compilando desde otra carpeta.
+   - El ZIP de distribución se copió incompleto.
+
+- **No da error, pero la salida se ve con otra tipografía**
+   - Estás compilando con `pdflatex` o con una receta de VS Code/latexmk que usa pdfLaTeX.
+
+### Recomendación para envío
+
+Usa el script [crear-paquete-distribucion.ps1](crear-paquete-distribucion.ps1) para generar un ZIP que incluya
+automáticamente `tipografias/` y `img/`.
 
 ## 🔧 Resolución de Problemas
 

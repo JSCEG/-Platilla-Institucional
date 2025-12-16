@@ -219,6 +219,11 @@ Cálculo de capacidad instalada: C = ...
 - Ejecuta `biber documento` después del primer `xelatex`
 - Verifica que las claves en `\autocite{}` existan en `referencias.bib`
 
+**No reconoce Patria / Noto Sans (fuentes)**
+- Confirma que estás compilando con XeLaTeX o LuaLaTeX (no pdfLaTeX)
+- Verifica que exista la carpeta `tipografias/` junto a `sener2025.cls`
+- Ver sección “No reconoce las fuentes” en `GUIA_INSTALACION.md`
+
 **Las fuentes no se ven correctamente**
 - Confirma que estás usando XeLaTeX o LuaLaTeX
 - Verifica que las fuentes estén en la carpeta `tipografias/`

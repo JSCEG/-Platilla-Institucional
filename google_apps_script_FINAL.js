@@ -376,9 +376,9 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
  */
 function limpiarPrefijoAnexoEnTitulo(titulo) {
     if (!titulo) return '';
-    
+
     let tituloLimpio = titulo.toString().trim();
-    
+
     // Patrones a eliminar al inicio del título:
     // - "Anexo A", "ANEXO B.", "Anexo C –"
     // - "A.1", "A1", "B.12", con o sin punto/espacio/guión
@@ -388,11 +388,11 @@ function limpiarPrefijoAnexoEnTitulo(titulo) {
         /^[A-Z]\.?\d*[\.\s\-–]+\s*/,        // "A.1", "A1", "B.12", "A."
         /^[A-Z]\d*[\.\s\-–]+\s*/            // "A1", "B2"
     ];
-    
+
     for (const patron of patronesAnexo) {
         tituloLimpio = tituloLimpio.replace(patron, '');
     }
-    
+
     return tituloLimpio.trim();
 }
 
@@ -402,12 +402,12 @@ function limpiarPrefijoAnexoEnTitulo(titulo) {
  */
 function generarComandoSeccion(nivel, titulo, anexosIniciados = false) {
     let tituloFinal = titulo;
-    
+
     // FIX: Si estamos en anexos y es nivel anexo/subanexo, limpiar prefijos
     if (anexosIniciados && (nivel === 'anexo' || nivel === 'subanexo')) {
         tituloFinal = limpiarPrefijoAnexoEnTitulo(titulo);
     }
-    
+
     const tituloEscapado = escaparLatex(tituloFinal);
 
     // Normalizar nivel
@@ -492,7 +492,7 @@ function procesarContenido(contenidoRaw) {
                 // FIX: Línea vacía dentro de lista - ignorar sin cerrar
                 continue;
             }
-            
+
             // FIX: Solo cerrar lista si encontramos contenido real (no vacío)
             if (enLista && lineaTrim !== '') {
                 // Verificar si las siguientes líneas contienen más items
@@ -507,7 +507,7 @@ function procesarContenido(contenidoRaw) {
                         break; // Encontramos contenido no-item
                     }
                 }
-                
+
                 // Solo cerrar si no hay más items
                 if (!hayMasItems) {
                     resultado += '\\end{itemize}\n';
@@ -623,8 +623,37 @@ function procesarContraportada(contenidoRaw) {
 /**
  * FIX: Guarda los archivos .tex y .bib en Drive (optimizado para evitar timeout)
  */
+function obtenerCarpetaSalida_() {
+    const props = PropertiesService.getScriptProperties();
+    const idConfigurado = (props.getProperty('CARPETA_SALIDA_ID') || CARPETA_SALIDA_ID || '').toString().trim();
+
+    if (idConfigurado) {
+        try {
+            const carpeta = DriveApp.getFolderById(idConfigurado);
+            // Forzar una lectura para validar acceso/permisos
+            carpeta.getName();
+            return carpeta;
+        } catch (e) {
+            log(`⚠️ No se pudo acceder a la carpeta de salida (ID: ${idConfigurado}). ` +
+                `Si compartiste el proyecto, es normal: el otro usuario no tiene permiso sobre TU carpeta. ` +
+                `Se usará una carpeta alternativa en 'Mi unidad'. Detalle: ${e.toString()}`);
+        }
+    }
+
+    // Fallback portable: carpeta dentro de "Mi unidad" del usuario que ejecuta el script
+    const nombreFallback = 'SENER_LATEX_SALIDA';
+    const root = DriveApp.getRootFolder();
+    const existentes = root.getFoldersByName(nombreFallback);
+    const carpetaFallback = existentes.hasNext() ? existentes.next() : root.createFolder(nombreFallback);
+
+    // Guardar para siguientes ejecuciones
+    props.setProperty('CARPETA_SALIDA_ID', carpetaFallback.getId());
+    log(`✅ Carpeta de salida configurada automáticamente: ${carpetaFallback.getName()} (ID: ${carpetaFallback.getId()})`);
+    return carpetaFallback;
+}
+
 function guardarArchivos(datosDoc, tex, bibliografia) {
-    const carpeta = DriveApp.getFolderById(CARPETA_SALIDA_ID);
+    const carpeta = obtenerCarpetaSalida_();
     const nombreBase = datosDoc['DocumentoCorto'] || 'documento_generado';
 
     // FIX: Optimizar eliminación de archivos existentes
@@ -652,7 +681,7 @@ function guardarArchivos(datosDoc, tex, bibliografia) {
                 entry.push('}\n');
                 bibEntries.push(entry.join('\n'));
             });
-            
+
             const bibContent = bibEntries.join('\n');
 
             const archivosBibExistentes = carpeta.getFilesByName('referencias.bib');
@@ -791,56 +820,56 @@ function escaparFootnote(texto) {
  */
 function validarYCorregirLatex(str) {
     if (!str) return str;
-    
+
     let corregido = str;
     let cambios = [];
-    
+
     // FIX: Detectar y corregir \textbackslash{}par
     if (corregido.includes('\\textbackslash{}par')) {
         corregido = corregido.replace(/\\textbackslash\{\}par/g, '\n\n');
         cambios.push('\\textbackslash{}par → líneas en blanco');
     }
-    
+
     // FIX: Detectar líneas que empiezan con \\ (problemático)
     const lineasProblematicas = corregido.match(/^\\\\[^\\]/gm);
     if (lineasProblematicas) {
         corregido = corregido.replace(/^\\\\([^\\])/gm, '$1');
         cambios.push('líneas iniciando con \\\\ → texto normal');
     }
-    
+
     // FIX: Detectar \\ inmediatamente antes de texto (\\Texto)
     if (corregido.match(/\\\\[A-Za-z]/)) {
         corregido = corregido.replace(/\\\\([A-Za-z])/g, ' $1');
         cambios.push('\\\\ antes de texto → espacio');
     }
-    
+
     // FIX: Detectar otros comandos LaTeX mal escapados comunes
     if (corregido.includes('\\textbackslash{}begin')) {
         corregido = corregido.replace(/\\textbackslash\{\}begin/g, '\\begin');
         cambios.push('\\textbackslash{}begin → \\begin');
     }
-    
+
     if (corregido.includes('\\textbackslash{}end')) {
         corregido = corregido.replace(/\\textbackslash\{\}end/g, '\\end');
         cambios.push('\\textbackslash{}end → \\end');
     }
-    
+
     if (corregido.includes('\\textbackslash{}section')) {
         corregido = corregido.replace(/\\textbackslash\{\}section/g, '\\section');
         cambios.push('\\textbackslash{}section → \\section');
     }
-    
+
     if (corregido.includes('\\textbackslash{}item')) {
         corregido = corregido.replace(/\\textbackslash\{\}item/g, '\\item');
         cambios.push('\\textbackslash{}item → \\item');
     }
-    
+
     // FIX: Registrar correcciones con Logger.warn() si se corrige algo
     if (cambios.length > 0) {
         console.warn(`⚠️ PATRONES INVÁLIDOS CORREGIDOS: ${cambios.join(', ')}`);
         log(`⚠️ Comandos LaTeX mal escapados corregidos: ${cambios.join(', ')}`);
     }
-    
+
     return corregido;
 }
 
@@ -859,31 +888,31 @@ function escaparLatex(texto) {
  */
 function normalizarSaltosLatex(str) {
     if (!str) return '';
-    
+
     // 1. Convertir \\n literales (de Google Sheets) a saltos reales
     str = str.replace(/\\n/g, '\n');
-    
+
     // 2. Normalizar CRLF a LF
     str = str.replace(/\r\n/g, '\n');
     str = str.replace(/\r/g, '\n');
-    
+
     // 3. Quitar espacios y tabs al final de cada línea
     str = str.replace(/[ \t]+$/gm, '');
-    
+
     // 4. FIX: Convertir múltiples saltos (2+) a UNA línea en blanco (\n\n)
     // SOLO líneas en blanco, NO comandos \par que se escaparían
     str = str.replace(/\n{2,}/g, '\n\n');
-    
+
     // 5. FIX: NO convertir saltos simples a \\ ni a espacios
     // LaTeX maneja saltos simples correctamente como espacios naturales
-    
+
     // 6. Colapsar espacios múltiples dentro de líneas
     str = str.replace(/[ \t]+/g, ' ');
-    
+
     // 7. FIX: Trim final para eliminar espacios/saltos iniciales/finales problemáticos
     // Esto previene \\ al inicio de párrafos
     str = str.trim();
-    
+
     return str;
 }
 
@@ -902,45 +931,45 @@ function procesarConEtiquetas(texto) {
 
     // FIX: PASO 2 - Extraer y proteger ECUACIONES (no escapar)
     const ecuaciones = [];
-    
+
     // Ecuaciones en línea: $...$
-    str = str.replace(/\$([^$]+)\$/g, function(match, contenido) {
+    str = str.replace(/\$([^$]+)\$/g, function (match, contenido) {
         ecuaciones.push(`$${contenido}$`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
-    
+
     // Ecuaciones display: $$...$$
-    str = str.replace(/\$\$([\s\S]*?)\$\$/g, function(match, contenido) {
+    str = str.replace(/\$\$([\s\S]*?)\$\$/g, function (match, contenido) {
         ecuaciones.push(`$$${contenido}$$`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
-    
+
     // Ecuaciones LaTeX: \(...\) y \[...\]
-    str = str.replace(/\\\\?\(([\s\S]*?)\\\\?\)/g, function(match, contenido) {
+    str = str.replace(/\\\\?\(([\s\S]*?)\\\\?\)/g, function (match, contenido) {
         ecuaciones.push(`\\(${contenido}\\)`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
-    
-    str = str.replace(/\\\\?\[([\s\S]*?)\\\\?\]/g, function(match, contenido) {
+
+    str = str.replace(/\\\\?\[([\s\S]*?)\\\\?\]/g, function (match, contenido) {
         ecuaciones.push(`\\[${contenido}\\]`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
 
     // [[ecuacion:...]] -> \begin{equation} ... \end{equation}
-    str = str.replace(/\[\[ecuacion:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[ecuacion:([\s\S]*?)\]\]/g, function (match, contenido) {
         ecuaciones.push(`\\begin{equation}\n${contenido.trim()}\n\\end{equation}`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
 
     // [[math:...]] -> $ ... $
-    str = str.replace(/\[\[math:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[math:([\s\S]*?)\]\]/g, function (match, contenido) {
         ecuaciones.push(`$${contenido.trim()}$`);
         return `ZEQPLACEHOLDER${ecuaciones.length - 1}Z`;
     });
 
     // FIX: PASO 3 - Extraer y proteger CITAS
     const citas = [];
-    str = str.replace(/\[\[cita:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[cita:([\s\S]*?)\]\]/g, function (match, contenido) {
         const clave = contenido.toString().trim();
         citas.push(`\\cite{${clave}}`);
         return `ZCITEPOLDER${citas.length - 1}Z`;
@@ -948,37 +977,37 @@ function procesarConEtiquetas(texto) {
 
     // FIX: PASO 4 - Extraer y proteger RECUADROS MULTI-LÍNEA
     const recuadros = [];
-    str = str.replace(/\[\[recuadro:([^\]]*)\]\]([\s\S]*?)\[\[\/recuadro\]\]/g, function(match, titulo, contenido) {
+    str = str.replace(/\[\[recuadro:([^\]]*)\]\]([\s\S]*?)\[\[\/recuadro\]\]/g, function (match, titulo, contenido) {
         const tituloLimpio = titulo.trim();
         // FIX: NO aplicar normalización aquí, ya se hizo al inicio
         const tituloArg = tituloLimpio ? `{${tituloLimpio}}` : '';
         recuadros.push(`\\begin{recuadro}${tituloArg}\n${contenido}\n\\end{recuadro}`);
         return `ZRECUADROPLACEHOLDER${recuadros.length - 1}Z`;
     });
-    
+
     // FIX: PASO 5 - Proteger otras etiquetas simples
     const etiquetas = [];
-    
+
     // [[nota:...]]
-    str = str.replace(/\[\[nota:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[nota:([\s\S]*?)\]\]/g, function (match, contenido) {
         etiquetas.push(`\\footnote{${escaparFootnote(contenido)}}`);
         return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
     });
-    
+
     // [[destacado:...]]
-    str = str.replace(/\[\[destacado:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[destacado:([\s\S]*?)\]\]/g, function (match, contenido) {
         etiquetas.push(`\\begin{destacado}\n${contenido}\n\\end{destacado}`);
         return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
     });
-    
+
     // [[dorado:...]]
-    str = str.replace(/\[\[dorado:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[dorado:([\s\S]*?)\]\]/g, function (match, contenido) {
         etiquetas.push(`\\textbf{\\textcolor{gobmxDorado}{${contenido}}}`);
         return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
     });
-    
+
     // [[guinda:...]]
-    str = str.replace(/\[\[guinda:([\s\S]*?)\]\]/g, function(match, contenido) {
+    str = str.replace(/\[\[guinda:([\s\S]*?)\]\]/g, function (match, contenido) {
         etiquetas.push(`\\textbf{\\textcolor{gobmxGuinda}{${contenido}}}`);
         return `ZETIQUETAPLACEHOLDER${etiquetas.length - 1}Z`;
     });
@@ -991,24 +1020,24 @@ function procesarConEtiquetas(texto) {
     str = str.replace(/['']/g, "'");
 
     // FIX: PASO 8 - RESTAURAR contenido protegido (comandos LaTeX válidos)
-    
+
     // Restaurar recuadros
-    str = str.replace(/ZRECUADROPLACEHOLDER(\d+)Z/g, function(match, index) {
+    str = str.replace(/ZRECUADROPLACEHOLDER(\d+)Z/g, function (match, index) {
         return recuadros[parseInt(index)];
     });
-    
+
     // Restaurar etiquetas
-    str = str.replace(/ZETIQUETAPLACEHOLDER(\d+)Z/g, function(match, index) {
+    str = str.replace(/ZETIQUETAPLACEHOLDER(\d+)Z/g, function (match, index) {
         return etiquetas[parseInt(index)];
     });
-    
+
     // Restaurar citas
-    str = str.replace(/ZCITEPOLDER(\d+)Z/g, function(match, index) {
+    str = str.replace(/ZCITEPOLDER(\d+)Z/g, function (match, index) {
         return citas[parseInt(index)];
     });
-    
+
     // Restaurar ecuaciones
-    str = str.replace(/ZEQPLACEHOLDER(\d+)Z/g, function(match, index) {
+    str = str.replace(/ZEQPLACEHOLDER(\d+)Z/g, function (match, index) {
         return ecuaciones[parseInt(index)];
     });
 
@@ -1285,12 +1314,12 @@ function procesarDatosArray(datos, tituloTabla, forzarLongtable = false) {
     // Si la tabla cabe en una sola parte
     if (numCols <= MAX_COLS_POR_TABLA) {
         const numFilas = Math.max(0, datos.length - 1);
-        
+
         // Si es una tabla pequeña y no se fuerza longtable, usar tabular
         if (numFilas <= MAX_FILAS_COMPACTA && !forzarLongtable) {
             return { tipo: 'tabular', contenido: generarTablaCompacta(datos) };
         }
-        
+
         // Para tablas medianas o si se fuerza longtable
         if (numFilas > MAX_FILAS_POR_PARTE) {
             return { tipo: 'longtable', contenido: dividirTablaPorFilas(datos, MAX_FILAS_POR_PARTE, tituloTabla) };
@@ -1371,7 +1400,7 @@ function generarTablaCompacta(datos) {
         const celdas = procesarCeldasFila(datos[i]);
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
-    
+
     tex += `    \\bottomrule\n`;
     tex += `  \\end{tabular}\n`;
     return tex;
@@ -1967,7 +1996,7 @@ function escaparTextoConEtiquetas(texto) {
  */
 function probarNormalizacionSaltos() {
     console.log('=== PRUEBAS DE NORMALIZACIÓN DE SALTOS ===');
-    
+
     // Caso 1: Salto al inicio (problemático)
     const caso1 = '\nObjetivo: detectar errores...';
     const resultado1 = normalizarSaltosLatex(caso1);
@@ -1975,14 +2004,14 @@ function probarNormalizacionSaltos() {
     console.log('Entrada:', JSON.stringify(caso1));
     console.log('Salida:', JSON.stringify(resultado1));
     console.log('✓ No inicia con \\\\:', !resultado1.startsWith('\\\\'));
-    
+
     // Caso 2: Múltiples saltos
     const caso2 = 'Primera línea\\n\\nSegunda línea\\nTercera línea';
     const resultado2 = normalizarSaltosLatex(caso2);
     console.log('\nCaso 2 (múltiples saltos):');
     console.log('Entrada:', JSON.stringify(caso2));
     console.log('Salida:', JSON.stringify(resultado2));
-    
+
     // Caso 3: Recuadro con contenido multilínea
     const caso3 = '[[recuadro:Título]]\\nPrimera línea\\nSegunda línea\\n\\nNuevo párrafo[[/recuadro]]';
     const resultado3 = procesarConEtiquetas(caso3);
@@ -1991,7 +2020,7 @@ function probarNormalizacionSaltos() {
     console.log('Salida:', JSON.stringify(resultado3));
     console.log('✓ Contiene \\begin{recuadro}:', resultado3.includes('\\begin{recuadro}'));
     console.log('✓ No contiene [[recuadro:', !resultado3.includes('[[recuadro:'));
-    
+
     // Caso 4: Ecuación con texto
     const caso4 = 'La fórmula es $E=mc^2$ donde\\nE es energía';
     const resultado4 = procesarConEtiquetas(caso4);
@@ -1999,7 +2028,7 @@ function probarNormalizacionSaltos() {
     console.log('Entrada:', JSON.stringify(caso4));
     console.log('Salida:', JSON.stringify(resultado4));
     console.log('✓ Preserva ecuación:', resultado4.includes('$E=mc^2$'));
-    
+
     console.log('\n=== PRUEBAS COMPLETADAS ===');
     return 'Todas las pruebas ejecutadas. Revisa la consola para resultados.';
 }
@@ -2009,7 +2038,7 @@ function probarNormalizacionSaltos() {
  */
 function probarCorreccionesScript() {
     console.log('=== PRUEBAS DE CORRECCIONES DEL SCRIPT ===');
-    
+
     // Prueba 1: Footnote con caracteres especiales
     console.log('\n1. Prueba de footnote con caracteres especiales:');
     const textoFootnote = 'Nota con símbolos como % y & que deben escaparse.';
@@ -2018,7 +2047,7 @@ function probarCorreccionesScript() {
     console.log('Salida:', JSON.stringify(footnoteCorregida));
     console.log('✓ Contiene \\%:', footnoteCorregida.includes('\\%'));
     console.log('✓ Contiene \\&:', footnoteCorregida.includes('\\&'));
-    
+
     // Prueba 2: Procesamiento de etiqueta [[nota:...]]
     console.log('\n2. Prueba de etiqueta [[nota:...]] con caracteres especiales:');
     const textoConNota = 'Texto normal [[nota:Nota con % y & especiales]] más texto.';
@@ -2028,7 +2057,7 @@ function probarCorreccionesScript() {
     console.log('✓ Contiene \\footnote:', notaProcesada.includes('\\footnote'));
     console.log('✓ No contiene [[nota:', !notaProcesada.includes('[[nota:'));
     console.log('✓ Caracteres escapados:', notaProcesada.includes('\\%') && notaProcesada.includes('\\&'));
-    
+
     // Prueba 3: Normalización sin \par
     console.log('\n3. Prueba de normalización sin \\par:');
     const textoConSaltos = 'Primera línea\\n\\nSegunda línea\\nTercera línea';
@@ -2037,7 +2066,7 @@ function probarCorreccionesScript() {
     console.log('Salida:', JSON.stringify(normalizado));
     console.log('✓ NO contiene \\par:', !normalizado.includes('\\par'));
     console.log('✓ Contiene doble salto:', normalizado.includes('\n\n'));
-    
+
     // Prueba 4: Validación de comandos mal escapados
     console.log('\n4. Prueba de validación de comandos mal escapados:');
     const textoConComandoMalEscapado = 'Texto con \\textbackslash{}par y \\textbackslash{}begin{test}';
@@ -2046,7 +2075,7 @@ function probarCorreccionesScript() {
     console.log('Salida:', JSON.stringify(validado));
     console.log('✓ NO contiene \\textbackslash{}par:', !validado.includes('\\textbackslash{}par'));
     console.log('✓ Contiene líneas en blanco:', validado.includes('\n\n'));
-    
+
     // Prueba 5: Procesamiento completo sin comandos mal escapados
     console.log('\n5. Prueba de procesamiento completo:');
     const textoCompleto = 'Objetivo: detectar errores\\n\\nEste texto tiene párrafos separados.';
@@ -2055,9 +2084,9 @@ function probarCorreccionesScript() {
     console.log('Salida:', JSON.stringify(procesadoCompleto));
     console.log('✓ NO contiene \\textbackslash{}par:', !procesadoCompleto.includes('\\textbackslash{}par'));
     console.log('✓ NO contiene \\par literal:', !procesadoCompleto.includes('\\par'));
-    
+
     console.log('\n=== PRUEBAS COMPLETADAS ===');
     console.log('Revisa los resultados arriba para verificar que todas las correcciones funcionan.');
-    
+
     return 'Pruebas ejecutadas. Revisa la consola para resultados detallados.';
 }
