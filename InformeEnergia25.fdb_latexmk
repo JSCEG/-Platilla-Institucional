@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber InformeEnergia25"] 1765582469.39582 "InformeEnergia25.bcf" "InformeEnergia25.bbl" "InformeEnergia25" 1765582582.18648 0
-  "InformeEnergia25.bcf" 1765582581 108847 8d6240fce34893141a2fff750e855c40 "pdflatex"
-  "referencias.bib" 1765571190 760 704fd64536404d49732c866308ea2d99 ""
+["biber InformeEnergia25"] 1765871845.18619 "InformeEnergia25.bcf" "InformeEnergia25.bbl" "InformeEnergia25" 1765872017.19164 0
+  "InformeEnergia25.bcf" 1765872016 108847 8d6240fce34893141a2fff750e855c40 "pdflatex"
+  "referencias.bib" 1765733140 1160 11745f82c5894aa80c9c3b6f7750588c ""
   (generated)
   "InformeEnergia25.bbl"
   "InformeEnergia25.blg"
   (rewritten before read)
-["pdflatex"] 1765582548.46666 "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" "InformeEnergia25.pdf" "InformeEnergia25" 1765582582.18756 0
+["pdflatex"] 1765871978.80713 "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" "InformeEnergia25.pdf" "InformeEnergia25" 1765872017.19243 0
   "C:/Program Files/MiKTeX/fonts/tfm/adobe/zapfding/pzdr.tfm" 1136793854 1528 7e12f4c0fcf5a072cebdcfbfc610f54c ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1233951848 1004 54797486969f23fa377b128694d548df ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1233951848 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -26,7 +26,6 @@
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy6.tfm" 1136765053 1116 933a60c408fc0a863a92debe84b2d294 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy8.tfm" 1136765053 1120 8b7d695260f3cff42e636090a8002094 ""
   "C:/Program Files/MiKTeX/fonts/tfm/public/cm/cmsy9.tfm" 1136765053 1116 25a7bf822c58caf309a702ef79f4afbb ""
-  "C:/Program Files/MiKTeX/fonts/tfm/public/lm/ec-lmr12.tfm" 1256929440 12092 7b1546e2d096cfd5dcbd4049b0b1ec2e ""
   "C:/Program Files/MiKTeX/tex/generic/babel/babel.sty" 1761147669 145885 784cdd1ebbc3dbacabd5ee30707617a3 ""
   "C:/Program Files/MiKTeX/tex/generic/babel/locale/es/babel-es-MX.ini" 1761147672 4555 8e0d52808b0e571e34cf099af3f05a9a ""
   "C:/Program Files/MiKTeX/tex/generic/babel/locale/es/babel-es.ini" 1761147672 4345 33a8cc6f0a7c6afcb84895b2c963a4e5 ""
@@ -138,7 +137,6 @@
   "C:/Program Files/MiKTeX/tex/latex/l3packages/l3keys2e/l3keys2e.sty" 1761203377 4674 ff006c14a0adf55e7318570f962bcbbb ""
   "C:/Program Files/MiKTeX/tex/latex/l3packages/xfp/xfp.sty" 1761203377 1249 6117a40cb05a1d50230f000344c582aa ""
   "C:/Program Files/MiKTeX/tex/latex/l3packages/xparse/xparse.sty" 1761203377 10176 c2fc1c663b3f3899ddac6e6ed3fb1d7e ""
-  "C:/Program Files/MiKTeX/tex/latex/lm/t1lmr.fd" 1430474546 1867 996fe743d88a01aca041ed22cc10e1bb ""
   "C:/Program Files/MiKTeX/tex/latex/pgf/basiclayer/pgf.sty" 1756451144 1090 bae35ef70b3168089ef166db3e66f5b2 ""
   "C:/Program Files/MiKTeX/tex/latex/pgf/basiclayer/pgfcore.sty" 1756451144 373 00b204b1d7d095b892ad31a7494b0373 ""
   "C:/Program Files/MiKTeX/tex/latex/pgf/compatibility/pgfcomp-version-0-65.sty" 1756451144 21013 f4ff83d25bb56552493b030f27c075ae ""
@@ -267,13 +265,13 @@
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tikzfill/tikzfill.image.sty" 1691489948 1120 ba535da48caa03bf1fd3f03ea87779f8 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/tikzfill/tikzlibraryfill.image.code.tex" 1691489948 10931 717eb52299f416934beb8b2b7cd8cee6 ""
   "C:/Users/User/AppData/Roaming/MiKTeX/tex/latex/titlesec/titlesec.sty" 1736608268 48766 87a17a4ef312a39cd43896e34a679a56 ""
-  "InformeEnergia25.aux" 1765582581 5803 2dd8ae96d3997532525ff44a708528fa "pdflatex"
-  "InformeEnergia25.bbl" 1765582472 2206 9417e4471a15e18c1d6c3b26e1148df7 "biber InformeEnergia25"
-  "InformeEnergia25.lof" 1765582581 432 0145041aa31a63e234e811043d3dc0be "pdflatex"
-  "InformeEnergia25.lot" 1765582581 467 35f0bec170e41b18366e24aa97f397d0 "pdflatex"
-  "InformeEnergia25.run.xml" 1765582581 2470 5aa9f7a728927f62fe05c8e30a9cf549 "pdflatex"
+  "InformeEnergia25.aux" 1765872016 5733 deaa87472e8ab9dff4a688897b545fbe "pdflatex"
+  "InformeEnergia25.bbl" 1765871901 2206 9417e4471a15e18c1d6c3b26e1148df7 "biber InformeEnergia25"
+  "InformeEnergia25.lof" 1765872016 406 c0d2bf665a42acb022638d1f4cb35ffe "pdflatex"
+  "InformeEnergia25.lot" 1765872016 467 35f0bec170e41b18366e24aa97f397d0 "pdflatex"
+  "InformeEnergia25.run.xml" 1765872016 2470 5aa9f7a728927f62fe05c8e30a9cf549 "pdflatex"
   "InformeEnergia25.tex" 1765573054 23724 5aa1559c7ee5a34c4a78ae8218efa2b4 ""
-  "InformeEnergia25.toc" 1765582581 1444 4eb2ed2afea8e63f025d1afe7b410bac "pdflatex"
+  "InformeEnergia25.toc" 1765872016 1426 a75f39c2795d1c603e29977719b239d4 "pdflatex"
   "c:/Proyectos/40.-PlantillasLatex/InformeEnergia25.tex" 1765573054 23724 5aa1559c7ee5a34c4a78ae8218efa2b4 ""
   "img/contraportada.png" 1764184372 650761 8088095ff020320e0fa792bf365679b2 ""
   "img/foja_blanca.jpg" 1764184372 1322587 91471d7602f13a986992eb0110249d4b ""
@@ -282,7 +280,7 @@
   "img/graficos/figura_2_12.png" 1764293071 8137183 c5e4081b90083ac6ccc74b1307450f4f ""
   "img/graficos/figura_4_3.png" 1764292479 6422727 ea9f4d871a66c59c44440a938a4ff319 ""
   "img/portada.png" 1764184373 1249808 ee7f25d428e87e31ba2f57ea2b8eb76f ""
-  "sener2025.cls" 1765574154 35450 aadb509156c5da37653c2471f8b52f3d ""
+  "sener2025.cls" 1765871841 42310 2b6cd9ec701d8999dbf09f5e8d063a99 ""
   "tipografias/NotoSans-Light.ttf" 1763756805 583272 56ff3edc9a6a8b16feade46549dbec04 ""
   "tipografias/NotoSans-Regular.ttf" 1763756805 582748 fe700e4601ad1567290857922c30b9d1 ""
   "tipografias/Patria_Regular.otf" 1763756834 136816 7b38cee4c6282c8faf3f72df9518f3fb ""

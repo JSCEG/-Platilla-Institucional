@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  16 DEC 2025 01:57
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  16 DEC 2025 02:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2487,7 +2487,7 @@ Package logreq Info: Writing requests to 'DemoSENER.run.xml'.
 Here is how much of TeX's memory you used:
  51090 strings out of 402987
  1091195 string characters out of 5452871
- 2131916 words of memory out of 5000000
+ 2131919 words of memory out of 5000000
  79086 multiletter control sequences out of 15000+600000
  650581 words of font info for 120 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

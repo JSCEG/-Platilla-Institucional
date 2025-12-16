@@ -1,0 +1,12 @@
+\babel@toc {mexican}{}\relax 
+\contentsline {section}{\numberline {1}Guía rápida de sintaxis}{9}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Etiquetas inline (dentro de un párrafo)}{9}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Bloques (cajas) usando líneas separadas}{10}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Tablas y figuras (inserción automática)}{10}{section.2}%
+\contentsline {section}{\numberline {3}Prueba de párrafos y saltos de línea}{13}{section.3}%
+\contentsline {paragraph}{Mini encabezado dentro de sección}{14}{paragraph*.20}%
+\SENERAppendixTOCSetup 
+\contentsline {section}{\numberline {A}Ejemplo de anexo}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Detalle adicional}{15}{subsection.A.1}%
+\contentsline {section}{Glosario}{15}{section*.22}%
+\contentsline {section}{Siglas y Acrónimos}{15}{section*.23}%

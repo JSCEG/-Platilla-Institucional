@@ -5,12 +5,12 @@
  * CONFIGURACIÓN:
  * 1. Cambia CARPETA_SALIDA_ID por tu ID de carpeta de Drive
  * 2. Estructura de hojas:
- *    - Documentos: ID, Titulo, Subtitulo, Autor, Fecha, Institucion, Unidad, DocumentoCorto, PalabrasClave, Version, ResumenEjecutivo, DatosClave
+ *    - Documentos: ID, Titulo, Subtitulo, Autor, Fecha, Institucion, Unidad, DocumentoCorto, PalabrasClave, Version, Agradecimientos, Presentacion, ResumenEjecutivo, DatosClave
  *    - Secciones: DocumentoID, Orden, Nivel, Titulo, Contenido
  *    - Bibliografia: DocumentoID, Clave, Tipo, Autor, Titulo, Anio, Editorial, Url
  */
 
-const CARPETA_SALIDA_ID = '1NnO4B8EJCx6VNrmDxWwwW3KsHCTID_c2';
+const CARPETA_SALIDA_ID = ''; // Carpeta automática en Mi unidad
 
 // FIX: Flag de debug para optimizar logging en producción
 const DEBUG = false;
@@ -236,26 +236,48 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += `\\listatablas\n\\newpage\n\n`;
     }
 
+    // --- Agradecimientos ---
+    if (datosDoc['Agradecimientos'] && datosDoc['Agradecimientos'].toString().trim()) {
+        tex += `\\clearpage\n`;
+        tex += `\\begin{center}\n`;
+        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Agradecimientos}\\\\[1cm]\n`;
+        tex += `\\end{center}\n\n`;
+        tex += `${procesarConEtiquetas(datosDoc['Agradecimientos'])}\n\n`;
+    }
+
+    // --- Presentación ---
+    if (datosDoc['Presentacion'] && datosDoc['Presentacion'].toString().trim()) {
+        tex += `\\clearpage\n`;
+        tex += `\\begin{center}\n`;
+        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Presentación}\\\\[1cm]\n`;
+        tex += `\\end{center}\n\n`;
+        tex += `${procesarConEtiquetas(datosDoc['Presentacion'])}\n\n`;
+    }
+
     // --- Resumen Ejecutivo ---
-    if (datosDoc['ResumenEjecutivo']) {
-        tex += `\\begin{resumenejecutivo}\n`;
-        tex += `${procesarConEtiquetas(datosDoc['ResumenEjecutivo'])}\n`;
-        tex += `\\end{resumenejecutivo}\n\n`;
+    if (datosDoc['ResumenEjecutivo'] && datosDoc['ResumenEjecutivo'].toString().trim()) {
+        tex += `\\clearpage\n`;
+        tex += `\\begin{center}\n`;
+        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Resumen Ejecutivo}\\\\[1cm]\n`;
+        tex += `\\end{center}\n\n`;
+        tex += `${procesarConEtiquetas(datosDoc['ResumenEjecutivo'])}\n\n`;
     }
 
     // --- Datos Clave ---
-    if (datosDoc['DatosClave']) {
-        tex += `\\begin{datosclave}\n`;
+    if (datosDoc['DatosClave'] && datosDoc['DatosClave'].toString().trim()) {
+        tex += `\\clearpage\n`;
+        tex += `\\begin{center}\n`;
+        tex += `{\\Large\\patriafont\\bfseries\\color{gobmxGuinda}Datos Clave}\\\\[1cm]\n`;
+        tex += `\\end{center}\n\n`;
         const textoDatos = datosDoc['DatosClave'].toString();
         const items = textoDatos.split(/[;\n]/);
-        tex += `  \\begin{itemize}\n`;
+        tex += `\\begin{itemize}\n`;
         items.forEach(item => {
             if (item.trim()) {
-                tex += `    \\item ${escaparLatex(item.trim())}\n`;
+                tex += `  \\item ${escaparLatex(item.trim())}\n`;
             }
         });
-        tex += `  \\end{itemize}\n`;
-        tex += `\\end{datosclave}\n\n`;
+        tex += `\\end{itemize}\n\n`;
     }
 
     // --- Secciones ---

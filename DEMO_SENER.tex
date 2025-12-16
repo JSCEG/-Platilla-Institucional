@@ -14,7 +14,7 @@
   pdfauthor={Equipo de Planeación (demo)},
   pdfsubject={Ejemplos de secciones, etiquetas y bloques (para pruebas del generador)},
   pdfkeywords={demo; plantilla; secciones; etiquetas; tablas; figuras},
-  pdfcreationdate={D:20251214112521},
+  pdfcreationdate={D:20251216021940},
   pdfversion={1}
 }
 
@@ -25,7 +25,7 @@
 \date{14 de diciembre de 2025}
 \institucion{Secretaría de Energía (SENER)}
 \unidad{Unidad de Planeación y Transición Energética}
-\setDocumentoCorto{DemoSENER}
+\setDocumentoCorto{DEMO\_SENER}
 \palabrasclave{demo; plantilla; secciones; etiquetas; tablas; figuras}
 \version{1}
 
@@ -42,7 +42,21 @@
 \listatablas
 \newpage
 
-\begin{resumenejecutivo}
+\clearpage
+\begin{center}
+{\Large\patriafont\bfseries\color{gobmxGuinda}Agradecimientos}\\[1cm]
+\end{center}
+
+Agaredecemos a:
+1.-JAvi
+2.-Diego
+3.-Rodrigo
+
+\clearpage
+\begin{center}
+{\Large\patriafont\bfseries\color{gobmxGuinda}Resumen Ejecutivo}\\[1cm]
+\end{center}
+
 Este documento es un banco de pruebas. Incluye ejemplos de:
 • Listas
 • Etiquetas inline (nota, cita, math)
@@ -51,16 +65,18 @@ Este documento es un banco de pruebas. Incluye ejemplos de:
 • Tablas y figuras
 
 Objetivo: detectar errores de escape y de parsing antes de publicar.
-\end{resumenejecutivo}
 
-\begin{datosclave}
-  \begin{itemize}
-    \item Dato 1
-    \item Dato 2
-    \item Dato 3
-    \item Dato 4
-  \end{itemize}
-\end{datosclave}
+\clearpage
+\begin{center}
+{\Large\patriafont\bfseries\color{gobmxGuinda}Datos Clave}\\[1cm]
+\end{center}
+
+\begin{itemize}
+  \item Dato 1
+  \item Dato 2
+  \item Dato 3
+  \item Dato 4
+\end{itemize}
 
 \portadaseccion{1}{Capítulo 1}{Guía rápida (etiquetas + bloques)}
 
@@ -158,15 +174,12 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
 \begin{tabladoradoCorto}
   \caption{Tabla demo (corta): Capacidad por tecnología}
   \label{tab:tabla_demo__corta___capacidad_}
-  \begin{tabular}{H{3cm}G{2cm}G{2cm}G{2cm}}
+  \begin{tabular}{H{3cm}G{2cm}G{2cm}}
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Tecnología} & \encabezadodorado{Capacidad (MW)} & \encabezadodorado{Participación (\%)} & \encabezadodorado{Nota} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{Tecnología}} & \encabezadodorado{Capacidad (MW)} & \encabezadodorado{Participación (\%)} \\
     \midrule
-    \textbf{Solar FV} & 12,500 & 18.5 & Ejemplo \\
-    \textbf{Eólica} & 16,000 & 23.7 & Ejemplo \\
-    \textbf{Hidro} & 12,000 & 17.8 & Ejemplo \\
-    \textbf{Ciclo combinado} & 21,000 & 31.1 & Ejemplo \\
-    \textbf{Otras} & 6,000 & 8.9 & Ejemplo \\
+    \textbf{Solar FV} & 12,500 & 18.5 \\
+    \textbf{Eólica} & 16,000 & 23.7 \\
     \bottomrule
   \end{tabular}
 \end{tabladoradoCorto}
@@ -177,13 +190,13 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
   \begin{longtable}{B{3cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}p{2.20cm}}
     \caption{Tabla demo (larga): Serie histórica (25 filas)}\label{tab:tabla_demo__larga___serie_hist}\\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Año} & \encabezadodorado{Solar (MW)} & \encabezadodorado{Eólica (MW)} & \encabezadodorado{Hidro (MW)} & \encabezadodorado{CC (MW)} & \encabezadodorado{Total (MW)} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{Año}} & \encabezadodorado{Solar (MW)} & \encabezadodorado{Eólica (MW)} & \encabezadodorado{Hidro (MW)} & \encabezadodorado{CC (MW)} & \encabezadodorado{Total (MW)} \\
     \midrule
     \endfirsthead
 
     \multicolumn{6}{l}{\small\textit{Continuación...}} \\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Año} & \encabezadodorado{Solar (MW)} & \encabezadodorado{Eólica (MW)} & \encabezadodorado{Hidro (MW)} & \encabezadodorado{CC (MW)} & \encabezadodorado{Total (MW)} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{Año}} & \encabezadodorado{Solar (MW)} & \encabezadodorado{Eólica (MW)} & \encabezadodorado{Hidro (MW)} & \encabezadodorado{CC (MW)} & \encabezadodorado{Total (MW)} \\
     \midrule
     \endhead
 
@@ -225,6 +238,21 @@ Si quieres referenciar explícitamente en texto, puedes poner comentarios:
 \vspace{-4pt}
 \fuente{Elaboración propia (demo) Nota: tabla larga para probar longtable}
 
+\begin{tabladoradoCorto}
+  \caption{Test}
+  \label{tab:test}
+  \begin{tabular}{H{3cm}G{2cm}}
+    \toprule
+    \rowcolor{gobmxDorado} \encabezadodorado{\textbf{Concepto}} & \encabezadodorado{Val1} \\
+    \midrule
+    1 & 2 \\
+    3 & 4 \\
+    \bottomrule
+  \end{tabular}
+\end{tabladoradoCorto}
+\vspace{-4pt}
+\fuente{Test}
+
 
 
 \section{Prueba de párrafos y saltos de línea}
@@ -262,7 +290,7 @@ Fin.
 
 \paragraph{Mini encabezado dentro de sección}
 
-Este nivel prueba el mapeo a \textbackslash\{\}paragraph\{...\} en el .tex.
+c
 \begin{figure}[H]
   {\centering
   % Texto alternativo para accesibilidad
