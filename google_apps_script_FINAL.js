@@ -1488,7 +1488,7 @@ function generarTablaSimple(datos, tituloTabla) {
 
     // Encabezado para la primera página con fondo dorado
     tex += `    \\toprule\n`;
-    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    const encabezados = procesarCeldasFila(datos[0], true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     tex += `    \\endfirsthead\n\n`;
@@ -1511,7 +1511,7 @@ function generarTablaSimple(datos, tituloTabla) {
 
     // Datos de la tabla (empezando desde la fila 1, ya que la 0 es el encabezado)
     for (let i = 1; i < datos.length; i++) {
-        const celdas = procesarCeldasFila(datos[i]);
+        const celdas = procesarCeldasFila(datos[i], false, true);
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
 
@@ -1530,12 +1530,12 @@ function generarTablaCompacta(datos) {
     let tex = `  \\begin{tabularx}{\\textwidth}{${especCols}}\n`;
     tex += `    \\toprule\n`;
     // Encabezados con fondo dorado
-    const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    const encabezados = procesarCeldasFila(datos[0], true, false).map(c => `\\encabezadodorado{${c}}`).join(' & ');
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
 
     for (let i = 1; i < datos.length; i++) {
-        const celdas = procesarCeldasFila(datos[i]);
+        const celdas = procesarCeldasFila(datos[i], false, false);
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
 
@@ -1585,7 +1585,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
 
         // Extraer encabezados de esta parte con fondo dorado
         const celdasEncabezado = colsEnEstaParte.map(colIdx => datos[0][colIdx]);
-        const encabezados = procesarCeldasFila(celdasEncabezado, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = procesarCeldasFila(celdasEncabezado, true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
 
         // Encabezado para la primera página
         tex += `    \\toprule\n`;
@@ -1612,7 +1612,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
         // Datos de la tabla (empezando desde la fila 1)
         for (let i = 1; i < datos.length; i++) {
             const celdasParte = colsEnEstaParte.map(colIdx => datos[i][colIdx]);
-            const celdas = procesarCeldasFila(celdasParte);
+            const celdas = procesarCeldasFila(celdasParte, false, true);
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
 
@@ -1642,7 +1642,7 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
         }
         tex += `    \\toprule\n`;
-        const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = procesarCeldasFila(datos[0], true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
         tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
         tex += `    \\midrule\n`;
         tex += `    \\endfirsthead\n\n`;
@@ -1657,7 +1657,7 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
         tex += `    \\bottomrule\n`;
         tex += `    \\endlastfoot\n\n`;
         for (let i = inicio; i < fin; i++) {
-            const celdas = procesarCeldasFila(datos[i]);
+            const celdas = procesarCeldasFila(datos[i], false, true);
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
         tex += `  \\end{xltabular}\n`;
@@ -1717,8 +1717,9 @@ function estilizarNotas(texto) {
 /**
  * Procesa las celdas de una fila (redondeo de números)
  * @param {boolean} esEncabezado - Si es fila de encabezado (para usar color blanco en notas)
+ * @param {boolean} esTablaLarga - Si es tabla larga (para aplicar sangría en la primera columna)
  */
-function procesarCeldasFila(fila, esEncabezado = false) {
+function procesarCeldasFila(fila, esEncabezado = false, esTablaLarga = false) {
     return fila.map((c, idx) => {
         if (c === null || c === undefined || c === '') return '';
 
@@ -1747,8 +1748,8 @@ function procesarCeldasFila(fila, esEncabezado = false) {
             // Escapar el texto base
             const textoBaseEscapado = escaparLatex(resultado.textoBase);
 
-            // Color blanco para encabezados (fondo dorado), gris para cuerpo
-            const colorNota = esEncabezado ? 'white' : 'gray';
+            // Color blanco para encabezados (fondo dorado), negro para cuerpo (antes gris)
+            const colorNota = esEncabezado ? 'white' : 'black';
 
             // Procesar cada nota por separado para crear enlaces individuales
             const notasLatex = resultado.notas.map(nota => {
@@ -1763,10 +1764,17 @@ function procesarCeldasFila(fila, esEncabezado = false) {
             textoFinal = escaparLatex(textoOriginal);
         }
 
-        // Primera columna en negritas (sin color)
-        if (idx === 0) {
-            textoFinal = `\\textbf{${textoFinal}}`;
+        // FIX: Si es tabla larga y es la primera columna, procesar sangría si hay espacios iniciales
+        if (esTablaLarga && idx === 0 && !esEncabezado) {
+            const matchEspacios = textoOriginal.match(/^(\s+)/);
+            if (matchEspacios) {
+                const numEspacios = matchEspacios[1].length;
+                // 1 espacio = \quad (~1em), más espacios = más sangría
+                const sangria = (numEspacios === 1) ? '\\quad ' : '\\hspace{' + (numEspacios * 0.45) + 'em} ';
+                textoFinal = sangria + textoFinal.trimStart();
+            }
         }
+
         return textoFinal;
     });
 }

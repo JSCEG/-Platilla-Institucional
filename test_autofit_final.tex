@@ -1,63 +1,72 @@
 \documentclass{sener2025}
 
-\title{Prueba de Auto-Fit Final}
-\subtitle{Verificación de Tabularx y Xltabular}
+\title{Prueba de Refinamiento Estético de Tablas}
+\subtitle{Verificación de Alineación Vertical y Fuentes Uniformes}
 \date{\today}
-\setDocumentoCorto{AutoFitTest}
+\setDocumentoCorto{AutoFitRefinado}
 
 \begin{document}
 
 \maketitle
 
-\portadaseccion{1}{Prueba de Auto-Fit}{Tablas modernas}
+\portadaseccion{1}{Refinamiento Visual}{Consistencia y Alineación}
 
-\section{Tablas Cortas con Tabularx}
+\section{Tablas Cortas (Tabularx)}
 
-Esta tabla utiliza \texttt{tabularx} con el tipo de columna \texttt{XH} y \texttt{XG} para auto-ajuste.
+Esta tabla muestra la unificación de fuente a 9.5pt y la alineación vertical centrada. Observe cómo el texto se centra verticalmente en las celdas aunque una columna tenga mucho más contenido que la otra.
 
 \begin{tabladoradoCorto}
   \begin{tabularx}{\textwidth}{V v v}
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Concepto} & \encabezadodorado{Descripción Larga para Probar el Auto-Fit} & \encabezadodorado{Estatus} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{Proyecto Estratégico} & \encabezadodorado{Detalle del Alcance y Objetivos de la Implementación en Territorio Nacional} & \encabezadodorado{Estatus} \\
     \midrule
-    Proyecto A & Esta es una descripción bastante larga que debería ajustarse automáticamente al ancho de la columna sin desbordar el margen de la página. & \badge[gobmxVerde]{Activo} \\
-    Proyecto B & Texto corto. & \badge[gobmxDorado]{Pendiente} \\
+    Rehabilitación del SNR & Se contempla la modernización de las seis refinerías existentes para incrementar la capacidad de procesamiento de crudo pesado y reducir la dependencia de importaciones de gasolinas. & \badge[gobmxVerde]{En Proceso} \\
+    Soberanía Energética & Fortalecimiento de las capacidades operativas de las empresas públicas del Estado. & \badge[gobmxDorado]{Planeación} \\
     \bottomrule
   \end{tabularx}
 \end{tabladoradoCorto}
 
-\section{Tablas Largas con Xltabular}
+\section{Ejemplo de Tabla Muy Larga (Xltabular)}
 
-Esta tabla utiliza \texttt{xltabular} para permitir saltos de página y auto-ajuste simultáneo.
+A continuación, una tabla que se extiende por varias páginas, demostrando el mantenimiento del estilo y la alineación automática.
 
 \begin{tabladoradoLargo}
   \begin{xltabular}{\textwidth}{Y Z Z}
-    \caption{Prueba de tabla larga con xltabular}\label{tab:larga_x}\\
+    \caption{Matriz de Seguimiento de Infraestructura Energética (Tabla Larga)}\label{tab:larga_estetica}\\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Categoría} & \encabezadodorado{Detalle Técnico con Mucho Texto para Validar la Distribución} & \encabezadodorado{Valor} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{Región} & \encabezadodorado{Descripción Técnica del Activo de Infraestructura y su Impacto en la Red Nacional de Transmisión} & \encabezadodorado{Capacidad Instalada} \\
     \midrule
     \endfirsthead
     
     \multicolumn{3}{l}{\textit{Continuación...}} \\
     \toprule
-    \rowcolor{gobmxDorado} \encabezadodorado{Categoría} & \encabezadodorado{Detalle Técnico} & \encabezadodorado{Valor} \\
+    \rowcolor{gobmxDorado} \encabezadodorado{Región} & \encabezadodorado{Descripción Técnica} & \encabezadodorado{Capacidad} \\
     \midrule
     \endhead
     
-    Infraestructura & El despliegue de la red nacional de transmisión requiere una coordinación precisa entre las diferentes regiones de control del CENACE. & 95\% \\
-    Generación & La integración de nuevas centrales de ciclo combinado ayudará a estabilizar el sistema durante los picos de demanda máxima. & 100\% \\
-    Sustentabilidad & Se estima que la participación de energías limpias alcance la meta establecida para el cierre de este ciclo de planeación. & 31.2\% \\
+    \midrule
+    \multicolumn{3}{r}{\small\textit{Continúa en la siguiente página...}} \\
+    \endfoot
+    
     \bottomrule
+    \endlastfoot
+    
+    Noroeste & Despliegue de centrales solares fotovoltaicas en el desierto de Sonora, orientadas a satisfacer la demanda industrial fronteriza y exportación de excedentes. & 1,000 MW \\
+    \quad Oferta total & Fortalecimiento de las capacidades operativas de las empresas públicas del Estado. & 3,674.19 \\
+    \quad Producción & Datos de producción energética nacional. & 3,654 \\
+    \hspace{0.9em} Importación & Datos de importación de energéticos. & 13.2 \\
+    Centro & Fortalecimiento de las redes generales de distribución en zonas metropolitanas de alta densidad para reducir pérdidas técnicas y no técnicas. & N/A \\
+    \newpage
+    Pacífico Sur & Implementación de proyectos eólicos en el Istmo de Tehuantepec, aprovechando el potencial eólico para la generación de energía limpia a gran escala. & 800 MW \\
+    Península & Interconexión submarina y refuerzo de líneas de transmisión para evitar apagones en zonas turísticas de Quintana Roo y Yucatán durante el verano. & 500 MW \\
+    Bajío & Infraestructura de almacenamiento de petrolíferos para garantizar la seguridad energética en el corredor industrial más dinámico del país. & 400,000 Bls \\
+    Norte & Centrales de ciclo combinado de última generación para sustituir plantas térmicas convencionales menos eficientes y más contaminantes. & 1,500 MW \\
+    Sur & Desarrollo de infraestructura petroquímica para la reactivación de cadenas de valor en la industria de fertilizantes nacionales. & 200,000 Ton/y \\
   \end{xltabular}
 \end{tabladoradoLargo}
 
-\section{Verificación de Portada de Sección Vacía}
+\section{Verificación de Alineación de Encabezados}
 
-A continuación una portada de sección con argumentos vacíos para verificar que ya no falla.
-
-\portadaseccion{2}{}{}
-
-\section{Fin de Prueba}
-La compilación llegó hasta aquí correctamente.
+Note que los encabezados están centrados tanto horizontal como verticalmente, lo cual mejora la legibilidad en títulos largos.
 
 \end{document}

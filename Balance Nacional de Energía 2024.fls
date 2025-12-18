@@ -102,9 +102,9 @@ INPUT .\sener2025.cls
 INPUT sener2025.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\xebabel.def
@@ -515,28 +515,22 @@ INPUT Balance Nacional de Energía 2024.bbl
 INPUT .\Balance Nacional de Energía 2024.bbl
 INPUT .\Balance Nacional de Energía 2024.bbl
 INPUT Balance Nacional de Energía 2024.bbl
-INPUT .\img\portada.png
-INPUT .\img\portada.png
+INPUT .\img\portada.jpg
+INPUT .\img\portada.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\Balance Nacional de Energía 2024.toc
 INPUT .\Balance Nacional de Energía 2024.toc
 INPUT Balance Nacional de Energía 2024.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 OUTPUT Balance Nacional de Energía 2024.toc
@@ -557,10 +551,15 @@ INPUT .\img\foja_blanca.jpg
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
@@ -576,81 +575,9 @@ INPUT .\img\foja_blanca.jpg
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT .\img\fondo_guinda.png
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
@@ -659,6 +586,48 @@ INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg

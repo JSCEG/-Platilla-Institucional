@@ -2,8 +2,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{sener2025}[2025/11/21 Plantilla institucional SENER - Versión completa]
 
-% Basado en article tamaño carta, 12pt
-\LoadClass[12pt,letterpaper,twoside]{article}
+% Basado en article tamaño carta, pero redefiniremos el tamaño normal
+\LoadClass[letterpaper,twoside]{article}
 
 % ============================================================================
 % PAQUETES BÁSICOS
@@ -32,9 +32,11 @@
 % ============================================================================
 % COLORES INSTITUCIONALES
 % ============================================================================
-\definecolor{gobmxGuinda}{RGB}{156,35,72}
+\definecolor{gobmxGuinda}{RGB}{156,35,72}  % 7420 C
+\definecolor{senerRojoClaro}{RGB}{156,35,72} % 7420 C
+\definecolor{senerGuindaOscuro}{RGB}{98,19,51} % 7421 C
 \definecolor{gobmxVerde}{RGB}{30,91,79}
-\definecolor{gobmxDorado}{RGB}{166,128,45}
+\definecolor{gobmxDorado}{RGB}{166,128,45} % 1255 C
 \definecolor{gobmxGris}{RGB}{152,152,154}
 \definecolor{gobmxGrisClaro}{HTML}{F5F5F5}
 \definecolor{gobmxAmbarClaro}{RGB}{231,210,149}
@@ -100,6 +102,10 @@
   }
   
   \newcommand{\notosansfont}{\sffamily}
+  
+  % Establecer el tamaño de fuente predeterminado del documento a 10.5pt
+  \renewcommand{\normalsize}{\fontsize{10.5pt}{12.6pt}\selectfont}
+  \normalsize
 \fi
 
 
@@ -179,6 +185,7 @@
 \RequirePackage{colortbl}
 \RequirePackage{tabularx}
 \RequirePackage{xltabular}
+\renewcommand{\tabularxcolumn}[1]{m{#1}} % Centrado vertical en tabularx/xltabular
 \RequirePackage{pdfpages}
 \RequirePackage{eso-pic}
 \RequirePackage{tikz}
@@ -194,6 +201,7 @@
 % Definición de tamaño de fuente 10.5pt para tablas y glosario
 \newcommand{\notosanssmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
 \newcommand{\notosanscompact}{\fontsize{9.5pt}{11.2pt}\selectfont}
+\newcommand{\notosanstiny}{\fontsize{7.5pt}{9pt}\selectfont}
 
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
@@ -206,10 +214,11 @@
   textfont={small,color=gobmxGris},    % Texto en gris
   labelsep=period,                      % Separador punto: "Figura 1. Descripción"
   justification=raggedright,           % Alineación a la izquierda
-  singlelinecheck=false,               % No centrar títulos cortos
-  margin=0pt,
   parskip=0pt
 }
+
+% --- Definición de fuente Patria para captions de tablas ---
+\DeclareCaptionFont{senerTableFont}{\patriafont\bfseries\fontsize{12pt}{14pt}\selectfont}
 
 % IMPORTANTE: con placement [H], el paquete `float` NO usa la rutina estándar
 % de captions; usa su propio formateador (`\@fs@capt`), cuyo estilo `plain`
@@ -228,17 +237,22 @@
 \floatstyle{SENERfigure}
 \restylefloat{figure}
 
-% FIX: Configuración específica para tablas (espaciado reducido)
+% FIX: Configuración específica para tablas (Patria 12pt negritas, sin punto)
 \captionsetup[table]{
   position=top,
-  skip=3pt,                    % FIX: Reducido de 8pt
+  skip=6pt,
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris},
-  font={small,color=gobmxGris}
+  labelsep=space,
+  font={senerTableFont,color=gobmxGris},
+  labelfont={senerTableFont,color=gobmxGris}
 }
+
+% --- Configuración de espaciado global para tablas ---
+\setlength{\intextsep}{35pt plus 4pt minus 2pt} % Espacio para tablas [H]
+\setlength{\LTpre}{35pt plus 4pt minus 2pt}    % Espacio para longtable/xltabular
+\setlength{\LTpost}{12pt plus 2pt minus 2pt}
 
 % FIX: Configuración específica para figuras (espaciado reducido)
 \captionsetup[figure]{
@@ -274,16 +288,16 @@
   }
 }
 
-% FIX: Para longtable, usar espaciado reducido
+% FIX: Para longtable, usar mismo estilo que table
 \captionsetup[longtable]{
   position=top,
-  skip=3pt,                    % FIX: Reducido de 8pt
+  skip=3pt,
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={small,color=gobmxGris},
-  font={small,color=gobmxGris}
+  labelsep=space,
+  font={senerTableFont,color=gobmxGris},
+  labelfont={senerTableFont,color=gobmxGris}
 }
 % Bibliography (APA style)
 \RequirePackage[
@@ -438,22 +452,22 @@
 
 % Título A  -> \section  (Patria 17 pt, negritas)
 \titleformat{\section}
-  {\patriafont\bfseries\fontsize{17pt}{20pt}\selectfont\color{gobmxGuinda}}
+  {\patriafont\bfseries\fontsize{17pt}{20pt}\selectfont\color{senerGuindaOscuro}}
   {\thesection}{0.3em}{}
 
 % Título B  -> \subsection  (Patria 14 pt, negritas)
 \titleformat{\subsection}
-  {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{gobmxGuinda}}
+  {\patriafont\bfseries\fontsize{14pt}{17pt}\selectfont\color{senerRojoClaro}}
   {\thesubsection}{0.3em}{}
 
-% Título C  -> \subsubsection  (Noto Sans 12 pt, negritas)
+% Título C  -> \subsubsection  (Noto Sans 10.5 pt, negritas)
 \titleformat{\subsubsection}
-  {\sffamily\bfseries\fontsize{12pt}{14pt}\selectfont\color{gobmxGuinda}}
+  {\sffamily\bfseries\fontsize{10.5pt}{12.6pt}\selectfont\color{senerRojoClaro}}
   {\thesubsubsection}{0.3em}{}
 
-% Título D  -> \paragraph  (Noto Sans 12 pt, normal)
+% Título D  -> \paragraph  (Noto Sans 10 pt, negritas)
 \titleformat{\paragraph}
-  {\sffamily\fontsize{12pt}{14pt}\selectfont\color{gobmxGris}}
+  {\sffamily\bfseries\fontsize{10pt}{12pt}\selectfont\color{gobmxDorado}}
   {\theparagraph}{0.3em}{}
 \titlespacing*{\paragraph}{0pt}{0.8em}{0.5em}
 
@@ -576,8 +590,8 @@
 \newcolumntype{H}[1]{>{\raggedright\arraybackslash\bfseries\color{gobmxGris}}p{#1}}
 
 % FIX: Tipos de columna X (flexibles) para auto fit con tabularx
-\newcolumntype{v}{>{\raggedright\arraybackslash\color{gobmxGris}}X} % Gris
-\newcolumntype{V}{>{\raggedright\arraybackslash\bfseries\color{gobmxGris}}X} % Gris Bold
+\newcolumntype{v}{>{\raggedright\arraybackslash}X} % Texto normal (Negro)
+\newcolumntype{V}{>{\raggedright\arraybackslash\bfseries}X} % Bold (Negro)
 \newcolumntype{Y}{>{\raggedright\arraybackslash\bfseries}X} % Bold
 \newcolumntype{Z}{>{\raggedright\arraybackslash}X} % Left
 \newcolumntype{E}{>{\centering\arraybackslash}X} % Center
@@ -592,22 +606,22 @@
 
 % Encabezado guinda (predeterminado)
 \newcommand{\encabezadoguinda}[1]{%
-  \textcolor{white}{\textbf{#1}}%
+  \textcolor{white}{\centering\arraybackslash\bfseries #1}%
 }
 
 % Encabezado verde
 \newcommand{\encabezadoverde}[1]{%
-  \textcolor{white}{\textbf{#1}}%
+  \textcolor{white}{\centering\arraybackslash\bfseries #1}%
 }
 
 % Encabezado dorado
 \newcommand{\encabezadodorado}[1]{%
-  \textcolor{white}{\textbf{#1}}%
+  \textcolor{white}{\centering\arraybackslash\bfseries #1}%
 }
 
 % Encabezado gris
 \newcommand{\encabezadogris}[1]{%
-  \textcolor{white}{\textbf{#1}}%
+  \textcolor{white}{\centering\arraybackslash\bfseries #1}%
 }
 
 % Alias para compatibilidad
@@ -620,7 +634,7 @@
 % FIX: Estilo de caption para tablas cortas (igual que longtable)
 \makeatletter
 \newcommand\floatc@SENERtable[2]{%
-  {\footnotesize\color{gobmxGris}\raggedright #1.\ #2\par}%
+  {\patriafont\bfseries\fontsize{12pt}{14pt}\selectfont\color{gobmxGris}\raggedright #1\ #2\par}%
 }
 \newcommand\fs@SENERtable{%
   \let\@fs@capt\floatc@SENERtable
@@ -636,9 +650,10 @@
   \floatstyle{SENERtable}
   \restylefloat{table}
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
-  \sffamily\notosanssmall
-  \color{gobmxGris} % FIX: Texto gris en cuerpo como longtable
+  \vspace{0.6cm}
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
+  \color{black} % FIX: Texto negro en lugar de gris
   #1
 }{
   \end{table}
@@ -650,8 +665,8 @@
 \newenvironment{tablaguinda}[1][]{
   \rowcolors{2}{gobmxGuinda!10}{white}
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2} % Más aire
-  \sffamily\notosanssmall % Fuente sans-serif 10.5pt
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
   #1
 }{
   \end{table}
@@ -661,8 +676,8 @@
 \newenvironment{tablaverde}[1][]{
   \rowcolors{2}{gobmxVerde!15}{white}
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
-  \sffamily\notosanssmall
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
   #1
 }{
   \end{table}
@@ -671,8 +686,9 @@
 % Tabla estilo dorado (ahora sin entorno table, para usar con longtable)
 \newenvironment{tabladorado}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
-  \sffamily\notosanssmall
-  \renewcommand{\arraystretch}{1.2}
+  \sffamily\notosanstiny
+  \renewcommand{\arraystretch}{1.25}
+  \color{black}
   #1
 }{
 }
@@ -680,8 +696,9 @@
 % Tabla dorada para tablas largas (sin entorno table)
 \newenvironment{tabladoradoLargo}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
-  \sffamily\notosanscompact
-  \renewcommand{\arraystretch}{1.15}
+  \sffamily\notosanstiny
+  \renewcommand{\arraystretch}{1.25}
+  \color{black}
   #1
 }{
 }
@@ -690,8 +707,9 @@
 \newenvironment{tablagris}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
-  \sffamily\notosanssmall
+  \vspace{0.6cm}
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
   #1
 }{
   \end{table}
@@ -700,8 +718,9 @@
 % Tabla sin stripes (solo encabezado con color)
 \newenvironment{tablalimpia}[1][]{
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
-  \sffamily\notosanssmall
+  \vspace{0.6cm}
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
   #1
 }{
   \end{table}
@@ -711,8 +730,9 @@
 \newenvironment{tablainstitucional}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
-  \renewcommand{\arraystretch}{1.2}
-  \sffamily\notosanssmall
+  \vspace{0.6cm}
+  \renewcommand{\arraystretch}{1.25}
+  \sffamily\notosanstiny
   #1
 }{
   \end{table}
@@ -1365,8 +1385,8 @@
 \newcommand{\fuente}[1]{%
   \vspace{-6pt}% FIX: Espacio negativo fijo para pegar más
   \par\noindent% FIX: Sin indentación
-  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont%
-    {\bfseries FUENTE:}~\SENERfuenteAutopunctuate{#1}%
+  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont\color{gobmxGris}%
+    FUENTE:~\SENERfuenteAutopunctuate{#1}%
   }%
   \par\vspace{\SenerCaptionSkip}% FIX: Espacio mínimo consistente después
 }
