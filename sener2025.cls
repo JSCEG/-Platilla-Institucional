@@ -178,6 +178,7 @@
 \renewcommand{\@pnumwidth}{3em}
 \RequirePackage{colortbl}
 \RequirePackage{tabularx}
+\RequirePackage{xltabular}
 \RequirePackage{pdfpages}
 \RequirePackage{eso-pic}
 \RequirePackage{tikz}
@@ -573,6 +574,14 @@
 % FIX: Nuevos tipos de columna para tablas con texto gris y alineación izquierda
 \newcolumntype{G}[1]{>{\raggedright\arraybackslash\color{gobmxGris}}p{#1}}
 \newcolumntype{H}[1]{>{\raggedright\arraybackslash\bfseries\color{gobmxGris}}p{#1}}
+
+% FIX: Tipos de columna X (flexibles) para auto fit con tabularx
+\newcolumntype{v}{>{\raggedright\arraybackslash\color{gobmxGris}}X} % Gris
+\newcolumntype{V}{>{\raggedright\arraybackslash\bfseries\color{gobmxGris}}X} % Gris Bold
+\newcolumntype{Y}{>{\raggedright\arraybackslash\bfseries}X} % Bold
+\newcolumntype{Z}{>{\raggedright\arraybackslash}X} % Left
+\newcolumntype{E}{>{\centering\arraybackslash}X} % Center
+\newcolumntype{F}{>{\raggedleft\arraybackslash}X} % Right
 
 % ============================================================================
 % ESTILOS DE ENCABEZADOS DE TABLA
@@ -1033,6 +1042,7 @@
 % ============================================================================
 % PORTADA INSTITUCIONAL
 % ============================================================================
+\makeatletter
 
 % Portada estándar (sin fondo)
 \renewcommand{\maketitle}{%
@@ -1141,6 +1151,7 @@
   \end{titlepage}
   \clearpage
 }
+\makeatother
 
 % ============================================================================
 % REDEFINICIÓN DEL ÍNDICE PRINCIPAL (CENTRADO)
@@ -1287,13 +1298,19 @@
     \vspace*{\fill}
     \begin{center}
       % Número de sección grande en blanco
-      {\fontsize{80}{80}\selectfont\bfseries\color{white} #1}\\[0.5cm]
+      \if\relax\detokenize{#1}\relax\else
+        {\fontsize{80}{80}\selectfont\bfseries\color{white} #1}\par\vspace{0.5cm}
+      \fi
       
       % Título en Ambar Claro y fuente Patria
-      {\Huge\bfseries\patriafont\color{gobmxAmbarClaro} #2}\\[1cm]
+      \if\relax\detokenize{#2}\relax\else
+        {\Huge\bfseries\patriafont\color{gobmxAmbarClaro} #2}\par\vspace{1cm}
+      \fi
       
       % Subtítulo en blanco
-      {\Large #3}
+      \if\relax\detokenize{#3}\relax\else
+        {\Large #3}\par
+      \fi
     \end{center}
     \vspace*{\fill}
   \endgroup

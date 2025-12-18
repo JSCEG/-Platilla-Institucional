@@ -1,7 +1,7 @@
 PWD c:\Proyectos\40.-PlantillasLatex
 INPUT C:\Users\User\AppData\Local\MiKTeX\miktex\data\le\xetex\xelatex.fmt
-INPUT c:\Proyectos\40.-PlantillasLatex\BNE-2025.tex
-OUTPUT BNE-2025.log
+INPUT c:\Proyectos\40.-PlantillasLatex\Balance Nacional de Energía 2024.tex
+OUTPUT Balance Nacional de Energía 2024.log
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\latex-lab\documentmetadata-support.ltx
@@ -497,10 +497,10 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bookmark.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\bookmark\bkm-dvipdfm.def
-INPUT .\BNE-2025.aux
-INPUT .\BNE-2025.aux
-INPUT BNE-2025.aux
-OUTPUT BNE-2025.aux
+INPUT .\Balance Nacional de Energía 2024.aux
+INPUT .\Balance Nacional de Energía 2024.aux
+INPUT Balance Nacional de Energía 2024.aux
+OUTPUT Balance Nacional de Energía 2024.aux
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\caption\ltcaption.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
@@ -510,19 +510,18 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
-OUTPUT BNE-2025.bcf
-INPUT BNE-2025.bbl
-INPUT .\BNE-2025.bbl
-INPUT .\BNE-2025.bbl
-INPUT .\BNE-2025.bbl
-INPUT BNE-2025.bbl
+OUTPUT Balance Nacional de Energía 2024.bcf
+INPUT Balance Nacional de Energía 2024.bbl
+INPUT .\Balance Nacional de Energía 2024.bbl
+INPUT .\Balance Nacional de Energía 2024.bbl
+INPUT Balance Nacional de Energía 2024.bbl
 INPUT .\img\portada.png
 INPUT .\img\portada.png
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT .\BNE-2025.toc
-INPUT .\BNE-2025.toc
-INPUT BNE-2025.toc
+INPUT .\Balance Nacional de Energía 2024.toc
+INPUT .\Balance Nacional de Energía 2024.toc
+INPUT Balance Nacional de Energía 2024.toc
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
@@ -538,19 +537,28 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
-OUTPUT BNE-2025.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT .\BNE-2025.lof
-INPUT .\BNE-2025.lof
-INPUT BNE-2025.lof
-OUTPUT BNE-2025.lof
+OUTPUT Balance Nacional de Energía 2024.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT .\BNE-2025.lot
-INPUT .\BNE-2025.lot
-INPUT BNE-2025.lot
-OUTPUT BNE-2025.lot
+INPUT .\Balance Nacional de Energía 2024.lot
+INPUT .\Balance Nacional de Energía 2024.lot
+INPUT Balance Nacional de Energía 2024.lot
+OUTPUT Balance Nacional de Energía 2024.lot
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
@@ -568,11 +576,6 @@ INPUT .\img\foja_blanca.jpg
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
 INPUT .\img\fondo_guinda.png
-INPUT .\img\graficos\figura_2_12.png
-INPUT .\img\graficos\figura_2_12.png
-INPUT .\img\graficos\figura_2_12.png
-INPUT .\img\foja_blanca.jpg
-INPUT .\img\foja_blanca.jpg
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
@@ -585,6 +588,113 @@ INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg
-INPUT BNE-2025.aux
-INPUT BNE-2025.run.xml
-OUTPUT BNE-2025.run.xml
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT .\img\fondo_guinda.png
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex9.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr9.tfm
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT .\img\foja_blanca.jpg
+INPUT Balance Nacional de Energía 2024.aux
+INPUT Balance Nacional de Energía 2024.run.xml
+OUTPUT Balance Nacional de Energía 2024.run.xml

@@ -1476,13 +1476,12 @@ function procesarDatosArray(datos, tituloTabla, forzarLongtable = false) {
 function generarTablaSimple(datos, tituloTabla) {
     const numCols = datos[0].length;
 
-    // Calcular ancho de columnas para longtable
-    // Primera columna: 3cm con negritas automáticas (B), resto: distribuido equitativamente
-    const anchoRestante = `${(11 / (numCols - 1)).toFixed(2)}cm`; // ancho útil compacto
-    const especCols = 'B{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
+    // Calcular especificación de columnas para xltabular
+    // Primera columna: Y (X + bold), resto: Z (X) para distribuir equitativamente
+    const especCols = 'Y' + 'Z'.repeat(numCols - 1);
 
-    // Usar longtable para permitir saltos de página automáticos
-    let tex = `  \\begin{longtable}{${especCols}}\n`;
+    // Usar xltabular para permitir saltos de página automáticos y auto-fit de columnas
+    let tex = `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
     if (tituloTabla) {
         tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
     }
@@ -1516,7 +1515,7 @@ function generarTablaSimple(datos, tituloTabla) {
         tex += `    ${celdas.join(' & ')} \\\\\n`;
     }
 
-    tex += `  \\end{longtable}\n`;
+    tex += `  \\end{xltabular}\n`;
     return tex;
 }
 
@@ -1526,9 +1525,9 @@ function generarTablaSimple(datos, tituloTabla) {
  */
 function generarTablaCompacta(datos) {
     const numCols = datos[0].length;
-    // FIX: Usar tipos de columna con texto gris y alineación izquierda
-    const especCols = 'H{3cm}' + ('G{2cm}'.repeat(numCols - 1));
-    let tex = `  \\begin{tabular}{${especCols}}\n`;
+    // FIX: Usar tipos de columna X con texto gris y alineación izquierda para auto-fit
+    const especCols = 'V' + ('v'.repeat(numCols - 1));
+    let tex = `  \\begin{tabularx}{\\textwidth}{${especCols}}\n`;
     tex += `    \\toprule\n`;
     // Encabezados con fondo dorado
     const encabezados = procesarCeldasFila(datos[0], true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
@@ -1541,7 +1540,7 @@ function generarTablaCompacta(datos) {
     }
 
     tex += `    \\bottomrule\n`;
-    tex += `  \\end{tabular}\n`;
+    tex += `  \\end{tabularx}\n`;
     return tex;
 }
 
@@ -1575,12 +1574,11 @@ function dividirTabla(datos, maxCols, tituloTabla) {
         const colsEnEstaParte = [0].concat(Array.from({ length: colFin - colInicio }, (_, i) => colInicio + i));
         const numColsTabla = colsEnEstaParte.length;
 
-        // Calcular ancho de columnas para longtable
-        const anchoRestante = `${(11 / (numColsTabla - 1)).toFixed(2)}cm`;
-        const especCols = 'B{3cm}' + ('p{' + anchoRestante + '}').repeat(numColsTabla - 1);
+        // Calcular especificación de columnas para xltabular
+        const especCols = 'Y' + 'Z'.repeat(numColsTabla - 1);
 
-        // Usar longtable para permitir saltos de página
-        tex += `  \\begin{longtable}{${especCols}}\n`;
+        // Usar xltabular para permitir saltos de página y auto-fit
+        tex += `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
         if (tituloTabla && parte === 1) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
         }
@@ -1618,7 +1616,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
 
-        tex += `  \\end{longtable}\n`;
+        tex += `  \\end{xltabular}\n`;
 
         colInicio = colFin;
         parte++;
@@ -1632,14 +1630,14 @@ function dividirTabla(datos, maxCols, tituloTabla) {
  */
 function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
     const numCols = datos[0].length;
-    const anchoRestante = `${(11 / (numCols - 1)).toFixed(2)}cm`;
-    const especCols = 'p{3cm}' + ('p{' + anchoRestante + '}').repeat(numCols - 1);
+    // EspecCols con auto-fit distribuido
+    const especCols = 'Y' + 'Z'.repeat(numCols - 1);
     let tex = '';
     let inicio = 1; // Saltar encabezado
     let parte = 1;
     while (inicio < datos.length) {
         const fin = Math.min(inicio + maxFilasParte, datos.length);
-        tex += `  \\begin{longtable}{${especCols}}\n`;
+        tex += `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
         if (tituloTabla && parte === 1) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
         }
@@ -1662,7 +1660,7 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
             const celdas = procesarCeldasFila(datos[i]);
             tex += `    ${celdas.join(' & ')} \\\\\n`;
         }
-        tex += `  \\end{longtable}\n`;
+        tex += `  \\end{xltabular}\n`;
         if (fin < datos.length) {
             // FIX: Reducir espacios en continuaciones de tablas por filas
             tex += `\n  \\vspace{0.25em}\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n  \\vspace{0.15em}\n\n`;
