@@ -1,9 +1,0 @@
-\babel@toc {mexican}{}\relax 
-\contentsline {section}{\numberline {1}Pruebas de Correcciones Aplicadas}{3}{section.1}%
-\contentsline {subsection}{\numberline {1.1}Prueba 1: Saltos de línea normalizados}{3}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Prueba 2: Etiquetas procesadas correctamente}{3}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}Prueba 3: Texto con ecuaciones}{3}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}Prueba 4: Caracteres especiales escapados}{3}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Prueba 5: Comando fuente corregido}{4}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}Prueba 6: Tipografías por motor}{4}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Resultado Esperado}{4}{section.2}%

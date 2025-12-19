@@ -1,9 +1,0 @@
-[0] Config.pm:328> INFO - This is Biber 2.21
-[0] Config.pm:331> INFO - Logfile is 'test_normalizacion_saltos.blg'
-[122] biber-MSWIN64:342> INFO - === 
-[158] Biber.pm:421> INFO - Reading 'test_normalizacion_saltos.bcf'
-[281] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[297] bbl.pm:676> INFO - Writing 'test_normalizacion_saltos.bbl' with encoding 'UTF-8'
-[297] bbl.pm:779> INFO - Output to test_normalizacion_saltos.bbl
-[297] Biber.pm:132> WARN - The file 'test_normalizacion_saltos.bcf' does not contain any citations!
-[297] Biber.pm:134> INFO - WARNINGS: 1

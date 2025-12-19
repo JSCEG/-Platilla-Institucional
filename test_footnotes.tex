@@ -1,0 +1,43 @@
+\documentclass{sener2025}
+\usepackage{lipsum}
+
+\title{Test de Notas al Pie}
+\subtitle{Verificando soporte en figuras y tablas}
+\author{Usuario de Prueba}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Prueba de Figuras}
+
+Intentaremos poner una nota al pie en el caption y en la fuente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{img/logo_gob.png} % Asumiendo que existe, si no, usará placeholder si falla? LaTeX fallará si no existe.
+    % Usaremos rule para no depender de img
+    \rule{4cm}{4cm}
+    \caption[Figura con nota]{Figura con nota en el título\footnote{Esta es una nota en el caption de la figura.}}
+    \fuente{Fuente con nota\footnote{Esta es una nota en la fuente de la figura.}}
+\end{figure}
+
+\section{Prueba de Tablas}
+
+Intentaremos notas en encabezados.
+
+\begin{tablaguinda}
+    \begin{tabularx}{\textwidth}{L{4cm} X}
+        \toprule
+        \encabezadotabla{Concepto\footnote{Nota en encabezado}} & \encabezadotabla{Descripción} \\
+        \midrule
+        Dato 1 & Valor 1 \\
+        Dato 2 & Valor 2\footnote{Nota en celda} \\
+        \bottomrule
+    \end{tabularx}
+    \caption{Tabla con notas}
+    \fuente{Fuente de tabla con nota\footnote{Nota en fuente de tabla}}
+\end{tablaguinda}
+
+\end{document}
