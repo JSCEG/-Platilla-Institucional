@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.9)  14 DEC 2025 19:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 02:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -11,8 +11,8 @@ Document Class: sener2025 2025/11/21 Plantilla institucional SENER - Versión co
 mpleta
 (C:\Program Files\MiKTeX\tex/latex/base\article.cls
 Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
-(C:\Program Files\MiKTeX\tex/latex/base\size12.clo
-File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
+(C:\Program Files\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count271
 \c@section=\count272
@@ -257,19 +257,19 @@ Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.cfg)))
 
 Package fontspec Info: 
-(fontspec)             Patria_Regular scale = 0.8850083421890218.
+(fontspec)             Patria_Regular scale = 0.8850078800354681.
 
 
 Package fontspec Info: 
-(fontspec)             Patria_Regular scale = 0.8850083421890218.
+(fontspec)             Patria_Regular scale = 0.8850078800354681.
 
 
 Package fontspec Info: 
-(fontspec)             Patria_Bold scale = 0.7822119656147234.
+(fontspec)             Patria_Bold scale = 0.78221232664274.
 
 
 Package fontspec Info: 
-(fontspec)             Patria_Light scale = 0.913132379841432.
+(fontspec)             Patria_Light scale = 0.9131318878482919.
 
 
 Package fontspec Info: 
@@ -282,26 +282,18 @@ Package fontspec Info:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[0.8850083421890218]"[tipografias/Patria_Regular.ot
+(fontspec)             <->s*[0.8850078800354681]"[tipografias/Patria_Regular.ot
 f]/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'bold' (b/n) with NFSS spec.:
-(fontspec)             <->s*[0.7822119656147234]"[tipografias/Patria_Bold.otf]/
-OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->s*[0.78221232664274]"[tipografias/Patria_Bold.otf]/OT
+:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[0.913132379841432]"[tipografias/Patria_Light.otf]/
-OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             <->s*[0.9131318878482919]"[tipografias/Patria_Light.otf]
+/OT:script=latn;language=dflt;mapping=tex-text;"
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Regular scale = 0.8041012599370388.
-
-
-Package fontspec Info: 
-(fontspec)             NotoSans-Regular scale = 1.0.
-
-
-Package fontspec Info: 
-(fontspec)             NotoSans-Regular scale = 0.8041012599370388.
+(fontspec)             NotoSans-Regular scale = 0.80410164145368.
 
 
 Package fontspec Info: 
@@ -309,7 +301,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Regular scale = 0.8041012599370388.
+(fontspec)             NotoSans-Regular scale = 0.80410164145368.
 
 
 Package fontspec Info: 
@@ -317,7 +309,15 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Bold scale = 0.789374768568654.
+(fontspec)             NotoSans-Regular scale = 0.80410164145368.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-Regular scale = 1.0.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-Bold scale = 0.7893736655599897.
 
 
 Package fontspec Info: 
@@ -325,7 +325,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Bold scale = 0.789374768568654.
+(fontspec)             NotoSans-Bold scale = 0.7893736655599897.
 
 
 Package fontspec Info: 
@@ -333,7 +333,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Italic scale = 0.8041012599370388.
+(fontspec)             NotoSans-Italic scale = 0.80410164145368.
 
 
 Package fontspec Info: 
@@ -341,7 +341,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Italic scale = 0.8041012599370388.
+(fontspec)             NotoSans-Italic scale = 0.80410164145368.
 
 
 Package fontspec Info: 
@@ -349,7 +349,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-BoldItalic scale = 0.789374768568654.
+(fontspec)             NotoSans-BoldItalic scale = 0.7893736655599897.
 
 
 Package fontspec Info: 
@@ -357,7 +357,7 @@ Package fontspec Info:
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-BoldItalic scale = 0.789374768568654.
+(fontspec)             NotoSans-BoldItalic scale = 0.7893736655599897.
 
 
 Package fontspec Info: 
@@ -401,15 +401,17 @@ pt=latn;language=dflt;mapping=tex-text;"
 pt=latn;language=dflt;+smcp;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 100.
+(Font)              scaled to size 10.0pt on input line 102.
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Regular scale = 0.9999976276839791.
+(fontspec)             NotoSans-Regular scale = 0.9999971532194241.
 
 
 Package fontspec Info: 
 (fontspec)             NotoSans-Regular scale = 1.0.
 
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 10.5pt on input line 108.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/accsupp\accsupp.sty
 Package: accsupp 2019/12/05 v0.6 Accessibility support by marked content (HO)
@@ -863,6 +865,12 @@ Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
 \TX@cols=\count349
 \TX@ftn=\toks44
 )
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/xltabular\xltabular.sty
+Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/ltablex\ltablex.sty
+Package: ltablex 2014/08/13 v1.1 Modified tabularx
+))
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
 Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
 
@@ -1435,28 +1443,28 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip112
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 307.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 307.
+Package hyperref Info: Option `colorlinks' set `true' on input line 322.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 322.
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517035826025.
+(fontspec)             NotoSans-Light scale = 1.007517379843479.
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517035826025.
+(fontspec)             NotoSans-Light scale = 1.007517379843479.
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517035826025.
+(fontspec)             NotoSans-Light scale = 1.007517379843479.
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-LightItalic scale = 1.007517035826025.
+(fontspec)             NotoSans-LightItalic scale = 1.007517379843479.
 
 
 Package fontspec Info: 
-(fontspec)             NotoSans-LightItalic scale = 1.007517035826025.
+(fontspec)             NotoSans-LightItalic scale = 1.007517379843479.
 
 
 Package fontspec Info: 
@@ -1469,16 +1477,16 @@ Package fontspec Info:
 (fontspec)             series/shapes:
 (fontspec)              
 (fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.007517035826025]"[tipografias/NotoSans-Light.ttf
+(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-Light.ttf
 ]/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1.007517035826025]"[tipografias/NotoSans-Light.ttf
+(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-Light.ttf
 ]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
 (fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1.007517035826025]"[tipografias/NotoSans-LightItal
+(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
 ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1.007517035826025]"[tipografias/NotoSans-LightItal
+(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
 ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
 
 )
@@ -1536,12 +1544,12 @@ LaTeX Info: Redefining \% on input line 7.
 * \topmargin=-16.13809pt
 * \headheight=45.0pt
 * \headsep=28.45274pt
-* \topskip=12.0pt
+* \topskip=10.0pt
 * \footskip=42.67912pt
-* \marginparwidth=95.0pt
-* \marginparsep=10.0pt
+* \marginparwidth=121.0pt
+* \marginparsep=11.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -1672,66 +1680,66 @@ Package hyperref Info: Link coloring ON on input line 7.
 \openout5 = `test_caption_fix.out'.
 
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 10.62012pt on input line 9.
+(Font)              scaled to size 9.2926pt on input line 9.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 9.
+(Font)              scaled to size 8.21321pt on input line 9.
 Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
 (Font)              scaled to size 13.29759pt on input line 9.
@@ -1793,56 +1801,123 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 \@float@every@table=\toks56
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 16.
+(Font)              scaled to size 7.5pt on input line 16.
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 9.38654pt on input line 16.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 7.0399pt on input line 16.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Calculating math sizes for size <7.5> on input line 18.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.95pt on input line 16.
+(Font)              scaled to size 5.24997pt on input line 18.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 16.
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 18.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 18.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.25pt on input line 18.
+(Font)              scaled to size 3.75pt on input line 18.
 
 
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 18.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
+(Font)              size <7> substituted on input line 18.
 
 
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 18.
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <3.75> not available
+(Font)              size <5> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <3.75> not available
+(Font)              size <5> substituted on input line 18.
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.5> on input line 18.
+(Font)              <7.5> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7.34996> on input line 18.
+(Font)              <5.24997> on input line 18.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5.25> on input line 18.
+(Font)              <3.75> on input line 18.
 
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 18.
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
+(Font)              size <7> substituted on input line 18.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <3.75> not available
+(Font)              size <5> substituted on input line 18.
+
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 10.5pt on input line 20.
+(Font)              scaled to size 7.5pt on input line 20.
+LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
+(Font)              scaled to size 7.55641pt on input line 27.
+LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
+(Font)              scaled to size 8.06018pt on input line 27.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 9.5pt on input line 32.
-LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 9.5pt on input line 35.
+(Font)              scaled to size 9.0pt on input line 47.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/it' will be
-(Font)              scaled to size 10.95pt on input line 46.
+(Font)              scaled to size 9.0pt on input line 47.
 
-
-Package caption Warning: Unused \captionsetup[figure] on input line 255.
+Package caption Warning: Unused \captionsetup[figure] on input line 270.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 60.
+(Font)              scaled to size 7.0pt on input line 61.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 8.0pt on input line 60.
+(Font)              scaled to size 7.0pt on input line 61.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [1
@@ -1859,10 +1934,7 @@ L3 programming layer <2025-10-24>
 
 
 LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 0.45pt have occurred.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+(Font)              up to 1.25pt have occurred.
 
 Package rerunfilecheck Info: File `test_caption_fix.out' has not changed.
 (rerunfilecheck)             Checksum: 0C370DEE11454CA4D163B375E2739E7F;601.
@@ -1871,12 +1943,12 @@ Package logreq Info: Writing requests to 'test_caption_fix.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 43514 strings out of 402987
- 868139 string characters out of 5452871
- 1850445 words of memory out of 5000000
- 71697 multiletter control sequences out of 15000+600000
- 629277 words of font info for 79 fonts, out of 8000000 for 9000
+ 43607 strings out of 402987
+ 870092 string characters out of 5452870
+ 1852770 words of memory out of 5000000
+ 71782 multiletter control sequences out of 15000+600000
+ 628377 words of font info for 78 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,12n,130p,1211b,4037s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,130p,1547b,4037s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on test_caption_fix.pdf (1 page).

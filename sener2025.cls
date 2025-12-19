@@ -223,9 +223,8 @@
 % IMPORTANTE: con placement [H], el paquete `float` NO usa la rutina estándar
 % de captions; usa su propio formateador (`\@fs@capt`), cuyo estilo `plain`
 % centra captions cortos. Para figuras institucionales lo forzamos a izquierda.
-\makeatletter
 \newcommand\floatc@SENERfigure[2]{%
-  {\footnotesize\color{gobmxGris}\raggedright #1.\ #2\par}%
+  {\senerTableFont\color{gobmxGuinda}\raggedright #1.\ #2\par}%
 }
 \newcommand\fs@SENERfigure{%
   \let\@fs@capt\floatc@SENERfigure
@@ -240,13 +239,13 @@
 % FIX: Configuración específica para tablas (Patria 12pt negritas, sin punto)
 \captionsetup[table]{
   position=top,
-  skip=6pt,
+  skip=0pt,
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
   labelsep=space,
-  font={senerTableFont,color=gobmxGris},
-  labelfont={senerTableFont,color=gobmxGris}
+  font={senerTableFont,color=gobmxGuinda},
+  labelfont={senerTableFont,color=gobmxGuinda}
 }
 
 % --- Configuración de espaciado global para tablas ---
@@ -254,19 +253,18 @@
 \setlength{\LTpre}{35pt plus 4pt minus 2pt}    % Espacio para longtable/xltabular
 \setlength{\LTpost}{12pt plus 2pt minus 2pt}
 
-% FIX: Configuración específica para figuras (espaciado reducido)
+% FIX: Configuración específica para figuras (ahora igual que tablas)
 \captionsetup[figure]{
   position=bottom,
-  skip=3pt,                    % FIX: Reducido de 8pt
+  skip=3pt,
   format=plain,
   width=\textwidth,
   justification=raggedright,
   singlelinecheck=false,
   margin=0pt,
   parskip=0pt,
-  labelfont={footnotesize,color=gobmxGris},
-  textfont={footnotesize,color=gobmxGris},
-  font={footnotesize,color=gobmxGris}
+  font={senerTableFont,color=gobmxGuinda},
+  labelfont={senerTableFont,color=gobmxGuinda}
 }
 
 % Cambiar "Cuadro" a "Tabla" para tablas en español
@@ -282,22 +280,21 @@
     singlelinecheck=false,
     margin=0pt,
     parskip=0pt,
-    labelfont={footnotesize,color=gobmxGris},
-    textfont={footnotesize,color=gobmxGris},
-    font={footnotesize,color=gobmxGris}
+    font={senerTableFont,color=gobmxGuinda},
+    labelfont={senerTableFont,color=gobmxGuinda}
   }
 }
 
 % FIX: Para longtable, usar mismo estilo que table
 \captionsetup[longtable]{
   position=top,
-  skip=3pt,
+  skip=0pt,
   format=plain,
   justification=raggedright,
   singlelinecheck=false,
   labelsep=space,
-  font={senerTableFont,color=gobmxGris},
-  labelfont={senerTableFont,color=gobmxGris}
+  font={senerTableFont,color=gobmxGuinda},
+  labelfont={senerTableFont,color=gobmxGuinda}
 }
 % Bibliography (APA style)
 \RequirePackage[
@@ -430,8 +427,8 @@
 
 % FIX: Definir constantes para espaciado consistente
 \newcommand{\SenerFloatSep}{6pt}
-\newcommand{\SenerCaptionSkip}{2pt}
-\newcommand{\SenerTableSep}{4pt}
+\newcommand{\SenerCaptionSkip}{0pt}
+\newcommand{\SenerTableSep}{6pt}
 
 % Espacios alrededor de floats (figuras/tablas) - más compactos
 \setlength{\textfloatsep}{\SenerFloatSep plus 1pt minus 1pt}    % FIX: Más reducido
@@ -634,7 +631,7 @@
 % FIX: Estilo de caption para tablas cortas (igual que longtable)
 \makeatletter
 \newcommand\floatc@SENERtable[2]{%
-  {\patriafont\bfseries\fontsize{12pt}{14pt}\selectfont\color{gobmxGris}\raggedright #1\ #2\par}%
+  {\senerTableFont\color{gobmxGuinda}\raggedright #1\ #2\par}%
 }
 \newcommand\fs@SENERtable{%
   \let\@fs@capt\floatc@SENERtable
@@ -650,7 +647,6 @@
   \floatstyle{SENERtable}
   \restylefloat{table}
   \begin{table}[H]
-  \vspace{0.6cm}
   \renewcommand{\arraystretch}{1.25}
   \sffamily\notosanstiny
   \color{black} % FIX: Texto negro en lugar de gris
@@ -707,7 +703,6 @@
 \newenvironment{tablagris}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
-  \vspace{0.6cm}
   \renewcommand{\arraystretch}{1.25}
   \sffamily\notosanstiny
   #1
@@ -718,7 +713,6 @@
 % Tabla sin stripes (solo encabezado con color)
 \newenvironment{tablalimpia}[1][]{
   \begin{table}[H]
-  \vspace{0.6cm}
   \renewcommand{\arraystretch}{1.25}
   \sffamily\notosanstiny
   #1
@@ -730,7 +724,6 @@
 \newenvironment{tablainstitucional}[1][]{
   \rowcolors{2}{gobmxGrisClaro}{white}
   \begin{table}[H]
-  \vspace{0.6cm}
   \renewcommand{\arraystretch}{1.25}
   \sffamily\notosanstiny
   #1
@@ -1383,12 +1376,12 @@
 \newcommand{\SENERfuenteAutopunctuate}[1]{#1}
 
 \newcommand{\fuente}[1]{%
-  \vspace{-6pt}% FIX: Espacio negativo fijo para pegar más
+  \vspace*{-12pt}% FIX: Compensación agresiva para anular el separador de float
   \par\noindent% FIX: Sin indentación
-  {\raggedright\notosanslight\fontsize{9pt}{11pt}\selectfont\color{gobmxGris}%
+  {\raggedright\notosanslight\fontsize{8pt}{10pt}\selectfont\color{gobmxGris}%
     FUENTE:~\SENERfuenteAutopunctuate{#1}%
   }%
-  \par\vspace{\SenerCaptionSkip}% FIX: Espacio mínimo consistente después
+  \par\vspace{-8pt}% FIX: Evitar hueco excesivo con el texto siguiente
 }
 
 % Entrada de glosario
