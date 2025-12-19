@@ -9,7 +9,7 @@
 % PAQUETES BÁSICOS
 % ============================================================================
 % babel se carga una sola vez con opciones completas
-\RequirePackage[spanish,mexico,es-tabla]{babel}
+\RequirePackage[spanish,mexico,es-tabla,noconfigs]{babel}
 \RequirePackage[left=2.5cm,right=2.5cm,top=3.5cm,bottom=3.5cm,headheight=15pt,headsep=1cm,footskip=1.5cm]{geometry}
 \RequirePackage[final]{graphicx}
 % Configuración PDF por motor
@@ -22,6 +22,7 @@
     \special{pdf:objcompresslevel 0}
   \fi
 \fi
+\RequirePackage{lmodern} % Soporte para fuentes matemáticas escalables (debe cargar antes de fontspec)
 \RequirePackage{float} % Para usar [H] en figuras y tablas
 \RequirePackage[table]{xcolor}
 \RequirePackage{titlesec}
@@ -132,6 +133,7 @@
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{csquotes}
+\RequirePackage{anyfontsize} % FIX: Permitir escalado de fuentes (10.5pt) sin warnings
 \RequirePackage{booktabs}
 \RequirePackage{array}
 \RequirePackage{longtable}
@@ -190,7 +192,7 @@
 \RequirePackage{eso-pic}
 \RequirePackage{tikz}
 \RequirePackage{multicol}
-\RequirePackage{microtype}
+\RequirePackage[verbose=silent]{microtype}
 \RequirePackage{lettrine}
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
@@ -1381,7 +1383,7 @@
   \vspace*{-12pt}% FIX: Compensación agresiva para anular el separador de float
   \par\noindent% FIX: Sin indentación
   {\raggedright\notosanslight\fontsize{8pt}{10pt}\selectfont\color{gobmxGris}%
-    FUENTE:~\SENERfuenteAutopunctuate{#1}%
+    FUENTE:~\SENERfuenteAutopunctuate{#1}\hfill%
   }%
   \par\vspace{6pt}% FIX: Dar aire antes del siguiente título o párrafo
 }

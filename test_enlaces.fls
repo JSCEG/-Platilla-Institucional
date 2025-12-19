@@ -111,9 +111,6 @@ INPUT C:\Program Files\MiKTeX\tex\generic\babel\xebabel.def
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-es-MX.ini
-INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
-INPUT C:\Program Files\MiKTeX\tex\latex\arabi\bblopts.cfg
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\locale\es\babel-spanish.tex
@@ -355,6 +352,10 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.def
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\csquotes\csquotes.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\lmodern.sty
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\lmodern.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\anyfontsize\anyfontsize.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\anyfontsize\anyfontsize.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\booktabs\booktabs.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\longtable.sty
@@ -507,6 +508,9 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdflscape\pdflscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-LatinModernRoman.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-LatinModernRoman.cfg
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-LatinModernRoman.cfg
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
@@ -521,15 +525,28 @@ INPUT test_enlaces.bbl
 INPUT .\test_enlaces.toc
 INPUT .\test_enlaces.toc
 INPUT test_enlaces.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\ot1lmr.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\rm-lmr5.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omllmm.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmmi5.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omslmsy.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy10.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmsy5.tfm
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Program Files\MiKTeX\tex\latex\lm\omxlmex.fd
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\lm\lmex10.tfm
 OUTPUT test_enlaces.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg

@@ -21,8 +21,16 @@ Write-Host "`n1. Limpiando archivos auxiliares..." -ForegroundColor Cyan
 $extensiones = @("aux", "bbl", "bcf", "blg", "fdb_latexmk", "fls", "lof", "log", "lot", "run.xml", "synctex.gz", "toc", "out", "nav", "snm")
 foreach ($ext in $extensiones) {
     if (Test-Path "$archivo.$ext") {
-        Remove-Item "$archivo.$ext" -Force
-        Write-Host "   Eliminado: $archivo.$ext" -ForegroundColor Gray
+        try {
+            Remove-Item "$archivo.$ext" -Force -ErrorAction SilentlyContinue
+            if (-not (Test-Path "$archivo.$ext")) {
+                Write-Host "   Eliminado: $archivo.$ext" -ForegroundColor Gray
+            } else {
+                Write-Host "   Omitido (en uso): $archivo.$ext" -ForegroundColor Yellow
+            }
+        } catch {
+            Write-Host "   Omitido (error): $archivo.$ext" -ForegroundColor Yellow
+        }
     }
 }
 

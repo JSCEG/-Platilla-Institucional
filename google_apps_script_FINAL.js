@@ -210,9 +210,8 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
     // --- Preámbulo ---
     tex += `\\documentclass{sener2025}\n\n`;
 
-    if (bibliografia.length > 0) {
-        tex += `\\addbibresource{referencias.bib}\n\n`;
-    }
+    // NOTA: \\addbibresource{referencias.bib} ya se carga en sener2025.cls
+    // Solo lo agregamos aquí si deseamos sobreescribir o agregar otros archivos.
 
     // --- Metadatos PDF/UA para Accesibilidad ---
     tex += `% --- Metadatos PDF/UA (Accesibilidad Universal) ---\n`;
@@ -221,8 +220,7 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
     tex += `  pdfauthor={${escaparLatex(datosDoc['Autor'] || 'Secretaría de Energía')}},\n`;
     tex += `  pdfsubject={${escaparLatex(datosDoc['Subtitulo'] || datosDoc['Titulo'] || 'Documento Institucional')}},\n`;
     tex += `  pdfkeywords={${escaparLatex(datosDoc['PalabrasClave'] || 'SENER, Energía, México')}},\n`;
-    tex += `  pdfcreationdate={D:${generarFechaPDF()}},\n`;
-    tex += `  pdfversion={${escaparLatex(datosDoc['Version'] || '1.0')}}\n`;
+    tex += `  pdfcreationdate={D:${generarFechaPDF()}}\n`;
     tex += `}\n\n`;
 
     // --- Metadatos del Documento ---
@@ -321,7 +319,7 @@ function construirLatex(datosDoc, secciones, bibliografia, figuras, tablas, sigl
         tex += generarGlosario(glosario);
     }
 
-    // --- Directorio ---
+    // --- Bibliografía (Solo si hay citas) ---
     if (bibliografia.length > 0) {
         tex += `\\printbibliography\n\n`;
     }
@@ -1563,9 +1561,9 @@ function dividirTabla(datos, maxCols, tituloTabla) {
     while (colInicio < numCols) {
         const colFin = Math.min(colInicio + colsPorParte, numCols);
 
-        // FIX: Reducir espacios en continuaciones de tablas
+        // FIX: Usar clearpage en continuaciones de tablas para evitar errores de glue
         if (parte > 1) {
-            tex += `\n  \\vspace{0.25em}\n`;
+            tex += `\n  \\clearpage\n`;
             tex += `  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n`;
             tex += `  \\vspace{0.15em}\n\n`;
         }
@@ -1662,8 +1660,8 @@ function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
         }
         tex += `  \\end{xltabular}\n`;
         if (fin < datos.length) {
-            // FIX: Reducir espacios en continuaciones de tablas por filas
-            tex += `\n  \\vspace{0.25em}\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n  \\vspace{0.15em}\n\n`;
+            // FIX: Usar clearpage en continuaciones de tablas para evitar errores de glue
+            tex += `\n  \\clearpage\n  {\\small\\textit{Continuación Tabla. ${escaparLatex(tituloTabla || '')}}}\n\n`;
         }
         inicio = fin;
         parte++;
@@ -1832,9 +1830,10 @@ function generarGlosario(glosario) {
     });
 
     glosario.forEach(entrada => {
-        const termino = entrada['Termino'] || '';
-        const definicion = entrada['Definicion'] || '';
+        const termino = (entrada['Termino'] || '').toString().trim();
+        const definicion = (entrada['Definicion'] || '').toString().trim();
         if (termino && definicion) {
+            // FIX: Limpiar saltos de línea al final para evitar errores con las llaves de LaTeX
             tex += `\\entradaGlosario{${escaparLatex(termino)}}{${escaparLatex(definicion)}}\n`;
         }
     });

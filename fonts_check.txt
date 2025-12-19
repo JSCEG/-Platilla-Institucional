@@ -1,0 +1,7 @@
+name                                 type              encoding         emb sub uni object ID
+------------------------------------ ----------------- ---------------- --- --- --- ---------
+RPHKJN+PatriaBold-Identity-H         CID Type 0C       Identity-H       yes yes yes     14  0
+YDBBFK+NotoSans-Bold                 CID TrueType      Identity-H       yes yes yes     16  0
+VXUMVI+NotoSans-Regular              CID TrueType      Identity-H       yes yes yes     19  0
+EYJVSJ+PatriaRegular-Identity-H      CID Type 0C       Identity-H       yes yes yes     68  0
+QSHRSI+NotoSans-Light                CID TrueType      Identity-H       yes yes yes    169  0
