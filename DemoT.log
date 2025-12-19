@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 02:49
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 03:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2700,6 +2700,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [50]
 File: img/figura_6_6.png Graphic file (type bmp)
 <img/figura_6_6.png>
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 17.0pt on input line 1025.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [51]
@@ -2754,11 +2756,11 @@ Package logreq Info: Writing requests to 'DemoT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51223 strings out of 402987
- 1093690 string characters out of 5452870
- 2106658 words of memory out of 5000000
- 79190 multiletter control sequences out of 15000+600000
- 649850 words of font info for 112 fonts, out of 8000000 for 9000
+ 51226 strings out of 402987
+ 1093822 string characters out of 5452870
+ 2106663 words of memory out of 5000000
+ 79192 multiletter control sequences out of 15000+600000
+ 649858 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1536b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

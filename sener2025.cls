@@ -1381,7 +1381,7 @@
   {\raggedright\notosanslight\fontsize{8pt}{10pt}\selectfont\color{gobmxGris}%
     FUENTE:~\SENERfuenteAutopunctuate{#1}%
   }%
-  \par\vspace{-8pt}% FIX: Evitar hueco excesivo con el texto siguiente
+  \par\vspace{6pt}% FIX: Dar aire antes del siguiente título o párrafo
 }
 
 % Entrada de glosario
