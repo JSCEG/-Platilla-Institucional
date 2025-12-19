@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 03:03
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 03:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1743,13 +1743,7 @@ ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
 ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
 
-)
-
-Package hyperref Warning: This hyperref driver ignores the pdfversion key!
-(hyperref)                Set the pdfversion in \DocumentMetadata
-(hyperref)                orwith\SetKeys [document/metadata]
-
-(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
 \@mathmargin=\skip120
 
@@ -1835,26 +1829,26 @@ File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 (DemoT.aux)
 \openout1 = `DemoT.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1897,59 +1891,59 @@ Package fontspec Info:
 
 \symlegacymaths=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
-LaTeX Font Info:    Redeclaring math accent \check on input line 32.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 31.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 31.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 31.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 31.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 31.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 31.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 31.
+LaTeX Font Info:    Redeclaring math accent \check on input line 31.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 31.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 31.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 31.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 31.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 31.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 32.
+(Font)              `operators' in the math version `normal' on input line 31.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 31.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 32.
+(Font)              `operators' in the math version `bold' on input line 31.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 31.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/m/n on input line
- 32.
+ 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 32.
+(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 32.
+(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 31.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
 (Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/b/n on input line
- 32.
+ 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 32.
+(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 31.
 
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 31.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 32.
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 31.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -1964,13 +1958,13 @@ Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
 (C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
 Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 ))
-LaTeX Info: Redefining \microtypecontext on input line 32.
-Package microtype Info: Applying patch `item' on input line 32.
-Package microtype Info: Applying patch `toc' on input line 32.
-Package microtype Info: Applying patch `eqnum' on input line 32.
-Package microtype Info: Applying patch `footnote' on input line 32.
-Package microtype Info: Applying patch `verbatim' on input line 32.
-LaTeX Info: Redefining \microtypesetup on input line 32.
+LaTeX Info: Redefining \microtypecontext on input line 31.
+Package microtype Info: Applying patch `item' on input line 31.
+Package microtype Info: Applying patch `toc' on input line 31.
+Package microtype Info: Applying patch `eqnum' on input line 31.
+Package microtype Info: Applying patch `footnote' on input line 31.
+Package microtype Info: Applying patch `verbatim' on input line 31.
+LaTeX Info: Redefining \microtypesetup on input line 31.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1986,13 +1980,6 @@ Package biblatex Info: ... file 'spanish.lbx' found.
 (C:\Program Files\MiKTeX\tex/latex/biblatex/lbx\spanish.lbx
 File: spanish.lbx 2025/07/10 v3.21 biblatex localization (PK/MW)
 )
-Package biblatex Info: Trying to load language 'mexican'...
-Package biblatex Info: ... file 'mexican.lbx' not found.
-
-
-Package biblatex Warning: Language 'mexican' not supported.
-(biblatex)                Using dummy definitions on input line 32.
-
 Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
@@ -2001,10 +1988,11 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'DemoT.bbl' not found.
+
 No file DemoT.bbl.
-Package biblatex Info: Reference section=0 on input line 32.
-Package biblatex Info: Reference segment=0 on input line 32.
-Package hyperref Info: Link coloring OFF on input line 32.
+Package biblatex Info: Reference section=0 on input line 31.
+Package biblatex Info: Reference segment=0 on input line 31.
+Package hyperref Info: Link coloring OFF on input line 31.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/portada.jpg Graphic file (type bmp)
@@ -2013,9 +2001,9 @@ File: img/portada.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 36.
+(Font)              scaled to size 14.4pt on input line 35.
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 12.74413pt on input line 36.
+(Font)              scaled to size 12.74413pt on input line 35.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2048,7 +2036,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 11.26382pt on input line 36.
+(Font)              scaled to size 11.26382pt on input line 35.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2243,15 +2231,15 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 80.0pt on input line 56.
+(Font)              scaled to size 80.0pt on input line 55.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 80.0pt on input line 56.
+(Font)              scaled to size 80.0pt on input line 55.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 56.
+(Font)              scaled to size 24.88pt on input line 55.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 56.
+(Font)              scaled to size 24.88pt on input line 55.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 19.46141pt on input line 56.
+(Font)              scaled to size 19.46141pt on input line 55.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2287,7 +2275,7 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 8.21321pt on input line 58.
+(Font)              scaled to size 8.21321pt on input line 57.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2316,7 +2304,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.29759pt on input line 58.
+(Font)              scaled to size 13.29759pt on input line 57.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2347,7 +2335,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 File: img/figura_2_1.png Graphic file (type bmp)
 <img/figura_2_1.png>
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 74.
+(Font)              scaled to size 9.38654pt on input line 73.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2376,7 +2364,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 7.0399pt on input line 74.
+(Font)              scaled to size 7.0399pt on input line 73.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2410,11 +2398,11 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 10.57898pt on input line 78.
+(Font)              scaled to size 10.57898pt on input line 77.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 8.06018pt on input line 78.
+(Font)              scaled to size 8.06018pt on input line 77.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 10.95096pt on input line 82.
+(Font)              scaled to size 10.95096pt on input line 81.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2443,11 +2431,11 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 84.
+(Font)              scaled to size 8.0pt on input line 83.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 84.
+(Font)              scaled to size 6.0pt on input line 83.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.0pt on input line 84.
+(Font)              scaled to size 5.0pt on input line 83.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [11]
@@ -2471,9 +2459,9 @@ File: img/figura_2_1.png Graphic file (type bmp)
 <img/figura_2_1.png>
 \@float@every@table=\toks61
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.5pt on input line 155.
+(Font)              scaled to size 7.5pt on input line 154.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
@@ -2701,7 +2689,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/figura_6_6.png Graphic file (type bmp)
 <img/figura_6_6.png>
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 17.0pt on input line 1025.
+(Font)              scaled to size 17.0pt on input line 1024.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [51]
@@ -2730,7 +2718,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [59]
 
-LaTeX Warning: Empty bibliography on input line 1132.
+LaTeX Warning: Empty bibliography on input line 1131.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -2751,15 +2739,26 @@ L3 programming layer <2025-10-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.25pt have occurred.
 
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                DemoT
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'DemoT.run.xml'.
 \openout1 = `DemoT.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51226 strings out of 402987
- 1093822 string characters out of 5452870
- 2106663 words of memory out of 5000000
- 79192 multiletter control sequences out of 15000+600000
+ 51218 strings out of 402987
+ 1093538 string characters out of 5452870
+ 2091220 words of memory out of 5000000
+ 79184 multiletter control sequences out of 15000+600000
  649858 words of font info for 113 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1536b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s

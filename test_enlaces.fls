@@ -102,9 +102,9 @@ INPUT .\sener2025.cls
 INPUT sener2025.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
 INPUT C:\Program Files\MiKTeX\tex\latex\base\article.cls
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
-INPUT C:\Program Files\MiKTeX\tex\latex\base\size12.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
+INPUT C:\Program Files\MiKTeX\tex\latex\base\size10.clo
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\babel.sty
 INPUT C:\Program Files\MiKTeX\tex\generic\babel\xebabel.def
@@ -363,6 +363,10 @@ INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\multirow\multirow.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\tools\tabularx.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\xltabular\xltabular.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\ltablex\ltablex.sty
+INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\ltablex\ltablex.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pdfpages.sty
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\pdfpages\pdfpages.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\base\ifthen.sty
@@ -506,6 +510,8 @@ INPUT C:\Program Files\MiKTeX\tex\latex\graphics\lscape.sty
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
+INPUT C:\Program Files\MiKTeX\tex\latex\biblatex\lbx\spanish.lbx
 OUTPUT test_enlaces.bcf
 INPUT test_enlaces.bbl
 INPUT .\test_enlaces.bbl
@@ -515,21 +521,15 @@ INPUT test_enlaces.bbl
 INPUT .\test_enlaces.toc
 INPUT .\test_enlaces.toc
 INPUT test_enlaces.toc
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi12.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi6.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmsy6.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmex10.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex8.tfm
 INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr12.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\amsfonts\cmextra\cmex7.tfm
+INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr10.tfm
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
 INPUT C:\Users\User\AppData\Roaming\MiKTeX\tex\latex\microtype\mt-cmr.cfg
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr8.tfm
-INPUT C:\Program Files\MiKTeX\fonts\tfm\public\cm\cmr6.tfm
 OUTPUT test_enlaces.toc
 INPUT .\img\foja_blanca.jpg
 INPUT .\img\foja_blanca.jpg

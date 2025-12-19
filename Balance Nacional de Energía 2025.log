@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 00:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 03:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2404,6 +2404,64 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 ]
 File: img/figura_2_1.png Graphic file (type bmp)
 <img/figura_2_1.png>
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 9.38654pt on input line 134.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 7.0399pt on input line 134.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
 (Font)              scaled to size 10.57898pt on input line 138.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
@@ -2411,64 +2469,6 @@ LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
 \@float@every@table=\toks61
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 7.5pt on input line 141.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 141.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/12'.
-(microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 7.0399pt on input line 141.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
 
 Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
@@ -2492,27 +2492,30 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [18]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [19]
 Underfull \hbox (badness 10000) in paragraph at lines 249--250
 
  []
 
-File: img/figura_2_2.png Graphic file (type bmp)
-<img/figura_2_2.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[20]
+[19]
+File: img/figura_2_2.png Graphic file (type bmp)
+<img/figura_2_2.png>
+
 Underfull \hbox (badness 10000) in paragraph at lines 298--299
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[21]
+[20]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [21]
 File: img/figura_4_3.png Graphic file (type bmp)
 <img/figura_4_3.png>
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 14.0pt on input line 335.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [22]
@@ -2528,234 +2531,236 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 [24]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [25]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
+ [25
+
+]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
  [26
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [27
-
-]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [28]
+ [27]
 File: img/figura_3_1.png Graphic file (type bmp)
 <img/figura_3_1.png>
 File: img/figura_3_2.png Graphic file (type bmp)
 <img/figura_3_2.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [29]
+ [28]
 File: img/figura_3_3.png Graphic file (type bmp)
 <img/figura_3_3.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [30]
+ [29]
 File: img/figura_3_4.png Graphic file (type bmp)
 <img/figura_3_4.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [31]
+ [30]
 File: img/figura_3_5.png Graphic file (type bmp)
 <img/figura_3_5.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [32]
 File: img/figura_3_6.png Graphic file (type bmp)
 <img/figura_3_6.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [33]
+ [31]
 File: img/figura_3_7.png Graphic file (type bmp)
 <img/figura_3_7.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [34]
+ [32]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [35]
+ [33]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [36
+ [34
 
 ]
 File: img/figura_4_1.png Graphic file (type bmp)
 <img/figura_4_1.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [37
+ [35
 
 ]
 File: img/figura_4_2.png Graphic file (type bmp)
 <img/figura_4_2.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [38]
+ [36]
 File: img/figura_4_3.png Graphic file (type bmp)
 <img/figura_4_3.png>
 File: img/figura_4_4.png Graphic file (type bmp)
 <img/figura_4_4.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[39]
+ [37]
 File: img/figura_4_5.png Graphic file (type bmp)
 <img/figura_4_5.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [40]
+ [38]
 File: img/figura_4_6.png Graphic file (type bmp)
 <img/figura_4_6.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [41]
+
+[39]
 File: img/figura_4_7.png Graphic file (type bmp)
 <img/figura_4_7.png>
 File: img/figura_4_8.png Graphic file (type bmp)
 <img/figura_4_8.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [42]
+ [40]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [43]
+ [41]
 File: img/figura_4_9.png Graphic file (type bmp)
 <img/figura_4_9.png>
 File: img/figura_4_10.png Graphic file (type bmp)
 <img/figura_4_10.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [44]
+ [42]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [45]
+ [43]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [46
+ [44
 
 ]
 File: img/figura_5_1.png Graphic file (type bmp)
 <img/figura_5_1.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [47
-
-]
 File: img/figura_5_2.png Graphic file (type bmp)
 <img/figura_5_2.png>
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [45
+
+]
 File: img/figura_5_3.png Graphic file (type bmp)
 <img/figura_5_3.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [48]
+ [46]
 File: img/figura_5_4.png Graphic file (type bmp)
 <img/figura_5_4.png>
 File: img/figura_5_5.png Graphic file (type bmp)
 <img/figura_5_5.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [49]
+ [47]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [50]
+ [48]
 File: img/figura_5_6.png Graphic file (type bmp)
 <img/figura_5_6.png>
 File: img/figura_5_7.png Graphic file (type bmp)
 <img/figura_5_7.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [51]
+ [49]
 File: img/figura_5_8.png Graphic file (type bmp)
 <img/figura_5_8.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [52]
 File: img/figura_5_9.png Graphic file (type bmp)
 <img/figura_5_9.png>
-File: img/figura_5_10.png Graphic file (type bmp)
-<img/figura_5_10.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [53]
+ [50]
+File: img/figura_5_10.png Graphic file (type bmp)
+<img/figura_5_10.png>
 File: img/figura_5_11.png Graphic file (type bmp)
 <img/figura_5_11.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[54]
+ [51]
 File: img/figura_5_12.png Graphic file (type bmp)
 <img/figura_5_12.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [55]
+ [52]
 File: img/figura_5_13.png Graphic file (type bmp)
 <img/figura_5_13.png>
 File: img/figura_5_14.png Graphic file (type bmp)
 <img/figura_5_14.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [56]
+ [53]
 File: img/figura_5_15.png Graphic file (type bmp)
 <img/figura_5_15.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [57]
-File: img/figura_5_16.png Graphic file (type bmp)
-<img/figura_5_16.png>
+
+[54]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [58]
+ [55]
+File: img/figura_5_16.png Graphic file (type bmp)
+<img/figura_5_16.png>
 File: img/figura_5_17.png Graphic file (type bmp)
 <img/figura_5_17.png>
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [56]
 File: img/figura_5_18.png Graphic file (type bmp)
 <img/figura_5_18.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [59]
+ [57]
 File: img/figura_5_19.png Graphic file (type bmp)
 <img/figura_5_19.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [60]
 File: img/figura_5_20.png Graphic file (type bmp)
 <img/figura_5_20.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [61]
+ [58]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [59]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [62
+ [60
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [63
+ [61
 
 ]
 File: img/figura_6_1.png Graphic file (type bmp)
 <img/figura_6_1.png>
 File: img/figura_6_5.png Graphic file (type bmp)
 <img/figura_6_5.png>
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [64]
 File: img/figura_6_2.png Graphic file (type bmp)
 <img/figura_6_2.png>
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [62]
 File: img/figura_6_3.png Graphic file (type bmp)
 <img/figura_6_3.png>
 File: img/figura_6_4.png Graphic file (type bmp)
 <img/figura_6_4.png>
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [63]
+ignored error: Infinite glue shrinkage found in box being split
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [64]
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [65]
@@ -2775,6 +2780,9 @@ ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [69]
+File: img/figura_6_6.png Graphic file (type bmp)
+<img/figura_6_6.png>
+
 ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
@@ -2783,20 +2791,17 @@ ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [71]
-File: img/figura_6_6.png Graphic file (type bmp)
-<img/figura_6_6.png>
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [72]
-ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [73]
-ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [74]
-ignored error: Infinite glue shrinkage found in box being split
+
+[74]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [75]
@@ -2805,8 +2810,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [76]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[77]
+ [77]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [78]
@@ -2816,24 +2820,15 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [80]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [81]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [82]
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [83]
 
 LaTeX Warning: Empty bibliography on input line 1731.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[84]
+[81]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [85] (Balance Nacional de Energía 2025.aux)
+ [82] [83] (Balance Nacional de Energía 2025.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -2843,18 +2838,24 @@ L3 programming layer <2025-10-24>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.25pt have occurred.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+LaTeX Warning: Temporary extra page added at the end. Rerun to get it removed.
+
 Package logreq Info: Writing requests to '"Balance Nacional de Energía 2025".ru
 n.xml'.
 \openout1 = `"Balance Nacional de Energía 2025.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51250 strings out of 402987
- 1095414 string characters out of 5452870
- 2168437 words of memory out of 5000000
- 79215 multiletter control sequences out of 15000+600000
- 649866 words of font info for 114 fonts, out of 8000000 for 9000
+ 51254 strings out of 402987
+ 1095560 string characters out of 5452870
+ 2172272 words of memory out of 5000000
+ 79218 multiletter control sequences out of 15000+600000
+ 649874 words of font info for 115 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1565b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Balance Nacional de Energía 2025.pdf (85 pages).
+Output written on Balance Nacional de Energía 2025.pdf (83 pages).

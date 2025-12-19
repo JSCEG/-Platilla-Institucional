@@ -303,6 +303,8 @@
   sorting=nyt,
   citestyle=verbose-ibid
 ]{biblatex}
+% FIX: Mapear 'mexican' a 'spanish' para evitar error de idioma no soportado
+\DeclareLanguageMapping{mexican}{spanish}
 \addbibresource{referencias.bib}
 \setlength{\bibhang}{0pt}
 \setlength{\bibitemsep}{1em}
