@@ -1754,16 +1754,21 @@ function procesarCeldasFila(fila, esEncabezado = false, esTablaLarga = false) {
         // Si es número, redondear a máximo 4 decimales
         if (typeof c === 'number') {
             const nf = Intl.NumberFormat('en-US', { maximumFractionDigits: 4, useGrouping: true });
-            return escaparLatex(nf.format(c));
+            const n = escaparLatex(nf.format(c));
+            return (esTablaLarga && !esEncabezado) ? `\\SENERNum{${n}}` : n;
         }
 
         // Si es string que parece número, intentar redondear
-        const num = parseFloat(c);
-        if (!isNaN(num) && c.toString().includes('.')) {
-            const decimales = c.toString().split('.')[1];
-            if (decimales && decimales.length > 4) {
+        const textoNum = c.toString().trim();
+        // Acepta: 123, -123, 1,234, 1,234.56, 123.45
+        const pareceNumero = /^-?\d{1,3}(?:,\d{3})*(?:\.\d+)?$|^-?\d+(?:\.\d+)?$/.test(textoNum);
+        if (pareceNumero) {
+            const sinComas = textoNum.replace(/,/g, '');
+            const num = parseFloat(sinComas);
+            if (!isNaN(num)) {
                 const nf = Intl.NumberFormat('en-US', { maximumFractionDigits: 4, useGrouping: true });
-                return escaparLatex(nf.format(num));
+                const n = escaparLatex(nf.format(num));
+                return (esTablaLarga && !esEncabezado) ? `\\SENERNum{${n}}` : n;
             }
         }
 

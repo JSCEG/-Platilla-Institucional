@@ -207,20 +207,31 @@
 \newcommand{\notosanstiny}{\fontsize{7.5pt}{9pt}\selectfont}
 \newcommand{\notosansmicro}{\fontsize{6.5pt}{7.8pt}\selectfont}
 \newcommand{\notosansnano}{\fontsize{6.0pt}{7.2pt}\selectfont}
+\newcommand{\notosanspico}{\fontsize{5.5pt}{6.6pt}\selectfont}
+\newcommand{\notosansfemto}{\fontsize{5.0pt}{6.0pt}\selectfont}
 
 % FIX: Tamaño de fuente para tablas largas (longtable/xltabular)
 % Por defecto iguala el tamaño usado en tablas institucionales compactas.
 % Si necesitas ajustarlo en el documento:
 %   \renewcommand{\SENERLongTableFont}{\notosanscompact\sffamily\color{black}}
 %   \renewcommand{\SENERLongTableFont}{\notosansmicro\sffamily\color{black}}
-\newcommand{\SENERLongTableFont}{\notosansnano\sffamily\color{black}}
+\newcommand{\SENERLongTableFont}{\notosanspico\sffamily\color{black}}
+
+% FIX: Hacer solo los NÚMEROS más chicos dentro de tablas largas.
+% El generador envuelve celdas numéricas con \SENERNum{...}.
+% Si necesitas ajustarlo en el documento:
+%   \renewcommand{\SENERLongTableNumFont}{\notosanspico}
+\newcommand{\SENERLongTableNumFont}{\notosansfemto}
+\newcommand{\SENERNum}[1]{{\SENERLongTableNumFont #1}}
 
 % FIX: Helpers para que las TABLAS LARGAS ajusten mejor
 % 1) Primera columna más ancha (usar W/Q en el especificador de columnas)
 %    Ejemplo: \begin{xltabular}{\textwidth}{Q X X}
 \newlength{\SENERLongTableFirstColWidth}
 \setlength{\SENERLongTableFirstColWidth}{0.32\textwidth}
-\newcolumntype{W}{>{\raggedright\arraybackslash}p{\SENERLongTableFirstColWidth}}
+% Nota: el paquete/LaTeX moderno define un tipo de columna "W" propio.
+% Para evitar conflictos, usamos "S" para la primera columna ancha sin negritas.
+\newcolumntype{S}{>{\raggedright\arraybackslash}p{\SENERLongTableFirstColWidth}}
 \newcolumntype{Q}{>{\raggedright\arraybackslash\bfseries}p{\SENERLongTableFirstColWidth}}
 
 % 2) Encabezados verticales para liberar ancho (usar dentro de tu \encabezado...)
