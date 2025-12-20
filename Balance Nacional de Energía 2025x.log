@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  20 DEC 2025 11:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  20 DEC 2025 16:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1956,10 +1956,10 @@ Package biblatex Info: Automatic encoding selection.
 \openout4 = `"Balance Nacional de Energía 2025x.bcf"'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file '"Balance Nacional de Energía 2025x".bbl' found
-.
+Package biblatex Info: ... file '"Balance Nacional de Energía 2025x".bbl' not f
+ound.
 
-(Balance Nacional de Energía 2025x.bbl)
+No file "Balance Nacional de Energía 2025x".bbl.
 Package biblatex Info: Reference section=0 on input line 29.
 Package biblatex Info: Reference segment=0 on input line 29.
 Package hyperref Info: Link coloring OFF on input line 29.
@@ -1967,7 +1967,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/portada.jpg Graphic file (type bmp)
 <img/portada.jpg>
- [1
+[1
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
@@ -2034,8 +2034,7 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
-
-(Balance Nacional de Energía 2025x.toc
+ (Balance Nacional de Energía 2025x.toc
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 10.5pt on input line 2.
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 3.
@@ -2410,35 +2409,6 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 7.0399pt on input line 131.
-Package microtype Info: Character `~ (= ~)' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textendash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\textemdash ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\AE ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\quotesinglbase ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guilsinglright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotleft ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
-Package microtype Info: Character `\guillemotright ' is missing
-(microtype)             in font `\TU/Patria(0)/b/n/9'.
-(microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
 (Font)              scaled to size 10.57898pt on input line 135.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
@@ -2594,6 +2564,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [32]
 File: img/figura_3_4.png Graphic file (type bmp)
 <img/figura_3_4.png>
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 14.0pt on input line 722.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [33]
@@ -2716,29 +2688,29 @@ File: img/figura_5_9.png Graphic file (type bmp)
 <img/figura_5_9.png>
 File: img/figura_5_10.png Graphic file (type bmp)
 <img/figura_5_10.png>
-File: img/figura_5_11.png Graphic file (type bmp)
-<img/figura_5_11.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [54]
+File: img/figura_5_11.png Graphic file (type bmp)
+<img/figura_5_11.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 
 [55]
 File: img/figura_5_12.png Graphic file (type bmp)
 <img/figura_5_12.png>
-File: img/figura_5_13.png Graphic file (type bmp)
-<img/figura_5_13.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [56]
+File: img/figura_5_13.png Graphic file (type bmp)
+<img/figura_5_13.png>
 File: img/figura_5_14.png Graphic file (type bmp)
 <img/figura_5_14.png>
-File: img/figura_5_15.png Graphic file (type bmp)
-<img/figura_5_15.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [57]
+File: img/figura_5_15.png Graphic file (type bmp)
+<img/figura_5_15.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [58]
@@ -3914,10 +3886,9 @@ Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
 []|\TU/NotoSans(0)/m/n/5 4,397.29| 
  []
 
-ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [69]
+[69]
 File: img/figura_6_6.png Graphic file (type bmp)
 <img/figura_6_6.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
@@ -3925,8 +3896,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [70]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[71]
+ [71]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [72]
@@ -3961,16 +3931,20 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package logreq Info: Writing requests to '"Balance Nacional de Energía 2025x".r
 un.xml'.
 \openout1 = `"Balance Nacional de Energía 2025x.run.xml"'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51358 strings out of 402987
- 1098543 string characters out of 5452870
- 2293357 words of memory out of 5000000
- 79299 multiletter control sequences out of 15000+600000
+ 51355 strings out of 402987
+ 1098430 string characters out of 5452870
+ 2293369 words of memory out of 5000000
+ 79298 multiletter control sequences out of 15000+600000
  688382 words of font info for 132 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1566b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s

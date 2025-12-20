@@ -248,9 +248,9 @@
 % Configuración unificada para todos los captions
 \captionsetup{
   format=plain,                        % Evita heredar centrado del float
-  font={small,color=gobmxGris},        % Texto en gris y pequeño
-  labelfont={footnotesize,color=gobmxGris},    % Etiqueta en gris y más pequeña
-  textfont={small,color=gobmxGris},    % Texto en gris
+  font={normalsize,color=gobmxGris},   % Texto en gris y tamaño medio
+  labelfont={normalsize,color=gobmxGris},      % Etiqueta en gris
+  textfont={normalsize,color=gobmxGris},       % Texto en gris
   labelsep=period,                      % Separador punto: "Figura 1. Descripción"
   justification=raggedright,           % Alineación a la izquierda
   parskip=0pt
@@ -269,7 +269,7 @@
   \let\@fs@capt\floatc@SENERfigure
   \def\@fs@pre{}\def\@fs@post{}%
   \def\@fs@mid{\vspace\abovecaptionskip\relax}%
-  \let\@fs@iftopcapt\iftrue
+  \let\@fs@iftopcapt\iffalse
 }
 \makeatother
 \floatstyle{SENERfigure}
@@ -294,7 +294,7 @@
 
 % FIX: Configuración específica para figuras (ahora igual que tablas)
 \captionsetup[figure]{
-  position=top,
+  position=bottom,
   skip=3pt,
   format=plain,
   width=\textwidth,
