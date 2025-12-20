@@ -1,0 +1,37 @@
+%!TEX TS-program = xelatex
+\documentclass{sener2025}
+
+\title{Prueba de notas al pie en \textbackslash fuente}
+\author{SENER}
+\date{\today}
+
+\begin{document}
+\portadafondo
+
+\section{Figura con fuente y nota}
+
+\begin{figure}[H]
+  \centering
+  % Placeholder sin archivos externos
+  \fbox{\rule{0pt}{3cm}\rule{6cm}{0pt}}
+  \caption{Figura de prueba}
+\end{figure}
+\fuente{INEGI. Base de datos 2024\footnote{Nota de prueba en la fuente de la figura.}}
+
+\section{Tabla con fuente y nota}
+
+\begin{table}[H]
+  \centering
+  \caption{Tabla de prueba}
+  \begin{tabular}{ll}
+    \toprule
+    Columna A & Columna B \\
+    \midrule
+    A1 & B1 \\
+    A2 & B2 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\fuente{Elaboración propia\footnote{Nota de prueba en la fuente de la tabla.}}
+
+\end{document}

@@ -44,10 +44,10 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>test_figure_layout.bcf</file>
+      <file>test_fuente_notas.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>test_figure_layout.bbl</file>
+      <file>test_fuente_notas.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -66,19 +66,19 @@
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>test_figure_layout</infile>
+      <infile>test_fuente_notas</infile>
     </cmdline>
     <input>
-      <file>test_figure_layout.bcf</file>
+      <file>test_fuente_notas.bcf</file>
     </input>
     <output>
-      <file>test_figure_layout.bbl</file>
+      <file>test_fuente_notas.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>test_figure_layout.bbl</file>
+      <file>test_fuente_notas.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>test_figure_layout.bcf</file>
+      <file>test_fuente_notas.bcf</file>
     </requires>
     <requires type="editable">
       <file>referencias.bib</file>

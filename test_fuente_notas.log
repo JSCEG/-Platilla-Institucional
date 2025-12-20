@@ -1,9 +1,9 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  20 DEC 2025 16:34
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  20 DEC 2025 16:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./test_figure_layout.tex
-(test_figure_layout.tex
+**./test_fuente_notas.tex
+(test_fuente_notas.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
 (sener2025.cls
@@ -1518,52 +1518,18 @@ ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
 (fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
 ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
 
-) (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/mwe\mwe.sty
-Package: mwe 2018/03/30 v0.5 Package to support minimal working examples (MWE)
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.sty
-Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count536
-\l__lipsum_a_int=\count537
-\l__lipsum_b_int=\count538
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lipsum\lipsum.ltd.tex))
-(C:\Program Files\MiKTeX\tex/latex/blindtext\blindtext.sty
-Package: blindtext 2012/01/06 V2.0 blindtext-Package
-
-(C:\Program Files\MiKTeX\tex/latex/tools\xspace.sty
-Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count539
-\c@Blindtext=\count540
-\c@blind@countparstart=\count541
-\blind@countxx=\count542
-\blindtext@numBlindtext=\count543
-\blind@countyy=\count544
-\c@blindlist=\count545
-\c@blindlistlevel=\count546
-\c@blindlist@level=\count547
-\blind@listitem=\count548
-\c@blind@listcount=\count549
-\c@blind@levelcount=\count550
-\blind@mathformula=\count551
-\blind@Mathformula=\count552
-\c@blind@randomcount=\count553
-\c@blind@randommax=\count554
-\c@blind@pangramcount=\count555
-\c@blind@pangrammax=\count556
-))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
- (test_figure_layout.aux
+ (test_fuente_notas.aux
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
 (babel)             Reported on input line 10.
 )
-\openout1 = `test_figure_layout.aux'.
+\openout1 = `test_fuente_notas.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
@@ -1587,6 +1553,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Info: Redefining \. on input line 8.
 LaTeX Info: Redefining \% on input line 8.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -1668,21 +1635,29 @@ Package biblatex Info: XeTeX detected.
 (biblatex)             Assuming input encoding 'utf8'.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout4 = `test_figure_layout.bcf'.
+\openout4 = `test_fuente_notas.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'test_figure_layout.bbl' not found.
+Package biblatex Info: ... file 'test_fuente_notas.bbl' found.
 
-No file test_figure_layout.bbl.
+(test_fuente_notas.bbl)
 Package biblatex Info: Reference section=0 on input line 8.
 Package biblatex Info: Reference segment=0 on input line 8.
 Package hyperref Info: Link coloring ON on input line 8.
-(test_figure_layout.out) (test_figure_layout.out)
+ (test_fuente_notas.out) (test_fuente_notas.out)
 \@outlinefile=\write5
-\openout5 = `test_figure_layout.out'.
+\openout5 = `test_fuente_notas.out'.
 
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+File: img/portada.png Graphic file (type bmp)
+<img/portada.png>
+
+[1
+
+]
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 9.2926pt on input line 10.
+(Font)              scaled to size 9.2926pt on input line 11.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -1715,7 +1690,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 8.21321pt on input line 10.
+(Font)              scaled to size 8.21321pt on input line 11.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1744,7 +1719,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.29759pt on input line 10.
+(Font)              scaled to size 13.29759pt on input line 11.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1773,7 +1748,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 15.
+(Font)              scaled to size 9.38654pt on input line 17.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -1801,32 +1776,72 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
-File: example-image-a.pdf Graphic file (type pdf)
-<use example-image-a.pdf>
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 10.57898pt on input line 18.
+(Font)              scaled to size 10.57898pt on input line 19.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 8.06018pt on input line 18.
-File: example-image-b.pdf Graphic file (type pdf)
-<use example-image-b.pdf>
+(Font)              scaled to size 8.06018pt on input line 19.
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
+9.
+ (C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-LatinModernRoman.c
+fg
+File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
+ern Roman (RS)
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmr' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
+9.
+ (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+19.
 
+(C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+19.
 
-Package caption Warning: Unused \captionsetup[table] on input line 288.
-See the caption package documentation for explanation.
+(C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 19.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 19.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 6.0pt on input line 19.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 8.0pt on input line 19.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.5> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.34996> on input line 26.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5.25> on input line 26.
 
 
 Package caption Warning: Unused \captionsetup[longtable] on input line 337.
 See the caption package documentation for explanation.
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.0pt on input line 28.
+(Font)              scaled to size 7.0pt on input line 37.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 7.0pt on input line 28.
+(Font)              scaled to size 7.0pt on input line 37.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[1
+[2
 
-] (test_figure_layout.aux
+] (test_fuente_notas.aux
 LaTeX Info: Redefining \sptext on input line 10.
 LaTeX Info: Redefining \. on input line 10.
 LaTeX Info: Redefining \% on input line 10.
@@ -1835,19 +1850,19 @@ LaTeX Info: Redefining \% on input line 10.
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
  ***********
-Package rerunfilecheck Info: File `test_figure_layout.out' has not changed.
-(rerunfilecheck)             Checksum: E46B1C5F0B9AE344FF5E96B96997319D;147.
-Package logreq Info: Writing requests to 'test_figure_layout.run.xml'.
-\openout1 = `test_figure_layout.run.xml'.
+Package rerunfilecheck Info: File `test_fuente_notas.out' has not changed.
+(rerunfilecheck)             Checksum: 83D95E1C97692097DD51BFFA818C4E23;371.
+Package logreq Info: Writing requests to 'test_fuente_notas.run.xml'.
+\openout1 = `test_fuente_notas.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 44130 strings out of 402987
- 881173 string characters out of 5452870
- 1947361 words of memory out of 5000000
- 72297 multiletter control sequences out of 15000+600000
- 628313 words of font info for 70 fonts, out of 8000000 for 9000
+ 43710 strings out of 402987
+ 872353 string characters out of 5452870
+ 1839110 words of memory out of 5000000
+ 71856 multiletter control sequences out of 15000+600000
+ 650112 words of font info for 91 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,12n,130p,1584b,4035s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 113i,12n,130p,1548b,4035s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on test_figure_layout.pdf (1 page).
+Output written on test_fuente_notas.pdf (2 pages).

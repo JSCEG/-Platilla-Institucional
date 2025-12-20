@@ -1227,7 +1227,10 @@ function procesarTextoFuente(texto) {
 
     // Agregar fuente principal
     if (textoFuente.trim()) {
-        resultado += escaparLatex(textoFuente.trim());
+        // Permitir etiquetas como [[nota:...]] dentro de la fuente.
+        // Esto es útil para notas al pie que deben ir pegadas a la línea FUENTE.
+        // NOTA: procesarConEtiquetas ya protege/escapa texto plano y convierte [[nota:]] a \footnote{...}.
+        resultado += procesarConEtiquetas(textoFuente.trim());
     }
 
     // Agregar notas como lista si existen
@@ -1238,7 +1241,8 @@ function procesarTextoFuente(texto) {
         lineasNotas.forEach(item => {
             const idNota = generarIdNota(item.nota);
             const notaEscapada = escaparLatex(item.nota);
-            const textoEscapado = escaparLatex(item.texto);
+            // También permitir etiquetas (incluyendo [[nota:...]]) dentro del texto de la nota.
+            const textoEscapado = procesarConEtiquetas(item.texto);
 
             resultado += `  \\item[\\hypertarget{${idNota}}{${notaEscapada}}] ${textoEscapado}\n`;
         });
@@ -2263,6 +2267,16 @@ function probarCorreccionesScript() {
     console.log('Salida:', JSON.stringify(procesadoCompleto));
     console.log('✓ NO contiene \\textbackslash{}par:', !procesadoCompleto.includes('\\textbackslash{}par'));
     console.log('✓ NO contiene \\par literal:', !procesadoCompleto.includes('\\par'));
+
+    // Prueba 6: Fuente con [[nota:...]] (debe producir \footnote dentro de \fuente{...})
+    console.log('\n6. Prueba de procesarTextoFuente con [[nota:...]]:');
+    const fuenteConNota = 'INEGI [[nota:Nota en fuente con % y &]]';
+    const fuenteProcesada = procesarTextoFuente(fuenteConNota);
+    console.log('Entrada:', JSON.stringify(fuenteConNota));
+    console.log('Salida:', JSON.stringify(fuenteProcesada));
+    console.log('✓ Contiene \\footnote:', fuenteProcesada.includes('\\footnote'));
+    console.log('✓ No contiene [[nota:', !fuenteProcesada.includes('[[nota:'));
+    console.log('✓ Caracteres escapados:', fuenteProcesada.includes('\\%') && fuenteProcesada.includes('\\&'));
 
     console.log('\n=== PRUEBAS COMPLETADAS ===');
     console.log('Revisa los resultados arriba para verificar que todas las correcciones funcionan.');
