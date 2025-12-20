@@ -269,7 +269,7 @@
   \let\@fs@capt\floatc@SENERfigure
   \def\@fs@pre{}\def\@fs@post{}%
   \def\@fs@mid{\vspace\abovecaptionskip\relax}%
-  \let\@fs@iftopcapt\iffalse
+  \let\@fs@iftopcapt\iftrue
 }
 \makeatother
 \floatstyle{SENERfigure}
@@ -294,7 +294,7 @@
 
 % FIX: Configuración específica para figuras (ahora igual que tablas)
 \captionsetup[figure]{
-  position=bottom,
+  position=top,
   skip=3pt,
   format=plain,
   width=\textwidth,
