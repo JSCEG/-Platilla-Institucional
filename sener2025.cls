@@ -138,6 +138,7 @@
 \RequirePackage{array}
 \RequirePackage{longtable}
 \RequirePackage{multirow}
+\RequirePackage{etoolbox} % Hooks: aplicar estilo al entrar a entornos
 % NOTA: No usamos tocloft.
 % Con documentos que usan \DocumentMetadata (LaTeX 2025+), el kernel carga
 % latex-lab-testphase-toc y redefine \@starttoc; tocloft detecta esto y "bails out",
@@ -205,6 +206,16 @@
 \newcommand{\notosanscompact}{\fontsize{9.5pt}{11.2pt}\selectfont}
 \newcommand{\notosanstiny}{\fontsize{7.5pt}{9pt}\selectfont}
 
+% FIX: Tamaño de fuente para tablas largas (longtable/xltabular)
+% Por defecto iguala el tamaño usado en tablas institucionales compactas.
+% Si necesitas ajustarlo en el documento:
+%   \renewcommand{\SENERLongTableFont}{\notosanscompact\sffamily\color{black}}
+\newcommand{\SENERLongTableFont}{\notosanstiny\sffamily\color{black}}
+
+% Aplicar automáticamente el tamaño a tablas largas hechas con longtable/xltabular.
+\AtBeginEnvironment{longtable}{\SENERLongTableFont}
+\AtBeginEnvironment{xltabular}{\SENERLongTableFont}
+
 % ============================================================================
 % CONFIGURACIÓN DE CAPTIONS
 % ============================================================================
@@ -251,9 +262,9 @@
 }
 
 % --- Configuración de espaciado global para tablas ---
-\setlength{\intextsep}{35pt plus 4pt minus 2pt} % Espacio para tablas [H]
-\setlength{\LTpre}{35pt plus 4pt minus 2pt}    % Espacio para longtable/xltabular
-\setlength{\LTpost}{12pt plus 2pt minus 2pt}
+\setlength{\intextsep}{35pt plus 4pt minus 4pt} % Espacio para tablas [H]
+\setlength{\LTpre}{35pt plus 4pt minus 4pt}    % Espacio para longtable/xltabular
+\setlength{\LTpost}{12pt plus 2pt minus 4pt}
 
 % FIX: Configuración específica para figuras (ahora igual que tablas)
 \captionsetup[figure]{
