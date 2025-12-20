@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 21:48
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  19 DEC 2025 22:13
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1135,8 +1135,13 @@ Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
 Package footmisc Info: Declaring symbol style lamport* on input line 556.
 Package footmisc Info: Declaring symbol style lamport*-robust on input line 577.
 )
+\SENERLongTableFirstColWidth=\skip97
+
+
+Package array Warning: Column W is already defined on input line 223.
+
 \@float@every@figure=\toks55
- (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
  (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
@@ -1190,14 +1195,14 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \blx@sectionciteorderinternal@0=\count474
 \blx@entrysetcounter=\count475
 \blx@biblioinstance=\count476
-\labelnumberwidth=\skip97
-\labelalphawidth=\skip98
-\biblabelsep=\skip99
-\bibitemsep=\skip100
-\bibnamesep=\skip101
-\bibinitsep=\skip102
-\bibparsep=\skip103
-\bibhang=\skip104
+\labelnumberwidth=\skip98
+\labelalphawidth=\skip99
+\biblabelsep=\skip100
+\bibitemsep=\skip101
+\bibnamesep=\skip102
+\bibinitsep=\skip103
+\bibparsep=\skip104
+\bibhang=\skip105
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
@@ -1281,20 +1286,20 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count545
 \c@pageref=\count546
 \c@savedpageref=\count547
-\shorthandwidth=\skip105
-\shortjournalwidth=\skip106
-\shortserieswidth=\skip107
-\shorttitlewidth=\skip108
-\shortauthorwidth=\skip109
-\shorteditorwidth=\skip110
-\locallabelnumberwidth=\skip111
-\locallabelalphawidth=\skip112
-\localshorthandwidth=\skip113
-\localshortjournalwidth=\skip114
-\localshortserieswidth=\skip115
-\localshorttitlewidth=\skip116
-\localshortauthorwidth=\skip117
-\localshorteditorwidth=\skip118
+\shorthandwidth=\skip106
+\shortjournalwidth=\skip107
+\shortserieswidth=\skip108
+\shorttitlewidth=\skip109
+\shortauthorwidth=\skip110
+\shorteditorwidth=\skip111
+\locallabelnumberwidth=\skip112
+\locallabelalphawidth=\skip113
+\localshorthandwidth=\skip114
+\localshortjournalwidth=\skip115
+\localshortserieswidth=\skip116
+\localshorttitlewidth=\skip117
+\localshortauthorwidth=\skip118
+\localshorteditorwidth=\skip119
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
  (C:\Program Files\MiKTeX\tex/latex/biblatex\blx-unicode.def)
@@ -1431,7 +1436,7 @@ LaTeX Info: Redefining \url on input line 348.
 \g__hyp_linknestlevel_int=\count568
 \HyAnn@Count=\count569
 \Fld@listcount=\count570
-\Hy@SectionHShift=\skip119
+\Hy@SectionHShift=\skip120
 )
 
 Package fontspec Info: 
@@ -1474,7 +1479,7 @@ Package fontspec Info:
 
 ) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip120
+\@mathmargin=\skip121
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -1531,8 +1536,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \totwidth@=\dimen358
 \lineht@=\dimen359
 \@envbody=\toks59
-\multlinegap=\skip121
-\multlinetaggap=\skip122
+\multlinegap=\skip122
+\multlinetaggap=\skip123
 \mathdisplay@stack=\toks60
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
@@ -2465,954 +2470,1797 @@ File: img/figura_6_5.png Graphic file (type bmp)
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [66]
-Overfull \hbox (5.31348pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Carbón 
+Overfull \hbox (3.27419pt too wide) in paragraph at lines 1544--1544
+[]|[][][]| 
  []
 
 
-Overfull \hbox (9.94098pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Petróleo 
+Overfull \hbox (3.27419pt too wide) in paragraph at lines 1544--1544
+[]|[][][]| 
  []
 
 
-Overfull \hbox (28.11348pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Condensados[]| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 219.46| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 1,747.67| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energia 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 636.74| 
  []
 
 
-Overfull \hbox (21.47598pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Geoenergía[]| 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 1,648.09| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.51| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 262.18| 
  []
 
 
-Overfull \hbox (5.43347pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Bagazo 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 91.32| 
  []
 
 
-Overfull \hbox (3.25848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Biogás[]| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 252.18| 
  []
 
 
-Overfull \hbox (5.31348pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Carbón 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 220.18| 
  []
 
 
-Overfull \hbox (9.94098pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Petróleo 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 94.72| 
  []
 
 
-Overfull \hbox (28.11348pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Condensados[]| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.42| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 3.25| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energia 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 5,434.71| 
  []
 
 
-Overfull \hbox (21.47598pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Geoenergía[]| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 219.56| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 3,674.19| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 637.14| 
  []
 
 
-Overfull \hbox (5.43347pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Bagazo 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 1,853.93| 
  []
 
 
-Overfull \hbox (3.25848pt too wide) in paragraph at lines 1543--1543
-[]|[]\TU/NotoSans(0)/b/n/7.5 Biogás[]| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.51| 
  []
 
 
-Overfull \hbox (2.77847pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/b/n/7.5 Oferta 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 262.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 219.46| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 91.32| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 1,747.67| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 252.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 636.74| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 220.18| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 1,648.09| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 95.77| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.42| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 3.25| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 252.18| 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 7,566.61| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 14.99| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.42| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 3,654| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 5,434.71| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 1,868| 
  []
 
 
-Overfull \hbox (2.77847pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/b/n/7.5 Oferta 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.51| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 219.56| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 262.18| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 3,674.19| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 91.32| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 637.14| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 252.18| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 1,853.93| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 220.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 95.77| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 129.42| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 252.18| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 3.25| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 7,358.78| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.42| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 206.15| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 7,566.61| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 13.2| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 219.35| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1.58| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 252.18| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+[]|\TU/NotoSans(0)/m/n/6 6.98| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 0.86| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 129.42| 
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 14.07| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 7,358.78| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 9.52| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 206.15| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 0.09| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-[]|\TU/NotoSans(0)/m/n/7.5 219.35| 
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,873| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,873.09| 
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,873.09| 
  []
 
 
-Overfull \hbox (0.87347pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/b/n/7.5 chada| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 53.52| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 205.84| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 205.84| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 147.47| 
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1.05| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,793.27| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 260.8| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 638.37| 
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 147.47| 
  []
 
 
-Overfull \hbox (3.53598pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,052.4| 
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,793.27| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 638.37| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (9.16028pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,052.4| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 129.51| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 4,605.13| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 262.18| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,793.27| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 91.32| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 326.21| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 205.7| 
  []
 
 
-Overfull \hbox (8.04347pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 2,119.48| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 220.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 312.16| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 61.5| 
  []
 
 
-Overfull \hbox (3.53598pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,052.4| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 3.25| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,364.56| 
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 4,605.13| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 147.47| 
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,793.27| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 326.21| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (12.76627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 2,119.48| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 312.16| 
  []
 
 
-Overfull \hbox (7.82597pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 1,121.09| 
+Overfull \hbox (9.16028pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,052.4| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 147.47| 
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,364.56| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 147.47| 
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 147.47| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 129.51| 
  []
 
 
-Overfull \hbox (1.52599pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 129.51| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 262.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 91.32| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 262.18| 
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 205.7| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 220.18| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1543--1543
-\TU/NotoSans(0)/m/n/7.5 220.18| 
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 61.5| 
  []
 
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1543: ignored error: Infinite glue shrinkage found in box being split
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 3.25| 
+ []
+
+
+Overfull \hbox (12.59227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 1,121.09| 
+ []
+
+
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 147.47| 
+ []
+
+
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 147.47| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 56.67| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 0.42| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 57.08| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 4.83| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 4.83| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 2.83| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 2.83| 
+ []
+
+
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 129.51| 
+ []
+
+
+Overfull \hbox (7.55228pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 129.51| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 262.18| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 262.18| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 91.32| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 91.32| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 220.18| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 220.18| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 205.7| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1544--1544
+\TU/NotoSans(0)/m/n/6 205.7| 
+ []
+
+c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1544: ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [67]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1543: ignored error: Infinite glue shrinkage found in box being split
+Overfull \hbox (3.27419pt too wide) in paragraph at lines 1590--1590
+[]|[][][]| 
+ []
+
+
+Overfull \hbox (3.27419pt too wide) in paragraph at lines 1590--1590
+[]|[][][]| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 45.6| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 1.63| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 595.69| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 548.46| 
+ []
+
+
+Overfull \hbox (0.68828pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 12.4| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 595.69| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 608.09| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 69.82| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 1.63| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 71.45| 
+ []
+
+
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 11.82| 
+ []
+
+
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 11.82| 
+ []
+
+
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 11.82| 
+ []
+
+
+Overfull \hbox (4.12027pt too wide) in paragraph at lines 1590--1590
+\TU/NotoSans(0)/m/n/6 11.82| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 46.48| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 33.22| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 129.42| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 281.12| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 0.04| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 0.04| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 0.04| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 0.04| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 46.48| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 33.18| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 129.42| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 281.08| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 31.49| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 33.18| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 9.82| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 146.49| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 4.41| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 4.66| 
+ []
+
+
+Overfull \hbox (0.86227pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 9.07| 
+ []
+
+
+Overfull \hbox (4.29427pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 10.58| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 114.93| 
+ []
+
+
+Overfull \hbox (7.72627pt too wide) in paragraph at lines 1590--1590
+[]|\TU/NotoSans(0)/m/n/6 125.51| 
+ []
+
+c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1590: ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [68]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1543: ignored error: Infinite glue shrinkage found in box being split
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 16.82| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 119.25| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 297.83| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 1,073.94| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 127.03| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 506.11| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 496.67| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 2,569.96| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 4,207.06| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 9,641.77| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 16.82| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 121.84| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 297.83| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 1,078.42| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 127.03| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 540.53| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 2,578.96| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 23.51| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 4,785| 
+ []
+
+
+Overfull \hbox (14.27814pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 12,353.61| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 7,358.78| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 16.82| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 118.73| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 1,084| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 126.76| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 543.51| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 2,578.47| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 23.51| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 4,790.19| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 5,009.54| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 14.72| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 34.42| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 30.45| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 577.94| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 2,451.03| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 260.8| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 15.05| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 168.92| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 514.64| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 66.33| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 311.03| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 527.88| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 961.45| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 1,381.52| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 2,112.82| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 2,492.31| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 32.82| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 18.55| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 441.01| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 66.33| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 344.46| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 574.97| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 38.88| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 590.63| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 2,107.65| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 11.84| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 150.37| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 73.63| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 50.03| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 634.1| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 908.12| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 456.44| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 17.77| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 33.43| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 47.09| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 2,186.18| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 1,381.52| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 902.95| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 2,024.04| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 50.44| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 50.44| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 97.02| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 17.77| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 46.15| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 273.55| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 122.59| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 214.88| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 271.96| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 49.06| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 16.91| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 38.21| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 43.04| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 28.31| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 99.85| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 57.94| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 70.22| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 73.05| 
+ []
+
+
+Overfull \hbox (10.67213pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 1,606.02| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 804.02| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 804.02| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 157.7| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 46.83| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 110.87| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 110.87| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 86.52| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 86.52| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 175.66| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 13.43| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 13.43| 
+ []
+
+
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 77.89| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 72.66| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 72.66| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 147.52| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 67.88| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1640--1640
+[]|\TU/NotoSans(0)/m/n/6 67.88| 
+ []
+
+
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1640--1640
+\TU/NotoSans(0)/m/n/6 137.82| 
+ []
+
+c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1640: ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [69]
-Overfull \hbox (5.31348pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Carbón 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 13.17| 
  []
 
 
-Overfull \hbox (9.94098pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Petróleo 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 14.94| 
  []
 
 
-Overfull \hbox (28.11348pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Condensados[]| 
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 780.89| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 224.08| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energia 
+Overfull \hbox (10.67213pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 1,037.21| 
  []
 
 
-Overfull \hbox (21.47598pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Geoenergía[]| 
+Overfull \hbox (10.67213pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 1,585.67| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 23.94| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.20013pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 11.25| 
  []
 
 
-Overfull \hbox (5.43347pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Bagazo 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 23.04| 
  []
 
 
-Overfull \hbox (3.25848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Biogás[]| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 859.49| 
  []
 
 
-Overfull \hbox (5.31348pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Carbón 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 67.89| 
  []
 
 
-Overfull \hbox (9.94098pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Petróleo 
+Overfull \hbox (7.24014pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 1,000.6| 
  []
 
 
-Overfull \hbox (28.11348pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Condensados[]| 
+Overfull \hbox (10.67213pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 1,608.69| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 15.83| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energia 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 19.09| 
  []
 
 
-Overfull \hbox (21.47598pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Geoenergía[]| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 22.56| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 30.14| 
  []
 
 
-Overfull \hbox (6.73848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 119.58| 
  []
 
 
-Overfull \hbox (5.43347pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Bagazo 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 191.03| 
  []
 
 
-Overfull \hbox (3.25848pt too wide) in paragraph at lines 1588--1588
-[]|[]\TU/NotoSans(0)/b/n/7.5 Biogás[]| 
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 156.19| 
  []
 
 
-Overfull \hbox (13.29347pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 156.19| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-\TU/NotoSans(0)/m/n/7.5 595.69| 
+Overfull \hbox (5.63214pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 168.01| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-\TU/NotoSans(0)/m/n/7.5 548.46| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 30.68| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-\TU/NotoSans(0)/m/n/7.5 595.69| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 30.68| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-\TU/NotoSans(0)/m/n/7.5 608.09| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 60.38| 
  []
 
 
-Overfull \hbox (13.29347pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 60.38| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 129.42| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 60.38| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 281.12| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 65.13| 
  []
 
 
-Overfull \hbox (13.29347pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 65.13| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 129.42| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+\TU/NotoSans(0)/m/n/6 65.13| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 281.08| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 16.46| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 146.49| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 128.65| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 114.93| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 479.92| 
  []
 
 
-Overfull \hbox (1.74348pt too wide) in paragraph at lines 1588--1588
-[]|\TU/NotoSans(0)/m/n/7.5 125.51| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,603.52| 
  []
 
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1588: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [70]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1588: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [71]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1588: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [72]
-Overfull \hbox (11.77989pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Gasolinas 
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 193.31| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 770.64| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 95.74| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 827.62| 
+ []
+
+
+Overfull \hbox (7.41414pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,150.5| 
+ []
+
+
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 5,282.66| 
  []
 
 
-Overfull \hbox (20.3749pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Querosenos[]| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 5,563.78| 
  []
 
 
-Overfull \hbox (25.13739pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Combustóleo[]| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 10.69| 
  []
 
 
-Overfull \hbox (4.1449pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 95.74| 
  []
 
 
-Overfull \hbox (11.77989pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Gasolinas 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 76.25| 
  []
 
 
-Overfull \hbox (20.3749pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Querosenos[]| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 183.14| 
  []
 
 
-Overfull \hbox (25.13739pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Combustóleo[]| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 183.18| 
  []
 
 
-Overfull \hbox (4.1449pt too wide) in paragraph at lines 1637--1637
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 10.69| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 1,073.94| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 76.25| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 2,569.96| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 86.94| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 4,207.06| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 86.94| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 9,641.77| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 95.74| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 1,078.42| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 96.24| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 2,578.96| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 16.46| 
  []
 
 
-Overfull \hbox (9.7399pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 12,353.61| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 128.65| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 7,358.78| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 479.46| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 2,578.47| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,592.83| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 4,790.19| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 193.31| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 5,009.54| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 770.64| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-\TU/NotoSans(0)/m/n/7.5 2,451.03| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 751.37| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 1,381.52| 
+Overfull \hbox (7.41414pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,150.5| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 2,112.82| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 5,099.52| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-\TU/NotoSans(0)/m/n/7.5 2,492.31| 
+Overfull \hbox (7.41414pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 5,380.6| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 2,107.65| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 126.84| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-\TU/NotoSans(0)/m/n/7.5 2,186.18| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 53.88| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-[]|\TU/NotoSans(0)/m/n/7.5 1,381.52| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 188.02| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1637--1637
-\TU/NotoSans(0)/m/n/7.5 2,024.04| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 188.02| 
  []
 
 
-Overfull \hbox (5.23239pt too wide) in paragraph at lines 1637--1637
-\TU/NotoSans(0)/m/n/7.5 1,606.02| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 16.46| 
  []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 128.65| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 52.99| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 63.34| 
+ []
+
+
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 10.98| 
+ []
+
+
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 701.91| 
+ []
+
 
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
-[73]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1637: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [74]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1637: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [75]
-Overfull \hbox (11.77989pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Gasolinas 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 705.12| 
  []
 
 
-Overfull \hbox (20.3749pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Querosenos[]| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,680.46| 
  []
 
 
-Overfull \hbox (25.13739pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Combustóleo[]| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,826.95| 
  []
 
 
-Overfull \hbox (4.1449pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 82.07| 
  []
 
 
-Overfull \hbox (11.77989pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Gasolinas 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 18.01| 
  []
 
 
-Overfull \hbox (20.3749pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Querosenos[]| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 78.65| 
  []
 
 
-Overfull \hbox (25.13739pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Combustóleo[]| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 178.73| 
  []
 
 
-Overfull \hbox (4.1449pt too wide) in paragraph at lines 1682--1682
-[]|[]\TU/NotoSans(0)/b/n/7.5 Energía 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 187.8| 
  []
 
 
-Overfull \hbox (10.69989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 268.09| 
  []
 
 
-Overfull \hbox (5.23239pt too wide) in paragraph at lines 1682--1682
-\TU/NotoSans(0)/m/n/7.5 1,037.21| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 29.46| 
  []
 
 
-Overfull \hbox (5.23239pt too wide) in paragraph at lines 1682--1682
-\TU/NotoSans(0)/m/n/7.5 1,585.67| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 281.23| 
  []
 
 
-Overfull \hbox (0.9424pt too wide) in paragraph at lines 1682--1682
-\TU/NotoSans(0)/m/n/7.5 1,000.6| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 578.77| 
  []
 
 
-Overfull \hbox (5.23239pt too wide) in paragraph at lines 1682--1682
-\TU/NotoSans(0)/m/n/7.5 1,608.69| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 704.29| 
  []
 
 
-Overfull \hbox (10.69989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 26.16| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,603.52| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 26.16| 
  []
 
 
-Overfull \hbox (1.1599pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,150.5| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 26.16| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 5,282.66| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 70.76| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 5,563.78| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,591.82| 
  []
 
 
-Overfull \hbox (10.69989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/b/n/7.5 Consumo 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 193.31| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,592.83| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 580.46| 
  []
 
 
-Overfull \hbox (1.1599pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,150.5| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 2,447.37| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 5,099.52| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 2,447.37| 
  []
 
 
-Overfull \hbox (1.1599pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 5,380.6| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 32.82| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,680.46| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 168.92| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,826.95| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 514.64| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,591.82| 
+Overfull \hbox (2.37413pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 66.33| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 2,447.37| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 344.46| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 2,447.37| 
+Overfull \hbox (5.80614pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 574.97| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,224.73| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,224.73| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 1,381.52| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 1,381.52| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 4,397.29| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 4,397.29| 
  []
 
 
-Overfull \hbox (5.44989pt too wide) in paragraph at lines 1682--1682
-[]|\TU/NotoSans(0)/m/n/7.5 4,397.29| 
+Overfull \hbox (10.84613pt too wide) in paragraph at lines 1686--1686
+[]|\TU/NotoSans(0)/m/n/6 4,397.29| 
  []
 
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1682: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [76]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1682: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [77]
-c:/Proyectos/40.-PlantillasLatex/Balance Nacional de Energía 2025x.tex:1682: ignored error: Infinite glue shrinkage found in box being split
-File: img/foja_blanca.jpg Graphic file (type bmp)
-<img/foja_blanca.jpg>
- [78]
 File: img/figura_6_6.png Graphic file (type bmp)
 <img/figura_6_6.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [79]
+[70]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [80]
+ [71]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [81]
+ [72]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [82]
+ [73]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [83]
+ [74]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [84]
+ [75]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [85]
+ [76]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [86]
+ [77]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [87]
+ [78]
 
-LaTeX Warning: Empty bibliography on input line 1785.
+LaTeX Warning: Empty bibliography on input line 1789.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[88] (Balance Nacional de Energía 2025x.aux)
+[79]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [80] (Balance Nacional de Energía 2025x.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -3422,12 +4270,12 @@ Package logreq Info: Writing requests to '"Balance Nacional de Energía 2025x".r
 
  ) 
 Here is how much of TeX's memory you used:
- 51312 strings out of 402987
- 1097541 string characters out of 5452870
- 2230168 words of memory out of 5000000
- 79255 multiletter control sequences out of 15000+600000
- 677605 words of font info for 120 fonts, out of 8000000 for 9000
+ 51322 strings out of 402987
+ 1097766 string characters out of 5452870
+ 2244259 words of memory out of 5000000
+ 79264 multiletter control sequences out of 15000+600000
+ 677613 words of font info for 121 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  113i,13n,130p,1597b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Balance Nacional de Energía 2025x.pdf (88 pages).
+Output written on Balance Nacional de Energía 2025x.pdf (80 pages).

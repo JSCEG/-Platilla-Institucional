@@ -205,12 +205,27 @@
 \newcommand{\notosanssmall}{\fontsize{10.5pt}{12.6pt}\selectfont}
 \newcommand{\notosanscompact}{\fontsize{9.5pt}{11.2pt}\selectfont}
 \newcommand{\notosanstiny}{\fontsize{7.5pt}{9pt}\selectfont}
+\newcommand{\notosansmicro}{\fontsize{6.5pt}{7.8pt}\selectfont}
+\newcommand{\notosansnano}{\fontsize{6.0pt}{7.2pt}\selectfont}
 
 % FIX: Tamaño de fuente para tablas largas (longtable/xltabular)
 % Por defecto iguala el tamaño usado en tablas institucionales compactas.
 % Si necesitas ajustarlo en el documento:
 %   \renewcommand{\SENERLongTableFont}{\notosanscompact\sffamily\color{black}}
-\newcommand{\SENERLongTableFont}{\notosanstiny\sffamily\color{black}}
+%   \renewcommand{\SENERLongTableFont}{\notosansmicro\sffamily\color{black}}
+\newcommand{\SENERLongTableFont}{\notosansnano\sffamily\color{black}}
+
+% FIX: Helpers para que las TABLAS LARGAS ajusten mejor
+% 1) Primera columna más ancha (usar W/Q en el especificador de columnas)
+%    Ejemplo: \begin{xltabular}{\textwidth}{Q X X}
+\newlength{\SENERLongTableFirstColWidth}
+\setlength{\SENERLongTableFirstColWidth}{0.32\textwidth}
+\newcolumntype{W}{>{\raggedright\arraybackslash}p{\SENERLongTableFirstColWidth}}
+\newcolumntype{Q}{>{\raggedright\arraybackslash\bfseries}p{\SENERLongTableFirstColWidth}}
+
+% 2) Encabezados verticales para liberar ancho (usar dentro de tu \encabezado...)
+%    Ejemplo: \rowcolor{gobmxGuinda} \encabezadoguinda{\SENERVHeader{Año}} & ...
+\newcommand{\SENERVHeader}[2][2.2cm]{\rotatebox{90}{\parbox{#1}{\centering #2}}}
 
 % Aplicar automáticamente el tamaño a tablas largas hechas con longtable/xltabular.
 \AtBeginEnvironment{longtable}{\SENERLongTableFont}
@@ -707,7 +722,7 @@
 % Tabla dorada para tablas largas (sin entorno table)
 \newenvironment{tabladoradoLargo}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
-  \sffamily\notosanstiny
+  \SENERLongTableFont
   \renewcommand{\arraystretch}{1.25}
   \color{black}
   #1

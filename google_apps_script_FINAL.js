@@ -1444,7 +1444,9 @@ function procesarDatosArray(datos, tituloTabla, forzarLongtable = false) {
     }
 
     const numCols = datos[0].length;
-    const MAX_COLS_POR_TABLA = 6; // Máximo 6 columnas por tabla (incluyendo la primera)
+    // Máximo de columnas por tabla (incluyendo la primera).
+    // Requisito: permitir hasta 14 columnas además de la primera (total 15) antes de dividir por columnas.
+    const MAX_COLS_POR_TABLA = 15;
     const MAX_FILAS_COMPACTA = 15; // Umbral para usar tabular en tablas cortas (reducido)
     const MAX_FILAS_POR_PARTE = 35; // Si hay demasiadas filas, dividir por partes
 
@@ -1468,6 +1470,31 @@ function procesarDatosArray(datos, tituloTabla, forzarLongtable = false) {
     return { tipo: 'longtable', contenido: dividirTabla(datos, MAX_COLS_POR_TABLA, tituloTabla) };
 }
 
+// ================================
+// SENER: Tablas largas (xltabular)
+// ================================
+
+// Ajusta el ancho de la primera columna (definido en sener2025.cls)
+const SENER_LONGTABLE_FIRSTCOL_WIDTH = '0.34\\textwidth';
+
+function senerLongtablePreamble() {
+    return `  \\setlength{\\SENERLongTableFirstColWidth}{${SENER_LONGTABLE_FIRSTCOL_WIDTH}}\n`;
+}
+
+function senerLongtableSpec(numCols) {
+    // Primera columna: Q (ancha + bold), resto: Z (X) para auto-fit
+    return 'Q' + 'Z'.repeat(Math.max(0, numCols - 1));
+}
+
+function senerLongtableHeaderRow(celdasEncabezadoProcesadas) {
+    // Primera columna normal; resto con encabezado vertical
+    return celdasEncabezadoProcesadas
+        .map((c, idx) => idx === 0
+            ? `\\encabezadodorado{${c}}`
+            : `\\encabezadodorado{\\SENERVHeader{${c}}}`)
+        .join(' & ');
+}
+
 /**
  * Genera una tabla simple sin división
  */
@@ -1475,18 +1502,19 @@ function generarTablaSimple(datos, tituloTabla) {
     const numCols = datos[0].length;
 
     // Calcular especificación de columnas para xltabular
-    // Primera columna: Y (X + bold), resto: Z (X) para distribuir equitativamente
-    const especCols = 'Y' + 'Z'.repeat(numCols - 1);
+    // Primera columna: Q (ancha + bold), resto: Z (X) para distribuir equitativamente
+    const especCols = senerLongtableSpec(numCols);
 
     // Usar xltabular para permitir saltos de página automáticos y auto-fit de columnas
-    let tex = `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
+    let tex = senerLongtablePreamble();
+    tex += `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
     if (tituloTabla) {
         tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
     }
 
     // Encabezado para la primera página con fondo dorado
     tex += `    \\toprule\n`;
-    const encabezados = procesarCeldasFila(datos[0], true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+    const encabezados = senerLongtableHeaderRow(procesarCeldasFila(datos[0], true, true));
     tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
     tex += `    \\midrule\n`;
     tex += `    \\endfirsthead\n\n`;
@@ -1573,9 +1601,10 @@ function dividirTabla(datos, maxCols, tituloTabla) {
         const numColsTabla = colsEnEstaParte.length;
 
         // Calcular especificación de columnas para xltabular
-        const especCols = 'Y' + 'Z'.repeat(numColsTabla - 1);
+        const especCols = senerLongtableSpec(numColsTabla);
 
         // Usar xltabular para permitir saltos de página y auto-fit
+        tex += senerLongtablePreamble();
         tex += `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
         if (tituloTabla && parte === 1) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
@@ -1583,7 +1612,7 @@ function dividirTabla(datos, maxCols, tituloTabla) {
 
         // Extraer encabezados de esta parte con fondo dorado
         const celdasEncabezado = colsEnEstaParte.map(colIdx => datos[0][colIdx]);
-        const encabezados = procesarCeldasFila(celdasEncabezado, true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = senerLongtableHeaderRow(procesarCeldasFila(celdasEncabezado, true, true));
 
         // Encabezado para la primera página
         tex += `    \\toprule\n`;
@@ -1629,18 +1658,19 @@ function dividirTabla(datos, maxCols, tituloTabla) {
 function dividirTablaPorFilas(datos, maxFilasParte, tituloTabla) {
     const numCols = datos[0].length;
     // EspecCols con auto-fit distribuido
-    const especCols = 'Y' + 'Z'.repeat(numCols - 1);
+    const especCols = senerLongtableSpec(numCols);
     let tex = '';
     let inicio = 1; // Saltar encabezado
     let parte = 1;
     while (inicio < datos.length) {
         const fin = Math.min(inicio + maxFilasParte, datos.length);
+        tex += senerLongtablePreamble();
         tex += `  \\begin{xltabular}{\\textwidth}{${especCols}}\n`;
         if (tituloTabla && parte === 1) {
             tex += `    \\caption{${escaparLatex(tituloTabla)}}\\label{tab:${generarLabel(tituloTabla)}}\\\\\n`;
         }
         tex += `    \\toprule\n`;
-        const encabezados = procesarCeldasFila(datos[0], true, true).map(c => `\\encabezadodorado{${c}}`).join(' & ');
+        const encabezados = senerLongtableHeaderRow(procesarCeldasFila(datos[0], true, true));
         tex += `    \\rowcolor{gobmxDorado} ${encabezados} \\\\\n`;
         tex += `    \\midrule\n`;
         tex += `    \\endfirsthead\n\n`;

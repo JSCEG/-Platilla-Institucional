@@ -37,6 +37,6 @@
 \contentsline {section}{\numberline {6}Balance Nacional de Energía }{64}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Principales cuentas del Balance Nacional de Energía}{65}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Matriz del Balance Nacional de Energía}{67}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Principales flujos del Balance Nacional de Energía}{79}{subsection.6.3}%
-\contentsline {section}{Glosario}{79}{section*.8}%
-\contentsline {section}{Siglas y Acrónimos}{88}{section*.9}%
+\contentsline {subsection}{\numberline {6.3}Principales flujos del Balance Nacional de Energía}{71}{subsection.6.3}%
+\contentsline {section}{Glosario}{71}{section*.8}%
+\contentsline {section}{Siglas y Acrónimos}{80}{section*.9}%
