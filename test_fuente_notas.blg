@@ -1,9 +1,9 @@
 [0] Config.pm:328> INFO - This is Biber 2.21
 [0] Config.pm:331> INFO - Logfile is 'test_fuente_notas.blg'
-[250] biber-MSWIN64:342> INFO - === 
-[348] Biber.pm:421> INFO - Reading 'test_fuente_notas.bcf'
-[467] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
-[489] bbl.pm:676> INFO - Writing 'test_fuente_notas.bbl' with encoding 'UTF-8'
-[489] bbl.pm:779> INFO - Output to test_fuente_notas.bbl
-[490] Biber.pm:132> WARN - The file 'test_fuente_notas.bcf' does not contain any citations!
-[490] Biber.pm:134> INFO - WARNINGS: 1
+[114] biber-MSWIN64:342> INFO - === 
+[149] Biber.pm:421> INFO - Reading 'test_fuente_notas.bcf'
+[282] Biber.pm:1002> INFO - Found 0 citekeys in bib section 0
+[297] bbl.pm:676> INFO - Writing 'test_fuente_notas.bbl' with encoding 'UTF-8'
+[297] bbl.pm:779> INFO - Output to test_fuente_notas.bbl
+[297] Biber.pm:132> WARN - The file 'test_fuente_notas.bcf' does not contain any citations!
+[297] Biber.pm:134> INFO - WARNINGS: 1

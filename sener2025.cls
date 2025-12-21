@@ -197,7 +197,7 @@
 \RequirePackage{lettrine}
 \RequirePackage{qrcode}
 \RequirePackage{marginnote}
-\RequirePackage[flushmargin]{footmisc}
+\RequirePackage[flushmargin,bottom]{footmisc}
 % babel ya cargado arriba, solo aplicamos decimalpoint
 \decimalpoint
 

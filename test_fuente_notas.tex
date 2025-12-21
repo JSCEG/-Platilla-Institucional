@@ -1,4 +1,10 @@
 %!TEX TS-program = xelatex
+\DocumentMetadata{
+  pdfversion=2.0,
+  lang=es-MX,
+  pdfstandard=ua-2
+}
+
 \documentclass{sener2025}
 
 \title{Prueba de notas al pie en \textbackslash fuente}
@@ -8,30 +14,22 @@
 \begin{document}
 \portadafondo
 
-\section{Figura con fuente y nota}
+\section{Prueba de Reproducción Exacta}
+
+Para el año 2024, el consumo no energético representó el 3.3\% (183.18 PJ) del consumo final en el país. Predominando otros energéticos con 52.3\% (95.74 PJ), seguidos por gas seco con 41.62\% (76.25 PJ), gasolinas y naftas con 5.83\% (10.69 PJ). De forma complementaria, se utilizan GLP y bagazo de caña, como se observa en la Figura 5.19.
+
+La relevancia de otros energéticos en el consumo final no energético se ha mantenido durante el periodo 2010-2024 (Figura 5.20.). Sin embargo, el gas seco ha registrado un crecimiento sostenido durante los últimos 5 años. De hecho, de 2023 a 2024, mientras el consumo de otros energéticos cayó 9\%, el gas seco creció 35\%.
 
 \begin{figure}[H]
-  \centering
-  % Placeholder sin archivos externos
-  \fbox{\rule{0pt}{3cm}\rule{6cm}{0pt}}
-  \caption{Figura de prueba}
+  {\centering
+  % Texto alternativo para accesibilidad
+  \pdftooltip{\rule{10cm}{5cm}}{Figura 5.19 Composición del consumo final no energético por energético, 2024}
+  \par}
+  \raggedright
+  \caption{Figura 5.19 Composición del consumo final no energético por energético, 2024}
+  \label{fig:figura_5_19_composicion_del_co}
 \end{figure}
-\fuente{INEGI. Base de datos 2024\footnote{Nota de prueba en la fuente de la figura.}}
-
-\section{Tabla con fuente y nota}
-
-\begin{table}[H]
-  \centering
-  \caption{Tabla de prueba}
-  \begin{tabular}{ll}
-    \toprule
-    Columna A & Columna B \\
-    \midrule
-    A1 & B1 \\
-    A2 & B2 \\
-    \bottomrule
-  \end{tabular}
-\end{table}
-\fuente{Elaboración propia\footnote{Nota de prueba en la fuente de la tabla.}}
+\vspace{-4pt}
+\fuente{Elaboración SENER. \footnote{Otros energéticos contemplan a lubricantes, parafinas, asfaltos, azufre, materia prima negro de humo, gasóleo, etano, gas de alto horno, gas de coque, licor negro, gas residual y aceite residual.}}
 
 \end{document}
