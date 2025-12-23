@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  21 DEC 2025 03:29
+This is XeTeX, Version 3.141592653-2.6-0.999997 (MiKTeX 25.4) (preloaded format=xelatex 2025.12.17)  23 DEC 2025 12:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -387,41 +387,6 @@ File: xetex.def 2025/11/01 v5.0p Graphics/color driver for xetex
 \Gin@req@height=\dimen162
 \Gin@req@width=\dimen163
 )
-(C:\Program Files\MiKTeX\tex/latex/lm\lmodern.sty
-Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
-LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
-(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
-(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
-LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
-LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
-(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
-LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
-(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
-LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
-(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
-LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
-(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
-LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
-LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
-LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count324
@@ -514,26 +479,548 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthR=\skip76
 \@temptokenb=\toks25
 )
-(C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.sty
+Package: enumitem 2025/02/06 v3.11 Customized lists
+\labelindent=\skip77
+\enit@outerparindent=\dimen169
+\enit@toks=\toks26
+\enit@inbox=\box65
+\enit@count@id=\count326
+\enitdp@description=\count327
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+
+(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count328
+)
+\csq@reset=\count329
+\csq@gtype=\count330
+\csq@glevel=\count331
+\csq@qlevel=\count332
+\csq@maxlvl=\count333
+\csq@tshold=\count334
+\csq@ltx@everypar=\toks27
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.cfg
+File: csquotes.cfg 
+))
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/anyfontsize\anyfontsize.sty
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
+Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
+\MT@toks=\toks28
+\MT@tempbox=\box66
+\MT@count=\count335
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
+LaTeX Info: Redefining \leftprotrusion on input line 1088.
+\MT@prot@toks=\toks29
+LaTeX Info: Redefining \rightprotrusion on input line 1107.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen170
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count336
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-xetex.def
+File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
+LaTeX Info: Redefining \lsstyle on input line 443.
+LaTeX Info: Redefining \lslig on input line 451.
+\MT@outer@space=\skip78
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+==> First Aid for microtype.sty applied!
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
+Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+
+(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
+Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
+)
+(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
+Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
+\calc@Acount=\count337
+\calc@Bcount=\count338
+\calc@Adimen=\dimen171
+\calc@Bdimen=\dimen172
+\calc@Askip=\skip79
+\calc@Bskip=\skip80
+LaTeX Info: Redefining \setlength on input line 86.
+LaTeX Info: Redefining \addtolength on input line 87.
+\calc@Ccount=\count339
+\calc@Cskip=\skip81
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen173
+\ESO@tempdimb=\dimen174
+)
+\AM@pagewidth=\dimen175
+\AM@pageheight=\dimen176
+\AM@fboxrule=\dimen177
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\ppxetex.def
+File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
+)
+\pdfpages@includegraphics@status=\count340
+\AM@pagebox=\box67
+\AM@global@opts=\toks30
+\AM@pagecnt=\count341
+\AM@toc@title=\toks31
+\AM@lof@heading=\toks32
+\c@AM@survey=\count342
+\AM@templatesizebox=\box68
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
+\pgfutil@everybye=\toks33
+\pgfutil@tempdima=\dimen178
+\pgfutil@tempdimb=\dimen179
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
+\pgfutil@abb=\box69
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
+Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
+))
+Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
+Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks34
+\pgfkeys@temptoks=\toks35
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
+tex
+\pgfkeys@tmptoks=\toks36
+))
+\pgf@x=\dimen180
+\pgf@y=\dimen181
+\pgf@xa=\dimen182
+\pgf@ya=\dimen183
+\pgf@xb=\dimen184
+\pgf@yb=\dimen185
+\pgf@xc=\dimen186
+\pgf@yc=\dimen187
+\pgf@xd=\dimen188
+\pgf@yd=\dimen189
+\w@pgf@writea=\write3
+\r@pgf@reada=\read3
+\c@pgf@counta=\count343
+\c@pgf@countb=\count344
+\c@pgf@countc=\count345
+\c@pgf@countd=\count346
+\t@pgf@toka=\toks37
+\t@pgf@tokb=\toks38
+\t@pgf@tokc=\toks39
+\pgf@sys@id@count=\count347
+ (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
+File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
+)
+Driver file for pgf: pgfsys-xetex.def
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-xetex.def
+File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-dvipdfmx.def
+File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
+File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
+)
+\pgfsys@objnum=\count348
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
+File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfsyssoftpath@smallbuffer@items=\count349
+\pgfsyssoftpath@bigbuffer@items=\count350
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
+File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
+Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
+\pgfmath@dimen=\dimen190
+\pgfmath@count=\count351
+\pgfmath@box=\box70
+\pgfmath@toks=\toks40
+\pgfmath@stack@operand=\toks41
+\pgfmath@stack@operation=\toks42
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.co
+de.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.
+tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
+cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
+) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count352
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
+File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@picminx=\dimen191
+\pgf@picmaxx=\dimen192
+\pgf@picminy=\dimen193
+\pgf@picmaxy=\dimen194
+\pgf@pathminx=\dimen195
+\pgf@pathmaxx=\dimen196
+\pgf@pathminy=\dimen197
+\pgf@pathmaxy=\dimen198
+\pgf@xx=\dimen199
+\pgf@xy=\dimen256
+\pgf@yx=\dimen257
+\pgf@yy=\dimen258
+\pgf@zx=\dimen259
+\pgf@zy=\dimen260
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
+ex
+File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@path@lastx=\dimen261
+\pgf@path@lasty=\dimen262
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
+File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@shorten@end@additional=\dimen263
+\pgf@shorten@start@additional=\dimen264
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
+File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfpic=\box71
+\pgf@hbox=\box72
+\pgf@layerbox@main=\box73
+\pgf@picture@serial@count=\count353
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
+x
+File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgflinewidth=\dimen265
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
+.tex
+File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@pt@x=\dimen266
+\pgf@pt@y=\dimen267
+\pgf@pt@temp=\dimen268
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
+File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
+File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.
+tex
+File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
+File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfarrowsep=\dimen269
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
+File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@max=\dimen270
+\pgf@sys@shading@range@num=\count354
+\pgf@shadingcount=\count355
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
+File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
+File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfexternal@startupbox=\box74
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
+File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.te
+x
+File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
+File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
+File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)))
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
+File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfnodeparttextbox=\box75
+)
+(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
+File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
+Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@nodesepstart=\dimen271
+\pgf@nodesepend=\dimen272
+)
+(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
+Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
+)) (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
+(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex))
+(C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty
+(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
+(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
+Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
+\pgffor@iter=\dimen273
+\pgffor@skip=\dimen274
+\pgffor@stack=\toks43
+\pgffor@toks=\toks44
+))
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
+Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
+tex
+File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgf@plot@mark@count=\count356
+\pgfplotmarksize=\dimen275
+)
+\tikz@lastx=\dimen276
+\tikz@lasty=\dimen277
+\tikz@lastxsaved=\dimen278
+\tikz@lastysaved=\dimen279
+\tikz@lastmovetox=\dimen280
+\tikz@lastmovetoy=\dimen281
+\tikzleveldistance=\dimen282
+\tikzsiblingdistance=\dimen283
+\tikz@figbox=\box76
+\tikz@figbox@bg=\box77
+\tikz@tempbox=\box78
+\tikz@tempbox@bg=\box79
+\tikztreelevel=\count357
+\tikznumberofchildren=\count358
+\tikznumberofcurrentchild=\count359
+\tikz@fig@count=\count360
+ (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
+File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+\pgfmatrixcurrentrow=\count361
+\pgfmatrixcurrentcolumn=\count362
+\pgf@matrix@numberofcolumns=\count363
+)
+\tikz@expandcount=\count364
+
+(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
+rytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
+))) (C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
+Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
+\c@tracingmulticols=\count365
+\mult@box=\box80
+\multicol@leftmargin=\dimen284
+\c@unbalance=\count366
+\c@collectmore=\count367
+\doublecol@number=\count368
+\multicoltolerance=\count369
+\multicolpretolerance=\count370
+\full@width=\dimen285
+\page@free=\dimen286
+\premulticols=\dimen287
+\postmulticols=\dimen288
+\multicolsep=\skip82
+\multicolbaselineskip=\skip83
+\partial@page=\box81
+\last@line=\box82
+\mc@boxedresult=\box83
+\maxbalancingoverflow=\dimen289
+\mult@rightbox=\box84
+\mult@grightbox=\box85
+\mult@firstbox=\box86
+\mult@gfirstbox=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\@tempa=\box98
+\@tempa=\box99
+\@tempa=\box100
+\@tempa=\box101
+\@tempa=\box102
+\@tempa=\box103
+\@tempa=\box104
+\@tempa=\box105
+\@tempa=\box106
+\@tempa=\box107
+\@tempa=\box108
+\@tempa=\box109
+\@tempa=\box110
+\@tempa=\box111
+\@tempa=\box112
+\@tempa=\box113
+\@tempa=\box114
+\@tempa=\box115
+\@tempa=\box116
+\@tempa=\box117
+\@tempa=\box118
+\@tempa=\box119
+\@tempa=\box120
+\@tempa=\box121
+\@tempa=\box122
+\@tempa=\box123
+\c@minrows=\count371
+\c@columnbadness=\count372
+\c@finalcolumnbadness=\count373
+\last@try=\dimen290
+\multicolovershoot=\dimen291
+\multicolundershoot=\dimen292
+\mult@nat@firstbox=\box124
+\colbreak@box=\box125
+\mc@col@check@num=\count374
+\g__mc_curr_col_int=\count375
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.sty
+File: lettrine.sty 2025-01-30 v2.80 (Daniel Flipo)
+
+(C:\Program Files\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
+Package: xfp 2025-10-09 L3 Floating point unit
+)
+\c@DefaultLines=\count376
+\c@DefaultDepth=\count377
+\DefaultFindent=\dimen293
+\DefaultNindent=\dimen294
+\DefaultSlope=\dimen295
+\DiscardVskip=\dimen296
+\L@lettrine=\box126
+\L@lbox=\box127
+\L@tbox=\box128
+\c@L@lines=\count378
+\c@L@depth=\count379
+\L@Pindent=\dimen297
+\L@Findent=\dimen298
+\L@Nindent=\dimen299
+\L@lraise=\dimen300
+\L@first=\dimen301
+\L@next=\dimen302
+\L@slope=\dimen303
+\L@height=\dimen304
+\L@novskip=\dimen305
+\L@target@ht=\dimen306
+\L@target@dp=\dimen307
+\L@target@tht=\dimen308
+\LettrineWidth=\dimen309
+\LettrineHeight=\dimen310
+\LettrineDepth=\dimen311
+\L@finalht=\dimen312
+\L@finaldp=\dimen313
+
+Loading lettrine.cfg
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
+\Lettrine@tweaks=\toks45
+\Llist@everypar=\toks46
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/qrcode\qrcode.sty
+Package: qrcode 2015/01/08 v1.51 QR code generation
+
+(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
+(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks47
+\XKV@tempa@toks=\toks48
+)
+\XKV@depth=\count380
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\c@qr@i=\count381
+\c@qr@j=\count382
+\qr@a=\count383
+\qr@b=\count384
+\qr@c=\count385
+\qr@for@depth=\count386
+\qr@for@maxdepth=\count387
+\qr@for@start=\count388
+\qr@for@end=\count389
+\qr@for@step=\count390
+\qr@newforcount=\count391
+\qr@newforcount=\count392
+\qr@desiredheight=\skip84
+\qr@modulesize=\skip85
+\qr@minipagewidth=\skip86
+\c@maski=\count393
+\c@maskj=\count394
+\c@totalones=\count395
+\c@penaltyi=\count396
+\c@penaltyii=\count397
+\c@penaltyiii=\count398
+\c@penaltyiv=\count399
+\c@qr@hexchars=\count400
+\qr@newforcount=\count401
+\c@qr@divisionsremaining=\count402
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/marginnote\marginnote.sty
+Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
+\c@mn@abspage=\count403
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-footmisc.lt
+x
+Package: latex-lab-footmisc 2025/02/20 v6.0e a miscellany of footnote facilitie
+s -- latex-lab version
+\FN@temptoken=\toks49
+Package footmisc Info: Declaring symbol style bringhurst on input line 508.
+Package footmisc Info: Declaring symbol style chicago on input line 516.
+Package footmisc Info: Declaring symbol style wiley on input line 525.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 556.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 577
+.
+) (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec.sty
 Package: fontspec 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTeX
 
 (C:\Program Files\MiKTeX\tex/latex/fontspec\fontspec-xetex.sty
 Package: fontspec-xetex 2025/09/29 v2.9g Font selection for XeLaTeX and LuaLaTe
 X
-\l__fontspec_script_int=\count326
-\l__fontspec_language_int=\count327
-\l__fontspec_strnum_int=\count328
-\l__fontspec_tmp_int=\count329
-\l__fontspec_tmpa_int=\count330
-\l__fontspec_tmpb_int=\count331
-\l__fontspec_tmpc_int=\count332
-\l__fontspec_em_int=\count333
-\l__fontspec_emdef_int=\count334
-\l__fontspec_strong_int=\count335
-\l__fontspec_strongdef_int=\count336
-\l__fontspec_tmpa_dim=\dimen169
-\l__fontspec_tmpb_dim=\dimen170
-\l__fontspec_tmpc_dim=\dimen171
+\l__fontspec_script_int=\count404
+\l__fontspec_language_int=\count405
+\l__fontspec_strnum_int=\count406
+\l__fontspec_tmp_int=\count407
+\l__fontspec_tmpa_int=\count408
+\l__fontspec_tmpb_int=\count409
+\l__fontspec_tmpc_int=\count410
+\l__fontspec_em_int=\count411
+\l__fontspec_emdef_int=\count412
+\l__fontspec_strong_int=\count413
+\l__fontspec_strongdef_int=\count414
+\l__fontspec_tmpa_dim=\dimen314
+\l__fontspec_tmpb_dim=\dimen315
+\l__fontspec_tmpc_dim=\dimen316
 
 (C:\Program Files\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
@@ -685,7 +1172,7 @@ pt=latn;language=dflt;mapping=tex-text;"
 pt=latn;language=dflt;+smcp;mapping=tex-text;"
 
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 103.
+(Font)              scaled to size 10.0pt on input line 137.
 
 Package fontspec Info: 
 (fontspec)             NotoSans-Regular scale = 0.9999971532194241.
@@ -694,8 +1181,51 @@ Package fontspec Info:
 Package fontspec Info: 
 (fontspec)             NotoSans-Regular scale = 1.0.
 
+
+Package fontspec Info: 
+(fontspec)             NotoSans-Light scale = 1.007514634894867.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-Light scale = 1.007514634894867.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-Light scale = 1.007514634894867.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-LightItalic scale = 1.007514634894867.
+
+
+Package fontspec Info: 
+(fontspec)             NotoSans-LightItalic scale = 1.007514634894867.
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'NotoSans(1)' created for font 'NotoSans'
+(fontspec)             with options [Ligatures=TeX,Scale=MatchLowercase,Path =
+(fontspec)             tipografias/,Extension = .ttf,UprightFont =
+(fontspec)             *-Light,ItalicFont = *-LightItalic].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->s*[1.007514634894867]"[tipografias/NotoSans-Light.ttf
+]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
+(fontspec)             <->s*[1.007514634894867]"[tipografias/NotoSans-Light.ttf
+]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+(fontspec)             - 'italic' (m/it) with NFSS spec.:
+(fontspec)             <->s*[1.007514634894867]"[tipografias/NotoSans-LightItal
+ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
+(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
+(fontspec)             <->s*[1.007514634894867]"[tipografias/NotoSans-LightItal
+ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
+
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 10.5pt on input line 109.
+(Font)              scaled to size 10.5pt on input line 153.
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/accsupp\accsupp.sty
 Package: accsupp 2019/12/05 v0.6 Accessibility support by marked content (HO)
@@ -726,433 +1256,89 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/accsupp\accsupp-dvipdfm.def
 File: accsupp-dvipdfm.def 2019/12/05 v0.6 accsupp driver for dvipdfm (HO)
 ))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/enumitem\enumitem.sty
-Package: enumitem 2025/02/06 v3.11 Customized lists
-\labelindent=\skip77
-\enit@outerparindent=\dimen172
-\enit@toks=\toks26
-\enit@inbox=\box65
-\enit@count@id=\count337
-\enitdp@description=\count338
-)
-(C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
-Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
-
-(C:\Program Files\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty
-(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty
-(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen173
-\pgfutil@tempdimb=\dimen174
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
-\pgfutil@abb=\box66
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfrcs.code.tex
-(C:\Program Files\MiKTeX\tex/generic/pgf\pgf.revision.tex)
-Package: pgfrcs 2025-08-29 v3.1.11a (3.1.11a)
-))
-Package: pgf 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty
-(C:\Program Files\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
-Package: pgfsys 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks28
-\pgfkeys@temptoks=\toks29
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.
-tex
-\pgfkeys@tmptoks=\toks30
-))
-\pgf@x=\dimen175
-\pgf@y=\dimen176
-\pgf@xa=\dimen177
-\pgf@ya=\dimen178
-\pgf@xb=\dimen179
-\pgf@yb=\dimen180
-\pgf@xc=\dimen181
-\pgf@yc=\dimen182
-\pgf@xd=\dimen183
-\pgf@yd=\dimen184
-\w@pgf@writea=\write3
-\r@pgf@reada=\read3
-\c@pgf@counta=\count339
-\c@pgf@countb=\count340
-\c@pgf@countc=\count341
-\c@pgf@countd=\count342
-\t@pgf@toka=\toks31
-\t@pgf@tokb=\toks32
-\t@pgf@tokc=\toks33
-\pgf@sys@id@count=\count343
- (C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
-File: pgf.cfg 2025-08-29 v3.1.11a (3.1.11a)
-)
-Driver file for pgf: pgfsys-xetex.def
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-xetex.def
-File: pgfsys-xetex.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-dvipdfmx.def
-File: pgfsys-dvipdfmx.def 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsys-common-pdf.def
-File: pgfsys-common-pdf.def 2025-08-29 v3.1.11a (3.1.11a)
-)
-\pgfsys@objnum=\count344
-)))
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.tex
-File: pgfsyssoftpath.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfsyssoftpath@smallbuffer@items=\count345
-\pgfsyssoftpath@bigbuffer@items=\count346
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/systemlayer\pgfsysprotocol.code.tex
-File: pgfsysprotocol.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcore.code.tex
-Package: pgfcore 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathutil.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen185
-\pgfmath@count=\count347
-\pgfmath@box=\box67
-\pgfmath@toks=\toks34
-\pgfmath@stack@operand=\toks35
-\pgfmath@stack@operation=\toks36
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.co
-de.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.
-tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmeti
-cs.code.tex) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex
-) (C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count348
-))
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfint.code.tex)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
-File: pgfcorepoints.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@picminx=\dimen186
-\pgf@picmaxx=\dimen187
-\pgf@picminy=\dimen188
-\pgf@picmaxy=\dimen189
-\pgf@pathminx=\dimen190
-\pgf@pathmaxx=\dimen191
-\pgf@pathminy=\dimen192
-\pgf@pathmaxy=\dimen193
-\pgf@xx=\dimen194
-\pgf@xy=\dimen195
-\pgf@yx=\dimen196
-\pgf@yy=\dimen197
-\pgf@zx=\dimen198
-\pgf@zy=\dimen199
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathconstruct.code.t
-ex
-File: pgfcorepathconstruct.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@path@lastx=\dimen256
-\pgf@path@lasty=\dimen257
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathusage.code.tex
-File: pgfcorepathusage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@shorten@end@additional=\dimen258
-\pgf@shorten@start@additional=\dimen259
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
-File: pgfcorescopes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfpic=\box68
-\pgf@hbox=\box69
-\pgf@layerbox@main=\box70
-\pgf@picture@serial@count=\count349
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoregraphicstate.code.te
-x
-File: pgfcoregraphicstate.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgflinewidth=\dimen260
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransformations.code
-.tex
-File: pgfcoretransformations.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@pt@x=\dimen261
-\pgf@pt@y=\dimen262
-\pgf@pt@temp=\dimen263
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
-File: pgfcorequick.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreobjects.code.tex
-File: pgfcoreobjects.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepathprocessing.code.
-tex
-File: pgfcorepathprocessing.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
-File: pgfcorearrows.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowsep=\dimen264
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
-File: pgfcoreshade.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@max=\dimen265
-\pgf@sys@shading@range@num=\count350
-\pgf@shadingcount=\count351
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
-File: pgfcoreimage.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoreexternal.code.tex
-File: pgfcoreexternal.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfexternal@startupbox=\box71
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorelayers.code.tex
-File: pgfcorelayers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcoretransparency.code.te
-x
-File: pgfcoretransparency.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepatterns.code.tex
-File: pgfcorepatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (C:\Program Files\MiKTeX\tex/generic/pgf/basiclayer\pgfcorerdf.code.tex
-File: pgfcorerdf.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)))
-(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleshapes.code.tex
-File: pgfmoduleshapes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfnodeparttextbox=\box72
-)
-(C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmoduleplot.code.tex
-File: pgfmoduleplot.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-)
-(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-0-65.sty
-Package: pgfcomp-version-0-65 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@nodesepstart=\dimen266
-\pgf@nodesepend=\dimen267
-)
-(C:\Program Files\MiKTeX\tex/latex/pgf/compatibility\pgfcomp-version-1-18.sty
-Package: pgfcomp-version-1-18 2025-08-29 v3.1.11a (3.1.11a)
-)) (C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgffor.sty
-(C:\Program Files\MiKTeX\tex/latex/pgf/utilities\pgfkeys.sty
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex))
-(C:\Program Files\MiKTeX\tex/latex/pgf/math\pgfmath.sty
-(C:\Program Files\MiKTeX\tex/generic/pgf/math\pgfmath.code.tex))
-(C:\Program Files\MiKTeX\tex/generic/pgf/utilities\pgffor.code.tex
-Package: pgffor 2025-08-29 v3.1.11a (3.1.11a)
-\pgffor@iter=\dimen268
-\pgffor@skip=\dimen269
-\pgffor@stack=\toks37
-\pgffor@toks=\toks38
-))
-(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
-Package: tikz 2025-08-29 v3.1.11a (3.1.11a)
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.
-tex
-File: pgflibraryplothandlers.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgf@plot@mark@count=\count352
-\pgfplotmarksize=\dimen270
-)
-\tikz@lastx=\dimen271
-\tikz@lasty=\dimen272
-\tikz@lastxsaved=\dimen273
-\tikz@lastysaved=\dimen274
-\tikz@lastmovetox=\dimen275
-\tikz@lastmovetoy=\dimen276
-\tikzleveldistance=\dimen277
-\tikzsiblingdistance=\dimen278
-\tikz@figbox=\box73
-\tikz@figbox@bg=\box74
-\tikz@tempbox=\box75
-\tikz@tempbox@bg=\box76
-\tikztreelevel=\count353
-\tikznumberofchildren=\count354
-\tikznumberofcurrentchild=\count355
-\tikz@fig@count=\count356
- (C:\Program Files\MiKTeX\tex/generic/pgf/modules\pgfmodulematrix.code.tex
-File: pgfmodulematrix.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfmatrixcurrentrow=\count357
-\pgfmatrixcurrentcolumn=\count358
-\pgf@matrix@numberofcolumns=\count359
-)
-\tikz@expandcount=\count360
-
-(C:\Program Files\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibra
-rytopaths.code.tex
-File: tikzlibrarytopaths.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-))) (C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
-Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks39
-\verbatim@line=\toks40
-\verbatim@in@stream=\read4
-)
-(C:\Program Files\MiKTeX\tex/latex/environ\environ.sty
-Package: environ 2014/05/04 v0.3 A new way to define environments
-
-(C:\Program Files\MiKTeX\tex/latex/trimspaces\trimspaces.sty
-Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
-)
-\@envbody=\toks41
-)
-(C:\Program Files\MiKTeX\tex/latex/etoolbox\etoolbox.sty
-Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count361
-)
-\tcb@titlebox=\box77
-\tcb@upperbox=\box78
-\tcb@lowerbox=\box79
-\tcb@phantombox=\box80
-\c@tcbbreakpart=\count362
-\c@tcblayer=\count363
-\c@tcolorbox@number=\count364
-\l__tcobox_tmpa_box=\box81
-\l__tcobox_tmpa_dim=\dimen279
-\tcb@temp=\box82
-\tcb@temp=\box83
-\tcb@temp=\box84
-\tcb@temp=\box85
-)
-(C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
-Library (tcolorbox): 'tcbskins.code.tex' version '6.8.0'
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
-Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzfill-common.sty
-Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.
-code.tex
-File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box86
-)) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
-Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.8.0'
-)) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
-Library (tcolorbox): 'tcbbreakable.code.tex' version '6.8.0'
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfcol\pdfcol.sty
-Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
-Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
-)
-Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box87
-\tcb@totalupperbox=\box88
-\tcb@totallowerbox=\box89
-)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen280
-\captionmargin=\dimen281
-\caption@leftmargin=\dimen282
-\caption@rightmargin=\dimen283
-\caption@width=\dimen284
-\caption@indent=\dimen285
-\caption@parindent=\dimen286
-\caption@hangindent=\dimen287
+\caption@tempdima=\dimen317
+\captionmargin=\dimen318
+\caption@leftmargin=\dimen319
+\caption@rightmargin=\dimen320
+\caption@width=\dimen321
+\caption@indent=\dimen322
+\caption@parindent=\dimen323
+\caption@hangindent=\dimen324
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count365
-\c@continuedfloat=\count366
+\c@caption@flags=\count415
+\c@continuedfloat=\count416
 Package caption Info: float package is loaded.
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count367
+\c@subfigure=\count417
 Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count368
+\c@subtable=\count418
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.sty
-Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
-\csq@reset=\count369
-\csq@gtype=\count370
-\csq@glevel=\count371
-\csq@qlevel=\count372
-\csq@maxlvl=\count373
-\csq@tshold=\count374
-\csq@ltx@everypar=\toks42
+\@float@every@figure=\toks50
 
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.def
-File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
-)
-Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
-Package csquotes Info: ... configuration file loaded successfully.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/csquotes\csquotes.cfg
-File: csquotes.cfg 
-))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/anyfontsize\anyfontsize.sty
-Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 3 replaced by U+FFFD.
-Package: anyfontsize 2007/11/22 anyfontsize.sty by pts
-)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen288
-\lightrulewidth=\dimen289
-\cmidrulewidth=\dimen290
-\belowrulesep=\dimen291
-\belowbottomsep=\dimen292
-\aboverulesep=\dimen293
-\abovetopsep=\dimen294
-\cmidrulesep=\dimen295
-\cmidrulekern=\dimen296
-\defaultaddspace=\dimen297
-\@cmidla=\count375
-\@cmidlb=\count376
-\@aboverulesep=\dimen298
-\@belowrulesep=\dimen299
-\@thisruleclass=\count377
-\@lastruleclass=\count378
-\@thisrulewidth=\dimen300
+\heavyrulewidth=\dimen325
+\lightrulewidth=\dimen326
+\cmidrulewidth=\dimen327
+\belowrulesep=\dimen328
+\belowbottomsep=\dimen329
+\aboverulesep=\dimen330
+\abovetopsep=\dimen331
+\cmidrulesep=\dimen332
+\cmidrulekern=\dimen333
+\defaultaddspace=\dimen334
+\@cmidla=\count419
+\@cmidlb=\count420
+\@aboverulesep=\dimen335
+\@belowrulesep=\dimen336
+\@thisruleclass=\count421
+\@lastruleclass=\count422
+\@thisrulewidth=\dimen337
 )
 (C:\Program Files\MiKTeX\tex/latex/tools\longtable.sty
 Package: longtable 2025-10-13 v4.24 Multi-page Table package (DPC)
-\LTleft=\skip78
-\LTright=\skip79
-\LTpre=\skip80
-\LTpost=\skip81
-\LTchunksize=\count379
-\LTcapwidth=\dimen301
-\LT@head=\box90
-\LT@firsthead=\box91
-\LT@foot=\box92
-\LT@lastfoot=\box93
-\LT@gbox=\box94
-\LT@cols=\count380
-\LT@rows=\count381
-\c@LT@tables=\count382
-\c@LT@chunks=\count383
-\LT@p@ftn=\toks43
+\LTleft=\skip87
+\LTright=\skip88
+\LTpre=\skip89
+\LTpost=\skip90
+\LTchunksize=\count423
+\LTcapwidth=\dimen338
+\LT@head=\box129
+\LT@firsthead=\box130
+\LT@foot=\box131
+\LT@lastfoot=\box132
+\LT@gbox=\box133
+\LT@cols=\count424
+\LT@rows=\count425
+\c@LT@tables=\count426
+\c@LT@chunks=\count427
+\LT@p@ftn=\toks51
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
-\multirow@colwidth=\skip82
-\multirow@cntb=\count384
-\multirow@dima=\skip83
-\bigstrutjot=\dimen302
+\multirow@colwidth=\skip91
+\multirow@cntb=\count428
+\multirow@dima=\skip92
+\bigstrutjot=\dimen339
 )
-\cftsecnumwidth=\skip84
-\cftsubsecnumwidth=\skip85
-\cftsecindent=\skip86
-\cftsubsecindent=\skip87
-\SENER@appendixsecnumwidth=\dimen303
-
 (C:\Program Files\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/12/11 v2.12a `tabularx' package (DPC)
-\TX@col@width=\dimen304
-\TX@old@table=\dimen305
-\TX@old@col=\dimen306
-\TX@target=\dimen307
-\TX@delta=\dimen308
-\TX@cols=\count385
-\TX@ftn=\toks44
+\TX@col@width=\dimen340
+\TX@old@table=\dimen341
+\TX@old@col=\dimen342
+\TX@target=\dimen343
+\TX@delta=\dimen344
+\TX@cols=\count429
+\TX@ftn=\toks52
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/xltabular\xltabular.sty
 Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
@@ -1160,252 +1346,14 @@ Package: xltabular 2025/02/28 v0.2i `xltabular' package (hv,RN)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/ltablex\ltablex.sty
 Package: ltablex 2014/08/13 v1.1 Modified tabularx
 ))
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\pdfpages.sty
-Package: pdfpages 2025/07/23 v0.6g Insert pages of external PDF documents (AM)
+\SENERLongTableFirstColWidth=\skip93
 
-(C:\Program Files\MiKTeX\tex/latex/base\ifthen.sty
-Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(C:\Program Files\MiKTeX\tex/latex/tools\calc.sty
-Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
-\calc@Acount=\count386
-\calc@Bcount=\count387
-\calc@Adimen=\dimen309
-\calc@Bdimen=\dimen310
-\calc@Askip=\skip88
-\calc@Bskip=\skip89
-LaTeX Info: Redefining \setlength on input line 86.
-LaTeX Info: Redefining \addtolength on input line 87.
-\calc@Ccount=\count388
-\calc@Cskip=\skip90
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/eso-pic\eso-pic.sty
-Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
-\ESO@tempdima=\dimen311
-\ESO@tempdimb=\dimen312
-)
-\AM@pagewidth=\dimen313
-\AM@pageheight=\dimen314
-\AM@fboxrule=\dimen315
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfpages\ppxetex.def
-File: ppxetex.def 2025/07/23 v0.6g Pdfpages driver for XeTeX (AM)
-)
-\pdfpages@includegraphics@status=\count389
-\AM@pagebox=\box95
-\AM@global@opts=\toks45
-\AM@pagecnt=\count390
-\AM@toc@title=\toks46
-\AM@lof@heading=\toks47
-\c@AM@survey=\count391
-\AM@templatesizebox=\box96
-)
-(C:\Program Files\MiKTeX\tex/latex/tools\multicol.sty
-Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
-\c@tracingmulticols=\count392
-\mult@box=\box97
-\multicol@leftmargin=\dimen316
-\c@unbalance=\count393
-\c@collectmore=\count394
-\doublecol@number=\count395
-\multicoltolerance=\count396
-\multicolpretolerance=\count397
-\full@width=\dimen317
-\page@free=\dimen318
-\premulticols=\dimen319
-\postmulticols=\dimen320
-\multicolsep=\skip91
-\multicolbaselineskip=\skip92
-\partial@page=\box98
-\last@line=\box99
-\mc@boxedresult=\box100
-\maxbalancingoverflow=\dimen321
-\mult@rightbox=\box101
-\mult@grightbox=\box102
-\mult@firstbox=\box103
-\mult@gfirstbox=\box104
-\@tempa=\box105
-\@tempa=\box106
-\@tempa=\box107
-\@tempa=\box108
-\@tempa=\box109
-\@tempa=\box110
-\@tempa=\box111
-\@tempa=\box112
-\@tempa=\box113
-\@tempa=\box114
-\@tempa=\box115
-\@tempa=\box116
-\@tempa=\box117
-\@tempa=\box118
-\@tempa=\box119
-\@tempa=\box120
-\@tempa=\box121
-\@tempa=\box122
-\@tempa=\box123
-\@tempa=\box124
-\@tempa=\box125
-\@tempa=\box126
-\@tempa=\box127
-\@tempa=\box128
-\@tempa=\box129
-\@tempa=\box130
-\@tempa=\box131
-\@tempa=\box132
-\@tempa=\box133
-\@tempa=\box134
-\@tempa=\box135
-\@tempa=\box136
-\@tempa=\box137
-\@tempa=\box138
-\@tempa=\box139
-\@tempa=\box140
-\c@minrows=\count398
-\c@columnbadness=\count399
-\c@finalcolumnbadness=\count400
-\last@try=\dimen322
-\multicolovershoot=\dimen323
-\multicolundershoot=\dimen324
-\mult@nat@firstbox=\box141
-\colbreak@box=\box142
-\mc@col@check@num=\count401
-\g__mc_curr_col_int=\count402
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.sty
-Package: microtype 2025/07/09 v3.2b Micro-typographical refinements (RS)
-\MT@toks=\toks48
-\MT@tempbox=\box143
-\MT@count=\count403
-LaTeX Info: Redefining \noprotrusionifhmode on input line 1087.
-LaTeX Info: Redefining \leftprotrusion on input line 1088.
-\MT@prot@toks=\toks49
-LaTeX Info: Redefining \rightprotrusion on input line 1107.
-LaTeX Info: Redefining \textls on input line 1449.
-\MT@outer@kern=\dimen325
-LaTeX Info: Redefining \microtypecontext on input line 2053.
-LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
-\MT@listname@count=\count404
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype-xetex.def
-File: microtype-xetex.def 2025/07/09 v3.2b Definitions specific to xetex (RS)
-LaTeX Info: Redefining \lsstyle on input line 443.
-LaTeX Info: Redefining \lslig on input line 451.
-\MT@outer@space=\skip93
-)
-Package microtype Info: Loading configuration file microtype.cfg.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\microtype.cfg
-File: microtype.cfg 2025/07/09 v3.2b microtype main configuration file (RS)
-)
-LaTeX Info: Redefining \microtypesetup on input line 3065.
-)
-==> First Aid for microtype.sty applied!
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.sty
-File: lettrine.sty 2025-01-30 v2.80 (Daniel Flipo)
-
-(C:\Program Files\MiKTeX\tex/latex/l3packages/xfp\xfp.sty
-Package: xfp 2025-10-09 L3 Floating point unit
-)
-\c@DefaultLines=\count405
-\c@DefaultDepth=\count406
-\DefaultFindent=\dimen326
-\DefaultNindent=\dimen327
-\DefaultSlope=\dimen328
-\DiscardVskip=\dimen329
-\L@lettrine=\box144
-\L@lbox=\box145
-\L@tbox=\box146
-\c@L@lines=\count407
-\c@L@depth=\count408
-\L@Pindent=\dimen330
-\L@Findent=\dimen331
-\L@Nindent=\dimen332
-\L@lraise=\dimen333
-\L@first=\dimen334
-\L@next=\dimen335
-\L@slope=\dimen336
-\L@height=\dimen337
-\L@novskip=\dimen338
-\L@target@ht=\dimen339
-\L@target@dp=\dimen340
-\L@target@tht=\dimen341
-\LettrineWidth=\dimen342
-\LettrineHeight=\dimen343
-\LettrineDepth=\dimen344
-\L@finalht=\dimen345
-\L@finaldp=\dimen346
-
-Loading lettrine.cfg
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/lettrine\lettrine.cfg)
-\Lettrine@tweaks=\toks50
-\Llist@everypar=\toks51
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/qrcode\qrcode.sty
-Package: qrcode 2015/01/08 v1.51 QR code generation
-
-(C:\Program Files\MiKTeX\tex/latex/xkeyval\xkeyval.sty
-Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
-
-(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkeyval.tex
-(C:\Program Files\MiKTeX\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks52
-\XKV@tempa@toks=\toks53
-)
-\XKV@depth=\count409
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
-\c@qr@i=\count410
-\c@qr@j=\count411
-\qr@a=\count412
-\qr@b=\count413
-\qr@c=\count414
-\qr@for@depth=\count415
-\qr@for@maxdepth=\count416
-\qr@for@start=\count417
-\qr@for@end=\count418
-\qr@for@step=\count419
-\qr@newforcount=\count420
-\qr@newforcount=\count421
-\qr@desiredheight=\skip94
-\qr@modulesize=\skip95
-\qr@minipagewidth=\skip96
-\c@maski=\count422
-\c@maskj=\count423
-\c@totalones=\count424
-\c@penaltyi=\count425
-\c@penaltyii=\count426
-\c@penaltyiii=\count427
-\c@penaltyiv=\count428
-\c@qr@hexchars=\count429
-\qr@newforcount=\count430
-\c@qr@divisionsremaining=\count431
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/marginnote\marginnote.sty
-Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
-\c@mn@abspage=\count432
-)
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/latex-lab\latex-lab-footmisc.lt
-x
-Package: latex-lab-footmisc 2025/02/20 v6.0e a miscellany of footnote facilitie
-s -- latex-lab version
-\FN@temptoken=\toks54
-Package footmisc Info: Declaring symbol style bringhurst on input line 508.
-Package footmisc Info: Declaring symbol style chicago on input line 516.
-Package footmisc Info: Declaring symbol style wiley on input line 525.
-Package footmisc Info: Declaring symbol style lamport-robust on input line 536.
-
-Package footmisc Info: Declaring symbol style lamport* on input line 556.
-Package footmisc Info: Declaring symbol style lamport*-robust on input line 577
-.
-)
-\SENERLongTableFirstColWidth=\skip97
-\@float@every@figure=\toks55
- (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
+(C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2025/07/10 v3.21 programmable bibliographies (PK/MW)
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count433
+\lrq@indent=\count430
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -1414,63 +1362,63 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count434
-\c@listtotal=\count435
-\c@listcount=\count436
-\c@liststart=\count437
-\c@liststop=\count438
-\c@citecount=\count439
-\c@citetotal=\count440
-\c@multicitecount=\count441
-\c@multicitetotal=\count442
-\c@instcount=\count443
-\c@maxnames=\count444
-\c@minnames=\count445
-\c@maxitems=\count446
-\c@minitems=\count447
-\c@citecounter=\count448
-\c@maxcitecounter=\count449
-\c@savedcitecounter=\count450
-\c@uniquelist=\count451
-\c@uniquename=\count452
-\c@refsection=\count453
-\c@refsegment=\count454
-\c@maxextratitle=\count455
-\c@maxextratitleyear=\count456
-\c@maxextraname=\count457
-\c@maxextradate=\count458
-\c@maxextraalpha=\count459
-\c@abbrvpenalty=\count460
-\c@highnamepenalty=\count461
-\c@lownamepenalty=\count462
-\c@maxparens=\count463
-\c@parenlevel=\count464
-\blx@tempcnta=\count465
-\blx@tempcntb=\count466
-\blx@tempcntc=\count467
-\c@blx@maxsection=\count468
-\blx@maxsegment@0=\count469
-\blx@notetype=\count470
-\blx@parenlevel@text=\count471
-\blx@parenlevel@foot=\count472
-\blx@sectionciteorder@0=\count473
-\blx@sectionciteorderinternal@0=\count474
-\blx@entrysetcounter=\count475
-\blx@biblioinstance=\count476
-\labelnumberwidth=\skip98
-\labelalphawidth=\skip99
-\biblabelsep=\skip100
-\bibitemsep=\skip101
-\bibnamesep=\skip102
-\bibinitsep=\skip103
-\bibparsep=\skip104
-\bibhang=\skip105
-\blx@bcfin=\read5
+\c@tabx@nest=\count431
+\c@listtotal=\count432
+\c@listcount=\count433
+\c@liststart=\count434
+\c@liststop=\count435
+\c@citecount=\count436
+\c@citetotal=\count437
+\c@multicitecount=\count438
+\c@multicitetotal=\count439
+\c@instcount=\count440
+\c@maxnames=\count441
+\c@minnames=\count442
+\c@maxitems=\count443
+\c@minitems=\count444
+\c@citecounter=\count445
+\c@maxcitecounter=\count446
+\c@savedcitecounter=\count447
+\c@uniquelist=\count448
+\c@uniquename=\count449
+\c@refsection=\count450
+\c@refsegment=\count451
+\c@maxextratitle=\count452
+\c@maxextratitleyear=\count453
+\c@maxextraname=\count454
+\c@maxextradate=\count455
+\c@maxextraalpha=\count456
+\c@abbrvpenalty=\count457
+\c@highnamepenalty=\count458
+\c@lownamepenalty=\count459
+\c@maxparens=\count460
+\c@parenlevel=\count461
+\blx@tempcnta=\count462
+\blx@tempcntb=\count463
+\blx@tempcntc=\count464
+\c@blx@maxsection=\count465
+\blx@maxsegment@0=\count466
+\blx@notetype=\count467
+\blx@parenlevel@text=\count468
+\blx@parenlevel@foot=\count469
+\blx@sectionciteorder@0=\count470
+\blx@sectionciteorderinternal@0=\count471
+\blx@entrysetcounter=\count472
+\blx@biblioinstance=\count473
+\labelnumberwidth=\skip94
+\labelalphawidth=\skip95
+\biblabelsep=\skip96
+\bibitemsep=\skip97
+\bibnamesep=\skip98
+\bibinitsep=\skip99
+\bibparsep=\skip100
+\bibhang=\skip101
+\blx@bcfin=\read4
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count477
-\c@maxcomprange=\count478
-\c@mincompwidth=\count479
+\c@mincomprange=\count474
+\c@maxcomprange=\count475
+\c@mincompwidth=\count476
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -1481,88 +1429,88 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'verbose-ibid.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count480
-\c@savedafterword=\count481
-\c@annotator=\count482
-\c@savedannotator=\count483
-\c@author=\count484
-\c@savedauthor=\count485
-\c@bookauthor=\count486
-\c@savedbookauthor=\count487
-\c@commentator=\count488
-\c@savedcommentator=\count489
-\c@editor=\count490
-\c@savededitor=\count491
-\c@editora=\count492
-\c@savededitora=\count493
-\c@editorb=\count494
-\c@savededitorb=\count495
-\c@editorc=\count496
-\c@savededitorc=\count497
-\c@foreword=\count498
-\c@savedforeword=\count499
-\c@holder=\count500
-\c@savedholder=\count501
-\c@introduction=\count502
-\c@savedintroduction=\count503
-\c@namea=\count504
-\c@savednamea=\count505
-\c@nameb=\count506
-\c@savednameb=\count507
-\c@namec=\count508
-\c@savednamec=\count509
-\c@translator=\count510
-\c@savedtranslator=\count511
-\c@shortauthor=\count512
-\c@savedshortauthor=\count513
-\c@shorteditor=\count514
-\c@savedshorteditor=\count515
-\c@labelname=\count516
-\c@savedlabelname=\count517
-\c@institution=\count518
-\c@savedinstitution=\count519
-\c@lista=\count520
-\c@savedlista=\count521
-\c@listb=\count522
-\c@savedlistb=\count523
-\c@listc=\count524
-\c@savedlistc=\count525
-\c@listd=\count526
-\c@savedlistd=\count527
-\c@liste=\count528
-\c@savedliste=\count529
-\c@listf=\count530
-\c@savedlistf=\count531
-\c@location=\count532
-\c@savedlocation=\count533
-\c@organization=\count534
-\c@savedorganization=\count535
-\c@origlocation=\count536
-\c@savedoriglocation=\count537
-\c@origpublisher=\count538
-\c@savedorigpublisher=\count539
-\c@publisher=\count540
-\c@savedpublisher=\count541
-\c@language=\count542
-\c@savedlanguage=\count543
-\c@origlanguage=\count544
-\c@savedoriglanguage=\count545
-\c@pageref=\count546
-\c@savedpageref=\count547
-\shorthandwidth=\skip106
-\shortjournalwidth=\skip107
-\shortserieswidth=\skip108
-\shorttitlewidth=\skip109
-\shortauthorwidth=\skip110
-\shorteditorwidth=\skip111
-\locallabelnumberwidth=\skip112
-\locallabelalphawidth=\skip113
-\localshorthandwidth=\skip114
-\localshortjournalwidth=\skip115
-\localshortserieswidth=\skip116
-\localshorttitlewidth=\skip117
-\localshortauthorwidth=\skip118
-\localshorteditorwidth=\skip119
+\c@afterword=\count477
+\c@savedafterword=\count478
+\c@annotator=\count479
+\c@savedannotator=\count480
+\c@author=\count481
+\c@savedauthor=\count482
+\c@bookauthor=\count483
+\c@savedbookauthor=\count484
+\c@commentator=\count485
+\c@savedcommentator=\count486
+\c@editor=\count487
+\c@savededitor=\count488
+\c@editora=\count489
+\c@savededitora=\count490
+\c@editorb=\count491
+\c@savededitorb=\count492
+\c@editorc=\count493
+\c@savededitorc=\count494
+\c@foreword=\count495
+\c@savedforeword=\count496
+\c@holder=\count497
+\c@savedholder=\count498
+\c@introduction=\count499
+\c@savedintroduction=\count500
+\c@namea=\count501
+\c@savednamea=\count502
+\c@nameb=\count503
+\c@savednameb=\count504
+\c@namec=\count505
+\c@savednamec=\count506
+\c@translator=\count507
+\c@savedtranslator=\count508
+\c@shortauthor=\count509
+\c@savedshortauthor=\count510
+\c@shorteditor=\count511
+\c@savedshorteditor=\count512
+\c@labelname=\count513
+\c@savedlabelname=\count514
+\c@institution=\count515
+\c@savedinstitution=\count516
+\c@lista=\count517
+\c@savedlista=\count518
+\c@listb=\count519
+\c@savedlistb=\count520
+\c@listc=\count521
+\c@savedlistc=\count522
+\c@listd=\count523
+\c@savedlistd=\count524
+\c@liste=\count525
+\c@savedliste=\count526
+\c@listf=\count527
+\c@savedlistf=\count528
+\c@location=\count529
+\c@savedlocation=\count530
+\c@organization=\count531
+\c@savedorganization=\count532
+\c@origlocation=\count533
+\c@savedoriglocation=\count534
+\c@origpublisher=\count535
+\c@savedorigpublisher=\count536
+\c@publisher=\count537
+\c@savedpublisher=\count538
+\c@language=\count539
+\c@savedlanguage=\count540
+\c@origlanguage=\count541
+\c@savedoriglanguage=\count542
+\c@pageref=\count543
+\c@savedpageref=\count544
+\shorthandwidth=\skip102
+\shortjournalwidth=\skip103
+\shortserieswidth=\skip104
+\shorttitlewidth=\skip105
+\shortauthorwidth=\skip106
+\shorteditorwidth=\skip107
+\locallabelnumberwidth=\skip108
+\locallabelalphawidth=\skip109
+\localshorthandwidth=\skip110
+\localshortjournalwidth=\skip111
+\localshortserieswidth=\skip112
+\localshorttitlewidth=\skip113
+\localshortauthorwidth=\skip114
+\localshorteditorwidth=\skip115
 Package biblatex Info: Trying to load enhanced support for Unicode engines...
 Package biblatex Info: ... file 'blx-unicode.def' found.
 
@@ -1578,19 +1526,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2025/07/10 v3.21 biblatex compatibility (PK/MW)
-\c@textcitecount=\count548
-\c@textcitetotal=\count549
-\c@textcitemaxnames=\count550
-\c@biburlbigbreakpenalty=\count551
-\c@biburlbreakpenalty=\count552
-\c@biburlnumpenalty=\count553
-\c@biburlucpenalty=\count554
-\c@biburllcpenalty=\count555
+\c@textcitecount=\count545
+\c@textcitetotal=\count546
+\c@textcitemaxnames=\count547
+\c@biburlbigbreakpenalty=\count548
+\c@biburlbreakpenalty=\count549
+\c@biburlnumpenalty=\count550
+\c@biburlucpenalty=\count551
+\c@biburllcpenalty=\count552
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count556
+\c@smartand=\count553
 )
 Package biblatex Info: Trying to load bibliography style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.bbx' found.
@@ -1607,8 +1555,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2025/07/10 v3.21 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count557
-\c@bbx:relatedtotal=\count558
+\c@bbx:relatedcount=\count554
+\c@bbx:relatedtotal=\count555
 )))
 Package biblatex Info: Trying to load citation style 'verbose-ibid'...
 Package biblatex Info: ... file 'verbose-ibid.cbx' found.
@@ -1658,15 +1606,15 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 .sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count559
+\c@section@level=\count556
 )
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/stringenc\stringenc.sty
 Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
 )
 )
-\@linkdim=\dimen347
-\Hy@linkcounter=\count560
-\Hy@pagecounter=\count561
+\@linkdim=\dimen345
+\Hy@linkcounter=\count557
+\Hy@pagecounter=\count558
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
@@ -1674,7 +1622,7 @@ File: pd1enc.def 2025-07-12 v7.01o Hyperref: PDFDocEncoding definition (HO)
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count562
+\Hy@SavedSpaceFactor=\count559
 
 (C:\Program Files\MiKTeX\tex/latex/hyperref\puenc.def
 File: puenc.def 2025-07-12 v7.01o Hyperref: PDF Unicode definition (HO)
@@ -1686,9 +1634,9 @@ Package hyperref Info: Plain pages OFF on input line 4210.
 Package hyperref Info: Backreferencing OFF on input line 4215.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4462.
-\c@Hy@tempcnt=\count563
+\c@Hy@tempcnt=\count560
 LaTeX Info: Redefining \url on input line 4801.
-\XeTeXLinkMargin=\dimen348
+\XeTeXLinkMargin=\dimen346
 
 (C:\Users\User\AppData\Roaming\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1697,9 +1645,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count564
-\Field@Width=\dimen349
-\Fld@charsize=\dimen350
+\Fld@menulength=\count561
+\Field@Width=\dimen347
+\Fld@charsize=\dimen348
 Package hyperref Info: Hyper figures OFF on input line 6078.
 Package hyperref Info: Link nesting OFF on input line 6083.
 Package hyperref Info: Hyper index ON on input line 6086.
@@ -1707,8 +1655,8 @@ Package hyperref Info: backreferencing OFF on input line 6093.
 Package hyperref Info: Link coloring OFF on input line 6098.
 Package hyperref Info: Link coloring with OCG OFF on input line 6103.
 Package hyperref Info: PDF/A mode OFF on input line 6108.
-\Hy@abspage=\count565
-\c@Item=\count566
+\Hy@abspage=\count562
+\c@Item=\count563
 )
 Package hyperref Info: Driver (custom): hgeneric-testphase.
 
@@ -1721,60 +1669,78 @@ LaTeX PDF management bundle
 f-colorschemes.def)
 LaTeX Info: Redefining \href on input line 262.
 LaTeX Info: Redefining \url on input line 348.
-\l__hyp_tmpa_box=\box147
-\l__hyp_tmpa_int=\count567
-\l__hyp_dest_box=\box148
-\g__hyp_linknestlevel_int=\count568
-\HyAnn@Count=\count569
-\Fld@listcount=\count570
-\Hy@SectionHShift=\skip120
+\l__hyp_tmpa_box=\box134
+\l__hyp_tmpa_int=\count564
+\l__hyp_dest_box=\box135
+\g__hyp_linknestlevel_int=\count565
+\HyAnn@Count=\count566
+\Fld@listcount=\count567
+\Hy@SectionHShift=\skip116
+) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2025/09/09 version 6.8.0 text color boxes
+(C:\Program Files\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks53
+\verbatim@line=\toks54
+\verbatim@in@stream=\read5
+)
+(C:\Program Files\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Program Files\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks55
+)
+\tcb@titlebox=\box136
+\tcb@upperbox=\box137
+\tcb@lowerbox=\box138
+\tcb@phantombox=\box139
+\c@tcbbreakpart=\count568
+\c@tcblayer=\count569
+\c@tcolorbox@number=\count570
+\l__tcobox_tmpa_box=\box140
+\l__tcobox_tmpa_dim=\dimen349
+\tcb@temp=\box141
+\tcb@temp=\box142
+\tcb@temp=\box143
+\tcb@temp=\box144
+)
+(C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.8.0'
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
+Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzfill-common.sty
+Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
+)
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.
+code.tex
+File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
+\l__tikzfill_img_box=\box145
+)) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.8.0'
+)) (C:\Program Files\MiKTeX\tex/latex/tcolorbox\tcbbreakable.code.tex
+Library (tcolorbox): 'tcbbreakable.code.tex' version '6.8.0'
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdfcol\pdfcol.sty
+Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
+Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
+)
+Package pdfcol Info: pdfTeX's color stacks are not available.
+\tcb@testbox=\box146
+\tcb@totalupperbox=\box147
+\tcb@totallowerbox=\box148
+)
+\SENER@appendixsecnumwidth=\dimen350
 )
 
-Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517379843479.
+Package hyperref Warning: This hyperref driver ignores the pdfversion key!
+(hyperref)                Set the pdfversion in \DocumentMetadata
+(hyperref)                orwith\SetKeys [document/metadata]
 
-
-Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517379843479.
-
-
-Package fontspec Info: 
-(fontspec)             NotoSans-Light scale = 1.007517379843479.
-
-
-Package fontspec Info: 
-(fontspec)             NotoSans-LightItalic scale = 1.007517379843479.
-
-
-Package fontspec Info: 
-(fontspec)             NotoSans-LightItalic scale = 1.007517379843479.
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'NotoSans(1)' created for font 'NotoSans'
-(fontspec)             with options [Ligatures=TeX,Scale=MatchLowercase,Path =
-(fontspec)             tipografias/,Extension = .ttf,UprightFont =
-(fontspec)             *-Light,ItalicFont = *-LightItalic].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-Light.ttf
-]/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'small caps'  (m/sc) with NFSS spec.:
-(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-Light.ttf
-]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-(fontspec)             - 'italic' (m/it) with NFSS spec.:
-(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
-ic.ttf]/OT:script=latn;language=dflt;mapping=tex-text;"
-(fontspec)             - 'italic small caps'  (m/scit) with NFSS spec.:
-(fontspec)             <->s*[1.007517379843479]"[tipografias/NotoSans-LightItal
-ic.ttf]/OT:script=latn;language=dflt;+smcp;mapping=tex-text;"
-
-) (C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
+(C:\Program Files\MiKTeX\tex/latex/amsmath\amsmath.sty
 Package: amsmath 2025/07/09 v2.17z AMS math features
-\@mathmargin=\skip121
+\@mathmargin=\skip117
 
 For additional information on amsmath, use the `?' option.
 (C:\Program Files\MiKTeX\tex/latex/amsmath\amstext.sty
@@ -1834,8 +1800,8 @@ LaTeX Info: Redefining \Relbar on input line 970.
 \totwidth@=\dimen358
 \lineht@=\dimen359
 \@envbody=\toks59
-\multlinegap=\skip122
-\multlinetaggap=\skip123
+\multlinegap=\skip118
+\multlinetaggap=\skip119
 \mathdisplay@stack=\toks60
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
@@ -1858,26 +1824,26 @@ File: bkm-dvipdfm.def 2023-12-10 v1.31 bookmark driver for dvipdfm (HO)
 (Balance Nacional de Energía 2025x.aux)
 \openout1 = `"Balance Nacional de Energía 2025x.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1895,7 +1861,7 @@ LaTeX Font Info:    ... okay on input line 29.
 * \textheight=595.8007pt
 * \oddsidemargin=-1.1381pt
 * \evensidemargin=-1.1381pt
-* \topmargin=-16.13809pt
+* \topmargin=-46.13809pt
 * \headheight=45.0pt
 * \headsep=28.45274pt
 * \topskip=10.0pt
@@ -1913,27 +1879,13 @@ LaTeX Font Info:    ... okay on input line 29.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: hyperref package is loaded.
-Package caption Info: longtable package is loaded.
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\ltcaption.sty
-Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
-)
-Package caption Info: End \AtBeginDocument code.
-
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape.sty
-Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
-
-(C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
-Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
-))
-LaTeX Info: Redefining \microtypecontext on input line 29.
-Package microtype Info: Applying patch `item' on input line 29.
-Package microtype Info: Applying patch `toc' on input line 29.
-Package microtype Info: Applying patch `eqnum' on input line 29.
-Package microtype Info: Applying patch `footnote' on input line 29.
-Package microtype Info: Applying patch `verbatim' on input line 29.
-LaTeX Info: Redefining \microtypesetup on input line 29.
+LaTeX Info: Redefining \microtypecontext on input line 32.
+Package microtype Info: Applying patch `item' on input line 32.
+Package microtype Info: Applying patch `toc' on input line 32.
+Package microtype Info: Applying patch `eqnum' on input line 32.
+Package microtype Info: Applying patch `footnote' on input line 32.
+Package microtype Info: Applying patch `verbatim' on input line 32.
+LaTeX Info: Redefining \microtypesetup on input line 32.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: No adjustment of tracking.
@@ -1943,6 +1895,80 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `NotoSans' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/pdflscape\pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(C:\Program Files\MiKTeX\tex/latex/graphics\lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+))
+
+Package fontspec Info: 
+(fontspec)             Adjusting the maths setup (use [no-math] to avoid
+(fontspec)             this).
+
+\symlegacymaths=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 32.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 32.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 32.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 32.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 32.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 32.
+LaTeX Font Info:    Redeclaring math accent \check on input line 32.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 32.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 32.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 32.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 32.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 32.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `normal' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> TU/NotoSans(0)/m/n on input line 32.
+LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
+(Font)              `operators' in the math version `bold' on input line 32.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/m/n on input line
+ 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> TU/NotoSans(0)/m/it on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> TU/NotoSans(0)/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/m/n on input line 32.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  TU/NotoSans(0)/m/n --> TU/NotoSans(0)/b/n on input line
+ 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> TU/NotoSans(0)/b/it on input line 32.
+
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> TU/NotoSans(0)/b/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> TU/lmtt/b/n on input line 32.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'spanish'...
 Package biblatex Info: ... file 'spanish.lbx' found.
 
@@ -1960,9 +1986,9 @@ Package biblatex Info: ... file '"Balance Nacional de Energía 2025x".bbl' found
 .
 
 (Balance Nacional de Energía 2025x.bbl)
-Package biblatex Info: Reference section=0 on input line 29.
-Package biblatex Info: Reference segment=0 on input line 29.
-Package hyperref Info: Link coloring OFF on input line 29.
+Package biblatex Info: Reference section=0 on input line 32.
+Package biblatex Info: Reference segment=0 on input line 32.
+Package hyperref Info: Link coloring OFF on input line 32.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/portada.jpg Graphic file (type bmp)
@@ -1971,9 +1997,9 @@ File: img/portada.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.4pt on input line 33.
+(Font)              scaled to size 14.4pt on input line 36.
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 12.74413pt on input line 33.
+(Font)              scaled to size 12.74413pt on input line 36.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `Patria' (encoding: TU).
 (microtype)             For optimal results, create family-specific settings.
@@ -2006,7 +2032,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 11.26382pt on input line 33.
+(Font)              scaled to size 11.26382pt on input line 36.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2039,44 +2065,15 @@ Package microtype Info: Character `\guillemotright ' is missing
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
 (Font)              scaled to size 10.5pt on input line 2.
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 3.
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 3
-.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 7.34996pt on input line 3.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 5.25pt on input line 3.
 
-(C:\Program Files\MiKTeX\tex/latex/lm\ot1lmr.fd
-File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
 )
-(C:\Users\User\AppData\Roaming\MiKTeX\tex/latex/microtype\mt-LatinModernRoman.c
-fg
-File: mt-LatinModernRoman.cfg 2021/02/21 v1.1 microtype config. file: Latin Mod
-ern Roman (RS)
-)
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `lmr' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 3
-.
- (C:\Program Files\MiKTeX\tex/latex/lm\omllmm.fd
-File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-3.
-
-(C:\Program Files\MiKTeX\tex/latex/lm\omslmsy.fd
-File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-3.
-
-(C:\Program Files\MiKTeX\tex/latex/lm\omxlmex.fd
-File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.5> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7.34996> on input line 3.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5.25> on input line 3.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
 (Font)              scaled to size 7.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
@@ -2092,8 +2089,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [3]
-(Balance Nacional de Energía 2025x.lof
+
+[3] (Balance Nacional de Energía 2025x.lof
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
 (Font)              scaled to size 9.2926pt on input line 2.
 Package microtype Info: Character `~ (= ~)' is missing
@@ -2123,14 +2120,8 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
-
-Overfull \hbox (0.80139pt too wide) in paragraph at lines 6--6
- [][] [][][]\TU/NotoSans(0)/m/n/10.5 Figura 3.2 Evolución de la producción de e
-nergía primaria por energético, 2010- 
- []
-
 LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
-(Font)              scaled to size 6.19507pt on input line 23.
+(Font)              scaled to size 6.19507pt on input line 25.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2159,7 +2150,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/m/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 5.47548pt on input line 23.
+(Font)              scaled to size 5.47548pt on input line 25.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/7'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2189,7 +2180,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             Ignoring protrusion settings for this character.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[4
+ [4
 
 ]
 File: img/foja_blanca.jpg Graphic file (type bmp)
@@ -2200,7 +2191,8 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [6] (Balance Nacional de Energía 2025x.lot)
+ [6]
+(Balance Nacional de Energía 2025x.lot)
 \tf@lot=\write7
 \openout7 = `"Balance Nacional de Energía 2025x.lot"'.
 
@@ -2215,15 +2207,15 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 80.0pt on input line 53.
+(Font)              scaled to size 80.0pt on input line 56.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 80.0pt on input line 53.
+(Font)              scaled to size 80.0pt on input line 56.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 24.88pt on input line 53.
+(Font)              scaled to size 24.88pt on input line 56.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
-(Font)              scaled to size 24.88pt on input line 53.
+(Font)              scaled to size 24.88pt on input line 56.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 19.46141pt on input line 53.
+(Font)              scaled to size 19.46141pt on input line 56.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/24.88'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2259,7 +2251,7 @@ File: img/fondo_guinda.png Graphic file (type bmp)
 
 ]
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 8.21321pt on input line 55.
+(Font)              scaled to size 8.21321pt on input line 58.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2288,7 +2280,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/10.5'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 13.29759pt on input line 55.
+(Font)              scaled to size 13.29759pt on input line 58.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2317,7 +2309,7 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/17'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 10.95096pt on input line 65.
+(Font)              scaled to size 10.95096pt on input line 68.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2346,17 +2338,11 @@ Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/14'.
 (microtype)             Ignoring protrusion settings for this character.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.34996pt on input line 67.
+(Font)              scaled to size 8.0pt on input line 70.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 67.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 67.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 67.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 67.
+(Font)              scaled to size 6.0pt on input line 70.
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 6.0pt on input line 67.
+(Font)              scaled to size 5.0pt on input line 70.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [10
@@ -2367,8 +2353,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
  [11]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-
-[12]
+ [12]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [13]
@@ -2376,13 +2361,41 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 File: img/fondo_guinda.png Graphic file (type bmp)
 <img/fondo_guinda.png>
- [14
+
+[14
 
 ]
-File: img/figura_2_1.png Graphic file (type bmp)
-<img/figura_2_1.png>
 LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
-(Font)              scaled to size 9.38654pt on input line 131.
+(Font)              scaled to size 12.51538pt on input line 130.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/b/n/16'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Patria(0)/b/n' will be
+(Font)              scaled to size 9.38654pt on input line 130.
 Package microtype Info: Character `~ (= ~)' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
@@ -2410,25 +2423,26 @@ Package microtype Info: Character `\guillemotleft ' is missing
 Package microtype Info: Character `\guillemotright ' is missing
 (microtype)             in font `\TU/Patria(0)/b/n/12'.
 (microtype)             Ignoring protrusion settings for this character.
+File: img/figura_2_1.png Graphic file (type bmp)
+<img/figura_2_1.png>
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 10.57898pt on input line 135.
+(Font)              scaled to size 10.57883pt on input line 138.
 LaTeX Font Info:    Font shape `TU/NotoSans(1)/m/n' will be
-(Font)              scaled to size 8.06018pt on input line 135.
+(Font)              scaled to size 8.06006pt on input line 138.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [15
 
 ]
-\@float@every@table=\toks61
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 7.5pt on input line 158.
+(Font)              scaled to size 7.5pt on input line 161.
 
-Underfull \hbox (badness 10000) in paragraph at lines 171--172
+Underfull \hbox (badness 10000) in paragraph at lines 174--175
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--188
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
@@ -2438,53 +2452,53 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [17]
-Underfull \hbox (badness 10000) in paragraph at lines 233--234
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 255--256
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
+Underfull \hbox (badness 10000) in paragraph at lines 276--277
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [18]
-Underfull \hbox (badness 10000) in paragraph at lines 297--298
+Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--360
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 374--375
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [20]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+Underfull \hbox (badness 10000) in paragraph at lines 399--400
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 411--412
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
 
  []
 
@@ -2494,26 +2508,26 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/figura_2_2.png Graphic file (type bmp)
 <img/figura_2_2.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 467--468
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 505--506
+Underfull \hbox (badness 10000) in paragraph at lines 508--509
 
  []
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [23]
-Underfull \hbox (badness 10000) in paragraph at lines 521--522
+Underfull \hbox (badness 10000) in paragraph at lines 524--525
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
+Underfull \hbox (badness 10000) in paragraph at lines 541--542
 
  []
 
@@ -2523,7 +2537,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/figura_4_3.png Graphic file (type bmp)
 <img/figura_4_3.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 578--579
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
 
  []
 
@@ -2566,7 +2580,7 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 File: img/figura_3_4.png Graphic file (type bmp)
 <img/figura_3_4.png>
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 14.0pt on input line 722.
+(Font)              scaled to size 14.0pt on input line 725.
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [33]
@@ -2766,415 +2780,435 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [66]
 LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
-(Font)              scaled to size 5.5pt on input line 1500.
+(Font)              scaled to size 5.5pt on input line 1503.
 
-Overfull \hbox (2.08122pt too wide) in paragraph at lines 1544--1544
+Overfull \hbox (2.08122pt too wide) in paragraph at lines 1547--1547
 []|[][][]| 
  []
 
 
-Overfull \hbox (2.08122pt too wide) in paragraph at lines 1544--1544
+Overfull \hbox (2.08122pt too wide) in paragraph at lines 1547--1547
 []|[][][]| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 219.46| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 219.46| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 1,747.67| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 1,747.67| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 636.74| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 636.74| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 1,648.09| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 1,648.09| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 252.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 252.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 220.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 94.72| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 94.72| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.42| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.42| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 5,434.71| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 5,434.71| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 219.56| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 219.56| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 3,674.19| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 3,674.19| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 637.14| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 637.14| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 1,853.93| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 1,853.93| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 252.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 252.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 220.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 95.77| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 95.77| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.42| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.42| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 7,566.61| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 7,566.61| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 14.99| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 14.99| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 3,654| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 3,654.00| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 1,868| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 638.00| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 1,868.00| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 252.18| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 252.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 95.77| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 220.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 129.42| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 95.77| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 7,358.78| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 129.42| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 206.15| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 7,358.78| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-[]|\TU/NotoSans(0)/m/n/5 219.35| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 206.15| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 14.07| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 13.20| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,873| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+[]|\TU/NotoSans(0)/m/n/5.5 219.35| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,873.09| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 14.07| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 53.52| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,873.00| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 205.84| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,873.09| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 260.8| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 53.52| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 147.47| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 205.84| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,793.27| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 260.80| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 638.37| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 147.47| 
  []
 
 
-Overfull \hbox (5.79326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,052.4| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,793.27| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 638.37| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,052.40| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 205.7| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 4,605.13| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 205.70| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,793.27| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 220.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 326.21| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 61.50| 
  []
 
 
-Overfull \hbox (8.79826pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 2,119.48| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 4,605.13| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 312.16| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,793.27| 
  []
 
 
-Overfull \hbox (5.79326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,052.4| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 326.21| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,364.56| 
+Overfull \hbox (10.78227pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 2,119.48| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 147.47| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 312.16| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,052.40| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,364.56| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 147.47| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 205.7| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (8.65326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 1,121.09| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 147.47| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 205.70| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 147.47| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 220.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 56.67| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 61.50| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 57.08| 
+Overfull \hbox (10.62277pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 1,121.09| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 147.47| 
  []
 
 
-Overfull \hbox (4.45326pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 129.51| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 147.47| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 56.67| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 262.18| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 57.08| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 91.32| 
+Overfull \hbox (6.00276pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 129.51| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 220.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 262.18| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 205.7| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 91.32| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1544--1544
-\TU/NotoSans(0)/m/n/5 205.7| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 91.32| 
+ []
+
+
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 220.18| 
+ []
+
+
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 220.18| 
+ []
+
+
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 205.70| 
+ []
+
+
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1547--1547
+\TU/NotoSans(0)/m/n/5.5 205.70| 
  []
 
 ignored error: Infinite glue shrinkage found in box being split
@@ -3183,720 +3217,1300 @@ ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [67]
-Overfull \hbox (2.08122pt too wide) in paragraph at lines 1590--1590
+Overfull \hbox (2.08122pt too wide) in paragraph at lines 1593--1593
 []|[][][]| 
  []
 
 
-Overfull \hbox (2.08122pt too wide) in paragraph at lines 1590--1590
+Overfull \hbox (2.08122pt too wide) in paragraph at lines 1593--1593
 []|[][][]| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 595.69| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 45.60| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 548.46| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 595.69| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 595.69| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 548.46| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 608.09| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 12.40| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 69.82| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 595.69| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 71.45| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 608.09| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 11.82| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 69.82| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 11.82| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 71.45| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 11.82| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 11.82| 
  []
 
 
-Overfull \hbox (1.59326pt too wide) in paragraph at lines 1590--1590
-\TU/NotoSans(0)/m/n/5 11.82| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 11.82| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 46.48| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 11.82| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 33.22| 
+Overfull \hbox (2.85677pt too wide) in paragraph at lines 1593--1593
+\TU/NotoSans(0)/m/n/5.5 11.82| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 129.42| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 72.00| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 281.12| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 46.48| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 46.48| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 33.22| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 33.18| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 129.42| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 129.42| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 281.12| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 281.08| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 72.00| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 31.49| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 46.48| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 33.18| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 33.18| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 146.49| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 129.42| 
  []
 
 
-Overfull \hbox (1.73827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 10.58| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 281.08| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 114.93| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 72.00| 
  []
 
 
-Overfull \hbox (4.59827pt too wide) in paragraph at lines 1590--1590
-[]|\TU/NotoSans(0)/m/n/5 125.51| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 31.49| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 119.25| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 33.18| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 297.83| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 146.49| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 1,073.94| 
+Overfull \hbox (3.01627pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 10.58| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 127.03| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 114.93| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 506.11| 
+Overfull \hbox (6.16226pt too wide) in paragraph at lines 1593--1593
+[]|\TU/NotoSans(0)/m/n/5.5 125.51| 
  []
 
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 496.67| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 2,569.96| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 4,207.06| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 9,641.77| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 121.84| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 297.83| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 1,078.42| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 127.03| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 540.53| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 2,578.96| 
- []
-
-
-Overfull \hbox (9.73813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 12,353.61| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 7,358.78| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 118.73| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 126.76| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 543.51| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 2,578.47| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 4,790.19| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 5,009.54| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 577.94| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 2,451.03| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 168.92| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 514.64| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 311.03| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 527.88| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 961.45| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 1,381.52| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 2,112.82| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 2,492.31| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 441.01| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 344.46| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 574.97| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 590.63| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 2,107.65| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 150.37| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 908.12| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 456.44| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 2,186.18| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 1,381.52| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 902.95| 
- []
-
-
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 2,024.04| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 273.55| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-[]|\TU/NotoSans(0)/m/n/5 122.59| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 214.88| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 271.96| 
- []
-
-
-Overfull \hbox (6.73312pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 1,606.02| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 804.02| 
- []
-
-
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 804.02| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 110.87| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 110.87| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 175.66| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 147.52| 
- []
-
-
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1640--1640
-\TU/NotoSans(0)/m/n/5 137.82| 
- []
-
+ignored error: Infinite glue shrinkage found in box being split
+ignored error: Infinite glue shrinkage found in box being split
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[68]
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 780.89| 
+ [68]
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 16.82| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 224.08| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 119.25| 
  []
 
 
-Overfull \hbox (6.73312pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 1,037.21| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 297.83| 
  []
 
 
-Overfull \hbox (6.73312pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 1,585.67| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 1,073.94| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 859.49| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 127.03| 
  []
 
 
-Overfull \hbox (3.87312pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 1,000.6| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 506.11| 
  []
 
 
-Overfull \hbox (6.73312pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 1,608.69| 
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 496.67| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 119.58| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 2,569.96| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 191.03| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 4,207.06| 
  []
 
 
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 156.19| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 9,641.77| 
  []
 
 
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 156.19| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 16.82| 
  []
 
 
-Overfull \hbox (2.53313pt too wide) in paragraph at lines 1686--1686
-\TU/NotoSans(0)/m/n/5 168.01| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 121.84| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 128.65| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 297.83| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 479.92| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 1,078.42| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,603.52| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 127.03| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 193.31| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 540.53| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 770.64| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 2,578.96| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 827.62| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 23.51| 
  []
 
 
-Overfull \hbox (4.01813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,150.5| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 4,785.00| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 5,282.66| 
+Overfull \hbox (12.00813pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 12,353.61| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 5,563.78| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 7,358.78| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 183.14| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 16.82| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 183.18| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 118.73| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 128.65| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 298.00| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 479.46| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 1,084.00| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,592.83| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 126.76| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 193.31| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 543.51| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 770.64| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 2,578.47| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 751.37| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 23.51| 
  []
 
 
-Overfull \hbox (4.01813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,150.5| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 4,790.19| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 5,099.52| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 5,009.54| 
  []
 
 
-Overfull \hbox (4.01813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 5,380.6| 
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 14.72| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 126.84| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 34.42| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 188.02| 
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 497.00| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 188.02| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 30.45| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 128.65| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 577.94| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 701.91| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 2,451.03| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 705.12| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 260.80| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,680.46| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 15.05| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,826.95| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 168.92| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 178.73| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 514.64| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 268.09| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 66.33| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 281.23| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 311.03| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 578.77| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 527.88| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 704.29| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 88.90| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,591.82| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 961.45| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 193.31| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 1,381.52| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 580.46| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 2,112.82| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 2,447.37| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 2,492.31| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 2,447.37| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 32.82| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 168.92| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 18.55| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 514.64| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 441.01| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 344.46| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 66.33| 
  []
 
 
-Overfull \hbox (2.67813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 574.97| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 344.46| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,224.73| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 574.97| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 1,381.52| 
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 38.88| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 4,397.29| 
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 590.63| 
  []
 
 
-Overfull \hbox (6.87813pt too wide) in paragraph at lines 1686--1686
-[]|\TU/NotoSans(0)/m/n/5 4,397.29| 
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 2,107.65| 
  []
 
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 11.84| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 150.37| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 73.63| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 50.03| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 634.10| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 908.12| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 456.44| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 17.77| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 33.43| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 47.09| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 2,186.18| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 1,381.52| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 902.95| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 2,024.04| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 50.44| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 50.44| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 97.02| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 17.77| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 46.15| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 273.55| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 122.59| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 214.88| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 271.96| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 49.06| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 16.91| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 38.21| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 43.04| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 28.31| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 99.85| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 57.94| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 70.22| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 73.05| 
+ []
+
+
+Overfull \hbox (8.70264pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 1,606.02| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 802.00| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 804.02| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 804.02| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 44.30| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 44.30| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 85.20| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 157.70| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 46.83| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 110.87| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 110.87| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 86.52| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 86.52| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 175.66| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 13.43| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 13.43| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 77.89| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 72.66| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 72.66| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 147.52| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 67.88| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1643--1643
+[]|\TU/NotoSans(0)/m/n/5.5 67.88| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1643--1643
+\TU/NotoSans(0)/m/n/5.5 137.82| 
+ []
+
+ignored error: Infinite glue shrinkage found in box being split
+ignored error: Infinite glue shrinkage found in box being split
+ignored error: Infinite glue shrinkage found in box being split
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
-[69]
+ [69]
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 13.17| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 14.94| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 46.50| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 14.90| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 780.89| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 224.08| 
+ []
+
+
+Overfull \hbox (8.70264pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 1,037.21| 
+ []
+
+
+Overfull \hbox (8.70264pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 1,585.67| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 23.94| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 11.25| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 23.04| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 859.49| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 67.89| 
+ []
+
+
+Overfull \hbox (8.70264pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 1,000.60| 
+ []
+
+
+Overfull \hbox (8.70264pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 1,608.69| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 15.83| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 19.09| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 22.56| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 30.14| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 78.60| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 119.58| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 191.03| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 156.19| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 156.19| 
+ []
+
+
+Overfull \hbox (4.08263pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 168.01| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 30.68| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 30.68| 
+ []
+
+
+Overfull \hbox (0.93663pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 42.50| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 60.38| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 60.38| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 60.38| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 65.13| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 65.13| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+\TU/NotoSans(0)/m/n/5.5 65.13| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 16.46| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 128.65| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 479.92| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,603.52| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 193.31| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 770.64| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 16.30| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 95.74| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 827.62| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,150.50| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 5,282.66| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 5,563.78| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 10.69| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 95.74| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 76.25| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 183.14| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 183.18| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 10.69| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 76.25| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 86.94| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 86.94| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 95.74| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 96.20| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 96.24| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 16.46| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 128.65| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 479.46| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,592.83| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 193.31| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 770.64| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 16.30| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 751.37| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,150.50| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 5,099.52| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 5,380.60| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 126.84| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 53.88| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 188.02| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 188.02| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 16.46| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 128.65| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 52.99| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 63.34| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 10.98| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 701.91| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 705.12| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,680.46| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,826.95| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 82.07| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 18.01| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 78.65| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 178.73| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 187.80| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 268.09| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 29.46| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 281.23| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 578.77| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 704.29| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 26.16| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 26.16| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 26.16| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 70.76| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,591.82| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 193.31| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 580.46| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 2,447.37| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 2,447.37| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 32.82| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 168.92| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 514.64| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 66.33| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 344.46| 
+ []
+
+
+Overfull \hbox (4.24213pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 574.97| 
+ []
+
+
+Overfull \hbox (1.09613pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 88.90| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,224.73| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 1,381.52| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 4,397.29| 
+ []
+
+
+Overfull \hbox (8.86214pt too wide) in paragraph at lines 1689--1689
+[]|\TU/NotoSans(0)/m/n/5.5 4,397.29| 
+ []
+
 File: img/figura_6_6.png Graphic file (type bmp)
 <img/figura_6_6.png>
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [70]
+[70]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [71]
@@ -3922,14 +4536,98 @@ File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
  [78]
 
-LaTeX Warning: Empty bibliography on input line 1789.
+LaTeX Warning: Empty bibliography on input line 1820.
 
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
 [79]
 File: img/foja_blanca.jpg Graphic file (type bmp)
 <img/foja_blanca.jpg>
- [80] (Balance Nacional de Energía 2025x.aux)
+ [80]
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 14.4pt on input line 1852.
+LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
+(Font)              scaled to size 10.62012pt on input line 1852.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/12'.
+(microtype)             Ignoring protrusion settings for this character.
+LaTeX Font Info:    Font shape `TU/Patria(0)/m/n' will be
+(Font)              scaled to size 7.96509pt on input line 1852.
+Package microtype Info: Character `~ (= ~)' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textendash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\textemdash ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\AE ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\quotesinglbase ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guilsinglright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotleft ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+Package microtype Info: Character `\guillemotright ' is missing
+(microtype)             in font `\TU/Patria(0)/m/n/9'.
+(microtype)             Ignoring protrusion settings for this character.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [81
+
+]
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/m/n' will be
+(Font)              scaled to size 12.0pt on input line 1859.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 12.0pt on input line 1859.
+LaTeX Font Info:    Font shape `TU/NotoSans(0)/b/n' will be
+(Font)              scaled to size 9.0pt on input line 1859.
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+ [82
+
+
+]
+File: img/foja_blanca.jpg Graphic file (type bmp)
+<img/foja_blanca.jpg>
+File: img/contraportada.png Graphic file (type bmp)
+<img/contraportada.png>
+ [83
+
+] (Balance Nacional de Energía 2025x.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-10-24>
@@ -3940,12 +4638,12 @@ un.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 51358 strings out of 402987
- 1098554 string characters out of 5452870
- 2293416 words of memory out of 5000000
- 79299 multiletter control sequences out of 15000+600000
- 688382 words of font info for 132 fonts, out of 8000000 for 9000
+ 51339 strings out of 402987
+ 1098955 string characters out of 5452870
+ 2240201 words of memory out of 5000000
+ 79289 multiletter control sequences out of 15000+600000
+ 657801 words of font info for 152 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 113i,13n,130p,1566b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,131p,1548b,854s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on Balance Nacional de Energía 2025x.pdf (80 pages).
+Output written on Balance Nacional de Energía 2025x.pdf (83 pages).

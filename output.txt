@@ -1,19 +1,20 @@
 1 Prùèbã dè Fìgùrãs
 
-Este documento prueba el layout de las figuras.
-Fìgùrã 1. Fìgùrã cøn [H] (Fløãt Pãckãgè)
+Fìgùrã 1. Fìgùrã cøn [H]
 
 
 
 
 FUENTE: Fuente de prueba para H.
-                                              A
-Fìgùrã 2. Fìgùrã cøn [ht] (Stãndãrd Fløãt?)
+                                      A
+2 Prùèbã dè Tãblãs
+
+Tãblã 1 Tãblã dè Prùèbã
+                                   Columna A   Columna B
+FUENTE: Fuente de la tabla.          Dato 1      Dato 2
 
 
 
 
-FUENTE: Fuente de prueba para ht.
-                                              B
-                                                  1
+                                                           1
 
