@@ -396,21 +396,9 @@ function procesarSecciones(secciones, figurasMap, tablasMap, ss) {
 
         // --- NIVELES NORMALES ---
         // FIX: Pasar estado de anexos para limpiar prefijos duplicados
+        // NUEVO: Pasar figurasMap, tablasMap y ss a procesarContenido para inserción explícita
         contenido += generarComandoSeccion(nivel, titulo, anexosIniciados);
-        contenido += procesarContenido(contenidoRaw);
-
-        // Insertar figuras y tablas de esta sección
-        if (figurasMap[ordenSeccion]) {
-            figurasMap[ordenSeccion].forEach(fig => {
-                contenido += generarFigura(fig);
-            });
-        }
-
-        if (tablasMap[ordenSeccion]) {
-            tablasMap[ordenSeccion].forEach(tabla => {
-                contenido += generarTabla(tabla, ss);
-            });
-        }
+        contenido += procesarContenido(contenidoRaw, ordenSeccion, figurasMap, tablasMap, ss);
 
         contenido += '\n\n';
     });
@@ -485,8 +473,13 @@ function generarComandoSeccion(nivel, titulo, anexosIniciados = false) {
 /**
  * FIX: Procesa el contenido de una sección (listas, bloques, etc.)
  * Corregido para no romper listas con líneas en blanco
+ * @param {string} contenidoRaw - Texto crudo a procesar
+ * @param {number} ordenSeccion - Orden de la sección actual para búsqueda de elementos
+ * @param {Object} figurasMap - Mapa de figuras por sección
+ * @param {Object} tablasMap - Mapa de tablas por sección
+ * @param {Spreadsheet} ss - Referencia al spreadsheet
  */
-function procesarContenido(contenidoRaw) {
+function procesarContenido(contenidoRaw, ordenSeccion, figurasMap, tablasMap, ss) {
     const lineas = contenidoRaw.split('\n');
     let resultado = '';
     let enLista = false;
@@ -516,7 +509,7 @@ function procesarContenido(contenidoRaw) {
         // 2. Detectar FIN de bloque
         const finBloqueMatch = lineaTrim.match(/^\[\[\/(ejemplo|caja|alerta|info|destacado|recuadro)\]\]$/i);
         if (finBloqueMatch) {
-            resultado += generarBloque(tipoBloque, tituloBloque, contenidoBloque);
+            resultado += generarBloque(tipoBloque, tituloBloque, contenidoBloque, ordenSeccion, figurasMap, tablasMap, ss);
             enBloque = false;
             contenidoBloque = '';
             continue;
@@ -570,16 +563,91 @@ function procesarContenido(contenidoRaw) {
             // Procesar línea normal solo si no estamos en lista
             if (!enLista) {
                 if (lineaTrim.startsWith('[[tabla:')) {
-                    // Referencia a tabla inline (opcional, las tablas se insertan automáticamente)
+                    // Referencia a tabla explícita
                     const match = lineaTrim.match(/\[\[tabla:(.+?)\]\]/);
-                    if (match) {
-                        resultado += `% Referencia a tabla: ${match[1]}\n`;
+                    if (match && tablasMap) {
+                        const nombreTabla = match[1].trim();
+                        debugger; // Ayuda para depuración si es necesario
+
+                        // 1. Buscar en la sección actual (prioridad)
+                        let tablaObj = null;
+                        if (ordenSeccion && tablasMap[ordenSeccion]) {
+                            tablaObj = tablasMap[ordenSeccion].find(t =>
+                                (t.Titulo || '').toString().trim() === nombreTabla ||
+                                generarLabel(t.Titulo || '') === generarLabel(nombreTabla)
+                            );
+                        }
+
+                        // 2. Si no se encuentra, buscar GLOBALMENTE en todas las secciones
+                        if (!tablaObj) {
+                            const todasLasSecciones = Object.keys(tablasMap);
+                            for (const sec of todasLasSecciones) {
+                                const encontrado = tablasMap[sec].find(t =>
+                                    (t.Titulo || '').toString().trim() === nombreTabla ||
+                                    generarLabel(t.Titulo || '') === generarLabel(nombreTabla)
+                                );
+                                if (encontrado) {
+                                    tablaObj = encontrado;
+                                    log(`⚠️ Aviso: Tabla "${nombreTabla}" encontrada en sección ${sec} (referenciada en ${ordenSeccion || '?'})`);
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (tablaObj) {
+                            resultado += generarTabla(tablaObj, ss);
+                        } else {
+                            resultado += `% ⚠️ Error: No se encontró la tabla "${nombreTabla}" (buscado en sección ${ordenSeccion} y globalmente)\n`;
+                            log(`⚠️ No se encontró la tabla "${nombreTabla}" en ninguna sección.`);
+                            // Dump de claves para debug
+                            const clavesDisponibles = Object.keys(tablasMap).map(k =>
+                                `Sec ${k}: [${tablasMap[k].map(t => t.Titulo).join(', ')}]`
+                            ).join('; ');
+                            log(`ℹ️ Tablas disponibles: ${clavesDisponibles}`);
+                        }
                     }
                 } else if (lineaTrim.startsWith('[[figura:')) {
-                    // Referencia a figura inline (opcional, las figuras se insertan automáticamente)
+                    // Referencia a figura explícita
                     const match = lineaTrim.match(/\[\[figura:(.+?)\]\]/);
-                    if (match) {
-                        resultado += `% Referencia a figura: ${match[1]}\n`;
+                    if (match && figurasMap) {
+                        const nombreFig = match[1].trim();
+
+                        // 1. Buscar en la sección actual
+                        let figObj = null;
+                        if (ordenSeccion && figurasMap[ordenSeccion]) {
+                            figObj = figurasMap[ordenSeccion].find(f =>
+                                (f.Caption || '').toString().trim() === nombreFig ||
+                                generarLabel(f.Caption || '') === generarLabel(nombreFig)
+                            );
+                        }
+
+                        // 2. Búsqueda GLOBAL
+                        if (!figObj) {
+                            const todasLasSecciones = Object.keys(figurasMap);
+                            for (const sec of todasLasSecciones) {
+                                const encontrado = figurasMap[sec].find(f =>
+                                    (f.Caption || '').toString().trim() === nombreFig ||
+                                    generarLabel(f.Caption || '') === generarLabel(nombreFig)
+                                );
+                                if (encontrado) {
+                                    figObj = encontrado;
+                                    log(`⚠️ Aviso: Figura "${nombreFig}" encontrada en sección ${sec} (referenciada en ${ordenSeccion || '?'})`);
+                                    break;
+                                }
+                            }
+                        }
+
+                        if (figObj) {
+                            resultado += generarFigura(figObj);
+                        } else {
+                            resultado += `% ⚠️ Error: No se encontró la figura "${nombreFig}" (buscado en sección ${ordenSeccion} y globalmente)\n`;
+                            log(`⚠️ No se encontró la figura "${nombreFig}" en ninguna sección.`);
+                            // Dump de claves para debug
+                            const clavesDisponibles = Object.keys(figurasMap).map(k =>
+                                `Sec ${k}: [${figurasMap[k].map(f => f.Caption).join(', ')}]`
+                            ).join('; ');
+                            log(`ℹ️ Figuras disponibles: ${clavesDisponibles}`);
+                        }
                     }
                 } else if (lineaTrim !== '') {
                     resultado += `${procesarConEtiquetas(linea)}\n`;
@@ -601,9 +669,9 @@ function procesarContenido(contenidoRaw) {
 /**
  * Genera un bloque LaTeX (ejemplo, caja, alerta, etc.)
  */
-function generarBloque(tipo, titulo, contenido) {
-    // Procesar el contenido del bloque (puede tener listas internas)
-    const contenidoProcesado = procesarContenido(contenido);
+function generarBloque(tipo, titulo, contenido, ordenSeccion, figurasMap, tablasMap, ss) {
+    // Procesar el contenido del bloque (puede tener listas o elementos internos)
+    const contenidoProcesado = procesarContenido(contenido, ordenSeccion, figurasMap, tablasMap, ss);
 
     const tituloSafe = escaparLatex(titulo);
     const opts = tituloSafe ? `[title={${tituloSafe}}]` : '';

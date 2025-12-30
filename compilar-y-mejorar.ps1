@@ -1,12 +1,33 @@
-# Script de compilación SENER LaTeX - Versión robusta
-# Soporta múltiples motores: XeLaTeX, LuaLaTeX, pdfLaTeX
+# Script de compilacion SENER LaTeX - Version robusta
+# Soporta multiples motores: XeLaTeX, LuaLaTeX, pdfLaTeX
 
 param(
-    [string]$archivo = "InformeEnergia25",
+    [string]$archivo = "",
     [string]$motor = "xelatex"  # xelatex, lualatex, pdflatex
 )
 
-Write-Host "=== COMPILACIÓN ROBUSTA DOCUMENTO LATEX SENER ===" -ForegroundColor Green
+Write-Host "=== COMPILACION ROBUSTA DOCUMENTO LATEX SENER ===" -ForegroundColor Green
+
+# Si no se especifica archivo, buscar archivos .tex en la carpeta
+if ($archivo -eq "") {
+    $archivosTeX = Get-ChildItem -Filter "*.tex" | Where-Object { $_.Name -notmatch "^test_" }
+    if ($archivosTeX.Count -eq 0) {
+        Write-Host "ERROR: No se encontraron archivos .tex en la carpeta" -ForegroundColor Red
+        exit 1
+    } elseif ($archivosTeX.Count -eq 1) {
+        $archivo = $archivosTeX[0].BaseName
+        Write-Host "Archivo detectado automaticamente: $archivo.tex" -ForegroundColor Yellow
+    } else {
+        Write-Host "Multiples archivos .tex encontrados:" -ForegroundColor Yellow
+        $archivosTeX | ForEach-Object { Write-Host "  - $($_.Name)" -ForegroundColor Cyan }
+        $archivo = $archivosTeX[0].BaseName
+        Write-Host "Usando el primero: $archivo.tex" -ForegroundColor Yellow
+    }
+} else {
+    # Remover extension .tex si fue incluida
+    $archivo = $archivo -replace "\.tex$", ""
+}
+
 Write-Host "Archivo: $archivo.tex" -ForegroundColor Yellow
 Write-Host "Motor: $motor" -ForegroundColor Yellow
 
@@ -74,7 +95,7 @@ if (Test-Path "$archivo.bcf") {
 # Procesamiento de bibliografía si es necesario
 if ($tieneBibliografia) {
     Write-Host "`n3. Procesando bibliografía (Biber)..." -ForegroundColor Cyan
-    $resultado2 = & biber $archivo 2>&1
+    $resultadoBiber = & biber $archivo 2>&1
     if ($LASTEXITCODE -ne 0) {
         Write-Host "   WARNING en procesamiento de bibliografía" -ForegroundColor Yellow
         Write-Host "   Continuando sin bibliografía..." -ForegroundColor Yellow
@@ -112,9 +133,9 @@ if ($necesitaTercera) {
 
 # Verificar que se generó el PDF
 if (Test-Path "$archivo.pdf") {
-    $tamaño = (Get-Item "$archivo.pdf").Length
+    $tamano = (Get-Item "$archivo.pdf").Length
     Write-Host "`n✓ COMPILACIÓN COMPLETADA EXITOSAMENTE" -ForegroundColor Green
-    Write-Host "   Archivo generado: $archivo.pdf ($([math]::Round($tamaño/1KB, 2)) KB)" -ForegroundColor Green
+    Write-Host "   Archivo generado: $archivo.pdf ($([math]::Round($tamano/1KB, 2)) KB)" -ForegroundColor Green
     
     # Mostrar estadísticas del documento
     Write-Host "`n=== ESTADÍSTICAS DEL DOCUMENTO ===" -ForegroundColor Yellow
