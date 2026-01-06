@@ -306,7 +306,11 @@
 
 % Estilos de fuente para captions
 \DeclareCaptionFont{senerTableFont}{\patriafont\bfseries\fontsize{12pt}{14pt}\selectfont}
-\DeclareCaptionFont{senerDescFont}{\patriafont\bfseries\fontsize{16pt}{19pt}\selectfont\color{gobmxGris}}
+\DeclareCaptionFont{senerDescFont}{\patriafont\bfseries\fontsize{16pt}{19pt}\selectfont\color{gobmxGuinda}}
+
+% Formato de lista vacío para suprimir números en LOF y LOT
+\DeclareCaptionListFormat{senerEmpty}{}
+\DeclareCaptionLabelSeparator{empty}{}
 
 % Configuración base de captions (Global)
 \captionsetup{
@@ -314,16 +318,18 @@
   font={normalsize,color=gobmxGris},
   labelfont={normalsize,color=gobmxGris},
   textfont={normalsize,color=gobmxGris},
-  labelsep=period,
+  labelsep=empty,
   justification=raggedright,
   singlelinecheck=false,
-  parskip=0pt
+  parskip=0pt,
+  labelformat=empty,
+  listformat=senerEmpty
 }
 
 % Redefinición del estilo de float para figuras institucionales (Forzar izquierda en [H])
 
 \newcommand\floatc@SENERfigure[2]{%
-  {\raggedright{\senerTableFont\color{gobmxGuinda}#1.}\ {\senerDescFont#2}\par}%
+  {\raggedright{\senerDescFont#2}\par}%
 }
 \newcommand\fs@SENERfigure{%
   \let\@fs@capt\floatc@SENERfigure
@@ -333,13 +339,16 @@
 }
 \floatstyle{SENERfigure}
 \restylefloat{figure}
+\restylefloat{table}
 
 
 % Ajustes específicos para Tablas
 \captionsetup[table]{
   position=top,
   skip=0pt,
-  labelsep=space,
+  labelsep=empty,
+  labelformat=empty,
+  listformat=senerEmpty,
   font={senerDescFont},
   labelfont={senerTableFont,color=gobmxGuinda}
 }
@@ -349,6 +358,9 @@
   position=top,
   skip=3pt,
   width=\textwidth,
+  labelsep=empty,
+  labelformat=empty,
+  listformat=senerEmpty,
   font={senerDescFont},
   labelfont={senerTableFont,color=gobmxGuinda}
 }
@@ -428,7 +440,7 @@
 \newenvironment{tabladoradoCorto}[1][]{
   \rowcolors{2}{gobmxDorado!12}{white}
 
-  \let\@fs@capt\floatc@SENERfigure % Usar mismo formato de caption que figura
+  % \let\@fs@capt\floatc@SENERfigure (Ya no es necesario por restylefloat global)
 
   \begin{table}[H]
   \renewcommand{\arraystretch}{1.25}
@@ -704,13 +716,17 @@
 
 \newcommand{\listatablas}{
   \clearpage \begin{center} {\Large\patriafont\bfseries\color{gobmxGuinda}Índice de Tablas}\\[1cm] \end{center}
-  \begingroup \def\normalfont{\patriafont} \@starttoc{lot} \endgroup
+  \@starttoc{lot}
 }
 
 \newcommand{\listafiguras}{
   \clearpage \begin{center} {\Large\patriafont\bfseries\color{gobmxGuinda}Índice de Figuras}\\[1cm] \end{center}
-  \begingroup \def\normalfont{\patriafont} \@starttoc{lof} \endgroup
+  \@starttoc{lof}
 }
+
+% Redefinición de entradas en listas (sin número, margen cero)
+\renewcommand*\l@figure{\@dottedtocline{1}{0em}{0em}}
+\renewcommand*\l@table{\@dottedtocline{1}{0em}{0em}}
 
 % Configuración de los puntos en el TOC
 \renewcommand{\@dotsep}{1.5}

@@ -1356,7 +1356,7 @@ function generarFigura(figura) {
     const caption = figura['Caption'] || '';
     const fuente = figura['Fuente'] || '';
     const textoAlt = figura['TextoAlternativo'] || caption;
-    const ancho = figura['Ancho'] || '0.8';
+    const ancho = figura['Ancho'] || '1.0';
 
     log(`  🖼️  Figura detectada: ${previewTexto(caption, 40)}...`);
 
